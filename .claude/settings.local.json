@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build:*)",
+      "Bash(npx vercel:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Read(//Users/me/.claude/skills/seo-copywriter/**)",
+      "Edit(~/.claude/skills/seo-copywriter/**)",
+      "Skill(favicon)",
+      "Skill(favicon:*)",
+      "Bash(git checkout:*)",
+      "Read(//Users/me/.claude/skills/bencium-aeo/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(grep -n \"getFaqPageSchema\\\\|getLocalRestaurantSchema\\\\|JsonLd data\" /Users/me/Desktop/Projects/chopras-website/src/app/\\\\\\\\[locale\\\\\\\\]/butter-chicken-den-haag/page.tsx)",
+      "Bash(grep -n \"getFaqPageSchema\\\\|getLocalRestaurantSchema\\\\|JsonLd data\" /Users/me/Desktop/Projects/chopras-website/src/app/\\\\\\\\[locale\\\\\\\\]/biryani-den-haag/page.tsx)",
+      "Bash(git config *)"
+    ],
+    "additionalDirectories": [
+      "/Users/me/Desktop/Projects/chopras-website/menu_dishess",
+      "/Users/me/Desktop/Projects/chopras-website/.git",
+      "/Users/me/Desktop/Projects/chopras-website/src/app/[locale]/indian-restaurant-westland"
+    ]
+  }
+}

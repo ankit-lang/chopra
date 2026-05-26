@@ -1,0 +1,46 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI search and user-request retrieval crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI training and AI product usage control crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /nl/checkout
+Disallow: /nl/checkout/
+Disallow: /order-confirmation
+Disallow: /order-confirmation/
+Disallow: /nl/order-confirmation
+Disallow: /nl/order-confirmation/
+Sitemap: https://chopras.nl/sitemap.xml
+
+# llms.txt available at https://chopras.nl/llms.txt

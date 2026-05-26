@@ -1,0 +1,167 @@
+{
+  "_note": "Ready-to-use JSON-LD snippets for Chopras Indian Restaurant. All are now generated via src/lib/schema.ts - this file is for reference and validation testing only.",
+
+  "WebSite": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://chopras.nl/#website",
+    "name": "Chopras Indian Restaurant",
+    "url": "https://chopras.nl",
+    "inLanguage": "en-GB",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://chopras.nl/en/menu?search={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  "Restaurant": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://chopras.nl/#restaurant",
+    "name": "Chopras Indian Restaurant",
+    "image": [
+      "https://chopras.nl/logo.png",
+      "https://chopras.nl/og/home-og.jpg"
+    ],
+    "url": "https://chopras.nl/en",
+    "telephone": "+31630645930",
+    "email": "info@chopras.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Leyweg 986",
+      "addressLocality": "Den Haag",
+      "postalCode": "2545 GW",
+      "addressCountry": "NL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.05831,
+      "longitude": 4.2932
+    },
+    "servesCuisine": ["Indian", "North Indian", "Street Food", "Indo-Chinese", "Halal"],
+    "priceRange": "€€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "16:30",
+        "closes": "22:30"
+      }
+    ],
+    "hasMenu": "https://chopras.nl/en/menu",
+    "acceptsReservations": true,
+    "areaServed": ["Den Haag", "Rijswijk", "Delft", "Zoetermeer", "Voorburg", "Leidschendam", "Westland"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "83",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "suitableForDiet": "https://schema.org/HalalDiet",
+    "logo": "https://chopras.nl/logo.png",
+    "sameAs": [
+      "https://www.tripadvisor.com/Restaurant_Review-g188633-d27464805-Reviews-Chopras_Indian_Restaurant-The_Hague_South_Holland_Province.html",
+      "https://www.google.com/maps/place/Chopras+Indian+Restaurant/@52.0583,4.2932,17z/",
+      "https://www.facebook.com/choprasrestaurant",
+      "https://www.instagram.com/choprasrestaurant",
+      "https://www.youtube.com/@choprasrestaurant"
+    ],
+    "founder": {
+      "@type": "Person",
+      "@id": "https://chopras.nl/#arun-chopra",
+      "name": "Arun Chopra",
+      "jobTitle": "Founder",
+      "url": "https://chopras.nl/en"
+    }
+  },
+
+  "Person": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://chopras.nl/#arun-chopra",
+    "name": "Arun Chopra",
+    "jobTitle": "Founder and Head Chef",
+    "description": "Arun Chopra founded Chopras Indian Restaurant in Den Haag in 2023 with the mission to serve authentic North Indian cuisine exactly as it is eaten in India.",
+    "worksFor": {
+      "@type": "Restaurant",
+      "@id": "https://chopras.nl/#restaurant",
+      "name": "Chopras Indian Restaurant",
+      "url": "https://chopras.nl"
+    },
+    "url": "https://chopras.nl/en",
+    "sameAs": ["https://chopras.nl/en"]
+  },
+
+  "BreadcrumbList_example": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chopras.nl/en" },
+      { "@type": "ListItem", "position": 2, "name": "Catering", "item": "https://chopras.nl/en/catering" }
+    ]
+  },
+
+  "Menu_example": {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "@id": "https://chopras.nl/en/menu#menu",
+    "name": "Chopras Indian Restaurant Menu",
+    "url": "https://chopras.nl/en/menu",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Starters",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Samosa (2 pcs)",
+            "description": "Crispy pastry filled with spiced potato and peas",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.50",
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "BlogPosting_example": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Best Indian Food in Den Haag",
+    "description": "A guide to finding authentic Indian food in Den Haag.",
+    "datePublished": "2024-03-01",
+    "dateModified": "2024-03-01",
+    "author": {
+      "@type": "Person",
+      "@id": "https://chopras.nl/#arun-chopra",
+      "name": "Arun Chopra",
+      "jobTitle": "Founder",
+      "url": "https://chopras.nl/en"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chopras Indian Restaurant",
+      "url": "https://chopras.nl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://chopras.nl/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "url": "https://chopras.nl/en/blog/best-indian-food-den-haag",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chopras.nl/en/blog/best-indian-food-den-haag"
+    },
+    "image": "https://chopras.nl/og/home-og.jpg"
+  }
+}
