@@ -1,0 +1,15 @@
+{
+  "lastId": 1,
+  "rows": [
+    {
+      "id": 1,
+      "idempotency_key": "3cd21ccd-15d7-4117-ba86-b026f1d991ab",
+      "hash": "e8ec6463eb8170259ddd69321fb85d9d0977e8b78d4f736351355849e9285efa",
+      "type": "reservation",
+      "payload": "{\"date\":\"2026-05-22\",\"time\":\"18:30\",\"email\":\"ankit@gmail.com\",\"persons\":\"2\",\"fullName\":\"ankit\",\"phone\":\"1234567890\",\"foundVia\":\"Instagram\",\"dob\":\"\",\"notes\":\"\",\"source\":\"website-reservation-form\"}",
+      "created_at": "2026-05-27T12:29:46.876Z",
+      "notified_email": 0,
+      "notified_whatsapp": 0
+    }
+  ]
+}

@@ -13,6 +13,13 @@ type ContactFormData = {
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [idempotencyKey] = useState(() => {
+    try {
+      return (window as any).crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    } catch {
+      return `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    }
+  })
   const {
     register,
     handleSubmit,
@@ -21,13 +28,15 @@ export default function ContactForm() {
 
   async function onSubmit(data: ContactFormData) {
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ idempotencyKey, type: 'contact', payload: data }),
       })
-      setStatus(res.ok ? 'success' : 'error')
-    } catch {
+      const json = await res.json()
+      setStatus(json.success ? 'success' : 'error')
+    } catch (err) {
+      console.error(err)
       setStatus('error')
     }
   }

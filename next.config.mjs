@@ -1,22 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: [
+      'whatsapp-web.js',
+      'puppeteer',
+      'puppeteer-core',
+      'unzipper',
+    ],
+  },
+
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.resolve.alias['@aws-sdk/client-s3'] = false
+    }
+    return config
+  },
+
   compress: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 2592000,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 192, 256],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'chopras.nl',
-      },
-    ],
+    remotePatterns: [{ protocol: 'https', hostname: 'chopras.nl' }],
   },
   poweredByHeader: false,
   async redirects() {
     return [
-      // Page consolidation — /en/ prefix kept here because middleware will then strip it
       { source: '/party-venue-den-haag', destination: '/feestzaal-den-haag', permanent: true },
       { source: '/en/party-venue-den-haag', destination: '/feestzaal-den-haag', permanent: true },
       { source: '/nl/party-venue-den-haag', destination: '/nl/feestzaal-den-haag', permanent: true },
@@ -27,14 +37,10 @@ const nextConfig = {
       { source: '/nl/privacy', destination: '/nl/privacy-policy', permanent: true },
       { source: '/nl/privacy/', destination: '/nl/privacy-policy', permanent: true },
       { source: '/nl/en/:path*', destination: '/nl/:path*', permanent: true },
-
-      // Legacy flat URLs — now served at root, these point to root paths
       { source: '/reservations', destination: '/contact', permanent: true },
       { source: '/reservations/', destination: '/contact', permanent: true },
       { source: '/event-space-den-haag', destination: '/catering', permanent: true },
       { source: '/event-space-den-haag/', destination: '/catering', permanent: true },
-
-      // Dutch-only landing pages — avoid indexable/noindex English duplicates at root
       { source: '/beste-indiaas-restaurant-den-haag', destination: '/nl/beste-indiaas-restaurant-den-haag', permanent: true },
       { source: '/bruiloft-catering-den-haag', destination: '/nl/bruiloft-catering-den-haag', permanent: true },
       { source: '/zaal-huren-den-haag', destination: '/nl/zaal-huren-den-haag', permanent: true },
@@ -55,12 +61,10 @@ const nextConfig = {
       },
       {
         source: '/images/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ]
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

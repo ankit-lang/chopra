@@ -16,6 +16,13 @@ type CateringFormData = {
 
 export default function CateringForm() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [idempotencyKey] = useState(() => {
+    try {
+      return (window as any).crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    } catch {
+      return `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    }
+  })
   const {
     register,
     handleSubmit,
@@ -26,13 +33,15 @@ export default function CateringForm() {
 
   async function onSubmit(data: CateringFormData) {
     try {
-      const res = await fetch('/api/catering-enquiry', {
+      const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ idempotencyKey, type: 'catering', payload: data }),
       })
-      setStatus(res.ok ? 'success' : 'error')
-    } catch {
+      const json = await res.json()
+      setStatus(json.success ? 'success' : 'error')
+    } catch (err) {
+      console.error(err)
       setStatus('error')
     }
   }
