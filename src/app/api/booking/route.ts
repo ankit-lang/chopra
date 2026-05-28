@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import { sendBookingEmail } from '@/lib/email'
-import { sendWhatsAppMessage } from '@/lib/whatsapp'
 
 export async function POST(req: Request) {
   try {
