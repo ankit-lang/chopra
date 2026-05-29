@@ -1,19 +1,11 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
-// Setup: Enable 2FA on Gmail → generate App Password at
-// https://myaccount.google.com/apppasswords
+// Setup: Get your Resend API key from https://resend.com
 // Then set in .env.local:
-//   EMAIL_USER=you@gmail.com
-//   EMAIL_PASS=xxxx xxxx xxxx xxxx   ← 16-char app password
-//   EMAIL_TO=owner@gmail.com         ← who receives bookings
+//   RESEND_API_KEY=re_xxxxxxxxxxxx
+//   EMAIL_TO=info@chopras.nl         ← who receives bookings
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: "info@chopras.nl",
-    pass: "izkv qirc tbdo jtle",
-  },
-})
+const resend = new Resend("re_3rsrQsDa_FY83ykfMTMVPiwxeNopPyfZL")
 
 export async function sendBookingEmail(subject: string, payload: Record<string, any>) {
   const lines = Object.entries(payload)
@@ -28,9 +20,9 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
     </table>
   `
 
-  await transporter.sendMail({
-    from: `"Booking Bot" "<info@chopras.nl>"`,
-    to: "info@chopras.nl",
+  await resend.emails.send({
+   from: 'Booking Bot <onboarding@resend.dev>',
+    to:  'info@chopras.nl',
     subject: `New Booking – ${subject}`,
     html,
   })
