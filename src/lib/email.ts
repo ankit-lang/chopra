@@ -29,8 +29,8 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
   `
 
   await transporter.sendMail({
-    from: `"Booking Bot" "info@chopras.nl"`,
-    to: process.env.EMAIL_TO || "info@chopras.nl",
+    from: `"Booking Bot" "<info@chopras.nl>"`,
+    to: "info@chopras.nl",
     subject: `New Booking – ${subject}`,
     html,
   })

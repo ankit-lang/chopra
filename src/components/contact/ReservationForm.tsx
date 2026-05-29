@@ -9,6 +9,7 @@ export default function ReservationForm() {
   const [persons, setPersons] = useState('')
   const [fullName, setFullName] = useState('')
   const [phone, setPhone] = useState('')
+  const [countryCode, setCountryCode] = useState('+31')
   const [foundVia, setFoundVia] = useState('')
   const [dob, setDob] = useState('')
   const [notes, setNotes] = useState('')
@@ -25,6 +26,22 @@ export default function ReservationForm() {
   })
 
   const timeOptions = ['16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00']
+
+  const countryCodes = [
+    { code: '+31' },
+    { code: '+44' },
+    { code: '+33' },
+    { code: '+49' },
+    { code: '+39' },
+    { code: '+34' },
+    { code: '+32' },
+    { code: '+46' },
+    { code: '+45' },
+    { code: '+47' },
+    { code: '+61' },
+    { code: '+1' },
+    { code: '+91' },
+  ]
 
   function validate() {
     if (!date) return 'Please select a date.'
@@ -55,7 +72,7 @@ export default function ReservationForm() {
       email,
       persons,
       fullName,
-      phone: `+31${phone}`, // Combines country code with phone input
+      phone: `${countryCode}${phone}`, // Combines country code with phone input
       foundVia,
       dob,
       notes,
@@ -81,6 +98,7 @@ export default function ReservationForm() {
         setPersons('')
         setFullName('')
         setPhone('')
+        setCountryCode('+31')
         setFoundVia('')
         setDob('')
         setNotes('')
@@ -98,7 +116,7 @@ export default function ReservationForm() {
       `Date: ${date}`,
       `Time: ${time}`,
       `Name: ${fullName}`,
-      `Phone: +31${phone}`,
+      `Phone: ${countryCode}${phone}`,
       `Email: ${email}`,
       `Persons: ${persons}`,
       dob ? `Date of birth: ${dob}` : '',
@@ -147,7 +165,13 @@ export default function ReservationForm() {
         <div>
           <label className="block text-sm mb-1">Phone *</label>
           <div className="flex gap-2">
-            <div className="flex items-center px-3 border rounded">+31</div>
+            <select value={countryCode} onChange={(e) => setCountryCode(e.target.value)} className="border rounded px-3 py-2">
+              {countryCodes.map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.code}
+                </option>
+              ))}
+            </select>
             <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="6 12345678" className="flex-1 border rounded px-3 py-2" required />
           </div>
         </div>
@@ -156,12 +180,12 @@ export default function ReservationForm() {
           <label className="block text-sm mb-1">How Did You Find Us?</label>
           <select value={foundVia} onChange={(e) => setFoundVia(e.target.value)} className="w-full border rounded px-3 py-2">
             <option value="">Select</option>
-            <option>Google</option>
-            <option>Instagram</option>
-            <option>Facebook</option>
-            <option>Referral</option>
-            <option>Walk-in</option>
-            <option>Other</option>
+            <option>google</option>
+            <option>instagram</option>
+            <option>facebook</option>
+            <option>referral</option>
+            <option>walk-in</option>
+            <option>other</option>
           </select>
         </div>
 

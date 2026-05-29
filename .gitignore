@@ -38,3 +38,5 @@ next-env.d.ts
 
 # local research files
 chopras_backlink_keyword_map.xlsx
+
+.vercel
