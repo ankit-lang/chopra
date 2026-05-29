@@ -1,5 +1,4 @@
 import { sendBookingEmail } from './email'
-import { sendWhatsAppMessage } from './whatsapp'
 import { markNotified, getBookingById } from './db'
 
 async function retry<T>(fn: () => Promise<T>, attempts = 3, delayMs = 1000) {
@@ -16,15 +15,11 @@ async function retry<T>(fn: () => Promise<T>, attempts = 3, delayMs = 1000) {
 }
 
 export async function notifyChannels(id: number, type: string, payload: any) {
-  // Email
+  // Email notification with retry
   try {
     await retry(() => sendBookingEmail(type, payload))
-    markNotified(id, 'email')
+
   } catch (err) {
     console.error('Failed sending email notification', err)
   }
-
-  // WhatsApp message formatting
-
- 
 }

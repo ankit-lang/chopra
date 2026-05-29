@@ -109,25 +109,6 @@ export default function ReservationForm() {
     } finally {
       setSubmitting(false)
     }
-
-    // Build prefilled WhatsApp message and open it regardless of backend result
-    const messageLines = [
-      'Reservation request from website:',
-      `Date: ${date}`,
-      `Time: ${time}`,
-      `Name: ${fullName}`,
-      `Phone: ${countryCode}${phone}`,
-      `Email: ${email}`,
-      `Persons: ${persons}`,
-      dob ? `Date of birth: ${dob}` : '',
-      foundVia ? `Found via: ${foundVia}` : '',
-      notes ? `Notes: ${notes}` : '',
-    ].filter(Boolean)
-
-    const text = encodeURIComponent(messageLines.join('\n'))
-    const phoneNum = RESTAURANT.contact.phone.replace(/\D/g, '')
-    const waUrl = `https://wa.me/${phoneNum}?text=${text}`
-    window.open(waUrl, '_blank')
   }
 
   return (

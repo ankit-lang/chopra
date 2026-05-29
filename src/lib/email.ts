@@ -1,13 +1,15 @@
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 
-// Setup: Get your Resend API key from https://resend.com
-// Then set in .env.local:
-//   RESEND_API_KEY=re_xxxxxxxxxxxx
-//   EMAIL_TO=info@chopras.nl         ← who receives bookings
-
-const resend = new Resend("re_3rsrQsDa_FY83ykfMTMVPiwxeNopPyfZL")
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: "info@chopras.nl",
+    pass: "hkua ghvs fmqh udef",
+  },
+})
 
 export async function sendBookingEmail(subject: string, payload: Record<string, any>) {
+  const customerEmail = payload.email || payload.customerEmail
   const lines = Object.entries(payload)
     .filter(([, v]) => v !== undefined && v !== null && v !== '')
     .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;font-weight:600;text-transform:capitalize">${k}</td><td style="padding:4px 0">${v}</td></tr>`)
@@ -20,10 +22,21 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
     </table>
   `
 
-  await resend.emails.send({
-   from: 'Booking Bot <onboarding@resend.dev>',
-    to:  'info@chopras.nl',
-    subject: `New Booking – ${subject}`,
+  // Send to customer email
+  if (customerEmail) {
+    await transporter.sendMail({
+      from: "info@chopras.nl",
+      to: customerEmail,
+      subject: `Booking Confirmation - ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })}`,
+      html,
+    })
+  }
+
+  // Send to restaurant admin
+  await transporter.sendMail({
+    from: "info@chopras.nl",
+    to: 'info@chopras.nl',
+    subject: `New Booking - ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })}`,
     html,
   })
 }

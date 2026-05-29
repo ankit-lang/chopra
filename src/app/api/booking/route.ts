@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { sendBookingEmail } from '@/lib/email'
+import { notifyChannels } from '@/lib/notifications'
 
 export async function POST(req: Request) {
   try {
@@ -7,16 +7,13 @@ export async function POST(req: Request) {
     const { payload } = body
     if (!payload) return NextResponse.json({ success: false, error: 'Missing payload' }, { status: 400 })
 
-    // Fire-and-forget: kick off notifications but respond immediately so user stays on page
-    ;
-    (async () => {
+    // Fire-and-forget: send email notification but respond immediately
+    ;(async () => {
       try {
-        await sendBookingEmail('Booking', payload)
+        await notifyChannels(0, 'Booking', payload)
       } catch (err) {
-        console.error('Failed sending email notification', err)
+        console.error('Failed sending notifications', err)
       }
-
-     
     })()
 
     return NextResponse.json({ success: true })

@@ -48,21 +48,6 @@ export default function ContactForm() {
       setStatus('error')
     }
 
-    // Build prefilled WhatsApp message and open it regardless of backend result
-    const lines = [
-      'Contact request from website:',
-      `Name: ${data.name}`,
-      data.phone ? `Phone: ${data.phone}` : '',
-      `Email: ${data.email}`,
-      `Subject: ${data.subject}`,
-      data.message ? `Message: ${data.message}` : '',
-    ].filter(Boolean)
-
-    const text = encodeURIComponent(lines.join('\n'))
-    const phoneNum = RESTAURANT.contact.phone.replace(/\D/g, '')
-    const waUrl = `https://wa.me/${phoneNum}?text=${text}`
-    window.open(waUrl, '_blank')
-
     if (backendOk) reset()
   }
 
@@ -119,7 +104,7 @@ export default function ContactForm() {
         <label className={lbl}>Subject *</label>
         <select {...register('subject', { required: 'Please select a subject' })} className={field}>
           <option value="">Select a subject</option>
-          <option value="Table Reservation">Table Reservation</option>
+
           <option value="Catering Enquiry">Catering Enquiry</option>
           <option value="Event Booking">Event Booking</option>
           <option value="General Question">General Question</option>
