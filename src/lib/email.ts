@@ -1,3 +1,4 @@
+
 import nodemailer from 'nodemailer'
 
 const transporter = nodemailer.createTransport({
@@ -11,6 +12,7 @@ const transporter = nodemailer.createTransport({
 export async function sendBookingEmail(subject: string, payload: Record<string, any>) {
   const customerEmail = payload.email || payload.customerEmail
   const gmailUser = process.env.GMAIL_USER
+  const adminEmail = 'info@chopras.nl' // Your actual business inbox
   
   const lines = Object.entries(payload)
     .filter(([, v]) => v !== undefined && v !== null && v !== '')
@@ -24,21 +26,33 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
     </table>
   `
 
-  // Send to customer email
+  const emailPromises = []
+  const timestamp = new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })
+
+  // 1. Queue email to customer
   if (customerEmail) {
-    await transporter.sendMail({
-      from: gmailUser,
-      to: customerEmail,
-      subject: `Booking Confirmation - ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })}`,
-      html,
-    })
+    emailPromises.push(
+      transporter.sendMail({
+        from: `"Chopras Booking" <${gmailUser}>`,
+        to: customerEmail,
+        replyTo: adminEmail, // If customer hits reply, it goes to your business mail
+        subject: `Booking Confirmation - ${timestamp}`,
+        html,
+      })
+    )
   }
 
-  // Send to restaurant admin
-  await transporter.sendMail({
-    from: gmailUser,
-    to: gmailUser,
-    subject: `New Booking - ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })}`,
-    html,
-  })
+  // 2. Queue email to restaurant admin (info@chopras.nl)
+  emailPromises.push(
+    transporter.sendMail({
+      from: `"System Alert" <${gmailUser}>`,
+      to: adminEmail, 
+      subject: `New Booking [${subject}] - ${timestamp}`,
+      html,
+    })
+  )
+
+  // CRITICAL FOR VERCEL: Wait for ALL emails to finish processing 
+  // before letting the serverless container spin down.
+  await Promise.all(emailPromises)
 }

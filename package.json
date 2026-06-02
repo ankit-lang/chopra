@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@adiwajshing/baileys": "^4.4.0",
+    "@emailjs/browser": "^4.4.1",
     "@formatjs/intl-localematcher": "^0.8.2",
     "@hookform/resolvers": "^5.2.2",
     "@tailwindcss/typography": "^0.5.19",
