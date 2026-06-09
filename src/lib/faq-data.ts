@@ -341,3 +341,49 @@ export const cateringPageFaqsNl: FaqItem[] = [
     answer: "Ja. Bij alle Chopras Indian Restaurant-cateringevenementen is professioneel personeel inbegrepen dat opbouw, bediening en opruiming de hele avond beheert. U hoeft geen aparte bediening of coördinatoren in te huren. Gasten zijn welkom om eigen AV-apparatuur en verjaardagstaarten mee te nemen.",
   },
 ]
+
+export const feestzaalFaqs: FaqItem[] = [
+  {
+    question: "Can I hire the event hall at Chopras Indian Restaurant?",
+    answer: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. The hall is available for birthdays, weddings, nikah receptions, corporate events, Diwali dinners, and private parties. Full authentic Indian catering from the Chopras kitchen is included.",
+  },
+  {
+    question: "Is catering included with the hall hire?",
+    answer: "Yes. Full authentic Indian catering from the Chopras kitchen is included. The menu is customised to your occasion, with buffet or plated dinner service available. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 800+ reviews.",
+  },
+  {
+    question: "How many guests does the event hall accommodate?",
+    answer: "The private event hall accommodates between 25 and 80 guests. This covers intimate family dinners and large wedding or corporate receptions. Contact us with your guest count and we confirm availability and the best setup for your occasion.",
+  },
+  {
+    question: "Is the food fully halal certified?",
+    answer: "Yes. Every dish at Chopras Indian Restaurant is fully halal certified. Every meat supplier holds halal certification. There is no non-halal meat anywhere on the premises, which means no cross-contamination risk. Muslim families planning any event can book with complete confidence.",
+  },
+  {
+    question: "How far in advance should I book?",
+    answer: "For events of 25 to 40 guests, contact us at least 2 to 3 weeks ahead. For larger weddings and corporate dinners of 50 to 80 guests, 6 to 8 weeks ahead is recommended. This gives us time to build the menu and configure the hall exactly as your occasion requires.",
+  },
+]
+
+export const feestzaalFaqsNl: FaqItem[] = [
+  {
+    question: "Kan ik de feestzaal van Chopras Indian Restaurant huren?",
+    answer: "Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag heeft een privé feestzaal met plaats voor 25 tot 80 gasten. De zaal is beschikbaar voor verjaardagen, bruiloften, nikah ontvangsten, zakelijke evenementen, Diwali-diners en privé feesten. Volledig authentiek Indiaas catering vanuit de Chopras keuken is inbegrepen.",
+  },
+  {
+    question: "Is catering inbegrepen bij de zaalverhuur?",
+    answer: "Ja. Volledig authentiek Indiaas catering vanuit de Chopras keuken is inbegrepen. Het menu wordt aangepast aan uw evenement, met buffet- of gediende dinnerservice. Alles wordt op de dag zelf bereid door hetzelfde team dat 4.9 sterren op Google heeft van meer dan 800 beoordelingen.",
+  },
+  {
+    question: "Hoeveel gasten passen in de feestzaal?",
+    answer: "De privé feestzaal biedt plaats voor 25 tot 80 gasten. Dit dekt intieme familiediner en grote bruiloften- of zakelijke recepties. Neem contact met ons op met uw gastenaantal en wij bevestigen de beschikbaarheid en de beste opstelling voor uw evenement.",
+  },
+  {
+    question: "Is het eten volledig halal gecertificeerd?",
+    answer: "Ja. Elk gerecht in Chopras Indian Restaurant is volledig halal gecertificeerd. Alle vleesleveranciers hebben halal certificering. Er is geen niet-halal vlees op het terrein, dus geen risico op kruisbesmetting. Moslimfamilies kunnen met volledig vertrouwen elk evenement boeken.",
+  },
+  {
+    question: "Hoe ver van tevoren moet ik boeken?",
+    answer: "Voor evenementen met 25 tot 40 gasten, neem minimaal 2 tot 3 weken van tevoren contact op. Voor grotere bruiloften en zakelijke diners van 50 tot 80 gasten wordt 6 tot 8 weken van tevoren aanbevolen. Dit geeft ons de tijd om het menu op te stellen en de zaal exact in te richten voor uw evenement.",
+  },
+]

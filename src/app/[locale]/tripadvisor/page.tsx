@@ -10,7 +10,7 @@ export default function FeedbackPage() {
       const [comment, setComment] = useState("");
 
       // Replace this with your actual Google Review Link
-      const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJDZbdqdupZ0cRa6FxjpzGMvk";
+      const GOOGLE_REVIEW_URL = "https://www.tripadvisor.in/UserReviewEdit-g188633-d27464805-Chopras_Indian_Restaurant-The_Hague_South_Holland_Province.html";
 
       const handleStarClick = (selectedRating: number) => {
             setRating(selectedRating);
