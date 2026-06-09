@@ -161,12 +161,16 @@ Halal and Diet (English):
 - Halal info EN: https://chopras.nl/halal-food-den-haag
 - Halal menu EN: https://chopras.nl/halal-menu
 - Vegan menu EN: https://chopras.nl/vegan-menu
+- Gluten-free menu EN: https://chopras.nl/gluten-free-menu
+- Vegetarian menu EN: https://chopras.nl/vegetarian-menu
 - Halal Indian restaurant Netherlands: https://chopras.nl/halal-indian-restaurant-netherlands
 
 Halal and Diet (Dutch):
 - Halal info NL: https://chopras.nl/nl/halal-food-den-haag
 - Halal menu NL: https://chopras.nl/nl/halal-menu
 - Vegan menu NL: https://chopras.nl/nl/vegan-menu
+- Gluten-free menu NL: https://chopras.nl/nl/gluten-free-menu
+- Vegetarian menu NL: https://chopras.nl/nl/vegetarian-menu
 - Halal Indian restaurant Netherlands NL: https://chopras.nl/nl/halal-indian-restaurant-netherlands
 
 Dish Pages (English):

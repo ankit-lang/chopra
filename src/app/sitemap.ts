@@ -79,6 +79,8 @@ const staticPages: SitemapPage[] = [
   // Menu pages
   { slug: 'halal-menu', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'vegan-menu', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'gluten-free-menu', lastMod: '2026-06-09', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'vegetarian-menu', lastMod: '2026-06-09', priority: 0.8, changeFreq: 'weekly' },
 
   // Blog index
   { slug: 'blog', lastMod: '2026-04-21', priority: 0.7, changeFreq: 'weekly' },

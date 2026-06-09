@@ -73,23 +73,23 @@ export default function Header({ locale }: { locale: Locale }) {
 
   const cateringLinks = locale === 'nl'
     ? [
-        { label: 'Indiaas Catering Den Haag', href: `${base}/catering` },
-        { label: 'Bruiloft Catering', href: `${base}/bruiloft-catering-den-haag` },
-        { label: 'Zaal Huren Den Haag', href: `${base}/zaal-huren-den-haag` },
-        { label: 'Evenementenruimte Den Haag', href: `${base}/evenementenruimte-den-haag` },
-        { label: 'Verjaardag Catering', href: `${base}/indian-birthday-catering-den-haag` },
-        { label: 'Corporate Events', href: `${base}/corporate-events-den-haag` },
-        { label: 'Diwali Dinner', href: `${base}/diwali-dinner-den-haag` },
-        { label: 'Indian Buffet Den Haag', href: `${base}/indian-buffet-den-haag` },
-      ]
+      { label: 'Indiaas Catering Den Haag', href: `${base}/catering` },
+      { label: 'Bruiloft Catering', href: `${base}/bruiloft-catering-den-haag` },
+      { label: 'Zaal Huren Den Haag', href: `${base}/zaal-huren-den-haag` },
+      { label: 'Evenementenruimte Den Haag', href: `${base}/evenementenruimte-den-haag` },
+      { label: 'Verjaardag Catering', href: `${base}/indian-birthday-catering-den-haag` },
+      { label: 'Corporate Events', href: `${base}/corporate-events-den-haag` },
+      { label: 'Diwali Dinner', href: `${base}/diwali-dinner-den-haag` },
+      { label: 'Indian Buffet Den Haag', href: `${base}/indian-buffet-den-haag` },
+    ]
     : [
-        { label: 'Indian Catering Den Haag', href: `${base}/catering` },
-        { label: 'Wedding Catering', href: `${base}/indian-wedding-catering-den-haag` },
-        { label: 'Birthday Catering', href: `${base}/indian-birthday-catering-den-haag` },
-        { label: 'Corporate Events', href: `${base}/corporate-events-den-haag` },
-        { label: 'Diwali Dinner', href: `${base}/diwali-dinner-den-haag` },
-        { label: 'Indian Buffet Den Haag', href: `${base}/indian-buffet-den-haag` },
-      ]
+      { label: 'Indian Catering Den Haag', href: `${base}/catering` },
+      { label: 'Wedding Catering', href: `${base}/indian-wedding-catering-den-haag` },
+      { label: 'Birthday Catering', href: `${base}/indian-birthday-catering-den-haag` },
+      { label: 'Corporate Events', href: `${base}/corporate-events-den-haag` },
+      { label: 'Diwali Dinner', href: `${base}/diwali-dinner-den-haag` },
+      { label: 'Indian Buffet Den Haag', href: `${base}/indian-buffet-den-haag` },
+    ]
 
   const DROPDOWNS = [
     {
@@ -99,6 +99,8 @@ export default function Header({ locale }: { locale: Locale }) {
         { label: 'Full Menu', href: `${base}/menu` },
         { label: 'Halal Menu', href: `${base}/halal-menu` },
         { label: 'Vegan Menu', href: `${base}/vegan-menu` },
+        { label: 'Vegetarian Menu', href: `${base}/vegetarian-menu` },
+        { label: 'Gluten-Free Menu', href: `${base}/gluten-free-menu` },
       ],
     },
     {
@@ -249,15 +251,15 @@ export default function Header({ locale }: { locale: Locale }) {
                     {/* Invisible bridge - prevents gap between trigger and panel from firing onMouseLeave */}
                     <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
                     <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
-                    {links.map(({ label: linkLabel, href: linkHref }) => (
-                      <Link
-                        key={linkHref}
-                        href={linkHref}
-                        className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
-                      >
-                        {linkLabel}
-                      </Link>
-                    ))}
+                      {links.map(({ label: linkLabel, href: linkHref }) => (
+                        <Link
+                          key={linkHref}
+                          href={linkHref}
+                          className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
+                        >
+                          {linkLabel}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -335,15 +337,15 @@ export default function Header({ locale }: { locale: Locale }) {
                   >
                     <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
                     <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
-                    {links.map(({ label: linkLabel, href: linkHref }) => (
-                      <Link
-                        key={linkHref}
-                        href={linkHref}
-                        className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
-                      >
-                        {linkLabel}
-                      </Link>
-                    ))}
+                      {links.map(({ label: linkLabel, href: linkHref }) => (
+                        <Link
+                          key={linkHref}
+                          href={linkHref}
+                          className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
+                        >
+                          {linkLabel}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>

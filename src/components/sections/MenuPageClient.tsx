@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import { Leaf } from 'lucide-react'
 import { menuCategories, menuItems } from '@/lib/menu-data'
 import type { MenuCategoryEntry } from '@/lib/menu-data'
 import type { DietaryTag, MenuItem } from '@/types'
@@ -26,50 +25,32 @@ function renderDishTitle(name: string) {
   )
 }
 
-function VegetarianBadge() {
-  return (
-    <Leaf
-      size={24}
-      className="text-green-500"
-      strokeWidth={2.5}
-      fill="currentColor"
-    />
-  )
-}
+function DietaryBadges({ dietary }: { dietary: DietaryTag[] }) {
+  const badges: { symbol: string; label: string; key: DietaryTag }[] = [
+    { symbol: 'Ⓥ', label: 'Vegetarian', key: 'veg' },
+    { symbol: '🌱', label: 'Vegan', key: 'vegan' },
+    { symbol: 'Ⓖ', label: 'Gluten Free', key: 'glutenFree' },
+    { symbol: 'Ⓗ', label: 'Halal', key: 'halal' },
+    { symbol: '🌶️', label: 'Spicy', key: 'spicy' },
+  ]
 
-function VeganBadge() {
+  const activeBadges = badges.filter((b) => dietary.includes(b.key))
+
+  if (activeBadges.length === 0) return null
+
   return (
-    <div className="relative inline-flex items-center justify-center">
-      <Leaf
-        size={24}
-        className="text-[#2D7A2D]"
-        strokeWidth={2.5}
-        fill="currentColor"
-      />
-      <span className="absolute text-white text-xs font-bold inset-0 flex items-center justify-center">
-        V
-      </span>
+    <div className="flex flex-wrap gap-1.5 mt-2">
+      {activeBadges.map((badge) => (
+        <span
+          key={badge.key}
+          className="inline-flex items-center gap-1 px-2 py-1 bg-[#1B2B5E]/5 border border-[#C7A348]/30 rounded-md"
+          title={badge.label}
+        >
+          <span className="text-[#C7A348] text-xs font-light">{badge.symbol}</span>
+        </span>
+      ))}
     </div>
   )
-}
-
-function getDietBadge(dietary: DietaryTag[]): 'vegan' | 'vegetarian' | null {
-  if (dietary.includes('vegan')) {
-    return 'vegan'
-  }
-  if (dietary.includes('veg')) {
-    return 'vegetarian'
-  }
-  return null
-}
-
-function DietBadgeComponent({ type }: { type: 'vegan' | 'vegetarian' }) {
-  switch (type) {
-    case 'vegan':
-      return <VeganBadge />
-    case 'vegetarian':
-      return <VegetarianBadge />
-  }
 }
 
 function DishGrid({ dishes }: { dishes: MenuItem[] }) {
@@ -80,16 +61,14 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
     >
       {dishes.map((item, index) => {
-        const dietBadge = !item.isDrink ? getDietBadge(item.dietary) : null
         return (
           <article
             key={item.id}
             itemScope
             itemType="https://schema.org/MenuItem"
             style={{ transitionDelay: `${(index % 8) * 50}ms` }}
-            className={`bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out group ${
-              inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}
+            className={`bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out group ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              }`}
           >
             {/* Image */}
             <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-[#1B2B5E]/5 to-[#D4AF37]/10">
@@ -108,11 +87,6 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                   onError={(e) => { e.currentTarget.style.display = 'none' }}
                 />
               )}
-              {dietBadge && (
-                <div className="absolute top-3 left-3">
-                  <DietBadgeComponent type={dietBadge} />
-                </div>
-              )}
             </div>
 
             {/* Card body */}
@@ -123,14 +97,15 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
               >
                 {renderDishTitle(item.name)}
               </h3>
+              {!item.isDrink && <DietaryBadges dietary={item.dietary} />}
               <p
                 itemProp="description"
-                className="text-[#1A1A1A]/60 text-sm mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300"
+                className="text-[#1A1A1A]/60 text-sm mt-2 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300"
               >
-          {(() => {
-  const isNl = typeof window !== 'undefined' && window.location.pathname.startsWith('/nl');
-  return isNl && item.descriptionNl ? item.descriptionNl : item.description;
-})()}   </p>
+                {(() => {
+                  const isNl = typeof window !== 'undefined' && window.location.pathname.startsWith('/nl');
+                  return isNl && item.descriptionNl ? item.descriptionNl : item.description;
+                })()}   </p>
               <div className="flex items-center justify-between mt-3">
                 <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   <meta itemProp="priceCurrency" content="EUR" />
@@ -252,10 +227,9 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
               className={`
                 flex-none whitespace-nowrap px-5 py-2.5 rounded-full
                 text-sm font-medium transition-all duration-200
-                ${
-                  activeCategory === category.id
-                    ? 'bg-[#D4AF37] text-[#1A1A1A] font-semibold shadow-sm'
-                    : 'bg-white border border-gray-200 text-[#1A1A1A]/60 hover:border-[#D4AF37]/50 hover:text-[#1A1A1A]'
+                ${activeCategory === category.id
+                  ? 'bg-[#D4AF37] text-[#1A1A1A] font-semibold shadow-sm'
+                  : 'bg-white border border-gray-200 text-[#1A1A1A]/60 hover:border-[#D4AF37]/50 hover:text-[#1A1A1A]'
                 }
               `}
             >
@@ -282,6 +256,7 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
               itemType="https://schema.org/MenuSection"
               className="scroll-mt-36"
             >
+
               {/* Section header */}
               <div className="py-10">
                 <p className="text-xs uppercase tracking-widest text-[#D4AF37] font-medium mb-3">
@@ -295,7 +270,24 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
                 </h2>
                 <div className="border-b-2 border-[#D4AF37] w-16 mt-4" />
               </div>
+              {/* 🛠️ Bilkul aapke style me inline check bina kisi dependency ke */}
+              {(() => {
+                const isNl = typeof window !== 'undefined' && window.location.pathname.startsWith('/nl');
 
+                // Yahan check karo agar current category 'vegan' hai tabhi render ho
+                // Note: 'category.id' ki jagah apna active category variable use kar lena (e.g., activeCategory)
+                if (category.id === 'vegan') {
+                  return (
+                    <p className="text-[#3A3A4A] text-base mb-8 font-medium -mt-2">
+                      {isNl
+                        ? 'Veganistische opties beschikbaar voor de volgende gerechten:'
+                        : 'Vegan options available for the following dishes:'
+                      }
+                    </p>
+                  );
+                }
+                return null;
+              })()}
               {/* Dish grid */}
               <DishGrid dishes={dishes} />
             </section>

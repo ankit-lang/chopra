@@ -499,8 +499,7 @@ const events = [
 ];
 
 export default function EventHallPage() {
-  const [openFaq, setOpenFaq] = useState(null);
-
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <>
       <style>{styles}</style>

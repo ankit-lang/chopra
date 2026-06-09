@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Info } from 'lucide-react'
 import JsonLd from '@/components/seo/JsonLd'
 import MenuPageClient from '@/components/sections/MenuPageClient'
+import MenuLegend from '@/components/sections/MenuLegend'
 import MenuHeroSection from '@/components/sections/MenuHeroSection'
 import FaqAccordion from '@/components/sections/FaqAccordion'
 import { menuCategories, menuItems } from '@/lib/menu-data'
@@ -117,11 +118,11 @@ export default function LocaleMenuPage({ params }: Props) {
     name: category.label,
     items: menuItems
       .filter((item) => item.category === category.id)
-      .map((item) => ({ 
-        name: item.name, 
+      .map((item) => ({
+        name: item.name,
         // Select description based on the active locale
-        description: isNl && item.descriptionNl ? item.descriptionNl : item.description, 
-        price: item.price 
+        description: isNl && item.descriptionNl ? item.descriptionNl : item.description,
+        price: item.price
       })),
   }))
 
@@ -157,6 +158,9 @@ export default function LocaleMenuPage({ params }: Props) {
           ))}
         </div>
       </div>
+
+      {/* DIETARY & SPICE GUIDE LEGEND */}
+      <MenuLegend />
 
       {/* INTERACTIVE MENU */}
       <MenuPageClient />
@@ -565,7 +569,7 @@ export default function LocaleMenuPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]" 
             >
               Reserve a Table
             </Link>
