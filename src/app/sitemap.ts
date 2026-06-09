@@ -41,7 +41,7 @@ const staticPages: SitemapPage[] = [
   { slug: 'indian-takeaway-den-haag', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-buffet-den-haag', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-food-delivery-den-haag', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
-  { slug: 'feestzaal-den-haag', lastMod: '2026-04-21', priority: 0.9, changeFreq: 'weekly' },
+  { slug: 'feestzaal-den-haag', lastMod: '2026-05-21', priority: 0.9, changeFreq: 'weekly' },
 
   // Event and catering pages
   { slug: 'corporate-events-den-haag', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
