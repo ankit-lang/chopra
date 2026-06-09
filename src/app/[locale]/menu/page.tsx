@@ -117,7 +117,12 @@ export default function LocaleMenuPage({ params }: Props) {
     name: category.label,
     items: menuItems
       .filter((item) => item.category === category.id)
-      .map((item) => ({ name: item.name, description: item.description, price: item.price })),
+      .map((item) => ({ 
+        name: item.name, 
+        // Select description based on the active locale
+        description: isNl && item.descriptionNl ? item.descriptionNl : item.description, 
+        price: item.price 
+      })),
   }))
 
   const statPills = [`${menuItems.length} Dishes`, `${menuCategories.length} Categories`, '100% Halal', 'Vegetarian Options', 'Fresh Daily']

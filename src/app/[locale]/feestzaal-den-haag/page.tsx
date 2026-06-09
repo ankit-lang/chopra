@@ -545,14 +545,14 @@ export default function EventHallPage() {
         <div className="trust-bar">
           <div className="trust-item">
             <span className="stars">★★★★★</span>
-            <span><span class="!text-white">4.9 / 5</span> on Google · 800+ reviews</span>
+            <span><span className="!text-white">4.9 / 5</span> on Google · 800+ reviews</span>
           </div>
           <div className="trust-item">
             <span className="trust-badge">★★★★★</span>
-            <span>Reviewed on  <span class="!text-white">TripAdvisor</span></span>
+            <span>Reviewed on  <span className="!text-white">TripAdvisor</span></span>
           </div>
           <div className="trust-item">
-            <span><span class="!text-white">📞 +31 6 30645930</span> — WhatsApp available</span>
+            <span><span className="!text-white">📞 +31 6 30645930</span> — WhatsApp available</span>
           </div>
           
         </div>

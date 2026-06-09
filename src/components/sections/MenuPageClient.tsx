@@ -127,8 +127,10 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                 itemProp="description"
                 className="text-[#1A1A1A]/60 text-sm mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300"
               >
-                {item.description}
-              </p>
+          {(() => {
+  const isNl = typeof window !== 'undefined' && window.location.pathname.startsWith('/nl');
+  return isNl && item.descriptionNl ? item.descriptionNl : item.description;
+})()}   </p>
               <div className="flex items-center justify-between mt-3">
                 <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   <meta itemProp="priceCurrency" content="EUR" />

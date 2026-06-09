@@ -1,0 +1,13 @@
+{
+  "starters": [
+    {"id": "samosa", "desc": "Golden pastry filled with spiced potato and peas. Halal certified.", "descNl": "Driehoekig, goudgebakken hartig gebakje met kikkererwtenvullingen."},
+    {"id": "veg-samosa-chaat", "desc": "Broken samosa with yogurt, chickpeas, mint and tamarind sauce.", "descNl": "Verpletterd samosa met yogurt, kikkererwten, munt en tamarindesaus."},
+    {"id": "pani-puri", "desc": "Filled shells with potato, chickpeas, mint and tamarind water.", "descNl": "Gevulde deegballen met aardappel, kikkererwten, munt- en tamarindesaus en tangy water."},
+    {"id": "dahi-puri", "desc": "Filled shells with potato, chickpeas, yogurt and tamarind sauce.", "descNl": "Gevulde deegballen met aardappel, kikkererwten, munt-, tamarindesaus, en yogurt."},
+    {"id": "aloo-tikki", "desc": "Pan-fried spiced potato patties with chutneys.", "descNl": "Aardappel Kotelet."},
+    {"id": "papdi-chaat", "desc": "Crispy wafers with potato, tamarind and mint sauce.", "descNl": "Meelcrisps met aardappelmix, tamarinde- en muntsaus."},
+    {"id": "mixed-chaat", "desc": "Combo with samosa, aloo tikki, papdi and yogurt sauce.", "descNl": "Combo Veg. Samosa (1), Aloo Tikki (1) Papdi (verpletterd), yogurt en saus."},
+    {"id": "plain-papad", "desc": "Crispy lentil wafers.", "descNl": "Knapperige linzencracker."},
+    {"id": "masala-papad", "desc": "Papad with spices, onion and tomato.", "descNl": "Papad met kruiden, ui en tomaat."}
+  ]
+}

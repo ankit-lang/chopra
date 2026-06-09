@@ -90,7 +90,7 @@ export default function LocaleHomePage({ params }: Props) {
       <section className="py-20 px-6 md:px-16 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
-            {t.home.whyBestH2}
+            {t?.home?.whyBestH2}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed space-y-6">
             <p>
