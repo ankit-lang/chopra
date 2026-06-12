@@ -82,8 +82,8 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                   src={item.image}
                   alt={`${item.name} at Chopras Indian Restaurant Den Haag`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                  className="object-cover !max-w-[65%] m-auto group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 50%, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   onError={(e) => { e.currentTarget.style.display = 'none' }}
                 />
               )}
