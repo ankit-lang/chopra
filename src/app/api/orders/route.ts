@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     user:  'rankit2883@gmail.com',
     pass: 'cbonefjwopeonhao',
   },
-})
+} as any)
 
 // Restaurant Configuration
 const RESTAURANT_EMAIL = 'rankit2883@gmail.com' 
