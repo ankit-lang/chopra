@@ -559,15 +559,24 @@ export default function EventHallPage() {
         {/* ── HALL & CATERING ── */}
         <div className="hall-grid">
           <div className="hall-img-wrap">
-            <div className="img-placeholder" style={{ minHeight: 320 }}>
-              <span className="img-tag">Now Booking</span>
-              {/* Decorative champagne glass silhouette */}
-              <svg viewBox="0 0 200 260" width="100%" height="100%" style={{ position: 'absolute', inset: 0, opacity: 0.12 }}>
-                <ellipse cx="100" cy="80" rx="60" ry="70" fill="#7eb8f0" />
-                <rect x="92" y="148" width="16" height="70" fill="#7eb8f0" />
-                <ellipse cx="100" cy="220" rx="35" ry="8" fill="#7eb8f0" />
-              </svg>
-              <div className="img-badge">
+            <div className="img-placeholder" style={{ minHeight: 320, position: 'relative', overflow: 'hidden' }}>
+              <span className="img-tag" style={{ zIndex: 2 }}>Now Booking</span>
+
+              {/* Replaced SVG with actual image */}
+              <img
+                src="/images/catering/feez12.jpg"
+                alt="Hall Venue"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  zIndex: 1
+                }}
+              />
+
+              <div className="img-badge" style={{ zIndex: 2 }}>
                 All<br />In<br />One
               </div>
             </div>
@@ -591,18 +600,43 @@ export default function EventHallPage() {
         {/* ── PHOTO GRID ── */}
         <div className="section-full" style={{ background: '#0d1e35', padding: '3rem 1.5rem' }}>
           <div className="photo-grid">
-            <div className="photo-cell photo-bg-1">
-              <div className="photo-label">Cuisine</div>
-            </div>
-            <div className="photo-cell photo-bg-2">
-              <div className="photo-label">Drinks</div>
-            </div>
-            <div className="photo-cell photo-bg-3">
-              <div className="photo-label">Desserts</div>
-            </div>
-            <div className="photo-cell photo-bg-4" style={{ background: 'linear-gradient(135deg, #1a3050 0%, #0d2a4a 100%)' }}>
-              <div className="photo-label">Venue</div>
-            </div>
+          
+              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/images/catering/feez2.jpg"
+                  alt="Cuisine"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
+                />
+                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Cuisine</div>
+              </div>
+
+              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+                <img
+                src="/images/catering/feez4.jpg"
+                  alt="Drinks"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
+                />
+                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Drinks</div>
+              </div>
+
+              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/images/catering/feez5.jpg"
+                  alt="Desserts"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
+                />
+                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Desserts</div>
+              </div>
+
+              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/images/catering/feez8.jpg"
+                  alt="Venue"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
+                />
+                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Venue</div>
+              </div>
+       
           </div>
         </div>
 
