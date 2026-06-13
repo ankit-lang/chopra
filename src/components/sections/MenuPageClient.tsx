@@ -82,7 +82,8 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                   src={item.image}
                   alt={`${item.name} at Chopras Indian Restaurant Den Haag`}
                   fill
-                  className="object-cover !max-w-[74%] m-auto group-hover:scale-105 transition-transform duration-500"
+                  className={`object-cover m-auto group-hover:scale-105 transition-transform duration-500 ${item.image.endsWith('apple-juice.png') ? '!max-w-[27%]' : '!max-w-[74%]'
+                    }`}
                   sizes="(max-width: 640px) 50%, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   onError={(e) => { e.currentTarget.style.display = 'none' }}
                 />
@@ -140,9 +141,10 @@ interface MenuPageClientProps {
 }
 
 export default function MenuPageClient({ categories, items }: MenuPageClientProps) {
-  const activeCategories = categories ?? menuCategories
+  // Filter out the 'vegan' category profile completely up front
+  const activeCategories = (categories ?? menuCategories).filter(category => category.id !== 'vegan')
   const activeItems = items ?? menuItems
-  const [activeCategory, setActiveCategory] = useState<string>(activeCategories[0].id)
+  const [activeCategory, setActiveCategory] = useState<string>(activeCategories[0]?.id || '')
   const navRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -196,7 +198,6 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
     if (!nav) return
     const activeLink = nav.querySelector<HTMLElement>(`[data-category="${activeCategory}"]`)
     if (activeLink) {
-      // Scroll only the nav container horizontally — never touch vertical page scroll
       const navRect = nav.getBoundingClientRect()
       const linkRect = activeLink.getBoundingClientRect()
       const targetScrollLeft =
@@ -242,10 +243,7 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
       {/* Category sections */}
       <div className="max-w-7xl mx-auto px-6 md:px-16 pb-16">
         {activeCategories.map((category) => {
-          const dishes =
-            category.id === 'vegan'
-              ? activeItems.filter((item) => item.dietary.includes('vegan'))
-              : activeItems.filter((item) => item.category === category.id)
+          const dishes = activeItems.filter((item) => item.category === category.id)
 
           return (
             <section
@@ -256,7 +254,6 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
               itemType="https://schema.org/MenuSection"
               className="scroll-mt-36"
             >
-
               {/* Section header */}
               <div className="py-10">
                 <p className="text-xs uppercase tracking-widest text-[#D4AF37] font-medium mb-3">
@@ -270,24 +267,7 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
                 </h2>
                 <div className="border-b-2 border-[#D4AF37] w-16 mt-4" />
               </div>
-              {/* 🛠️ Bilkul aapke style me inline check bina kisi dependency ke */}
-              {(() => {
-                const isNl = typeof window !== 'undefined' && window.location.pathname.startsWith('/nl');
 
-                // Yahan check karo agar current category 'vegan' hai tabhi render ho
-                // Note: 'category.id' ki jagah apna active category variable use kar lena (e.g., activeCategory)
-                if (category.id === 'vegan') {
-                  return (
-                    <p className="text-[#3A3A4A] text-base mb-8 font-medium -mt-2">
-                      {isNl
-                        ? 'Veganistische opties beschikbaar voor de volgende gerechten:'
-                        : 'Vegan options available for the following dishes:'
-                      }
-                    </p>
-                  );
-                }
-                return null;
-              })()}
               {/* Dish grid */}
               <DishGrid dishes={dishes} />
             </section>
