@@ -651,7 +651,7 @@ export default function EventHallPage() {
               {[
                 { icon: "🍽", title: "Restaurant Quality", desc: "Freshly ground spices sourced direct from India. Same chefs, same recipes as the restaurant that earns 4.9 stars nightly." },
                 { icon: "🏛", title: "One Booking", desc: "Venue, catering, and service in a single contract. No separate caterer. No double logistics. One point of contact." },
-                { icon: "☪️", title: "Every dish, every supplier, every preparation is halal certified. No exceptions, no cross-contamination. Book with complete confidence." },
+                { icon: "☪️", title: "Halal Certified", desc: "Every dish, every supplier, every preparation is halal certified. No exceptions, no cross-contamination. Book with complete confidence." },
                 { icon: "👥", title: "25–80 Guests", desc: "Intimate family dinner or large wedding reception. The private hall adapts to your group size with no fixed minimum packages." },
               ].map((f, i) => (
                 <div className="feature-card" key={i}>
