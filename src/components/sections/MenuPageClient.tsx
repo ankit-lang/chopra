@@ -67,7 +67,7 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
             itemScope
             itemType="https://schema.org/MenuItem"
             style={{ transitionDelay: `${(index % 8) * 50}ms` }}
-            className={`bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out group ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            className={`bg-gray-100 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 ease-out group ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
           >
             {/* Image */}
@@ -82,7 +82,7 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                   src={item.image}
                   alt={`${item.name} at Chopras Indian Restaurant Den Haag`}
                   fill
-                  className="object-cover !max-w-[65%] m-auto group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover !max-w-[74%] m-auto group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 50%, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   onError={(e) => { e.currentTarget.style.display = 'none' }}
                 />
