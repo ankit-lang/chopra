@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   secure: false,         // false for 587
   auth: {
     user: 'info@chopras.nl',
-    pass: 'izkvqirctbdojtle', // Your Gmail App Password
+    pass: 'qhbilfenlwtpetgz', // Your Gmail App Password
   },
 } as any)
 
