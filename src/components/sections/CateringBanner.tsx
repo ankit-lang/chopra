@@ -21,7 +21,7 @@ export default function CateringBanner({ locale = 'en' }: { locale?: Locale }) {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#1B2B5E]/90 via-[#1B2B5E]/80 to-[#0F1040]/85" />
 
-      {/* Double-bezel content container */}
+      {/* Double-bezel content containerr */}
       <div
         ref={ref}
         className={`relative z-10 max-w-2xl mx-auto transition-all duration-[800ms] ease-[cubic-bezier(0.32,0.72,0,1)] ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
