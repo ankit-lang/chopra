@@ -15,73 +15,140 @@ const styles = `
 
   .page { background: #0a1628; }
 
-  /* ── HERO ── */
+  /* ── HERO BANNER CONTAINER ── */
+  .hero-banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Lock exactly to viewport height */
+    min-height: 600px; /* Prevent shrinking too small on mobile */
+    overflow: hidden;
+    background: #0a1628;
+  }
+
+  /* ── COVER ENTIRE SPACE WITHOUT BLACK BARS ── */
+  .hero-bg-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    object-fit: cover; /* Forces the video to stretch and fill all black spaces */
+    z-index: 1;
+  }
+
+  /* ── REINFORCED DARK OVERLAY FOR TEXT CONTRAST ── */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg, 
+      rgba(10, 22, 40, 0.65) 0%, 
+      rgba(10, 22, 40, 0.5) 40%, 
+      rgba(10, 22, 40, 0.85) 80%, 
+      #0a1628 100%
+    );
+    z-index: 2;
+  }
+
+  /* ── HERO CONTENT LAYER ── */
   .hero {
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 6rem 1.5rem 4rem;
-    background: radial-gradient(ellipse 80% 60% at 50% 30%, #112240 0%, #0a1628 100%);
+    padding: 2rem 1.5rem;
     position: relative;
+    z-index: 3; 
+    background: transparent; 
   }
   .hero-eyebrow {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #5b8cbe;
+    color: #93c5fd; /* Brightened for premium visibility */
     margin-bottom: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
   }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 6.5vw, 5rem);
     font-weight: 400;
-    color: #e8eef7;
-    line-height: 1.1;
-    margin-bottom: 0.15em;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 0.25em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
   }
   .hero h1 em {
     font-style: italic;
-    color: #7eb8f0;
+    color: #93c5fd;
   }
   .hero-sub {
-    max-width: 420px;
-    font-size: 0.95rem;
-    color: #7a94b8;
+    max-width: 500px;
+    font-size: 1rem;
+    color: #e2e8f0; /* Crisp white-silver tint to contrast dark backgrounds */
+    font-weight: 400;
     line-height: 1.7;
-    margin: 1.25rem auto 2.5rem;
+    margin: 1rem auto 2.5rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   }
   .stats-row {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     justify-content: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 800px;
   }
-  .stat-item { text-align: center; }
+  .stat-item { 
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  }
   .stat-num {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #e8eef7;
+    font-size: 2.2rem;
+    color: #ffffff;
     display: block;
     line-height: 1;
+    font-weight: 600;
   }
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #5b7a9e;
+    color: #cbd5e1; 
     display: block;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
   }
-  .stars { color: #c9a84c; font-size: 0.75rem; }
-  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .stars { color: #f59e0b; font-size: 0.8rem; }
+  .hero-btns { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+  
   .btn-primary {
     background: #2563eb;
     color: #fff;
     border: none;
-    padding: 0.85rem 2rem;
+    padding: 0.95rem 2.25rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+  
+  .btn-ghost {
+    background: rgba(10, 22, 40, 0.6);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    backdrop-filter: blur(4px);
+    padding: 0.95rem 2.25rem;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -89,24 +156,9 @@ const styles = `
     border-radius: 2px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s;
   }
-  .btn-primary:hover { background: #1d4ed8; }
-  .btn-ghost {
-    background: transparent;
-    color: #7eb8f0;
-    border: 1px solid #1e3a5f;
-    padding: 0.85rem 2rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-ghost:hover { border-color: #7eb8f0; color: #c8d4e8; }
+  .btn-ghost:hover { background: #ffffff; color: #0a1628; }
 
   /* ── TRUST BAR ── */
   .trust-bar {
@@ -118,6 +170,8 @@ const styles = `
     gap: 3rem;
     flex-wrap: wrap;
     background: #0d1e35;
+    position: relative;
+    z-index: 4; 
   }
   .trust-item {
     display: flex;
@@ -133,30 +187,6 @@ const styles = `
     letter-spacing: 0.05em;
   }
 
-  /* ── SECTION WRAPPER ── */
-  .section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-  .section-full { padding: 5rem 0; }
-  .section-center { text-align: center; }
-  .eyebrow {
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #5b8cbe;
-    margin-bottom: 0.75rem;
-    display: block;
-  }
-  .heading-serif {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 400;
-    color: #e8eef7;
-    line-height: 1.2;
-  }
-  .heading-serif em {
-    font-style: italic;
-    color: #7eb8f0;
-  }
-
   /* ── HALL & CATERING ── */
   .hall-grid {
     display: grid;
@@ -167,16 +197,11 @@ const styles = `
     max-width: 1100px;
     margin: 0 auto;
   }
-  @media (max-width: 768px) { .hall-grid { grid-template-columns: 1fr; gap: 2rem; } }
-  .hall-img-wrap { position: relative; }
-  .hall-img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 2px;
-    display: block;
-    background: linear-gradient(135deg, #1a3a5c 0%, #0f2240 100%);
+  @media (max-width: 768px) { 
+    .hall-grid { grid-template-columns: 1fr; gap: 2rem; } 
+    .stats-row { gap: 1.5rem; flex-direction: column; align-items: center; }
   }
+  .hall-img-wrap { position: relative; }
   .img-placeholder {
     width: 100%;
     aspect-ratio: 4/3;
@@ -187,12 +212,6 @@ const styles = `
     padding: 1rem;
     position: relative;
     overflow: hidden;
-  }
-  .img-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Crect fill='%23112040' width='100%25' height='100%25'/%3E%3Cellipse cx='40%25' cy='30%25' rx='35%25' ry='40%25' fill='%23193460' opacity='0.6'/%3E%3C/svg%3E") center/cover;
   }
   .img-tag {
     position: absolute;
@@ -225,7 +244,6 @@ const styles = `
     text-align: center;
     line-height: 1.3;
   }
-  .hall-content { }
   .hall-content p {
     color: #7a94b8;
     font-size: 0.9rem;
@@ -233,7 +251,6 @@ const styles = `
     margin-top: 1.25rem;
     margin-bottom: 0.9rem;
   }
-  .hall-content .btn-primary { margin-top: 1rem; }
   .link-plain {
     color: #5b8cbe;
     font-size: 0.8rem;
@@ -260,15 +277,6 @@ const styles = `
     overflow: hidden;
     position: relative;
   }
-  .photo-cell-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .photo-bg-1 { background: linear-gradient(135deg, #d4a85c 0%, #e8c47a 40%, #f0d090 100%); }
-  .photo-bg-2 { background: linear-gradient(135deg, #1a2e4a 0%, #2a4a6a 100%); }
-  .photo-bg-3 { background: linear-gradient(135deg, #3a2010 0%, #6a4020 100%); }
-  .photo-bg-4 { background: linear-gradient(135deg, #1a3050 0%, #0a1628 100%); }
   .photo-label {
     position: absolute;
     inset: 0;
@@ -429,73 +437,27 @@ const styles = `
   .cta-section .heading-serif { font-size: clamp(2rem, 5vw, 3.5rem); }
   .cta-section p { color: #5b7a9e; font-size: 0.9rem; margin: 1.25rem auto 2rem; max-width: 440px; line-height: 1.7; }
   .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-  /* ── DIVIDER ── */
-  .divider { height: 1px; background: #132240; max-width: 1100px; margin: 0 auto; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    .stats-row { gap: 1.5rem; }
-    .hall-img-wrap { order: -1; }
-    .photo-grid { max-width: 100%; }
-    .trust-bar { gap: 1rem; }
-  }
 `;
 
 const faqs = [
-  {
-    q: "Can I hire the event hall at Chopras Indian Restaurant?",
-    a: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. The hall is available for birthdays, weddings, nikah receptions, corporate events, Diwali dinners, and private parties. Full authentic Indian catering from the Chopras kitchen is included.",
-  },
-  {
-    q: "Is catering included with the hall hire?",
-    a: "Yes. Full authentic Indian catering from the Chopras kitchen is included. The menu is customised to your occasion, with buffet or plated dinner service available. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 800+ reviews.",
-  },
-  {
-    q: "How many guests does the event hall accommodate?",
-    a: "The private event hall accommodates between 25 and 80 guests. This covers intimate family dinners and large wedding or corporate receptions. Contact us with your guest count and we confirm availability and the best setup for your occasion.",
-  },
-  {
-    q: "Is the food fully halal certified?",
-    a: "Yes. Every dish at Chopras Indian Restaurant is fully halal certified. Every meat supplier holds halal certification. There is no non-halal meat anywhere on the premises, which means no cross-contamination risk. Muslim families planning any event can book with complete confidence.",
-  },
-  {
-    q: "How far in advance should I book?",
-    a: "For events of 25–40 guests, contact us at least 2–3 weeks ahead. For larger weddings and corporate dinners of 50–80 guests, 6–8 weeks ahead is recommended. This gives us time to build the menu and configure the hall exactly as your occasion requires.",
-  },
+  { q: "Can I hire the event hall at Chopras Indian Restaurant?", a: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. Full authentic Indian catering from the Chopras kitchen is included." },
+  { q: "Is catering included with the hall hire?", a: "Yes. Full authentic Indian catering from the Chopras kitchen is included. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 1,000+ reviews." },
+  { q: "How many guests does the event hall accommodate?", a: "The private event hall accommodates between 25 and 80 guests. This covers intimate family dinners and large wedding or corporate receptions." },
+  { q: "Is the food fully halal certified?", a: "Yes. Every dish at Chopras Indian Restaurant is fully halal certified. Every meat supplier holds halal certification. Muslim families planning any event can book with complete confidence." },
+  { q: "How far in advance should I book?", a: "For events of 25–40 guests, contact us at least 2–3 weeks ahead. For larger weddings and corporate dinners of 50–80 guests, 6–8 weeks ahead is recommended." }
 ];
 
 const events = [
-  {
-    num: "01",
-    title: "Weddings & Nikah",
-    desc: "Buffet with multiple stations or formal plated service. Biryani in large karahi pots, tandoori platters, full vegetarian spread. The format matches the formality of your occasion.",
-  },
-  {
-    num: "02",
-    title: "Birthday Parties",
-    desc: "Arrive to a hall that's set, food that's ready. Your guests celebrate from the first moment without logistics getting in the way.",
-  },
-  {
-    num: "03",
-    title: "Corporate Seminars",
-    desc: "A team dinner at Chopras is more memorable than a standard catered meeting room. Your private hall lets the group relax away from a public dining room.",
-  },
-  {
-    num: "04",
-    title: "Diwali & Eid Gatherings",
-    desc: "Traditional dishes take centre stage — dal makhani, paneer tikka, biryani. Every celebration deserves food prepared with the care the occasion calls for.",
-  },
-  {
-    num: "05",
-    title: "Baby Showers",
-    desc: "An intimate gathering for the family, styled and catered to the detail. We work with you on menu and layout for a fully personalised experience.",
-  },
-  {
-    num: "06",
-    title: "Proposal & Private Dinners",
-    desc: "The most important evening deserves a setting that matches it. The private hall can be arranged for an intimate candlelit dinner for two.",
-  },
+  { num: "01", title: "Weddings", desc: "Buffet with multiple stations or formal plated service. Biryani in large karahi pots, tandoori platters, full vegetarian spread. The format matches the formality of your occasion." },
+  { num: "02", title: "Nikah Receptions", desc: "A beautifully customized, intimate atmosphere honoring tradition with exceptional hospitality and a completely Halal menu." },
+  { num: "03", title: "Walima Celebrations", desc: "Elegant dining arrangements made specifically to gather family and friends for grand celebratory multi-course Indian feasts." },
+  { num: "04", title: "Festivities", desc: "Traditional dishes take centre stage — dal makhani, paneer tikka, biryani. Every celebration deserves food prepared with the care the occasion calls for." },
+  { num: "05", title: "Birthday Parties", desc: "Arrive to a hall that's set, food that's ready. Your guests celebrate from the first moment without logistics getting in the way." },
+  { num: "06", title: "Anniversaries", desc: "Commemorate beautiful milestones in an elegant space, customized layouts, and memories crafted around exquisite service." },
+  { num: "07", title: "Baby Showers", desc: "An intimate gathering for the family, styled and catered to the detail. We work with you on menu and layout for a fully personalised experience." },
+  { num: "08", title: "Corporate Dinners", desc: "A team dinner at Chopras is more memorable than a standard catered meeting room. Your private hall lets the group relax away from a public dining room." },
+  { num: "09", title: "Networking Events", desc: "Professional setups with customizable catering and seamless organization, perfect for engaging conversations and community building." },
+  { num: "10", title: "Family Gatherings", desc: "Gathering generations together over exceptional food and private structural luxury designed exclusively for comfort." }
 ];
 
 export default function EventHallPage() {
@@ -505,64 +467,84 @@ export default function EventHallPage() {
       <style>{styles}</style>
       <main className="page">
 
-        {/* ── HERO ── */}
-        <section className="hero">
-          <span className="hero-eyebrow">Event Venue · Den Haag</span>
-          <h1>
-            Your Occasion,<br />
-            <em>Perfectly Arranged</em>
-          </h1>
-          <p className="hero-sub">
-       Private event hall with authentic Indian catering under one roof   </p>
-          <div className="stats-row">
-            <div className="stat-item">
-              <span className="stat-num">25–350</span>
-              <span className="stat-label">Guests</span>
+        {/* ── HERO BANNER WRAPPER WITH FIXED COVER POSITIONING ── */}
+        <div className="hero-banner-container">
+<img 
+  src="/images/catering/feez12.jpg" /* Replace with your desired banner image path */
+  alt="Chopras Private Event Hall Banner" 
+  className="hero-bg-media" 
+/>
+          {/* <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hero-bg-media"
+          >
+            <source src="/images/catering/feez13.mp4" type="video/mp4" />
+          
+          </video> */}
+
+          {/* Corrected high contrast overlay mask */}
+          <div className="hero-overlay"></div>
+
+          {/* Clean text contents explicitly isolated on top */}
+          <section className="hero">
+            <span className="hero-eyebrow">Event Venue · Den Haag</span>
+            <h1>
+              Your Occasion,<br />
+              <em>Perfectly Arranged</em>
+            </h1>
+            <p className="hero-sub">
+              Private event hall with authentic Indian catering under one roof
+            </p>
+            <div className="stats-row">
+              <div className="stat-item">
+                <span className="stat-num">100%</span>
+                <span className="stat-label">Private &amp; Tailored Layouts</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-num">
+                  4.9 <span className="stars">★★★★★</span>
+                </span>
+                <span className="stat-label">Google Service Excellence</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-num">All-in-One</span>
+                <span className="stat-label">Venue &amp; Food Operations</span>
+              </div>
             </div>
-            <div className="stat-item">
-              <span className="stat-num">
-                4.9 <span className="stars">★★★★★</span>
-              </span>
-              <span className="stat-label">Customer Rating · 180+ reviews</span>
+            <div className="hero-btns">
+              <a href="/contact">
+                <button className="btn-primary">Request a Free Quote</button>
+              </a>
+              <a href="/menu">
+                <button className="btn-ghost">View the Menu</button>
+              </a>
             </div>
-            <div className="stat-item">
-              <span className="stat-num">100%</span>
-              <span className="stat-label">Exclusive Hire Available</span>
-            </div>
-          </div>
-          <div className="hero-btns">
-            <a href="/contact">
-            <button className="btn-primary">Request a Free Quote</button>
-            </a>
-            <a href="/menu">
-              <button className="btn-ghost">View the Menu</button>
-            </a>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* ── TRUST BAR ── */}
         <div className="trust-bar">
           <div className="trust-item">
             <span className="stars">★★★★★</span>
-            <span><span className="!text-white">4.9 / 5</span> on Google · 800+ reviews</span>
+            <span>Based on <span className="!text-white">1,000+ reviews</span> on Google</span>
           </div>
           <div className="trust-item">
             <span className="trust-badge">★★★★★</span>
-            <span>Reviewed on  <span className="!text-white">TripAdvisor</span></span>
+            <span>Reviewed on <span className="!text-white">TripAdvisor</span></span>
           </div>
           <div className="trust-item">
             <span><span className="!text-white">📞 +31 6 30645930</span> — WhatsApp available</span>
           </div>
-          
         </div>
 
-        {/* ── HALL & CATERING ── */}
+        {/* ── HALL & CATERING DETAILS ── */}
         <div className="hall-grid">
           <div className="hall-img-wrap">
             <div className="img-placeholder" style={{ minHeight: 320, position: 'relative', overflow: 'hidden' }}>
               <span className="img-tag" style={{ zIndex: 2 }}>Now Booking</span>
-
-              {/* Replaced SVG with actual image */}
               <img
                 src="/images/catering/feez12.jpg"
                 alt="Hall Venue"
@@ -575,10 +557,7 @@ export default function EventHallPage() {
                   zIndex: 1
                 }}
               />
-
-              <div className="img-badge" style={{ zIndex: 2 }}>
-                All<br />In<br />One
-              </div>
+              <div className="img-badge" style={{ zIndex: 2 }}>All<br />In<br />One</div>
             </div>
           </div>
           <div className="hall-content">
@@ -587,66 +566,45 @@ export default function EventHallPage() {
               Hall &amp; Catering<br /><em>Under One Roof</em>
             </h2>
             <p>
-           Most people planning a feestzaal in Den Haag face the same problem — find a room, then find a caterer, negotiate two contracts, manage two schedules. At Chopras Indian Restaurant, the event hall and the kitchen are a single operation. You make one call. Everything is handled. </p>
+              Most people planning a private event, celebration, or corporate gathering in Den Haag face the same challenge: first finding an event venue, then finding a caterer, negotiating separate contracts, and coordinating multiple schedules. At Chopras Indian Restaurant, the private event hall and catering are managed under one roof, making the planning process simple and convenient. One booking. One team. One point of contact.
+            </p>
             <p>
-           The private hall seats 25 to 80 guests entirely privately. From an intimate nikah reception to a corporate dinner, that range covers everything. The food is prepared by the same chefs who earn 4.9 stars on Google from 800+ reviewers every week. </p>
+              The private event hall accommodates approximately 25 to 80 guests in an exclusive setting, making it ideal for weddings, nikah receptions, walima celebrations, birthday parties, anniversaries, baby showers, corporate dinners, networking events, and family gatherings. Every dish is prepared by the same team that serves guests daily at Chopras Indian Restaurant, a restaurant that has earned a 4.9-star rating on Google from more than 1,000 reviews. The result is an event experience built around fresh food, professional hospitality, and authentic Indian cuisine.
+            </p>
             <div style={{ marginTop: '1.5rem' }}>
-              <button className="btn-primary" ><a href="/contact">Request a Quote</a></button>
+              <button className="btn-primary"><a href="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Request a Quote</a></button>
               <a className="link-plain" href="/menu">See the Menu</a>
             </div>
           </div>
         </div>
 
-        {/* ── PHOTO GRID ── */}
+        {/* ── PHOTO GALLERY GRID ── */}
         <div className="section-full" style={{ background: '#0d1e35', padding: '3rem 1.5rem' }}>
           <div className="photo-grid">
-          
-              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-                <img
-                  src="/images/catering/feez2.jpg"
-                  alt="Cuisine"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
-                />
-                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Cuisine</div>
-              </div>
-
-              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-                <img
-                src="/images/catering/feez4.jpg"
-                  alt="Drinks"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
-                />
-                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Drinks</div>
-              </div>
-
-              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-                <img
-                  src="/images/catering/feez5.jpg"
-                  alt="Desserts"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
-                />
-                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Desserts</div>
-              </div>
-
-              <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-                <img
-                  src="/images/catering/feez8.jpg"
-                  alt="Venue"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
-                />
-                <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Venue</div>
-              </div>
-       
+            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/catering/feez2.jpg" alt="Cuisine" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Cuisine</div>
+            </div>
+            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/catering/feez4.jpg" alt="Drinks" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Drinks</div>
+            </div>
+            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/catering/feez5.jpg" alt="Desserts" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Desserts</div>
+            </div>
+            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
+              <img src="/images/catering/feez8.jpg" alt="Venue" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
+              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Venue</div>
+            </div>
           </div>
         </div>
 
-        {/* ── FEATURES ── */}
+        {/* ── VALUE BLOCK FEATURES ── */}
         <div style={{ background: '#0a1628', padding: '5rem 1.5rem' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
             <span className="eyebrow">What We Offer</span>
-            <h2 className="heading-serif">
-              Everything Your<br /><em>Event Deserves</em>
-            </h2>
+            <h2 className="heading-serif">Everything Your<br /><em>Event Deserves</em></h2>
             <div className="features-grid">
               {[
                 { icon: "🍽", title: "Restaurant Quality", desc: "Freshly ground spices sourced direct from India. Same chefs, same recipes as the restaurant that earns 4.9 stars nightly." },
@@ -664,13 +622,11 @@ export default function EventHallPage() {
           </div>
         </div>
 
-        {/* ── EVERY CELEBRATION ── */}
+        {/* ── OCCASIONS TYPE GRID ── */}
         <div className="events-section" style={{ padding: '5rem 1.5rem' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
             <span className="eyebrow">Occasions</span>
-            <h2 className="heading-serif">
-              Every Celebration<br /><em>Welcomed Here</em>
-            </h2>
+            <h2 className="heading-serif">Every Celebration<br /><em>Welcomed Here</em></h2>
             <div className="events-grid">
               {events.map((e) => (
                 <div className="event-item" key={e.num}>
@@ -683,13 +639,11 @@ export default function EventHallPage() {
           </div>
         </div>
 
-        {/* ── STEPS ── */}
+        {/* ── BOOKING STEPS ── */}
         <div style={{ background: '#0a1628', padding: '5rem 1.5rem' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
             <span className="eyebrow">How To Book</span>
-            <h2 className="heading-serif">
-              Four Steps to<br /><em>Your Perfect Event</em>
-            </h2>
+            <h2 className="heading-serif">Four Steps to<br /><em>Your Perfect Event</em></h2>
             <div className="steps-grid">
               {[
                 { n: 1, title: "Get in Touch", desc: "Call +31 6 30645930 or use the contact page. Tell us your date, guest count, and occasion type." },
@@ -704,59 +658,38 @@ export default function EventHallPage() {
                 </div>
               ))}
             </div>
-            <p className="steps-footer">
-           For 25–40 guests: book 2–3 weeks ahead  ·  For 50–80 guests: book 6–8 weeks ahead
-
- </p>
- <a href="/contact">
-            <button className="btn-primary" style={{ marginTop: '1.5rem' }}>
-             Request Your Free Quote
-            </button>
-            </a>
+            <p className="steps-footer">For 25–40 guests: book 2–3 weeks ahead  ·  For 50–80 guests: book 6–8 weeks ahead</p>
+            <a href="/contact"><button className="btn-primary" style={{ marginTop: '1.5rem' }}>Request Your Free Quote</button></a>
           </div>
         </div>
 
-        {/* ── FAQ ── */}
+        {/* ── FAQ ACCORDION LIST ── */}
         <div style={{ background: '#0d1e35', padding: '5rem 1.5rem' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
             <span className="eyebrow">Support</span>
-            <h2 className="heading-serif">
-              Frequently Asked<br /><em>Questions</em>
-            </h2>
+            <h2 className="heading-serif">Frequently Asked<br /><em>Questions</em></h2>
             <div className="faq-list">
               {faqs.map((faq, i) => (
                 <div className="faq-item" key={i}>
-                  <button
-                    className="faq-question"
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  >
+                  <button className="faq-question" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                     {faq.q}
                     <span className={`faq-toggle ${openFaq === i ? 'open' : ''}`}>+</span>
                   </button>
-                  <div className={`faq-answer ${openFaq === i ? 'open' : ''}`}>
-                    {faq.a}
-                  </div>
+                  <div className={`faq-answer ${openFaq === i ? 'open' : ''}`}>{faq.a}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* ── CTA ── */}
+        {/* ── CALL TO ACTION SECTION ── */}
         <section className="cta-section">
           <span className="eyebrow">Reserve Your Date</span>
-          <h2 className="heading-serif">
-            Ready to Book Your<br /><em>Event Hall in Den Haag?</em>
-          </h2>
-          <p>
-       Contact us today and receive a free quote within 24 hours. Open Tuesday to Sunday at Leyweg 986, Den Haag.   </p>
+          <h2 className="heading-serif">Ready to Book Your<br /><em>Event Hall in Den Haag?</em></h2>
+          <p>Contact us today and receive a free quote within 24 hours. Open Tuesday to Sunday at Leyweg 986, Den Haag.</p>
           <div className="cta-btns">
-            <a href="/contact">
-              <button className="btn-primary">Request A Quote</button>
-            </a>
-            <a href="tel:+31630645930">
-              <button className="btn-ghost">Call +31 6 30645930</button>
-            </a>
+            <a href="/contact"><button className="btn-primary">Request A Quote</button></a>
+            <a href="tel:+31630645930"><button className="btn-ghost">Call +31 6 30645930</button></a>
           </div>
         </section>
 
