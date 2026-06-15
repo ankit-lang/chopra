@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 :root {
   --color-primary: #1B2B5E;
   --color-accent: #D4AF37;
@@ -21,11 +21,13 @@ body {
 }
 
 h1 {
-  font-family: var(--font-cormorant), Georgia, serif;
+  /* font-family: var(--font-cormorant), Georgia, serif; */
+   font-family: "Montserrat", Georgia, serif;
 }
 
 h2, h3, h4 {
-  font-family: var(--font-great-vibes), cursive;
+  /* font-family: var(--font-great-vibes), cursive; */
+  font-family: "Montserrat", Georgia, serif;
   color: #C7A348;
   line-height: 1.3;
 }
@@ -72,4 +74,7 @@ img {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+.font-vibes{
+ font-family: "Montserrat", sans-serif !important;
 }
