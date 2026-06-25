@@ -134,12 +134,20 @@ export async function POST(request: NextRequest) {
       const itemsListSummary = items
         .map((item: { name: string; quantity: number }) => `${item.name} (x${item.quantity})`)
         .join(', ')
+      
+   
+        const currentDate = new Date().toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      })
 
       const whatsappData: Record<string, any> = {
         serviceType: 'Chopras Pickup Order',
         fullName: customerName,
         phone: customerPhone,
-        message: `Order Number: ${orderNumber} | Items: ${itemsListSummary} | Total: €${totalAmount.toFixed(2)}`,
+        // Added the Date to the message string here:
+        message: `Date: ${currentDate} | Order Number: ${orderNumber} | Items: ${itemsListSummary} | Total: €${totalAmount.toFixed(2)}`,
       }
 
       if (customerEmail) whatsappData.email = customerEmail
