@@ -134,7 +134,7 @@ export default function FeaturedDishes({ locale = 'en' }: { locale?: Locale }) {
                 </div>
                 <div className="px-3 py-3">
                   <h3 className="text-white font-medium text-sm leading-tight font-body">{dish.name}</h3>
-                  <p className="text-[#D4AF37] text-sm font-semibold mt-1 font-body">{dish.price}</p>
+                  {/* <p className="text-[#D4AF37] text-sm font-semibold mt-1 font-body">{dish.price}</p> */}
                 </div>
               </div>
             </div>
