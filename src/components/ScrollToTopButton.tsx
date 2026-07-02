@@ -29,7 +29,7 @@ export default function ScrollToTopButton() {
         height: '44px',
         borderRadius: '50%',
         backgroundColor: '#1B2B5E',
-        border: '2px solid #D4AF37',
+        border: '2px solid #0000B3',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -41,7 +41,7 @@ export default function ScrollToTopButton() {
         transition: 'opacity 0.25s ease, transform 0.25s ease',
       }}
     >
-      <ChevronUp size={20} color="#D4AF37" strokeWidth={2.5} />
+      <ChevronUp size={20} color="white" strokeWidth={2.5} />
     </button>
   )
 }

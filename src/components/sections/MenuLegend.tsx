@@ -10,16 +10,16 @@ export default function MenuLegend() {
       return (
             <div className="bg-white py-8 px-6 md:px-16 border-b border-gray-100">
                   <div className="max-w-4xl mx-auto">
-                        <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-6">
+                        <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
                               Dietary &amp; Spice Guide
                         </h3>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                               {badges.map((badge, index) => (
                                     <div
                                           key={index}
-                                          className="flex items-start gap-2 p-3 rounded-lg bg-[#F7F8FC] border border-[#C7A348]/20"
+                                          className="flex items-start gap-2 p-3 rounded-lg bg-[#F7F8FC] border border-white/20"
                                     >
-                                          <span className="text-[#C7A348] text-lg font-light flex-shrink-0 mt-0.5">
+                                          <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-lg font-light flex-shrink-0 mt-0.5">
                                                 {badge.symbol}
                                           </span>
                                           <div className="flex-1">

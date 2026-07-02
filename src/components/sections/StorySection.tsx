@@ -49,8 +49,8 @@ export default function StorySection({ locale = 'en' }: { locale?: Locale }) {
           </div>
 
           {/* Editorial year stamp */}
-          <div className="hidden md:flex absolute -left-3 top-8 rounded-full bg-[#D4AF37]/10 px-4 py-2 ring-1 ring-[#D4AF37]/25 backdrop-blur-sm">
-            <span className="font-body text-[10px] text-[#D4AF37] uppercase tracking-[0.2em]">Est. 2023</span>
+          <div className="hidden md:flex absolute -left-3 top-8 rounded-full bg-[#0000B3]/10 px-4 py-2 ring-1 ring-white/25 backdrop-blur-sm">
+            <span className="font-body text-[10px] text-white uppercase tracking-[0.2em]">Est. 2023</span>
           </div>
         </div>
 
@@ -59,8 +59,8 @@ export default function StorySection({ locale = 'en' }: { locale?: Locale }) {
           ref={textRef}
           className={`transition-all duration-[800ms] ease-[cubic-bezier(0.32,0.72,0,1)] delay-100 ${textInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-[#D4AF37] font-medium mb-6">
-            <span className="inline-block w-1 h-1 rounded-full bg-[#D4AF37]" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-[#0000B3]/10 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white font-medium mb-6">
+            <span className="inline-block w-1 h-1 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
             Our Story
           </span>
 
@@ -83,12 +83,12 @@ export default function StorySection({ locale = 'en' }: { locale?: Locale }) {
                 Opened 2023 · Leyweg, Den Haag
               </span>
             </div>
-            <div className="rounded-full bg-[#D4AF37]/[0.08] p-1 ring-1 ring-[#D4AF37]/20">
+            <div className="rounded-full bg-[#0000B3]/[0.08] p-1 ring-1 ring-white/20">
               <span className="block rounded-full bg-[#F7F8FC] text-[#1B2B5E] px-5 py-2 font-body text-xs uppercase tracking-wider shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
                 143 Dishes · 12 Categories
               </span>
             </div>
-            <div className="rounded-full bg-[#D4AF37]/[0.08] p-1 ring-1 ring-[#D4AF37]/20">
+            <div className="rounded-full bg-[#0000B3]/[0.08] p-1 ring-1 ring-white/20">
               <span className="block rounded-full bg-[#F7F8FC] text-[#1B2B5E] px-5 py-2 font-body text-xs uppercase tracking-wider shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
                 Indian Street Food Den Haag
               </span>

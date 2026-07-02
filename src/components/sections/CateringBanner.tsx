@@ -29,33 +29,33 @@ export default function CateringBanner({ locale = 'en' }: { locale?: Locale }) {
         <div className="rounded-[2rem] bg-white/[0.04] p-2 ring-1 ring-white/10">
           <div className="rounded-[calc(2rem-0.5rem)] bg-white/[0.04] px-10 py-12 md:px-14 md:py-14 text-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)]">
 
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-[#D4AF37] font-medium mb-7">
-              <span className="inline-block w-1 h-1 rounded-full bg-[#D4AF37]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-[#0000B3]/10 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white font-medium mb-7">
+              <span className="inline-block w-1 h-1 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
               Events &amp; Catering
             </span>
 
-            <h2 className="font-semibold italic text-4xl md:text-5xl lg:text-6xl leading-[1.4] [letter-spacing:0.02em] mt-2 mb-6">
+            <h2 className="font-semibold text-white italic text-4xl md:text-5xl lg:text-6xl leading-[1.4] [letter-spacing:0.02em] mt-2 mb-6">
               Indian Catering Den Haag
               <br />
-              <span className="text-[#D4AF37]/90"> - Plan Your Event</span>
+              <span className="text-white/90"> - Plan Your Event</span>
             </h2>
 
-            <p className="font-body text-white/70 text-base md:text-lg mt-7 leading-relaxed max-w-lg mx-auto">
+            <p className="font-body text-white/85 text-base md:text-lg mt-7 leading-relaxed max-w-lg mx-auto">
               {tr.home.cateringP.split('.')[0]}.
             </p>
-            <p className="font-body text-white/45 text-sm mt-2">
+            <p className="font-body text-white/70 text-sm mt-2">
               {tr.home.cateringP.split('.').slice(1, 2).join('.').trim()}.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
               <Link
                 href={`${base}/catering`}
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#D4AF37] pl-7 pr-2 py-2 text-[#1A1A1A] text-sm font-semibold uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#e8c84a] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] pl-7 pr-2 py-2 text-white text-sm font-semibold uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] active:scale-[0.98]"
               >
                 {tr.home.cateringCta}
                 <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-black/10 transition-all duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" strokeWidth="1.5" stroke="currentColor">
-                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </Link>
@@ -66,7 +66,7 @@ export default function CateringBanner({ locale = 'en' }: { locale?: Locale }) {
                 Feestzaal Huren
                 <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-white/10 transition-all duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" strokeWidth="1.5" stroke="currentColor">
-                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </Link>

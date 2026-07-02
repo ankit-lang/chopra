@@ -26,9 +26,9 @@ export default function FaqAccordion({ faqs }: { faqs: Array<{ question: string;
               {faq.question}
             </span>
             {openIndex === index ? (
-              <Minus size={18} className="text-[#D4AF37] flex-shrink-0 transition-transform duration-200" />
+              <Minus size={18} className="text-[#0000B3] flex-shrink-0 transition-transform duration-200" />
             ) : (
-              <Plus size={18} className="text-[#D4AF37] flex-shrink-0 transition-transform duration-200" />
+              <Plus size={18} className="text-[#0000B3] flex-shrink-0 transition-transform duration-200" />
             )}
           </button>
           <div

@@ -1,443 +1,8 @@
 "use client";
-import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect, useRef, useCallback } from "react";
 
-const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: #0a1628;
-    color: #c8d4e8;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-  }
-
-  .page { background: #0a1628; }
-
-  /* ── HERO BANNER CONTAINER ── */
-  .hero-banner-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Lock exactly to viewport height */
-    min-height: 600px; /* Prevent shrinking too small on mobile */
-    overflow: hidden;
-    background: #0a1628;
-  }
-
-  /* ── COVER ENTIRE SPACE WITHOUT BLACK BARS ── */
-  .hero-bg-media {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120%;
-    height: 100%;
-    object-fit: cover; /* Forces the video to stretch and fill all black spaces */
-    z-index: 1;
-  }
-
-  /* ── REINFORCED DARK OVERLAY FOR TEXT CONTRAST ── */
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg, 
-      rgba(10, 22, 40, 0.65) 0%, 
-      rgba(10, 22, 40, 0.5) 40%, 
-      rgba(10, 22, 40, 0.85) 80%, 
-      #0a1628 100%
-    );
-    z-index: 2;
-  }
-
-  /* ── HERO CONTENT LAYER ── */
-  .hero {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    position: relative;
-    z-index: 3; 
-    background: transparent; 
-  }
-  .hero-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #93c5fd; /* Brightened for premium visibility */
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 6.5vw, 5rem);
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 1.15;
-    margin-bottom: 0.25em;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: #93c5fd;
-  }
-  .hero-sub {
-    max-width: 500px;
-    font-size: 1rem;
-    color: #e2e8f0; /* Crisp white-silver tint to contrast dark backgrounds */
-    font-weight: 400;
-    line-height: 1.7;
-    margin: 1rem auto 2.5rem;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  }
-  .stats-row {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    margin-bottom: 3rem;
-    width: 100%;
-    max-width: 800px;
-  }
-  .stat-item { 
-    text-align: center;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-  }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: #ffffff;
-    display: block;
-    line-height: 1;
-    font-weight: 600;
-  }
-  .stat-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #cbd5e1; 
-    display: block;
-    margin-top: 0.5rem;
-    font-weight: 500;
-  }
-  .stars { color: #f59e0b; font-size: 0.8rem; }
-  .hero-btns { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
-  
-  .btn-primary {
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    padding: 0.95rem 2.25rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    transition: background 0.2s, transform 0.2s;
-  }
-  .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
-  
-  .btn-ghost {
-    background: rgba(10, 22, 40, 0.6);
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    backdrop-filter: blur(4px);
-    padding: 0.95rem 2.25rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .btn-ghost:hover { background: #ffffff; color: #0a1628; }
-
-  /* ── TRUST BAR ── */
-  .trust-bar {
-    border-top: 1px solid #1a2e4a;
-    border-bottom: 1px solid #1a2e4a;
-    padding: 1.25rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    background: #0d1e35;
-    position: relative;
-    z-index: 4; 
-  }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    color: #6a87a8;
-  }
-  .trust-item .stars { font-size: 0.65rem; }
-  .trust-badge {
-    font-size: 0.7rem;
-    color: #c9a84c;
-    letter-spacing: 0.05em;
-  }
-
-  /* ── HALL & CATERING ── */
-  .hall-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    padding: 5rem 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  @media (max-width: 768px) { 
-    .hall-grid { grid-template-columns: 1fr; gap: 2rem; } 
-    .stats-row { gap: 1.5rem; flex-direction: column; align-items: center; }
-  }
-  .hall-img-wrap { position: relative; }
-  .img-placeholder {
-    width: 100%;
-    aspect-ratio: 4/3;
-    background: linear-gradient(135deg, #1a3a5c 60%, #1e4a7a 100%);
-    border-radius: 2px;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .img-tag {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    background: #2563eb;
-    color: #fff;
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.7rem;
-    border-radius: 1px;
-  }
-  .img-badge {
-    position: absolute;
-    bottom: -1rem;
-    right: -1rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: #2563eb;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.55rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #fff;
-    text-align: center;
-    line-height: 1.3;
-  }
-  .hall-content p {
-    color: #7a94b8;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    margin-top: 1.25rem;
-    margin-bottom: 0.9rem;
-  }
-  .link-plain {
-    color: #5b8cbe;
-    font-size: 0.8rem;
-    text-decoration: none;
-    margin-left: 1.25rem;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-  }
-  .link-plain:hover { color: #7eb8f0; }
-
-  /* ── PHOTO GRID ── */
-  .photo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 6px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-  .photo-cell {
-    aspect-ratio: 1;
-    border-radius: 1px;
-    overflow: hidden;
-    position: relative;
-  }
-  .photo-label {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  /* ── FEATURES ── */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 500px) { .features-grid { grid-template-columns: 1fr; } }
-  .feature-card { text-align: center; }
-  .feature-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0 auto 1rem;
-    background: #112240;
-    border: 1px solid #1e3a5f;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-  }
-  .feature-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #c8d4e8;
-    margin-bottom: 0.5rem;
-  }
-  .feature-card p { font-size: 0.78rem; color: #5b7a9e; line-height: 1.7; }
-
-  /* ── EVENTS ── */
-  .events-section { background: #0d1e35; }
-  .events-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-top: 2.5rem;
-  }
-  @media (max-width: 700px) { .events-grid { grid-template-columns: 1fr; } }
-  .event-item {
-    padding: 1.5rem;
-    border: 1px solid #132240;
-    position: relative;
-  }
-  .event-item:hover { background: #112240; }
-  .event-num {
-    font-size: 0.6rem;
-    color: #2563eb;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.4rem;
-    display: block;
-    font-weight: 500;
-  }
-  .event-item h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    color: #e8eef7;
-    margin-bottom: 0.5rem;
-    font-weight: 400;
-  }
-  .event-item p { font-size: 0.78rem; color: #5b7a9e; line-height: 1.65; }
-
-  /* ── STEPS ── */
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  @media (max-width: 900px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 500px) { .steps-grid { grid-template-columns: 1fr; } }
-  .step-card { text-align: center; }
-  .step-num {
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    border: 1px solid #1e3a5f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    color: #7eb8f0;
-    margin: 0 auto 0.85rem;
-    font-weight: 500;
-  }
-  .step-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.9rem;
-    color: #c8d4e8;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
-  }
-  .step-card p { font-size: 0.75rem; color: #5b7a9e; line-height: 1.65; }
-  .steps-footer { text-align: center; margin-top: 2rem; font-size: 0.75rem; color: #5b7a9e; }
-
-  /* ── FAQ ── */
-  .faq-list { margin-top: 2rem; max-width: 680px; }
-  .faq-item {
-    border-bottom: 1px solid #132240;
-    padding: 1.25rem 0;
-  }
-  .faq-question {
-    font-size: 0.88rem;
-    color: #c8d4e8;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    padding: 0;
-  }
-  .faq-question:hover { color: #7eb8f0; }
-  .faq-toggle {
-    font-size: 1.2rem;
-    color: #2563eb;
-    line-height: 1;
-    flex-shrink: 0;
-    transition: transform 0.2s;
-  }
-  .faq-toggle.open { transform: rotate(45deg); }
-  .faq-answer {
-    font-size: 0.82rem;
-    color: #5b7a9e;
-    line-height: 1.8;
-    margin-top: 0.75rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  .faq-answer.open { max-height: 300px; }
-
-  /* ── CTA ── */
-  .cta-section {
-    background: linear-gradient(180deg, #0a1628 0%, #0d1e35 100%);
-    text-align: center;
-    padding: 6rem 1.5rem;
-    border-top: 1px solid #1a2e4a;
-  }
-  .cta-section .heading-serif { font-size: clamp(2rem, 5vw, 3.5rem); }
-  .cta-section p { color: #5b7a9e; font-size: 0.9rem; margin: 1.25rem auto 2rem; max-width: 440px; line-height: 1.7; }
-  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-`;
 
 const faqs = [
   { q: "Can I hire the event hall at Chopras Indian Restaurant?", a: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. Full authentic Indian catering from the Chopras kitchen is included." },
@@ -460,240 +25,521 @@ const events = [
   { num: "10", title: "Family Gatherings", desc: "Gathering generations together over exceptional food and private structural luxury designed exclusively for comfort." }
 ];
 
+// ─── Occasions Slider ────────────────────────────────────────────────────────
+const NEW_SLIDES = [
+  {
+    num: "01",
+    title: "Weddings",
+    desc: "Buffet with multiple stations or formal plated service. Biryani in large karahi pots, tandoori platters, full vegetarian spread. The format matches the formality of your occasion.",
+    img: "/images/catering/wedding-celebrations---1.png"
+  },
+  {
+    num: "02",
+    title: "Receptions",
+    desc: "A beautifully customized, intimate atmosphere honoring tradition with exceptional hospitality and a completely Halal menu.",
+    img: "/images/catering/feez12.jpg"
+  },
+  {
+    num: "03",
+    title: "Walima Celebrations",
+    desc: "Elegant dining arrangements made specifically to gather family and friends for grand celebratory multi-course Indian feasts.",
+    img: "/images/catering/wedding-celebrations---2.png"
+  },
+  {
+    num: "04",
+    title: "Festivities",
+    desc: "Traditional dishes take centre stage — dal makhani, paneer tikka, biryani. Every celebration deserves food prepared with the care the occasion calls for.",
+    img: "/images/catering/party-decor.png"
+  },
+  {
+    num: "05",
+    title: "Birthday Parties",
+    desc: "Arrive to a hall that's set, food that's ready. Your guests celebrate from the first moment without logistics getting in the way.",
+    img: "/images/catering/birthday-party.png"
+  },
+  {
+    num: "06",
+    title: "Anniversaries",
+    desc: "Commemorate beautiful milestones in an elegant space, customized layouts, and memories crafted around exquisite service.",
+    img: "/images/catering/proposal---1.png"
+  },
+  {
+    num: "07",
+    title: "Baby Showers",
+    desc: "An intimate gathering for the family, styled and catered to the detail. We work with you on menu and layout for a fully personalised experience.",
+    img: "/images/catering/baby-shower-pic-1.png"
+  },
+  {
+    num: "08",
+    title: "Corporate Dinners",
+    desc: "A team dinner at Chopras is more memorable than a standard catered meeting room. Your private hall lets the group relax away from a public dining room.",
+    img: "/images/catering/corporate-dinners-at-chopras.png"
+  },
+  {
+    num: "09",
+    title: "Networking Events",
+    desc: "Professional setups with customizable catering and seamless organization, perfect for engaging conversations and community building.",
+    img: "/images/catering/team-dinners.png"
+  },
+  {
+    num: "10",
+    title: "Family Gatherings",
+    desc: "Gathering generations together over exceptional food and private structural luxury designed exclusively for comfort.",
+    img: "/images/catering/feez8.jpg"
+  }
+];
+
+function OccasionsSlider() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = scrollContainerRef.current.children[0].clientWidth;
+      scrollContainerRef.current.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = scrollContainerRef.current.children[0].clientWidth;
+      scrollContainerRef.current.scrollBy({ left: (cardWidth + 24), behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="py-24 bg-[#f4f7f9] overflow-hidden">
+      {/* Heading */}
+      <div className="text-center mb-16 px-6">
+        <h2 className="font-heading text-4xl md:text-5xl text-[#000066] font-bold mt-3 leading-tight tracking-wide">
+          Every Celebration<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">Welcomed Here</span>
+        </h2>
+        {/* Fancy divider */}
+        {/* <div className="flex justify-center mt-6 opacity-60">
+          <svg width="180" height="20" viewBox="0 0 180 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 10C25 10 25 0 40 0C55 0 55 10 70 10C85 10 85 20 100 20C115 20 115 10 130 10C145 10 145 0 160 0C175 0 175 10 190 10" stroke="#7a9099" strokeWidth="1.5" strokeLinecap="round"/>
+            <circle cx="90" cy="10" r="4" fill="#7a9099"/>
+          </svg>
+        </div> */}
+      </div>
+
+      {/* Slider Container */}
+      <div className="relative max-w-[90rem] mx-auto px-4 md:px-8">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-12 pt-4 px-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {NEW_SLIDES.map((slide, i) => (
+            <div
+              key={i}
+              className="relative min-w-[85vw] sm:min-w-[400px] md:min-w-[calc(33.333%-1.5rem)] snap-start group"
+            >
+              {/* Image half */}
+              <div className="relative h-[250px] w-full overflow-hidden">
+                <Image
+                  src={slide.img}
+                  alt={slide.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Overlapping White Card */}
+              <div className="relative z-10 bg-white mx-4 -mt-16 p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)] min-h-[240px] flex flex-col">
+
+                {/* Center Top Gold Icon */}
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md">
+                  <svg className="w-6 h-6 text-[#c9a25b]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                  </svg>
+                </div>
+
+                <h3 className="font-heading text-xl md:text-2xl font-bold text-[#333] mb-3 mt-2 tracking-wide">
+                  {slide.title}
+                </h3>
+
+                <p className="font-body text-[15px] font-light text-gray-500 leading-relaxed mb-6 flex-grow">
+                  {slide.desc}
+                </p>
+
+                {/* <div className="mt-auto">
+                  <Link href="#contact" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#c9a25b] transition-colors uppercase tracking-widest font-medium">
+                    Read More
+                    <span className="text-lg leading-none">&rarr;</span>
+                  </Link>
+                </div> */}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <div className="absolute top-1/3 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:px-0 pointer-events-none z-20">
+          <button
+            onClick={scrollLeft}
+            className="pointer-events-auto w-12 h-12 md:-ml-6 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex items-center justify-center text-[#000066] hover:bg-[#000066] hover:text-white transition-colors"
+            aria-label="Previous"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button
+            onClick={scrollRight}
+            className="pointer-events-auto w-12 h-12 md:-mr-6 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.1)] flex items-center justify-center text-[#000066] hover:bg-[#000066] hover:text-white transition-colors"
+            aria-label="Next"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+
+        {/* Simple pagination dots representation */}
+        <div className="flex justify-center gap-2 mt-4">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#aab7bc]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#c9a25b]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#aab7bc]" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 export default function EventHallPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Form State
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [date, setDate] = useState('');
+  const [guests, setGuests] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !email || !date || !guests) return;
+    setStatus('sending');
+
+    try {
+      const res = await fetch('/api/feestzaal-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, date, guests, message }),
+      });
+
+      if (!res.ok) throw new Error('Server error');
+
+      setStatus('success');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setDate('');
+      setGuests('');
+      setMessage('');
+    } catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
+  };
+
   return (
-    <>
-      <style>{styles}</style>
-      <main className="page">
+    <main className="bg-[#F7F8FC]/20 min-h-screen text-[#1A1A1A] overflow-hidden font-body">
 
-        {/* ── HERO BANNER WRAPPER WITH FIXED COVER POSITIONING ── */}
-        <div className="hero-banner-container">
-<img 
-  src="/images/catering/feez12.jpg" /* Replace with your desired banner image path */
-  alt="Chopras Private Event Hall Banner" 
-  className="hero-bg-media" 
-/>
-          {/* <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="hero-bg-media"
+      {/* 1. HERO BANNER */}
+      <section className="relative w-full h-screen min-h-[600px] flex flex-col items-center justify-center bg-[#000066]">
+        <Image
+          src="/images/catering/feezbanner.jpg"
+          alt="Chopras Private Event Hall"
+          fill
+          className="object-cover z-0"
+          priority
+        />
+
+        {/* Bottom vignette only — keeps full image visible, text stays readable */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+
+        <div className="relative z-20 text-center px-6 mt-20 max-w-4xl mx-auto">
+          {/* Badge */}
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/40 bg-black/40 text-white text-xs font-bold uppercase tracking-[0.25em] mb-8 backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
+            Event Venue &middot; Den Haag
+          </span>
+
+          {/* Heading with deep text shadow */}
+          <h1
+            className="font-heading text-5xl md:text-7xl lg:text-[6rem] font-bold leading-[1.05] mb-4"
+            style={{
+              color: '#ffffff',
+              textShadow:
+                '0 2px 4px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85), 0 8px 40px rgba(0,0,0,0.7)',
+            }}
           >
-            <source src="/images/catering/feez13.mp4" type="video/mp4" />
-          
-          </video> */}
+            Your Occasion,<br />
+            <em
+              className="not-italic"
+              style={{
+                color: '#ffffff',
+                textShadow:
+                  '0 2px 4px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85)',
+              }}
+            >
+              Perfectly Arranged
+            </em>
+          </h1>
 
-          {/* Corrected high contrast overlay mask */}
-          <div className="hero-overlay"></div>
+          {/* Subtitle */}
+          <p
+            className="font-body text-lg md:text-xl max-w-2xl mx-auto mt-4 mb-10 leading-relaxed font-light"
+            style={{
+              color: 'rgba(255,255,255,0.95)',
+              textShadow: '0 1px 3px rgba(0,0,0,0.9), 0 2px 12px rgba(0,0,0,0.8)',
+            }}
+          >
+            Private event hall with authentic Indian catering under one roof
+          </p>
 
-          {/* Clean text contents explicitly isolated on top */}
-          <section className="hero">
-            <span className="hero-eyebrow">Event Venue · Den Haag</span>
-            <h1>
-              Your Occasion,<br />
-              <em>Perfectly Arranged</em>
-            </h1>
-            <p className="hero-sub">
-              Private event hall with authentic Indian catering under one roof
-            </p>
-            <div className="stats-row">
-              <div className="stat-item">
-                <span className="stat-num">100%</span>
-                <span className="stat-label">Private &amp; Tailored Layouts</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-num">
-                  4.9 <span className="stars">★★★★★</span>
-                </span>
-                <span className="stat-label">Google Service Excellence</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-num">All-in-One</span>
-                <span className="stat-label">Venue &amp; Food Operations</span>
-              </div>
-            </div>
-            <div className="hero-btns">
-              <a href="/contact">
-                <button className="btn-primary">Request a Free Quote</button>
-              </a>
-              <a href="/menu">
-                <button className="btn-ghost">View the Menu</button>
-              </a>
-            </div>
-          </section>
-        </div>
-
-        {/* ── TRUST BAR ── */}
-        <div className="trust-bar">
-          <div className="trust-item">
-            <span className="stars">★★★★★</span>
-            <span>Based on <span className="!text-white">1,000+ reviews</span> on Google</span>
-          </div>
-          <div className="trust-item">
-            <span className="trust-badge">★★★★★</span>
-            <span>Reviewed on <span className="!text-white">TripAdvisor</span></span>
-          </div>
-          <div className="trust-item">
-            <span><span className="!text-white">📞 +31 6 30645930</span> — WhatsApp available</span>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="#book">
+              <button className="bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:bg-white hover:text-[#000066] text-white px-8 py-3.5 rounded-full uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,255,0.5)] hover:shadow-[0_4px_24px_rgba(0,0,255,0.3)]">
+                Request a Free Quote
+              </button>
+            </Link>
+            <Link href="/menu">
+              <button
+                className="bg-white/10 hover:bg-white hover:text-[#000066] border-2 border-white/60 text-white px-8 py-3.5 rounded-full uppercase tracking-widest text-sm font-bold transition-all duration-300 backdrop-blur-sm"
+                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+              >
+                View the Menu
+              </button>
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* ── HALL & CATERING DETAILS ── */}
-        <div className="hall-grid">
-          <div className="hall-img-wrap">
-            <div className="img-placeholder" style={{ minHeight: 320, position: 'relative', overflow: 'hidden' }}>
-              <span className="img-tag" style={{ zIndex: 2 }}>Now Booking</span>
-              <img
-                src="/images/catering/feez12.jpg"
-                alt="Hall Venue"
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  zIndex: 1
-                }}
-              />
-              <div className="img-badge" style={{ zIndex: 2 }}>All<br />In<br />One</div>
+      {/* 2. VALUE PROPOSITION / FOUR GOLD ICONS ROW */}
+      <section className="py-12 px-6 md:px-16 -mt-16 relative z-30">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[
+            { title: "Restaurant Quality", icon: "🍽️", desc: "Freshly ground spices. Same chefs as our 4.9-star restaurant." },
+            { title: "One Booking", icon: "📋", desc: "Venue & catering in a single contract. No double logistics." },
+            { title: "Halal Certified", icon: "☪️", desc: "Every dish and supplier is 100% halal certified." },
+            { title: "25–80 Guests", icon: "👥", desc: "Adapts to your group size with no fixed minimum packages." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white rounded-xl p-8 text-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-black/5 hover:-translate-y-2 transition-transform duration-500 group">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+              <h3 className="font-heading text-xl text-[#000066] font-semibold mb-3">{item.title}</h3>
+              <p className="font-body text-[#1A1A1A]/70 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. SPLIT SECTION: HALL & CATERING */}
+      <section className="py-24 px-6 md:px-16 bg-[#F7F8FC]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <Image src="/images/catering/feez12.jpg" alt="Hall Venue" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000066]/80 to-transparent" />
+            <div className="absolute bottom-8 left-8 right-8 text-white">
+              <div className="flex items-center gap-2 text-white text-xl mb-2">
+                ★★★★★
+              </div>
+              <p className="font-medium">Based on 1,000+ Google Reviews</p>
+            </div>
+            <div className="absolute top-6 left-6 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded">
+              Book Now
             </div>
           </div>
-          <div className="hall-content">
-            <span className="eyebrow">Our Venue</span>
-            <h2 className="heading-serif">
-              Hall &amp; Catering<br /><em>Under One Roof</em>
+          <div>
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold tracking-widest uppercase text-sm">Our Venue</span>
+            <h2 className="font-heading text-5xl md:text-6xl text-[#000066] font-medium mt-4 mb-8 leading-[1.2]">
+              Hall &amp; Catering<br />
+              <em className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] italic">Under One Roof</em>
             </h2>
-            <p>
-              Most people planning a private event, celebration, or corporate gathering in Den Haag face the same challenge: first finding an event venue, then finding a caterer, negotiating separate contracts, and coordinating multiple schedules. At Chopras Indian Restaurant, the private event hall and catering are managed under one roof, making the planning process simple and convenient. One booking. One team. One point of contact.
-            </p>
-            <p>
-              The private event hall accommodates approximately 25 to 80 guests in an exclusive setting, making it ideal for weddings, nikah receptions, walima celebrations, birthday parties, anniversaries, baby showers, corporate dinners, networking events, and family gatherings. Every dish is prepared by the same team that serves guests daily at Chopras Indian Restaurant, a restaurant that has earned a 4.9-star rating on Google from more than 1,000 reviews. The result is an event experience built around fresh food, professional hospitality, and authentic Indian cuisine.
-            </p>
-            <div style={{ marginTop: '1.5rem' }}>
-              <button className="btn-primary"><a href="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Request a Quote</a></button>
-              <a className="link-plain" href="/menu">See the Menu</a>
+            <div className="space-y-6 text-[#1A1A1A]/70 font-body text-lg leading-relaxed font-light">
+              <p>
+                Most people planning a private event, celebration, or corporate gathering in Den Haag face the same challenge: first finding an event venue, then finding a caterer, negotiating separate contracts, and coordinating multiple schedules.
+              </p>
+              <p>
+                At Chopras Indian Restaurant, the private event hall and catering are managed under one roof, making the planning process simple and convenient. <strong className="text-[#000066] font-medium">One booking. One team. One point of contact.</strong>
+              </p>
+              <p>
+                The private event hall accommodates approximately <strong className="text-[#000066] font-medium">25 to 80 guests</strong> in an exclusive setting. Every dish is prepared by the same team that serves guests daily at Chopras, earning a 4.9-star rating on Google. The result is an event experience built around fresh food, professional hospitality, and authentic Indian cuisine.
+              </p>
+            </div>
+            <div className="mt-10 flex items-center gap-6">
+              <Link href="#book">
+                <button className="bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white px-8 py-3.5 rounded-full uppercase tracking-widest text-sm font-semibold hover:bg-[#e8c84a] transition-colors shadow-lg hover:shadow-xl">
+                  Request a Quote
+                </button>
+              </Link>
+              <Link href="/menu" className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold uppercase tracking-wider text-sm hover:text-[#e8c84a] transition-colors underline underline-offset-4 decoration-[#0000B3]/30">
+                See the Menu
+              </Link>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* ── PHOTO GALLERY GRID ── */}
-        <div className="section-full" style={{ background: '#0d1e35', padding: '3rem 1.5rem' }}>
-          <div className="photo-grid">
-            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/catering/feez2.jpg" alt="Cuisine" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Cuisine</div>
+      {/* 4. OCCASIONS SLIDER */}
+      <OccasionsSlider />
+
+
+      {/* 5. GALLERY */}
+      <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] relative">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#0000B3]/10 blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-transparent text-white font-semibold tracking-widest uppercase text-sm">Our Gallery</span>
+            <h2 className="font-heading text-5xl text-white font-medium mt-4">
+              Our Captured <em className="text-transparent text-white">Moments</em>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="relative h-[300px] rounded-xl overflow-hidden group col-span-1 md:col-span-2">
+              <Image src="/images/catering/feez5.jpg" alt="Cuisine" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-semibold tracking-[0.2em] uppercase text-sm border border-white/50 px-6 py-2 rounded-full backdrop-blur-sm">Cuisine</span>
+              </div>
             </div>
-            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/catering/feez4.jpg" alt="Drinks" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Drinks</div>
+            <div className="relative h-[300px] rounded-xl overflow-hidden group">
+              <Image src="/images/catering/feez4.jpg" alt="Drinks" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-semibold tracking-[0.2em] uppercase text-sm border border-white/50 px-6 py-2 rounded-full backdrop-blur-sm">Drinks</span>
+              </div>
             </div>
-            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/catering/feez5.jpg" alt="Desserts" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Desserts</div>
-            </div>
-            <div className="photo-cell" style={{ position: 'relative', overflow: 'hidden' }}>
-              <img src="/images/catering/feez8.jpg" alt="Venue" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-              <div className="photo-label" style={{ position: 'relative', zIndex: 2 }}>Venue</div>
+            <div className="relative h-[300px] rounded-xl overflow-hidden group">
+              <Image src="/images/catering/feez2.jpg" alt="Desserts" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-semibold tracking-[0.2em] uppercase text-sm border border-white/50 px-6 py-2 rounded-full backdrop-blur-sm">Desserts</span>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* ── VALUE BLOCK FEATURES ── */}
-        <div style={{ background: '#0a1628', padding: '5rem 1.5rem' }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
-            <span className="eyebrow">What We Offer</span>
-            <h2 className="heading-serif">Everything Your<br /><em>Event Deserves</em></h2>
-            <div className="features-grid">
-              {[
-                { icon: "🍽", title: "Restaurant Quality", desc: "Freshly ground spices sourced direct from India. Same chefs, same recipes as the restaurant that earns 4.9 stars nightly." },
-                { icon: "🏛", title: "One Booking", desc: "Venue, catering, and service in a single contract. No separate caterer. No double logistics. One point of contact." },
-                { icon: "☪️", title: "Halal Certified", desc: "Every dish, every supplier, every preparation is halal certified. No exceptions, no cross-contamination. Book with complete confidence." },
-                { icon: "👥", title: "25–80 Guests", desc: "Intimate family dinner or large wedding reception. The private hall adapts to your group size with no fixed minimum packages." },
-              ].map((f, i) => (
-                <div className="feature-card" key={i}>
-                  <div className="feature-icon !text-white">{f.icon}</div>
-                  <h4>{f.title}</h4>
-                  <p>{f.desc}</p>
+      {/* 6. HOW TO BOOK (4 STEPS) */}
+      <section className="relative py-24 bg-white border-b border-black/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold tracking-widest uppercase text-sm">How To Book</span>
+            <h2 className="font-heading text-5xl text-[#000066] font-medium mt-4">
+              Four Steps to <em className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] italic">Your Perfect Event</em>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {[
+              { n: 1, title: "Get in Touch", desc: "Call +31 6 30645930 or use the form below. Tell us your date and guest count." },
+              { n: 2, title: "Free Quote", desc: "We check availability, discuss menu options, and send a no-obligation quote." },
+              { n: 3, title: "Build Menu", desc: "Choose from the full Chopras menu — buffet or plated. 100% halal certified." },
+              { n: 4, title: "We Do the Rest", desc: "Arrive, relax, celebrate. Our team handles setup, service, and every detail." }
+            ].map((step, i) => (
+              <div key={i} className="relative">
+                {/* Connector line for desktop */}
+                {i < 3 && <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-[2px] border-t-2 border-dashed border-[#0000B3]/20" />}
+
+                <div className="w-20 h-20 mx-auto bg-[#F7F8FC] border border-[#0000B3]/10 rounded-full flex items-center justify-center mb-6 shadow-lg relative z-10 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-heading text-3xl font-bold">
+                  {step.n}
                 </div>
-              ))}
-            </div>
+                <h3 className="font-heading text-2xl text-[#000066] font-semibold mb-3">{step.title}</h3>
+                <p className="text-[#1A1A1A]/70 text-sm font-light leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16 text-center text-[#1A1A1A]/60 text-sm font-medium">
+            For 25–40 guests: book 2–3 weeks ahead &nbsp;&middot;&nbsp; For 50–80 guests: book 6–8 weeks ahead
           </div>
         </div>
+      </section>
 
-        {/* ── OCCASIONS TYPE GRID ── */}
-        <div className="events-section" style={{ padding: '5rem 1.5rem' }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <span className="eyebrow">Occasions</span>
-            <h2 className="heading-serif">Every Celebration<br /><em>Welcomed Here</em></h2>
-            <div className="events-grid">
-              {events.map((e) => (
-                <div className="event-item" key={e.num}>
-                  <span className="event-num">{e.num}</span>
-                  <h4>{e.title}</h4>
-                  <p>{e.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {/* 7. BOOKING FORM & FAQ */}
+      <section id="book" className="py-24 px-6 md:px-16 bg-[#F7F8FC]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-        {/* ── BOOKING STEPS ── */}
-        <div style={{ background: '#0a1628', padding: '5rem 1.5rem' }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
-            <span className="eyebrow">How To Book</span>
-            <h2 className="heading-serif">Four Steps to<br /><em>Your Perfect Event</em></h2>
-            <div className="steps-grid">
-              {[
-                { n: 1, title: "Get in Touch", desc: "Call +31 6 30645930 or use the contact page. Tell us your date, guest count, and occasion type." },
-                { n: 2, title: "Free Quote & Visit", desc: "We check availability, discuss menu options, and send a no-obligation quote within 24 hours." },
-                { n: 3, title: "Build the Menu", desc: "Choose from the full Chopras menu — buffet or plated. Every dietary need covered, 100% halal." },
-                { n: 4, title: "We do the Rest", desc: "Arrive, relax, celebrate. Our team handles setup, service, and every detail so you can be present." },
-              ].map((s) => (
-                <div className="step-card" key={s.n}>
-                  <div className="step-num">{s.n}</div>
-                  <h4>{s.title}</h4>
-                  <p>{s.desc}</p>
-                </div>
-              ))}
-            </div>
-            <p className="steps-footer">For 25–40 guests: book 2–3 weeks ahead  ·  For 50–80 guests: book 6–8 weeks ahead</p>
-            <a href="/contact"><button className="btn-primary" style={{ marginTop: '1.5rem' }}>Request Your Free Quote</button></a>
-          </div>
-        </div>
-
-        {/* ── FAQ ACCORDION LIST ── */}
-        <div style={{ background: '#0d1e35', padding: '5rem 1.5rem' }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <span className="eyebrow">Support</span>
-            <h2 className="heading-serif">Frequently Asked<br /><em>Questions</em></h2>
-            <div className="faq-list">
+          {/* FAQ Left Side */}
+          <div>
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold tracking-widest uppercase text-sm">Support</span>
+            <h2 className="font-heading text-4xl text-[#000066] font-medium mt-2 mb-8">
+              Frequently Asked <br /><em className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] italic">Questions</em>
+            </h2>
+            <div className="space-y-4">
               {faqs.map((faq, i) => (
-                <div className="faq-item" key={i}>
-                  <button className="faq-question" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                <div key={i} className="bg-white border border-black/5 rounded-xl overflow-hidden shadow-sm">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full text-left px-6 py-5 flex items-center justify-between font-medium text-[#000066] hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] transition-colors"
+                  >
                     {faq.q}
-                    <span className={`faq-toggle ${openFaq === i ? 'open' : ''}`}>+</span>
+                    <span className="text-[#e8c84a] text-xl font-light">{openFaq === i ? '−' : '+'}</span>
                   </button>
-                  <div className={`faq-answer ${openFaq === i ? 'open' : ''}`}>{faq.a}</div>
+                  <div className={`px-6 pb-5 text-[#1A1A1A]/70 text-sm font-light leading-relaxed ${openFaq === i ? 'block' : 'hidden'}`}>
+                    {faq.a}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* ── CALL TO ACTION SECTION ── */}
-        <section className="cta-section">
-          <span className="eyebrow">Reserve Your Date</span>
-          <h2 className="heading-serif">Ready to Book Your<br /><em>Event Hall in Den Haag?</em></h2>
-          <p>Contact us today and receive a free quote within 24 hours. Open Tuesday to Sunday at Leyweg 986, Den Haag.</p>
-          <div className="cta-btns">
-            <a href="/contact"><button className="btn-primary">Request A Quote</button></a>
-            <a href="tel:+31630645930"><button className="btn-ghost">Call +31 6 30645930</button></a>
+          {/* Form Right Side */}
+          <div className="bg-white p-10 md:p-12 rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-black/5">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold tracking-widest uppercase text-sm">Reserve Your Date</span>
+            <h2 className="font-heading text-4xl text-[#000066] font-medium mt-2 mb-8">
+              Request A <em className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] italic">Free Quote</em>
+            </h2>
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input required type="text" placeholder="Your Name *" value={name} onChange={e => setName(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-sm" />
+                <input required type="email" placeholder="Email Address *" value={email} onChange={e => setEmail(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-sm" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="tel" placeholder="Phone Number" value={phone} onChange={e => setPhone(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-sm" />
+                <input required type="date" value={date} onChange={e => setDate(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-gray-500 text-sm" />
+              </div>
+              <div className="grid grid-cols-1 gap-6">
+                <select required value={guests} onChange={e => setGuests(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-gray-500 text-sm">
+                  <option value="">Number of Guests *</option>
+                  <option value="25 - 40">25 - 40</option>
+                  <option value="40 - 60">40 - 60</option>
+                  <option value="60 - 80">60 - 80</option>
+                </select>
+              </div>
+              <textarea placeholder="Tell us about your occasion (Type of event, specific requests)..." rows={4} value={message} onChange={e => setMessage(e.target.value)} className="w-full bg-[#F7F8FC] border border-black/5 rounded-lg px-6 py-4 focus:outline-none focus:border-[#0000B3] focus:ring-1 focus:ring-[#0000B3] transition-all text-sm"></textarea>
+
+              {status === 'success' && (
+                <div className="bg-green-50 text-green-700 p-4 rounded-lg text-sm text-center font-medium border border-green-200">
+                  Thanks for your request! We will get back to you within 24 hours.
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="bg-red-50 text-red-700 p-4 rounded-lg text-sm text-center font-medium border border-red-200">
+                  Something went wrong. Please try calling us instead at +31 6 30645930.
+                </div>
+              )}
+
+              <button type="submit" disabled={status === 'sending'} className="w-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:bg-[#000066] text-white font-semibold uppercase tracking-widest py-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,255,0.3)] hover:shadow-[0_8px_25px_rgba(0,0,102,0.4)] transition-all duration-300 text-sm flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed">
+                {status === 'sending' ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending Request...
+                  </>
+                ) : 'Get Your Quote '}
+              </button>
+            </form>
+            <div className="mt-6 text-center">
+              <p className="text-[#1A1A1A]/60 text-sm">Or call us directly at <a href="tel:+31630645930" className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">+31 6 30645930</a></p>
+            </div>
           </div>
-        </section>
 
-      </main>
-    </>
+        </div>
+      </section>
+
+    </main>
   );
 }

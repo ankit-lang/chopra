@@ -23,8 +23,8 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
         ref={headerRef}
         className={`text-center transition-all duration-500 ease-out ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
-        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-          <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">• WHAT OUR GUESTS SAY •</span>
+        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+          <span className="text-white text-xs font-medium uppercase tracking-widest">• WHAT OUR GUESTS SAY •</span>
         </div>
         <h2 className="font-semibold text-4xl md:text-5xl mb-6 leading-[1.4] [letter-spacing:0.02em] mt-2">
           {tr.home.reviewsH2}
@@ -34,7 +34,7 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
         {/* Aggregate rating */}
         <div className="flex items-center justify-center gap-2 mt-6">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={20} className="text-[#D4AF37] fill-[#D4AF37]" />
+            <Star key={i} size={20} className="text-white fill-[#0000B3]" />
           ))}
           <span className="font-body text-[#1A1A1A]/60 text-sm ml-2">
             4.9 out of 5 &middot; 800+ Google reviews
@@ -54,7 +54,7 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
           >
             <div className="flex gap-1">
               {Array.from({ length: 5 }).map((_, j) => (
-                <Star key={j} size={14} className="text-[#D4AF37] fill-[#D4AF37]" />
+                <Star key={j} size={14} className="text-white fill-[#0000B3]" />
               ))}
             </div>
             <p className="font-body text-[#1A1A1A]/80 text-base italic leading-relaxed mt-4">
@@ -72,7 +72,7 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
           href={RESTAURANT.reviewUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#D4AF37] text-[#1A1A1A] px-8 py-4 rounded-full font-body font-semibold uppercase tracking-widest text-sm hover:bg-[#F5D36A] transition-all duration-200"
+          className="inline-flex items-center gap-2 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white px-8 py-4 rounded-full font-body font-semibold uppercase tracking-widest text-sm hover:bg-[#F5D36A] transition-all duration-200"
         >
           <Star className="w-4 h-4" />
           Write a Google Review

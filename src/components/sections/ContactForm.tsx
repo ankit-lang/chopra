@@ -42,14 +42,14 @@ export default function ContactForm() {
   }
 
   const field =
-    'border border-gray-200 rounded-xl px-5 py-4 text-[#1A1A1A] focus:outline-none focus:border-[#D4AF37] transition-all w-full bg-white'
+    'border border-gray-200 rounded-xl px-5 py-4 text-[#1A1A1A] focus:outline-none focus:border-white transition-all w-full bg-white'
   const lbl = 'text-[#1A1A1A]/70 text-sm font-medium mb-2 block'
   const errMsg = 'text-red-500 text-xs mt-1'
 
   if (status === 'success') {
     return (
       <div className="text-center py-12 max-w-2xl mx-auto">
-        <p className="text-[#C7A348] text-xl font-vibes">
+        <p className="text-white text-xl font-vibes">
           Thank you for your message. We will be in touch shortly.
         </p>
       </div>
@@ -142,7 +142,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] w-full font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] disabled:opacity-60 min-h-[48px]"
+          className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white w-full font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] disabled:opacity-60 min-h-[48px]"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

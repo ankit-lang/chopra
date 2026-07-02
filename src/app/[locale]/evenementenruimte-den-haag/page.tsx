@@ -86,12 +86,12 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • EVENEMENTENRUIMTE · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
             Evenementenruimte in Den Haag
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
@@ -100,13 +100,13 @@ export default function EvenementenruimtePage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Offerte Aanvragen
             </Link>
             <Link
               href={`${base}/zaal-huren-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Zaal Huren in Den Haag
             </Link>
@@ -117,14 +117,14 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* Section 1: Main intro */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Een evenementenruimte die uw gasten bijblijft
           </h2>
           <div className="space-y-5">
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Uw bedrijfsevenement verdient meer dan een standaard zalencentrum met voorverpakte catering. De{' '}
               <strong>evenementenruimte van Chopras Indian Restaurant</strong> in Den Haag biedt privéruimte voor 25 tot 80 gasten, gecombineerd met authentiek Noord-Indiaas eten dat uw gasten direct van het vuur bereikt. Elk evenement in onze{' '}
-              <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">feestzaal in Den Haag</Link>{' '}
+              <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">feestzaal in Den Haag</Link>{' '}
               wordt verzorgd met dezelfde keukenstandaard als ons restaurant.
             </p>
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -133,7 +133,7 @@ export default function EvenementenruimtePage({ params }: Props) {
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Chopras Indian Restaurant staat beoordeeld met{' '}
               <strong>4,9 sterren op basis van 800+ Google-beoordelingen</strong>. Geen enkel ander Indiaas restaurant in Den Haag combineert dit cijfer met dit volume aan beoordelingen. Als u uw gasten onder de indruk wilt brengen, begint dat met de keuze van de locatie. Bekijk ons{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledig Indiaas menu</Link>{' '}
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledig Indiaas menu</Link>{' '}
               voor een indruk van de 143 gerechten die wij serveren.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* Section 2: Types of events */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Welke evenementen organiseren wij in Den Haag?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
@@ -152,42 +152,42 @@ export default function EvenementenruimtePage({ params }: Props) {
 
           <div className="space-y-10">
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Bedrijfsfeesten en personeelsevenementen
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Uw personeel werkt het hele jaar hard. Een <strong>bedrijfsfeest</strong> bij Chopras Indian Restaurant laat zien dat u dat waardeert. Indiaas eten brengt mensen samen op een manier die een standaardborrel niet bereikt. Gasten ontspannen, gesprekken komen op gang en de sfeer zet de toon voor de rest van het jaar. Bekijk ook onze pagina over{' '}
-                <Link href={`${base}/corporate-events-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">corporate events in Den Haag</Link>{' '}
+                <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">corporate events in Den Haag</Link>{' '}
                 voor meer informatie over zakelijke arrangementen.
               </p>
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Vergaderingen met catering
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Een <strong>vergaderruimte in Den Haag</strong> met verse Indiaas catering is een combinatie die weinig locaties bieden. Wij verzorgen alles: de ruimte, het eten en de opstelling. U brengt alleen uw deelnemers mee. Onze keuken is volledig{' '}
-                <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">halal gecertificeerd</Link>,{' '}
+                <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal gecertificeerd</Link>,{' '}
                 zodat alle gasten zonder vragen aan tafel kunnen gaan.
               </p>
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Teambuilding en borrels
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Teambuildingevenementen draaien om verbinding. Gedeeld eten brengt dat sneller tot stand dan veel andere activiteiten. Een gezamenlijke maaltijd met gerechten als{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">authentieke biryani</Link>{' '}
+                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">authentieke biryani</Link>{' '}
                 of{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori uit onze kleioven</Link>{' '}
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori uit onze kleioven</Link>{' '}
                 geeft uw team iets om over te praten. De kleioven in onze keuken bereikt 400 graden Celsius. Dat is de temperatuur waar tandoori voor gemaakt is. Geen conventionele oven kan dat repliceren.
               </p>
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Jubilea en productlanceringen
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -201,7 +201,7 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* Section 3: Social proof - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Waarom kiezen bedrijven in Den Haag voor Chopras?
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-10">
@@ -236,7 +236,7 @@ export default function EvenementenruimtePage({ params }: Props) {
           <div className="mt-10 text-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-8 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-8 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Vrijblijvende Offerte Aanvragen
             </Link>
@@ -247,14 +247,14 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* GEO Block */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Biedt Chopras Indian Restaurant een evenementenruimte aan in Den Haag?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             Chopras Indian Restaurant biedt een privé-evenementenruimte aan op{' '}
-            <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Leyweg 986 in Den Haag</Link>,{' '}
+            <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Leyweg 986 in Den Haag</Link>,{' '}
             geschikt voor 25 tot 80 gasten. De ruimte is ideaal voor bedrijfsfeesten, personeelsevenementen, vergaderingen en teambuildingevenementen. Ons{' '}
-            <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Indiaas catering aanbod</Link>{' '}
+            <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indiaas catering aanbod</Link>{' '}
             is volledig halal gecertificeerd en bij elk evenement inbegrepen. Chopras staat beoordeeld met 4,9 sterren op basis van 800+ Google-beoordelingen. De evenementenruimte is beschikbaar van dinsdag tot en met zondag.
           </p>
         </div>
@@ -263,7 +263,7 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Veelgestelde vragen over onze evenementenruimte
           </h2>
           <FaqAccordion faqs={faqsNl} locale={locale} />
@@ -273,49 +273,49 @@ export default function EvenementenruimtePage({ params }: Props) {
       {/* CTA + Internal Links */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Plan uw evenement in Den Haag
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
             Beschikbaarheid bespreken, een menu samenstellen of een vrijblijvende offerte aanvragen? Neem contact op via{' '}
-            <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">onze contactpagina</Link>{' '}
+            <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">onze contactpagina</Link>{' '}
             of mail direct naar <EmailLink />. Wij reageren binnen een werkdag. U kunt ook het{' '}
-            <Link href={`${base}/indian-buffet-den-haag`} className="text-[#D4AF37] hover:text-[#e8c48a] font-semibold">Indiaas buffet arrangement</Link>{' '}
+            <Link href={`${base}/indian-buffet-den-haag`} className="text-white hover:text-[#e8c48a] font-semibold">Indiaas buffet arrangement</Link>{' '}
             bekijken voor evenementen waarbij een breed aanbod gewenst is.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-14">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               Offerte Aanvragen
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
           </div>
 
-          <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Andere cateringmogelijkheden in Den Haag
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/zaal-huren-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Zaal Huren</p>
+            <Link href={`${base}/zaal-huren-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Zaal Huren</p>
               <p className="text-[#1B2B5E] font-semibold">Zaal huren in Den Haag met Indiaas catering</p>
             </Link>
-            <Link href={`${base}/feestzaal-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Feestzaal</p>
+            <Link href={`${base}/feestzaal-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Feestzaal</p>
               <p className="text-[#1B2B5E] font-semibold">Feestzaal huren in Den Haag</p>
             </Link>
-            <Link href={`${base}/corporate-events-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Zakelijk</p>
+            <Link href={`${base}/corporate-events-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Zakelijk</p>
               <p className="text-[#1B2B5E] font-semibold">Corporate events en bedrijfsdinners in Den Haag</p>
             </Link>
-            <Link href={`${base}/bruiloft-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
+            <Link href={`${base}/bruiloft-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
               <p className="text-[#1B2B5E] font-semibold">Bruiloft catering in Den Haag</p>
             </Link>
           </div>

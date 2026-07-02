@@ -201,7 +201,7 @@ export default function ContactForm() {
   if (success) {
     return (
       <div className="max-w-2xl mx-auto py-12 text-center px-4 md:px-6">
-        <p className="text-[#C7A348] text-xl font-vibes">Thank you for contacting us.</p>
+        <p className="text-white text-xl font-vibes">Thank you for contacting us.</p>
         <p className="text-[#1A1A1A]/70 text-sm md:text-xs mt-2">Our team will reach out to you soon.</p>
       </div>
     )
@@ -217,7 +217,7 @@ export default function ContactForm() {
           <h4 className="font-semibold text-sm text-[#1A1A1A] mb-4">Select Service Type</h4>
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Service Type *</label>
-            <select value={serviceType} onChange={(e) => setServiceType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required>
+            <select value={serviceType} onChange={(e) => setServiceType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required>
               <option value="">Select Service</option>
               <option value="catering">Catering Enquiry</option>
               <option value="feestzaal">Feestzaal Quote Enquiry</option>
@@ -231,17 +231,17 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Full Name *</label>
-            <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Full Name" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+            <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Full Name" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
           </div>
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Phone Number *</label>
-            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+31 6 12345678" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+31 6 12345678" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
           </div>
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Email Address *</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
           </div>
         </div>
 
@@ -251,7 +251,7 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Event Type *</label>
-            <select value={eventType} onChange={(e) => setEventType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required>
+            <select value={eventType} onChange={(e) => setEventType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required>
               <option value="">Select Event Type</option>
               <option>Wedding</option>
               <option>Birthday</option>
@@ -263,26 +263,26 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Event Date *</label>
-            <input type="date" value={eventDate} onChange={(e) => setEventDate(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+            <input type="date" value={eventDate} onChange={(e) => setEventDate(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
           </div>
 
           {serviceType === 'catering' && (
             <div>
               <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Event Time</label>
-              <input type="time" value={eventTime} onChange={(e) => setEventTime(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" />
+              <input type="time" value={eventTime} onChange={(e) => setEventTime(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" />
             </div>
           )}
 
           {serviceType === 'feestzaal' && (
             <div>
               <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Preferred Timing *</label>
-              <input type="text" value={preferredTiming} onChange={(e) => setPreferredTiming(e.target.value)} placeholder="e.g., 6:00 PM - 10:00 PM" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required={serviceType === 'feestzaal'} />
+              <input type="text" value={preferredTiming} onChange={(e) => setPreferredTiming(e.target.value)} placeholder="e.g., 6:00 PM - 10:00 PM" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required={serviceType === 'feestzaal'} />
             </div>
           )}
 
           <div>
             <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">{serviceType === 'feestzaal' ? 'Expected' : 'Number of'} Guests *</label>
-            <input type="number" min={1} value={numGuests} onChange={(e) => setNumGuests(e.target.value)} placeholder="Number of guests" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+            <input type="number" min={1} value={numGuests} onChange={(e) => setNumGuests(e.target.value)} placeholder="Number of guests" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
           </div>
         </div>
 
@@ -295,12 +295,12 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Event Location / Address *</label>
-                <input type="text" value={venue} onChange={(e) => setVenue(e.target.value)} placeholder="Event location or full address" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+                <input type="text" value={venue} onChange={(e) => setVenue(e.target.value)} placeholder="Event location or full address" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
               </div>
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Kitchen Setup Available?</label>
-                <select value={kitchenSetup} onChange={(e) => setKitchenSetup(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]">
+                <select value={kitchenSetup} onChange={(e) => setKitchenSetup(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white">
                   <option value="">Select</option>
                   <option>Yes</option>
                   <option>No</option>
@@ -315,7 +315,7 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Veg / Non-Veg Requirement *</label>
-                <select value={vegNonVeg} onChange={(e) => setVegNonVeg(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required>
+                <select value={vegNonVeg} onChange={(e) => setVegNonVeg(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required>
                   <option value="">Select</option>
                   <option>Vegetarian Only</option>
                   <option>Non-Vegetarian Only</option>
@@ -325,7 +325,7 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Special Dietary Requirements</label>
-                <input type="text" value={dietaryRequirements} onChange={(e) => setDietaryRequirements(e.target.value)} placeholder="Vegan, Gluten-Free, Allergies etc." className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" />
+                <input type="text" value={dietaryRequirements} onChange={(e) => setDietaryRequirements(e.target.value)} placeholder="Vegan, Gluten-Free, Allergies etc." className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" />
               </div>
             </div>
 
@@ -335,7 +335,7 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Catering Type *</label>
-                <select value={cateringType} onChange={(e) => setCateringType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required>
+                <select value={cateringType} onChange={(e) => setCateringType(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required>
                   <option value="">Select Catering Type</option>
                   <option>Buffet</option>
                   <option>Drop-off Only</option>
@@ -344,7 +344,7 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Staff Required?</label>
-                <select value={staffRequired} onChange={(e) => setStaffRequired(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]">
+                <select value={staffRequired} onChange={(e) => setStaffRequired(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white">
                   <option value="">Select</option>
                   <option>Yes</option>
                   <option>No</option>
@@ -353,7 +353,7 @@ export default function ContactForm() {
 
               <div>
                 <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2 mt-4">Crockery & Setup Required?</label>
-                <select value={crockeryRequired} onChange={(e) => setCrockeryRequired(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]">
+                <select value={crockeryRequired} onChange={(e) => setCrockeryRequired(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white">
                   <option value="">Select</option>
                   <option>Yes</option>
                   <option>No</option>
@@ -368,7 +368,7 @@ export default function ContactForm() {
           <h4 className="font-semibold text-md text-[#1A1A1A] mb-4">Additional Notes</h4>
 
           <div>
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows={4} placeholder={serviceType === 'feestzaal' ? 'Any special requests or additional information' : 'Any special requests or additional information'} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37] resize-none" />
+            <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows={4} placeholder={serviceType === 'feestzaal' ? 'Any special requests or additional information' : 'Any special requests or additional information'} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white resize-none" />
           </div>
         </div>
 

@@ -114,13 +114,13 @@ export default function TandooriPage({ params }: Props) {
       {/* HERO */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1
-            className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+          <h1 
+            className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
           >
             {isNl ? 'Tandoori in Den Haag - Recht uit de Kleioven' : 'Tandoori in Den Haag - Straight from the Clay Oven'}
@@ -139,21 +139,21 @@ export default function TandooriPage({ params }: Props) {
       {/* SECTION 1: What 400 Degrees Actually Means */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl ? 'Wat 400 Graden Echt Betekent voor Tandoori Kip' : 'What 400 Degrees Actually Means for Tandoori Chicken'}
           </h2>
           <div className="prose prose-lg max-w-none text-[#1A1A1A] space-y-5">
             {isNl ? (
               <>
-                <p>De meeste kip die als tandoori wordt verkocht in Den Haag, wordt bereid in een gasoven. Gemarineerd, soms. Gekleurd met rood voedselkleurstof voor de uitstraling. Maar gebakken in een doos hete lucht op 250 graden Celsius. De verkoolde rand, de rokerige korst, de geur die de tafel bereikt voordat het bord aankomt - die combinatie vereist een temperatuur die geen enkele gewone oven kan bereiken. Dit is de reden waarom <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">authentiek halal tandoori Den Haag</Link> zo zeldzaam goed is als u het eenmaal proeft.</p>
+                <p>De meeste kip die als tandoori wordt verkocht in Den Haag, wordt bereid in een gasoven. Gemarineerd, soms. Gekleurd met rood voedselkleurstof voor de uitstraling. Maar gebakken in een doos hete lucht op 250 graden Celsius. De verkoolde rand, de rokerige korst, de geur die de tafel bereikt voordat het bord aankomt - die combinatie vereist een temperatuur die geen enkele gewone oven kan bereiken. Dit is de reden waarom <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline">authentiek halal tandoori Den Haag</Link> zo zeldzaam goed is als u het eenmaal proeft.</p>
                 <p>De kleioven bij Chopras Indian Restaurant op Leyweg 986 bereikt 400 graden Celsius. Op die temperatuur verloopt de Maillard-reactie in seconden, niet in minuten. De yoghurtmarinade op het kipoppervlak verkoolt bijna onmiddellijk en vormt een gekarameliseerde korst die het vocht insluit, terwijl de intensieve stralingswarmte van de kleienwanden het vlees vanuit alle richtingen tegelijkertijd gaart. <strong>Er bestaat geen manier om dit te repliceren bij lagere temperaturen.</strong> Er is geen alternatieve route.</p>
-                <p>Het klei zelf speelt ook een rol. In tegenstelling tot metaal is klei een slechte warmtegeleider - het houdt warmte vast en straalt die zachtjes en gelijkmatig uit, zoals alleen een materiaal kan dat tweeduizend jaar voor dit doel is gebruikt. Chopras stookt de tandoor uren voor de eerste gast aankomt. Elke chicken tikka en seekh kebab die die avond de keuken verlaat, is bereid op de temperatuur waarvoor het gerecht is bedacht. Lees waarom Chopras wordt erkend als het <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:underline">beste Indiaas restaurant in Den Haag</Link> op basis van 800+ Google-recensies.</p>
+                <p>Het klei zelf speelt ook een rol. In tegenstelling tot metaal is klei een slechte warmtegeleider - het houdt warmte vast en straalt die zachtjes en gelijkmatig uit, zoals alleen een materiaal kan dat tweeduizend jaar voor dit doel is gebruikt. Chopras stookt de tandoor uren voor de eerste gast aankomt. Elke chicken tikka en seekh kebab die die avond de keuken verlaat, is bereid op de temperatuur waarvoor het gerecht is bedacht. Lees waarom Chopras wordt erkend als het <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:underline">beste Indiaas restaurant in Den Haag</Link> op basis van 800+ Google-recensies.</p>
               </>
             ) : (
               <>
-                <p>Most chicken sold as tandoori in Den Haag is cooked in a gas oven. Marinated, sometimes. Coloured with red food dye for appearances. But cooked in a box of hot air at 250 degrees Celsius. The char that defines real tandoori - the scorched edge, the smoky crust, the smell that reaches the table before the plate does - requires a temperature that no conventional oven can reach. This is why <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">authentic halal tandoori Den Haag</Link> is so rare and so immediately recognisable when you find it.</p>
+                <p>Most chicken sold as tandoori in Den Haag is cooked in a gas oven. Marinated, sometimes. Coloured with red food dye for appearances. But cooked in a box of hot air at 250 degrees Celsius. The char that defines real tandoori - the scorched edge, the smoky crust, the smell that reaches the table before the plate does - requires a temperature that no conventional oven can reach. This is why <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline">authentic halal tandoori Den Haag</Link> is so rare and so immediately recognisable when you find it.</p>
                 <p>The clay oven at Chopras Indian Restaurant on Leyweg 986 reaches 400 degrees Celsius. At that temperature, the Maillard reaction occurs in seconds, not minutes. The yogurt marinade on the chicken surface scorches almost immediately, creating a caramelised crust that seals in moisture while the intense radiant heat from the clay walls cooks the meat from every direction simultaneously. <strong>There is no way to replicate this at lower temperatures.</strong> No workaround exists.</p>
-                <p>The clay itself matters. Unlike metal, clay is a poor conductor of heat - it holds and radiates warmth gently and evenly, the way only a material used for this purpose for two thousand years can. Chopras fires the tandoor hours before the first guest arrives. Every chicken tikka Den Haag and seekh kebab that leaves the kitchen that night has been cooked at the temperature it was designed for. Read why Chopras is recognised as the <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:underline">best Indian restaurant in Den Haag</Link> across 800+ Google reviews.</p>
+                <p>The clay itself matters. Unlike metal, clay is a poor conductor of heat - it holds and radiates warmth gently and evenly, the way only a material used for this purpose for two thousand years can. Chopras fires the tandoor hours before the first guest arrives. Every chicken tikka Den Haag and seekh kebab that leaves the kitchen that night has been cooked at the temperature it was designed for. Read why Chopras is recognised as the <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:underline">best Indian restaurant in Den Haag</Link> across 800+ Google reviews.</p>
               </>
             )}
           </div>
@@ -163,14 +163,14 @@ export default function TandooriPage({ params }: Props) {
       {/* SECTION 2: Tandoori Dishes on Our Menu */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-6">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
             {isNl ? 'Tandoori Gerechten op Ons Menu' : 'Tandoori Dishes on Our Menu'}
           </h2>
           <div className="prose prose-lg max-w-none text-[#1A1A1A] space-y-4 mb-8">
             {isNl ? (
-              <p>Elk tandoori gerecht bij Chopras is <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">volledig halal gecertificeerd</Link> en vers bereid bij elke bestelling. De kip wordt de avond van tevoren gemarineerd. Het lam voor de seekh kebab wordt elke ochtend vers gemalen met verse specerijen. Paneer tikka wordt dagelijks vers bereid. Er zijn geen bevroren componenten in de tandoor-sectie van het Chopras-menu.</p>
+              <p>Elk tandoori gerecht bij Chopras is <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline">volledig halal gecertificeerd</Link> en vers bereid bij elke bestelling. De kip wordt de avond van tevoren gemarineerd. Het lam voor de seekh kebab wordt elke ochtend vers gemalen met verse specerijen. Paneer tikka wordt dagelijks vers bereid. Er zijn geen bevroren componenten in de tandoor-sectie van het Chopras-menu.</p>
             ) : (
-              <p>Every tandoori dish at Chopras is <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">fully halal certified</Link> and freshly prepared to order. The chicken is marinated the night before. The lamb for seekh kebab is ground fresh each morning with fresh spices. Paneer tikka is made fresh daily. There are no frozen components in the tandoor section of the Chopras menu.</p>
+              <p>Every tandoori dish at Chopras is <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline">fully halal certified</Link> and freshly prepared to order. The chicken is marinated the night before. The lamb for seekh kebab is ground fresh each morning with fresh spices. Paneer tikka is made fresh daily. There are no frozen components in the tandoor section of the Chopras menu.</p>
             )}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -208,9 +208,9 @@ export default function TandooriPage({ params }: Props) {
                 href: '/naan-den-haag',
               },
             ].map((item) => (
-              <div key={item.name} className="bg-[#F7F8FC] rounded-xl p-5 border-l-4 border-[#D4AF37]">
-                <h3 className="font-vibes text-lg text-[#C7A348] mb-1">
-                  <Link href={`${base}${item.href}`} className="text-[#D4AF37] hover:underline">{item.name}</Link> - {item.price}
+              <div key={item.name} className="bg-[#F7F8FC] rounded-xl p-5 border-l-4 border-white">
+                <h3 className="font-vibes text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-1">
+                  <Link href={`${base}${item.href}`} className="text-white hover:underline">{item.name}</Link> - {item.price}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
@@ -219,13 +219,13 @@ export default function TandooriPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -236,21 +236,21 @@ export default function TandooriPage({ params }: Props) {
       {/* SECTION 3: Why the Marinade Starts the Night Before */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl ? 'Waarom de Marinade de Avond Ervoor Begint' : 'Why the Marinade Starts the Night Before'}
           </h2>
           <div className="prose prose-lg max-w-none text-[#1A1A1A] space-y-5">
             {isNl ? (
               <>
                 <p>De tandoor geeft de hitte. De marinade geeft alles wat daarna volgt. De twee zijn onafscheidelijk, en de marinade bij Chopras Indian Restaurant begint de avond voor de service, niet een uur ervoor. Dit is geen marketingclaim. Het is een keukeneis om het juiste resultaat te bereiken.</p>
-                <p>Chicken tikka bij Chopras wordt een nacht gemarineerd in volle yoghurt met verse gember, knoflook, rode chili, kurkuma en een masalamelange die in eigen huis wordt gemalen van hele specerijen die rechtstreeks uit India worden geïmporteerd. De yoghurt is niet decoratief. Melkzuur in yoghurt denatureert de eiwitten op het kipoppervlak en opent de vezels, zodat de specerijen diep in het vlees kunnen doordringen in plaats van alleen op het oppervlak te blijven. Bekijk het <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">volledige Noord-Indiase menu bij Chopras</Link> om te zien hoe de tandoori gerechten naast de curryselectie staan.</p>
-                <p>Wanneer de gemarineerde kip de 400-graden tandoor binnengaat, is het kruidenprofiel al aanwezig door het hele stuk vlees. Het vuur werkt dan op de buitenkant. Het resultaat is kip die van buiten rokerig en verkoold is, door en door gekruid, en van binnen sappig - drie kwaliteiten die moeilijk afzonderlijk te bereiken zijn en bijna onmogelijk samen zonder zowel de juiste voorbereiding als de juiste temperatuur. Chopras serveert dit elke avond van dinsdag tot en met zondag vanaf 16:30, naast <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:underline">biryani Den Haag</Link> en het volledige curry-menu.</p>
+                <p>Chicken tikka bij Chopras wordt een nacht gemarineerd in volle yoghurt met verse gember, knoflook, rode chili, kurkuma en een masalamelange die in eigen huis wordt gemalen van hele specerijen die rechtstreeks uit India worden geïmporteerd. De yoghurt is niet decoratief. Melkzuur in yoghurt denatureert de eiwitten op het kipoppervlak en opent de vezels, zodat de specerijen diep in het vlees kunnen doordringen in plaats van alleen op het oppervlak te blijven. Bekijk het <Link href={`${base}/menu`} className="text-white hover:underline">volledige Noord-Indiase menu bij Chopras</Link> om te zien hoe de tandoori gerechten naast de curryselectie staan.</p>
+                <p>Wanneer de gemarineerde kip de 400-graden tandoor binnengaat, is het kruidenprofiel al aanwezig door het hele stuk vlees. Het vuur werkt dan op de buitenkant. Het resultaat is kip die van buiten rokerig en verkoold is, door en door gekruid, en van binnen sappig - drie kwaliteiten die moeilijk afzonderlijk te bereiken zijn en bijna onmogelijk samen zonder zowel de juiste voorbereiding als de juiste temperatuur. Chopras serveert dit elke avond van dinsdag tot en met zondag vanaf 16:30, naast <Link href={`${base}/biryani-den-haag`} className="text-white hover:underline">biryani Den Haag</Link> en het volledige curry-menu.</p>
               </>
             ) : (
               <>
                 <p>The tandoor provides the fire. The marinade provides everything that follows. The two are inseparable, and the marinade at Chopras Indian Restaurant begins the evening before service, not an hour beforehand. This is not a marketing claim. It is a kitchen requirement for the outcome to be correct.</p>
-                <p>Chicken tikka at Chopras is marinated overnight in full-fat yogurt with fresh ginger, garlic, red chilli, turmeric, and a masala blend ground in-house from whole spices sourced directly from India. The yogurt is not cosmetic. Lactic acid in yogurt denatures the surface proteins of the chicken and opens the fibres, allowing the spices to penetrate deep into the meat rather than resting on the surface alone. See the <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">full North Indian menu at Chopras</Link> to see how the tandoori dishes sit alongside the curry selection.</p>
-                <p>By the time the marinated chicken enters the 400-degree tandoor, the spice profile is already present throughout the entire piece. The fire then works on the outside. The result is chicken that is smoky and charred at the exterior, deeply spiced throughout, and moist at the core - three qualities that are difficult to achieve in isolation. Almost impossible to achieve together without both the correct preparation and the correct temperature. Chopras serves this every evening Tuesday to Sunday from 16:30, alongside <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:underline">biryani Den Haag</Link> and the full curry menu.</p>
+                <p>Chicken tikka at Chopras is marinated overnight in full-fat yogurt with fresh ginger, garlic, red chilli, turmeric, and a masala blend ground in-house from whole spices sourced directly from India. The yogurt is not cosmetic. Lactic acid in yogurt denatures the surface proteins of the chicken and opens the fibres, allowing the spices to penetrate deep into the meat rather than resting on the surface alone. See the <Link href={`${base}/menu`} className="text-white hover:underline">full North Indian menu at Chopras</Link> to see how the tandoori dishes sit alongside the curry selection.</p>
+                <p>By the time the marinated chicken enters the 400-degree tandoor, the spice profile is already present throughout the entire piece. The fire then works on the outside. The result is chicken that is smoky and charred at the exterior, deeply spiced throughout, and moist at the core - three qualities that are difficult to achieve in isolation. Almost impossible to achieve together without both the correct preparation and the correct temperature. Chopras serves this every evening Tuesday to Sunday from 16:30, alongside <Link href={`${base}/biryani-den-haag`} className="text-white hover:underline">biryani Den Haag</Link> and the full curry menu.</p>
               </>
             )}
           </div>
@@ -260,16 +260,16 @@ export default function TandooriPage({ params }: Props) {
       {/* GEO BLOCK */}
       <section className="bg-[#1B2B5E] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-white mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Waar Vind Ik Authentieke Tandoori Gerechten in Den Haag?'
               : 'Where Can I Find Authentic Tandoori Dishes in Den Haag?'}
           </h2>
           <div className="text-white/90 text-lg leading-relaxed">
             {isNl ? (
-              <p>Authentieke tandoori Den Haag vindt u bij Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open van dinsdag tot en met zondag van 16:30 tot 22:30. De kleioven bereikt 400 graden Celsius - de enige temperatuur waarbij chicken tikka en seekh kebab hun karakteristieke rokerige korst ontwikkelen. Beoordeeld met 4,9 sterren op basis van 800+ Google-recensies. Alle tandoori gerechten zijn <Link href={`${base}/halal-food-den-haag`} className="text-[#C7A348] hover:underline font-semibold">volledig halal gecertificeerd</Link> en een nacht van tevoren gemarineerd. <Link href={`${base}/contact`} className="text-[#C7A348] hover:underline font-semibold">Reserveer een tafel</Link> of bestel online.</p>
+              <p>Authentieke tandoori Den Haag vindt u bij Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open van dinsdag tot en met zondag van 16:30 tot 22:30. De kleioven bereikt 400 graden Celsius - de enige temperatuur waarbij chicken tikka en seekh kebab hun karakteristieke rokerige korst ontwikkelen. Beoordeeld met 4,9 sterren op basis van 800+ Google-recensies. Alle tandoori gerechten zijn <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline font-semibold">volledig halal gecertificeerd</Link> en een nacht van tevoren gemarineerd. <Link href={`${base}/contact`} className="text-white hover:underline font-semibold">Reserveer een tafel</Link> of bestel online.</p>
             ) : (
-              <p>Authentic tandoori Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open Tuesday to Sunday from 16:30 to 22:30. The clay oven reaches 400 degrees Celsius - the only temperature at which chicken tikka and seekh kebab develop their characteristic smoky crust. Rated 4.9 stars from 800+ Google reviews. All tandoori dishes are <Link href={`${base}/halal-food-den-haag`} className="text-[#C7A348] hover:underline font-semibold">fully halal certified</Link> and marinated overnight. <Link href={`${base}/contact`} className="text-[#C7A348] hover:underline font-semibold">Reserve a table</Link> or order online.</p>
+              <p>Authentic tandoori Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open Tuesday to Sunday from 16:30 to 22:30. The clay oven reaches 400 degrees Celsius - the only temperature at which chicken tikka and seekh kebab develop their characteristic smoky crust. Rated 4.9 stars from 800+ Google reviews. All tandoori dishes are <Link href={`${base}/halal-food-den-haag`} className="text-white hover:underline font-semibold">fully halal certified</Link> and marinated overnight. <Link href={`${base}/contact`} className="text-white hover:underline font-semibold">Reserve a table</Link> or order online.</p>
             )}
           </div>
         </div>
@@ -278,7 +278,7 @@ export default function TandooriPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Veelgestelde Vragen over Tandoori' : 'Frequently Asked Questions About Tandoori'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
@@ -288,7 +288,7 @@ export default function TandooriPage({ params }: Props) {
       {/* CTA / Visit */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Bezoek Chopras voor Tandoori in Den Haag'
               : 'Visit Chopras for Tandoori in Den Haag'}
@@ -296,54 +296,54 @@ export default function TandooriPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Authentieke biryani Den Haag' : 'Authentic biryani Den Haag'}</p>
             </Link>
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Butter chicken Den Haag bij Chopras' : 'Butter chicken Den Haag at Chopras'}</p>
             </Link>
-            <Link href={`${base}/naan-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Naan</p>
+            <Link href={`${base}/naan-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Naan</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Tandoori naan Den Haag' : 'Tandoori naan Den Haag'}</p>
             </Link>
-            <Link href={`${base}/indian-food-delivery-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bezorging' : 'Delivery'}</p>
+            <Link href={`${base}/indian-food-delivery-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bezorging' : 'Delivery'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas eten bezorgen Den Haag' : 'Indian food delivery Den Haag'}</p>
             </Link>
-            <Link href={`${base}/mutton-rogan-josh-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Lam Curry' : 'Lamb Curry'}</p>
+            <Link href={`${base}/mutton-rogan-josh-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Lam Curry' : 'Lamb Curry'}</p>
               <p className="text-[#1B2B5E] font-semibold">Mutton Rogan Josh Den Haag</p>
             </Link>
-            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Catering</p>
+            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Catering</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas catering Den Haag voor uw evenement' : 'Indian catering Den Haag for your event'}</p>
             </Link>
           </div>
           <div className="mt-8 text-center space-y-4">
             <p className="text-[#1A1A1A] text-base">
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 {isNl ? 'Chopras Indian Restaurant - beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="text-[#1A1A1A] text-base">
               {isNl ? (
-                <>Bekijk het <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledige menu</Link> of <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">maak een reservering</Link>.</>
+                <>Bekijk het <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige menu</Link> of <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">maak een reservering</Link>.</>
               ) : (
-                <>View the <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full menu</Link> or <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">book a table at Chopras Indian Restaurant Den Haag</Link>.</>
+                <>View the <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full menu</Link> or <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">book a table at Chopras Indian Restaurant Den Haag</Link>.</>
               )}
             </p>
           </div>

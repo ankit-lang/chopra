@@ -46,14 +46,14 @@ export async function POST(request: NextRequest) {
 <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:20px;">
   <div style="max-width:600px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-    <div style="background:linear-gradient(135deg,#000066,#0000FF);padding:24px 32px;">
+    <div style="background:linear-gradient(135deg,#000066,#0000B3);padding:24px 32px;">
       <h1 style="color:white;margin:0;font-size:22px;">New Pickup Order</h1>
       <p style="color:rgba(255,255,255,0.7);margin:4px 0 0;font-size:14px;">Order #${orderNumber}</p>
     </div>
 
     <div style="padding:32px;">
 
-      <div style="background:#fff8f5;border-left:4px solid #D4AF37;padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px;">
+      <div style="background:#fff8f5;border-left:4px solid #0000B3;padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px;">
         <p style="margin:0;font-size:13px;color:#888;">Customer Details</p>
         <p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#1a1a1a;">${customerName}</p>
         <p style="margin:2px 0 0;font-size:14px;color:#555;">${customerPhone}</p>
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
         <span style="font-size:18px;font-weight:700;color:#1B2B5E;">Total: &euro;${totalAmount.toFixed(2)}</span>
       </div>
 
-      <div style="margin-top:20px;background:#fffbf0;border:1px solid #D4AF37;border-radius:8px;padding:16px;">
+      <div style="margin-top:20px;background:#fffbf0;border:1px solid #0000B3;border-radius:8px;padding:16px;">
         <p style="margin:0;font-size:12px;color:#888;">Special Instructions</p>
         <p style="margin:4px 0 0;font-size:14px;color:#1a1a1a;">${specialInstructions || 'None'}</p>
       </div>

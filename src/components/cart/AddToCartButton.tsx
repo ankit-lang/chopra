@@ -27,7 +27,7 @@ export default function AddToCartButton({ dish }: AddToCartButtonProps) {
         <button
           onClick={() => updateQuantity(dish.id, quantity - 1)}
           aria-label="Decrease quantity"
-          className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1A1A1A] flex items-center justify-center transition-all"
+          className="w-8 h-8 rounded-full bg-[#0000B3]/10 border border-white text-white hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white flex items-center justify-center transition-all"
         >
           <Minus className="w-3.5 h-3.5" />
         </button>
@@ -35,7 +35,7 @@ export default function AddToCartButton({ dish }: AddToCartButtonProps) {
         <button
           onClick={handleAdd}
           aria-label="Increase quantity"
-          className="w-8 h-8 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1A1A1A] flex items-center justify-center transition-all"
+          className="w-8 h-8 rounded-full bg-[#0000B3]/10 border border-white text-white hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white flex items-center justify-center transition-all"
         >
           <Plus className="w-3.5 h-3.5" />
         </button>

@@ -87,12 +87,12 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
       {/* Hero */}
       <section
         className="py-16 px-6 text-center"
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
       >
-        <p className="text-xs uppercase tracking-widest text-[#D4AF37] font-medium mb-4">
+        <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
           ALMOST THERE
         </p>
-        <h1 className="font-heading text-4xl text-white font-semibold">Complete Your Order</h1>
+        <h1 className="font-heading text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Complete Your Order</h1>
         <p className="text-white/60 mt-3 text-sm">
           Fill in your details and collect from Leyweg 986
         </p>
@@ -103,15 +103,15 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
         <div className="flex items-center justify-center gap-4">
           {/* Step 1 */}
           <div className="flex flex-col items-center gap-1">
-            <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center">
               <Check className="w-4 h-4 text-[#1A1A1A]" />
             </div>
             <span className="text-xs text-[#1A1A1A]/50">Your Cart</span>
           </div>
-          <div className="w-12 h-px bg-[#D4AF37]" />
+          <div className="w-12 h-px bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
           {/* Step 2 */}
           <div className="flex flex-col items-center gap-1">
-            <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center ring-4 ring-[#D4AF37]/30 animate-pulse">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center ring-4 ring-white/30 animate-pulse">
               <span className="text-xs font-bold text-[#1A1A1A]">2</span>
             </div>
             <span className="text-xs text-[#1A1A1A] font-semibold">Your Details</span>
@@ -136,8 +136,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               onSubmit={handleSubmit}
               className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm"
             >
-              <h2 className="font-vibes text-3xl text-[#C7A348]">Your Details</h2>
-              <div className="w-12 h-0.5 bg-[#D4AF37] mt-2 mb-8" />
+              <h2 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">Your Details</h2>
+              <div className="w-12 h-0.5 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mt-2 mb-8" />
 
               {/* Full Name */}
               <div className="mb-6">
@@ -152,7 +152,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your full name"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4AF37] transition-colors"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-white transition-colors"
                 />
               </div>
 
@@ -169,7 +169,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="+31 6 12345678"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4AF37] transition-colors"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-white transition-colors"
                 />
                 <p className="text-xs text-[#1A1A1A]/40 mt-1">
                   We will call this number if there are any questions about your order
@@ -188,7 +188,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   value={form.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4AF37] transition-colors"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-white transition-colors"
                 />
                 <p className="text-xs text-[#1A1A1A]/40 mt-1">For your order confirmation</p>
               </div>
@@ -209,7 +209,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   value={form.instructions}
                   onChange={handleChange}
                   placeholder="Any allergies, special requests, or notes for the kitchen..."
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-white transition-colors resize-none"
                 />
               </div>
 
@@ -218,9 +218,9 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 <p className="font-medium text-[#1A1A1A] mb-3">Payment Method</p>
 
                 {/* Cash on pickup */}
-                <div className="border-2 border-[#D4AF37] bg-[#D4AF37]/5 rounded-2xl p-5 flex items-start gap-4">
-                  <div className="w-5 h-5 rounded-full border-2 border-[#D4AF37] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#D4AF37]" />
+                <div className="border-2 border-white bg-[#0000B3]/5 rounded-2xl p-5 flex items-start gap-4">
+                  <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A] text-sm">Cash on Pickup</p>
@@ -249,7 +249,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
 
               {/* Pickup info */}
               <div className="bg-[#EEF0FF] border border-[#1B2B5E]/40 rounded-2xl p-6 flex items-start gap-4 mb-8">
-                <MapPin className="text-[#D4AF37] w-5 h-5 mt-0.5 flex-shrink-0" />
+                <MapPin className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-[#1B2B5E] text-sm">Pickup Location</p>
                   <p className="text-[#1A1A1A]/70 text-sm mt-1">Leyweg 986, 2545 GW Den Haag</p>
@@ -273,7 +273,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <>
@@ -320,9 +320,9 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 {/* Header */}
                 <div
                   className="px-6 py-5"
-                  style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
+                  style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
                 >
-                  <p className="font-vibes text-xl text-white">Order Summary</p>
+                  <p className="font-vibes text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">Order Summary</p>
                   <p className="text-white/60 text-sm">
                     {items.reduce((s, i) => s + i.quantity, 0)} items
                   </p>
@@ -344,7 +344,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                         ) : (
                           <div
                             className="w-full h-full flex items-center justify-center text-white font-vibes"
-                            style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
+                            style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
                           >
                             {item.name.charAt(0)}
                           </div>
@@ -353,7 +353,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                       <p className="text-sm font-medium text-[#1A1A1A] flex-1 leading-tight">
                         {item.name}
                       </p>
-                      <span className="bg-[#D4AF37]/10 text-[#D4AF37] text-xs px-2 py-0.5 rounded-full">
+                      <span className="bg-[#0000B3]/10 text-white text-xs px-2 py-0.5 rounded-full">
                         x{item.quantity}
                       </span>
                       <p className="text-sm font-semibold text-[#1A1A1A]">
@@ -381,8 +381,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
 
                 {/* Payment pill */}
                 <div className="mx-6 mb-4">
-                  <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-3 flex items-center gap-2">
-                    <Banknote className="text-[#D4AF37] w-4 h-4 flex-shrink-0" />
+                  <div className="bg-[#0000B3]/10 border border-white/30 rounded-xl px-4 py-3 flex items-center gap-2">
+                    <Banknote className="text-white w-4 h-4 flex-shrink-0" />
                     <p className="text-sm text-[#1A1A1A]/70">Cash on Pickup at Leyweg 986</p>
                   </div>
                 </div>

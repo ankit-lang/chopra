@@ -119,13 +119,13 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • NEAR YOU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1
-            className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+          <h1 
+            className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
           >
             {isNl
@@ -143,13 +143,13 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Reserveer een tafel' : 'Reserve a Table'}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Bekijk het menu' : 'View the Menu'}
             </Link>
@@ -160,14 +160,14 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* From Delft to Leyweg */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Van Delft naar Leyweg' : 'From Delft to Leyweg'}
           </h2>
           {isNl ? (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Delft en Den Haag delen een aaneengesloten stedelijk gebied. De gemeentegrens loopt door bebouwde straten, niet door open landschap.{' '}
-                <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>{' '}
+                <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>{' '}
                 op Leyweg 986 ligt circa 15 minuten rijden van het centrum van Delft via de A13, en de meeste routes omzeilen het centrum van Den Haag volledig.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -175,7 +175,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Per openbaar vervoer duurt de reis vanaf station Delft 20 tot 25 minuten via tram- of busverbindingen door Den Haag Centraal naar de halte Leyweg. Voor TU Delft-studenten en -medewerkers zonder auto is dit een eenvoudig avondje uit. Bekijk het{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledige menu van 143 gerechten</Link>{' '}
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige menu van 143 gerechten</Link>{' '}
                 zodat u weet wat u wilt bestellen voordat u vertrekt.
               </p>
             </div>
@@ -183,7 +183,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Delft and Den Haag share a continuous urban footprint. The municipal boundary runs through built-up streets, not open countryside.{' '}
-                <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>{' '}
+                <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>{' '}
                 at Leyweg 986 sits approximately 15 minutes from central Delft by car via the A13, and most routes bypass Den Haag city centre entirely.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -191,7 +191,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 By public transport, the journey from Delft station takes 20 to 25 minutes via tram or bus connections through Den Haag Centraal to the Leyweg stop. For TU Delft students and staff without a car, this is a straightforward evening out. Browse the{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full 143-dish menu</Link>{' '}
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full 143-dish menu</Link>{' '}
                 before you leave so you arrive knowing exactly what you want.
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Why Delft Residents Choose Chopras */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Waarom Delftenaren Kiezen voor Chopras' : 'Why Delft Residents Choose Chopras'}
           </h2>
           {isNl ? (
@@ -215,9 +215,9 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 De tandoor-kleioven op Leyweg bereikt 400 graden Celsius. Die temperatuur geeft{' '}
-                <Link href={`${base}/naan-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">naan</Link>{' '}
+                <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan</Link>{' '}
                 zijn gebakken randjes en{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoorigerechten</Link>{' '}
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoorigerechten</Link>{' '}
                 hun rokerige buitenkant. Geen conventionele oven repliceert dit. Het is het fysieke feit achter het smaakverschil, en het is precies wat bezoekers uit Delft beschrijven in hun beoordelingen.
               </p>
             </div>
@@ -231,9 +231,9 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 The tandoor clay oven at Leyweg reaches 400 degrees Celsius. That temperature gives{' '}
-                <Link href={`${base}/naan-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">naan bread</Link>{' '}
+                <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan bread</Link>{' '}
                 its charred edges and{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori dishes</Link>{' '}
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori dishes</Link>{' '}
                 their smoky exterior crust. No conventional oven replicates this. It is the physical fact behind the taste difference, and it is exactly what Delft visitors describe in their reviews.
               </p>
             </div>
@@ -244,19 +244,19 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Halal - Navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Volledig Halal. Geen Uitzonderingen.' : 'Fully Halal. No Exceptions.'}
           </h2>
           {isNl ? (
             <div className="space-y-6">
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 Chopras Indian Restaurant is volledig halal gecertificeerd. Die verklaring geldt voor de gehele keuken, elke leverancier en elk gerecht op het{' '}
-                <Link href={`${base}/halal-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">menu van 143 items</Link>.
+                <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">menu van 143 items</Link>.
                 {' '}Er is geen halalsectie naast een niet-halalsectie. Er is geen risico op kruisbesmetting, omdat er geen niet-halal vlees aanwezig is in het restaurant.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 Voor TU Delfts grote internationale moslim-studentengemeenschap en voor de Zuid-Hollandse families die langs andere restaurants rijden om bevestigde halal te vinden, is dit de doorslaggevende factor. Niet een prettig extraatje. Een voorwaarde. Lees de{' '}
-                <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledige halalinformatie</Link>{' '}
+                <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige halalinformatie</Link>{' '}
                 voor details over onze certificering en leveranciers.
               </p>
             </div>
@@ -264,12 +264,12 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
             <div className="space-y-6">
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 Chopras Indian Restaurant is fully halal certified. That statement covers the entire kitchen, every supplier, and every dish across the{' '}
-                <Link href={`${base}/halal-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">143-item menu</Link>.
+                <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">143-item menu</Link>.
                 {' '}There is no halal section alongside a non-halal section. There is no cross-contamination risk because no non-halal meat is present anywhere on the premises.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 For TU Delft&apos;s large international Muslim student community and for South Holland families who drive past other restaurants to find confirmed halal, this is the decisive factor. Not a nice-to-have. A prerequisite. Read the{' '}
-                <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full halal certification details</Link>{' '}
+                <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full halal certification details</Link>{' '}
                 for complete information on our sourcing and verification.
               </p>
             </div>
@@ -280,24 +280,24 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* What Delft Visitors Order */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Wat Delftse Bezoekers als Eerste Bestellen' : 'What Delft Visitors Order First'}
           </h2>
           {isNl ? (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Bezoekers uit Delft bestellen{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link>{' '}
+                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>{' '}
                 bovengemiddeld vaak. Het saffraanbasmatirijst en de vers gemalen kruiden bij Chopras vertegenwoordigen precies het verschil tussen restaurantbiryani en wat de meeste thuiskoks kunnen produceren. De kwaliteit is onmiddellijk vergelijkbaar en blijvend.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 De street food-sectie trekt TU Delfts internationale gemeenschap in bijzonder grote aantallen.{' '}
-                <Link href={`${base}/pani-puri-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Pani puri</Link>,{' '}
-                <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">chaat</Link>{' '}
+                <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Pani puri</Link>,{' '}
+                <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat</Link>{' '}
                 en samosa zijn gerechten die echte nostalgie dragen voor Zuid-Aziatische bezoekers. Authentieke versies vinden buiten een Zuid-Aziatische thuiskeuken is in deze regio oprecht zeldzaam.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Butter chicken</Link>{' '}
+                <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Butter chicken</Link>{' '}
                 blijft het startpunt voor de meeste Nederlandse gasten die Chopras voor het eerst vanuit Delft bezoeken. De rijkheid van de tomaten-roomsaus, gemaakt met vers gemalen masala in plaats van een kant-en-klare basis, stelt onmiddellijk een maatstaf voor wat Indiaas eten kan zijn.
               </p>
             </div>
@@ -305,17 +305,17 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Visitors from Delft order{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link>{' '}
+                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>{' '}
                 at above-average rates. The saffron basmati rice and fresh-ground spices at Chopras represent exactly the gap between restaurant biryani and what most home kitchens can produce. The quality is immediately apparent and consistently repeatable.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 The street food section draws TU Delft&apos;s international community in particularly strong numbers.{' '}
-                <Link href={`${base}/pani-puri-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Pani puri</Link>,{' '}
-                <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">chaat</Link>,{' '}
+                <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Pani puri</Link>,{' '}
+                <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat</Link>,{' '}
                 and samosa are dishes that carry genuine nostalgia for South Asian visitors. Finding authentic versions outside of a South Asian home kitchen is genuinely rare in this region.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Butter chicken</Link>{' '}
+                <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Butter chicken</Link>{' '}
                 remains the entry point for most Dutch guests visiting Chopras for the first time from Delft. The richness of the tomato and cream sauce, made with fresh-ground masala rather than a jarred base, sets an immediate benchmark for what Indian food can be.
               </p>
             </div>
@@ -326,7 +326,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* GEO Block */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Is er een goed Indiaas restaurant bij Delft?'
               : 'Is There a Good Indian Restaurant Near Delft?'}
@@ -334,17 +334,17 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Ja.{' '}
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>{' '}
+              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>{' '}
               op Leyweg 986, Den Haag ligt 15 minuten van het centrum van Delft via de A13. Beoordeeld met 4,9 sterren van meer dan 800 Google-beoordelingen en volledig halal gecertificeerd, serveert Chopras een menu van 143 Noord-Indiaase gerechten, waaronder biryani, tandoori en Indo-Chinese gerechten. Open dinsdag tot en met zondag van 16:30 tot 22:30. Betaald parkeren beschikbaar in de omgeving van Leyweg.{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Reserveer een tafel</Link>{' '}
+              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Reserveer een tafel</Link>{' '}
               of bel +31 6 30645930.
             </p>
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Yes.{' '}
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>{' '}
+              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>{' '}
               at Leyweg 986, Den Haag is 15 minutes from central Delft via the A13. Rated 4.9 stars from 800+ Google reviews and fully halal certified, Chopras serves a 143-dish North Indian menu including biryani, tandoori, and Indo Chinese dishes. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Reserve a table</Link>{' '}
+              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Reserve a table</Link>{' '}
               or call +31 6 30645930.
             </p>
           )}
@@ -354,7 +354,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Practical Info */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Praktische Informatie voor Bezoekers uit Delft' : 'Getting Here from Delft'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
@@ -369,8 +369,8 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
               { title: 'By Tram', desc: 'Tram line 2 stops at Leyweg, a short walk from the entrance. Paid parking also available nearby.' },
               { title: 'Opening Hours', desc: 'Tuesday to Sunday: 16:30 to 22:30. Closed Monday.' },
             ]).map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-6 border-l-4 border-[#D4AF37]">
-                <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-3 leading-[1.3]">{item.title}</h3>
+              <div key={item.title} className="bg-white rounded-xl p-6 border-l-4 border-white">
+                <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">{item.title}</h3>
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -378,13 +378,13 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Reserveer een tafel' : 'Reserve a Table'}
             </Link>
             <Link
               href={`${base}/catering`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Catering aanvragen' : 'Enquire About Catering'}
             </Link>
@@ -395,7 +395,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Veelgestelde Vragen' : 'Frequently Asked Questions'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
@@ -405,15 +405,15 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Nearby Areas */}
       <section className="bg-[#FFFAF5] py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+          <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
             {isNl ? 'Ook Nabij Den Haag' : 'Also Serving These Areas Near Den Haag'}
           </h3>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/indian-restaurant-rijswijk`}
-              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#D4AF37] transition-colors"
+              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-white transition-colors"
             >
-              <p className="font-vibes text-2xl text-[#C7A348] leading-[1.3]">
+              <p className="font-vibes text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] leading-[1.3]">
                 {isNl ? 'Indiaas Restaurant bij Rijswijk' : 'Indian Restaurant Near Rijswijk'}
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed mt-1">
@@ -422,9 +422,9 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
             </Link>
             <Link
               href={`${base}/indian-restaurant-zoetermeer`}
-              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#D4AF37] transition-colors"
+              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-white transition-colors"
             >
-              <p className="font-vibes text-2xl text-[#C7A348] leading-[1.3]">
+              <p className="font-vibes text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] leading-[1.3]">
                 {isNl ? 'Indiaas Restaurant bij Zoetermeer' : 'Indian Restaurant Near Zoetermeer'}
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed mt-1">
@@ -438,42 +438,42 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
       {/* Explore Popular Dishes */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Ontdek Populaire Gerechten' : 'Explore Popular Dishes'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link
               href={`${base}/butter-chicken-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="text-[#1B2B5E] font-semibold">
                 {isNl ? 'Rijke tomaat-roomsaus, vers gemalen masala' : 'Rich tomato cream sauce, fresh-ground masala'}
               </p>
             </Link>
             <Link
               href={`${base}/dal-makhani-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
               <p className="text-[#1B2B5E] font-semibold">
                 {isNl ? 'Langzaam gekookte zwarte linzen met boter' : 'Slow-cooked black lentils with butter and cream'}
               </p>
             </Link>
             <Link
               href={`${base}/biryani-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
               <p className="text-[#1B2B5E] font-semibold">
                 {isNl ? 'Saffraanbasmati met vers gemalen kruiden' : 'Saffron basmati with fresh-ground spices'}
               </p>
             </Link>
             <Link
               href={`${base}/catering`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Catering' : 'Catering'}
               </p>
               <p className="text-[#1B2B5E] font-semibold">

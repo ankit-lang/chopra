@@ -43,10 +43,10 @@ function DietaryBadges({ dietary }: { dietary: DietaryTag[] }) {
       {activeBadges.map((badge) => (
         <span
           key={badge.key}
-          className="inline-flex items-center gap-1 px-2 py-1 bg-[#1B2B5E]/5 border border-[#C7A348]/30 rounded-md"
+          className="inline-flex items-center gap-1 px-2 py-1 bg-[#1B2B5E]/5 border border-white/30 rounded-md"
           title={badge.label}
         >
-          <span className="text-[#C7A348] text-xs font-light">{badge.symbol}</span>
+          <span className="text-white text-xs font-light">{badge.symbol}</span>
         </span>
       ))}
     </div>
@@ -71,9 +71,9 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
               }`}
           >
             {/* Image */}
-            <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-[#1B2B5E]/5 to-[#D4AF37]/10">
+            <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-[#1B2B5E]/5 to-[#0000B3]/10">
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-vibes text-4xl text-[#C7A348]/20">
+                <span className="font-vibes text-4xl text-white/20">
                   {item.name.charAt(0)}
                 </span>
               </div>
@@ -111,7 +111,7 @@ function DishGrid({ dishes }: { dishes: MenuItem[] }) {
                 <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   <meta itemProp="priceCurrency" content="EUR" />
                   <meta itemProp="price" content={item.price.toString()} />
-                  <p className="text-[#D4AF37] text-lg font-vibes">
+                  <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-lg font-vibes">
                     {formatPrice(item.price)}
                   </p>
                 </div>
@@ -229,8 +229,8 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
                 flex-none whitespace-nowrap px-5 py-2.5 rounded-full
                 text-sm font-medium transition-all duration-200
                 ${activeCategory === category.id
-                  ? 'bg-[#D4AF37] text-[#1A1A1A] font-semibold shadow-sm'
-                  : 'bg-white border border-gray-200 text-[#1A1A1A]/60 hover:border-[#D4AF37]/50 hover:text-[#1A1A1A]'
+                  ? 'bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white font-semibold shadow-sm'
+                  : 'bg-white border border-gray-200 text-[#1A1A1A]/60 hover:border-white/50 hover:text-[#1A1A1A]'
                 }
               `}
             >
@@ -256,16 +256,16 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
             >
               {/* Section header */}
               <div className="py-10">
-                <p className="text-xs uppercase tracking-widest text-[#D4AF37] font-medium mb-3">
+                <p className="text-xs uppercase tracking-widest text-[#1A1A1A]/40 font-medium mb-3">
                   {category.shortLabel}
                 </p>
-                <h2
+                <h2 
                   itemProp="name"
-                  className="font-vibes text-4xl md:text-5xl text-[#C7A348]"
+                  className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]"
                 >
                   {category.label}
                 </h2>
-                <div className="border-b-2 border-[#D4AF37] w-16 mt-4" />
+                <div className="border-b-2 border-[#0000B3]/30 w-16 mt-4" />
               </div>
 
               {/* Dish grid */}

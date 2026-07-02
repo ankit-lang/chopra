@@ -14,23 +14,23 @@ export default function TopBar() {
             href="tel:+31630645930"
             className="flex items-center gap-2 text-[#1B2B5E] hover:text-[#0000C9] transition-colors text-xs"
           >
-            <Phone className="w-3 h-3 text-[#D4AF37]" />
+            <Phone className="w-3 h-3 text-white" />
             <span>+31 6 30645930</span>
           </a>
 
           <div className="w-px h-3 bg-[#1B2B5E]/20" />
 
           <div className="flex items-center gap-2 text-xs">
-            <Mail className="w-3 h-3 text-[#D4AF37]" />
+            <Mail className="w-3 h-3 text-white" />
             <EmailLink />
           </div>
         </div>
 
         {/* CENTER - Announcement (hidden on mobile) */}
         <p className="hidden md:block text-[#1B2B5E]/60 text-xs text-center">
-          <span className="text-[#D4AF37]">&#9733;</span>
+          <span className="text-white">&#9733;</span>
           {' '}Open Tuesday to Sunday &middot; 16:30 to 22:30 &middot; Leyweg 986, Den Haag{' '}
-          <span className="text-[#D4AF37]">&#9733;</span>
+          <span className="text-white">&#9733;</span>
         </p>
 
         {/* RIGHT - Info pills (hidden on mobile) */}

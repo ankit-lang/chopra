@@ -96,7 +96,7 @@ const faqsNl = [
   },
 ]
 
-const linkClass = 'text-[#D4AF37] hover:text-[#e8c84a] font-semibold'
+const linkClass = 'text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold'
 
 export default function FamilyRestaurantPage({ params }: Props) {
   const { locale } = params
@@ -117,12 +117,12 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • DISCOVER · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
             {isNl ? 'Familierestaurant in Den Haag' : 'Family Restaurant in Den Haag'}
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
@@ -136,7 +136,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* Section 1: Main intro */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Het Familierestaurant Den Haag Waar Families Terugkomen' : 'The Family Restaurant Den Haag Families Come Back To'}
           </h2>
           {isNl ? (
@@ -178,7 +178,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* Section 2: Kids menu */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Wat Kinderen Eten bij Chopras Indian Restaurant' : 'What Children Eat at Chopras Indian Restaurant'}
           </h2>
           {isNl ? (
@@ -226,7 +226,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* Section 3: Every seat at the table */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Elke Plek aan Tafel Heeft Iets' : 'Every Seat at the Table Has Something'}
           </h2>
           {isNl ? (
@@ -272,7 +272,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* GEO Block */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Is Chopras Indian Restaurant Geschikt voor Gezinnen met Kinderen in Den Haag?'
               : 'Is Chopras Indian Restaurant Good for Families with Children in Den Haag?'}
@@ -302,7 +302,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Veelgestelde Vragen over Ons Familierestaurant' : 'Frequently Asked Questions About Our Family Restaurant'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
@@ -312,7 +312,7 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* CTA - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Reserveer een Familietafel op Leyweg 986' : 'Reserve a Family Table at Leyweg 986'}
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
@@ -325,19 +325,19 @@ export default function FamilyRestaurantPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Tafel Reserveren' : 'Reserve a Table'}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Bekijk het Menu' : 'View the Menu'}
             </Link>
             <Link
               href={`${base}/indian-birthday-catering-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Verjaardagscatering' : 'Birthday Catering'}
             </Link>
@@ -348,24 +348,24 @@ export default function FamilyRestaurantPage({ params }: Props) {
       {/* Dish links grid */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-8 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8 leading-[1.3]">
             {isNl ? 'Populaire Gerechten voor het Hele Gezin' : 'Popular Dishes for the Whole Family'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-[#C7A348]/20 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Milde Curry' : 'Mild Curry'}</p>
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Milde Curry' : 'Mild Curry'}</p>
               <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Butter Chicken - zacht en romig' : 'Butter Chicken - mild and creamy'}</p>
             </Link>
-            <Link href={`${base}/tandoori-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-[#C7A348]/20 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Tandoor Gegrild' : 'Tandoor Grilled'}</p>
+            <Link href={`${base}/tandoori-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Tandoor Gegrild' : 'Tandoor Grilled'}</p>
               <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Tandoori - 400 graden kleioven' : 'Tandoori - 400 degree clay oven'}</p>
             </Link>
-            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-[#C7A348]/20 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Rijstschotel' : 'Rice Dish'}</p>
+            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Rijstschotel' : 'Rice Dish'}</p>
               <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Biryani - saffraan basmatirijst' : 'Biryani - saffron basmati rice'}</p>
             </Link>
-            <Link href={`${base}/naan-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-[#C7A348]/20 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Brood uit de Tandoor' : 'Bread from the Tandoor'}</p>
+            <Link href={`${base}/naan-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Brood uit de Tandoor' : 'Bread from the Tandoor'}</p>
               <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Naan - recht uit de kleioven' : 'Naan - fresh from the clay oven'}</p>
             </Link>
           </div>

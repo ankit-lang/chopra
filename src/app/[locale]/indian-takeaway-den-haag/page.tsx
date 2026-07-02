@@ -115,12 +115,12 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-6">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • CATERING · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
             {isNl ? 'Indiaas Eten Afhalen in Den Haag' : 'Indian Takeaway Den Haag'}
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -131,13 +131,13 @@ export default function IndianTakeawayPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${RESTAURANT.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Bel om te Bestellen' : 'Call to Order'}
             </a>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Bekijk het Menu' : 'View the Menu'}
             </Link>
@@ -151,34 +151,34 @@ export default function IndianTakeawayPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
               <div className="text-4xl mb-4">🏠</div>
-              <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-3 leading-[1.3]">{isNl ? 'Bezorging' : 'Delivery'}</h3>
+              <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">{isNl ? 'Bezorging' : 'Delivery'}</h3>
               <p className="font-body text-[#1A1A1A]/70 text-sm mb-4 leading-relaxed">{isNl ? 'Via Thuisbezorgd of Uber Eats, binnen 5 km van Leyweg' : 'Via Thuisbezorgd or Uber Eats, within 5 km of Leyweg'}</p>
-              <a href="https://www.thuisbezorgd.nl/menu/chopras-indian-street-food" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px] mb-2 w-full">
+              <a href="https://www.thuisbezorgd.nl/menu/chopras-indian-street-food" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px] mb-2 w-full">
                 {tr.menu.thuisbezorgd}
               </a>
-              <a href="https://www.ubereats.com/nl/store/chopras-indian-restaurant/kFKhBtR-W3OkJyl2f6QmUg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
+              <a href="https://www.ubereats.com/nl/store/chopras-indian-restaurant/kFKhBtR-W3OkJyl2f6QmUg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
                 {tr.menu.ubereats}
               </a>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
               <div className="text-4xl mb-4">🏪</div>
-              <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-3 leading-[1.3]">{isNl ? 'Afhalen' : 'Collect'}</h3>
+              <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">{isNl ? 'Afhalen' : 'Collect'}</h3>
               <p className="font-body text-[#1A1A1A]/70 text-sm mb-4 leading-relaxed">{isNl ? 'Bel vooruit en haal op bij Leyweg 986. Betaald parkeren in de omgeving.' : 'Call ahead and collect from Leyweg 986. Paid parking nearby.'}</p>
-              <a href={`tel:${RESTAURANT.contact.phone}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
+              <a href={`tel:${RESTAURANT.contact.phone}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
                 {RESTAURANT.contact.phoneDisplay}
               </a>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
               <div className="text-4xl mb-4">🍽️</div>
-              <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-3 leading-[1.3]">{isNl ? 'Ter Plekke Eten' : 'Dine In'}</h3>
+              <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">{isNl ? 'Ter Plekke Eten' : 'Dine In'}</h3>
               <p className="font-body text-[#1A1A1A]/70 text-sm mb-4 leading-relaxed">{isNl ? 'Reserveer een tafel bij Chopras Indian Restaurant' : 'Reserve a table at Chopras Indian Restaurant'}</p>
-              <Link href={`${base}/contact`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
+              <Link href={`${base}/contact`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px] w-full">
                 {tr.common.reserve}
               </Link>
             </div>
           </div>
           <div className="bg-[#1B2B5E]/5 rounded-2xl p-6">
-            <h3 className="font-vibes text-2xl md:text-3xl text-[#C7A348] mb-3 leading-[1.3]">
+            <h3 className="font-vibes text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">
               {isNl ? 'Openingstijden voor Afhalen en Bezorging' : 'Collection and Delivery Hours'}
             </h3>
             <ul className="font-body text-[#1A1A1A]/70 text-lg space-y-1">
@@ -192,14 +192,14 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 2: No shortcuts prose */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Indian takeaway Den Haag zonder concessies aan kwaliteit' : 'Indian takeaway Den Haag that does not cut corners'}
           </h2>
           {isNl ? (
             <>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Veel afhaalrestaurants in Den Haag hanteren een andere standaard voor meeneemorders dan voor gasten die ter plekke eten. Minder aandacht. Snellere bereiding. Kruiden uit een zak in plaats van vers gemalen. Bij{' '}
-                <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Chopras Indian Restaurant
                 </Link>{' '}
                 bestaat die tweedeling niet. <strong>Indiaas eten afhalen Den Haag</strong> bij Chopras betekent exact dezelfde keuken als wanneer u aan een tafel zit.
@@ -209,7 +209,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Chopras Indian Restaurant heeft 4,9 sterren op Google van meer dan 800 gasten. Die beoordeling is gebouwd op consistentie. Niet op een goede avond. Op elke bestelling, elke keer, inclusief elk{' '}
-                <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Indiaas eten bestellen in Den Haag
                 </Link>
                 {' '}dat onze keuken verlaat.
@@ -219,7 +219,7 @@ export default function IndianTakeawayPage({ params }: Props) {
             <>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Many takeaway kitchens in Den Haag apply a different standard to collection orders than to guests sitting at a table. Less care. Faster preparation. Spices from a bag rather than ground fresh that morning. At{' '}
-                <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Chopras Indian Restaurant
                 </Link>
                 , that split does not exist. <strong>Indian takeaway Den Haag</strong> from Chopras means the identical kitchen as every dine-in order.
@@ -229,7 +229,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Chopras Indian Restaurant holds 4.9 stars on Google from over 800 verified guests. That rating is built on consistency. Not on one good evening. On every order, including every{' '}
-                <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Indian food delivery in Den Haag
                 </Link>
                 {' '}and every collection order that leaves our kitchen.
@@ -242,13 +242,13 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 3: What to order */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Wat kunt u afhalen bij Chopras?' : 'What can you order for Indian takeaway?'}
           </h2>
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
               Het volledige menu van 143 gerechten verdeeld over 13 categorieen is beschikbaar voor afhalen. Hieronder staan de meest gevraagde keuzes bij{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 Indiaas afhalen in Den Haag
               </Link>
               .
@@ -256,7 +256,7 @@ export default function IndianTakeawayPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
               The full menu of 143 dishes across 13 categories is available for collection. Below are the most requested choices for{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 Indian takeaway in Den Haag
               </Link>
               .
@@ -265,19 +265,19 @@ export default function IndianTakeawayPage({ params }: Props) {
 
           <div className="space-y-10">
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 {isNl ? 'Biryani voor onderweg' : 'Biryani for collection'}
               </h3>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Biryani
                   </Link>{' '}
                   is het meest gevraagde gerecht voor afhalen bij Chopras. Saffraan basmatirijst bereid in dum-stijl met halal lam, kip of groenten. De pot wordt afgesloten tijdens het garen zodat alle aroma behouden blijft. Een gerecht dat ook tijdens het transport zijn kwaliteit behoudt.
                 </p>
               ) : (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Biryani
                   </Link>{' '}
                   is the most requested dish for Indian takeaway at Chopras. Saffron basmati rice slow-cooked in dum style with halal lamb, chicken or vegetables. The pot is sealed during cooking so every layer of aroma is locked in. A dish that holds its quality well after collection from Leyweg 986.
@@ -286,35 +286,35 @@ export default function IndianTakeawayPage({ params }: Props) {
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 {isNl ? 'Curries en dal' : 'Curries and dal'}
               </h3>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Butter chicken
                   </Link>
                   ,{' '}
-                  <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     mutton rogan josh
                   </Link>{' '}
                   en{' '}
-                  <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     dal makhani
                   </Link>{' '}
                   zijn de populairste keuzes. Bereid met specerijen die dezelfde ochtend vers zijn gemalen. De sauzen zijn stevig van structuur en houden hun kwaliteit goed na het afhalen.
                 </p>
               ) : (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Butter chicken
                   </Link>
                   ,{' '}
-                  <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     mutton rogan josh
                   </Link>{' '}
                   and{' '}
-                  <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     dal makhani
                   </Link>{' '}
                   are the most requested curries for collection. Prepared with spices ground fresh that morning. The gravies are well-bodied and hold quality well after pickup from Leyweg 986.
@@ -323,13 +323,13 @@ export default function IndianTakeawayPage({ params }: Props) {
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 {isNl ? 'Tandoori gerechten' : 'Tandoori dishes'}
               </h3>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                   De tandoor bij Chopras bereikt 400 graden Celsius. Die temperatuur is niet aanpasbaar en geeft{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     tandoori kip en seekh kebab
                   </Link>{' '}
                   hun gerookte korst. Geen gewone oven kan dit nabootsen. Tandoori gerechten zijn uitermate geschikt voor afhalen en worden warm verpakt zodat de textuur behouden blijft.
@@ -337,7 +337,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               ) : (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                   The tandoor at Chopras reaches 400 degrees Celsius. That temperature is not adjustable, and it is precisely what gives{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     tandoori chicken and seekh kebab
                   </Link>{' '}
                   their smoked crust. No conventional oven can replicate this. Tandoori dishes travel well and are packed hot to preserve texture on the way home.
@@ -346,27 +346,27 @@ export default function IndianTakeawayPage({ params }: Props) {
             </div>
 
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 {isNl ? 'Chaat en streetfood' : 'Chaat and street food'}
               </h3>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Chaat
                   </Link>{' '}
                   en{' '}
-                  <Link href={`${base}/pani-puri-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     pani puri
                   </Link>{' '}
                   zijn populaire keuzes voor wie iets anders zoekt dan een curry. Authentiek Indiaas straatvoedsel rechtstreeks uit onze keuken. Direct klaar voor afhalen bij Leyweg 986.
                 </p>
               ) : (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                  <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     Chaat
                   </Link>{' '}
                   and{' '}
-                  <Link href={`${base}/pani-puri-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     pani puri
                   </Link>{' '}
                   are strong choices for those who want something beyond a curry. Authentic Indian street food made in our kitchen, ready for collection the moment your order is confirmed.
@@ -380,7 +380,7 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 4: Halal + proof - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Volledig halal gecertificeerd. Ook voor afhalen.' : 'Fully halal certified. For every collection order.'}
           </h2>
           {isNl ? (
@@ -414,7 +414,7 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 5: How to order - steps */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Hoe werkt Indiaas afhalen bij Chopras?' : 'How do you order Indian takeaway from Chopras?'}
           </h2>
           {isNl ? (
@@ -428,13 +428,13 @@ export default function IndianTakeawayPage({ params }: Props) {
           )}
           <div className="space-y-8">
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 1
               </div>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                   <strong>Bekijk het menu en bel ons op +31 6 30645930.</strong> Blader door het{' '}
-                  <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     volledige Indiaas menu
                   </Link>{' '}
                   van 143 gerechten om te beslissen wat u wilt bestellen. Beschikbaar dinsdag tot en met zondag van 16:30 tot 22:30.
@@ -442,7 +442,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               ) : (
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                   <strong>Browse the menu and call us on +31 6 30645930.</strong> Review the{' '}
-                  <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                  <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                     full Indian menu
                   </Link>{' '}
                   of 143 dishes before you call. Available Tuesday to Sunday from 16:30 to 22:30.
@@ -450,7 +450,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               )}
             </div>
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 2
               </div>
               {isNl ? (
@@ -464,7 +464,7 @@ export default function IndianTakeawayPage({ params }: Props) {
               )}
             </div>
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 3
               </div>
               {isNl ? (
@@ -481,7 +481,7 @@ export default function IndianTakeawayPage({ params }: Props) {
           <div className="mt-10">
             <a
               href={`tel:${RESTAURANT.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Bel om te Bestellen' : 'Call to Order Now'}
             </a>
@@ -492,7 +492,7 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 6: GEO block */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Kan ik Indiaas eten afhalen bij Chopras in Den Haag?'
               : 'Can I order Indian takeaway from Chopras in Den Haag?'}
@@ -500,11 +500,11 @@ export default function IndianTakeawayPage({ params }: Props) {
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Ja. Chopras Indian Restaurant op{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 Leyweg 986 in Den Haag
               </Link>{' '}
               biedt het volledige menu aan voor afhalen. Biryani, curries, tandoori gerechten, chaat en naan. Volledig halal gecertificeerd. De keuken bereidt elke dag met specerijen die vers worden gemalen van hele specerijen rechtstreeks uit India. Beoordeeld met 4,9 sterren op Google van meer dan 800 gasten. Afhalen is mogelijk dinsdag tot en met zondag van 16:30 tot 22:30. Bekijk ook de{' '}
-              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 bezorgopties in Den Haag
               </Link>
               .
@@ -512,11 +512,11 @@ export default function IndianTakeawayPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Yes. Chopras Indian Restaurant at{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 Leyweg 986 in Den Haag
               </Link>{' '}
               offers its full menu for collection. Biryani, curries, tandoori dishes, chaat and naan. Fully halal certified. The kitchen prepares every dish with spices ground fresh each morning from whole spices sourced directly from India. Rated 4.9 stars on Google from over 800 verified guests. Collection is available Tuesday to Sunday from 16:30 to 22:30. See also{' '}
-              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 Indian food delivery in Den Haag
               </Link>
               .
@@ -528,7 +528,7 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 7: FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Veelgestelde vragen over Indiaas afhalen in Den Haag'
               : 'Frequently asked questions about Indian takeaway in Den Haag'}
@@ -540,13 +540,13 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 8: Popular dishes grid */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Populaire keuzes voor Indiaas afhalen' : 'Popular choices for Indian takeaway Den Haag'}
           </h2>
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
               Dit zijn de meest bestelde gerechten voor afhalen bij Chopras. Bekijk de pagina van elk gerecht voor informatie over bereiding. Bekijk ook ons{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 volledig Indiaas menu
               </Link>{' '}
               voor alle 143 gerechten verdeeld over 13 categorieen.
@@ -554,7 +554,7 @@ export default function IndianTakeawayPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
               These are the most ordered dishes for Indian takeaway at Chopras. Visit each dish page for preparation details. Browse the{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 full Indian restaurant menu
               </Link>{' '}
               for all 143 dishes across 13 categories.
@@ -563,43 +563,43 @@ export default function IndianTakeawayPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <Link
               href={`${base}/biryani-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
               <p className="font-body text-[#1A1A1A]/70">{isNl ? 'Saffraan basmatirijst met halal lam, kip of groenten' : 'Saffron basmati rice with halal lamb, chicken or vegetables'}</p>
             </Link>
             <Link
               href={`${base}/butter-chicken-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="font-body text-[#1A1A1A]/70">{isNl ? 'Halal kip in romige tomaten- en botersaus, dagelijks vers bereid' : 'Halal chicken in rich tomato and cream sauce, made fresh daily'}</p>
             </Link>
             <Link
               href={`${base}/tandoori-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
               <p className="font-body text-[#1A1A1A]/70">{isNl ? 'Gegrild bij 400 graden Celsius in onze tandoor kleioven' : 'Grilled at 400 degrees Celsius in our clay tandoor oven'}</p>
             </Link>
             <Link
               href={`${base}/chaat-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Chaat</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Chaat</p>
               <p className="font-body text-[#1A1A1A]/70">{isNl ? 'Authentiek Indiaas straatvoedsel, dagelijks vers bereid' : 'Authentic Indian street food, prepared fresh each day'}</p>
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/halal-food-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Halal Eten Den Haag' : 'Halal Food Den Haag'}
             </Link>
             <Link
               href={`${base}/indian-food-delivery-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Bezorging Bekijken' : 'View Delivery Options'}
             </Link>
@@ -610,7 +610,7 @@ export default function IndianTakeawayPage({ params }: Props) {
       {/* Section 9: Final CTA - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Bestel vandaag uw Indiaas afhaaleten in Den Haag' : 'Order your Indian takeaway in Den Haag today'}
           </h2>
           {isNl ? (
@@ -625,13 +625,13 @@ export default function IndianTakeawayPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${RESTAURANT.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Bel om te Bestellen' : 'Call to Order'}
             </a>
             <Link
               href={`${base}/halal-menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Halal Menu Bekijken' : 'View Halal Menu'}
             </Link>

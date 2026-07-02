@@ -54,7 +54,7 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
     <div
       className="min-h-screen flex items-center justify-center px-6 py-20"
       style={{
-        background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)',
+        background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)',
       }}
     >
       <div className="bg-white rounded-3xl p-10 md:p-14 max-w-lg w-full mx-auto text-center shadow-2xl">
@@ -67,13 +67,13 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <h1 className="font-vibes text-4xl text-[#C7A348] mt-6 leading-[1.3]">
+        <h1 className="font-vibes text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mt-6 leading-[1.3]">
           Order Confirmed!
         </h1>
 
         {/* Order number pill */}
-        <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full px-6 py-3 mt-4">
-          <Hash className="text-[#D4AF37] w-4 h-4" />
+        <div className="inline-flex items-center gap-2 bg-[#0000B3]/10 border border-white/30 rounded-full px-6 py-3 mt-4">
+          <Hash className="text-white w-4 h-4" />
           <span className=" text-[#1A1A1A] text-lg font-vibes">
             Order {orderNumber}
           </span>
@@ -117,19 +117,19 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
         {/* Info pills */}
         <div className="mt-6 space-y-3">
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <MapPin className="text-[#D4AF37] w-5 h-5 flex-shrink-0" />
+            <MapPin className="text-white w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
               {lastOrder?.restaurantAddress ?? 'Leyweg 986, 2545 GW Den Haag'}
             </p>
           </div>
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <Clock className="text-[#D4AF37] w-5 h-5 flex-shrink-0" />
+            <Clock className="text-white w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
               Ready in {lastOrder?.estimatedPickup ?? '30 to 45 minutes'}
             </p>
           </div>
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <Banknote className="text-[#D4AF37] w-5 h-5 flex-shrink-0" />
+            <Banknote className="text-white w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
               Payment: {lastOrder?.paymentMethod ?? 'Cash on Pickup'}
             </p>
@@ -142,13 +142,13 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
         <div className="flex flex-col sm:flex-row gap-3 mt-4">
           <Link
             href={`${base}/menu`}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98]"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98]"
           >
             Order Again
           </Link>
           <Link
             href={base}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98]"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98]"
           >
             Back to Home
           </Link>
@@ -166,9 +166,9 @@ export default function OrderConfirmationPage({ params }: { params: { locale: Lo
       fallback={
         <div
           className="min-h-screen flex items-center justify-center"
-          style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
         >
-          <div className="text-white font-vibes text-2xl">Loading...</div>
+          <div className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-vibes text-2xl">Loading...</div>
         </div>
       }
     >

@@ -112,12 +112,12 @@ export default function VegetarianMenuPage({ params }: Props) {
                   {/* Hero */}
                   <section className="bg-[#1B2B5E] py-20 text-center">
                         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-                                    <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+                              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+                                    <span className="text-white text-xs font-medium uppercase tracking-widest">
                                           • MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
                                     </span>
                               </div>
-                              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+                              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
                                     {isNl ? 'Vegetarisch Indiaas Eten Den Haag' : 'Vegetarian Indian Food Den Haag'}
                               </h1>
                               <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
@@ -131,7 +131,7 @@ export default function VegetarianMenuPage({ params }: Props) {
                   {/* Main Intro */}
                   <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Vegetarisch Indiaas Eten in Den Haag Dat Echt Voldoet' : 'Vegetarian Indian Food Den Haag That Actually Satisfies'}
                               </h2>
                               <div className="space-y-5 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -139,17 +139,17 @@ export default function VegetarianMenuPage({ params }: Props) {
                                           <>
                                                 <p>
                                                       Veel Indiase restaurants behandelen vegetarische opties als bijgedachte. Chopras Indian Restaurant doet dat niet. Het vegetarische gedeelte van{' '}
-                                                      <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">het volledige menu op Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">het volledige menu op Leyweg 986</Link>{' '}
                                                       is een complete categorie met meer dan 40 gerechten, opgebouwd uit voedsel dat vegetarisch is in zijn oorsprong in de Noord-Indiase keuken.
                                                 </p>
                                                 <p>
                                                       Dal makhani. Chana masala. Aloo gobi. Paneer tikka masala. Baingan bharta. Dit zijn geen vervangingen of aanpassingen voor vegetariërs. Dit zijn de originele gerechten, bereid zoals ze altijd zijn bereid bij{' '}
-                                                      <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>.{' '}
+                                                      <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>.{' '}
                                                       Kruiden rechtstreeks uit India, elke ochtend vers gemalen voordat de keuken opengaat om 16:30.
                                                 </p>
                                                 <p>
                                                       Voor vegetariërs in Den Haag die op zoek zijn naar{' '}
-                                                      <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">vegetarisch Indiaas eten dat echt vult</Link>,{' '}
+                                                      <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">vegetarisch Indiaas eten dat echt vult</Link>,{' '}
                                                       is Chopras het directe antwoord. 4,9 sterren van 800+ beoordelingen. Geen concessies aan smaak of variatie.
                                                 </p>
                                           </>
@@ -157,17 +157,17 @@ export default function VegetarianMenuPage({ params }: Props) {
                                           <>
                                                 <p>
                                                       Many Indian restaurants treat vegetarian options as an afterthought. Chopras Indian Restaurant does not. The vegetarian section of{' '}
-                                                      <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">the full menu at Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">the full menu at Leyweg 986</Link>{' '}
                                                       is a complete category with more than 40 dishes, built from food that is vegetarian at its origins in North Indian cooking.
                                                 </p>
                                                 <p>
                                                       Dal makhani. Chana masala. Aloo gobi. Paneer tikka masala. Baingan bharta. These are not substitutions or workarounds for vegetarian guests. These are the original dishes, prepared as they have always been prepared at{' '}
-                                                      <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras Indian Restaurant</Link>.{' '}
+                                                      <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras Indian Restaurant</Link>.{' '}
                                                       Spices sourced directly from India, ground fresh every morning before service opens at 16:30.
                                                 </p>
                                                 <p>
                                                       For vegetarians in Den Haag searching for{' '}
-                                                      <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">vegetarian Indian food that genuinely fills you up</Link>,{' '}
+                                                      <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">vegetarian Indian food that genuinely fills you up</Link>,{' '}
                                                       Chopras is the straightforward answer. Rated 4.9 stars from 800+ reviews. No compromise on flavor or variety.
                                                 </p>
                                           </>
@@ -184,19 +184,19 @@ export default function VegetarianMenuPage({ params }: Props) {
                   {/* Dish Categories Grid */}
                   <section className="bg-white py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Wat Staat Er op het Vegetarische Menu?' : 'What Is on the Vegetarian Menu?'}
                               </h2>
                               {isNl ? (
                                     <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
                                           Van paneer gegrild in de tandoor tot linzencurry, het vegetarische menu beslaat elke gang van een volledige maaltijd.{' '}
-                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Dal makhani</Link>{' '}
+                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Dal makhani</Link>{' '}
                                           en paneer butter masala zijn de kerngerechten, maar het menu stopt daar niet.
                                     </p>
                               ) : (
                                     <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
                                           From paneer grilled in the tandoor to lentil curry, the vegetarian menu covers every course of a complete meal.{' '}
-                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Dal makhani</Link>{' '}
+                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Dal makhani</Link>{' '}
                                           and paneer butter masala are the anchor dishes, but the menu does not stop there.
                                     </p>
                               )}
@@ -212,8 +212,8 @@ export default function VegetarianMenuPage({ params }: Props) {
                                           { title: 'Biryani and Rice', items: 'Vegetable biryani, mushroom biryani, jeera rice, yellow rice' },
                                           { title: 'Breads and Sides', items: 'Tandoori naan, garlic naan, roti, papad, raita, pickles' },
                                     ]).map((item) => (
-                                          <div key={item.title} className="bg-[#F7F8FC] rounded-xl p-6 border-l-4 border-[#D4AF37]">
-                                                <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">{item.title}</h3>
+                                          <div key={item.title} className="bg-[#F7F8FC] rounded-xl p-6 border-l-4 border-white">
+                                                <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">{item.title}</h3>
                                                 <p className="font-body text-[#1A1A1A] text-base leading-relaxed">{item.items}</p>
                                           </div>
                                     ))}
@@ -224,7 +224,7 @@ export default function VegetarianMenuPage({ params }: Props) {
                   {/* Paneer Butter Masala and Tandoori Paneer — Dark Accent Section */}
                   <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Paneer bij Chopras: Tandoor tot Room' : 'Paneer at Chopras: Tandoor to Cream'}
                               </h2>
                               <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
@@ -238,9 +238,9 @@ export default function VegetarianMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       Voor meer vegetarische opties, zie onze{' '}
-                                                      <Link href={`${base}/vegan-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledig veganistische menu</Link>{' '}
+                                                      <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledig veganistische menu</Link>{' '}
                                                       met noch zuivel noch vlees, en onze
-                                                      <Link href={`${base}/gluten-free-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">glutenvrije menu</Link>{' '}
+                                                      <Link href={`${base}/gluten-free-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">glutenvrije menu</Link>{' '}
                                                       voor diëten met meer beperking.
                                                 </p>
                                           </>
@@ -254,9 +254,9 @@ export default function VegetarianMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       For more vegetarian options, see our{' '}
-                                                      <Link href={`${base}/vegan-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full vegan menu</Link>{' '}
+                                                      <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full vegan menu</Link>{' '}
                                                       with neither dairy nor meat, and our  
-                                                      <Link href={`${base}/gluten-free-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold"> gluten-free menu</Link>{' '}
+                                                      <Link href={`${base}/gluten-free-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold"> gluten-free menu</Link>{' '}
                                                       for more restricted diets.
                                                 </p>
                                           </>
@@ -268,7 +268,7 @@ export default function VegetarianMenuPage({ params }: Props) {
                   {/* FAQ */}
                   <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-12 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-12 leading-[1.3]">
                                     {isNl ? 'Veelgestelde Vragen over Vegetarisch Indiaas Eten' : 'Frequently Asked Questions About Vegetarian Indian Food'}
                               </h2>
                               <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />

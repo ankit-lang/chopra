@@ -52,7 +52,7 @@ export default function TrustBar({ locale = 'en' }: { locale?: Locale }) {
     <div
       className="relative py-3 overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)',
+        background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)',
         borderTop: '1px solid rgba(212,175,55,0.15)',
         borderBottom: '1px solid rgba(212,175,55,0.08)',
       }}
@@ -63,7 +63,7 @@ export default function TrustBar({ locale = 'en' }: { locale?: Locale }) {
       <div className="flex gap-10 md:gap-16 justify-start md:justify-center overflow-x-auto px-8 md:px-0 no-scrollbar">
         {items.map(({ Icon, label }, i) => (
           <div key={i} className="flex items-center gap-2.5 flex-shrink-0 py-0.5">
-            <Icon className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+            <Icon className="w-4 h-4 text-white flex-shrink-0" />
             <span className="font-body text-[10px] text-white/55 uppercase tracking-[0.18em] whitespace-nowrap">
               {label}
             </span>

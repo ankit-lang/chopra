@@ -33,8 +33,8 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-6">
-          <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
+          <span className="text-white text-xs font-medium uppercase tracking-widest">
             • OUR MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
           </span>
         </div>
@@ -49,7 +49,7 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
           </span>
         </h1>
 
-        <div className="w-16 h-px bg-[#D4AF37] mx-auto my-6" />
+        <div className="w-16 h-px bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mx-auto my-6" />
 
         <p
           className="font-body font-light text-lg text-white/80 max-w-md text-center leading-relaxed"
@@ -63,13 +63,13 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
         <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
           <Link
             href={`${base}/contact`}
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
           >
             Reserve a Table
           </Link>
           <a
             href="#menu"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
           >
             Browse Menu
           </a>

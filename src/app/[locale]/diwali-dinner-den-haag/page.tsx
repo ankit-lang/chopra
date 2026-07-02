@@ -129,12 +129,12 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-6">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • CATERING · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
             {isNl ? 'Diwali-Diner in Den Haag' : 'Diwali Dinner in Den Haag'}
           </h1>
           <p className="text-white/75 text-lg md:text-xl mb-8" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
@@ -145,13 +145,13 @@ export default function DiwaliDinnerPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[#C7A348] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-transparent hover:text-[#C7A348] active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-transparent hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Reserveer Nu' : 'Book Now'}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -162,21 +162,21 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Intro */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Diwali-Diner Den Haag - Eten dat bij de Gelegenheid Past' : 'Diwali Dinner Den Haag - Food That Matches the Occasion'}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed space-y-5">
             {isNl ? (
               <>
                 <p>Diwali vraagt om een tafel die werkelijk vol staat. Niet een bord eten bij een restaurant dat toevallig Indiaas kookt. Families in Den Haag die dit feest kennen, weten het verschil. Bij Chopras Indian Restaurant op Leyweg 986 worden de kruiden elke ochtend vers gemalen. Hele specerijzaden, rechtstreeks uit India, worden voor de service gemalen. Wat u proeft is kruidenintensiteit op zijn hoogtepunt.</p>
-                <p>U kunt bij ons dineren met uw familie of een volledig <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Diwali-catering voor Den Haag</Link> boeken die aan uw deur of locatie wordt bezorgd. Onze privezaal op Leyweg 986 biedt ruimte aan 25 tot 80 gasten voor grotere familievieringen. Het eten bij evenementen is precies hetzelfde als in het restaurant - dezelfde keuken, dezelfde kruiden, dezelfde standaard die Chopras 4,9 sterren van 800+ Google-recensies heeft opgeleverd.</p>
-                <p>Het <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">halal-gecertificeerde menu</Link> bij Chopras is niet een selectie gerechten met een certificaat ernaast. Het is de volledige keuken. Elk vlees, elke leverancier, elk gerecht is halal gecertificeerd zonder uitzonderingen. Voor families die alleen eten bij volledig gecertificeerde restaurants, is dit geen kleine bijzonderheid. Het is de reden dat zij voor Diwali naar Chopras komen.</p>
+                <p>U kunt bij ons dineren met uw familie of een volledig <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali-catering voor Den Haag</Link> boeken die aan uw deur of locatie wordt bezorgd. Onze privezaal op Leyweg 986 biedt ruimte aan 25 tot 80 gasten voor grotere familievieringen. Het eten bij evenementen is precies hetzelfde als in het restaurant - dezelfde keuken, dezelfde kruiden, dezelfde standaard die Chopras 4,9 sterren van 800+ Google-recensies heeft opgeleverd.</p>
+                <p>Het <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal-gecertificeerde menu</Link> bij Chopras is niet een selectie gerechten met een certificaat ernaast. Het is de volledige keuken. Elk vlees, elke leverancier, elk gerecht is halal gecertificeerd zonder uitzonderingen. Voor families die alleen eten bij volledig gecertificeerde restaurants, is dit geen kleine bijzonderheid. Het is de reden dat zij voor Diwali naar Chopras komen.</p>
               </>
             ) : (
               <>
                 <p>Diwali calls for a table that is genuinely full. Not a plate of food at a restaurant that happens to cook Indian. Families in Den Haag who know this festival understand the difference. At Chopras Indian Restaurant at Leyweg 986, the kitchen prepares spices fresh every morning. Whole seeds, sourced directly from India, ground before service begins. What you taste is spice intensity at its peak.</p>
-                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 80 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 800+ Google reviews.</p>
-                <p>The <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">halal certified menu</Link> at Chopras is not a few dishes with a certificate attached. It is the entire kitchen. Every meat dish, every supplier, every plate - halal certified without exception. For families who only eat at fully certified restaurants, this is not a small detail. It is the reason they choose Chopras for Diwali.</p>
+                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 80 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 800+ Google reviews.</p>
+                <p>The <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal certified menu</Link> at Chopras is not a few dishes with a certificate attached. It is the entire kitchen. Every meat dish, every supplier, every plate - halal certified without exception. For families who only eat at fully certified restaurants, this is not a small detail. It is the reason they choose Chopras for Diwali.</p>
               </>
             )}
           </div>
@@ -186,16 +186,16 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* GEO Block */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Waar Kan Ik Diwali Vieren met Authentiek Indiaas Eten in Den Haag?'
               : 'Where Can I Celebrate Diwali with Authentic Indian Food in Den Haag?'}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             {isNl ? (
-              <p>Chopras Indian Restaurant op Leyweg 986 in Den Haag verzorgt Diwali-diners voor families die het lichtfeest vieren. Met 4,9 sterren van 800+ Google-recensies en volledig halal gecertificeerd bereidt Chopras <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link>, tandoori en dal van elke ochtend vers gemalen kruiden. De privezaal biedt ruimte voor maximaal 80 gasten. Dineer in het restaurant of boek <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Diwali-catering</Link> aan huis. Geopend dinsdag tot en met zondag vanaf 16:30.</p>
+              <p>Chopras Indian Restaurant op Leyweg 986 in Den Haag verzorgt Diwali-diners voor families die het lichtfeest vieren. Met 4,9 sterren van 800+ Google-recensies en volledig halal gecertificeerd bereidt Chopras <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>, tandoori en dal van elke ochtend vers gemalen kruiden. De privezaal biedt ruimte voor maximaal 80 gasten. Dineer in het restaurant of boek <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali-catering</Link> aan huis. Geopend dinsdag tot en met zondag vanaf 16:30.</p>
             ) : (
-              <p>Chopras Indian Restaurant at Leyweg 986 in Den Haag serves Diwali dinner for families celebrating the festival of lights. Rated 4.9 stars from 800+ Google reviews and fully halal certified, Chopras prepares <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link>, tandoori and dal from spices ground fresh each morning. The private hall seats up to 80 guests. Dine in or book <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Diwali catering</Link> for your home or venue. Open Tuesday to Sunday from 16:30.</p>
+              <p>Chopras Indian Restaurant at Leyweg 986 in Den Haag serves Diwali dinner for families celebrating the festival of lights. Rated 4.9 stars from 800+ Google reviews and fully halal certified, Chopras prepares <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>, tandoori and dal from spices ground fresh each morning. The private hall seats up to 80 guests. Dine in or book <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali catering</Link> for your home or venue. Open Tuesday to Sunday from 16:30.</p>
             )}
           </div>
         </div>
@@ -204,21 +204,21 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* The Diwali Table */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Wat Staat er op de Diwali-Tafel bij Chopras?' : 'What Is on the Diwali Table at Chopras?'}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed space-y-5">
             {isNl ? (
               <>
-                <p>Een Diwali-tafel is geen tafel met een gerecht. Het is een tafel vol. Bij Chopras begint de maaltijd met verse hapjes - <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">chaat</Link> en pani puri - waarna de hoofdgerechten komen: saffraanbiryani, mutton rogan josh met langzaam gekookte Kasjmirse kruiden, en butter chicken in een rijke tomaten-roommarinade.</p>
-                <p>Onze <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori-gerechten</Link> worden gebakken in onze kleioven die 400 graden Celsius bereikt - de temperatuur die naan zijn geblakerde randen geeft en chicken tikka zijn rooksmaak. Geen conventionele oven kan dit repliceren. De naan wordt vers uit de tandoor gehaald terwijl u aan tafel zit.</p>
-                <p>Voor vegetarische en veganistische gasten is het <Link href={`${base}/vegan-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledig veganistische menu</Link> bij Chopras even uitgebreid. Soya chaap uit de tandoor, dal makhani die een nacht heeft gestoofd, en een volledig assortiment groentegerechten. Het diner sluit af met gulab jamun - traditionele Indiase zoetigheden die de maaltijd op de juiste manier afronden.</p>
+                <p>Een Diwali-tafel is geen tafel met een gerecht. Het is een tafel vol. Bij Chopras begint de maaltijd met verse hapjes - <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat</Link> en pani puri - waarna de hoofdgerechten komen: saffraanbiryani, mutton rogan josh met langzaam gekookte Kasjmirse kruiden, en butter chicken in een rijke tomaten-roommarinade.</p>
+                <p>Onze <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori-gerechten</Link> worden gebakken in onze kleioven die 400 graden Celsius bereikt - de temperatuur die naan zijn geblakerde randen geeft en chicken tikka zijn rooksmaak. Geen conventionele oven kan dit repliceren. De naan wordt vers uit de tandoor gehaald terwijl u aan tafel zit.</p>
+                <p>Voor vegetarische en veganistische gasten is het <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledig veganistische menu</Link> bij Chopras even uitgebreid. Soya chaap uit de tandoor, dal makhani die een nacht heeft gestoofd, en een volledig assortiment groentegerechten. Het diner sluit af met gulab jamun - traditionele Indiase zoetigheden die de maaltijd op de juiste manier afronden.</p>
               </>
             ) : (
               <>
-                <p>A Diwali table is not a table with one dish. It is a table that is full. At Chopras, the meal begins with fresh starters - <Link href={`${base}/chaat-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">chaat</Link> and pani puri - before the main courses arrive: saffron biryani, mutton rogan josh slow-cooked in Kashmiri spices, and butter chicken in a rich tomato and cream sauce.</p>
-                <p>Our <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori dishes</Link> are cooked in our clay oven that reaches 400 degrees Celsius - the temperature that gives naan its charred edges and chicken tikka its smoky crust. No conventional oven can replicate this. The naan is pulled fresh from the tandoor while you sit at the table.</p>
-                <p>For vegetarian and vegan guests, the <Link href={`${base}/vegan-menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">fully vegan menu</Link> at Chopras is equally extensive. Soya chaap from the tandoor, dal makhani slow-cooked overnight, and a full selection of vegetable dishes. The dinner ends with gulab jamun - traditional Indian sweets that close the meal the right way.</p>
+                <p>A Diwali table is not a table with one dish. It is a table that is full. At Chopras, the meal begins with fresh starters - <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat</Link> and pani puri - before the main courses arrive: saffron biryani, mutton rogan josh slow-cooked in Kashmiri spices, and butter chicken in a rich tomato and cream sauce.</p>
+                <p>Our <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori dishes</Link> are cooked in our clay oven that reaches 400 degrees Celsius - the temperature that gives naan its charred edges and chicken tikka its smoky crust. No conventional oven can replicate this. The naan is pulled fresh from the tandoor while you sit at the table.</p>
+                <p>For vegetarian and vegan guests, the <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">fully vegan menu</Link> at Chopras is equally extensive. Soya chaap from the tandoor, dal makhani slow-cooked overnight, and a full selection of vegetable dishes. The dinner ends with gulab jamun - traditional Indian sweets that close the meal the right way.</p>
               </>
             )}
           </div>
@@ -228,38 +228,38 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Dine In or Catering */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Dineer In of Boek Diwali-Catering in Den Haag' : 'Dine In or Book Diwali Catering in Den Haag'}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed space-y-8">
             {isNl ? (
               <>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Reserveer een Tafel</h3>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Reserveer een Tafel</h3>
                   <p>Reserveer een tafel in ons restaurant op Leyweg 986 voor uw Diwali-diner. Wij bevelen aan minimaal twee tot drie weken van tevoren te reserveren. Diwali is een van onze drukste periodes en tafels zijn snel bezet.</p>
                 </div>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Diwali-Catering aan Huis of op Locatie</h3>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Diwali-Catering aan Huis of op Locatie</h3>
                   <p>Wilt u Diwali vieren bij u thuis of op uw eigen locatie? Chopras verzorgt het volledige feest. Alles wordt vers bereid en heet bezorgd. U nodigt uw familie uit. Wij regelen de rest. Minimaal zes gasten voor thuiscatering.</p>
                 </div>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Privezaal voor 25 tot 80 Gasten</h3>
-                  <p>Voor grotere familievieringen kunt u onze <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">privezaal in Den Haag</Link> huren op Leyweg 986. De zaal biedt ruimte aan 25 tot 80 gasten en het eten wordt geserveerd vanuit dezelfde keuken als het restaurant. Geen externe cateraar, geen concessies aan kwaliteit.</p>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Privezaal voor 25 tot 80 Gasten</h3>
+                  <p>Voor grotere familievieringen kunt u onze <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">privezaal in Den Haag</Link> huren op Leyweg 986. De zaal biedt ruimte aan 25 tot 80 gasten en het eten wordt geserveerd vanuit dezelfde keuken als het restaurant. Geen externe cateraar, geen concessies aan kwaliteit.</p>
                 </div>
               </>
             ) : (
               <>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Reserve a Table</h3>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Reserve a Table</h3>
                   <p>Reserve a table at our restaurant at Leyweg 986 for your Diwali dinner. We recommend booking at least two to three weeks in advance. Diwali is one of our busiest periods and tables fill quickly.</p>
                 </div>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Diwali Catering for Home or Venue</h3>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Diwali Catering for Home or Venue</h3>
                   <p>Want to celebrate Diwali at your home or your own venue? Chopras delivers the full feast. Everything is prepared fresh and delivered hot. You invite your family. We handle the rest. Minimum six guests for home catering.</p>
                 </div>
                 <div>
-                  <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">Private Hall for 25 to 80 Guests</h3>
-                  <p>For larger family celebrations, our <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">private event hall in Den Haag</Link> at Leyweg 986 seats 25 to 80 guests. Food is served from the same kitchen as the restaurant. No external caterer, no compromise on quality.</p>
+                  <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">Private Hall for 25 to 80 Guests</h3>
+                  <p>For larger family celebrations, our <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">private event hall in Den Haag</Link> at Leyweg 986 seats 25 to 80 guests. Food is served from the same kitchen as the restaurant. No external caterer, no compromise on quality.</p>
                 </div>
               </>
             )}
@@ -270,12 +270,12 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Why Chopras */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-10 leading-[1.4]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-10 leading-[1.4]">
             {isNl ? 'Waarom de Zuid-Aziatische Gemeenschap in Den Haag Chopras Kiest' : 'Why the South Asian Community in Den Haag Chooses Chopras'}
           </h2>
           <div className="space-y-8">
             <div>
-              <h3 className="font-vibes text-3xl text-white mb-4">
+              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">
                 {isNl ? 'Verse Kruiden, Elke Ochtend' : 'Fresh Spices, Every Morning'}
               </h3>
               <p className="font-body text-white/80 text-lg leading-relaxed">
@@ -285,7 +285,7 @@ export default function DiwaliDinnerPage({ params }: Props) {
               </p>
             </div>
             <div>
-              <h3 className="font-vibes text-3xl text-white mb-4">
+              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">
                 {isNl ? 'De Tandoor op 400 Graden Celsius' : 'The Tandoor at 400 Degrees Celsius'}
               </h3>
               <p className="font-body text-white/80 text-lg leading-relaxed">
@@ -295,7 +295,7 @@ export default function DiwaliDinnerPage({ params }: Props) {
               </p>
             </div>
             <div>
-              <h3 className="font-vibes text-3xl text-white mb-4">
+              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">
                 {isNl ? 'Volledig Halal Gecertificeerd' : 'Fully Halal Certified'}
               </h3>
               <p className="font-body text-white/80 text-lg leading-relaxed">
@@ -311,7 +311,7 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Diwali-Diner Den Haag - Uw Vragen Beantwoord' : 'Diwali Dinner Den Haag - Your Questions Answered'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
@@ -321,7 +321,7 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Book CTA */}
       <section className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Reserveer Uw Diwali-Viering' : 'Book Your Diwali Celebration'}
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
@@ -332,19 +332,19 @@ export default function DiwaliDinnerPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Reserveer Nu' : 'Book Now'}
             </Link>
             <Link
               href={`${base}/catering`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Catering Aanvragen' : 'Request Catering'}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -355,38 +355,38 @@ export default function DiwaliDinnerPage({ params }: Props) {
       {/* Other Catering Options */}
       <section className="bg-[#FFFAF5] py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-10 leading-[1.4] text-center">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-10 leading-[1.4] text-center">
             {isNl ? 'Andere Cateringmogelijkheden' : 'Other Catering Options'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <Link href={`${base}/indian-wedding-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bruiloft' : 'Wedding'}</p>
+            <Link href={`${base}/indian-wedding-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bruiloft' : 'Wedding'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Nikah-recepties en bruiloftsfestiviteiten' : 'Nikah receptions and wedding festivities'}</p>
             </Link>
-            <Link href={`${base}/corporate-events-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Zakelijk' : 'Corporate'}</p>
+            <Link href={`${base}/corporate-events-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Zakelijk' : 'Corporate'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Bedrijfsdiners en teamvieringen' : 'Corporate dinners and team celebrations'}</p>
             </Link>
-            <Link href={`${base}/feestzaal-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Feestzaal' : 'Event Space'}</p>
+            <Link href={`${base}/feestzaal-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Feestzaal' : 'Event Space'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Feestzaal huren voor Diwali in Den Haag' : 'Event space for Diwali in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/indian-birthday-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Verjaardag' : 'Birthday'}</p>
+            <Link href={`${base}/indian-birthday-catering-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Verjaardag' : 'Birthday'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Verjaardagsfeesten en jubileums' : 'Birthday parties and celebrations'}</p>
             </Link>
           </div>
           <div className="mt-8 text-center space-y-4">
             <p className="font-body text-[#1A1A1A] text-lg">
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 {isNl ? 'Chopras Indian Restaurant - beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="font-body text-[#1A1A1A] text-lg">
               {isNl ? 'Voor meer cateringmogelijkheden, bekijk ons' : 'For more catering options, see our'}{' '}
-              <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">{tr.common.viewMenu.toLowerCase()}</Link>
+              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">{tr.common.viewMenu.toLowerCase()}</Link>
               {' '}{isNl ? 'of' : 'or'}{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">{isNl ? 'neem contact op' : 'contact us'}</Link>
+              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">{isNl ? 'neem contact op' : 'contact us'}</Link>
               {' '}{isNl ? 'om uw Diwali-viering te bespreken.' : 'to discuss your Diwali celebration.'}
             </p>
           </div>

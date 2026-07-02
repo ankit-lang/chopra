@@ -126,12 +126,12 @@ export default function ReservationForm() {
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-4">
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Date *</label>
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Time *</label>
-          <select value={time} onChange={(e) => setTime(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required>
+          <select value={time} onChange={(e) => setTime(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required>
             <option value="">Select time</option>
             {timeOptions.map((t) => <option key={t} value={t}>{t}</option>)}
           </select>
@@ -139,27 +139,27 @@ export default function ReservationForm() {
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Email *</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Persons *</label>
-          <input type="number" min={1} value={persons} onChange={(e) => setPersons(e.target.value)} placeholder="Number of persons" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+          <input type="number" min={1} value={persons} onChange={(e) => setPersons(e.target.value)} placeholder="Number of persons" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Full Name *</label>
-          <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Full Name" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+          <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Full Name" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Phone *</label>
-          <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+31 6 12345678" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" required />
+          <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+31 6 12345678" className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">How Did You Find Us?</label>
-          <select value={foundVia} onChange={(e) => setFoundVia(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]">
+          <select value={foundVia} onChange={(e) => setFoundVia(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white">
             <option value="">Select</option>
             <option>Google</option>
             <option>Instagram</option>
@@ -172,12 +172,12 @@ export default function ReservationForm() {
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Date of birth (Optional)</label>
-          <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37]" />
+          <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" />
         </div>
 
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Special Requests (optional)</label>
-          <textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={4} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-[#D4AF37] resize-none" />
+          <textarea value={notes} onChange={(e) => setNotes(e.target.value)} rows={4} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white resize-none" />
         </div>
 
         {error && <div className="text-red-600 font-medium text-sm bg-red-50 p-3 rounded-lg">{error}</div>}

@@ -19,7 +19,7 @@ export default async function Image() {
         fontFamily: 'serif',
       }}
     >
-      <div style={{ color: '#D4AF37', fontSize: 28, marginBottom: 16, letterSpacing: 4 }}>
+      <div style={{ color: '#0000B3', fontSize: 28, marginBottom: 16, letterSpacing: 4 }}>
         CHOPRAS
       </div>
       <div style={{ color: 'white', fontSize: 52, fontWeight: 700, textAlign: 'center', maxWidth: 900 }}>
@@ -28,7 +28,7 @@ export default async function Image() {
       <div style={{ color: 'white', fontSize: 32, marginTop: 16 }}>
         Den Haag, Netherlands
       </div>
-      <div style={{ color: '#D4AF37', fontSize: 22, marginTop: 24 }}>
+      <div style={{ color: '#0000B3', fontSize: 22, marginTop: 24 }}>
         Halal Certified · Open Tue–Sun · Leyweg 986
       </div>
     </div>

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { Cormorant_Garamond, DM_Sans, Great_Vibes } from 'next/font/google'
+import { Playfair_Display, Source_Serif_4, DM_Sans, Great_Vibes } from 'next/font/google'
 import '@/styles/globals.css'
 import Header from '@/components/layout/Header'
 import TopBar from '@/components/layout/TopBar'
@@ -15,11 +15,19 @@ import { RESTAURANT, SITE_URL } from '@/lib/constants'
 import { getWebSiteSchema } from '@/lib/schema'
 import { getLocalizedUrl } from '@/lib/utils'
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-source-serif',
   display: 'swap',
 })
 
@@ -89,7 +97,7 @@ export default function LocaleLayout({
   const websiteSchema = getWebSiteSchema(params.locale)
 
   return (
-    <html lang={params.locale} className={`${cormorant.variable} ${dmSans.variable} ${greatVibes.variable}`}>
+    <html lang={params.locale} className={`${playfair.variable} ${sourceSerif.variable} ${dmSans.variable} ${greatVibes.variable}`}>
       <head>
         <link rel="profile" href="https://chopras.nl/llms.txt" />
         <Script

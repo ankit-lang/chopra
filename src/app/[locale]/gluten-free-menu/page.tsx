@@ -114,12 +114,12 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                   {/* Hero */}
                   <section className="bg-[#1B2B5E] py-20 text-center">
                         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-                                    <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+                              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+                                    <span className="text-white text-xs font-medium uppercase tracking-widest">
                                           • MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
                                     </span>
                               </div>
-                              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+                              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
                                     {isNl ? 'Glutenvrij Indiaas Eten Den Haag' : 'Gluten Free Indian Food Den Haag'}
                               </h1>
                               <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
@@ -133,7 +133,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                   {/* Main Intro */}
                   <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Glutenvrij Indiaas Eten in Den Haag Dat Smaakt als Indiaas Eten' : 'Gluten Free Indian Food Den Haag That Tastes Like Indian Food'}
                               </h2>
                               <div className="space-y-5 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -141,7 +141,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                           <>
                                                 <p>
                                                       Glutenvrije voeding hoeft niet ingewikkeld of smakeloos te zijn. Bij Chopras Indian Restaurant op{' '}
-                                                      <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Leyweg 986</Link>{' '}
                                                       in Den Haag zijn meer dan 15 gerechten natuurlijk glutenvrij. Niet aangepast. Niet ingewikt. Gewoon echt Indiaas eten dat toevallig geen gluten bevat.
                                                 </p>
                                                 <p>
@@ -149,7 +149,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       Voor mensen met coeliakie of glutengevoeligheid in Den Haag is Chopras het directe antwoord. Glutenvrije{' '}
-                                                      <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledige menu in Den Haag</Link>.{' '}
+                                                      <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige menu in Den Haag</Link>.{' '}
                                                       Halal gecertificeerd. 4,9 sterren van 800+ beoordelingen. Geen compromissen op smaak of voedingswaarde.
                                                 </p>
                                           </>
@@ -157,7 +157,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                           <>
                                                 <p>
                                                       Gluten-free living does not need to be complicated or bland. At Chopras Indian Restaurant on{' '}
-                                                      <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Leyweg 986</Link>{' '}
                                                       in Den Haag, more than 15 dishes are naturally gluten-free. Not adapted. Not wrapped in celery. Just real Indian food that happens to contain no gluten.
                                                 </p>
                                                 <p>
@@ -165,7 +165,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       For people with celiac or gluten sensitivity in Den Haag, Chopras is the straightforward answer. Gluten-free{' '}
-                                                      <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full menu in Den Haag</Link>.{' '}
+                                                      <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full menu in Den Haag</Link>.{' '}
                                                       Halal certified. Rated 4.9 stars from 800+ reviews. No compromise on flavor or nutrition.
                                                 </p>
                                           </>
@@ -182,19 +182,19 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                   {/* Dish Categories Grid */}
                   <section className="bg-white py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Wat Staat Er op het Glutenvrije Menu?' : 'What Is on the Gluten Free Menu?'}
                               </h2>
                               {isNl ? (
                                     <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
                                           Van linzencurry tot gegrilde tandoorikip, het glutenvrije menu beslaat elke gang van een volledige maaltijd.{' '}
-                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Dal tadka</Link>{' '}
+                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Dal tadka</Link>{' '}
                                           en chana masala zijn de kerngerechten, maar het menu stopt daar niet.
                                     </p>
                               ) : (
                                     <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
                                           From lentil curry to grilled tandoori chicken, the gluten-free menu covers every course of a complete meal.{' '}
-                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Dal tadka</Link>{' '}
+                                          <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Dal tadka</Link>{' '}
                                           and chana masala are the anchor dishes, but the menu does not stop there.
                                     </p>
                               )}
@@ -210,8 +210,8 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                           { title: 'Biryani and Rice', items: 'Vegetable biryani, steamed rice, jeera rice, chicken fried rice' },
                                           { title: 'Starters and Sides', items: 'Onion bhaji, plain papad, rice dishes' },
                                     ]).map((item) => (
-                                          <div key={item.title} className="bg-[#F7F8FC] rounded-xl p-6 border-l-4 border-[#D4AF37]">
-                                                <h3 className="font-vibes text-3xl text-[#C7A348] mb-4">{item.title}</h3>
+                                          <div key={item.title} className="bg-[#F7F8FC] rounded-xl p-6 border-l-4 border-white">
+                                                <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">{item.title}</h3>
                                                 <p className="font-body text-[#1A1A1A] text-base leading-relaxed">{item.items}</p>
                                           </div>
                                     ))}
@@ -222,7 +222,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                   {/* Celiac and Gluten-Free Standards — Dark Accent Section */}
                   <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                                     {isNl ? 'Glutenvrije Voorbereiding Bij Chopras' : 'Gluten Free Preparation at Chopras'}
                               </h2>
                               <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
@@ -236,9 +236,9 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       Bel{' '}
-                                                      <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">+31 6 30645930</Link>{' '}
+                                                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">+31 6 30645930</Link>{' '}
                                                       of visit{' '}
-                                                      <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras op Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras op Leyweg 986</Link>{' '}
                                                       om meer over glutenvrije opties te zeggen.
                                                 </p>
                                           </>
@@ -252,9 +252,9 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 </p>
                                                 <p>
                                                       Call{' '}
-                                                      <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">+31 6 30645930</Link>{' '}
+                                                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">+31 6 30645930</Link>{' '}
                                                       or visit{' '}
-                                                      <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Chopras at Leyweg 986</Link>{' '}
+                                                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Chopras at Leyweg 986</Link>{' '}
                                                       to learn more about gluten-free options.
                                                 </p>
                                           </>
@@ -266,7 +266,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                   {/* FAQ */}
                   <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
                         <div className="max-w-4xl mx-auto">
-                              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-12 leading-[1.3]">
+                              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-12 leading-[1.3]">
                                     {isNl ? 'Veelgestelde Vragen over Glutenvrij Indiaas Eten' : 'Frequently Asked Questions About Gluten Free Indian Food'}
                               </h2>
                               <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />

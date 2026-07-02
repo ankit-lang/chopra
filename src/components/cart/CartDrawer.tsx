@@ -43,7 +43,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
         aria-label="Shopping cart"
       >
         {/* Header */}
-        <div style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}>
+        <div style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}>
           <div className="px-6 py-5 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <ShoppingBag className="w-5 h-5 text-white" />
@@ -52,7 +52,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
             <button
               onClick={closeCart}
               aria-label="Close cart"
-              className="text-white hover:text-[#D4AF37] transition-colors p-1"
+              className="text-white hover:text-white transition-colors p-1"
             >
               <X className="w-5 h-5" />
             </button>
@@ -76,7 +76,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                   closeCart()
                   router.push(`${base}/menu`)
                 }}
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
               >
                 View Menu
               </button>
@@ -100,7 +100,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                   ) : (
                     <div
                       className="w-full h-full flex items-center justify-center text-white font-vibes text-lg"
-                      style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
+                      style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
                     >
                       {item.name.charAt(0)}
                     </div>
@@ -113,7 +113,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                     {item.name}
                   </p>
                   <p className="text-[#1A1A1A]/40 text-xs capitalize mt-0.5">{item.category}</p>
-                  <p className="text-[#D4AF37] text-sm font-semibold mt-1">{formatPrice(item.price)}</p>
+                  <p className="text-white text-sm font-semibold mt-1">{formatPrice(item.price)}</p>
                 </div>
 
                 {/* Quantity controls */}
@@ -122,7 +122,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
                       aria-label="Decrease quantity"
-                      className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] text-sm transition-colors"
+                      className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-white hover:text-white text-sm transition-colors"
                     >
                       <Minus className="w-3 h-3" />
                     </button>
@@ -132,7 +132,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                       aria-label="Increase quantity"
-                      className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-[#D4AF37] hover:text-[#D4AF37] text-sm transition-colors"
+                      className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center hover:border-white hover:text-white text-sm transition-colors"
                     >
                       <Plus className="w-3 h-3" />
                     </button>
@@ -170,20 +170,20 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
               </div>
               <div className="flex justify-between font-vibes text-xl text-[#1A1A1A] pt-2 border-t border-gray-100">
                 <span>Total</span>
-                <span className="text-[#D4AF37]">{formatPrice(totalPrice)}</span>
+                <span className="text-white">{formatPrice(totalPrice)}</span>
               </div>
             </div>
 
             {/* Cash badge */}
-            <div className="flex items-center gap-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-3">
-              <Banknote className="text-[#D4AF37] w-4 h-4 flex-shrink-0" />
+            <div className="flex items-center gap-2 bg-[#0000B3]/10 border border-white/30 rounded-xl px-4 py-3">
+              <Banknote className="text-white w-4 h-4 flex-shrink-0" />
               <p className="text-[#1A1A1A]/70 text-sm">Payment: Cash on Pickup</p>
             </div>
 
             {/* Checkout button */}
             <button
               onClick={handleCheckout}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               Proceed to Checkout
             </button>
@@ -191,7 +191,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
             {/* Continue browsing */}
             <button
               onClick={closeCart}
-              className="w-full border border-gray-200 text-[#1A1A1A]/60 py-3 text-sm hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all rounded-xl"
+              className="w-full border border-gray-200 text-[#1A1A1A]/60 py-3 text-sm hover:border-white hover:text-white transition-all rounded-xl"
             >
               Continue Browsing
             </button>

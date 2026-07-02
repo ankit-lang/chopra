@@ -30,6 +30,7 @@ export const RESTAURANT = {
     facebook: 'https://www.facebook.com/choprasrestaurant',
     instagram: 'https://www.instagram.com/chopras.indianrestaurant/',
     youtube: 'https://www.youtube.com/channel/UC-oVbHCXWzyiWeGsiNL-0xA',
+    tiktok: 'https://www.tiktok.com/@choprasindianrestaurant',
     x: 'https://x.com/choprasdenhaag',
     thefork: 'https://www.thefork.nl/restaurant/chopras-indian-restaurant-r825662',
     thuisbezorgd: 'https://www.thuisbezorgd.nl/menu/chopras-indian-street-food',

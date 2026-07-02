@@ -62,13 +62,11 @@ export default function Header({ locale }: { locale: Locale }) {
 
   const base = locale === 'nl' ? '/nl' : ''
 
-  const NAV_LINKS = [
-    { label: tr.common.nav.home, href: base || '/' },
-    { label: tr.common.nav.blog, href: `${base}/blog` },
-    { label: tr.common.nav.vacancy, href: `${base}/vacancy` },
-    { label: tr.common.nav.contact, href: `${base}/contact` },
-  ]
-
+  // Plain links (no dropdown)
+  const HOME_LINK = { label: tr.common.nav.home, href: base || '/' }
+  const BLOG_LINK = { label: tr.common.nav.blog, href: `${base}/blog` }
+  const VAC_LINK = { label: tr.common.nav.vacancy, href: `${base}/vacancy` }
+  const CONT_LINK = { label: tr.common.nav.contact, href: `${base}/contact` }
   const FEESTZAAL_LINK = { label: 'Feestzaal', href: `${base}/feestzaal-den-haag` }
 
   const cateringLinks = locale === 'nl'
@@ -91,6 +89,7 @@ export default function Header({ locale }: { locale: Locale }) {
       { label: 'Indian Buffet Den Haag', href: `${base}/indian-buffet-den-haag` },
     ]
 
+  // Ordered: Menu → Catering → Our Dishes → Near You
   const DROPDOWNS = [
     {
       key: 'menu',
@@ -102,6 +101,11 @@ export default function Header({ locale }: { locale: Locale }) {
         { label: 'Vegetarian Menu', href: `${base}/vegetarian-menu` },
         { label: 'Gluten-Free Menu', href: `${base}/gluten-free-menu` },
       ],
+    },
+    {
+      key: 'catering',
+      label: tr.common.nav.catering,
+      links: cateringLinks,
     },
     {
       key: 'dishes',
@@ -130,11 +134,6 @@ export default function Header({ locale }: { locale: Locale }) {
         { label: 'Near Peace Palace', href: `${base}/indian-restaurant-near-peace-palace-den-haag` },
         { label: 'Near Den Haag Centraal', href: `${base}/indian-restaurant-near-den-haag-centraal` },
       ],
-    },
-    {
-      key: 'catering',
-      label: tr.common.nav.catering,
-      links: cateringLinks,
     },
   ]
 
@@ -170,10 +169,9 @@ export default function Header({ locale }: { locale: Locale }) {
       {/* ─── Fixed Header Bar ─── */}
       <header
         className={cn(
-          'fixed top-9 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-sm border-b border-white/[0.08]',
+          'fixed top-9 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-sm border-b border-white/[0.08] bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]',
           scrolled ? 'h-14 shadow-lg shadow-black/20' : 'h-16'
         )}
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000FF 100%)' }}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between gap-4">
 
@@ -189,168 +187,93 @@ export default function Header({ locale }: { locale: Locale }) {
             />
           </Link>
 
-          {/* GROUP 2  -  Nav (lg+) */}
+          {/* GROUP 2  -  Nav (lg+)
+              Order: Home | Menu↓ | Feestzaal | Catering↓ | Our Dishes↓ | Near You↓ | Blog | Vacancy | Contact
+          */}
           <nav className="hidden lg:flex items-center gap-1 flex-shrink-0">
-            {/* Home */}
-            {NAV_LINKS.slice(0, 1).map(({ label, href }) => {
-              const isActive = pathname === href
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={cn(
-                    'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                    isActive
-                      ? 'text-white bg-white/10'
-                      : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
-                  )}
-                >
-                  {label}
-                </Link>
-              )
-            })}
 
-            {/* Menu dropdown - immediately after Home */}
-            {DROPDOWNS.slice(0, 1).map(({ key, label, links }) => {
+            {/* 1. Home */}
+            {[HOME_LINK].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                  pathname === href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+
+            {/* 2–5. Dropdowns: Menu, Feestzaal (plain), Catering, Our Dishes, Near You */}
+            {DROPDOWNS.map(({ key, label, links }, idx) => {
               const isActive = links.some((l) => pathname.startsWith(l.href))
               const isOpen = openDropdown === key
               return (
-                <div
-                  key={key}
-                  className="relative"
-                  onMouseEnter={() => handleMouseEnter(key)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <button
-                    aria-expanded={isOpen}
-                    className={cn(
-                      'flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                      isActive
-                        ? 'text-white bg-white/10'
-                        : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
-                    )}
-                  >
-                    {label}
-                    <ChevronDown
+                <>
+                  {/* Insert Feestzaal between Menu (idx=0) and Catering (idx=1) */}
+                  {idx === 1 && (
+                    <Link
+                      key="feestzaal"
+                      href={FEESTZAAL_LINK.href}
                       className={cn(
-                        'w-3.5 h-3.5 text-white/50 transition-transform duration-200',
-                        isOpen && 'rotate-180'
+                        'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                        pathname === FEESTZAAL_LINK.href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
                       )}
-                    />
-                  </button>
-
-                  {/* Always rendered  -  visibility controlled by opacity/pointer-events for CSS transitions */}
-                  <div
-                    className={cn(
-                      'absolute top-full left-0 mt-0 pt-2 min-w-[200px] z-50 transition-all duration-200',
-                      isOpen
-                        ? 'opacity-100 translate-y-0 pointer-events-auto visible'
-                        : 'opacity-0 -translate-y-1 pointer-events-none invisible'
-                    )}
-                  >
-                    {/* Invisible bridge - prevents gap between trigger and panel from firing onMouseLeave */}
-                    <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
-                    <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
-                      {links.map(({ label: linkLabel, href: linkHref }) => (
-                        <Link
-                          key={linkHref}
-                          href={linkHref}
-                          className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
-                        >
-                          {linkLabel}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-
-            {/* Blog, Vacancy, Contact */}
-            {NAV_LINKS.slice(1).map(({ label, href }) => {
-              const isActive = pathname === href
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={cn(
-                    'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                    isActive
-                      ? 'text-white bg-white/10'
-                      : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
+                    >
+                      {FEESTZAAL_LINK.label}
+                    </Link>
                   )}
-                >
-                  {label}
-                </Link>
-              )
-            })}
-
-            {/* Feestzaal - Standalone top-level link */}
-            <Link
-              href={FEESTZAAL_LINK.href}
-              className={cn(
-                'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                pathname === FEESTZAAL_LINK.href
-                  ? 'text-white bg-white/10'
-                  : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
-              )}
-            >
-              {FEESTZAAL_LINK.label}
-            </Link>
-
-            {/* Our Dishes, Near You, Catering */}
-            {DROPDOWNS.slice(1).map(({ key, label, links }) => {
-              const isActive = links.some((l) => pathname.startsWith(l.href))
-              const isOpen = openDropdown === key
-              return (
-                <div
-                  key={key}
-                  className="relative"
-                  onMouseEnter={() => handleMouseEnter(key)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <button
-                    aria-expanded={isOpen}
-                    className={cn(
-                      'flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                      isActive
-                        ? 'text-white bg-white/10'
-                        : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
-                    )}
-                  >
-                    {label}
-                    <ChevronDown
-                      className={cn(
-                        'w-3.5 h-3.5 text-white/50 transition-transform duration-200',
-                        isOpen && 'rotate-180'
-                      )}
-                    />
-                  </button>
-
                   <div
-                    className={cn(
-                      'absolute top-full left-0 mt-0 pt-2 min-w-[200px] z-50 transition-all duration-200',
-                      isOpen
-                        ? 'opacity-100 translate-y-0 pointer-events-auto visible'
-                        : 'opacity-0 -translate-y-1 pointer-events-none invisible'
-                    )}
+                    key={key}
+                    className="relative"
+                    onMouseEnter={() => handleMouseEnter(key)}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
-                    <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
-                      {links.map(({ label: linkLabel, href: linkHref }) => (
-                        <Link
-                          key={linkHref}
-                          href={linkHref}
-                          className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap"
-                        >
-                          {linkLabel}
-                        </Link>
-                      ))}
+                    <button
+                      aria-expanded={isOpen}
+                      className={cn(
+                        'flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                        isActive ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
+                      )}
+                    >
+                      {label}
+                      <ChevronDown className={cn('w-3.5 h-3.5 text-white/50 transition-transform duration-200', isOpen && 'rotate-180')} />
+                    </button>
+                    <div
+                      className={cn(
+                        'absolute top-full left-0 mt-0 pt-2 min-w-[200px] z-50 transition-all duration-200',
+                        isOpen ? 'opacity-100 translate-y-0 pointer-events-auto visible' : 'opacity-0 -translate-y-1 pointer-events-none invisible'
+                      )}
+                    >
+                      <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
+                      <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
+                        {links.map(({ label: ll, href: lh }) => (
+                          <Link key={lh} href={lh} className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap">
+                            {ll}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               )
             })}
+
+            {/* 6–8. Blog | Vacancy | Contact */}
+            {[BLOG_LINK, VAC_LINK, CONT_LINK].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                  pathname === href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
 
           {/* GROUP 3  -  Right actions */}
@@ -377,7 +300,7 @@ export default function Header({ locale }: { locale: Locale }) {
             >
               <ShoppingCart className="w-5 h-5 text-white/70 hover:text-white transition-colors duration-150" />
               {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#D4AF37] text-[#1A1A1A] rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>
               )}
@@ -386,7 +309,7 @@ export default function Header({ locale }: { locale: Locale }) {
             {/* Reserve a Table  -  desktop */}
             <Link
               href={`${base}/contact`}
-              className="hidden lg:inline-flex items-center bg-[#D4AF37] text-[#1A1A1A] px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-[#F5D36A] transition-all duration-200 whitespace-nowrap"
+              className="hidden lg:inline-flex items-center bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:scale-[1.05] transition-all border border-gray  duration-200 whitespace-nowrap"
             >
               {tr.common.reserve}
             </Link>
@@ -399,7 +322,7 @@ export default function Header({ locale }: { locale: Locale }) {
             >
               <ShoppingCart className="w-5 h-5 text-white/70" />
               {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#D4AF37] text-[#1A1A1A] rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>
               )}
@@ -455,94 +378,72 @@ export default function Header({ locale }: { locale: Locale }) {
           </button>
         </div>
 
-        {/* Scrollable nav list */}
+        {/* Scrollable nav list — order: Home | Menu | Feestzaal | Catering | Our Dishes | Near You | Blog | Vacancy | Contact */}
         <div className="flex-1 overflow-y-auto px-4 py-4">
-          {/* Home */}
-          {NAV_LINKS.slice(0, 1).map(({ label, href }) => {
-            const isActive = pathname === href
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMobileOpen(false)}
-                className={cn(
-                  'block px-4 py-3 text-base font-medium rounded-xl transition-all duration-150 border-b border-white/5',
-                  isActive ? 'text-[#D4AF37]' : 'text-white hover:bg-white/[0.08]'
-                )}
-              >
-                {label}
-              </Link>
-            )
-          })}
 
-          {/* Menu dropdown - immediately after Home */}
-          {DROPDOWNS.slice(0, 1).map(({ key, label: groupLabel, links }) => (
+          {/* 1. Home */}
+          <Link
+            href={HOME_LINK.href}
+            onClick={() => setMobileOpen(false)}
+            className={cn(
+              'block px-4 py-3 text-base font-medium rounded-xl transition-all duration-150 border-b border-white/5',
+              pathname === HOME_LINK.href ? 'text-white' : 'text-white hover:bg-white/[0.08]'
+            )}
+          >
+            {HOME_LINK.label}
+          </Link>
+
+          {/* 2. Menu dropdown */}
+          {DROPDOWNS.filter(d => d.key === 'menu').map(({ key, label: groupLabel, links }) => (
             <div key={key} className="mt-1">
-              <p className="px-4 pt-5 pb-2 text-[#D4AF37] text-xs uppercase tracking-widest font-medium">
-                {groupLabel}
-              </p>
-              {links.map(({ label: linkLabel, href: linkHref }) => (
-                <Link
-                  key={linkHref}
-                  href={linkHref}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150"
-                >
-                  {linkLabel}
+              <p className="px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium">{groupLabel}</p>
+              {links.map(({ label: ll, href: lh }) => (
+                <Link key={lh} href={lh} onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150">
+                  {ll}
                 </Link>
               ))}
             </div>
           ))}
 
-          {/* Blog, Vacancy, Contact */}
-          {NAV_LINKS.slice(1).map(({ label, href }) => {
-            const isActive = pathname === href
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMobileOpen(false)}
-                className={cn(
-                  'block px-4 py-3 text-base font-medium rounded-xl transition-all duration-150 border-b border-white/5',
-                  isActive ? 'text-[#D4AF37]' : 'text-white hover:bg-white/[0.08]'
-                )}
-              >
-                {label}
-              </Link>
-            )
-          })}
-
-          {/* Feestzaal - Standalone top-level link */}
+          {/* 3. Feestzaal */}
           <Link
             href={FEESTZAAL_LINK.href}
             onClick={() => setMobileOpen(false)}
             className={cn(
               'block px-4 py-3 text-base font-medium rounded-xl transition-all duration-150 border-b border-white/5',
-              pathname === FEESTZAAL_LINK.href
-                ? 'text-[#D4AF37]'
-                : 'text-white hover:bg-white/[0.08]'
+              pathname === FEESTZAAL_LINK.href ? 'text-white' : 'text-white hover:bg-white/[0.08]'
             )}
           >
             {FEESTZAAL_LINK.label}
           </Link>
 
-          {/* Our Dishes, Near You, Catering */}
-          {DROPDOWNS.slice(1).map(({ key, label: groupLabel, links }) => (
+          {/* 4. Catering | 5. Our Dishes | 6. Near You (dropdowns) */}
+          {DROPDOWNS.filter(d => d.key !== 'menu').map(({ key, label: groupLabel, links }) => (
             <div key={key} className="mt-1">
-              <p className="px-4 pt-5 pb-2 text-[#D4AF37] text-xs uppercase tracking-widest font-medium">
-                {groupLabel}
-              </p>
-              {links.map(({ label: linkLabel, href: linkHref }) => (
-                <Link
-                  key={linkHref}
-                  href={linkHref}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150"
-                >
-                  {linkLabel}
+              <p className="px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium">{groupLabel}</p>
+              {links.map(({ label: ll, href: lh }) => (
+                <Link key={lh} href={lh} onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150">
+                  {ll}
                 </Link>
               ))}
             </div>
+          ))}
+
+          {/* 7. Blog | 8. Vacancy | 9. Contact */}
+          {[BLOG_LINK, VAC_LINK, CONT_LINK].map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMobileOpen(false)}
+              className={cn(
+                'block px-4 py-3 text-base font-medium rounded-xl transition-all duration-150 border-b border-white/5',
+                pathname === href ? 'text-white' : 'text-white hover:bg-white/[0.08]'
+              )}
+            >
+              {label}
+            </Link>
           ))}
         </div>
 
@@ -558,7 +459,7 @@ export default function Header({ locale }: { locale: Locale }) {
           <Link
             href={`${base}/contact`}
             onClick={() => setMobileOpen(false)}
-            className="block w-full bg-[#D4AF37] text-[#1A1A1A] py-3 rounded-xl text-sm font-semibold text-center hover:bg-[#F5D36A] transition-all duration-150"
+            className="block w-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white py-3 rounded-xl text-sm font-semibold text-center hover:scale-[1.05] transition-all duration-150"
           >
             {tr.common.reserve}
           </Link>

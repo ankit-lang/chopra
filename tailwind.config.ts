@@ -18,7 +18,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        heading: ['var(--font-playfair)', 'var(--font-source-serif)', 'Georgia', 'serif'],
         vibes: ['var(--font-great-vibes)', 'cursive'],
         body: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },

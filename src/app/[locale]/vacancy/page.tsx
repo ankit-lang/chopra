@@ -185,13 +185,13 @@ export default function LocaleVacancyPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • JOIN OUR TEAM · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1
-            className="font-heading text-4xl md:text-6xl text-white font-bold leading-tight"
+          <h1 
+            className="font-heading text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-bold leading-tight"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
           >
             {tr.vacancy.heroH1}
@@ -210,30 +210,30 @@ export default function LocaleVacancyPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           {isNl ? (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 Het best beoordeelde Indiase restaurant van Den Haag groeit
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Chopras Indian Restaurant opende op Leyweg in 2023 en verdiende een{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   4,9 sterrenbeoordeling van meer dan 800 Google reviews
                 </Link>{' '}
                 sneller dan enig ander Indiaas restaurant in Den Haag. Die beoordeling wordt niet gedragen door één goede week. Het is opgebouwd dienst na dienst door een team dat opkomt, het eten serieus neemt en gasten behandelt zoals zij behandeld willen worden. Als dat uw manier van werken is, hoort u hier.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 De keukenstandaard bij Chopras is specifiek. Hele specerijen worden rechtstreeks uit India betrokken en elke ochtend vers gemalen voordat de eerste bestelling binnenkomt. De{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   tandoor kleioven op Leyweg 986
                 </Link>{' '}
                 bereikt 400 graden Celsius. Dit is geen verkooppraatje. Het is de reden waarom een Chopras naan kooltjes aan de rand heeft en de chicken tikka een korstje heeft dat geen gewone oven kan geven. Koks die om dit verschil geven, zullen merken dat Chopras voor hen gebouwd is.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Chopras groeit verder dan het restaurant zelf. De{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   privézaal op Leyweg
                 </Link>{' '}
                 biedt ruimte voor 25 tot 80 gasten voor diners en recepties. Het{' '}
-                <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   cateringteam
                 </Link>{' '}
                 bedient evenementen in Den Haag, Rijswijk, Delft en Zoetermeer. Nieuwe functies ontstaan naarmate de activiteiten uitbreiden, en de mensen die nu meedoen zijn degenen die als eerste doorgroeien.
@@ -241,30 +241,30 @@ export default function LocaleVacancyPage({ params }: Props) {
             </>
           ) : (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 Den Haag&apos;s strongly rated Indian restaurant is growing
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Chopras Indian Restaurant opened on Leyweg in 2023 and earned{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   4.9 stars from 800+ Google reviews
                 </Link>{' '}
                 faster than any other Indian restaurant in Den Haag. That rating is not held up by one good week. It is built service by service by a team that shows up, takes the food seriously, and treats guests the way they want to be treated. If that is how you work, you belong here.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 The kitchen standard at Chopras is specific. Whole spices are sourced directly from India and ground fresh every morning before the first order is placed. The{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   tandoor clay oven at Leyweg 986
                 </Link>{' '}
                 reaches 400 degrees Celsius. This is not a talking point. It is the reason a Chopras naan has char on the edges and the chicken tikka has a crust no conventional oven can give it. Chefs who care about this difference will find Chopras is built for them.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Chopras is growing beyond the restaurant itself. The{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   private event hall at Leyweg
                 </Link>{' '}
                 handles private dinners and receptions for 25 to 80 guests. The{' '}
-                <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   catering team
                 </Link>{' '}
                 serves events across Den Haag, Rijswijk, Delft, and Zoetermeer. New positions are opening as the operation expands, and the people who join now are the ones who will advance first.
@@ -279,19 +279,19 @@ export default function LocaleVacancyPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           {isNl ? (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 Hoe werken bij Chopras er echt uitziet
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Werken bij Chopras Indian Restaurant is geen script-volgend werk. Het is deel uitmaken van een keuken- en bedieningsteam dat oprecht geeft om het eten goed te krijgen, gasten welkom te laten voelen en elkaar te steunen op een drukke zaterdagavond. Ons{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   menu van 143 gerechten
                 </Link>{' '}
                 omvat Noord-Indiase curry, tandoori en Indiaas streetfood dat echte vakkennis en zorg vereist. Dat is de standaard die wij hanteren, elke dienst.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Wij zijn geopend in 2023 en groeien, wat betekent echte kansen voor mensen die met ons willen groeien. Onze koks leren elke dag technieken en geven die door. Ons bedieningsteam kent stammegasten binnen een paar weken bij naam. Onze{' '}
-                <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   cateringactiviteiten
                 </Link>{' '}
                 zijn uitgegroeid tot het bedienen van Den Haag, Rijswijk, Delft en Zoetermeer. Als u blijft, groeit u.
@@ -302,19 +302,19 @@ export default function LocaleVacancyPage({ params }: Props) {
             </>
           ) : (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 What working at Chopras actually looks like
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Working at Chopras Indian Restaurant is not a script-following exercise. It is being part of a kitchen and front-of-house team that genuinely cares about getting the food right, about making guests feel welcome, and about having each other&apos;s backs on a busy Saturday night. Our{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   menu of 143 dishes
                 </Link>{' '}
                 spans North Indian curries, tandoori and Indian street food that requires real skill and care. That is the standard we hold ourselves to, every service.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 We opened in 2023 and we are growing, which means real opportunities for people who want to grow with us. Our chefs are learning and passing on techniques every day. Our front-of-house team know regulars by name within a few weeks. Our{' '}
-                <Link href={`${base}/catering`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   catering operation
                 </Link>{' '}
                 has expanded to serve Den Haag, Rijswijk, Delft, and Zoetermeer. If you stay, you grow.
@@ -330,7 +330,7 @@ export default function LocaleVacancyPage({ params }: Props) {
       {/* Vacancies */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3] text-center">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
             {tr.vacancy.vacanciesH2}
           </h2>
           <div className="space-y-8 mt-10">
@@ -341,7 +341,7 @@ export default function LocaleVacancyPage({ params }: Props) {
                     {v.badge}
                   </span>
                 </div>
-                <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-2 leading-[1.3]">{v.title}</h3>
+                <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-2 leading-[1.3]">{v.title}</h3>
                 <p className="text-gray-500 text-sm mb-4">{v.schedule}</p>
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-6">{v.desc}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -352,7 +352,7 @@ export default function LocaleVacancyPage({ params }: Props) {
                     <ul className="space-y-1.5">
                       {v.reqs.map((req) => (
                         <li key={req} className="flex items-start gap-2 text-gray-600 text-sm">
-                          <span className="text-[#D4AF37] mt-0.5">✓</span>
+                          <span className="text-white mt-0.5">✓</span>
                           {req}
                         </li>
                       ))}
@@ -365,7 +365,7 @@ export default function LocaleVacancyPage({ params }: Props) {
                     <ul className="space-y-1.5">
                       {v.bens.map((ben) => (
                         <li key={ben} className="flex items-start gap-2 text-gray-600 text-sm">
-                          <span className="text-[#D4AF37] mt-0.5">✓</span>
+                          <span className="text-white mt-0.5">✓</span>
                           {ben}
                         </li>
                       ))}
@@ -383,16 +383,16 @@ export default function LocaleVacancyPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           {isNl ? (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 Is Chopras Indian Restaurant in Den Haag op zoek naar personeel?
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is actief op zoek naar koks, bedieningsmedewerkers en cateringassistenten. Het restaurant heeft een 4,9 sterrenbeoordeling van meer dan 800 Google reviews en is geopend in 2023. De openingstijden zijn dinsdag tot en met zondag van 16:30 tot 22:30. Bekijk ons{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   volledig menu van 143 gerechten op Leyweg 986
                 </Link>{' '}
                 of neem contact op via{' '}
-                <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Chopras Indian Restaurant Den Haag
                 </Link>{' '}
                 om te solliciteren of meer te weten te komen.
@@ -400,16 +400,16 @@ export default function LocaleVacancyPage({ params }: Props) {
             </>
           ) : (
             <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
                 Is Chopras Indian Restaurant in Den Haag hiring?
               </h2>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag, is actively hiring kitchen chefs, front-of-house staff, and event catering assistants. Rated 4.9 stars from 800+ Google reviews since opening in 2023, Chopras runs service Tuesday to Sunday from 16:30 to 22:30. Browse our{' '}
-                <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   full menu of 143 dishes at Leyweg 986
                 </Link>{' '}
                 or visit{' '}
-                <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   Chopras Indian Restaurant Den Haag
                 </Link>{' '}
                 to apply or learn more about open positions.
@@ -422,7 +422,7 @@ export default function LocaleVacancyPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3] text-center">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
             {isNl ? 'Veelgestelde vragen over werken bij Chopras' : 'Frequently Asked Questions About Working at Chopras'}
           </h2>
           <div className="mt-8">
@@ -434,7 +434,7 @@ export default function LocaleVacancyPage({ params }: Props) {
       {/* Application Form */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3] text-center">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
             {tr.vacancy.applyH2}
           </h2>
           <VacancyForm />

@@ -119,13 +119,13 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • NEAR YOU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1
-            className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+          <h1 
+            className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
           >
             {isNl
@@ -143,13 +143,13 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -160,7 +160,7 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* From Rijswijk to Leyweg */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Van Rijswijk naar Leyweg' : 'From Rijswijk to Leyweg'}
           </h2>
           <div className="space-y-5 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -168,13 +168,13 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
               <>
                 <p>Rijswijk en Den Haag delen een grens zonder zichtbare scheiding. De gemeentegrens loopt door woonwijken, winkelgebieden en parken - wat betekent dat de meeste Rijswijkse bewoners dichter bij Leyweg wonen dan bij het centrum van Den Haag. <strong>Chopras Indian Restaurant</strong> op Leyweg 986 is minder dan 5 minuten rijden van centraal Rijswijk.</p>
                 <p>Per openbaar vervoer verbinden tram- en busverbindingen centraal Rijswijk rechtstreeks met het Leyweg-gebied, zonder overstap. De reistijd is doorgaans minder dan 10 minuten. Betaald parkeren is beschikbaar in de omgeving van Leyweg voor gasten die met de auto komen.</p>
-                <p>Rijswijk heeft de grootste concentratie Hindoestaanse inwoners van Nederland. Families die zijn opgegroeid met echte Noord-Indiaase keuken - niet de restaurantversie, maar de keuken van thuis. Ze weten wat <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">dal makhani</Link> ruikt als de linzen een nacht hebben gesudderd, wat verse komijn doet wanneer hij een hete pan raakt, en wat een <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link> hoort te zijn. Chopras is gebouwd voor precies dit publiek.</p>
+                <p>Rijswijk heeft de grootste concentratie Hindoestaanse inwoners van Nederland. Families die zijn opgegroeid met echte Noord-Indiaase keuken - niet de restaurantversie, maar de keuken van thuis. Ze weten wat <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">dal makhani</Link> ruikt als de linzen een nacht hebben gesudderd, wat verse komijn doet wanneer hij een hete pan raakt, en wat een <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link> hoort te zijn. Chopras is gebouwd voor precies dit publiek.</p>
               </>
             ) : (
               <>
                 <p>Rijswijk and Den Haag share a border without a visible boundary. The municipal line runs through residential streets, shopping areas, and parks - which means most Rijswijk residents live closer to Leyweg than to Den Haag city centre. <strong>Chopras Indian Restaurant</strong> at Leyweg 986 is less than 5 minutes by car from central Rijswijk.</p>
                 <p>By public transport, tram and bus connections link central Rijswijk to the Leyweg area directly with no changes required. The journey takes under 10 minutes from most parts of Rijswijk. Paid parking is available in the Leyweg area for guests arriving by car.</p>
-                <p>Rijswijk has the largest concentration of Hindustani residents in the Netherlands. Families who grew up with real North Indian cooking - not the restaurant version, but the home kitchen. They know what <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">dal makhani</Link> smells like when the lentils have cooked overnight, what fresh cumin does when it hits a hot pan, and what a <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">biryani</Link> is supposed to be. Chopras was built for exactly this audience.</p>
+                <p>Rijswijk has the largest concentration of Hindustani residents in the Netherlands. Families who grew up with real North Indian cooking - not the restaurant version, but the home kitchen. They know what <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">dal makhani</Link> smells like when the lentils have cooked overnight, what fresh cumin does when it hits a hot pan, and what a <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link> is supposed to be. Chopras was built for exactly this audience.</p>
               </>
             )}
           </div>
@@ -184,23 +184,23 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* What Rijswijk Knows About Indian Food */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Wat Rijswijk Weet Over Indiaas Eten' : 'What Rijswijk Knows About Indian Food'}
           </h2>
           <div className="space-y-5 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             {isNl ? (
               <>
-                <p>De Hindoestaanse gemeenschap in Rijswijk heeft generaties lang met Noord-Indiaas koken geleefd. Dat schept een andere maatstaf. Wanneer een familie uit Rijswijk aanschuift bij Chopras en <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">butter chicken</Link> bestelt, ontdekt men geen nieuwe keuken - men trekt een vergelijking. De vraag is altijd dezelfde: smaakt dit zoals het gemaakt hoort te worden?</p>
+                <p>De Hindoestaanse gemeenschap in Rijswijk heeft generaties lang met Noord-Indiaas koken geleefd. Dat schept een andere maatstaf. Wanneer een familie uit Rijswijk aanschuift bij Chopras en <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken</Link> bestelt, ontdekt men geen nieuwe keuken - men trekt een vergelijking. De vraag is altijd dezelfde: smaakt dit zoals het gemaakt hoort te worden?</p>
                 <p>Het antwoord zit in de specerijen. Bij Chopras worden hele specerijen rechtstreeks uit India betrokken en elke ochtend vers gemalen voordat de keuken opengaat. De aromatische olien in komijn, kardemom en koriander beginnen binnen uren na het malen te verdampen. Kant-en-klare mengsels van leveranciers kunnen niet repliceren wat er gebeurt als specerijen zo vers zijn. Geen marketingclaim - het is de chemie van wat eten levend laat smaken in plaats van plat.</p>
-                <p>De tandoor op Leyweg 986 bereikt 400 graden Celsius. Die temperatuur is niet regelbaar - het is wat <Link href={`${base}/naan-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">naan</Link> zijn kooltjes aan de randen geeft en chicken tikka zijn rokerige korst. Geen gewone oven kan dit repliceren. Wanneer families uit Rijswijk <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori</Link> bestellen bij Chopras, ontvangen zij de versie bereid op de temperatuur waarvoor het gerecht ontworpen is.</p>
-                <p>Chopras is ook een van de weinige restaurants in Den Haag dat authentiek <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Indo-Chinees eten</Link> serveert naast een volledig Noord-Indiaas menu. Chilli chicken, chilli paneer, Hakka noodles - een keukencategorie die moeilijk te vinden is in Den Haag.</p>
+                <p>De tandoor op Leyweg 986 bereikt 400 graden Celsius. Die temperatuur is niet regelbaar - het is wat <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan</Link> zijn kooltjes aan de randen geeft en chicken tikka zijn rokerige korst. Geen gewone oven kan dit repliceren. Wanneer families uit Rijswijk <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori</Link> bestellen bij Chopras, ontvangen zij de versie bereid op de temperatuur waarvoor het gerecht ontworpen is.</p>
+                <p>Chopras is ook een van de weinige restaurants in Den Haag dat authentiek <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indo-Chinees eten</Link> serveert naast een volledig Noord-Indiaas menu. Chilli chicken, chilli paneer, Hakka noodles - een keukencategorie die moeilijk te vinden is in Den Haag.</p>
               </>
             ) : (
               <>
-                <p>The Hindustani community in Rijswijk has lived with North Indian cooking for generations. That history creates a different standard. When a family from Rijswijk sits down at Chopras and orders <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">butter chicken</Link>, they are not discovering a new cuisine - they are making a comparison. The question is always the same: does this taste like it was made properly?</p>
+                <p>The Hindustani community in Rijswijk has lived with North Indian cooking for generations. That history creates a different standard. When a family from Rijswijk sits down at Chopras and orders <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken</Link>, they are not discovering a new cuisine - they are making a comparison. The question is always the same: does this taste like it was made properly?</p>
                 <p>The answer is in the spices. At Chopras, whole spices are sourced directly from India and ground fresh every morning before the kitchen opens. The aromatic oils in cumin, cardamom, and coriander start evaporating within hours of grinding. Pre-mixed blends from suppliers cannot replicate what happens when spices are this fresh. Not a marketing claim - it is the chemistry of what makes food taste alive rather than flat.</p>
-                <p>The tandoor at Leyweg 986 reaches 400 degrees Celsius. That temperature is not adjustable - it is what gives <Link href={`${base}/naan-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">naan</Link> its char on the edges and chicken tikka its smoky crust. No conventional oven can replicate this. When Rijswijk families order <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">tandoori</Link> at Chopras, they get the version cooked at the temperature it was designed for.</p>
-                <p>Chopras also serves authentic <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Indo Chinese food</Link> in Den Haag alongside a full North Indian menu. Chilli chicken, chilli paneer, Hakka noodles - a cuisine category that is hard to find elsewhere in The Hague.</p>
+                <p>The tandoor at Leyweg 986 reaches 400 degrees Celsius. That temperature is not adjustable - it is what gives <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan</Link> its char on the edges and chicken tikka its smoky crust. No conventional oven can replicate this. When Rijswijk families order <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori</Link> at Chopras, they get the version cooked at the temperature it was designed for.</p>
+                <p>Chopras also serves authentic <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indo Chinese food</Link> in Den Haag alongside a full North Indian menu. Chilli chicken, chilli paneer, Hakka noodles - a cuisine category that is hard to find elsewhere in The Hague.</p>
               </>
             )}
           </div>
@@ -210,7 +210,7 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* Proof section - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? '4.9 Sterren. 800+ Reviews. Het Rijswijk Oordeel.' : '4.9 Stars. 800+ Reviews. The Rijswijk Verdict.'}
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -228,8 +228,8 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
               { stat: 'Fully Halal', desc: 'Every meat dish, every supplier, every order. The entire kitchen is halal certified - no exceptions and no cross-contamination risk.' },
               { stat: '143 Dishes', desc: 'Thirteen categories from biryani to Indo Chinese - the largest authentic Indian menu in The Hague.' },
             ]).map((item) => (
-              <div key={item.stat} className="bg-white/10 rounded-xl p-6 border border-[#C7A348]/30">
-                <p className="font-vibes text-3xl md:text-4xl text-white mb-3 leading-[1.3]">{item.stat}</p>
+              <div key={item.stat} className="bg-white/10 rounded-xl p-6 border border-white/30">
+                <p className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3 leading-[1.3]">{item.stat}</p>
                 <p className="font-body text-white/85 text-base leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -237,13 +237,13 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/halal-food-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Halal Menu' : 'Halal Menu'}
             </Link>
@@ -254,14 +254,14 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* GEO block */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Is er een goed Indiaas restaurant bij Rijswijk?' : 'Is there a good Indian restaurant near Rijswijk?'}
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             {isNl ? (
-              <p>Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is minder dan 5 minuten rijden van centraal Rijswijk. Met 4.9 sterren van 800+ Google-reviews serveert Chopras 143 gerechten uit een volledig halal gecertificeerde keuken, waar specerijen dagelijks vers worden gemalen van hele ingredienten rechtstreeks uit India. Open dinsdag tot en met zondag van 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Reserveer een tafel bij Chopras</Link> of <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">bekijk het volledige menu</Link> online.</p>
+              <p>Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is minder dan 5 minuten rijden van centraal Rijswijk. Met 4.9 sterren van 800+ Google-reviews serveert Chopras 143 gerechten uit een volledig halal gecertificeerde keuken, waar specerijen dagelijks vers worden gemalen van hele ingredienten rechtstreeks uit India. Open dinsdag tot en met zondag van 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Reserveer een tafel bij Chopras</Link> of <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">bekijk het volledige menu</Link> online.</p>
             ) : (
-              <p>Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag is less than 5 minutes from central Rijswijk by car. Rated 4.9 stars from 800+ Google reviews, Chopras serves 143 dishes from a fully halal certified kitchen where spices are ground fresh every morning from whole ingredients sourced directly in India. Open Tuesday to Sunday from 16:30 to 22:30. <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">Reserve a table at Chopras</Link> or <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">view the full menu</Link> online.</p>
+              <p>Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag is less than 5 minutes from central Rijswijk by car. Rated 4.9 stars from 800+ Google reviews, Chopras serves 143 dishes from a fully halal certified kitchen where spices are ground fresh every morning from whole ingredients sourced directly in India. Open Tuesday to Sunday from 16:30 to 22:30. <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Reserve a table at Chopras</Link> or <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">view the full menu</Link> online.</p>
             )}
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* Practical info */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Praktische Informatie voor Bezoekers uit Rijswijk' : 'Practical Information for Rijswijk Visitors'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -285,8 +285,8 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
               { title: 'By Tram', desc: 'Tram line 2 stops at Leyweg, a short walk from the entrance. Paid parking also available nearby.' },
               { title: 'Opening Hours', desc: 'Tuesday to Sunday: 16:30 to 22:30. Closed Monday.' },
             ]).map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border-l-4 border-[#D4AF37]">
-                <h3 className="font-vibes text-lg text-[#C7A348] mb-1">{item.title}</h3>
+              <div key={item.title} className="bg-white rounded-xl p-5 border-l-4 border-white">
+                <h3 className="font-vibes text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-1">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -294,13 +294,13 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -311,7 +311,7 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Veelgestelde Vragen' : 'Frequently Asked Questions'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
@@ -321,22 +321,22 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* Nearby areas */}
       <section className="bg-[#FFFAF5] py-12 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Ook Nabij Den Haag' : 'Also Serving These Areas Near Den Haag'}
           </h3>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/indian-restaurant-delft`}
-              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#D4AF37] transition-colors"
+              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-white transition-colors"
             >
-              <p className="font-vibes text-[#C7A348] font-bold">{isNl ? 'Indiaas Restaurant bij Delft' : 'Indian Restaurant Near Delft'}</p>
+              <p className="font-vibes text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-bold">{isNl ? 'Indiaas Restaurant bij Delft' : 'Indian Restaurant Near Delft'}</p>
               <p className="text-gray-600 text-sm mt-1">{isNl ? 'Chopras bedient ook Delft' : 'Chopras also serves Delft'}</p>
             </Link>
             <Link
               href={`${base}/indian-restaurant-zoetermeer`}
-              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-[#D4AF37] transition-colors"
+              className="flex-1 bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-white transition-colors"
             >
-              <p className="font-vibes text-[#C7A348] font-bold">{isNl ? 'Indiaas Restaurant bij Zoetermeer' : 'Indian Restaurant Near Zoetermeer'}</p>
+              <p className="font-vibes text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-bold">{isNl ? 'Indiaas Restaurant bij Zoetermeer' : 'Indian Restaurant Near Zoetermeer'}</p>
               <p className="text-gray-600 text-sm mt-1">{isNl ? 'Chopras bedient ook Zoetermeer' : 'Chopras also serves Zoetermeer'}</p>
             </Link>
           </div>
@@ -346,41 +346,41 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       {/* Internal links - dishes */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl ? 'Ontdek Populaire Gerechten' : 'Explore Popular Dishes'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Favoriete eerste keus voor Rijswijk-bezoekers' : 'Favourite first choice for Rijswijk visitors'}</p>
             </Link>
-            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
+            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Langzaam gestoofde linzen - de thuissmaak, alleen beter' : 'Slow-cooked lentils - the home taste, only better'}</p>
             </Link>
-            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Saffraanrijst en verse kruiden - de Rijswijkse klassieker' : 'Saffron rice and fresh spices - the Rijswijk classic'}</p>
             </Link>
-            <Link href={`${base}/catering`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Catering' : 'Catering'}</p>
+            <Link href={`${base}/catering`} className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Catering' : 'Catering'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas buffet voor bruiloften en evenementen' : 'Indian catering for weddings and events'}</p>
             </Link>
           </div>
           <div className="mt-8 text-center space-y-4">
             <p className="font-body text-[#1A1A1A]/70 text-base">
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                 {isNl ? 'Chopras Indian Restaurant - het beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - the best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="font-body text-[#1A1A1A]/70 text-base">
               {isNl ? (
                 <>
-                  Bekijk het <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">volledige menu</Link> of <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">maak een reservering voor Rijswijk</Link> bij Chopras Indian Restaurant Den Haag.
+                  Bekijk het <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige menu</Link> of <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">maak een reservering voor Rijswijk</Link> bij Chopras Indian Restaurant Den Haag.
                 </>
               ) : (
                 <>
-                  View the <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">full menu</Link> or <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">book a table from Rijswijk</Link> at Chopras Indian Restaurant Den Haag.
+                  View the <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full menu</Link> or <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">book a table from Rijswijk</Link> at Chopras Indian Restaurant Den Haag.
                 </>
               )}
             </p>

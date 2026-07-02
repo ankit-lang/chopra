@@ -93,12 +93,12 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Hero */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-6">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
+            <span className="text-white text-xs font-medium uppercase tracking-widest">
               • CATERING · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
             Zaal Huren Den Haag
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -107,13 +107,13 @@ export default function ZaalHurenPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Vrijblijvende Offerte Aanvragen
             </Link>
             <Link
               href={`${base}/feestzaal-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Feestzaal Bekijken
             </Link>
@@ -124,19 +124,19 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 1: Intro */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Zaal huren Den Haag zonder het gedoe
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
             U zoekt een zaal in Den Haag. Niet een anoniem zalencentrum met TL-licht en catering uit de magnetron. U wilt een ruimte die warm aanvoelt, waar uw gasten zich welkom voelen en waar het eten de avond draagt. Dat is precies waarom mensen <strong>feestzaal huren Den Haag met catering</strong> bij{' '}
-            <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+            <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
               Chopras Indian Restaurant
             </Link>
             .
           </p>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
             De privézaal op{' '}
-            <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+            <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
               Leyweg 986 in Den Haag
             </Link>{' '}
             biedt ruimte voor 25 tot 80 gasten. De indeling is flexibel: ronde tafels voor een diner, lange tafelrijen voor een receptie of een staande opstelling voor een borrel. U beslist. Wij regelen de inrichting, de bediening en het eten.
@@ -150,7 +150,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 2: Wat is inbegrepen */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Wat is er inbegrepen bij zaal huren met catering?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
@@ -158,7 +158,7 @@ export default function ZaalHurenPage({ params }: Props) {
           </p>
           <div className="space-y-10">
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Private ruimte voor uw gelegenheid
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -166,27 +166,27 @@ export default function ZaalHurenPage({ params }: Props) {
               </p>
             </div>
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Indiaas catering op maat
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Van{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   saffraan biryani
                 </Link>{' '}
                 en{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   tandoori gegrilde gerechten
                 </Link>{' '}
                 tot{' '}
-                <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   dal makhani
                 </Link>{' '}
                 en vers gebakken naan uit onze tandoor. U kiest het menu samen met ons. Wij bereiden het met dezelfde verse specerijen als in het restaurant. Uw gasten merken het verschil.
               </p>
             </div>
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Volledige bediening en opstelling
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -194,7 +194,7 @@ export default function ZaalHurenPage({ params }: Props) {
               </p>
             </div>
             <div>
-              <h3 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-4 leading-[1.3]">
+              <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
                 Betaald parkeren in de omgeving
               </h3>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -208,7 +208,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 3: Gelegenheden */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Voor welke gelegenheden kunt u een zaal reserveren?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
@@ -217,30 +217,30 @@ export default function ZaalHurenPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <Link
               href={`${base}/bruiloft-catering-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
               <p className="font-body text-[#1A1A1A]/70">Nikah-recepties, walima-diners en trouwfeesten voor 25 tot 80 gasten</p>
             </Link>
             <Link
               href={`${base}/indian-birthday-catering-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Verjaardag</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Verjaardag</p>
               <p className="font-body text-[#1A1A1A]/70">Verjaardagsdiners en feesten met authentiek Indiaas buffet of bediend diner</p>
             </Link>
             <Link
               href={`${base}/corporate-events-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Zakelijk</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Zakelijk</p>
               <p className="font-body text-[#1A1A1A]/70">Bedrijfsdiners, teamvieringen en zakelijke bijeenkomsten tot 80 gasten</p>
             </Link>
             <Link
               href={`${base}/diwali-dinner-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Diwali</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Diwali</p>
               <p className="font-body text-[#1A1A1A]/70">Diwali-diners en festiviteiten met een volledig Indiaas feestmenu</p>
             </Link>
           </div>
@@ -250,7 +250,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 4: Halal + proof - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Volledig halal gecertificeerd. Geen uitzonderingen.
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-4">
@@ -268,7 +268,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 5: Hoe werkt het */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Hoe werkt zaal huren met catering bij Chopras?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
@@ -276,19 +276,19 @@ export default function ZaalHurenPage({ params }: Props) {
           </p>
           <div className="space-y-8">
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 1
               </div>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 <strong>Neem contact op</strong> via ons{' '}
-                <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
                   contactformulier
                 </Link>{' '}
                 of bel ons op +31 6 30645930. Vertel ons de datum, het aantal gasten, de gewenste opstelling en eventuele dieetwensen.
               </p>
             </div>
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 2
               </div>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -296,7 +296,7 @@ export default function ZaalHurenPage({ params }: Props) {
               </p>
             </div>
             <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C7A348] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] flex items-center justify-center text-white font-semibold text-sm">
                 3
               </div>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -307,7 +307,7 @@ export default function ZaalHurenPage({ params }: Props) {
           <div className="mt-10">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               Vrijblijvende Offerte Aanvragen
             </Link>
@@ -318,16 +318,16 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 6: GEO Block */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Kan ik een zaal huren bij Chopras Indian Restaurant in Den Haag?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             Ja. Chopras Indian Restaurant op{' '}
-            <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+            <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
               Leyweg 986 in Den Haag
             </Link>{' '}
             biedt een private zaal voor 25 tot 80 gasten, inclusief volledig halal Indiaas catering op maat. De keuken is halal gecertificeerd en bereidt elke dag met vers gemalen specerijen rechtstreeks uit India. Beoordeeld met 4,9 sterren op Google van meer dan 800 gasten. Geschikt voor verjaardagen, bruiloften, bedrijfsdiners en andere evenementen. Bekijk onze{' '}
-            <Link href={`${base}/feestzaal-den-haag`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+            <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
               feestzaal in Den Haag
             </Link>{' '}
             of vraag direct een offerte aan. Open dinsdag tot en met zondag vanaf 16:30.
@@ -338,7 +338,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 7: FAQ */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Veelgestelde vragen over zaal huren in Den Haag
           </h2>
           <FaqAccordion faqs={faqs} locale={locale} />
@@ -348,12 +348,12 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 8: Populaire gerechten */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Populaire gerechten voor uw evenement
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
             Deze gerechten worden het vaakst gekozen bij zaal huren met catering in Den Haag. Bekijk de pagina van elk gerecht voor informatie over bereiding en herkomst. Bekijk ook ons{' '}
-            <Link href={`${base}/menu`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+            <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
               volledige Indiaas menu
             </Link>{' '}
             voor alle 143 gerechten verdeeld over 13 categorieen.
@@ -361,43 +361,43 @@ export default function ZaalHurenPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <Link
               href={`${base}/biryani-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
               <p className="font-body text-[#1A1A1A]/70">Saffraan basmatirijst met halal lam, kip of groenten in dum-stijl</p>
             </Link>
             <Link
               href={`${base}/tandoori-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
               <p className="font-body text-[#1A1A1A]/70">Gegrild bij 400 graden Celsius in onze tandoor kleioven</p>
             </Link>
             <Link
               href={`${base}/butter-chicken-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="font-body text-[#1A1A1A]/70">Halal kip in romige tomaten- en botersaus, dagelijks vers bereid</p>
             </Link>
             <Link
               href={`${base}/dal-makhani-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
             >
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
               <p className="font-body text-[#1A1A1A]/70">Zwarte linzen langzaam gegaard met boter en room</p>
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/catering`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               Alle Catering Opties
             </Link>
             <Link
               href={`${base}/evenementenruimte-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               Evenementenruimte Bekijken
             </Link>
@@ -408,7 +408,7 @@ export default function ZaalHurenPage({ params }: Props) {
       {/* Section 9: Final CTA - navy */}
       <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             Vraag vandaag uw vrijblijvende offerte aan
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
@@ -417,13 +417,13 @@ export default function ZaalHurenPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Offerte Aanvragen
             </Link>
             <Link
               href={`${base}/halal-menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Halal Menu Bekijken
             </Link>

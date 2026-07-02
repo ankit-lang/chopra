@@ -112,52 +112,62 @@ export default function BiryaniPage({ params }: Props) {
       <JsonLd data={getDishPageSchema(locale, 'Biryani Den Haag', 'Biryani Den Haag', 'Authentic halal biryani at Chopras Indian Restaurant Den Haag. Chicken, lamb and vegetable biryani with saffron basmati rice and whole spices at Leyweg 986.', 'Authentieke halal biryani bij Chopras Indian Restaurant Den Haag. Kip-, lams- en groentbiryani met saffraan basmatirijst en hele specerijen op Leyweg 986.')} />
 
       {/* HERO */}
-      <section className="bg-[#1B2B5E] py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#C7A348]/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-[#C7A348] text-xs font-medium uppercase tracking-widest">
-              • OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+      <section className="relative pt-32 pb-24 overflow-hidden bg-[#000066]">
+        {/* Abstract Background Elements */}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#0000B3]/20 rounded-full blur-[180px] pointer-events-none" />
+
+        <div className="relative max-w-5xl mx-auto px-6 text-center z-10">
+          <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md mb-8">
+            <span className="text-white/90 text-xs font-semibold uppercase tracking-[0.2em]">
+              • Our Signature Dishes •
             </span>
           </div>
-          <h1
-            className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
-          >
-            {isNl
-              ? 'Biryani in Den Haag - Dum Biryani bij Chopras Indian Restaurant'
-              : 'Biryani in Den Haag - Dum Biryani at Chopras Indian Restaurant'}
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1] font-bold">
+            Dum Biryani in <span className=" drop-shadow-[0_0_15px_rgba(0,0,255,0.5)]">Den Haag</span>
           </h1>
-          <p
-            className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto"
-            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
-          >
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-body font-light leading-relaxed mb-10">
             {isNl
-              ? 'Afgesloten. Langzaam gegaard op stoom. Echte saffraan. Kruiden elke ochtend vers gemalen. Halal gecertificeerd op Leyweg 986, Den Haag.'
-              : 'Sealed. Slow-cooked on steam. Real saffron. Spices ground every morning. Halal certified at Leyweg 986, Den Haag.'}
+              ? 'Afgesloten potten. Langzaam gegaard op stoom. Echte saffraan en kruiden die elke ochtend vers gemalen worden. Volledig halal gecertificeerd.'
+              : 'Sealed pots. Slow-cooked on steam. Real saffron and spices ground fresh every morning. Fully halal certified.'}
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href={`${base}/menu`}
+              className="px-8 py-4   rounded-full font-semibold uppercase tracking-widest text-sm bg-white text-[#000066] transition-all duration-300 shadow-[0_0_20px_rgba(0,0,255,0.4)]"
+            >
+              {tr.common.viewMenu}
+            </Link>
+            <Link
+              href={`${base}/contact`}
+              className="px-8 py-4  border border-white/30 text-black rounded-full font-semibold uppercase tracking-widest text-sm bg-white transition-all duration-300"
+            >
+              {tr.common.reserve}
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* SECTION 1: What Dum Biryani Actually Is */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl ? 'Wat Echte Dum Biryani Is' : 'What Real Dum Biryani Actually Is'}
           </h2>
           <div className="prose prose-lg max-w-none text-[#1A1A1A] space-y-5">
             {isNl ? (
               <>
                 <p>Het woord &ldquo;dum&rdquo; komt uit het Perzisch en betekent &ldquo;adem&rdquo; of &ldquo;langzame stoom.&rdquo; Dum biryani is geen variëteit van rijstgerecht. Het is een methode. De pot wordt afgesloten. De stoom kan niet ontsnappen. Wat er in die afgesloten pot circuleert, is wat biryani tot biryani maakt en niet tot een rijstpilaf.</p>
-                <p>De meeste mensen die in Nederland een teleurstellende biryani hebben gegeten, hebben rijst gegeten die apart werd gekookt en daarna bij een currysaus werd gevoegd. Dat is geen biryani. Dat is rijst en curry samen geserveerd in één schaal, gepresenteerd alsof het het echte werk is. De korrels zijn niet gelaagd. De stoom heeft zijn werk niet gedaan. De saffraan, als die al wordt gebruikt, is zo gelijkmatig door het gerecht verdeeld dat het net zo goed <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">voedingskleurstof</Link> had kunnen zijn.</p>
+                <p>De meeste mensen die in Nederland een teleurstellende biryani hebben gegeten, hebben rijst gegeten die apart werd gekookt en daarna bij een currysaus werd gevoegd. Dat is geen biryani. Dat is rijst en curry samen geserveerd in één schaal, gepresenteerd alsof het het echte werk is. De korrels zijn niet gelaagd. De stoom heeft zijn werk niet gedaan. De saffraan, als die al wordt gebruikt, is zo gelijkmatig door het gerecht verdeeld dat het net zo goed <Link href={`${base}/halal-food-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">voedingskleurstof</Link> had kunnen zijn.</p>
                 <p>Bij Chopras Indian Restaurant op Leyweg 986, Den Haag, wordt elke biryani gemaakt via de dum-methode. Het gemarineerde halal vlees, kip of lam, wordt in lagen in de pot geplaatst met gedeeltelijk gekookte saffraanbasmati, vers gemalen kruiden en gefrituurde uien. De pot wordt afgesloten en het gerecht gaart langzaam op laag vuur, volledig op stoom. De saffraan zit in draadjes, niet uniform gemengd, zodat je bij het openen van de pot zakjes geur krijgt.</p>
-                <p>Het resultaat is zichtbaar als het deksel aan tafel afgaat. Sommige korrels zijn goudgeel van de saffraan. Andere zijn wit. Weer andere zijn gekleurd door de <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:underline">vers gemalen kruiden</Link>. Die variatie is het bewijs van de methode. Uniforme rijst is het bewijs dat iemand heeft gesneden.</p>
+                <p>Het resultaat is zichtbaar als het deksel aan tafel afgaat. Sommige korrels zijn goudgeel van de saffraan. Andere zijn wit. Weer andere zijn gekleurd door de <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">vers gemalen kruiden</Link>. Die variatie is het bewijs van de methode. Uniforme rijst is het bewijs dat iemand heeft gesneden.</p>
               </>
             ) : (
               <>
                 <p>The word &ldquo;dum&rdquo; is Persian for &ldquo;breath&rdquo; or &ldquo;slow steam.&rdquo; Dum biryani is not a variety of rice dish. It is a method. The pot is sealed. The steam cannot escape. What circulates inside that sealed vessel is what makes biryani biryani and not a rice pilaf.</p>
-                <p>Most people who have eaten a disappointing biryani in the Netherlands have eaten rice that was cooked separately and mixed with a curry sauce at the end. That is not biryani. That is rice and curry served together in one bowl, presented to look like the real thing. The grains are not layered. The steam has not done its work. The saffron, if used at all, is distributed so evenly it might as well be <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">food colouring</Link>.</p>
+                <p>Most people who have eaten a disappointing biryani in the Netherlands have eaten rice that was cooked separately and mixed with a curry sauce at the end. That is not biryani. That is rice and curry served together in one bowl, presented to look like the real thing. The grains are not layered. The steam has not done its work. The saffron, if used at all, is distributed so evenly it might as well be <Link href={`${base}/halal-food-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">food colouring</Link>.</p>
                 <p>At Chopras Indian Restaurant on Leyweg 986, Den Haag, every biryani is made using the dum method. The marinated halal protein - chicken or lamb - is layered in the pot with partially cooked saffron basmati, freshly ground spices, and fried onions. The pot is sealed and the dish finishes on low heat, entirely on steam. The saffron sits in threads, not uniformly blended, so when the lid comes off at the table you get pockets of fragrance.</p>
-                <p>The result is visible when the lid is lifted at the table. Some grains are golden from the saffron. Others are white. Others are stained by the <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-[#D4AF37] hover:underline">freshly ground spices</Link>. That variation is the proof of the method. Uniform rice is the proof that someone cut corners.</p>
+                <p>The result is visible when the lid is lifted at the table. Some grains are golden from the saffron. Others are white. Others are stained by the <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">freshly ground spices</Link>. That variation is the proof of the method. Uniform rice is the proof that someone cut corners.</p>
               </>
             )}
           </div>
@@ -167,7 +177,7 @@ export default function BiryaniPage({ params }: Props) {
       {/* SECTION 2: How Chopras Makes Biryani */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Hoe Chopras Indian Restaurant Biryani Maakt in Den Haag'
               : 'How Chopras Indian Restaurant Makes Biryani in Den Haag'}
@@ -175,17 +185,17 @@ export default function BiryaniPage({ params }: Props) {
           <div className="prose prose-lg max-w-none text-[#1A1A1A] space-y-5">
             {isNl ? (
               <>
-                <p>Het begint elke ochtend voor de dienst. De keuken van Chopras Indian Restaurant maalt zijn masalas van hele kruiden die rechtstreeks uit India worden geimporteerd. Komijn, kardemom, korianderzaad, kruidnagel, zwarte peper, kaneelstokjes, laurierblaadjes. De vluchtige aromatische olien in vers gemalen kruiden beginnen te verdampen binnen enkele uren na het malen. Een voorgemengd kruidenmengsel dat weken in een magazijn heeft gelegen, kan daar niet tegenop. Dit is het verschil dat elk gerecht op het <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">volledige Chopras Indian Restaurant-menu</Link> kenmerkt.</p>
-                <p>De kip wordt de avond ervoor gemarineerd in een yoghurtbasis met verse gember en knoflook. Het lam, lamschouder voor de lambiryani, wordt op dezelfde manier behandeld. Beide zijn afkomstig van <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">volledig halal gecertificeerde leveranciers</Link>. Elke avond, zonder uitzondering. Tegen de tijd dat het vlees de pot bereikt, heeft het al een laag smaak van binnenuit opgenomen.</p>
-                <p>De basmatirijst wordt geweekt en gedeeltelijk gekookt, bewust te kort gehouden, omdat hij de rest gaar trekt in de afgesloten pot. Echte saffraandraadjes worden in warm water geweekt en over de bovenste rijstlaag gedruppeld voordat de pot wordt afgesloten. Het deksel gaat op het vuur. De stoom doet de rest. Chopras Indian Restaurant serveert kipbiryani, lambiryani en groentebiryani. Alle drie zijn beschikbaar als onderdeel van het <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">volledige Noord-Indiase menu</Link>, beoordeeld met 4,9 sterren op Google op basis van 800+ recensies.</p>
-                <p>Naast biryani serveert Chopras Indian Restaurant ook <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:underline">tandoori-specialiteiten</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:underline">butter chicken</Link> en <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:underline">dal makhani</Link> op Leyweg 986. Voor grote groepen of evenementen is er ook <Link href={`${base}/indian-buffet-den-haag`} className="text-[#D4AF37] hover:underline">Indiaas buffet in Den Haag</Link> beschikbaar.</p>
+                <p>Het begint elke ochtend voor de dienst. De keuken van Chopras Indian Restaurant maalt zijn masalas van hele kruiden die rechtstreeks uit India worden geimporteerd. Komijn, kardemom, korianderzaad, kruidnagel, zwarte peper, kaneelstokjes, laurierblaadjes. De vluchtige aromatische olien in vers gemalen kruiden beginnen te verdampen binnen enkele uren na het malen. Een voorgemengd kruidenmengsel dat weken in een magazijn heeft gelegen, kan daar niet tegenop. Dit is het verschil dat elk gerecht op het <Link href={`${base}/menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">volledige Chopras Indian Restaurant-menu</Link> kenmerkt.</p>
+                <p>De kip wordt de avond ervoor gemarineerd in een yoghurtbasis met verse gember en knoflook. Het lam, lamschouder voor de lambiryani, wordt op dezelfde manier behandeld. Beide zijn afkomstig van <Link href={`${base}/halal-food-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">volledig halal gecertificeerde leveranciers</Link>. Elke avond, zonder uitzondering. Tegen de tijd dat het vlees de pot bereikt, heeft het al een laag smaak van binnenuit opgenomen.</p>
+                <p>De basmatirijst wordt geweekt en gedeeltelijk gekookt, bewust te kort gehouden, omdat hij de rest gaar trekt in de afgesloten pot. Echte saffraandraadjes worden in warm water geweekt en over de bovenste rijstlaag gedruppeld voordat de pot wordt afgesloten. Het deksel gaat op het vuur. De stoom doet de rest. Chopras Indian Restaurant serveert kipbiryani, lambiryani en groentebiryani. Alle drie zijn beschikbaar als onderdeel van het <Link href={`${base}/menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">volledige Noord-Indiase menu</Link>, beoordeeld met 4,9 sterren op Google op basis van 800+ recensies.</p>
+                <p>Naast biryani serveert Chopras Indian Restaurant ook <Link href={`${base}/tandoori-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">tandoori-specialiteiten</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">butter chicken</Link> en <Link href={`${base}/dal-makhani-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">dal makhani</Link> op Leyweg 986. Voor grote groepen of evenementen is er ook <Link href={`${base}/indian-buffet-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">Indiaas buffet in Den Haag</Link> beschikbaar.</p>
               </>
             ) : (
               <>
-                <p>It starts every morning before service. The kitchen at Chopras Indian Restaurant grinds its masalas from whole spices imported directly from India. Cumin, cardamom, coriander seed, cloves, black pepper, cinnamon sticks, bay leaves. The volatile aromatic oils in freshly ground spices begin to evaporate within hours of grinding. A pre-mixed blend sitting in a warehouse for weeks cannot compete. This is the difference you taste in every dish across the <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">full Chopras Indian Restaurant menu</Link>.</p>
-                <p>The chicken is marinated overnight in a yoghurt base with fresh ginger and garlic. The lamb, shoulder cut for the lamb biryani, is treated the same way. Both are sourced from <Link href={`${base}/halal-food-den-haag`} className="text-[#D4AF37] hover:underline">fully halal-certified suppliers</Link>. Every evening, without exception. By the time the protein reaches the pot, it has already absorbed a layer of flavour from within the flesh itself.</p>
-                <p>The basmati rice is soaked and partially cooked, intentionally left short of done, because it will finish inside the sealed pot. Real saffron threads are steeped in warm water and drizzled across the top layer of rice before the pot is sealed. The lid goes on the heat. The steam does the rest. Chopras Indian Restaurant serves chicken biryani, lamb biryani, and vegetable biryani. All three are available as part of the <Link href={`${base}/menu`} className="text-[#D4AF37] hover:underline">full North Indian menu</Link>, rated 4.9 stars on Google from 800+ reviews.</p>
-                <p>Alongside biryani, Chopras Indian Restaurant also serves <Link href={`${base}/tandoori-den-haag`} className="text-[#D4AF37] hover:underline">tandoori specialities</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-[#D4AF37] hover:underline">butter chicken</Link>, and <Link href={`${base}/dal-makhani-den-haag`} className="text-[#D4AF37] hover:underline">dal makhani</Link> at Leyweg 986. For larger groups or events, <Link href={`${base}/indian-buffet-den-haag`} className="text-[#D4AF37] hover:underline">Indian buffet in Den Haag</Link> is also available.</p>
+                <p>It starts every morning before service. The kitchen at Chopras Indian Restaurant grinds its masalas from whole spices imported directly from India. Cumin, cardamom, coriander seed, cloves, black pepper, cinnamon sticks, bay leaves. The volatile aromatic oils in freshly ground spices begin to evaporate within hours of grinding. A pre-mixed blend sitting in a warehouse for weeks cannot compete. This is the difference you taste in every dish across the <Link href={`${base}/menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">full Chopras Indian Restaurant menu</Link>.</p>
+                <p>The chicken is marinated overnight in a yoghurt base with fresh ginger and garlic. The lamb, shoulder cut for the lamb biryani, is treated the same way. Both are sourced from <Link href={`${base}/halal-food-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">fully halal-certified suppliers</Link>. Every evening, without exception. By the time the protein reaches the pot, it has already absorbed a layer of flavour from within the flesh itself.</p>
+                <p>The basmati rice is soaked and partially cooked, intentionally left short of done, because it will finish inside the sealed pot. Real saffron threads are steeped in warm water and drizzled across the top layer of rice before the pot is sealed. The lid goes on the heat. The steam does the rest. Chopras Indian Restaurant serves chicken biryani, lamb biryani, and vegetable biryani. All three are available as part of the <Link href={`${base}/menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">full North Indian menu</Link>, rated 4.9 stars on Google from 800+ reviews.</p>
+                <p>Alongside biryani, Chopras Indian Restaurant also serves <Link href={`${base}/tandoori-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">tandoori specialities</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">butter chicken</Link>, and <Link href={`${base}/dal-makhani-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">dal makhani</Link> at Leyweg 986. For larger groups or events, <Link href={`${base}/indian-buffet-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">Indian buffet in Den Haag</Link> is also available.</p>
               </>
             )}
           </div>
@@ -195,7 +205,7 @@ export default function BiryaniPage({ params }: Props) {
       {/* SECTION 3: Biryani Options */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Biryani Bestellen bij Chopras Indian Restaurant'
               : 'Order Biryani at Chopras Indian Restaurant'}
@@ -224,8 +234,8 @@ export default function BiryaniPage({ params }: Props) {
                   : 'Seasonal vegetables layered with saffron basmati and fresh masala. Prepared using the same dum method as the meat biryanis.',
               },
             ].map((item) => (
-              <div key={item.name} className="bg-white rounded-xl p-6 border-l-4 border-[#D4AF37]">
-                <h3 className="font-vibes text-xl text-[#C7A348] mb-1">{item.name} - {item.price}</h3>
+              <div key={item.name} className="bg-white rounded-xl p-6 border-l-4 border-white">
+                <h3 className="font-vibes text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-1">{item.name} - {item.price}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -233,13 +243,13 @@ export default function BiryaniPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white  px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C7A348] bg-[rgba(199,163,72,0.1)] px-6 py-3 text-[#C7A348] text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[#C7A348] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white  px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -250,16 +260,16 @@ export default function BiryaniPage({ params }: Props) {
       {/* GEO BLOCK */}
       <section className="bg-[#1B2B5E] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-white mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Waar Vind Ik Authentieke Biryani in Den Haag?'
               : 'Where Can I Find Authentic Biryani in Den Haag?'}
           </h2>
           <div className="text-white/90 text-lg leading-relaxed">
             {isNl ? (
-              <p>Authentieke biryani Den Haag vindt u bij Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open van dinsdag tot en met zondag van 16:30 tot 22:30. Chopras Indian Restaurant serveert kip-, lam- en groentebiryani via de echte dum-methode: afgesloten, langzaam gegaard met echte saffraandraadjes en kruiden die elke ochtend vers worden gemalen van hele ingredienten uit India. Beoordeeld met 4,9 sterren op Google op basis van 800+ recensies. Volledig <Link href={`${base}/halal-food-den-haag`} className="text-[#C7A348] hover:underline font-semibold">halal gecertificeerd</Link>. <Link href={`${base}/contact`} className="text-[#C7A348] hover:underline font-semibold">Reserveer een tafel</Link> of bestel online via Thuisbezorgd.</p>
+              <p>Authentieke biryani Den Haag vindt u bij Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open van dinsdag tot en met zondag van 16:30 tot 22:30. Chopras Indian Restaurant serveert kip-, lam- en groentebiryani via de echte dum-methode: afgesloten, langzaam gegaard met echte saffraandraadjes en kruiden die elke ochtend vers worden gemalen van hele ingredienten uit India. Beoordeeld met 4,9 sterren op Google op basis van 800+ recensies. Volledig <Link href={`${base}/halal-food-den-haag`} className="text-white font-semibold hover:underline">halal gecertificeerd</Link>. <Link href={`${base}/contact`} className="text-white font-semibold hover:underline">Reserveer een tafel</Link> of bestel online via Thuisbezorgd.</p>
             ) : (
-              <p>Authentic biryani Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open Tuesday to Sunday from 16:30 to 22:30. Chopras Indian Restaurant serves chicken, lamb, and vegetable biryani using the authentic dum method: sealed, slow-cooked with real saffron threads and spices ground fresh every morning from whole ingredients sourced in India. Rated 4.9 stars on Google from 800+ reviews. Fully <Link href={`${base}/halal-food-den-haag`} className="text-[#C7A348] hover:underline font-semibold">halal certified</Link>. <Link href={`${base}/contact`} className="text-[#C7A348] hover:underline font-semibold">Reserve a table</Link> or order online via Thuisbezorgd.</p>
+              <p>Authentic biryani Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, open Tuesday to Sunday from 16:30 to 22:30. Chopras Indian Restaurant serves chicken, lamb, and vegetable biryani using the authentic dum method: sealed, slow-cooked with real saffron threads and spices ground fresh every morning from whole ingredients sourced in India. Rated 4.9 stars on Google from 800+ reviews. Fully <Link href={`${base}/halal-food-den-haag`} className="text-white font-semibold hover:underline">halal certified</Link>. <Link href={`${base}/contact`} className="text-white font-semibold hover:underline">Reserve a table</Link> or order online via Thuisbezorgd.</p>
             )}
           </div>
         </div>
@@ -268,7 +278,7 @@ export default function BiryaniPage({ params }: Props) {
       {/* FAQ */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-[#C7A348] mb-6 leading-[1.3]">
+          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
             {isNl
               ? 'Veelgestelde Vragen over Biryani in Den Haag'
               : 'Frequently Asked Questions About Biryani in Den Haag'}
@@ -280,46 +290,46 @@ export default function BiryaniPage({ params }: Props) {
       {/* CTA + Related Dishes */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-3xl md:text-4xl text-[#C7A348] mb-8">
+          <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">
             {isNl
               ? 'Meer Gerechten bij Chopras Indian Restaurant Den Haag'
               : 'More Dishes at Chopras Indian Restaurant Den Haag'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <Link href={`${base}/tandoori-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
+            <Link href={`${base}/tandoori-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Authentieke tandoori specialiteiten in Den Haag' : 'Authentic tandoori specialities in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Butter chicken Den Haag bij Chopras Indian Restaurant' : 'Butter chicken Den Haag at Chopras Indian Restaurant'}</p>
             </Link>
-            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Vegetarisch' : 'Vegetarian'}</p>
+            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Vegetarisch' : 'Vegetarian'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Dal makhani Den Haag - zwarte linzen met boter en room' : 'Dal makhani Den Haag - black lentils with butter and cream'}</p>
             </Link>
-            <Link href={`${base}/mutton-rogan-josh-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Lam Curry' : 'Lamb Curry'}</p>
+            <Link href={`${base}/mutton-rogan-josh-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Lam Curry' : 'Lamb Curry'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Mutton rogan josh Den Haag - Kasjmirse lamschouder' : 'Mutton rogan josh Den Haag - Kashmiri lamb shoulder'}</p>
             </Link>
-            <Link href={`${base}/indian-food-delivery-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bezorging' : 'Delivery'}</p>
+            <Link href={`${base}/indian-food-delivery-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Bezorging' : 'Delivery'}</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas eten bezorgen in Den Haag' : 'Indian food delivery in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#D4AF37] hover:shadow-lg transition-all">
-              <p className="text-[#D4AF37] text-sm font-semibold uppercase tracking-widest mb-2">Catering</p>
+            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
+              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Catering</p>
               <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas catering Den Haag voor uw evenement' : 'Indian catering Den Haag for your event'}</p>
             </Link>
           </div>
           <div className="mt-8 text-center space-y-4">
             <p className="text-[#1A1A1A] text-base">
-              <Link href={`${base}/`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
                 {isNl ? 'Chopras Indian Restaurant - beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="text-[#1A1A1A] text-base">
               {isNl ? 'Bekijk het volledige menu of' : 'View the full menu or'}{' '}
-              <Link href={`${base}/contact`} className="text-[#D4AF37] hover:text-[#e8c84a] font-semibold">
+              <Link href={`${base}/contact`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
                 {isNl ? 'maak een reservering bij Chopras Indian Restaurant Den Haag' : 'book a table at Chopras Indian Restaurant Den Haag'}
               </Link>.
             </p>
