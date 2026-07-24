@@ -65,7 +65,7 @@ export default function TermsPage({ params }: Props) {
 
       <section className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h1 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Algemene Voorwaarden' : 'Terms of Service'}
           </h1>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -82,7 +82,7 @@ export default function TermsPage({ params }: Props) {
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto space-y-12 text-[#1A1A1A] leading-relaxed">
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '1. Reserveringen' : '1. Reservations'}
             </h2>
             <p>
@@ -93,7 +93,7 @@ export default function TermsPage({ params }: Props) {
           </div>
 
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '2. Catering en Evenementen' : '2. Catering and Events'}
             </h2>
             <p>
@@ -104,7 +104,7 @@ export default function TermsPage({ params }: Props) {
           </div>
 
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '3. Online Bestellingen' : '3. Online Orders'}
             </h2>
             <p>
@@ -115,7 +115,7 @@ export default function TermsPage({ params }: Props) {
           </div>
 
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '4. Websitegebruik' : '4. Website Use'}
             </h2>
             <p>
@@ -126,20 +126,20 @@ export default function TermsPage({ params }: Props) {
           </div>
 
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '5. Contact' : '5. Contact'}
             </h2>
             <p>
               {isNl ? 'Voor vragen over deze voorwaarden kunt u contact opnemen via ' : 'For questions about these terms, contact us at '}
-              <EmailLink className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold" />
+              <EmailLink className="text-[#06068a] hover:text-[#0000B3] font-semibold" />
               {isNl ? ' of bel ' : ' or call '}
-              <a href={`tel:${RESTAURANT.contact.phone}`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <a href={`tel:${RESTAURANT.contact.phone}`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 {RESTAURANT.contact.phoneDisplay}
               </a>
               .
             </p>
             <p className="mt-4">
-              <Link href={`${base}/privacy-policy`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/privacy-policy`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 {isNl ? 'Bekijk ook ons privacybeleid.' : 'View our privacy policy as well.'}
               </Link>
             </p>

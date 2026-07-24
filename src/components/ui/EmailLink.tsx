@@ -11,7 +11,7 @@ interface EmailLinkProps {
   children?: ReactNode
 }
 
-export default function EmailLink({ className = 'text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold', children }: EmailLinkProps) {
+export default function EmailLink({ className = 'text-black ', children }: EmailLinkProps) {
   const [email, setEmail] = useState<string | null>(null)
 
   useEffect(() => {

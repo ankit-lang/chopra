@@ -49,7 +49,7 @@ const faqs = [
   {
     question: 'Wat maakt Chopras het beste Indiaas restaurant in Den Haag?',
     answer:
-      'Chopras Indian Restaurant scoort 4,9 sterren op Google van meer dan 800 gasten, een 8,7 op TheFork en Excellent op Tripadvisor. De keuken maalt specerijen elke ochtend vers van hele specerijen rechtstreeks uit India. Elk gerecht is volledig halal gecertificeerd. De tandoor bereikt 400 graden Celsius. Dat zijn geen marketingclaims. Dat zijn kooktechnieken die u terugvindt in elk bord dat wij serveren.',
+      'Chopras Indian Restaurant scoort 4,9 sterren op Google van meer dan 1100 gasten, een 8,7 op TheFork en Excellent op Tripadvisor. De keuken maalt specerijen elke ochtend vers van hele specerijen rechtstreeks uit India. Elk gerecht is volledig halal gecertificeerd. De tandoor bereikt 400 graden Celsius. Dat zijn geen marketingclaims. Dat zijn kooktechnieken die u terugvindt in elk bord dat wij serveren.',
   },
   {
     question: 'Is Chopras Indian Restaurant volledig halal gecertificeerd?',
@@ -90,33 +90,38 @@ export default function BesteIndiaasPage({ params }: Props) {
       <JsonLd data={getFaqPageSchema(faqs)} />
 
       {/* HERO */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-[#000066]">
+      <section className="relative pt-32 pb-24 overflow-hidden btn-gradient">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-[#0000B3]/20 rounded-full blur-[180px] pointer-events-none" />
-        
+        <div className="absolute bottom-0 right-1/4 w-[1100px] h-[1100px] bg-[#0000B3]/20 rounded-full blur-[180px] pointer-events-none" />
+
         <div className="relative max-w-5xl mx-auto px-6 text-center z-10">
           <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md mb-8">
             <span className="text-white/90 text-xs font-semibold uppercase tracking-[0.2em]">
-              • DISCOVER · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+              DISCOVER · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1] font-bold">
-            Beste Indiaas Restaurant in <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] drop-shadow-[0_0_15px_rgba(0,0,255,0.5)]">Den Haag</span>
+            Beste Indiaas Restaurant in Den Haag
           </h1>
-          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-body font-light leading-relaxed mb-10">
-            4,9 sterren op Google van 800+ gasten. Volledig halal gecertificeerd. Noord-Indiaas koken zoals het hoort, op Leyweg 986 Den Haag.
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+            <span className="text-white/90 text-lg">✦</span>
+            <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+          </div>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-body font-light leading-relaxed mt-6 mb-10">
+            4,9 sterren op Google van 1100+ gasten. Volledig halal gecertificeerd. Noord-Indiaas koken zoals het hoort, op Leyweg 986 Den Haag.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href={`${base}/menu`}
-              className="px-8 py-4 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white rounded-full font-semibold uppercase tracking-widest text-sm hover:bg-white hover:text-[#000066] transition-all duration-300 shadow-[0_0_20px_rgba(0,0,255,0.4)]"
+              className="px-8 py-4 bg-white/10 border-2 border-white text-white rounded-full font-semibold uppercase tracking-widest text-sm transition-all duration-300 min-h-[48px] backdrop-blur-[10px]"
             >
               Bekijk het Menu
             </Link>
             <Link
               href={`${base}/contact`}
-              className="px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-semibold uppercase tracking-widest text-sm hover:bg-white/10 transition-all duration-300"
+              className="px-8 py-4 bg-white/10 border-2 border-white text-white rounded-full font-semibold uppercase tracking-widest text-sm transition-all duration-300 min-h-[48px] backdrop-blur-[10px]"
             >
               Tafel Reserveren
             </Link>
@@ -127,18 +132,18 @@ export default function BesteIndiaasPage({ params }: Props) {
       {/* Section 1: De beoordelingen spreken voor zich */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
             De beoordelingen spreken voor zich
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-            <strong>4,9 sterren op Google van meer dan 800 gasten.</strong> Op TheFork scoort Chopras Indian Restaurant een 8,7. Op Tripadvisor valt het restaurant in de categorie Excellent. Drie onafhankelijke platforms, drie beoordelingssystemen, één conclusie. Het beste Indiaas restaurant in Den Haag is geen zelfbenoemde titel.
+            <strong>4,9 sterren op Google van meer dan 1100 gasten.</strong> Op TheFork scoort Chopras Indian Restaurant een 8,7. Op Tripadvisor valt het restaurant in de categorie Excellent. Drie onafhankelijke platforms, drie beoordelingssystemen, één conclusie. Het beste Indiaas restaurant in Den Haag is geen zelfbenoemde titel.
           </p>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-            Hoge sterren met een handvol beoordelingen zeggen weinig. Elk nieuw restaurant heeft enthousiaste eerste gasten. Wat dit anders maakt is het volume. Meer dan 800 mensen namen de moeite om hun ervaring te beschrijven. Die combinatie van hoge beoordeling en groot volume is zeldzaam bij Indiase restaurants in Den Haag.
+            Hoge sterren met een handvol beoordelingen zeggen weinig. Elk nieuw restaurant heeft enthousiaste eerste gasten. Wat dit anders maakt is het volume. Meer dan 1100 mensen namen de moeite om hun ervaring te beschrijven. Die combinatie van hoge beoordeling en groot volume is zeldzaam bij Indiase restaurants in Den Haag.
           </p>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             Gasten schrijven over de versheid. Over kruiden die anders smaken dan elders. Over het gevoel dat zij echte kookkunst van een authentiek Indiaas restaurant Den Haag hebben gegeten en niet een Westerse interpretatie ervan. Bekijk het{' '}
-            <Link href={`${base}/menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/menu`} className="text-[#06068a] font-semibold hover:underline">
               volledige menu van Chopras Indian Restaurant
             </Link>{' '}
             en oordeel daarna zelf aan tafel.
@@ -149,39 +154,39 @@ export default function BesteIndiaasPage({ params }: Props) {
       {/* Section 2: Waarom smaakt Chopras anders */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             Waarom smaakt Chopras anders?
           </h2>
 
-          <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
+          <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">
             Specerijen die elke ochtend worden gemalen
           </h3>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-10">
             De meeste restaurants gebruiken kant-en-klare kruidenmengsels uit een leverancierszak. Chopras Indian Restaurant haalt hele specerijen rechtstreeks uit India en maalt deze elke ochtend vers in de keuken. De vluchtige aromatische oliën in komijn, kardemom en koriander beginnen binnen uren na het malen te verdampen. Dat verschil proeft u direct in{' '}
-            <Link href={`${base}/biryani-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] font-semibold hover:underline">
               biryani
             </Link>
             ,{' '}
-            <Link href={`${base}/butter-chicken-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] font-semibold hover:underline">
               butter chicken
             </Link>{' '}
             en{' '}
-            <Link href={`${base}/dal-makhani-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] font-semibold hover:underline">
               dal makhani
             </Link>
             . Het is het verschil tussen Indiaas eten dat leeft en Indiaas eten dat verpakt smaakt.
           </p>
 
-          <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.3]">
+          <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">
             Een kleioven van 400 graden Celsius
           </h3>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             De tandoor van Chopras bereikt 400 graden Celsius. Die temperatuur is niet aanpasbaar. Het is precies dat wat{' '}
-            <Link href={`${base}/tandoori-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] font-semibold hover:underline">
               tandoori kip
             </Link>{' '}
             zijn verkoolde rand geeft en{' '}
-            <Link href={`${base}/naan-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/naan-den-haag`} className="text-[#06068a] font-semibold hover:underline">
               naan
             </Link>{' '}
             zijn luchtige binnenkant. Geen gewone oven kan dit nabootsen. Geen shortcut bestaat hier. Elk tandoori gerecht bij Chopras wordt gebakken op de temperatuur waarvoor het is ontworpen.
@@ -190,9 +195,9 @@ export default function BesteIndiaasPage({ params }: Props) {
       </section>
 
       {/* Section 3: Volledig halal - navy */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
+      <section className="btn-gradient py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             Volledig halal. Geen compromissen.
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-4">
@@ -203,7 +208,7 @@ export default function BesteIndiaasPage({ params }: Props) {
           </p>
           <p className="font-body text-white/85 text-lg leading-relaxed">
             Bekijk het{' '}
-            <Link href={`${base}/halal-menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            <Link href={`${base}/halal-menu`} className="text-white font-semibold hover:underline">
               volledige halal menu van Chopras
             </Link>{' '}
             voor een overzicht van alle gecertificeerde gerechten, van tandoori gegrild tot biryani en curry.
@@ -211,129 +216,100 @@ export default function BesteIndiaasPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Section 4: 143 gerechten */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      {/* Section 4: Hoe te bereiken */}
+      <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            143 gerechten. Noord-Indiaas gemaakt.
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
+            Snel en eenvoudig te bereiken in Den Haag
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-            Het menu van Chopras Indian Restaurant telt 143 gerechten verdeeld over 13 categorieën. Curries, tandoori gerechten, biryani varianten,{' '}
-            <Link href={`${base}/chaat-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              chaat
+            Chopras Indian Restaurant ligt aan de{' '}
+            <Link href={`${base}/contact`} className="text-[#06068a] font-semibold hover:underline">
+              Leyweg 986 in Den Haag Zuid-West
             </Link>
-            ,{' '}
-            <Link href={`${base}/pani-puri-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              pani puri
-            </Link>
-            ,{' '}
-            <Link href={`${base}/soya-chaap-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              soya chaap
-            </Link>
-            , naan en Indo Chinese specialiteiten. De beste curry Den Haag staat hier naast biryani, tandoori en Indiaas straatvoedsel op het meest complete Noord-Indiaas menu in Den Haag.
+            . Uitstekend bereikbaar met de auto en het openbaar vervoer vanuit het centrum, Scheveningen, Rijswijk en Delft.
           </p>
-          <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-            Naast de vleesgerechten is er een volledig{' '}
-            <Link href={`${base}/vegan-menu`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              vegetarisch en veganistisch aanbod
-            </Link>
-            . Dal makhani, soya chaap, paneer gerechten en chaat. Gasten die geen vlees eten vinden hier net zoveel keuze als de rest van de tafel. Dat is niet vanzelfsprekend bij een Indiaas restaurant.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div className="p-6 bg-white rounded-lg border border-gray-200">
+              <h3 className="font-heading text-xl text-[#06068a] font-semibold mb-2">Met het Openbaar Vervoer</h3>
+              <p className="font-body text-[#1A1A1A]/70">Tram 9, 16 en bus 21, 25 stoppen op loopafstand. Vanaf station Den Haag Centraal bent u er in 15 minuten.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg border border-gray-200">
+              <h3 className="font-heading text-xl text-[#06068a] font-semibold mb-2">Met de Auto</h3>
+              <p className="font-body text-[#1A1A1A]/70">Betaald en vrij parkeren beschikbaar in de directe omgeving van Leyweg. Eenvoudig aan te rijden vanaf A4 en A12.</p>
+            </div>
+          </div>
+          <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+            Het restaurant is geopend van dinsdag tot en met zondag van 16:30 tot 22:30. Reserveren is aanbevolen op vrijdag en in het weekend.
           </p>
-          <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
-            En dan is er iets wat moeilijk te vinden is in Den Haag: de{' '}
-            <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              Indo Chinese keuken van Chopras
-            </Link>
-            . Chilli chicken, chilli paneer, Hakka noodles en Manchow soep. Dit is een culinaire categorie die moeilijk elders in Den Haag te vinden is.
-          </p>
-          <Link
-            href={`${base}/menu`}
-            className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-300 ease-out bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:bg-[#000066] active:scale-[0.98] min-h-[48px] shadow-md"
-          >
-            Bekijk het Volledige Menu
-          </Link>
         </div>
       </section>
 
       {/* Section 5: GEO Block */}
-      <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             Wat is het beste Indiaas restaurant in Den Haag?
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-            Als Noord-Indiaas restaurant Den Haag is Chopras Indian Restaurant op{' '}
-            <Link href={`${base}/contact`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
+            Chopras Indian Restaurant op{' '}
+            <Link href={`${base}/contact`} className="text-[#06068a] font-semibold hover:underline">
               Leyweg 986 in Den Haag
             </Link>{' '}
-            beoordeeld met 4,9 sterren op Google van meer dan 800 gasten. De keuken is volledig halal gecertificeerd en bereidt 143 gerechten met vers gemalen specerijen rechtstreeks uit India. Tandoori gerechten en naan worden gebakken in een kleioven van 400 graden Celsius. Afhalen en bezorgen via Thuisbezorgd en Uber Eats. Open{' '}
-            <Link href={`${base}/contact`} className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold hover:underline">
-              dinsdag tot en met zondag vanaf 16:30
-            </Link>
-            .
+            is beoordeeld met 4,9 sterren op Google van meer dan 1100 gasten, een 8,7 op TheFork en Excellent op Tripadvisor. Het restaurant biedt 100% halal gecertificeerde Noord-Indiase gerechten bereid met dagelijks vers gemalen specerijen. Met een uitgebreid menu van 143 gerechten, waaronder vegetarische, veganistische en glutenvrije opties, is Chopras open van dinsdag tot en met zondag vanaf 16:30.
           </p>
         </div>
       </section>
 
       {/* Section 6: FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            Veelgestelde vragen over Chopras Indian Restaurant
-          </h2>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              Veelgestelde vragen over het beste Indiaas restaurant in Den Haag
+            </h2>
+          </div>
           <FaqAccordion faqs={faqs} locale={locale} />
         </div>
       </section>
 
-      {/* Section 7: Populaire gerechten */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      {/* Section 7: Interne links */}
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            De meest bestelde gerechten bij Chopras
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
+            Ontdek meer van Chopras Indian Restaurant
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
-            Deze gerechten worden het vaakst besteld door gasten die voor het eerst of voor de tiende keer bij Chopras Indian Restaurant in Den Haag komen.
+            Bekijk de speciale pagina&apos;s voor onze populairste gerechten en diensten:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <Link
-              href={`${base}/biryani-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
-            >
-              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
-              <p className="font-body text-[#1A1A1A]/70">Saffraan basmatirijst met halal lam, kip of groenten in dum-stijl</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-4 bg-[#FFFAF5] rounded-lg hover:bg-white hover:shadow-md transition-all">
+              <span className="font-heading text-lg text-[#06068a] font-semibold">Butter Chicken Den Haag</span>
+              <p className="font-body text-[#1A1A1A]/70 text-sm">Halal kip in romige tomatensaus</p>
             </Link>
-            <Link
-              href={`${base}/butter-chicken-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
-            >
-              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Butter Chicken</p>
-              <p className="font-body text-[#1A1A1A]/70">Halal kip in romige tomaten- en botersaus, vers bereid</p>
+            <Link href={`${base}/biryani-den-haag`} className="block p-4 bg-[#FFFAF5] rounded-lg hover:bg-white hover:shadow-md transition-all">
+              <span className="font-heading text-lg text-[#06068a] font-semibold">Biryani Den Haag</span>
+              <p className="font-body text-[#1A1A1A]/70 text-sm">Saffraan basmatirijst met kip, lam of groenten</p>
             </Link>
-            <Link
-              href={`${base}/tandoori-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
-            >
-              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Tandoori</p>
-              <p className="font-body text-[#1A1A1A]/70">Gegrild bij 400 graden Celsius in de tandoor kleioven</p>
+            <Link href={`${base}/tandoori-den-haag`} className="block p-4 bg-[#FFFAF5] rounded-lg hover:bg-white hover:shadow-md transition-all">
+              <span className="font-heading text-lg text-[#06068a] font-semibold">Tandoori Den Haag</span>
+              <p className="font-body text-[#1A1A1A]/70 text-sm">Gegrild op 400 graden in de kleioven</p>
             </Link>
-            <Link
-              href={`${base}/dal-makhani-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
-            >
-              <p className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-sm font-semibold uppercase tracking-widest mb-2">Dal Makhani</p>
-              <p className="font-body text-[#1A1A1A]/70">Zwarte linzen langzaam gegaard met boter en room</p>
+            <Link href={`${base}/catering`} className="block p-4 bg-[#FFFAF5] rounded-lg hover:bg-white hover:shadow-md transition-all">
+              <span className="font-heading text-lg text-[#06068a] font-semibold">Indiaas Catering Den Haag</span>
+              <p className="font-body text-[#1A1A1A]/70 text-sm">Catering voor 25 tot 80 gasten</p>
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-300 ease-out bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:bg-[#000066] active:scale-[0.98] min-h-[48px] shadow-md"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out btn-gradient active:scale-[0.98] min-h-[48px] shadow-md"
             >
               Bekijk het Volledige Menu
             </Link>
             <Link
               href={`${base}/catering`}
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] border-2 border-[#0000B3] text-sm font-medium uppercase tracking-wide transition-all duration-300 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[#06068a] border-2 border-white text-sm font-medium uppercase tracking-wide transition-all duration-300 ease-out btn-gradient active:scale-[0.98] min-h-[48px]"
             >
               Catering Aanvragen
             </Link>
@@ -342,24 +318,24 @@ export default function BesteIndiaasPage({ params }: Props) {
       </section>
 
       {/* Section 8: Final CTA - navy */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
+      <section className="btn-gradient py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             Kom zelf ontdekken waarom Den Haag kiest voor Chopras
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            Het beste Indiaas restaurant in Den Haag zit op Leyweg 986. Open dinsdag tot en met zondag vanaf 16:30. 4,9 sterren. 800+ beoordelingen. Volledig halal gecertificeerd. Geen verdere overtuiging nodig. Kom langs.
+            Het beste Indiaas restaurant in Den Haag zit op Leyweg 986. Open dinsdag tot en met zondag vanaf 16:30. 4,9 sterren. 1100+ beoordelingen. Volledig halal gecertificeerd. Geen verdere overtuiging nodig. Kom langs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Tafel Reserveren
             </Link>
             <Link
               href={`${base}/halal-menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               Halal Menu Bekijken
             </Link>

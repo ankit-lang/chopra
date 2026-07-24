@@ -37,7 +37,7 @@ const SAME_AS = [
 const AGGREGATE_RATING = {
   '@type': 'AggregateRating',
   ratingValue: '4.9',
-  reviewCount: '800',
+  reviewCount: '1100',
   bestRating: '5',
   worstRating: '1',
 }

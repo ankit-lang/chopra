@@ -81,3 +81,15 @@ img {
 .font-vibes {
   font-family: var(--font-playfair), 'Playfair Display', Georgia, serif !important;
 }
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-image: linear-gradient(to bottom, #06068a, #0000B3, #0000FF);
+  }
+}
+
+@layer components {
+  .btn-gradient {
+    @apply bg-gradient-to-b from-[#06068a] via-[#0000B3] to-[#0000FF] text-white transition-all duration-300 hover:opacity-90;
+  }
+}

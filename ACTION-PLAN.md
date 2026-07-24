@@ -44,7 +44,7 @@ languages: {
 
 ### 7. Remove or correct generated-schema.json
 **File:** `generated-schema.json` (project root)
-**Why:** Contains broken `/en/` URLs, wrong geo coordinates, wrong rating (4.7/83 instead of 4.9/800), and "Founder and Head Chef" which CLAUDE.md explicitly prohibits. This file is a source of confusion and error.
+**Why:** Contains broken `/en/` URLs, wrong geo coordinates, wrong rating (4.7/83 instead of 4.9/1100), and "Founder and Head Chef" which CLAUDE.md explicitly prohibits. This file is a source of confusion and error.
 **Fix:** Delete the file, or update every field to match current `constants.ts` and `schema.ts` values.
 
 ### 8. Fix layout-level hreflang

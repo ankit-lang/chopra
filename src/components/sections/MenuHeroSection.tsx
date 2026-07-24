@@ -9,76 +9,97 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
   return (
     <div className="relative h-screen overflow-hidden">
 
-      {/* Background video — same CDN source as homepage */}
+      {/* Mobile background video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover block md:hidden brightness-105"
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        poster="/images/hero/hero-poster.png"
       >
-        <source src="https://res.cloudinary.com/dllsnz1uz/video/upload/v1776214380/chopras_video0415_bkyweg.mp4" type="video/mp4" />
+        <source src="/gal/menumob.mp4" type="video/mp4" />
       </video>
 
-      {/* Gradient overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.50) 100%)',
-        }}
-      />
+      {/* Desktop background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover hidden md:block brightness-105"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      >
+        <source src="/gal/menudesktop.mp4" type="video/mp4" />
+      </video>
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
         <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
           <span className="text-white text-xs font-medium uppercase tracking-widest">
-            • OUR MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+            {locale === 'nl' ? 'ONS MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG' : 'OUR MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG'}
           </span>
         </div>
 
         <h1
-          className="font-vibes font-bold text-[#F7F8FC] leading-none"
-          style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
+          className="font-heading font-bold text-white leading-[1.15] max-w-5xl mx-auto"
+          style={{
+            fontFamily: '"Playfair Display", Georgia, serif',
+            textShadow:
+              '0 2px 4px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85), 0 8px 40px rgba(0,0,0,0.7)',
+          }}
         >
-          <span className="block text-5xl md:text-6xl lg:text-8xl">{tr.menu.heroH1}</span>
-          <span className="block italic font-light text-3xl md:text-4xl lg:text-5xl mt-2">
-            143 dishes · 13 categories
+
+          <span className="block font-bold text-white text-[2.2rem] lg:text-[4.2rem] tracking-normal mb-1">
+            {tr.menu.heroH1}
           </span>
         </h1>
+        <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+          <span className="text-white/90 text-lg">✦</span>
+          <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+        </div>
 
-        <div className="w-16 h-px bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mx-auto my-6" />
+
 
         <p
           className="font-body font-light text-lg text-white/80 max-w-md text-center leading-relaxed"
           style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
         >
-          Every spice sourced from India.
-          <br />
-          Fresh from the tandoor, made with love on Leyweg.
+          {locale === 'nl' ? (
+            <>
+              Elke specerij afkomstig uit India.
+              <br />
+              Vers uit de tandoor, met liefde gemaakt aan de Leyweg.
+            </>
+          ) : (
+            <>
+              Every spice sourced from India.
+              <br />
+              Fresh from the tandoor, made with love in Leyweg.
+            </>
+          )}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
           <Link
             href={`${base}/contact`}
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
           >
-            Reserve a Table
+            {tr.common.reserve}
           </Link>
           <a
             href="#menu"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
           >
-            Browse Menu
+            {locale === 'nl' ? 'Bekijk Menu' : 'Browse Menu'}
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
-        <span className="font-body text-xs text-white/40 uppercase tracking-widest">Scroll</span>
+        <span className="font-body text-xs text-white/40 uppercase tracking-widest">{locale === 'nl' ? 'Scrollen' : 'Scroll'}</span>
         <ChevronDown size={24} className="text-white/50 animate-bounce" />
       </div>
     </div>

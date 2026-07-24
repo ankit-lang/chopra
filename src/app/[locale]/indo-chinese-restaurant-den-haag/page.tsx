@@ -118,17 +118,22 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
       )} />
 
       {/* Hero */}
-      <section className="bg-[#1B2B5E] py-20 text-center">
+      <section className="btn-gradient py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
             <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+              OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
             {isNl ? 'Indo Chinees Restaurant Den Haag' : 'Indo Chinese Restaurant Den Haag'}
           </h1>
-          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+            <span className="text-white/90 text-lg">✦</span>
+            <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+          </div>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mt-6">
             {isNl
               ? 'Chilli chicken, chilli paneer en Hakka noedels. Het enige Indo-Chinese eten in Den Haag, bij Chopras Indian Restaurant op Leyweg 986.'
               : 'Chilli chicken, chilli paneer and Hakka noodles. Distinctive Indo Chinese food in The Hague, at Chopras Indian Restaurant on Leyweg 986.'}
@@ -136,13 +141,13 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -151,11 +156,13 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
       </section>
 
       {/* What is Indo Chinese food */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Wat is Indo-Chinees eten?' : 'What Is Indo Chinese Food?'}
-          </h2>
+          <div className="text-left mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-left">
+              {isNl ? 'Wat is Indo-Chinees eten?' : 'What Is Indo Chinese Food?'}
+            </h2>
+          </div>
           {isNl ? (
             <div className="space-y-5 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               <p>
@@ -163,13 +170,13 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               </p>
               <p>
                 Dit is geen Chinees eten met een Indiase twist. Het is een eigen keuken, met eigen technieken, een eigen kruidenprofiel en eigen iconische gerechten. Schezwan chilipepers, sojasaus, azijn en gember-knoflookpasta vormen de basis. Dan komen de Indiase kruiden erbij. Het resultaat is roergebakken op hoog vuur, snel bereid en vol van smaak. Precies wat u terugvindt op het{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indo-Chinese menu bij Chopras
                 </Link>.
               </p>
               <p>
                 De gerechten die Indo-Chinees definiëren zijn chilli chicken, chilli paneer, Hakka noedels en Manchow soep. Ze delen DNA met de traditie van{' '}
-                <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indiaas straatvoedsel
                 </Link>{' '}
                 maar bezetten een geheel eigen register. De wok vervangt de tawa. Sojasaus staat naast de garam masala. Hetzelfde vakmanschap, een andere uitdrukking.
@@ -182,13 +189,13 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               </p>
               <p>
                 This is not Chinese food with an Indian twist. Indo Chinese is its own category, with its own techniques, its own heat profile, and its own iconic dishes. Schezwan chillies, soy sauce, vinegar and ginger-garlic paste form the base. Then Indian spices enter. The result is wok-tossed on high heat, fast-cooked and bold in flavour. Exactly what you will find on the{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indo Chinese menu at Chopras
                 </Link>.
               </p>
               <p>
                 The dishes that define Indo Chinese are chilli chicken, chilli paneer, Hakka noodles and Manchow soup. They share DNA with the tradition of{' '}
-                <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indian street food
                 </Link>{' '}
                 but occupy an entirely different register. The wok replaces the tawa. Soy sauce stands alongside garam masala. Same precision, different expression.
@@ -201,7 +208,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
       {/* The Only Indo Chinese Restaurant in Den Haag */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Het enige Indo-Chinese restaurant in Den Haag' : 'The Only Indo Chinese Restaurant in Den Haag'}
           </h2>
           {isNl ? (
@@ -211,17 +218,17 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               </p>
               <p>
                 Chopras Indian Restaurant op Leyweg 986 is een van de weinige restaurants in Den Haag dat authentiek Indo-Chinees eten serveert naast een volledig Noord-Indiaas menu. U kunt hier chilli chicken bestellen in dezelfde avond als een{' '}
-                <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   butter chicken
                 </Link>{' '}
                 of een{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   biryani
                 </Link>. Geen enkel ander restaurant in Den Haag biedt dat.
               </p>
               <p>
                 Dit is geen symbolische sectie op het menu. Chopras heeft een eigen Indo-Chinees menu opgebouwd dat naast de Noord-Indiase gerechten staat, niet eronder. Elk gerecht wordt roergebakken op bestelling met dezelfde verse kruiden die in elk ander gerecht in de keuken gaan.{' '}
-                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Reserveer een tafel
                 </Link>{' '}
                 en proef het verschil zelf.
@@ -234,17 +241,17 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               </p>
               <p>
                 Chopras Indian Restaurant at Leyweg 986 serves authentic Indo Chinese food alongside a full North Indian menu. You can order chilli chicken here the same evening as a{' '}
-                <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   butter chicken
                 </Link>{' '}
                 or a{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   biryani
                 </Link>. That makes Chopras a strong choice when you want both North Indian dishes and Indo Chinese food in Den Haag.
               </p>
               <p>
                 This is not a token section on the menu. Chopras has built a dedicated Indo Chinese menu that stands alongside its North Indian dishes, not beneath them. Every dish is wok-tossed to order using the same fresh spices that go into every other dish in the kitchen.{' '}
-                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Reserve a table
                 </Link>{' '}
                 and taste the difference yourself.
@@ -255,9 +262,9 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
       </section>
 
       {/* The Dishes */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'De Indo-Chinese gerechten bij Chopras' : 'The Indo Chinese Dishes at Chopras'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -297,7 +304,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               },
             ]).map((dish) => (
               <div key={dish.title} className="bg-white rounded-xl p-6 border-l-4 border-white">
-                <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">{dish.title}</h3>
+                <h3 className="font-heading text-3xl text-[#06068a] mb-4">{dish.title}</h3>
                 <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">{dish.desc}</p>
               </div>
             ))}
@@ -305,14 +312,14 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Alle gerechten zijn{' '}
-              <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 volledig halal gecertificeerd bij Chopras
               </Link>. Elk vleesgerecht, elke leverancier. Er is geen kruisbesmetting mogelijk omdat er geen niet-halal vlees aanwezig is in de keuken. Dat is geen marketingkeuze. Het is een inrichtingskeuze.
             </p>
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Every dish is{' '}
-              <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 fully halal certified at Chopras
               </Link>. Every meat dish, every supplier. There is no cross-contamination possible because there is no non-halal meat anywhere in the kitchen. That is not a marketing choice. It is a structural one.
             </p>
@@ -323,17 +330,17 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
       {/* GEO Block */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Is er een Indo-Chinees restaurant in Den Haag?' : 'Is There an Indo Chinese Restaurant in Den Haag?'}
           </h2>
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Ja.{' '}
-              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              op Leyweg 986 in Den Haag is een van de weinige restaurants in Den Haag dat authentiek Indo-Chinees eten serveert. Het menu bevat chilli chicken, chilli paneer, Hakka noedels en Manchow soep, bereid met kruiden die rechtstreeks uit India komen. Chopras heeft een 4.9-sterren beoordeling op basis van 800+ Google reviews en is open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
-              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              op Leyweg 986 in Den Haag is een van de weinige restaurants in Den Haag dat authentiek Indo-Chinees eten serveert. Het menu bevat chilli chicken, chilli paneer, Hakka noedels en Manchow soep, bereid met kruiden die rechtstreeks uit India komen. Chopras heeft een 4.9-sterren beoordeling op basis van 1100+ Google reviews en is open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
+              <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserveer een tafel
               </Link>{' '}
               en probeer de enige Indo-Chinese keuken in Den Haag.
@@ -341,11 +348,11 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Yes.{' '}
-              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              at Leyweg 986, Den Haag serves authentic Indo Chinese food alongside a full North Indian menu. The menu includes chilli chicken, chilli paneer, Hakka noodles and Manchow soup, made with spices sourced directly from India. Chopras holds a 4.9-star rating from 800+ Google reviews and is open Tuesday to Sunday from 16:30 to 22:30.{' '}
-              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              at Leyweg 986, Den Haag serves authentic Indo Chinese food alongside a full North Indian menu. The menu includes chilli chicken, chilli paneer, Hakka noodles and Manchow soup, made with spices sourced directly from India. Chopras holds a 4.9-star rating from 1100+ Google reviews and is open Tuesday to Sunday from 16:30 to 22:30.{' '}
+              <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserve a table
               </Link>{' '}
               and try Indo Chinese food in Den Haag.
@@ -354,23 +361,23 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Why Chopras - dark section */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
+      {/* PROOF - DARK */}
+      <section className="btn-gradient py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             {isNl ? 'Waarom Chopras het goed doet' : 'Why Chopras Gets It Right'}
           </h2>
           {isNl ? (
             <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
-              <p>
-                De 4.9-sterren beoordeling op basis van 800+ geverifieerde Google reviews is niet het argument. Het is de bevestiging. Het argument staat in de keuken: kruiden die rechtstreeks uit India worden betrokken en elke ochtend vers worden gemalen voor de service begint. De vluchtige aromatische oliën in komijn, koriander en chili beginnen te verdampen binnen uren na het malen. Dat verschil proeft u.
+              <p className="text-white/80">
+                De 4.9-sterren beoordeling op basis van 1100+ geverifieerde Google reviews is niet het argument. Het is de bevestiging. Het argument staat in de keuken: kruiden die rechtstreeks uit India worden betrokken en elke ochtend vers worden gemalen voor de service begint. De vluchtige aromatische oliën in komijn, koriander en chili beginnen te verdampen binnen uren na het malen. Dat verschil proeft u.
               </p>
-              <p>
+              <p className="text-white/80">
                 Indo-Chinees eten vereist hoge hitte, snelle bereiding en verse ingrediënten. De keuken bij Chopras is ingericht op precies dat. Geen voorgemaakte sauzen. Geen kruidenmix uit een zak. Dezelfde standaard die geldt voor elk Noord-Indiaas gerecht in de keuken geldt ook voor het Indo-Chinese menu.
               </p>
-              <p>
+              <p className="text-white/80">
                 Voor gasten die zoeken naar de{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-white font-semibold">
                   beste Indiase restaurantervaring in Den Haag
                 </Link>{' '}
                 en tegelijkertijd Indo-Chinees willen proberen: u hoeft niet te kiezen. Beide staan op hetzelfde menu, bereid in dezelfde keuken, op dezelfde avond.
@@ -378,15 +385,15 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
             </div>
           ) : (
             <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
-              <p>
-                The 4.9-star rating from 800+ verified Google reviews is not the argument. It is the confirmation. The argument lives in the kitchen: spices sourced directly from India, ground fresh every morning before service begins. The volatile aromatic oils in cumin, coriander and chilli begin evaporating within hours of grinding. That difference is what you taste.
+              <p className="text-white/80">
+                The 4.9-star rating from 1100+ verified Google reviews is not the argument. It is the confirmation. The argument lives in the kitchen: spices sourced directly from India, ground fresh every morning before service begins. The volatile aromatic oils in cumin, coriander and chilli begin evaporating within hours of grinding. That difference is what you taste.
               </p>
-              <p>
+              <p className="text-white/80">
                 Indo Chinese food demands high heat, fast cooking and fresh ingredients. The kitchen at Chopras is built for exactly that. No pre-made sauces. No spice blend from a bag. The same standard that applies to every North Indian dish in the kitchen applies to the Indo Chinese menu too.
               </p>
-              <p>
+              <p className="text-white/80">
                 For guests who want to find the{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-white font-semibold">
                   best Indian restaurant experience in Den Haag
                 </Link>{' '}
                 and try Indo Chinese at the same time: you do not have to choose. Both are on the same menu, prepared in the same kitchen, on the same evening.
@@ -398,26 +405,28 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
 
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Veelgestelde vragen over Indo-Chinees eten in Den Haag'
-              : 'Frequently Asked Questions About Indo Chinese Food in Den Haag'}
-          </h2>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              {isNl
+                ? 'Veelgestelde vragen over Indo-Chinees eten in Den Haag'
+                : 'Frequently Asked Questions About Indo Chinese Food in Den Haag'}
+            </h2>
+          </div>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Kom naar Chopras Indian Restaurant' : 'Visit Chopras Indian Restaurant'}
           </h2>
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               Chopras Indian Restaurant bevindt zich op Leyweg 986, 2545 GW Den Haag. Open van dinsdag tot en met zondag van 16:30 tot 22:30. Bekijk het volledige menu of reserveer direct een tafel. Voor{' '}
-              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 bezorging van Indo-Chinees eten in Den Haag
               </Link>{' '}
               kunt u ook online bestellen.
@@ -425,7 +434,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               Chopras Indian Restaurant is at Leyweg 986, 2545 GW Den Haag. Open Tuesday to Sunday from 16:30 to 22:30. View the full menu or reserve a table directly. For{' '}
-              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Indo Chinese food delivery in Den Haag
               </Link>{' '}
               you can also order online.
@@ -434,19 +443,19 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
             <Link
               href={`${base}/indian-food-delivery-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Bestellen' : 'Order Delivery'}
             </Link>

@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Chopras Indian Restaurant Does  -  The Numbers Behind the Rating</h2>
 
-<p>Chopras Indian Restaurant opened at Leyweg 986, Den Haag in 2023. Three years later, 4.9 stars from 800+ verified Google reviews is the measurable result. Few Indian restaurants in Den Haag show this combination of rating and review volume. A high rating with a low review count can be maintained by a small number of enthusiastic regulars. 4.9 stars from 800+ reviews represents something else entirely: consistency across hundreds of different guests, over multiple years, across different days and different dishes. The rating is confirmed on TheFork (8.7) and Tripadvisor (Excellent). Three independent platforms, three separate review populations, all converging on the same conclusion.</p>
+<p>Chopras Indian Restaurant opened at Leyweg 986, Den Haag in 2023. Three years later, 4.9 stars from 1100+ verified Google reviews is the measurable result. Few Indian restaurants in Den Haag show this combination of rating and review volume. A high rating with a low review count can be maintained by a small number of enthusiastic regulars. 4.9 stars from 1100+ reviews represents something else entirely: consistency across hundreds of different guests, over multiple years, across different days and different dishes. The rating is confirmed on TheFork (8.7) and Tripadvisor (Excellent). Three independent platforms, three separate review populations, all converging on the same conclusion.</p>
 
 <p>The spices at Chopras are sourced directly from India and ground in-house every morning before service. The tandoor clay oven reaches 400 degrees Celsius. The entire kitchen is <a href="https://chopras.nl/halal-food-den-haag">fully halal certified</a>  -  not selectively for certain dishes, but across every meat supplier and every item on the menu. There is no non-halal meat anywhere on the premises, which means no cross-contamination risk and no need for a guest to ask qualifying questions before ordering.</p>
 
@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Makes the Best Indian Restaurant in Den Haag?</h2>
 
-<p>Chopras Indian Restaurant at Leyweg 986 in Den Haag holds 4.9 stars from 800+ Google reviews  -  one of the strongest-rated Indian restaurants in the city. Open Tuesday to Sunday from 16:30 to 22:30, Chopras serves authentic North Indian food including <a href="https://chopras.nl/biryani-den-haag">saffron biryani</a>, tandoori dishes cooked at 400 degrees Celsius, street food chaat, and Indo Chinese cuisine. Fully halal certified. Spices are sourced directly from India and ground in-house daily. The restaurant serves Den Haag, Rijswijk, Delft, and Zoetermeer. Reserve a table at <a href="https://chopras.nl/contact">chopras.nl/contact</a>.</p>
+<p>Chopras Indian Restaurant at Leyweg 986 in Den Haag holds 4.9 stars from 1100+ Google reviews  -  one of the strongest-rated Indian restaurants in the city. Open Tuesday to Sunday from 16:30 to 22:30, Chopras serves authentic North Indian food including <a href="https://chopras.nl/biryani-den-haag">saffron biryani</a>, tandoori dishes cooked at 400 degrees Celsius, street food chaat, and Indo Chinese cuisine. Fully halal certified. Spices are sourced directly from India and ground in-house daily. The restaurant serves Den Haag, Rijswijk, Delft, and Zoetermeer. Reserve a table at <a href="https://chopras.nl/contact">chopras.nl/contact</a>.</p>
 
 <h2>Who This Restaurant Is For</h2>
 
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Frequently Asked Questions</h2>
 
 <h3>What is the best Indian restaurant in Den Haag?</h3>
-<p>Chopras Indian Restaurant at Leyweg 986, Den Haag holds 4.9 stars from 800+ Google reviews  -  one of the strongest-rated Indian restaurants in the city by both score and review volume. The kitchen grinds spices daily from whole spices sourced directly from India, operates a 400-degree clay tandoor oven, and is fully halal certified across the entire menu. Open Tuesday to Sunday from 16:30 to 22:30.</p>
+<p>Chopras Indian Restaurant at Leyweg 986, Den Haag holds 4.9 stars from 1100+ Google reviews  -  one of the strongest-rated Indian restaurants in the city by both score and review volume. The kitchen grinds spices daily from whole spices sourced directly from India, operates a 400-degree clay tandoor oven, and is fully halal certified across the entire menu. Open Tuesday to Sunday from 16:30 to 22:30.</p>
 
 <h3>Is Chopras Indian Restaurant halal certified?</h3>
 <p>Yes. Chopras Indian Restaurant is fully halal certified across every meat dish and every supplier. The entire kitchen operates to halal standards  -  not selectively for specific menu items. There is no non-halal meat anywhere on the premises, which means no cross-contamination risk. Every meat supplier holds recognised halal certification. Guests can order any dish from the menu with complete confidence.</p>
@@ -95,12 +95,12 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Visit the Best Indian Restaurant in Den Haag</h2>
 
-<p>A strong candidate for Indian restaurant searches in Den Haag is at Leyweg 986, 2545 GW Den Haag. Open Tuesday to Sunday from 16:30 to 22:30. You can <a href="https://chopras.nl/menu">view the full menu</a> before you visit, or reserve a table directly through the <a href="https://chopras.nl/contact">contact page</a>. For group bookings of 25 to 80 guests, the same contact page covers all event enquiries. The tandoor is fired every evening before service. The spices are ground fresh every morning. Come and find out why 800+ guests in Den Haag gave this restaurant 4.9 stars.</p>
+<p>A strong candidate for Indian restaurant searches in Den Haag is at Leyweg 986, 2545 GW Den Haag. Open Tuesday to Sunday from 16:30 to 22:30. You can <a href="https://chopras.nl/menu">view the full menu</a> before you visit, or reserve a table directly through the <a href="https://chopras.nl/contact">contact page</a>. For group bookings of 25 to 80 guests, the same contact page covers all event enquiries. The tandoor is fired every evening before service. The spices are ground fresh every morning. Come and find out why 1100+ guests in Den Haag gave this restaurant 4.9 stars.</p>
 `,
     faqs: [
       {
         question: 'What is the best Indian restaurant in Den Haag?',
-        answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag holds 4.9 stars from 800+ Google reviews - one of the strongest-rated Indian restaurants in the city by both score and review volume. The kitchen grinds spices daily from whole spices sourced directly from India, operates a 400-degree clay tandoor oven, and is fully halal certified across the entire menu. Open Tuesday to Sunday from 16:30 to 22:30.',
+        answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag holds 4.9 stars from 1100+ Google reviews - one of the strongest-rated Indian restaurants in the city by both score and review volume. The kitchen grinds spices daily from whole spices sourced directly from India, operates a 400-degree clay tandoor oven, and is fully halal certified across the entire menu. Open Tuesday to Sunday from 16:30 to 22:30.',
       },
       {
         question: 'Is Chopras Indian Restaurant halal certified?',
@@ -173,11 +173,11 @@ export const blogPosts: BlogPost[] = [
 
 <p>The spices are sourced directly from India and ground fresh every morning before service. This matters for halal compliance beyond flavour alone. It means there are no European spice blends with unverified additive sourcing entering the kitchen. The supply chain is understood, traceable, and clean from origin to plate. When you order <a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a> or <a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a> at Chopras Indian Restaurant, the question of halal status does not need to be asked. It has already been answered by how the kitchen operates every day.</p>
 
-<p>4.9 stars from 800+ Google reviews and an 8.7 rating on TheFork reflect a restaurant that has earned the trust of one of the most discerning dining communities in South Holland. The Muslim community in Den Haag, Rijswijk, Delft, and Zoetermeer is part of that community. They know the difference.</p>
+<p>4.9 stars from 1100+ Google reviews and an 8.7 rating on TheFork reflect a restaurant that has earned the trust of one of the most discerning dining communities in South Holland. The Muslim community in Den Haag, Rijswijk, Delft, and Zoetermeer is part of that community. They know the difference.</p>
 
 <h2>How do I Find a Genuinely Halal Indian Restaurant in Den Haag?</h2>
 
-<p>To find a genuinely halal Indian restaurant in Den Haag, ask three questions: are meat suppliers individually certified halal, is the entire kitchen free of non-halal proteins, and is alcohol absent from all preparation? Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag answers yes to all three. Fully halal certified since opening in 2023, rated 4.9 stars from 800+ reviews, open Tuesday to Sunday from 16:30. The <a href="https://chopras.nl/halal-food-den-haag">complete halal menu</a> covers 143 dishes across biryani, tandoori, and curries.</p>
+<p>To find a genuinely halal Indian restaurant in Den Haag, ask three questions: are meat suppliers individually certified halal, is the entire kitchen free of non-halal proteins, and is alcohol absent from all preparation? Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag answers yes to all three. Fully halal certified since opening in 2023, rated 4.9 stars from 1100+ reviews, open Tuesday to Sunday from 16:30. The <a href="https://chopras.nl/halal-food-den-haag">complete halal menu</a> covers 143 dishes across biryani, tandoori, and curries.</p>
 
 <h2>What the Full Halal Menu Looks Like</h2>
 
@@ -301,7 +301,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Hoe Vind Ik Goede Indiaas Catering in Den Haag?</h2>
 
-<p>Goede Indiaas catering in Den Haag begint bij een keuken die specerijen dagelijks vers maalt vanuit hele specerijen die rechtstreeks uit India worden ingevoerd, en die volledig halal gecertificeerd is. Chopras Indian Restaurant op <a href="https://chopras.nl/nl/contact">Leyweg 986, 2545 GW Den Haag</a> verzorgt professionele Indiase catering voor evenementen van 25 tot 80 gasten in Den Haag en omgeving. Het restaurant scoort 4.9 sterren op basis van 800 of meer Google recensies en is geopend van dinsdag tot en met zondag vanaf 16:30 uur. Vraag een vrijblijvende offerte aan via de <a href="https://chopras.nl/nl/catering">cateringpagina</a>.</p>
+<p>Goede Indiaas catering in Den Haag begint bij een keuken die specerijen dagelijks vers maalt vanuit hele specerijen die rechtstreeks uit India worden ingevoerd, en die volledig halal gecertificeerd is. Chopras Indian Restaurant op <a href="https://chopras.nl/nl/contact">Leyweg 986, 2545 GW Den Haag</a> verzorgt professionele Indiase catering voor evenementen van 25 tot 80 gasten in Den Haag en omgeving. Het restaurant scoort 4.9 sterren op basis van 1100 of meer Google recensies en is geopend van dinsdag tot en met zondag vanaf 16:30 uur. Vraag een vrijblijvende offerte aan via de <a href="https://chopras.nl/nl/catering">cateringpagina</a>.</p>
 
 <h2>Veelgestelde Vragen Over Indiaas Catering in Den Haag</h2>
 
@@ -402,7 +402,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Where Can I Find Good Vegetarian Indian Food in Den Haag?</h2>
 
-<p>Good vegetarian Indian food in Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, rated 4.9 stars from 800+ Google reviews. The vegetarian section covers <a href="https://chopras.nl/dal-makhani-den-haag">dal makhani</a>, soya chaap, paneer dishes, chana masala, palak paneer, baingan bharta, and the full <a href="https://chopras.nl/chaat-den-haag">chaat</a> street food lineup. Vegan options are clearly labelled and available across multiple dishes. Spices are sourced from India and ground fresh each morning before service. Open Tuesday to Sunday, 16:30 to 22:30. Closed Monday.</p>
+<p>Good vegetarian Indian food in Den Haag is at Chopras Indian Restaurant, Leyweg 986, 2545 GW Den Haag, rated 4.9 stars from 1100+ Google reviews. The vegetarian section covers <a href="https://chopras.nl/dal-makhani-den-haag">dal makhani</a>, soya chaap, paneer dishes, chana masala, palak paneer, baingan bharta, and the full <a href="https://chopras.nl/chaat-den-haag">chaat</a> street food lineup. Vegan options are clearly labelled and available across multiple dishes. Spices are sourced from India and ground fresh each morning before service. Open Tuesday to Sunday, 16:30 to 22:30. Closed Monday.</p>
 
 <h2>Who the Vegetarian Menu Is For</h2>
 

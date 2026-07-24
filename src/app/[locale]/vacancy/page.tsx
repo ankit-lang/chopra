@@ -1,452 +1,1014 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import JsonLd from '@/components/seo/JsonLd'
-import FaqAccordion from '@/components/sections/FaqAccordion'
-import VacancyForm from '@/components/sections/VacancyForm'
-import { getTranslations, type Locale } from '@/lib/useTranslations'
-import { getLocalizedUrl } from '@/lib/utils'
-import { getBreadcrumbSchema, getFaqPageSchema } from '@/lib/schema'
+"use client"
+import React, { useState } from "react";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import AnimatedContent from "@/components/ui/AnimatedContent";
 
-type Props = { params: { locale: Locale } }
+export default function VacancyPage({ params }: { params: { locale: string } }) {
+  const isNl = params?.locale === "nl";
+  const [expandedJob, setExpandedJob] = useState<string | null>(null);
 
-export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'nl' }]
-}
+  const toggleJob = (jobId: string) => {
+    if (expandedJob === jobId) {
+      setExpandedJob(null);
+    } else {
+      setExpandedJob(jobId);
+      setTimeout(() => {
+        document.getElementById("expandedContainer")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = params
-  const titles = {
-    en: 'Vacancies at Chopras Indian Restaurant Den Haag | Join Our Team',
-    nl: 'Vacatures bij Chopras Indiaas Restaurant Den Haag | Word Onderdeel van Ons Team',
-  }
-  const descriptions = {
-    en: 'Vacature Indiaas restaurant Den Haag. Join Chopras Indian Restaurant as a chef, front-of-house or catering assistant. Apply today at Leyweg 986.',
-    nl: 'Vacature Indiaas restaurant Den Haag. Word onderdeel van het Chopras-team als kok, bediening of cateringassistent. Solliciteer vandaag op Leyweg 986.',
-  }
-  return {
-    title: titles[locale],
-    description: descriptions[locale],
-    alternates: {
-      canonical: getLocalizedUrl(locale, 'vacancy'),
-      languages: {
-        en: getLocalizedUrl('en', 'vacancy'),
-        nl: getLocalizedUrl('nl', 'vacancy'),
-        'x-default': getLocalizedUrl('en', 'vacancy'),
-      },
-    },
-    openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
-      url: getLocalizedUrl(locale, 'vacancy'),
-      images: [{ url: '/og/home-og.jpg', width: 1200, height: 630, alt: 'Chopras Indian Restaurant Den Haag' }],
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: titles[locale],
-      description: descriptions[locale],
-      images: ['/og/home-og.jpg'],
-    },
-  }
-}
 
-const jobSchemas = [
-  {
-    '@context': 'https://schema.org', '@type': 'JobPosting',
-    title: 'Kitchen Chef - Indian Cuisine', datePosted: '2026-04-03', validThrough: '2026-12-31',
-    description: 'We are looking for an experienced Indian cuisine chef to join our kitchen team at Chopras Indian Restaurant in Den Haag. You will prepare authentic North Indian dishes using traditional spices and a real tandoor clay oven.',
-    employmentType: 'FULL_TIME',
-    hiringOrganization: { '@type': 'Organization', name: 'Chopras Indian Restaurant', sameAs: 'https://chopras.nl' },
-    jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'Leyweg 986', addressLocality: 'Den Haag', postalCode: '2545 GW', addressCountry: 'NL' } },
-  },
-  {
-    '@context': 'https://schema.org', '@type': 'JobPosting',
-    title: 'Front-of-House Server', datePosted: '2026-04-03', validThrough: '2026-12-31',
-    description: 'We are looking for a warm and guest-focused front-of-house server to join our team at Chopras Indian Restaurant in Den Haag. You will welcome guests, take orders, and ensure every guest has a memorable experience.',
-    employmentType: 'PART_TIME',
-    hiringOrganization: { '@type': 'Organization', name: 'Chopras Indian Restaurant', sameAs: 'https://chopras.nl' },
-    jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'Leyweg 986', addressLocality: 'Den Haag', postalCode: '2545 GW', addressCountry: 'NL' } },
-  },
-  {
-    '@context': 'https://schema.org', '@type': 'JobPosting',
-    title: 'Event and Catering Assistant', datePosted: '2026-04-03', validThrough: '2026-12-31',
-    description: 'We are looking for a reliable and energetic event and catering assistant to support our busy private event hall and catering operation at Chopras Indian Restaurant in Den Haag.',
-    employmentType: 'OTHER',
-    hiringOrganization: { '@type': 'Organization', name: 'Chopras Indian Restaurant', sameAs: 'https://chopras.nl' },
-    jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'Leyweg 986', addressLocality: 'Den Haag', postalCode: '2545 GW', addressCountry: 'NL' } },
-  },
-]
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-const faqsEn = [
-  {
-    question: 'Is Chopras Indian Restaurant in Den Haag hiring?',
-    answer: 'Yes. Chopras Indian Restaurant at Leyweg 986 in Den Haag is actively hiring kitchen chefs, front-of-house staff, and event catering assistants. Rated 4.9 stars from 800+ Google reviews since opening in 2023, Chopras runs service Tuesday to Sunday from 16:30 to 22:30. Applications are open now. Complete the form on this page or email info [at] chopras.nl to apply.',
-  },
-  {
-    question: 'What positions are available at Chopras Indian Restaurant?',
-    answer: 'Chopras Indian Restaurant in Den Haag currently has three open positions: a Kitchen Chef (Indian Cuisine) on a full-time or part-time basis, a Front-of-House Server on a flexible part-time schedule, and an Event and Catering Assistant on an event-based flexible schedule. All roles are based at Leyweg 986, Den Haag.',
-  },
-  {
-    question: 'Do I need restaurant experience to apply for a vacature at Chopras?',
-    answer: 'For the Kitchen Chef role, experience in North Indian cuisine is preferred and tandoor knowledge is a strong advantage. For the Front-of-House Server position, restaurant experience is a bonus but not required. Personality and genuine care for guests matter more. For the Catering Assistant role, a positive attitude and physical reliability are the main requirements.',
-  },
-  {
-    question: 'What are the working hours for staff at Chopras Indian Restaurant Den Haag?',
-    answer: 'Chopras Indian Restaurant is open Tuesday to Sunday from 16:30 to 22:30. Kitchen and front-of-house shifts run in the evenings and at weekends. Event and catering work takes place on an event-by-event basis, including weekends. All shifts are confirmed at least one week in advance.',
-  },
-  {
-    question: 'How do I apply for a vacancy at Chopras Indian Restaurant in Den Haag?',
-    answer: 'Complete the application form on this page with your name, contact details, the position you are applying for, and a short cover note. You can also email info [at] chopras.nl directly. We aim to respond to all applications within 3 working days. Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag.',
-  },
-]
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage(null);
 
-const faqsNl = [
-  {
-    question: 'Is Chopras Indian Restaurant in Den Haag op zoek naar personeel?',
-    answer: 'Ja. Chopras Indian Restaurant op Leyweg 986 in Den Haag is actief op zoek naar koks, bedieningsmedewerkers en cateringassistenten. Met een 4,9 sterrenbeoordeling van meer dan 800 Google reviews, geopend in 2023, verzorgt Chopras service van dinsdag tot en met zondag van 16:30 tot 22:30. Sollicitaties zijn nu open. Vul het formulier op deze pagina in of mail naar info [at] chopras.nl.',
-  },
-  {
-    question: 'Welke vacatures zijn er bij Chopras Indian Restaurant?',
-    answer: 'Chopras Indian Restaurant in Den Haag heeft momenteel drie openstaande functies: een Kok (Indiase Keuken) op fulltime of parttime basis, een Bedieningsmedewerker op flexibele parttime basis, en een Evenementen- en Cateringassistent op flexibele eventbasis. Alle functies zijn gebaseerd op Leyweg 986, Den Haag.',
-  },
-  {
-    question: 'Heb ik restaurantervaring nodig om te solliciteren bij Chopras?',
-    answer: 'Voor de koksfunctie is ervaring in de Noord-Indiase keuken gewenst en kennis van de tandoor is een groot voordeel. Voor de bedieningsfunctie is restaurantervaring een plus maar niet vereist. Persoonlijkheid en echte gastvrijheid tellen zwaarder. Voor de cateringassistentfunctie zijn een positieve instelling en betrouwbaarheid de belangrijkste vereisten.',
-  },
-  {
-    question: 'Wat zijn de werktijden bij Chopras Indian Restaurant Den Haag?',
-    answer: 'Chopras Indian Restaurant is open van dinsdag tot en met zondag van 16:30 tot 22:30. Keuken- en bedieningsdiensten zijn in de avonden en weekenden. Evenementen- en cateringwerk vindt per evenement plaats, inclusief weekenden. Alle diensten worden minimaal een week van tevoren bevestigd.',
-  },
-  {
-    question: 'Hoe solliciteer ik naar een vacature bij Chopras Indian Restaurant in Den Haag?',
-    answer: 'Vul het sollicitatieformulier op deze pagina in met uw naam, contactgegevens, de functie waarnaar u solliciteert en een korte motivatie. U kunt ook rechtstreeks e-mailen naar info [at] chopras.nl. Wij streven ernaar binnen 3 werkdagen op alle sollicitaties te reageren. Chopras Indian Restaurant is gevestigd op Leyweg 986, 2545 GW Den Haag.',
-  },
-]
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-export default function LocaleVacancyPage({ params }: Props) {
-  const { locale } = params
-  const tr = getTranslations(locale)
-  const base = locale === 'nl' ? '/nl' : ''
-  const isNl = locale === 'nl'
+    // determine job title based on the expanded section ID or state
+    // We already have 'expandedJob' in scope! We can map it.
+    const jobTitles: Record<string, string> = {
+      waiter: 'Waiter / Waitress',
+      cleaner: 'Kitchen Cleaning Medewerker',
+      delivery: 'Delivery Executive',
+      cook: 'Independent Working Cook',
+      internship: 'Internship Program'
+    };
+    const title = expandedJob ? jobTitles[expandedJob] : 'Unknown Job';
+    formData.append('jobTitle', title);
 
-  const vacancies = [
-    {
-      badge: tr.vacancy.fulltime,
-      badgeColor: 'bg-green-100 text-green-800',
-      title: tr.vacancy.vacancy1Title,
-      schedule: tr.vacancy.vacancy1Schedule,
-      desc: tr.vacancy.vacancy1Desc,
-      reqs: isNl
-        ? ['Ervaring in Noord-Indiase keuken gewenst', 'Kennis van de tandoor is een plus', 'Teamspeler, kalm onder druk', 'Werkvergunning in Nederland']
-        : ['Experience in North Indian cuisine preferred', 'Tandoor knowledge a plus', 'Team player, calm under pressure', 'Legal right to work in the Netherlands'],
-      bens: isNl
-        ? ['Competitief salaris te bespreken', 'Personeelsmaaltijden elke dienst', 'Echte doorgroeimogelijkheden']
-        : ['Competitive pay discussed at interview', 'Staff meals every shift', 'Real advancement as we grow'],
-    },
-    {
-      badge: tr.vacancy.parttime,
-      badgeColor: 'bg-blue-100 text-blue-800',
-      title: tr.vacancy.vacancy2Title,
-      schedule: tr.vacancy.vacancy2Schedule,
-      desc: tr.vacancy.vacancy2Desc,
-      reqs: isNl
-        ? ['Gastgericht en van nature warm', 'Communicatie in Nederlands of Engels', 'Betrouwbaar en punctueel', 'Restaurantervaring een plus, niet vereist']
-        : ['Guest-focused and naturally warm', 'Dutch or English communication', 'Reliable and punctual', 'Restaurant experience a plus, not required'],
-      bens: isNl
-        ? ['Fooien', 'Personeelsmaaltijden', 'Flexibele uren']
-        : ['Tips', 'Staff meals', 'Flexible hours around your schedule'],
-    },
-    {
-      badge: tr.vacancy.eventBased,
-      badgeColor: 'bg-purple-100 text-purple-800',
-      title: tr.vacancy.vacancy3Title,
-      schedule: tr.vacancy.vacancy3Schedule,
-      desc: tr.vacancy.vacancy3Desc,
-      reqs: isNl
-        ? ['Fysiek in staat tot opzet en afbraak', 'Punctueel en betrouwbaar', 'Flexibele beschikbaarheid inclusief weekenden', 'Positieve houding']
-        : ['Physically capable of setup and breakdown work', 'Punctual and reliable', 'Flexible availability including weekends', 'Positive attitude'],
-      bens: isNl
-        ? ['Uurloon', 'Verscheidenheid aan evenementen', 'Potentieel voor fulltime cateringrol']
-        : ['Hourly pay', 'Variety of events and venues', 'Potential to grow into a full-time catering role'],
-    },
-  ]
+    try {
+      const res = await fetch('/api/vacancy', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitMessage({ type: 'success', text: '✅ Application submitted! We will contact you soon.' });
+        form.reset();
+      } else {
+        setSubmitMessage({ type: 'error', text: '❌ Failed to submit. Please try again.' });
+      }
+    } catch (err) {
+      setSubmitMessage({ type: 'error', text: '❌ An error occurred. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <>
-      {jobSchemas.map((schema, i) => (
-        <JsonLd key={i} data={schema as Record<string, unknown>} />
-      ))}
-      <JsonLd data={getBreadcrumbSchema([
-        { name: tr.common.nav.home, item: getLocalizedUrl(locale) },
-        { name: tr.common.nav.vacancy, item: getLocalizedUrl(locale, 'vacancy') },
-      ])} />
-      <JsonLd data={getFaqPageSchema(isNl ? faqsNl : faqsEn)} />
+    <div className="min-h-screen bg-[#F7F8FC]">
+      <style>{`
+        /* card hover lift */
+        .job-card {
+          transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+        .job-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+        }
 
-      {/* Hero */}
-      <section className="bg-[#1B2B5E] py-24 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • JOIN OUR TEAM · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
-            </span>
+        /* expanded content smooth reveal */
+        .expanded-content {
+          transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* form input focus */
+        .form-input:focus {
+          outline: none;
+          ring: 2px solid #06068a;
+          border-color: #06068a;
+        }
+
+        /* subtle grain overlay */
+        .grain {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+          pointer-events: none;
+        }
+
+        /* badge pulse */
+        @keyframes pulse-soft {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
+        }
+        .badge-pulse {
+          animation: pulse-soft 2s infinite;
+        }
+      `}</style>
+
+      {/* ===== HERO ===== */}
+      <section className="relative overflow-hidden min-h-[500px] flex items-center text-white">
+        {/* Banner Images (Responsive) */}
+        <Image src="/vacancy/banner1.png?v=2" alt="Chopras Vacancies Desktop" fill priority className="object-cover hidden md:block brightness-105" />
+        <Image src="/vacancy/banner2.png?v=2" alt="Chopras Vacancies Mobile" fill priority className="object-cover block md:hidden brightness-105" />
+        {/* Subtle clear overlay */}
+        <div className="absolute inset-0 bg-black/15"></div>
+
+        <div className="relative w-full max-w-7xl mx-auto px-6 py-24 md:py-32 z-10">
+          <div className="max-w-2xl">
+            {/* Hiring Badge */}
+            <AnimatedContent distance={20} duration={0.8} delay={0.1}>
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-5 py-2 text-sm font-semibold text-white border border-white/20 shadow-lg mb-6">
+                {/* <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
+                </span> */}
+                We're hiring
+              </div>
+            </AnimatedContent>
+
+            {/* Heading */}
+            <AnimatedContent distance={30} duration={0.8} delay={0.2}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight font-heading drop-shadow-xl text-white">
+                {/* Join the <span className="">Chopras</span> family */}
+                {isNl ? "Word onderdeel van de" : "Join the"} <span className="">Chopras</span> {isNl ? "Familie" : "Family"}
+              </h1>
+            </AnimatedContent>
+
+            {/* Subtitle */}
+            <AnimatedContent distance={30} duration={0.8} delay={0.3}>
+              <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-xl leading-relaxed font-body drop-shadow-md font-medium">
+                {isNl ? (
+                  <>Heb je een passie voor de Indiase keuken en het creëren van onvergetelijke gastervaringen? We zijn altijd op zoek naar enthousiast talent om deel uit te maken van ons warme, multiculturele team in Den Haag.</>
+                ) : (
+                  <>Are you passionate about Indian cuisine and creating memorable dining experiences? We are always looking for enthusiastic talent to become part of a warm, multicultural team in The Hague.</>
+                )}
+              </p>
+            </AnimatedContent>
+
+            {/* Badges */}
+            <AnimatedContent distance={30} duration={0.8} delay={0.4}>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2 text-sm font-medium text-white border border-white/20 shadow-sm transition hover:bg-white/20">
+                  🍛 Den Haag
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2 text-sm font-medium text-white border border-white/20 shadow-sm transition hover:bg-white/20">
+                  ⏳ Full‑time &amp; part‑time
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2 text-sm font-medium text-white border border-white/20 shadow-sm transition hover:bg-white/20">
+                  🌍 Multicultural
+                </span>
+              </div>
+            </AnimatedContent>
           </div>
-          <h1 
-            className="font-heading text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-bold leading-tight"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
-          >
-            {tr.vacancy.heroH1}
-          </h1>
-          <p
-            className="font-body text-white/85 text-lg mt-4 max-w-2xl mx-auto leading-relaxed"
-            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
-          >
-            {tr.vacancy.heroSub}
-          </p>
         </div>
+
+        {/* decorative curve */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#F7F8FC] rounded-t-[40px] md:rounded-t-[60px] z-10"></div>
       </section>
 
-      {/* Why Work at Chopras */}
-      <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          {isNl ? (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                Het best beoordeelde Indiase restaurant van Den Haag groeit
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                Chopras Indian Restaurant opende op Leyweg in 2023 en verdiende een{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  4,9 sterrenbeoordeling van meer dan 800 Google reviews
-                </Link>{' '}
-                sneller dan enig ander Indiaas restaurant in Den Haag. Die beoordeling wordt niet gedragen door één goede week. Het is opgebouwd dienst na dienst door een team dat opkomt, het eten serieus neemt en gasten behandelt zoals zij behandeld willen worden. Als dat uw manier van werken is, hoort u hier.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                De keukenstandaard bij Chopras is specifiek. Hele specerijen worden rechtstreeks uit India betrokken en elke ochtend vers gemalen voordat de eerste bestelling binnenkomt. De{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  tandoor kleioven op Leyweg 986
-                </Link>{' '}
-                bereikt 400 graden Celsius. Dit is geen verkooppraatje. Het is de reden waarom een Chopras naan kooltjes aan de rand heeft en de chicken tikka een korstje heeft dat geen gewone oven kan geven. Koks die om dit verschil geven, zullen merken dat Chopras voor hen gebouwd is.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras groeit verder dan het restaurant zelf. De{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  privézaal op Leyweg
-                </Link>{' '}
-                biedt ruimte voor 25 tot 80 gasten voor diners en recepties. Het{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  cateringteam
-                </Link>{' '}
-                bedient evenementen in Den Haag, Rijswijk, Delft en Zoetermeer. Nieuwe functies ontstaan naarmate de activiteiten uitbreiden, en de mensen die nu meedoen zijn degenen die als eerste doorgroeien.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                Den Haag&apos;s strongly rated Indian restaurant is growing
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                Chopras Indian Restaurant opened on Leyweg in 2023 and earned{' '}
-                <Link href={`${base}/blog/best-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  4.9 stars from 800+ Google reviews
-                </Link>{' '}
-                faster than any other Indian restaurant in Den Haag. That rating is not held up by one good week. It is built service by service by a team that shows up, takes the food seriously, and treats guests the way they want to be treated. If that is how you work, you belong here.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                The kitchen standard at Chopras is specific. Whole spices are sourced directly from India and ground fresh every morning before the first order is placed. The{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  tandoor clay oven at Leyweg 986
-                </Link>{' '}
-                reaches 400 degrees Celsius. This is not a talking point. It is the reason a Chopras naan has char on the edges and the chicken tikka has a crust no conventional oven can give it. Chefs who care about this difference will find Chopras is built for them.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras is growing beyond the restaurant itself. The{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  private event hall at Leyweg
-                </Link>{' '}
-                handles private dinners and receptions for 25 to 80 guests. The{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  catering team
-                </Link>{' '}
-                serves events across Den Haag, Rijswijk, Delft, and Zoetermeer. New positions are opening as the operation expands, and the people who join now are the ones who will advance first.
-              </p>
-            </>
-          )}
-        </div>
-      </section>
+      {/* ===== VACANCIES GRID ===== */}
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <AnimatedContent distance={40} direction="vertical" duration={0.8}>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#06068a] font-heading">
+              {isNl ? "Ontdek onze" : "Explore our"} <span className="">{isNl ? "vacatures" : "vacancies"}</span>
+            </h2>
+            <p className="mt-2 text-[#1A1A1A]/60 max-w-2xl mx-auto">{isNl ? "Klik op een kaart om de volledige vacature te bekijken en direct te solliciteren." : "Click on any card to view the full job description and apply directly."}</p>
+          </div>
+        </AnimatedContent>
 
-      {/* Culture */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          {isNl ? (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                Hoe werken bij Chopras er echt uitziet
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                Werken bij Chopras Indian Restaurant is geen script-volgend werk. Het is deel uitmaken van een keuken- en bedieningsteam dat oprecht geeft om het eten goed te krijgen, gasten welkom te laten voelen en elkaar te steunen op een drukke zaterdagavond. Ons{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  menu van 143 gerechten
-                </Link>{' '}
-                omvat Noord-Indiase curry, tandoori en Indiaas streetfood dat echte vakkennis en zorg vereist. Dat is de standaard die wij hanteren, elke dienst.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                Wij zijn geopend in 2023 en groeien, wat betekent echte kansen voor mensen die met ons willen groeien. Onze koks leren elke dag technieken en geven die door. Ons bedieningsteam kent stammegasten binnen een paar weken bij naam. Onze{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  cateringactiviteiten
-                </Link>{' '}
-                zijn uitgegroeid tot het bedienen van Den Haag, Rijswijk, Delft en Zoetermeer. Als u blijft, groeit u.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Wij zoeken mensen die trots zijn op hun werk, komen opdagen wanneer zij zeggen dat zij zullen komen en echte energie meebrengen naar een dienst. Houding telt zwaarder dan ervaring. De vaardigheden kunnen wij leren.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                What working at Chopras actually looks like
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                Working at Chopras Indian Restaurant is not a script-following exercise. It is being part of a kitchen and front-of-house team that genuinely cares about getting the food right, about making guests feel welcome, and about having each other&apos;s backs on a busy Saturday night. Our{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  menu of 143 dishes
-                </Link>{' '}
-                spans North Indian curries, tandoori and Indian street food that requires real skill and care. That is the standard we hold ourselves to, every service.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
-                We opened in 2023 and we are growing, which means real opportunities for people who want to grow with us. Our chefs are learning and passing on techniques every day. Our front-of-house team know regulars by name within a few weeks. Our{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  catering operation
-                </Link>{' '}
-                has expanded to serve Den Haag, Rijswijk, Delft, and Zoetermeer. If you stay, you grow.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                We want people who take pride in their work, show up when they say they will, and bring actual energy to a shift. Attitude matters more than experience. The skills, we can teach.
-              </p>
-            </>
-          )}
-        </div>
-      </section>
-
-      {/* Vacancies */}
-      <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
-            {tr.vacancy.vacanciesH2}
-          </h2>
-          <div className="space-y-8 mt-10">
-            {vacancies.map((v) => (
-              <div key={v.title} className="bg-[#F7F8FC] rounded-2xl p-8 border border-gray-100 shadow-sm">
-                <div className="flex flex-wrap items-start gap-4 mb-4">
-                  <span className={`${v.badgeColor} text-xs px-3 py-1 rounded-full font-medium`}>
-                    {v.badge}
-                  </span>
+        {/* Cards Grid */}
+        <div id="jobsGrid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* ====== CARD: Waiter ====== */}
+          <AnimatedContent delay={0.1} distance={40} direction="vertical" duration={0.8} className="h-full">
+            <div
+              className="job-card bg-white h-full flex flex-col rounded-3xl shadow-lg shadow-[#06068a]/5 border border-[#06068a]/10 overflow-hidden cursor-pointer group transition-all"
+              onClick={() => toggleJob("waiter")}
+            >
+              <div className="h-48 relative flex items-center justify-center overflow-hidden bg-[#06068a]">
+                <div className="absolute inset-0 bg-white"></div>
+                <Image src="/vacancy/Waitress.png?v=9" alt="Waiter / Waitress" fill className="object-contain transition-transform duration-500 group-hover:scale-105 brightness-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06068a]/60 to-transparent"></div>
+                <span className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full border border-white/20 z-10">{isNl ? "Bediening" : "Service"}</span>
+                <h3 className="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white font-heading z-10 drop-shadow-md">
+                  Waiter / Waitress
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <p className="text-[#1A1A1A]/60 text-sm">Chopras Indian Restaurant</p>
+                  <span className="bg-[#06068a]/10 text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ml-2">{isNl ? "Fulltime & Parttime" : "Full‑time & Part‑time"}</span>
                 </div>
-                <h3 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-2 leading-[1.3]">{v.title}</h3>
-                <p className="text-gray-500 text-sm mb-4">{v.schedule}</p>
-                <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-6">{v.desc}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed line-clamp-2">
+                  {isNl ? "Enthousiaste, klantgerichte service professional. Begroet gasten, neem bestellingen op en creëer onvergetelijke gastervaringen." : "Enthusiastic, customer‑oriented service professional. Greet guests, take orders, and create memorable dining experiences."}
+                </p>
+                <div className="mt-4 flex items-center justify-center border-t border-[#06068a]/10 pt-4">
+                  <span className="text-sm font-medium text-[#06068a] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">{isNl ? "Bekijk details →" : "View details →"}</span>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+
+          {/* ====== CARD: Kitchen Cleaner ====== */}
+          <AnimatedContent delay={0.2} distance={40} direction="vertical" duration={0.8} className="h-full">
+            <div
+              className="job-card bg-white h-full flex flex-col rounded-3xl shadow-lg shadow-[#06068a]/5 border border-[#06068a]/10 overflow-hidden cursor-pointer group transition-all"
+              onClick={() => toggleJob("cleaner")}
+            >
+              <div className="h-48 relative flex items-center justify-center overflow-hidden bg-[#06068a]">
+                <div className="absolute inset-0 bg-white"></div>
+                <Image src="/vacancy/Kitchen cleaning medeworker.png?v=9" alt="Kitchen Cleaner" fill className="object-contain transition-transform duration-500 group-hover:scale-105 brightness-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06068a]/60 to-transparent"></div>
+                <span className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full border border-white/20 z-10">{isNl ? "Hygiëne" : "Hygiene"}</span>
+                <h3 className="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white font-heading z-10 drop-shadow-md leading-tight">
+                  Kitchen Cleaning
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <p className="text-[#1A1A1A]/60 text-sm">Chopras Indian Restaurant</p>
+                  <span className="bg-[#06068a]/10 text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ml-2">{isNl ? "Parttime" : "Part‑time"}</span>
+                </div>
+                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed line-clamp-2">
+                  {isNl ? "Houd onze keuken en restaurant brandschoon. Afwassen, oppervlakken desinfecteren en het team ondersteunen." : "Keep our kitchen and restaurant spotless. Wash dishes, sanitize surfaces, and support the team."}
+                </p>
+                <div className="mt-4 flex items-center justify-center border-t border-[#06068a]/10 pt-4">
+                  <span className="text-sm font-medium text-[#06068a] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">{isNl ? "Bekijk details →" : "View details →"}</span>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+
+          {/* ====== CARD: Delivery ====== */}
+          <AnimatedContent delay={0.3} distance={40} direction="vertical" duration={0.8} className="h-full">
+            <div
+              className="job-card bg-white h-full flex flex-col rounded-3xl shadow-lg shadow-[#06068a]/5 border border-[#06068a]/10 overflow-hidden cursor-pointer group transition-all"
+              onClick={() => toggleJob("delivery")}
+            >
+              <div className="h-48 relative flex items-center justify-center overflow-hidden bg-[#06068a]">
+                <div className="absolute inset-0 bg-white"></div>
+                <Image src="/vacancy/delivery.png?v=9" alt="Delivery Executive" fill className="object-contain transition-transform duration-500 group-hover:scale-105 brightness-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06068a]/60 to-transparent"></div>
+                <span className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full border border-white/20 z-10">{isNl ? "Bezorging" : "Delivery"}</span>
+                <h3 className="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white font-heading z-10 drop-shadow-md leading-tight">
+                  Delivery Executive
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <p className="text-[#1A1A1A]/60 text-sm">Chopras Indian Restaurant</p>
+                  <span className="bg-[#06068a]/10 text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ml-2">{isNl ? "Flexibel" : "Flexible"}</span>
+                </div>
+                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed line-clamp-2">
+                  {isNl ? "Betrouwbare en punctuele chauffeur. Bezorg bestellingen veilig, controleer details en vertegenwoordig Chopras met een glimlach." : "Reliable and punctual driver. Deliver orders safely, verify details, and represent Chopras with a smile."}
+                </p>
+                <div className="mt-4 flex items-center justify-center border-t border-[#06068a]/10 pt-4">
+                  <span className="text-sm font-medium text-[#06068a] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">{isNl ? "Bekijk details →" : "View details →"}</span>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+
+          {/* ====== CARD: Independent Cook ====== */}
+          <AnimatedContent delay={0.4} distance={40} direction="vertical" duration={0.8} className="h-full">
+            <div
+              className="job-card bg-white h-full flex flex-col rounded-3xl shadow-lg shadow-[#06068a]/5 border border-[#06068a]/10 overflow-hidden cursor-pointer group transition-all"
+              onClick={() => toggleJob("cook")}
+            >
+              <div className="h-48 relative flex items-center justify-center overflow-hidden bg-[#06068a]">
+                <div className="absolute inset-0 bg-white"></div>
+                <Image src="/vacancy/Cooks cooking - 1.png?v=9" alt="Independent Working Cook" fill className="object-contain transition-transform duration-500 group-hover:scale-105 brightness-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06068a]/60 to-transparent"></div>
+                <span className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full border border-white/20 z-10">{isNl ? "Keuken" : "Kitchen"}</span>
+                <h3 className="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white font-heading z-10 drop-shadow-md leading-tight">
+                  Independent Working Cook
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <p className="text-[#1A1A1A]/60 text-sm">Chopras Indian Restaurant</p>
+                  <span className="bg-[#06068a]/10 text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ml-2">{isNl ? "Fulltime" : "Full‑time"}</span>
+                </div>
+                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed line-clamp-2">
+                  {isNl ? "MBO niveau 3 kok. Bereid authentieke Indiase gerechten, beheer mise-en-place en groei met ons mee. Training inbegrepen." : "MBO level 3 cook. Prepare authentic Indian dishes, manage mise‑en‑place, and grow with us. Training provided."}
+                </p>
+                <div className="mt-4 flex items-center justify-center border-t border-[#06068a]/10 pt-4">
+                  <span className="text-sm font-medium text-[#06068a] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">{isNl ? "Bekijk details →" : "View details →"}</span>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+
+          {/* ====== CARD: Internship ====== */}
+          <AnimatedContent delay={0.5} distance={40} direction="vertical" duration={0.8} className="h-full">
+            <div
+              className="job-card bg-white h-full flex flex-col rounded-3xl shadow-lg shadow-[#06068a]/5 border border-[#06068a]/10 overflow-hidden cursor-pointer group transition-all"
+              onClick={() => toggleJob("internship")}
+            >
+              <div className="h-48 relative flex items-center justify-center overflow-hidden bg-[#06068a]">
+                <div className="absolute inset-0 bg-white"></div>
+                <Image src="/vacancy/Internship opportunities.png?v=9" alt="Internship Program" fill className="object-contain transition-transform duration-500 group-hover:scale-105 brightness-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06068a]/60 to-transparent"></div>
+                <span className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full border border-white/20 z-10">{isNl ? "Stage" : "Internship"}</span>
+                <h3 className="absolute bottom-4 left-6 right-6 text-2xl font-bold text-white font-heading z-10 drop-shadow-md leading-tight">
+                  Internship Program
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <p className="text-[#1A1A1A]/60 text-sm">Chopras Indian Restaurant</p>
+                  <span className="bg-[#06068a]/10 text-[#06068a] text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ml-2">{isNl ? "Flexibel" : "Flexible"}</span>
+                </div>
+                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed line-clamp-2">
+                  {isNl ? "Krijg praktijkervaring in hospitality, marketing, operations en F&B management in een internationale setting." : "Gain real-world skills in hospitality, marketing, operations, and F&B management in an international setting."}
+                </p>
+                <div className="mt-4 flex items-center justify-center border-t border-[#06068a]/10 pt-4">
+                  <span className="text-sm font-medium text-[#06068a] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">{isNl ? "Bekijk details →" : "View details →"}</span>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+        </div>
+      </section>
+
+      {/* ===== EXPANDED DETAILS ===== */}
+      <div id="expandedContainer" className="max-w-4xl mx-auto px-6 pb-20">
+
+        {/* ===== WAITER ===== */}
+        {expandedJob === "waiter" && (
+          <div
+            id="waiter-expanded"
+            className="expanded-content bg-white rounded-3xl shadow-2xl shadow-[#06068a]/10 border border-[#06068a]/10 overflow-hidden"
+          >
+            <div className="bg-[#06068a] px-8 py-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl font-bold text-white font-heading">Waiter / Waitress</h3>
+              </div>
+              <button
+                onClick={() => toggleJob("waiter")}
+                className="text-white/70 hover:text-white transition text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Type" : "Type"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Fulltime & Parttime" : "Full‑time & Part‑time"}</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Locatie" : "Location"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">Den Haag</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Start</span>
+                  <span className="font-semibold text-[#1A1A1A]">ASAP</span>
+                </div>
+              </div>
+              <div className="prose prose-sm max-w-none text-[#1A1A1A]/80">
+                <p className="font-medium text-base">
+                  {isNl ? "We zijn op zoek naar enthousiaste en klantgerichte obers/serveersters om ons team bij Chopras Indiaas restaurant in Den Haag te versterken. Je bent het gezicht van onze service en zorgt ervoor dat elke gast zich welkom voelt en geniet van een onvergetelijke gastervaring." : "We are looking for enthusiastic and customer-oriented Waiters/Waitresses to join our team at Chopras Indian restaurant in Den Haag. You will be the face of our service, ensuring that every guest feels welcome and enjoys a memorable dining experience."}
+                </p>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">{isNl ? "Verantwoordelijkheden" : "Responsibilities"}</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Gasten op een vriendelijke en professionele manier begroeten en placeren</li>
+                      <li>Nauwkeurig opnemen van bestellingen voor eten en drinken</li>
+                      <li>Tijdig serveren van gerechten en drankjes</li>
+                      <li>Uitleg geven over menu-items en aanbevelingen doen</li>
+                      <li>Schoonhouden van tafels en het restaurantgedeelte</li>
+                      <li>Afhandelen van betalingen en verwerken van rekeningen</li>
+                      <li>Afstemmen met keukenpersoneel voor een soepele service</li>
+                      <li>Helpen bij het inpakken van afhaalbestellingen</li>
+                      <li>Coördineren met bezorgers om tijdige verzending van bestellingen te garanderen</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Greeting and seating guests in a friendly and professional manner</li>
+                      <li>Taking food and beverage orders accurately</li>
+                      <li>Serving dishes and drinks in a timely manner</li>
+                      <li>Explaining menu items and making recommendations</li>
+                      <li>Maintaining cleanliness of tables and dining area</li>
+                      <li>Handling payments and processing bills</li>
+                      <li>Coordinating with kitchen staff for smooth service</li>
+                      <li>Assisting with packaging of takeaway orders</li>
+                      <li>Coordinating with delivery drivers to ensure timely dispatch of orders</li>
+                    </>
+                  )}
+                </ul>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wat wij bieden" : "What We Offer"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Competitief salaris</li>
+                      <li>Personeelsmaaltijden tijdens diensten</li>
+                      <li>Flexibele werktijden</li>
+                      <li>Een vriendelijke, multiculturele teamomgeving</li>
+                      <li>Mogelijkheden om te leren over authentieke Indiase keuken en gastvrijheid</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Competitive salary</li>
+                      <li>Staff meals during shifts</li>
+                      <li>Flexible working hours</li>
+                      <li>A friendly, multicultural team environment</li>
+                      <li>Opportunities to learn about authentic Indian cuisine and hospitality</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+              <div className="mt-8 border-t border-[#06068a]/10 pt-6">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mb-4">{isNl ? "Solliciteer voor deze functie" : "Apply for this position"}</h4>
+                <form
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  onSubmit={handleSubmit}
+                >
                   <div>
-                    <h4 className="font-semibold text-[#1B2B5E] mb-2 text-sm uppercase tracking-wide">
-                      {tr.vacancy.requirements}
-                    </h4>
-                    <ul className="space-y-1.5">
-                      {v.reqs.map((req) => (
-                        <li key={req} className="flex items-start gap-2 text-gray-600 text-sm">
-                          <span className="text-white mt-0.5">✓</span>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Volledige Naam *" : "Full Name *"}</label>
+                    <input type="text" name="fullName" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Priya Sharma" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#1B2B5E] mb-2 text-sm uppercase tracking-wide">
-                      {tr.vacancy.benefits}
-                    </h4>
-                    <ul className="space-y-1.5">
-                      {v.bens.map((ben) => (
-                        <li key={ben} className="flex items-start gap-2 text-gray-600 text-sm">
-                          <span className="text-white mt-0.5">✓</span>
-                          {ben}
-                        </li>
-                      ))}
-                    </ul>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
+                    <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
+                    <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO Hospitality, Bachelor's degree" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Interessegebied" : "Area of Interest"}</label>
+                    <input type="text" name="interest" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Fine dining, Indian cuisine, Customer service" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "CV toevoegen *" : "Attach Resume / CV *"}</label>
+                    <input type="file" name="resume" required accept=".pdf,.doc,.docx" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2 text-sm bg-[#F7F8FC] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#06068a]/10 file:text-[#06068a] hover:file:bg-[#06068a]/20" />
+                  </div>
+                  <div className="sm:col-span-2 mt-2">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#06068a] hover:bg-[#06068a] disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-[#06068a]/20">{isSubmitting ? isNl ? "Bezig met indienen..." : "Submitting..." : isNl ? "Sollicitatie indienen →" : "Submit Application →"}</button>
+                    {submitMessage && <div className={`mt-3 p-3 rounded-xl text-sm font-medium ${submitMessage.type === "success" ? "bg-emerald-100 text-emerald-1100" : "bg-red-100 text-red-1100"}`}>{submitMessage.text}</div>}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===== CLEANER ===== */}
+        {expandedJob === "cleaner" && (
+          <div
+            id="cleaner-expanded"
+            className="expanded-content bg-white rounded-3xl shadow-2xl shadow-[#06068a]/10 border border-[#06068a]/10 overflow-hidden"
+          >
+            <div className="bg-[#06068a] px-8 py-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl font-bold text-white font-heading">Kitchen Cleaning Medewerker</h3>
+              </div>
+              <button
+                onClick={() => toggleJob("cleaner")}
+                className="text-white/70 hover:text-white transition text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Type" : "Type"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Parttime" : "Part‑time"}</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Locatie" : "Location"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">Den Haag</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Hours</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Flexibel" : "Flexible"}</span>
+                </div>
+              </div>
+              <div className="prose prose-sm max-w-none text-[#1A1A1A]/80">
+                <p className="font-medium text-base">
+                  {isNl ? "We zijn op zoek naar een betrouwbare en hardwerkende Kitchen Cleaning Medewerker om het Chopras Indiaas restaurant en de keukenactiviteiten te ondersteunen. Je speelt een belangrijke rol bij het schoon, hygiënisch en georganiseerd houden van zowel de keuken als het restaurant, terwijl je ook helpt met het inpakken van afhaalmaaltijden en de coördinatie van de bezorging." : "We are seeking a reliable and hardworking Kitchen Cleaning Medewerker to support Chopras Indian restaurant and kitchen operations. You will play an important role in keeping both the kitchen and the restaurant clean, hygienic, and well-organized, while also assisting with takeaway packaging and delivery coordination."}
+                </p>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">{isNl ? "Verantwoordelijkheden" : "Responsibilities"}</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Afwassen van borden, bestek en keukenapparatuur</li>
+                      <li>Schoonhouden van keukenoppervlakken, vloeren en opslagruimtes</li>
+                      <li>Regelmatig schoonmaken en desinfecteren van toiletten en badkamers</li>
+                      <li>Schoonmaken van restaurantvloeren, tafels en gastenruimtes</li>
+                      <li>Handhaven van hoge hygiëne- en veiligheidsnormen in het hele restaurant</li>
+                      <li>Afval correct en veilig weggooien</li>
+                      <li>Koks assisteren bij basistaken in de keuken indien nodig</li>
+                      <li>Helpen bij het inpakken van afhaal- en bezorgbestellingen</li>
+                      <li>Coördineren met bezorgers voor een correcte en tijdige verzending</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Washing dishes, utensils, and kitchen equipment</li>
+                      <li>Keeping kitchen surfaces, floors, and storage areas clean</li>
+                      <li>Cleaning and sanitizing toilets and bathrooms regularly</li>
+                      <li>Cleaning restaurant floors, tables, and customer areas</li>
+                      <li>Maintaining high standards of hygiene and sanitation across the restaurant</li>
+                      <li>Disposing of waste properly and safely</li>
+                      <li>Assisting chefs with basic kitchen tasks when required</li>
+                      <li>Helping with packaging of takeaway and delivery orders</li>
+                      <li>Coordinating with delivery drivers to ensure correct and timely dispatch</li>
+                    </>
+                  )}
+                </ul>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wat wij bieden" : "What We Offer"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Competitief salaris</li>
+                      <li>Personeelsmaaltijden tijdens diensten</li>
+                      <li>Stabiel werk in een professionele restaurantomgeving</li>
+                      <li>Ondersteunend en multicultureel team</li>
+                      <li>Flexibele werktijden</li>
+                      <li>Mogelijkheden om meer te leren over de authentieke Indiase keuken en gastvrijheid</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Competitive salary</li>
+                      <li>Staff meals during shifts</li>
+                      <li>Stable work in a professional restaurant environment</li>
+                      <li>Supportive and multicultural team</li>
+                      <li>Flexible working hours</li>
+                      <li>Opportunities to learn about authentic Indian cuisine and hospitality</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+              <div className="mt-8 border-t border-[#06068a]/10 pt-6">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mb-4">{isNl ? "Solliciteer voor deze functie" : "Apply for this position"}</h4>
+                <form
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  onSubmit={handleSubmit}
+                >
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Volledige Naam *" : "Full Name *"}</label>
+                    <input type="text" name="fullName" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Raj Patel" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
+                    <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
+                    <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO, VMBO, or equivalent" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Interessegebied" : "Area of Interest"}</label>
+                    <input type="text" name="interest" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Hygiene, Kitchen operations" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "CV toevoegen *" : "Attach Resume / CV *"}</label>
+                    <input type="file" name="resume" required accept=".pdf,.doc,.docx" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2 text-sm bg-[#F7F8FC] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#06068a]/10 file:text-[#06068a] hover:file:bg-[#06068a]/20" />
+                  </div>
+                  <div className="sm:col-span-2 mt-2">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#06068a] hover:bg-[#06068a] disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-[#06068a]/20">{isSubmitting ? isNl ? "Bezig met indienen..." : "Submitting..." : isNl ? "Sollicitatie indienen →" : "Submit Application →"}</button>
+                    {submitMessage && <div className={`mt-3 p-3 rounded-xl text-sm font-medium ${submitMessage.type === "success" ? "bg-emerald-100 text-emerald-1100" : "bg-red-100 text-red-1100"}`}>{submitMessage.text}</div>}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===== DELIVERY ===== */}
+        {expandedJob === "delivery" && (
+          <div
+            id="delivery-expanded"
+            className="expanded-content bg-white rounded-3xl shadow-2xl shadow-[#06068a]/10 border border-[#06068a]/10 overflow-hidden"
+          >
+            <div className="bg-[#06068a] px-8 py-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl font-bold text-white font-heading">Delivery Executive</h3>
+              </div>
+              <button
+                onClick={() => toggleJob("delivery")}
+                className="text-white/70 hover:text-white transition text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Type" : "Type"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Flexibel" : "Flexible"}</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Locatie" : "Location"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">Den Haag</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">License</span>
+                  <span className="font-semibold text-[#1A1A1A]">Preferred</span>
+                </div>
+              </div>
+              <div className="prose prose-sm max-w-none text-[#1A1A1A]/80">
+                <p className="font-medium text-base">
+                  {isNl ? "We zijn op zoek naar een betrouwbare, punctuele en klantvriendelijke bezorgmedewerker om ons team bij Chopras Indiaas Restaurant te versterken. De ideale kandidaat is verantwoordelijk voor de tijdige en nauwkeurige bezorging van bestellingen, met behoud van uitstekende klantenservice en een professionele vertegenwoordiging van het restaurant. Kandidaten met een rijbewijs en kennis van lokale routes hebben een streepje voor." : "We are seeking a reliable, punctual, and customer-friendly Delivery Executive to join Chopras Indian Restaurant. The ideal candidate will be responsible for ensuring timely and accurate delivery of food orders while maintaining excellent customer service and representing the restaurant professionally. Candidates with a driving license and knowledge of local routes will have an added advantage."}
+                </p>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">{isNl ? "Verantwoordelijkheden" : "Responsibilities"}</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Voedselbestellingen veilig en op tijd bij klanten bezorgen</li>
+                      <li>Bestelgegevens verifiëren voor verzending en bezorging</li>
+                      <li>Afstemmen met keukenpersoneel om ervoor te zorgen dat bestellingen compleet en accuraat zijn</li>
+                      <li>Contant geld innen of betalingen verwerken indien nodig</li>
+                      <li>Zorgen voor netheid en basisonderhoud van het bezorgvoertuig/fiets</li>
+                      <li>Te allen tijde de verkeersregels en veiligheidsvoorschriften volgen</li>
+                      <li>Helpen bij het inpakken en voorbereiden van afhaalbestellingen indien nodig</li>
+                      <li>Professioneel communiceren met klanten en restaurantpersoneel</li>
+                      <li>Bezorgproblemen, vertragingen of feedback van klanten melden aan het management</li>
+                      <li>Zorgen voor een positieve klantervaring tijdens elke bezorging</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Deliver food orders safely and on time to customers</li>
+                      <li>Verify order details before dispatch and delivery</li>
+                      <li>Coordinate with kitchen staff to ensure orders are complete and accurate</li>
+                      <li>Collect cash or process payments when required</li>
+                      <li>Maintain cleanliness and basic upkeep of the delivery vehicle/bike</li>
+                      <li>Follow traffic rules and safety regulations at all times</li>
+                      <li>Assist with packaging and preparing takeaway orders when needed</li>
+                      <li>Communicate professionally with customers and restaurant staff</li>
+                      <li>Report delivery issues, delays, or customer feedback to manage</li>
+                      <li>Ensure a positive customer experience during every delivery</li>
+                    </>
+                  )}
+                </ul>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wat wij bieden" : "What We Offer"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Competitief salaris</li>
+                      <li>Bezorgtoeslagen en prestatiebonussen (indien van toepassing)</li>
+                      <li>Personeelsmaaltijden tijdens diensten</li>
+                      <li>Stabiel werk in een professionele restaurantomgeving</li>
+                      <li>Ondersteunend en multicultureel team</li>
+                      <li>Flexibele werktijden</li>
+                      <li>Mogelijkheden voor loopbaangroei binnen de horeca</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Competitive salary</li>
+                      <li>Delivery allowances and performance incentives (if applicable)</li>
+                      <li>Staff meals during shifts</li>
+                      <li>Stable work in a professional restaurant environment</li>
+                      <li>Supportive and multicultural team</li>
+                      <li>Flexible working hours</li>
+                      <li>Opportunities for career growth within the hospitality industry</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+              <div className="mt-8 border-t border-[#06068a]/10 pt-6">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mb-4">{isNl ? "Solliciteer voor deze functie" : "Apply for this position"}</h4>
+                <form
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  onSubmit={handleSubmit}
+                >
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Volledige Naam *" : "Full Name *"}</label>
+                    <input type="text" name="fullName" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Arjun Singh" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
+                    <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
+                    <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO, HBO, or equivalent" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Interessegebied" : "Area of Interest"}</label>
+                    <input type="text" name="interest" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Delivery, Customer service, Logistics" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "CV toevoegen *" : "Attach Resume / CV *"}</label>
+                    <input type="file" name="resume" required accept=".pdf,.doc,.docx" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2 text-sm bg-[#F7F8FC] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#06068a]/10 file:text-[#06068a] hover:file:bg-[#06068a]/20" />
+                  </div>
+                  <div className="sm:col-span-2 mt-2">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#06068a] hover:bg-[#06068a] disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-[#06068a]/20">{isSubmitting ? isNl ? "Bezig met indienen..." : "Submitting..." : isNl ? "Sollicitatie indienen →" : "Submit Application →"}</button>
+                    {submitMessage && <div className={`mt-3 p-3 rounded-xl text-sm font-medium ${submitMessage.type === "success" ? "bg-emerald-100 text-emerald-1100" : "bg-red-100 text-red-1100"}`}>{submitMessage.text}</div>}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ===== COOK ===== */}
+        {expandedJob === "cook" && (
+          <div
+            id="cook-expanded"
+            className="expanded-content bg-white rounded-3xl shadow-2xl shadow-[#06068a]/10 border border-[#06068a]/10 overflow-hidden"
+          >
+            <div className="bg-[#06068a] px-8 py-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl font-bold text-white font-heading">Independent Working Cook</h3>
+              </div>
+              <button
+                onClick={() => toggleJob("cook")}
+                className="text-white/70 hover:text-white transition text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-4 gap-4 mb-6">
+                <div className="bg-[#F7F8FC] rounded-xl p-3 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Contract</span>
+                  <span className="font-semibold text-[#1A1A1A] text-sm">Temporary</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-3 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Hours</span>
+                  <span className="font-semibold text-[#1A1A1A] text-sm">38 / week</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-3 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Salaris" : "Salary"}</span>
+                  <span className="font-semibold text-[#1A1A1A] text-sm">€2.700 – €3.700</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-3 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Start</span>
+                  <span className="font-semibold text-[#1A1A1A] text-sm">01‑04‑2026</span>
+                </div>
+              </div>
+              <div className="prose prose-sm max-w-none text-[#1A1A1A]/80">
+                <p className="font-medium text-base">
+                  {isNl ? (
+                    <>
+                      Restaurant Chopra's Indian Restaurant te Den Haag zoekt een zelfstandig werkend kok. Chopra's Indian Restaurant in Den Haag is gespecialiseerd in de traditionele Indiase keuken. Ter uitbreiding van ons keukenteam zijn wij op zoek naar een Zelfstandig Werkend Kok die voldoet aan het functieprofiel uit de Horeca-cao. Je werkt onder leiding van de Chef-kok en draagt samen met je collega's bij aan een professionele en goed georganiseerde keuken. Ervaring met de Indiase keuken is geen vereiste. Wij bieden een intern inwerk- en opleidingstraject, zodat je je kunt ontwikkelen in Indiase bereidingstechnieken.
+                    </>
+                  ) : (
+                    <>
+                      Chopras Indian Restaurant in The Hague is looking for an independent cook to join its team. The restaurant specializes in traditional Indian cuisine. As part of the expansion of our kitchen team, we are seeking a self-employed independent cook who meets the requirements of the Dutch Hospitality Collective Labour Agreement (Horeca CAO). You will work under the supervision of the Head Chef and contribute to maintaining a professional, well-organized kitchen. Previous experience with Indian cuisine is <strong>not required</strong>, as we provide a comprehensive internal training and induction program in Indian cooking techniques.
+                    </>
+                  )}
+                </p>
+
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">{isNl ? "Verantwoordelijkheden" : "Responsibilities"}</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Zelfstandig ingrediënten voorbereiden en mise-en-place werkzaamheden uitvoeren</li>
+                      <li>Basis kooktechnieken toepassen en gerechten bereiden volgens recepten</li>
+                      <li>Werken met verse ingrediënten en bijdragen aan de kwaliteit, smaak en presentatie van het eten</li>
+                      <li>Input leveren voor menu-ontwikkeling en receptverbeteringen</li>
+                      <li>Helpen bij voorraadbeheer en het bestellen van benodigdheden</li>
+                      <li>Leveringen controleren en zorgen voor een goede voorraadrotatie (FIFO)</li>
+                      <li>Keukenassistenten en ondersteunend personeel begeleiden</li>
+                      <li>Handhaven van hygiëne-, veiligheids- en netheidsnormen in de keuken</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Independently prepare ingredients and perform mise-en-place activities</li>
+                      <li>Apply basic cooking techniques and prepare dishes according to recipes</li>
+                      <li>Work with fresh ingredients and contribute to food quality, taste, and presentation</li>
+                      <li>Provide input on menu development and recipe improvements</li>
+                      <li>Assist with stock management and ordering of supplies</li>
+                      <li>Monitor deliveries and ensure proper stock rotation (FIFO)</li>
+                      <li>Supervise and guide kitchen assistants and support staff</li>
+                      <li>Maintain hygiene, safety, and cleanliness standards in the kitchen</li>
+                    </>
+                  )}
+                </ul>
+
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">{isNl ? "Functie-eisen" : "Requirements"}</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li><strong>MBO Niveau 3</strong> werk- en denkniveau</li>
+                      <li>Kennis van basiskooktechnieken</li>
+                      <li>Vermogen om zelfstandig en in teamverband te werken</li>
+                      <li>Flexibele beschikbaarheid, inclusief avonden, weekenden en feestdagen</li>
+                      <li>Passie voor koken en leergierig</li>
+                      <li>Ervaring met Indiase gerechten is <strong>niet verplicht</strong>, wij verzorgen de noodzakelijke training.</li>
+                    </>
+                  ) : (
+                    <>
+                      <li><strong>MBO Level 3</strong> working and thinking level (vocational education)</li>
+                      <li>Knowledge of basic cooking techniques</li>
+                      <li>Ability to work independently and as part of a team</li>
+                      <li>Flexible availability, including evenings, weekends, and public holidays</li>
+                      <li>Passion for cooking and willingness to learn</li>
+                      <li>Prior experience with Indian cuisine is <strong>not mandatory</strong>, as full training will be provided.</li>
+                    </>
+                  )}
+                </ul>
+
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wat wij bieden" : "What We Offer"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Een salaris tussen <strong>€2.700 en €3.700</strong>, afhankelijk van ervaring en opleiding conform de Horeca-cao.</li>
+                      <li>Vakantietoeslag en pensioenopbouw.</li>
+                      <li>Opleiding, begeleiding en een fijne professionele werkomgeving.</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>The salary ranges from <strong>€2,700 to €3,700 gross per month</strong>, depending on experience and qualifications, in accordance with the Horeca Collective Labour Agreement (CAO).</li>
+                      <li>Additional benefits include: Holiday allowance, Pension scheme</li>
+                    </>
+                  )}
+                </ul>
+
+                <div className="mt-4 p-4 bg-[#F7F8FC] rounded-xl border border-[#06068a]/20 text-sm">
+                  <p className="font-medium text-[#06068a]">{isNl ? "📋 Dienstverband details" : "📋 Employment details"}</p>
+                  <div className="grid grid-cols-2 gap-1 mt-2 text-[#1A1A1A]/70">
+                    <span>{isNl ? "Werklocatie:" : "Work Location:"}</span><span className="font-medium text-[#1A1A1A]">{isNl ? "Leyweg 986, 2545 GW 's-Gravenhage, Nederland" : "Leyweg 986, 2545 GW, The Hague, Netherlands."}</span>
+                    <span>Contract Type:</span><span className="font-medium text-[#1A1A1A]">Temporary (1 year)</span>
+                    <span>Start Date:</span><span className="font-medium text-[#1A1A1A]">01‑04‑2026</span>
+                    <span>End Date:</span><span className="font-medium text-[#1A1A1A]">01‑04‑2027</span>
+                    <span>Salary Type:</span><span className="font-medium text-[#1A1A1A]">Monthly / Hourly</span>
+                    <span>Experience:</span><span className="font-medium text-[#1A1A1A]">0 months (training provided)</span>
                   </div>
                 </div>
               </div>
-            ))}
+              <div className="mt-8 border-t border-[#06068a]/10 pt-6">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mb-4">{isNl ? "Solliciteer voor deze functie" : "Apply for this position"}</h4>
+                <form
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  onSubmit={handleSubmit}
+                >
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Volledige Naam *" : "Full Name *"}</label>
+                    <input type="text" name="fullName" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Liam de Jong" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
+                    <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
+                    <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO Level 3 Kok" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Interessegebied" : "Area of Interest"}</label>
+                    <input type="text" name="interest" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Indian Cuisine, Kitchen Management" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "CV toevoegen *" : "Attach Resume / CV *"}</label>
+                    <input type="file" name="resume" required accept=".pdf,.doc,.docx" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2 text-sm bg-[#F7F8FC] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#06068a]/10 file:text-[#06068a] hover:file:bg-[#06068a]/20" />
+                  </div>
+                  <div className="sm:col-span-2 mt-2">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#06068a] hover:bg-[#06068a] disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-[#06068a]/20">{isSubmitting ? isNl ? "Bezig met indienen..." : "Submitting..." : isNl ? "Sollicitatie indienen →" : "Submit Application →"}</button>
+                    {submitMessage && <div className={`mt-3 p-3 rounded-xl text-sm font-medium ${submitMessage.type === "success" ? "bg-emerald-100 text-emerald-1100" : "bg-red-100 text-red-1100"}`}>{submitMessage.text}</div>}
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        )}
 
-      {/* GEO Block */}
-      <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          {isNl ? (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                Is Chopras Indian Restaurant in Den Haag op zoek naar personeel?
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is actief op zoek naar koks, bedieningsmedewerkers en cateringassistenten. Het restaurant heeft een 4,9 sterrenbeoordeling van meer dan 800 Google reviews en is geopend in 2023. De openingstijden zijn dinsdag tot en met zondag van 16:30 tot 22:30. Bekijk ons{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  volledig menu van 143 gerechten op Leyweg 986
-                </Link>{' '}
-                of neem contact op via{' '}
-                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  Chopras Indian Restaurant Den Haag
-                </Link>{' '}
-                om te solliciteren of meer te weten te komen.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-                Is Chopras Indian Restaurant in Den Haag hiring?
-              </h2>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag, is actively hiring kitchen chefs, front-of-house staff, and event catering assistants. Rated 4.9 stars from 800+ Google reviews since opening in 2023, Chopras runs service Tuesday to Sunday from 16:30 to 22:30. Browse our{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  full menu of 143 dishes at Leyweg 986
-                </Link>{' '}
-                or visit{' '}
-                <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
-                  Chopras Indian Restaurant Den Haag
-                </Link>{' '}
-                to apply or learn more about open positions.
-              </p>
-            </>
-          )}
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
-            {isNl ? 'Veelgestelde vragen over werken bij Chopras' : 'Frequently Asked Questions About Working at Chopras'}
-          </h2>
-          <div className="mt-8">
-            <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
+        {/* ===== INTERNSHIP ===== */}
+        {expandedJob === "internship" && (
+          <div
+            id="internship-expanded"
+            className="expanded-content bg-white rounded-3xl shadow-2xl shadow-[#06068a]/10 border border-[#06068a]/10 overflow-hidden"
+          >
+            <div className="bg-[#06068a] px-8 py-6 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h3 className="text-2xl font-bold text-white font-heading">Internship Program</h3>
+              </div>
+              <button
+                onClick={() => toggleJob("internship")}
+                className="text-white/70 hover:text-white transition text-2xl leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Type" : "Type"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Stage" : "Internship"}</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">{isNl ? "Locatie" : "Location"}</span>
+                  <span className="font-semibold text-[#1A1A1A]">Den Haag</span>
+                </div>
+                <div className="bg-[#F7F8FC] rounded-xl p-4 text-center">
+                  <span className="block text-xs uppercase tracking-wider text-[#1A1A1A]/50">Hours</span>
+                  <span className="font-semibold text-[#1A1A1A]">{isNl ? "Flexibel" : "Flexible"}</span>
+                </div>
+              </div>
+              <div className="prose prose-sm max-w-none text-[#1A1A1A]/80">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Over Ons" : "About Us"}
+                </h4>
+                <p className="font-medium text-base mb-4">
+                  {isNl ? "Stap in de levendige wereld van Indiase gastvrijheid! Wij zijn een authentiek Indiaas restaurant in het hart van Nederland, bekend om het bieden van een rijke culturele en culinaire ervaring aan onze gasten. Nu openen we onze deuren voor gemotiveerde studenten die praktijkervaring willen opdoen in hospitality, marketing, operations en food & beverage management in een internationale omgeving." : "Step into the vibrant world of Indian hospitality! We are an authentic Indian restaurant located in the heart of the Netherlands, known for offering guests a rich cultural and culinary experience. Now, we’re opening our doors to motivated students who want to gain real-world skills in hospitality, marketing, operations, and food & beverage management in a truly international setting."}
+                </p>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Stagegebieden" : "Internship Areas"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-2 text-sm">
+                  {isNl ? (
+                    <>
+                      <li><strong>Gastvrijheid & Gastrelaties</strong> – Gasten verwelkomen, reserveringen beheren en uitstekende service bieden.</li>
+                      <li><strong>Food & Beverage Service</strong> – Restaurantactiviteiten leren: bediening aan tafel, orderverwerking en coördinatie met chef-koks.</li>
+                      <li><strong>Marketing & Social Media</strong> – Content maken (foto's/video's), evenementen promoten en online community's betrekken.</li>
+                      <li><strong>Event & Delivery Management</strong> – Helpen met de verpakking van afhaalmaaltijden en samenwerken met bezorgpartners.</li>
+                      <li><strong>Keukenondersteuning & Hygiëne</strong> – Zorgen voor hygiëne, voedselveiligheid en een soepele keukenwerking.</li>
+                    </>
+                  ) : (
+                    <>
+                      <li><strong>Hospitality & Guest Relations</strong> – Welcome guests, manage reservations, and deliver excellent service.</li>
+                      <li><strong>Food & Beverage Service</strong> – Learn restaurant operations: table service, order handling, and coordination with chefs.</li>
+                      <li><strong>Marketing & Social Media</strong> – Create content (photos/videos), promote events, and engage online communities.</li>
+                      <li><strong>Event & Delivery Management</strong> – Assist with takeaway packaging and collaborate with delivery partners.</li>
+                      <li><strong>Kitchen Support & Hygiene</strong> – Maintain hygiene, food safety, and smooth kitchen operations.</li>
+                    </>
+                  )}
+                </ul>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wat wij bieden" : "What We Offer"}
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  {isNl ? (
+                    <>
+                      <li>Praktische, hands-on horeca-ervaring</li>
+                      <li>Een multiculturele en dynamische werkplek</li>
+                      <li>Direct mentorschap van chef-koks en restaurantmanagers</li>
+                      <li>Gratis personeelsmaaltijden tijdens diensten</li>
+                      <li>Stagecertificaat & aanbevelingsbrief bij afronding</li>
+                      <li>Flexibele werktijden die passen bij je studierooster</li>
+                      <li>Een kans om de Indiase keuken, cultuur en restaurantactiviteiten te verkennen</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Practical, hands-on hospitality experience</li>
+                      <li>A multicultural and dynamic workplace</li>
+                      <li>Direct mentorship from chefs and restaurant managers</li>
+                      <li>Free staff meals during shifts</li>
+                      <li>Internship certificate & recommendation letter upon completion</li>
+                      <li>Flexible working hours to fit your study schedule</li>
+                      <li>A chance to explore Indian cuisine, culture & restaurant business operations</li>
+                    </>
+                  )}
+                </ul>
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mt-5 mb-2">
+                  {isNl ? "Wie kan solliciteren?" : "Who Can Apply?"}
+                </h4>
+                <p className="text-sm">
+                  {isNl ? "Studenten horeca, business, toerisme, media of culinaire studies die graag praktijkervaring willen opdoen in de horeca- en restaurantsector. Klaar om je carrière wat pit te geven? Solliciteer nu en groei met ons mee!" : "Students of hospitality, business, tourism, media, or culinary studies who are eager to gain practical exposure in the hospitality and restaurant sector. Ready to spice up your career? Apply now and grow with us!"}
+                </p>
+              </div>
+              <div className="mt-8 border-t border-[#06068a]/10 pt-6">
+                <h4 className="text-[#06068a] font-bold text-sm uppercase tracking-wider mb-4">{isNl ? "Solliciteer voor stage" : "Apply for Internship"}</h4>
+                <form
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  onSubmit={handleSubmit}
+                >
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Volledige Naam *" : "Full Name *"}</label>
+                    <input type="text" name="fullName" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Maria Jansen" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
+                    <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
+                    <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Hospitality Management Student" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Stagegebied" : "Area of Internship"}</label>
+                    <input type="text" name="interest" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. Marketing, F&B Service" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "CV toevoegen *" : "Attach Resume / CV *"}</label>
+                    <input type="file" name="resume" required accept=".pdf,.doc,.docx" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2 text-sm bg-[#F7F8FC] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#06068a]/10 file:text-[#06068a] hover:file:bg-[#06068a]/20" />
+                  </div>
+                  <div className="sm:col-span-2 mt-2">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#06068a] hover:bg-[#06068a] disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-[#06068a]/20">{isSubmitting ? isNl ? "Bezig met indienen..." : "Submitting..." : isNl ? "Sollicitatie indienen →" : "Submit Application →"}</button>
+                    {submitMessage && <div className={`mt-3 p-3 rounded-xl text-sm font-medium ${submitMessage.type === "success" ? "bg-emerald-100 text-emerald-1100" : "bg-red-100 text-red-1100"}`}>{submitMessage.text}</div>}
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Application Form */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3] text-center">
-            {tr.vacancy.applyH2}
-          </h2>
-          <VacancyForm />
-        </div>
-      </section>
-
-      <nav aria-label="Breadcrumb" className="sr-only">
-        <ol>
-          <li><Link href={base}>{tr.common.nav.home}</Link></li>
-          <li><span>{tr.common.nav.vacancy}</span></li>
-        </ol>
-      </nav>
-    </>
-  )
+        )}
+      </div>
+    </div>
+  );
 }

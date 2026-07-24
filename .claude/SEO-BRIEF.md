@@ -19,7 +19,7 @@
 
 ## Verified Proof Points (Use These — Never Invent)
 
-- 4.9 stars on Google from 800+ verified reviews
+- 4.9 stars on Google from 1100+ verified reviews
 - 8.6 rating on TheFork — Top rated restaurant
 - Excellent rating on Tripadvisor — Highest rated category
 - 143 dishes across 13 categories on the menu
@@ -67,7 +67,7 @@ Leyweg is where Den Haag actually lives. The largest Hindustani community in the
 Netherlands is here. These guests know the difference between a shortcut and the real thing.
 
 **Differentiator 6 — The Ratings Gap**
-4.9 stars from 800+ reviews. No other Indian restaurant in Den Haag comes close to this
+4.9 stars from 1100+ reviews. No other Indian restaurant in Den Haag comes close to this
 combination of rating AND volume. High rating with low review count means nothing.
 Chopras has both.
 
@@ -241,7 +241,7 @@ of India which means nothing is mastered. Chopras is North Indian mastery.
 
 **The Chopras advantage in every competitive comparison:**
 - 4.9 stars vs their lower ratings
-- 800+ reviews vs their lower counts
+- 1100+ reviews vs their lower counts
 - Specific spice sourcing vs their generic claims
 - Indo Chinese exclusivity vs their standard menus
 - Fresh-ground daily spices vs their pre-mixed blends
@@ -270,5 +270,5 @@ Required on every page:
 - At least one H2 or H3 phrased as a question
 - At least one answer block of 60 to 100 words that stands completely alone
 - The restaurant name, address, and primary service in the same paragraph
-- At least one specific verifiable fact (4.9 stars, 800+ reviews, 400 degree tandoor,
+- At least one specific verifiable fact (4.9 stars, 1100+ reviews, 400 degree tandoor,
   spices from India, etc.)

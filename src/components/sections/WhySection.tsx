@@ -64,8 +64,8 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
           ref={headRef}
           className={`mb-14 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${headInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#0000B3]/20 bg-[#0000B3]/5 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-medium">
-            <span className="inline-block w-1 h-1 rounded-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#0000B3]/20 bg-[#0000B3]/5 px-4 py-1.5 text-[10px] uppercase tracking-[0.22em] text-transparent bg-clip-text btn-gradient font-medium">
+            <span className="inline-block w-1 h-1 rounded-full btn-gradient" />
             Why Chopras
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1B2B5E] leading-[1.15] tracking-tight mt-6 mb-6 max-w-4xl">
@@ -84,9 +84,9 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
               <div className="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-[#0000B3]/[0.04] blur-2xl pointer-events-none transition-all duration-700 group-hover:bg-[#0000B3]/[0.08] group-hover:scale-110" />
               <div className="relative z-10">
                 <div className="w-14 h-14 rounded-2xl bg-[#0000B3]/5 flex items-center justify-center mb-8 ring-1 ring-[#0000B3]/10 transition-transform duration-500 group-hover:-translate-y-1">
-                  <IconFlame className="w-7 h-7 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
+                  <IconFlame className="w-7 h-7 text-transparent bg-clip-text btn-gradient" />
                 </div>
-                <div className="w-10 h-[2px] bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6" />
+                <div className="w-10 h-[2px] btn-gradient mb-6" />
                 <h3 className="font-heading font-bold text-3xl md:text-4xl text-[#1B2B5E] leading-tight max-w-sm">
                   {t.home.why1H3}
                 </h3>
@@ -95,7 +95,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
                 </p>
               </div>
               <div className="flex items-center gap-4 mt-10 relative z-10">
-                <span className="text-6xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] tracking-tight">143</span>
+                <span className="text-6xl font-heading font-bold text-transparent bg-clip-text btn-gradient tracking-tight">143</span>
                 <span className="text-sm text-[#1B2B5E]/50 leading-snug font-body font-medium uppercase tracking-wider">Dishes crafted<br />fresh daily</span>
               </div>
             </div>
@@ -107,9 +107,9 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
               <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-[#0000B3]/[0.03] blur-xl pointer-events-none transition-all duration-700 group-hover:bg-[#0000B3]/[0.06] group-hover:scale-110" />
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-xl bg-[#0000B3]/5 flex items-center justify-center mb-6 ring-1 ring-[#0000B3]/10 transition-transform duration-500 group-hover:-translate-y-1">
-                  <IconUsers className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
+                  <IconUsers className="w-6 h-6 text-transparent bg-clip-text btn-gradient" />
                 </div>
-                <div className="w-8 h-[2px] bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4" />
+                <div className="w-8 h-[2px] btn-gradient mb-4" />
                 <h3 className="font-heading font-bold text-2xl text-[#1B2B5E] leading-tight">
                   {t.home.why2H3}
                 </h3>
@@ -126,9 +126,9 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
               <div className="absolute -left-8 -bottom-8 w-40 h-40 rounded-full bg-[#0000B3]/[0.03] blur-xl pointer-events-none transition-all duration-700 group-hover:bg-[#0000B3]/[0.06] group-hover:scale-110" />
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-xl bg-[#0000B3]/5 flex items-center justify-center mb-6 ring-1 ring-[#0000B3]/10 transition-transform duration-500 group-hover:-translate-y-1">
-                  <IconCalendar className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]" />
+                  <IconCalendar className="w-6 h-6 text-transparent bg-clip-text btn-gradient" />
                 </div>
-                <div className="w-8 h-[2px] bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4" />
+                <div className="w-8 h-[2px] btn-gradient mb-4" />
                 <h3 className="font-heading font-bold text-2xl text-[#1B2B5E] leading-tight">
                   {t.home.why3H3}
                 </h3>
@@ -138,7 +138,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
               </div>
               <Link
                 href={`${base}/catering`}
-                className="group/btn inline-flex items-center gap-2.5 rounded-full border border-[#1B2B5E]/20 px-5 py-2.5 mt-6 self-start text-[#1B2B5E] text-xs font-semibold uppercase tracking-wider transition-all duration-500 hover:border-[#0000B3] hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:bg-[#0000B3]/5 active:scale-[0.98] relative z-10"
+                className="group/btn inline-flex items-center gap-2.5 rounded-full border border-[#1B2B5E]/20 px-5 py-2.5 mt-6 self-start text-[#1B2B5E] text-xs font-semibold uppercase tracking-wider transition-all duration-500 hover:border-[#0000B3] hover:text-transparent bg-clip-text btn-gradient hover:bg-[#0000B3]/5 active:scale-[0.98] relative z-10"
               >
                 Explore Catering
                 <span className="inline-flex w-5 h-5 items-center justify-center rounded-full bg-[#0000B3]/10 transition-all duration-500 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px">
@@ -158,7 +158,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
         >
           <div
             className="rounded-[2rem] p-1.5 ring-1 ring-[#1B2B5E]/[0.07]"
-            style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+            style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
           >
             <div className="rounded-[calc(2rem-0.375rem)] px-8 py-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)] relative overflow-hidden">
               {/* Glass reflection */}
@@ -179,7 +179,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
                 </div>
                 <Link
                   href={`${base}/contact`}
-                  className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-xs font-bold uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,255,0.3)] active:scale-[0.98] whitespace-nowrap"
+                  className="group inline-flex items-center gap-3 rounded-full bg-white pl-6 pr-2 py-2 text-transparent bg-clip-text btn-gradient text-xs font-bold uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,255,0.3)] active:scale-[0.98] whitespace-nowrap"
                 >
                   Reserve a Table
                   <span className="inline-flex w-7 h-7 items-center justify-center rounded-full bg-[#0000B3]/10 transition-all duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105">

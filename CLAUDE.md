@@ -90,8 +90,8 @@ Package manager: pnpm. Node: 20.x.
   Never write: "lunch", "open for lunch", "working lunches", "lunchtime",
   "11:30", "12:00", "13:00", or any implication of daytime food service
 - Capacity: 25 to 80 guests (private hall) — never claim above 80
-- Review proof point: use "800+" not specific counts like "834"
-  (specific counts go stale — "800+" stays accurate)
+- Review proof point: use "1100+" not specific counts like "834"
+  (specific counts go stale — "1100+" stays accurate)
 - Address: Leyweg 986, 2545 GW Den Haag
 - Phone: +31 6 30645930
 - Email: info@chopras.nl
@@ -118,7 +118,7 @@ Package manager: pnpm. Node: 20.x.
 Homepage /
 Primary keyword: Best Indian restaurant Den Haag
 Title: Best Indian Restaurant Den Haag (The Hague) | Chopras Indian Restaurant
-Meta: Best Indian restaurant Den Haag and The Hague. Chopras Indian Restaurant. 4.9 stars, 800+ reviews. Halal certified, vegetarian options. Book a table.
+Meta: Best Indian restaurant Den Haag and The Hague. Chopras Indian Restaurant. 4.9 stars, 1100+ reviews. Halal certified, vegetarian options. Book a table.
 
 Menu /menu
 Primary keyword: Indian restaurant menu Den Haag

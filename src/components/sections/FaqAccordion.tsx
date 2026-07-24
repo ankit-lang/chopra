@@ -13,7 +13,7 @@ export default function FaqAccordion({ faqs }: { faqs: Array<{ question: string;
   const visibleFaqs = showAll ? faqs : faqs.slice(0, INITIAL_COUNT)
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       {visibleFaqs.map((faq, index) => (
         <div key={index} className="border-b border-gray-100 py-5">
           <button

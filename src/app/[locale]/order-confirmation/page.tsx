@@ -54,7 +54,7 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
     <div
       className="min-h-screen flex items-center justify-center px-6 py-20"
       style={{
-        background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)',
+        background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)',
       }}
     >
       <div className="bg-white rounded-3xl p-10 md:p-14 max-w-lg w-full mx-auto text-center shadow-2xl">
@@ -67,30 +67,30 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <h1 className="font-vibes text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mt-6 leading-[1.3]">
-          Order Confirmed!
+        <h1 className="font-heading text-4xl text-[#06068a] mt-6 leading-[1.3]">
+          {locale === 'nl' ? 'Bestelling Bevestigd!' : 'Order Confirmed!'}
         </h1>
 
         {/* Order number pill */}
         <div className="inline-flex items-center gap-2 bg-[#0000B3]/10 border border-white/30 rounded-full px-6 py-3 mt-4">
-          <Hash className="text-white w-4 h-4" />
-          <span className=" text-[#1A1A1A] text-lg font-vibes">
-            Order {orderNumber}
+          <Hash className="text-[#06068a] w-4 h-4" />
+          <span className=" text-[#1A1A1A] text-lg font-heading">
+            {locale === 'nl' ? 'Bestelling' : 'Order'} {orderNumber}
           </span>
         </div>
 
         {/* Confirmation message */}
         <p className="mt-6 text-[#1A1A1A]/60 text-base leading-relaxed">
-          Thank you, {lastOrder?.customerName ?? customerName}! Your order has been received by our
-          kitchen. Please come to collect it at Leyweg 986, Den Haag. Estimated ready time is 30 to
-          45 minutes.
+          {locale === 'nl'
+            ? `Bedankt, ${lastOrder?.customerName ?? customerName}! Uw bestelling is goed ontvangen door onze keuken. Haal uw bestelling op bij Leyweg 986, Den Haag. Verwachte bereidingstijd is 30 tot 45 minuten.`
+            : `Thank you, ${lastOrder?.customerName ?? customerName}! Your order has been received by our kitchen. Please come to collect it at Leyweg 986, Den Haag. Estimated ready time is 30 to 45 minutes.`}
         </p>
 
         {/* Order items breakdown */}
         {lastOrder && lastOrder.items && lastOrder.items.length > 0 && (
           <div className="mt-6 bg-[#F7F8FC] rounded-2xl p-5 text-left">
             <p className="text-xs uppercase tracking-widest text-[#1A1A1A]/40 mb-3 font-medium">
-              Your Order
+              {locale === 'nl' ? 'Uw Bestelling' : 'Your Order'}
             </p>
             <div className="space-y-2">
               {lastOrder.items.map((item) => (
@@ -106,8 +106,8 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
               ))}
             </div>
             <div className="border-t border-gray-200 mt-3 pt-3 flex justify-between">
-              <span className="font-vibes text-base text-[#1A1A1A]">Total</span>
-              <span className="font-vibes text-base text-[#1A1A1A]">
+              <span className="font-heading text-base text-[#1A1A1A]">{locale === 'nl' ? 'Totaal' : 'Total'}</span>
+              <span className="font-heading text-base text-[#06068a] font-bold">
                 {formatPrice(lastOrder.totalAmount)}
               </span>
             </div>
@@ -117,21 +117,25 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
         {/* Info pills */}
         <div className="mt-6 space-y-3">
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <MapPin className="text-white w-5 h-5 flex-shrink-0" />
+            <MapPin className="text-[#06068a] w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
               {lastOrder?.restaurantAddress ?? 'Leyweg 986, 2545 GW Den Haag'}
             </p>
           </div>
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <Clock className="text-white w-5 h-5 flex-shrink-0" />
+            <Clock className="text-[#06068a] w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
-              Ready in {lastOrder?.estimatedPickup ?? '30 to 45 minutes'}
+              {locale === 'nl'
+                ? `Klaar in ${lastOrder?.estimatedPickup ?? '30 tot 45 minuten'}`
+                : `Ready in ${lastOrder?.estimatedPickup ?? '30 to 45 minutes'}`}
             </p>
           </div>
           <div className="flex items-center gap-3 bg-[#F7F8FC] rounded-xl px-5 py-4 text-left">
-            <Banknote className="text-white w-5 h-5 flex-shrink-0" />
+            <Banknote className="text-[#06068a] w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
-              Payment: {lastOrder?.paymentMethod ?? 'Cash on Pickup'}
+              {locale === 'nl'
+                ? `Betaling: ${lastOrder?.paymentMethod === 'Cash on Pickup' ? 'Contant bij afhalen' : (lastOrder?.paymentMethod ?? 'Contant bij afhalen')}`
+                : `Payment: ${lastOrder?.paymentMethod ?? 'Cash on Pickup'}`}
             </p>
           </div>
         </div>
@@ -142,19 +146,21 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
         <div className="flex flex-col sm:flex-row gap-3 mt-4">
           <Link
             href={`${base}/menu`}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98]"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98]"
           >
-            Order Again
+            {locale === 'nl' ? 'OPNIEUW BESTELLEN' : 'Order Again'}
           </Link>
           <Link
             href={base}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98]"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 px-6 py-3 text-[#1A1A1A]/70 font-medium uppercase tracking-wide hover:border-[#06068a] hover:text-[#06068a] transition-all"
           >
-            Back to Home
+            {locale === 'nl' ? 'TERUG NAAR HOME' : 'Back to Home'}
           </Link>
         </div>
 
-        <p className="text-[#1A1A1A]/40 text-xs mt-6">Questions? Call us on +31 6 30645930</p>
+        <p className="text-[#1A1A1A]/40 text-xs mt-6">
+          {locale === 'nl' ? 'Vragen? Bel ons op +31 6 30645930' : 'Questions? Call us on +31 6 30645930'}
+        </p>
       </div>
     </div>
   )
@@ -166,9 +172,9 @@ export default function OrderConfirmationPage({ params }: { params: { locale: Lo
       fallback={
         <div
           className="min-h-screen flex items-center justify-center"
-          style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
         >
-          <div className="text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-vibes text-2xl">Loading...</div>
+          <div className="text-[#06068a] font-heading text-2xl">Loading...</div>
         </div>
       }
     >

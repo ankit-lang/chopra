@@ -232,7 +232,7 @@ Non-vegetarian: filled dark red circle inside square border, color #8B0000
 - NO LUNCH SERVICE. Never write lunch, 11:30, 12:00, or any daytime food reference.
 - Capacity: 25 to 80 guests. Never claim above 80.
 - Founded: 2023 by Arun Chopra (Founder only — never "Head Chef")
-- Google rating: 4.9 stars, 800+ reviews
+- Google rating: 4.9 stars, 1100+ reviews
 - TheFork rating: 8.6
 - Tripadvisor: Excellent
 - Delivery: Thuisbezorgd and Uber Eats (both, never just one)

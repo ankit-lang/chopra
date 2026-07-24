@@ -52,7 +52,7 @@ export default function TrustBar({ locale = 'en' }: { locale?: Locale }) {
     <div
       className="relative py-3 overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)',
+        background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)',
         borderTop: '1px solid rgba(212,175,55,0.15)',
         borderBottom: '1px solid rgba(212,175,55,0.08)',
       }}

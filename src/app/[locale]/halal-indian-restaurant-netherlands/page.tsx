@@ -119,9 +119,9 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
               {isNl ? '• HALAL GECERTIFICEERD · CHOPRAS INDIAN RESTAURANT · DEN HAAG •' : '• HALAL CERTIFIED · CHOPRAS INDIAN RESTAURANT · DEN HAAG •'}
             </span>
           </div>
-          <h1 
-            className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
+          <h1
+            className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+            style={{ textShadow: '0 2px 6px rgba(0,0,0,0.99), 0 6px 24px rgba(0,0,0,0.85)' }}
           >
             {isNl
               ? 'Halal Indiaas Restaurant in Nederland'
@@ -129,8 +129,8 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
           </h1>
           <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
             {isNl
-              ? 'Volledig halal-gecertificeerd. 143 Indiaas gerechten. 4,9 sterren op Google van 800+ beoordelingen. Leyweg 986, Den Haag.'
-              : 'Fully halal certified. 143 Indian dishes. 4.9 stars on Google from 800+ reviews. Leyweg 986, Den Haag.'}
+              ? 'Volledig halal-gecertificeerd. 143 Indiaas gerechten. 4,9 sterren op Google van 1100+ beoordelingen. Leyweg 986, Den Haag.'
+              : 'Fully halal certified. 143 Indian dishes. 4.9 stars on Google from 1100+ reviews. Leyweg 986, Den Haag.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
             <Link
@@ -152,7 +152,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Section 1: GEO block */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
             {isNl
               ? 'Is Er een Halal Indiaas Restaurant in Nederland?'
               : 'Is There a Halal Indian Restaurant in the Netherlands?'}
@@ -161,7 +161,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
             {isNl ? (
               <>
                 <p>
-                  Chopras Indian Restaurant, gevestigd op Leyweg 986, 2545 GW Den Haag, is een volledig halal-gecertificeerd Indiaas restaurant in Nederland met 4,9 sterren op Google van 800+ geverifieerde beoordelingen. Het restaurant serveert 143 gerechten in 13 categorieën, waaronder <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">authentieke biryani</Link>, <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori</Link> en Noord-Indiaas streetfood. Alle vlees is afkomstig van gecertificeerde halal-leveranciers. Open dinsdag tot en met zondag van 16:30 tot 22:30.
+                  Chopras Indian Restaurant, gevestigd op Leyweg 986, 2545 GW Den Haag, is een volledig halal-gecertificeerd Indiaas restaurant in Nederland met 4,9 sterren op Google van 1100+ geverifieerde beoordelingen. Het restaurant serveert 143 gerechten in 13 categorieën, waaronder <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">authentieke biryani</Link>, <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori</Link> en Noord-Indiaas streetfood. Alle vlees is afkomstig van gecertificeerde halal-leveranciers. Open dinsdag tot en met zondag van 16:30 tot 22:30.
                 </p>
                 <p>
                   Den Haag is per trein bereikbaar vanuit Rotterdam in 25 minuten en vanuit Amsterdam in 60 minuten. Gasten reizen vanuit heel Nederland voor het halal-gecertificeerde Noord-Indiaas menu van Chopras. Betaald parkeren is beschikbaar in de omgeving van Leyweg.
@@ -170,7 +170,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
             ) : (
               <>
                 <p>
-                  Chopras Indian Restaurant, located at Leyweg 986, 2545 GW Den Haag, is a fully halal-certified Indian restaurant in the Netherlands with 4.9 stars on Google from 800+ verified reviews. The restaurant serves 143 dishes across 13 categories, including <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">authentic biryani</Link>, <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoori</Link>, and North Indian street food. All meat is sourced from certified halal suppliers. Open Tuesday to Sunday from 16:30 to 22:30.
+                  Chopras Indian Restaurant, located at Leyweg 986, 2545 GW Den Haag, is a fully halal-certified Indian restaurant in the Netherlands with 4.9 stars on Google from 1100+ verified reviews. The restaurant serves 143 dishes across 13 categories, including <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">authentic biryani</Link>, <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori</Link>, and North Indian street food. All meat is sourced from certified halal suppliers. Open Tuesday to Sunday from 16:30 to 22:30.
                 </p>
                 <p>
                   Den Haag is reachable by train from Rotterdam in 25 minutes and from Amsterdam in 60 minutes. Guests travel from across the Netherlands for the halal-certified North Indian menu at Chopras. Paid parking is available in the Leyweg area.
@@ -184,7 +184,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Section 2: What halal certification means */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Wat Halal Gecertificeerd Betekent bij Chopras'
               : 'What Halal Certified Means at Chopras'}
@@ -196,7 +196,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   Het woord halal wordt breed gebruikt in Nederland. Soms betekent het dat een gerecht vlees van een halal-slager bevat. Soms betekent het dat de kok moslim is. Bij Chopras betekent het iets specifieks en verifieerbaar. Elke leverancier levert gecertificeerde halaldocumentatie. Al het vlees wordt behandeld afgescheiden van aankomst tot bereiding. Er is geen niet-halal vlees aanwezig op het pand.
                 </p>
                 <p>
-                  De keuken verwerkt geen vleesproducten die niet voldoen aan halalstandaarden. Dit is geen selectieve of situationele certificering. Het geldt voor elk gerecht, elke dienst, elke dag van de week. Het <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledige halal menu</Link> bevat kip, lam, schapen en zeevruchten, samen met een uitgebreide reeks <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">vegetarische en veganistische gerechten</Link>.
+                  De keuken verwerkt geen vleesproducten die niet voldoen aan halalstandaarden. Dit is geen selectieve of situationele certificering. Het geldt voor elk gerecht, elke dienst, elke dag van de week. Het <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledige halal menu</Link> bevat kip, lam, schapen en zeevruchten, samen met een uitgebreide reeks <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarische en veganistische gerechten</Link>.
                 </p>
                 <p>
                   Als u specifieke leveranciersdocumentatie wilt bekijken, kunt u dat opvragen. Chopras stelt alle certificaten beschikbaar op verzoek. U hoeft niet te gokken of te vragen of een gerecht halal is. Het antwoord is altijd hetzelfde: de gehele keuken is halal gecertificeerd.
@@ -208,7 +208,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   The word halal gets used loosely across the Netherlands. Sometimes it means a dish contains meat from a halal butcher. Sometimes it means the cook is Muslim. At Chopras, it means something specific and verifiable. Every supplier provides certified halal documentation. All meat is handled separately from arrival through preparation. There is no non-halal meat on the premises at any point.
                 </p>
                 <p>
-                  The kitchen does not process any meat product that does not meet halal standards. This is not selective or situational certification. It applies to every dish, every service, every day of the week. The <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">full halal menu</Link> includes chicken, lamb, mutton, and seafood, alongside a broad range of <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">vegetarian and vegan dishes</Link>.
+                  The kitchen does not process any meat product that does not meet halal standards. This is not selective or situational certification. It applies to every dish, every service, every day of the week. The <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full halal menu</Link> includes chicken, lamb, mutton, and seafood, alongside a broad range of <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarian and vegan dishes</Link>.
                 </p>
                 <p>
                   If you want to view specific supplier documentation, you can request it. Chopras makes all certificates available on request. You do not need to guess or ask whether a dish is halal. The answer is always the same: the entire kitchen is halal certified.
@@ -222,7 +222,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Section 3: The menu */}
       <section className="bg-[#F7F8FC] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? '143 Halal Indiaas Gerechten in 13 Categorieën'
               : '143 Halal Indian Dishes Across 13 Categories'}
@@ -231,7 +231,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
             {isNl ? (
               <>
                 <p>
-                  Het menu van Chopras is gebouwd rond de breedte van Noord-Indiaas eten, niet slechts een handvol bekende curries. Van klassieke <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken Den Haag</Link> tot <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">mutton rogan josh</Link> langzaam gekookt in Kasjmirische kruiden, tot <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat streetfood</Link> dat dagelijks vers wordt bereid. Alle 143 gerechten zijn halal gecertificeerd.
+                  Het menu van Chopras is gebouwd rond de breedte van Noord-Indiaas eten, niet slechts een handvol bekende curries. Van klassieke <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken Den Haag</Link> tot <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">mutton rogan josh</Link> langzaam gekookt in Kasjmirische kruiden, tot <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat streetfood</Link> dat dagelijks vers wordt bereid. Alle 143 gerechten zijn halal gecertificeerd.
                 </p>
                 <p>
                   De kruiden worden elke ochtend vers gemalen van hele ingredienten die rechtstreeks uit India worden betrokken. De tandoor kleioven bereikt 400 graden Celsius. De biryani wordt bereid via de authentieke dum-methode: in een afgesloten pot gestoomd met echte saffraandraadjes. Dit is het niveau waarop het menu van Chopras halal Indiaas eten aanbiedt in Nederland.
@@ -240,7 +240,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
             ) : (
               <>
                 <p>
-                  The Chopras menu is built around the breadth of North Indian food, not just a handful of familiar curries. From classic <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken Den Haag</Link> to <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">mutton rogan josh</Link> slow-cooked in Kashmiri spices, to <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat street food</Link> made fresh daily. All 143 dishes are halal certified.
+                  The Chopras menu is built around the breadth of North Indian food, not just a handful of familiar curries. From classic <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken Den Haag</Link> to <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">mutton rogan josh</Link> slow-cooked in Kashmiri spices, to <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat street food</Link> made fresh daily. All 143 dishes are halal certified.
                 </p>
                 <p>
                   Spices are ground fresh every morning from whole ingredients sourced directly from India. The tandoor clay oven reaches 400 degrees Celsius. The biryani is prepared via the authentic dum method: steam-sealed in a pot with real saffron threads. This is the level at which Chopras offers halal Indian food in the Netherlands.
@@ -279,13 +279,13 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 hover:btn-gradient hover:text-white min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 hover:btn-gradient hover:text-white min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
@@ -296,7 +296,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Section 4: Visiting from elsewhere in NL */}
       <section className="bg-[#1B2B5E] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             {isNl
               ? 'Vanuit Heel Nederland Naar Den Haag'
               : 'Visiting from Anywhere in the Netherlands'}
@@ -308,7 +308,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   Den Haag is goed bereikbaar vanuit de rest van Nederland. Rotterdam Centraal is 25 minuten met de intercity. Amsterdam Centraal is 60 minuten met de Intercity Direct. Utrecht is 45 minuten. Eindhoven is 90 minuten. Als u specifiek op zoek bent naar een halal Indiaas restaurant in Nederland dat het niveau biedt van Noord-Indiase keuken zoals die in India wordt gegeten, is de reis naar Den Haag de moeite waard.
                 </p>
                 <p>
-                  Chopras serveert ook gasten uit <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Rijswijk</Link>, <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Delft</Link>, <Link href={`${base}/indian-restaurant-zoetermeer`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Zoetermeer</Link>, Voorburg en Leidschendam. Als u een grotere groep bent of catering zoekt voor een evenement, neem dan contact op voor een offerte.
+                  Chopras serveert ook gasten uit <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-white font-semibold">Rijswijk</Link>, <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-white font-semibold">Delft</Link>, <Link href={`${base}/indian-restaurant-zoetermeer`} className="text-white hover:text-white font-semibold">Zoetermeer</Link>, Voorburg en Leidschendam. Als u een grotere groep bent of catering zoekt voor een evenement, neem dan contact op voor een offerte.
                 </p>
               </>
             ) : (
@@ -317,7 +317,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   Den Haag is well connected from the rest of the Netherlands. Rotterdam Centraal is 25 minutes by intercity train. Amsterdam Centraal is 60 minutes by Intercity Direct. Utrecht is 45 minutes. Eindhoven is 90 minutes. If you are specifically looking for a halal Indian restaurant in the Netherlands that offers the depth of North Indian cuisine as it is eaten in India, the journey to Den Haag is worth making.
                 </p>
                 <p>
-                  Chopras also serves guests from <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Rijswijk</Link>, <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Delft</Link>, <Link href={`${base}/indian-restaurant-zoetermeer`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Zoetermeer</Link>, Voorburg, and Leidschendam. If you are a larger group or looking for catering for an event, get in touch for a quote.
+                  Chopras also serves guests from <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-white font-semibold">Rijswijk</Link>, <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-white font-semibold">Delft</Link>, <Link href={`${base}/indian-restaurant-zoetermeer`} className="text-white hover:text-white font-semibold">Zoetermeer</Link>, Voorburg, and Leidschendam. If you are a larger group or looking for catering for an event, get in touch for a quote.
                 </p>
               </>
             )}
@@ -328,7 +328,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Section 5: Halal catering */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Halal Indiaas Catering in Nederland'
               : 'Halal Indian Catering Across the Netherlands'}
@@ -340,7 +340,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   Chopras verzorgt halal Indiaas catering voor bruiloften, Nikah-recepties, Walima-diners, Eid-vieringen en zakelijke evenementen. De catering volgt dezelfde halalstandaarden als de restaurantkeuken. U ontvangt hetzelfde gecertificeerde vlees, dezelfde versgemalen kruiden en dezelfde kwaliteit als wanneer u in het restaurant eet.
                 </p>
                 <p>
-                  Voor <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal bruiloftscatering</Link>, <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">zakelijke evenementen</Link> of grotere groepen kunt u een vrijblijvende offerte aanvragen. Chopras beschikt ook over een eigen <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">feestzaal in Den Haag</Link> voor tot 80 gasten.
+                  Voor <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal bruiloftscatering</Link>, <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">zakelijke evenementen</Link> of grotere groepen kunt u een vrijblijvende offerte aanvragen. Chopras beschikt ook over een eigen <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">feestzaal in Den Haag</Link> voor tot 80 gasten.
                 </p>
               </>
             ) : (
@@ -349,7 +349,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
                   Chopras provides halal Indian catering for weddings, Nikah receptions, Walima dinners, Eid celebrations, and corporate events. The catering follows the same halal standards as the restaurant kitchen. You receive the same certified meat, the same freshly ground spices, and the same quality as dining in the restaurant.
                 </p>
                 <p>
-                  For <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-[#e8c48a] font-semibold">halal wedding catering</Link>, <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">corporate events</Link>, or larger groups, request a no-obligation quote. Chopras also has its own <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">event hall in Den Haag</Link> for up to 80 guests.
+                  For <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal wedding catering</Link>, <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">corporate events</Link>, or larger groups, request a no-obligation quote. Chopras also has its own <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">event hall in Den Haag</Link> for up to 80 guests.
                 </p>
               </>
             )}
@@ -358,13 +358,15 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Veelgestelde Vragen - Halal Indiaas Restaurant Nederland'
-              : 'Frequently Asked Questions - Halal Indian Restaurant Netherlands'}
-          </h2>
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              {isNl
+                ? 'Veelgestelde Vragen - Halal Indiaas Restaurant Nederland'
+                : 'Frequently Asked Questions - Halal Indian Restaurant Netherlands'}
+            </h2>
+          </div>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>
@@ -372,7 +374,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
       {/* Final CTA */}
       <section className="bg-[#1B2B5E] py-16 text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.4]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-4 leading-[1.4]">
             {isNl
               ? 'Reserveer een Tafel bij het Halal Indiaas Restaurant in Nederland'
               : 'Reserve a Table at the Halal Indian Restaurant in the Netherlands'}
@@ -385,7 +387,7 @@ export default function HalalIndianRestaurantNetherlandsPage({ params }: Props) 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center rounded-full border-2 border-white bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] px-8 py-3 text-white font-semibold uppercase tracking-wide transition-all duration-200 hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white btn-gradient px-8 py-3 text-white font-semibold uppercase tracking-wide transition-all duration-200 hover:btn-gradient min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>

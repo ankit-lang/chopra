@@ -6,12 +6,12 @@ export type Locale = 'en' | 'nl'
 const translations = { en, nl }
 
 export function getTranslations(locale: Locale) {
-  return translations[locale] as typeof en
+  return (translations[locale] || translations.en) as typeof en
 }
 
 export function t(locale: Locale, path: string): string {
   const keys = path.split('.')
-  let value: unknown = translations[locale]
+  let value: unknown = translations[locale] || translations.en
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key]

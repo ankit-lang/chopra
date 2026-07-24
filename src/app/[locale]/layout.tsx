@@ -99,6 +99,19 @@ export default function LocaleLayout({
   return (
     <html lang={params.locale} className={`${playfair.variable} ${sourceSerif.variable} ${dmSans.variable} ${greatVibes.variable}`}>
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZKMF6VZ9Q2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZKMF6VZ9Q2');
+    `}
+        </Script>
+
         <link rel="profile" href="https://chopras.nl/llms.txt" />
         <Script
           id="gtm-script"

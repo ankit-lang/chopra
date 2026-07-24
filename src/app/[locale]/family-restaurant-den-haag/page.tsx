@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import JsonLd from '@/components/seo/JsonLd'
+import FaqAccordion from '@/components/sections/FaqAccordion'
 import { getLocalizedUrl } from '@/lib/utils'
 import { getLocalRestaurantSchema, getBreadcrumbSchema, getFaqPageSchema, getDietFoodEstablishmentSchema } from '@/lib/schema'
 import { getTranslations, type Locale } from '@/lib/useTranslations'
-import FaqAccordion from '@/components/sections/FaqAccordion'
-import EmailLink from '@/components/ui/EmailLink'
 
 type Props = { params: { locale: Locale } }
 
@@ -15,17 +14,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
-  const titles = {
-    en: 'Family Restaurant in Den Haag | Chopras Indian Restaurant',
-    nl: 'Familierestaurant Den Haag | Chopras Indian Restaurant',
-  }
-  const descriptions = {
-    en: 'Family restaurant Den Haag. Chopras Indian Restaurant has a dedicated kids menu and generous portions. Authentic Indian food for all ages at Leyweg 986.',
-    nl: 'Familierestaurant Den Haag bij Chopras Indian Restaurant. Kindermenu, halal gecertificeerd en milde opties. Leyweg 986. Reserveer een tafel vandaag.',
-  }
+  const isNl = locale === 'nl'
+  const title = isNl
+    ? 'Familierestaurant Den Haag | Kindvriendelijk Indiaas Restaurant | Chopras'
+    : 'Family Restaurant Den Haag | Child-Friendly Indian Restaurant | Chopras'
+  const description = isNl
+    ? 'Zoekt u een familierestaurant in Den Haag? Chopras Indian Restaurant op Leyweg 986 biedt ruim opgezette tafels, een speciaal kindermenu, milde gerechten en een speelse attentie voor kinderen. 4.9 sterren van 1100+ reviews. Reserveer online.'
+    : 'Searching for a family restaurant in Den Haag? Chopras Indian Restaurant at Leyweg 986 features spacious seating, a dedicated kids menu, mild dish options, and a small gift for children. 4.9 stars from 1100+ reviews. Book online.'
+
   return {
-    title: titles[locale],
-    description: descriptions[locale],
+    title,
+    description,
     alternates: {
       canonical: getLocalizedUrl(locale, 'family-restaurant-den-haag'),
       languages: {
@@ -35,16 +34,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
+      title,
+      description,
       url: getLocalizedUrl(locale, 'family-restaurant-den-haag'),
-      images: [{ url: '/og/home-og.jpg', width: 1200, height: 630, alt: 'Chopras Indian Restaurant Den Haag family dining' }],
+      images: [{ url: '/og/home-og.jpg', width: 1200, height: 630, alt: 'Familierestaurant Den Haag Chopras Indian Restaurant' }],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: titles[locale],
-      description: descriptions[locale],
+      title,
+      description,
       images: ['/og/home-og.jpg'],
     },
   }
@@ -52,51 +51,49 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const faqsEn = [
   {
-    question: 'Does Chopras Indian Restaurant Den Haag have a children\'s menu?',
-    answer: 'Yes. Chopras has a dedicated kids menu with a surprise gift for children. The menu includes mild curries, garlic naan, biryani, and tandoori dishes prepared at a gentler spice level. Every item on the kids menu is halal certified.',
+    question: 'Is Chopras Indian Restaurant suitable for families with young children in Den Haag?',
+    answer: 'Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag was designed with family dining in mind. We feature spacious seating layout where pushchairs and strollers fit comfortably, high chairs for toddlers, and a dedicated kids menu with mild, child-friendly Indian dishes. Every child ordering from the kids menu receives a small surprise gift.',
   },
   {
-    question: 'Is Chopras Indian Restaurant suitable for children who do not like spicy food?',
-    answer: 'Yes. Mild options at Chopras include butter chicken, plain naan, soft biryani rice, and vegetable dishes with no added chilli. The kitchen can adjust spice levels on request. The staff will guide you to the right dishes for young children.',
+    question: 'What dishes on the menu are suitable for children who do not eat spicy food?',
+    answer: 'Our menu includes several naturally mild options that are popular with children, including chicken korma, mild butter chicken, malai paneer tikka, sweet mango lassi, and freshly baked garlic or butter naan from the tandoor. You can also request any dish to be prepared with mild spice levels.',
   },
   {
-    question: 'Can I bring a pram or pushchair to Chopras Indian Restaurant?',
-    answer: 'Yes. Chopras Indian Restaurant at Leyweg 986 in Den Haag is pram friendly and wheelchair accessible. Tables are spacious enough to accommodate a pram beside the seat. Families with young children visit regularly.',
+    question: 'Does Chopras have a dedicated kids menu?',
+    answer: 'Yes. Our kids menu features mild, portion-sized Indian dishes created specifically for younger guests, served with rice or bread. Every kids menu order includes a complimentary gift for the child.',
   },
   {
-    question: 'Is the food at Chopras Indian Restaurant fully halal for families who only eat halal?',
-    answer: 'Yes. Chopras Indian Restaurant is fully halal certified. Every meat dish, every supplier, every dish on the menu. There is no non-halal meat on the premises, so there is no cross-contamination risk for families who require fully certified halal food.',
+    question: 'Is the entire menu at Chopras halal certified?',
+    answer: 'Yes. Chopras Indian Restaurant is 100% halal certified. Every meat dish, every supplier, and every order comes from a fully halal-certified kitchen with zero cross-contamination risk.',
   },
   {
-    question: 'Can I book a table for a family birthday at Chopras Indian Restaurant Den Haag?',
-    answer: 'Yes. Chopras accepts bookings for family birthday celebrations and can accommodate groups. Contact the restaurant at info [at] chopras.nl or call +31 6 30645930. Chopras also provides birthday catering for events outside the restaurant.',
+    question: 'Can Chopras accommodate large family groups and multi-generational celebrations?',
+    answer: 'Yes. Our main dining room features flexible table arrangements for multi-generational family dinners, birthday celebrations, and family gatherings. For private family events of 25 to 80 guests, we also offer a dedicated private hall at Leyweg 986.',
   },
 ]
 
 const faqsNl = [
   {
-    question: 'Heeft Chopras Indian Restaurant Den Haag een kindermenu?',
-    answer: 'Ja. Chopras heeft een speciaal kindermenu met een verrassingscadeau voor kinderen. Het menu bevat milde curries, knoflooknaan, biryani en tandoorischotels op een zachter kruidenniveau. Elk gerecht op het kindermenu is halal gecertificeerd.',
+    question: 'Is Chopras Indian Restaurant geschikt voor gezinnen met jonge kinderen in Den Haag?',
+    answer: 'Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag is ontworpen met gezinnen in gedachten. Wij bieden ruime zitplaatsen waar kinderwagens gemakkelijk passen, kinderstoelen voor peuters en een speciaal kindermenu met milde, kindvriendelijke Indiase gerechten. Elk kind dat van het kindermenu bestelt, ontvangt een kleine verrassing.',
   },
   {
-    question: 'Is Chopras Indian Restaurant geschikt voor kinderen die niet van pittig eten houden?',
-    answer: 'Ja. Milde opties bij Chopras zijn onder andere butter chicken, gewone naan, zachte biryanirijst en groentegerechten zonder toegevoegde chili. De keuken past het kruidenniveau op verzoek aan. Het personeel helpt u de juiste gerechten voor jonge kinderen te kiezen.',
+    question: 'Welke gerechten op de menukaart zijn geschikt voor kinderen die niet van scherp eten houden?',
+    answer: 'Onze menukaart bevat verschillende natuurlijk milde opties die populair zijn bij kinderen, waaronder chicken korma, milde butter chicken, malai paneer tikka, zoete mango lassi en vers gebakken naan uit de tandoor. U kunt ook elk gerecht laten bereiden met een mild kruidenniveau.',
   },
   {
-    question: 'Kan ik een kinderwagen meenemen naar Chopras Indian Restaurant?',
-    answer: 'Ja. Chopras Indian Restaurant op Leyweg 986 in Den Haag is kinderwagenvriendelijk en rolstoeltoegankelijk. Tafels zijn ruim genoeg voor een kinderwagen naast de stoel. Families met jonge kinderen bezoeken het restaurant regelmatig.',
+    question: 'Heeft Chopras een speciaal kindermenu?',
+    answer: 'Ja. Ons kindermenu bevat milde Indiase gerechten in kinderporties, geserveerd met rijst of brood. Bij elke bestelling van het kindermenu krijgt het kind een gratis cadeautje.',
   },
   {
-    question: 'Is het eten bij Chopras Indian Restaurant volledig halal voor families die alleen halal eten?',
-    answer: 'Ja. Chopras Indian Restaurant is volledig halal gecertificeerd. Elk vleesgerecht, elke leverancier, elk gerecht op het menu. Er is geen niet-halal vlees op de locatie, dus er is geen risico op kruisbesmetting voor families die volledig gecertificeerd halal voedsel vereisen.',
+    question: 'Is het gehele menu bij Chopras halal gecertificeerd?',
+    answer: 'Ja. Chopras Indian Restaurant is 100% halal gecertificeerd. Elk vleesgerecht, elke leverancier en elke bestelling komt uit een volledig halal gecertificeerde keuken zonder risico op kruisbesmetting.',
   },
   {
-    question: 'Kan ik een tafel reserveren voor een familieverjaardag bij Chopras Indian Restaurant Den Haag?',
-    answer: 'Ja. Chopras accepteert reserveringen voor familiefeestjes en kan groepen accommoderen. Neem contact op via info [at] chopras.nl of bel +31 6 30645930. Chopras verzorgt ook verjaardagscatering voor evenementen buiten het restaurant.',
+    question: 'Kan Chopras grote familiegroepen en feesten ontvangen?',
+    answer: 'Ja. Onze eetzaal biedt flexibele tafelopstellingen voor familiediners met meerdere generaties, verjaardagen en familiefeesten. Voor besloten familiebijeenkomsten van 25 tot 80 gasten beschikken wij ook over een eigen privézaal op Leyweg 986.',
   },
 ]
-
-const linkClass = 'text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold'
 
 export default function FamilyRestaurantPage({ params }: Props) {
   const { locale } = params
@@ -115,278 +112,191 @@ export default function FamilyRestaurantPage({ params }: Props) {
       <JsonLd data={getDietFoodEstablishmentSchema(locale, ['Halal', 'Halal Indian', 'Vegetarian Indian', 'North Indian'], 'family-restaurant')} />
 
       {/* Hero */}
-      <section className="bg-[#1B2B5E] py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
+      <section className="btn-gradient py-20 px-6 md:px-16 text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-6">
             <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • DISCOVER · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+              FAMILY DINING · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
-            {isNl ? 'Familierestaurant in Den Haag' : 'Family Restaurant in Den Haag'}
-          </h1>
-          <p className="font-body text-white/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
             {isNl
-              ? 'Een kindermenu met verrassing, milde en pittige opties, volledig halal gecertificeerd en ruimte voor iedereen aan tafel. Op Leyweg 986 in Den Haag.'
-              : 'A dedicated kids menu with a surprise gift, mild to spicy options, fully halal certified, and space for every family member at the table. At Leyweg 986 in Den Haag.'}
+              ? 'Familierestaurant Den Haag - Kindvriendelijk Indiaas Eten bij Chopras'
+              : 'Family Restaurant Den Haag - Child-Friendly Indian Dining at Chopras'}
+          </h1>
+          <p className="font-body text-white/85 text-lg md:text-xl mt-6 mb-8 max-w-2xl mx-auto leading-relaxed">
+            {isNl
+              ? 'Ruime zitplaatsen, milde kindergerechten, gratis verrassing voor elk kind en 100% halal gecertificeerd. Leyweg 986, Den Haag. 4.9 sterren uit 1100+ reviews.'
+              : 'Spacious seating, mild options for kids, complimentary gift for every child, and 100% halal certified. Leyweg 986, Den Haag. Rated 4.9 stars from 1100+ reviews.'}
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={`${base}/contact`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            >
+              {tr.common.reserve}
+            </Link>
+            <Link
+              href={`${base}/menu`}
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            >
+              {tr.common.viewMenu}
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Section 1: Main intro */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Het Familierestaurant Den Haag Waar Families Terugkomen' : 'The Family Restaurant Den Haag Families Come Back To'}
-          </h2>
-          {isNl ? (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Bij de meeste restaurants die beweren gezinsvriendelijk te zijn, is er altijd iemand aan tafel die niets kan vinden om te eten. Niet bij Chopras Indian Restaurant. Op <strong>Leyweg 986</strong> in Den Haag is elk gerecht voor elke gast bedoeld, van het kind dat alleen boterzachte naan wil tot de grootouder die de volle smaak van een langzaam gegaarde curry vraagt. Bekijk het{' '}
-                <Link href={`${base}/menu`} className={linkClass}>volledige Indiaas menu</Link>{' '}
-                om te zien hoe breed het aanbod loopt.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Het bewijs zit in de beoordelingen. 4,9 sterren van meer dan 800 gasten op Google. Families vormen een groot deel van die beoordelingen, met een gemeenschappelijke boodschap: kinderen aten goed, ouders ontspanden, en iedereen vertrok verzadigd. Dat is geen toeval. Het is het resultaat van een keuken die elke ochtend versgemalen specerijen gebruikt, rechtstreeks afkomstig uit India, en een menu van 143 gerechten dat iedereen aan tafel bedient.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras ligt in de Leyweg-wijk van Den Haag, waar de grootste Hindoestaanse gemeenschap van Nederland woont. Dit zijn gasten die het verschil weten tussen echt Indiaas eten en een imitatie. Ze blijven terugkomen. Bekijk ook waarom Chopras als het{' '}
-                <Link href={`${base}/beste-indiaas-restaurant-den-haag`} className={linkClass}>beste Indiaas restaurant Den Haag</Link>{' '}
-                wordt beschouwd.
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                At most restaurants that call themselves family-friendly, there is always one person at the table who cannot find anything to eat. Not here. Chopras Indian Restaurant at <strong>Leyweg 986</strong> in Den Haag is built around the fact that every seat at the table matters, from the child who only wants buttery naan to the grandparent who wants the full, deep flavour of a slow-cooked curry. Browse the{' '}
-                <Link href={`${base}/menu`} className={linkClass}>full Indian restaurant menu</Link>{' '}
-                to see just how wide the range runs.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The proof is in the reviews. 4.9 stars from more than 800 guests on Google. Families make up a significant share of those reviews, and a common thread runs through them: children ate well, parents relaxed, and everyone left full. That is not an accident. It is the result of a kitchen that grinds its spices fresh every morning from whole spices sourced directly from India, and a 143-dish menu that serves everyone at the table.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras is located in the Leyweg neighbourhood of Den Haag, where the largest Hindustani community in the Netherlands lives. These guests know the difference between real Indian food and imitation. They keep coming back. See why Chopras is rated the{' '}
-                <Link href={`${base}/beste-indiaas-restaurant-den-haag`} className={linkClass}>best Indian restaurant Den Haag</Link>{' '}
-                has to offer.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Section 2: Kids menu */}
+      {/* Main Copy */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Wat Kinderen Eten bij Chopras Indian Restaurant' : 'What Children Eat at Chopras Indian Restaurant'}
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
+            {isNl
+              ? 'Het Best Beoordeelde Familierestaurant in Den Haag'
+              : 'The Best-Rated Family Restaurant in Den Haag'}
           </h2>
-          {isNl ? (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Kinderen bij Chopras krijgen hun eigen speciaal kindermenu met een <strong>verrassingscadeau</strong>. Geen symbolisch gebaar. Een echt kindermenu ontworpen voor kinderen die niet van een volwassen bord willen eten. Milde{' '}
-                <Link href={`${base}/butter-chicken-den-haag`} className={linkClass}>butter chicken</Link>,{' '}
-                knoflook<Link href={`${base}/naan-den-haag`} className={linkClass}>naan</Link>, zachte{' '}
-                <Link href={`${base}/biryani-den-haag`} className={linkClass}>biryanirijst</Link>{' '}
-                en <Link href={`${base}/tandoori-den-haag`} className={linkClass}>tandoorischotels</Link>{' '}
-                op een zachter kruidenniveau. Dit is eten dat kinderen daadwerkelijk opeten.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Elk gerecht op het kindermenu is{' '}
-                <Link href={`${base}/halal-food-den-haag`} className={linkClass}>halal gecertificeerd</Link>.{' '}
-                Ouders die alleen halal eten weten precies wat dat betekent voor hun gezin. Geen risico op kruisbesmetting. Geen uitzonderingen op enig gerecht. De volledige keuken van Chopras werkt volgens een enkele halalstandaard bij elke dienst.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Indiase desserts sluiten het diner op de juiste manier af. Kheer, gulab jamun en ras malai zijn zoet, romig en ongelijk aan wat een kind eerder heeft geproefd. De reactie is bijna altijd hetzelfde: eerst verrassing, dan om meer vragen.
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Children at Chopras get their own dedicated kids menu with a <strong>surprise gift</strong>. Not a token gesture. A real kids menu designed for children who do not want to eat from an adult plate. Mild{' '}
-                <Link href={`${base}/butter-chicken-den-haag`} className={linkClass}>butter chicken</Link>,{' '}
-                garlic <Link href={`${base}/naan-den-haag`} className={linkClass}>naan</Link>, soft{' '}
-                <Link href={`${base}/biryani-den-haag`} className={linkClass}>biryani rice</Link>,{' '}
-                and <Link href={`${base}/tandoori-den-haag`} className={linkClass}>tandoori dishes</Link>{' '}
-                prepared at a gentler spice level. This is food children actually eat.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Every dish on the kids menu is{' '}
-                <Link href={`${base}/halal-food-den-haag`} className={linkClass}>halal certified</Link>.{' '}
-                Parents who only eat halal know exactly what that means for their family. No cross-contamination risk. No exceptions on any dish. The entire Chopras kitchen operates to a single halal standard, every service.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Indian desserts close the meal the way desserts should. Kheer, gulab jamun, and ras malai are sweet, creamy, and unlike anything a child has tasted before. The reaction is almost always the same: first surprise, then asking for more.
-              </p>
-            </div>
-          )}
+          <div className="space-y-6 font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+            <p>
+              {isNl
+                ? 'Uit eten gaan met het hele gezin hoort ontspannen en plezierig te zijn. Bij Chopras Indian Restaurant op Leyweg 986 in Den Haag begrijpen wij dat een goed familierestaurant meer nodig heeft dan alleen lekker eten. Het vraagt om een gastvrije sfeer, voldoende ruimte tussen de tafels, milde opties voor jonge eters en snelle, vriendelijke bediening.'
+                : 'Dining out with the family should be a relaxed and enjoyable experience. At Chopras Indian Restaurant, Leyweg 986 in Den Haag, we understand that a great family restaurant requires more than delicious food. It calls for a welcoming atmosphere, generous space between tables, mild options for younger diners, and attentive, friendly service.'}
+            </p>
+            <p>
+              {isNl
+                ? 'Onze eetzaal is ruim opgezet zodat kinderwagens gemakkelijk bij de tafel geplaatst kunnen worden. Wij hebben kinderstoelen beschikbaar voor peuters en ons team zorgt er altijd voor dat gezinnen zich vanaf het eerste moment thuis voelen.'
+                : 'Our dining space is arranged with generous spacing so pushchairs and buggies fit comfortably alongside your table. High chairs are available for toddlers, and our staff ensures families feel genuinely welcome from the moment they arrive.'}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Section 3: Every seat at the table */}
+      {/* Proof Grid */}
+      <section className="btn-gradient py-20 px-6 md:px-16 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+            {isNl ? 'Waarom Gezinnen Kiezen voor Chopras' : 'Why Families Choose Chopras'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/30">
+              <p className="font-heading text-3xl text-white mb-3 leading-[1.3]">Kindermenu + Cadeau</p>
+              <p className="font-body text-white/85 text-base leading-relaxed">
+                {isNl
+                  ? 'Milde kinderporties en bij elke kinderbestelling een leuk verrassingscadeautje.'
+                  : 'Mild child-sized portions, plus a free surprise gift with every kids menu order.'}
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/30">
+              <p className="font-heading text-3xl text-white mb-3 leading-[1.3]">100% Halal</p>
+              <p className="font-body text-white/85 text-base leading-relaxed">
+                {isNl
+                  ? 'Elk vleesgerecht is halal gecertificeerd uit een toegewijde schone keuken.'
+                  : 'Every meat dish is halal certified from a dedicated clean kitchen.'}
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/30">
+              <p className="font-heading text-3xl text-white mb-3 leading-[1.3]">4.9 Sterren</p>
+              <p className="font-body text-white/85 text-base leading-relaxed">
+                {isNl
+                  ? 'Over 1100+ geverifieerde reviews op Google met een 4.9 beoordeling.'
+                  : 'Over 1100+ verified Google reviews with an outstanding 4.9 rating.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dishes for family */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Elke Plek aan Tafel Heeft Iets' : 'Every Seat at the Table Has Something'}
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
+            {isNl ? 'Populaire Familiegerechten bij Chopras' : 'Popular Family Dishes at Chopras'}
           </h2>
-          {isNl ? (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Sommige gezinnen hebben een vegetarier, een halal-gast, een pittiggevoelig kind en iemand die de heetste curry op de kaart wil. Dat is een gewoon gezin. Het menu van 143 gerechten bij Chopras kan dit allemaal aan. Het{' '}
-                <Link href={`${base}/vegan-menu`} className={linkClass}>veganistische menu</Link>{' '}
-                bevat gerechten zoals{' '}
-                <Link href={`${base}/dal-makhani-den-haag`} className={linkClass}>dal makhani</Link>{' '}
-                en soya chaap, gerechten die geen bijzaak zijn maar volwaardig uitgewerkte onderdelen van de kaart.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Kruidenniveaus bij Chopras lopen van echt mild tot flink pittig. Het personeel begeleidt u altijd. Vraag welke gerechten geschikt zijn voor jonge kinderen. Vraag welke curries medium zijn. U krijgt een direct, eerlijk antwoord van iemand die de keuken kent.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Tafels op Leyweg 986 zijn ruim genoeg voor een kinderwagen naast de stoel. Het restaurant is rolstoeltoegankelijk. Met een jong gezin naar de tafel komen hoeft geen hindernisbaan te zijn. Dat is het hier niet.{' '}
-                <Link href={`${base}/contact`} className={linkClass}>Reserveer uw familietafel</Link>{' '}
-                direct online.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-heading text-2xl text-[#06068a] mb-2 leading-[1.3]">
+                <Link href={`${base}/butter-chicken-den-haag`} className="hover:text-[#0000B3] transition-colors">
+                  Butter Chicken Den Haag
+                </Link>
+              </h3>
+              <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed">
+                {isNl
+                  ? 'Milde, romige tomaten-botersaus met malse halal kip. Favoriet bij zowel kinderen als volwassenen.'
+                  : 'Mild, creamy tomato-butter sauce with tender halal chicken. A favourite for both children and adults.'}
               </p>
             </div>
-          ) : (
-            <div className="space-y-6">
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Some families contain a vegetarian, a halal-only guest, a spice-sensitive child, and someone who wants the hottest curry on the menu. That is a typical family. The 143-dish menu at Chopras handles all of it. The{' '}
-                <Link href={`${base}/vegan-menu`} className={linkClass}>vegetarian and vegan menu</Link>{' '}
-                covers dishes like{' '}
-                <Link href={`${base}/dal-makhani-den-haag`} className={linkClass}>dal makhani</Link>{' '}
-                and soya chaap, dishes that are not afterthoughts but fully developed centrepieces in their own right.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Spice levels at Chopras run from genuinely mild to properly hot. The staff will always guide you. Ask which dishes work for younger children. Ask which curries are medium. You will get a direct, honest answer from someone who knows the kitchen.
-              </p>
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Tables at Leyweg 986 are spacious enough for a pram beside the seat. The restaurant is wheelchair accessible. Getting to the table with a young family should not be an obstacle course. It is not, here.{' '}
-                <Link href={`${base}/contact`} className={linkClass}>Reserve your family table</Link>{' '}
-                online today.
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-heading text-2xl text-[#06068a] mb-2 leading-[1.3]">
+                <Link href={`${base}/biryani-den-haag`} className="hover:text-[#0000B3] transition-colors">
+                  Biryani Den Haag
+                </Link>
+              </h3>
+              <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed">
+                {isNl
+                  ? 'Geurige saffraanrijst ideaal om te delen met de hele familie, geserveerd met milde raita.'
+                  : 'Fragrant saffron rice ideal for family sharing, served with mild raita.'}
               </p>
             </div>
-          )}
-        </div>
-      </section>
-
-      {/* GEO Block */}
-      <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Is Chopras Indian Restaurant Geschikt voor Gezinnen met Kinderen in Den Haag?'
-              : 'Is Chopras Indian Restaurant Good for Families with Children in Den Haag?'}
-          </h2>
-          {isNl ? (
-            <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-              Ja. Chopras Indian Restaurant op Leyweg 986 in Den Haag is een uitstekende keuze voor gezinnen met kinderen. Het restaurant heeft een speciaal kindermenu met verrassingscadeau, milde opties waaronder{' '}
-              <Link href={`${base}/butter-chicken-den-haag`} className={linkClass}>butter chicken</Link>{' '}
-              en knoflooknaan, en een volledig halal gecertificeerde keuken zonder kruisbesmettingsrisico. Beoordeeld met 4,9 sterren door meer dan 800 Google-gasten. Geopend van dinsdag tot zondag vanaf 16:30. Rolstoeltoegankelijk en kinderwagenvriendelijk.{' '}
-              <Link href={`${base}/contact`} className={linkClass}>Reserveer een tafel voor uw gezin</Link>{' '}
-              of bekijk het{' '}
-              <Link href={`${base}/menu`} className={linkClass}>volledige menu</Link>.
-            </p>
-          ) : (
-            <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-              Yes. Chopras Indian Restaurant at Leyweg 986 in Den Haag is an excellent choice for families with children. The restaurant has a dedicated kids menu with a surprise gift, mild dish options including{' '}
-              <Link href={`${base}/butter-chicken-den-haag`} className={linkClass}>butter chicken</Link>{' '}
-              and garlic naan, and a fully halal-certified kitchen with zero cross-contamination risk. Rated 4.9 stars by more than 800 guests on Google. Open Tuesday to Sunday from 16:30. Wheelchair accessible and pram friendly.{' '}
-              <Link href={`${base}/contact`} className={linkClass}>Reserve a family table</Link>{' '}
-              or browse the{' '}
-              <Link href={`${base}/menu`} className={linkClass}>full menu</Link>.
-            </p>
-          )}
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-heading text-2xl text-[#06068a] mb-2 leading-[1.3]">
+                <Link href={`${base}/naan-den-haag`} className="hover:text-[#0000B3] transition-colors">
+                  Tandoori Naan & Brood
+                </Link>
+              </h3>
+              <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed">
+                {isNl
+                  ? 'Vers gebakken knoflook- en boternaan uit onze 400-graden tandoor kleioven.'
+                  : 'Freshly baked garlic and butter naan from our 400-degree tandoor clay oven.'}
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-heading text-2xl text-[#06068a] mb-2 leading-[1.3]">
+                <Link href={`${base}/dal-makhani-den-haag`} className="hover:text-[#0000B3] transition-colors">
+                  Dal Makhani Den Haag
+                </Link>
+              </h3>
+              <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed">
+                {isNl
+                  ? 'Langzaam gegaarde zwarte linzen met boter en room. Rijk, mild en erg voedzaam.'
+                  : 'Slow-cooked black lentils with butter and cream. Rich, mild, and highly nutritious.'}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Veelgestelde Vragen over Ons Familierestaurant' : 'Frequently Asked Questions About Our Family Restaurant'}
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
+            {isNl ? 'Veelgestelde Vragen over ons Familierestaurant' : 'Frequently Asked Questions About Our Family Restaurant'}
           </h2>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>
 
-      {/* CTA - navy */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
+      {/* CTA */}
+      <section className="btn-gradient py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Reserveer een Familietafel op Leyweg 986' : 'Reserve a Family Table at Leyweg 986'}
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
+            {isNl ? 'Reserveer een Tafel voor Uw Gezin' : 'Reserve a Table for Your Family'}
           </h2>
-          <p className="font-body text-white/85 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            {isNl ? (
-              <>Chopras Indian Restaurant is open van dinsdag tot zondag, vanaf 16:30. Bel +31 6 30645930 of stuur een e-mail naar <EmailLink />.</>
-            ) : (
-              <>Chopras Indian Restaurant is open Tuesday to Sunday from 16:30. Call +31 6 30645930 or email <EmailLink /> to reserve your table.</>
-            )}
+          <p className="font-body text-white/85 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            {isNl
+              ? 'Kom langs op Leyweg 986, Den Haag. Open van dinsdag tot en met zondag van 16:30 tot 22:30.'
+              : 'Visit us at Leyweg 986, Den Haag. Open Tuesday to Sunday from 16:30 to 22:30.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
-              {isNl ? 'Tafel Reserveren' : 'Reserve a Table'}
+              {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
-              {isNl ? 'Bekijk het Menu' : 'View the Menu'}
+              {tr.common.viewMenu}
             </Link>
-            <Link
-              href={`${base}/indian-birthday-catering-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
-            >
-              {isNl ? 'Verjaardagscatering' : 'Birthday Catering'}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Dish links grid */}
-      <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8 leading-[1.3]">
-            {isNl ? 'Populaire Gerechten voor het Hele Gezin' : 'Popular Dishes for the Whole Family'}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Milde Curry' : 'Mild Curry'}</p>
-              <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Butter Chicken - zacht en romig' : 'Butter Chicken - mild and creamy'}</p>
-            </Link>
-            <Link href={`${base}/tandoori-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Tandoor Gegrild' : 'Tandoor Grilled'}</p>
-              <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Tandoori - 400 graden kleioven' : 'Tandoori - 400 degree clay oven'}</p>
-            </Link>
-            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Rijstschotel' : 'Rice Dish'}</p>
-              <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Biryani - saffraan basmatirijst' : 'Biryani - saffron basmati rice'}</p>
-            </Link>
-            <Link href={`${base}/naan-den-haag`} className="block p-6 bg-[#FFFAF5] rounded-lg border border-white/20 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Brood uit de Tandoor' : 'Bread from the Tandoor'}</p>
-              <p className="font-body text-[#1B2B5E] font-semibold text-lg">{isNl ? 'Naan - recht uit de kleioven' : 'Naan - fresh from the clay oven'}</p>
-            </Link>
-          </div>
-          <div className="mt-10 space-y-4">
-            {isNl ? (
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Bekijk het{' '}
-                <Link href={`${base}/menu`} className={linkClass}>volledige menu van Chopras Indian Restaurant</Link>{' '}
-                met alle 143 gerechten verdeeld over 13 categorieen. Of{' '}
-                <Link href={`${base}/contact`} className={linkClass}>reserveer een familietafel in Den Haag</Link>{' '}
-                direct via onze contactpagina.
-              </p>
-            ) : (
-              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Browse the{' '}
-                <Link href={`${base}/menu`} className={linkClass}>full Chopras Indian Restaurant menu</Link>{' '}
-                with all 143 dishes across 13 categories. Or{' '}
-                <Link href={`${base}/contact`} className={linkClass}>book a family table in Den Haag</Link>{' '}
-                directly via our contact page.
-              </p>
-            )}
           </div>
         </div>
       </section>

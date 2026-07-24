@@ -123,7 +123,7 @@ export default function LocaleContactPage({ params }: Props) {
       {/* SECTION 1  -  DUAL FORM SPLIT */}
       <section
         className="py-10 md:py-14"
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh] items-start gap-6 lg:gap-8">
@@ -135,7 +135,7 @@ export default function LocaleContactPage({ params }: Props) {
                   • VISIT US · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
                 </span>
               </div>
-              <h1 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mt-2 mb-2 leading-[1.3]">
+              <h1 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mt-2 mb-2 leading-[1.3]">
                 {isNl ? 'Reserveer uw Tafel bij Chopras' : 'Reserve Your Table at Chopras'}
               </h1>
               <p className="text-[#1A1A1A]/60 text-sm mt-2 mb-6">
@@ -153,7 +153,7 @@ export default function LocaleContactPage({ params }: Props) {
                   • CATERING · EVENTS · GENERAL ENQUIRIES •
                 </span>
               </div>
-              <h2 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mt-2 mb-2 leading-[1.3]">
+              <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
                 {isNl
                   ? 'Catering, Evenement en Algemene Vragen'
                   : 'Catering, Event and General Enquiries'}
@@ -166,24 +166,24 @@ export default function LocaleContactPage({ params }: Props) {
               <div className="flex flex-wrap gap-2 mb-6">
                 <Link
                   href={`${base}/feestzaal-den-haag`}
-                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-white hover:bg-[#0000B3]/10 transition-colors"
+                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-[#06068a] hover:bg-[#0000B3]/10 transition-colors"
                 >
                   Feestzaal huren
                 </Link>
                 <Link
                   href={`${base}/catering`}
-                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-white hover:bg-[#0000B3]/10 transition-colors"
+                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-[#06068a] hover:bg-[#0000B3]/10 transition-colors"
                 >
                   Catering
                 </Link>
                 <Link
                   href={`${base}/corporate-events-den-haag`}
-                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-white hover:bg-[#0000B3]/10 transition-colors"
+                  className="border border-white/40 rounded-full px-3 py-1 text-xs text-[#06068a] hover:bg-[#0000B3]/10 transition-colors"
                 >
                   {isNl ? 'Zakelijke Evenementen' : 'Corporate Events'}
                 </Link>
               </div>
-              <ContactForm />
+              <ContactForm locale={locale} />
             </div>
 
           </div>
@@ -191,7 +191,7 @@ export default function LocaleContactPage({ params }: Props) {
       </section>
 
       {/* SECTION 2  -  COMPACT INFO STRIP */}
-      <section className="bg-[#1B2B5E] py-10 px-6 md:px-16">
+      <section className="bg-[#06068a] py-10 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div className="flex items-start gap-3">
@@ -243,7 +243,7 @@ export default function LocaleContactPage({ params }: Props) {
       {/* SECTION 3  -  PLAN YOUR VISIT PROSE */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Uw Bezoek aan Chopras Indian Restaurant Plannen'
               : 'Plan Your Visit to Chopras Indian Restaurant Den Haag'}
@@ -255,22 +255,22 @@ export default function LocaleContactPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 Vanuit Den Haag Centraal duurt de tramrit naar Leyweg ongeveer 15 minuten. Vanuit{' '}
-                <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/indian-restaurant-rijswijk`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Rijswijk
                 </Link>{' '}
                 is het restaurant vijf minuten rijden. Gasten die komen uit{' '}
-                <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/indian-restaurant-delft`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Delft
                 </Link>{' '}
                 bereiken Chopras Indian Restaurant via de A13 in circa 15 minuten. Tramlijn 2 stopt bij halte Leyweg, op loopafstand van het restaurant.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 Voor groepen van vier of meer wordt een reservering aanbevolen, met name op vrijdag- en zaterdagavond. Gebruik het reserveringsformulier bovenaan deze pagina of bel +31 6 30645930. Voor{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indiaas catering in Den Haag
                 </Link>{' '}
                 of om de{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   feestzaal te huren in Den Haag
                 </Link>
                 , neemt u contact op via het formulier hieronder.
@@ -283,22 +283,22 @@ export default function LocaleContactPage({ params }: Props) {
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-4">
                 From Den Haag Centraal the tram journey to Leyweg takes around 15 minutes. From{' '}
-                <Link href={`${base}/indian-restaurant-rijswijk`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/indian-restaurant-rijswijk`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Rijswijk
                 </Link>{' '}
                 the restaurant is five minutes by car. Guests coming from{' '}
-                <Link href={`${base}/indian-restaurant-delft`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/indian-restaurant-delft`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Delft
                 </Link>{' '}
                 reach Chopras Indian Restaurant via the A13 in around 15 minutes. Tram line 2 stops at Leyweg, a short walk from the entrance.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 For groups of four or more, a reservation is recommended, particularly on Friday and Saturday evenings. Use the reservation form at the top of this page or call +31 6 30645930. For{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indian catering in Den Haag
                 </Link>{' '}
                 or to{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   hire the event space in Den Haag
                 </Link>
                 , use the contact form below.
@@ -311,7 +311,7 @@ export default function LocaleContactPage({ params }: Props) {
       {/* SECTION 4  -  GEO BLOCK */}
       <section className="bg-[#FFFAF5] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Hoe neem ik contact op of reserveer ik bij Chopras Indian Restaurant Den Haag?'
               : 'How do I contact or reserve at Chopras Indian Restaurant Den Haag?'}
@@ -319,11 +319,11 @@ export default function LocaleContactPage({ params }: Props) {
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Chopras Indian Restaurant is bereikbaar via{' '}
-              <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 +31 6 30645930
               </Link>{' '}
-              of <EmailLink />. Het restaurant is gevestigd op Leyweg 986, 2545 GW Den Haag. Reserveringen zijn mogelijk via het formulier bovenaan deze pagina. Open van dinsdag tot en met zondag van 16:30 tot 22:30. Betaald parkeren beschikbaar in de omgeving van Leyweg. Beoordeeld met 4,9 sterren van meer dan 800 gasten op Google. Voor{' '}
-              <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              of <EmailLink />. Het restaurant is gevestigd op Leyweg 986, 2545 GW Den Haag. Reserveringen zijn mogelijk via het formulier bovenaan deze pagina. Open van dinsdag tot en met zondag van 16:30 tot 22:30. Betaald parkeren beschikbaar in de omgeving van Leyweg. Beoordeeld met 4,9 sterren van meer dan 1100 gasten op Google. Voor{' '}
+              <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Indiaas catering of privé-evenementen in Den Haag
               </Link>
               , gebruik het contactformulier hierboven.
@@ -331,11 +331,11 @@ export default function LocaleContactPage({ params }: Props) {
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Chopras Indian Restaurant is reachable at{' '}
-              <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 +31 6 30645930
               </Link>{' '}
-              or <EmailLink />. The restaurant is at Leyweg 986, 2545 GW Den Haag. Reservations can be made using the form at the top of this page. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area. Rated 4.9 stars from over 800 verified guests on Google. For{' '}
-              <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              or <EmailLink />. The restaurant is at Leyweg 986, 2545 GW Den Haag. Reservations can be made using the form at the top of this page. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area. Rated 4.9 stars from over 1100 verified guests on Google. For{' '}
+              <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Indian catering or private events in Den Haag
               </Link>
               , use the contact form above.
@@ -345,13 +345,15 @@ export default function LocaleContactPage({ params }: Props) {
       </section>
 
       {/* SECTION 5  -  FAQ */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Veelgestelde vragen over Chopras Indian Restaurant Den Haag'
-              : 'Frequently asked questions about Chopras Indian Restaurant Den Haag'}
-          </h2>
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              {isNl
+                ? 'Veelgestelde vragen over Chopras Indian Restaurant Den Haag'
+                : 'Frequently asked questions about Chopras Indian Restaurant Den Haag'}
+            </h2>
+          </div>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>

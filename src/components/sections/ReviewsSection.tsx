@@ -23,10 +23,8 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
         ref={headerRef}
         className={`text-center transition-all duration-500 ease-out ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
-        <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
-          <span className="text-white text-xs font-medium uppercase tracking-widest">• WHAT OUR GUESTS SAY •</span>
-        </div>
-        <h2 className="font-semibold text-4xl md:text-5xl mb-6 leading-[1.4] [letter-spacing:0.02em] mt-2">
+
+        <h2 className="font-heading font-semibold text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.4] [letter-spacing:0.02em] mt-2">
           {tr.home.reviewsH2}
         </h2>
         <p className="font-body text-[#1A1A1A]/60 mt-3">{tr.home.reviewsSub}</p>
@@ -34,10 +32,16 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
         {/* Aggregate rating */}
         <div className="flex items-center justify-center gap-2 mt-6">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={20} className="text-white fill-[#0000B3]" />
+            <div
+              key={i}
+              className={`transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${headerInView ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-0 translate-y-8'}`}
+              style={{ transitionDelay: `${300 + i * 150}ms` }}
+            >
+              <Star size={20} className="text-white fill-[#0000B3]" />
+            </div>
           ))}
           <span className="font-body text-[#1A1A1A]/60 text-sm ml-2">
-            4.9 out of 5 &middot; 800+ Google reviews
+            4.9  &middot; 1100+ Google reviews
           </span>
         </div>
       </div>
@@ -67,25 +71,69 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
       </div>
 
       {/* CTA buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 overflow-hidden px-4">
         <a
           href={RESTAURANT.reviewUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white px-8 py-4 rounded-full font-body font-semibold uppercase tracking-widest text-sm hover:bg-[#F5D36A] transition-all duration-200"
+          className={`inline-flex items-center justify-center bg-[#0000e6] text-white px-10 h-[48px] rounded-full font-body font-semibold uppercase tracking-widest text-sm hover:bg-[#0000B3] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${cardsInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24'}`}
         >
-          <Star className="w-4 h-4" />
-          Write a Google Review
+          Review Us On Google
         </a>
         <a
           href={RESTAURANT.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-body font-semibold text-sm uppercase tracking-widest text-[#1B2B5E] underline-offset-4 hover:underline"
+          className={`inline-flex items-center justify-center bg-[#0000e6] text-white px-10 h-[48px] rounded-full font-body font-semibold uppercase text-xs md:text-sm hover:bg-[#0000B3] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] delay-100 ${cardsInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24'}`}
         >
-          {tr.home.reviewsLink}
+          Read all reviews on Google &rarr;
         </a>
       </div>
+
+      <style>{`
+        .custom-animated-reviews-btn {
+          height: 48px;
+          min-width: 320px;
+          border: none;
+          border-radius: 9999px;
+          background: linear-gradient(to right, #4955f5, #06068a, #4955f5, #06068a, #4955f5, #06068a);
+          background-size: 250%;
+          background-position: left;
+          color: white;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          overflow: hidden;
+          text-decoration: none;
+        }
+
+        .custom-animated-reviews-btn:hover {
+          background-position: right;
+        }
+
+        .custom-reviews-btn-content {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: calc(100% - 6px);
+          height: calc(100% - 6px);
+          border-radius: 9999px;
+          background-color: #0000cc;
+          z-index: 1;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-size: 0.875rem;
+          transition: background-color 0.3s ease;
+        }
+
+        .custom-animated-reviews-btn:hover .custom-reviews-btn-content {
+          background-color: #0000b3;
+        }
+      `}</style>
     </section>
   )
 }

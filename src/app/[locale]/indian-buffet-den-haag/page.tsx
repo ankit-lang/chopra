@@ -115,19 +115,24 @@ export default function IndianBuffetPage({ params }: Props) {
       <JsonLd data={getDishPageSchema(locale, 'Indian Buffet Den Haag', 'Indiaas Buffet Den Haag', 'Authentic Indian buffet at Chopras Indian Restaurant Den Haag. Halal curries, tandoori and biryani for groups at Leyweg 986, 2545 GW Den Haag.', 'Authentiek Indiaas buffet bij Chopras Indian Restaurant Den Haag. Halal curry, tandoori en biryani voor groepen op Leyweg 986, 2545 GW Den Haag.')} />
 
       {/* HERO */}
-      <section className="bg-[#1B2B5E] py-20 text-center">
+      <section className="btn-gradient  py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
             <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+              OUR DISHES · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-[2.75rem] text-white mb-6 leading-tight">
             {isNl
               ? 'Indiaas Buffet in Den Haag - Een Spread Die Iedereen Bedient'
               : 'Indian Buffet in Den Haag - A Spread That Feeds Everyone and Forgets Nobody'}
           </h1>
-          <p className="text-white/75 text-lg md:text-xl mb-8">
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+            <span className="text-white/90 text-lg">✦</span>
+            <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+          </div>
+          <p className="text-white/75 text-base md:text-[18px] mb-8">
             {isNl
               ? 'Vanaf 15 gasten tot 200. Verse curry, biryani, tandoori en street food. Halal gecertificeerd. Leyweg 986 en locaties door Den Haag.'
               : 'From 15 guests to 200. Fresh curries, biryani, tandoori and street food. Halal certified. Leyweg 986 and venues across Den Haag.'}
@@ -135,13 +140,13 @@ export default function IndianBuffetPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/catering#catering-form`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {isNl ? 'Offerte Aanvragen' : 'Request a Buffet Quote'}
             </Link>
             <a
               href={`tel:${RESTAURANT.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {RESTAURANT.contact.phoneDisplay}
             </a>
@@ -150,23 +155,25 @@ export default function IndianBuffetPage({ params }: Props) {
       </section>
 
       {/* WHY INDIAN CUISINE */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Waarom Indiase Keuken Perfect Is voor een Groepsbuffet'
-              : 'Why Indian Cuisine Works Better Than Any Other Buffet Option'}
-          </h2>
-          <div className="space-y-5 text-[#1A1A1A] text-lg leading-relaxed">
+          <div className="text-left mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-[2.5rem] text-[#06068a] mb-6 leading-tight mt-2 text-left">
+              {isNl
+                ? 'Waarom Indiase Keuken Perfect Is voor een Groepsbuffet'
+                : 'Why Indian Cuisine Works Better Than Any Other Buffet Option'}
+            </h2>
+          </div>
+          <div className="space-y-5 text-[#1A1A1A] text-base leading-relaxed">
             {isNl ? (
               <>
                 <p>
                   Indiase keuken is de meest praktische keuze voor een groepsbuffet, en de redenen zijn structureel.
                   Een standaard{' '}
-                  <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal Indiaas buffet</Link>{' '}
+                  <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal Indiaas buffet</Link>{' '}
                   in Den Haag dekt tegelijkertijd halal-, vegetarische, veganistische en glutenvrije vereisten zonder speciale aanpassing.
                   Dal, chana masala, groente{' '}
-                  <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>{' '}
+                  <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>{' '}
                   en palak paneer zijn geen concessies. Zij zijn het echte eten dat iedereen aan tafel eet - en vaak de gerechten waarnaar gasten het vaakst terugkeren.
                 </p>
                 <p>
@@ -177,7 +184,7 @@ export default function IndianBuffetPage({ params }: Props) {
                 <p>
                   Dan is er de visuele dimensie. De kleuren van Indiase keuken op een buffettafel zijn werkelijk prachtig.
                   Kurkumageel dal, diep baksteenrood{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken</Link>,{' '}
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken</Link>,{' '}
                   levendig groen palak paneer, karamelbruin biryani bezaaid met saffraan. De tafel zelf wordt een middelpunt. Geen andere keuken bereikt dit effect met standaardgerechten.
                 </p>
                 <p>
@@ -191,10 +198,10 @@ export default function IndianBuffetPage({ params }: Props) {
                 <p>
                   Indian food is the most practical choice for a large group buffet, and the reasons are structural.
                   A standard{' '}
-                  <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal Indian buffet</Link>{' '}
+                  <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal Indian buffet</Link>{' '}
                   in Den Haag naturally covers halal, vegetarian, vegan and gluten-free requirements without special accommodation.
                   Dal, chana masala, vegetable{' '}
-                  <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>{' '}
+                  <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>{' '}
                   and palak paneer are not concessions. They are the actual food that everyone at the table eats - and often the dishes guests return to most.
                 </p>
                 <p>
@@ -205,7 +212,7 @@ export default function IndianBuffetPage({ params }: Props) {
                 <p>
                   Then there is the visual dimension. The colours of Indian cuisine on a buffet table are genuinely striking.
                   Turmeric-yellow dal, deep brick-red{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">butter chicken</Link>,{' '}
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken</Link>,{' '}
                   vibrant green palak paneer, caramel-brown biryani flecked with saffron. The table itself becomes a centrepiece. No other cuisine achieves this effect from standard dishes.
                 </p>
                 <p>
@@ -222,12 +229,12 @@ export default function IndianBuffetPage({ params }: Props) {
       {/* WHY CHOPRAS - PROOF */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Hetzelfde Restaurant. Dezelfde Keuken. Dezelfde Standaard.'
               : 'The Same Restaurant. The Same Kitchen. The Same Standard.'}
           </h2>
-          <div className="space-y-5 text-[#1A1A1A] text-lg leading-relaxed">
+          <div className="space-y-5 text-[#1A1A1A] text-base leading-relaxed">
             {isNl ? (
               <>
                 <p>
@@ -242,25 +249,25 @@ export default function IndianBuffetPage({ params }: Props) {
                   De tandoorkleioven op Leyweg 986 bereikt 400 graden Celsius. Die temperatuur is wat naan zijn
                   schroeiplek op de randen geeft en kip tikka zijn rokerige buitenkorst. Geen gewone oven kan
                   dit produceren. Elk{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoorgerecht in Den Haag</Link>{' '}
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoorgerecht in Den Haag</Link>{' '}
                   bij een Chopras buffet - het geroosterde vlees, het{' '}
-                  <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">verse naan</Link>{' '}
+                  <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">verse naan</Link>{' '}
                   gebakken in batches gedurende de service - wordt bereid op de temperatuur waarvoor het ontworpen is.
                 </p>
                 <p>
-                  Chopras Indian Restaurant heeft een beoordeling van 4,9 sterren van 800+ geverifieerde Google-recensies.
+                  Chopras Indian Restaurant heeft een beoordeling van 4,9 sterren van 1100+ geverifieerde Google-recensies.
                   Die beoordeling komt van dezelfde curry, hetzelfde tandoorgeroosterde tikka en hetzelfde verse naan
                   die bij elke buffetbestelling aanwezig zijn. Een evenement gecatered door Chopras is geen ander,
                   lager product. Het is het restaurant - op uw gastenlijst.
                 </p>
                 <p>
                   Elk gerecht bij een Chopras buffet is{' '}
-                  <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">volledig halal gecertificeerd</Link>.
+                  <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledig halal gecertificeerd</Link>.
                   Geen optie. Geen sectie van het menu. De gehele keuken is halal en elke leverancier is gecertificeerd.
                   Families die volledige zekerheid over halal status nodig hebben, hoeven maar een keer te vragen.
                   De privezaal op Leyweg 986 biedt ruimte aan 25 tot 80 gasten.
                   Voor grotere evenementen en externe locaties brengt Chopras de volledige{' '}
-                  <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indiase cateringoperatie</Link>{' '}
+                  <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indiase cateringoperatie</Link>{' '}
                   naar uw locatie in Den Haag, Rijswijk, Delft, Zoetermeer en Voorburg.
                 </p>
               </>
@@ -278,25 +285,25 @@ export default function IndianBuffetPage({ params }: Props) {
                   The tandoor clay oven at Leyweg 986 reaches 400 degrees Celsius. That temperature is what
                   gives naan its char on the edges and chicken tikka its smoky exterior crust. No conventional
                   oven can produce this. Every{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">tandoor dish in Den Haag</Link>{' '}
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoor dish in Den Haag</Link>{' '}
                   served at a Chopras buffet - the fire-roasted tikka, the{' '}
-                  <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">fresh naan</Link>{' '}
+                  <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">fresh naan</Link>{' '}
                   baked in batches throughout service - is cooked at the temperature it was designed for.
                 </p>
                 <p>
-                  Chopras Indian Restaurant holds a 4.9-star rating from 800+ verified Google reviews.
+                  Chopras Indian Restaurant holds a 4.9-star rating from 1100+ verified Google reviews.
                   That rating comes from the same curries, the same tandoor-fired tikka and the same fresh naan
                   that feature on every buffet order. An event catered by Chopras is not a different, lower-tier
                   product. It is the restaurant - at your guest count.
                 </p>
                 <p>
                   Every dish at a Chopras buffet is{' '}
-                  <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">fully halal certified</Link>.
+                  <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">fully halal certified</Link>.
                   Not an option. Not a section of the menu. The entire kitchen is halal and every supplier is certified.
                   Families who need complete confidence on halal status do not need to ask twice.
                   The private hall at Leyweg 986 accommodates 25 to 80 guests.
                   For larger events and off-site venues, Chopras brings the full{' '}
-                  <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indian catering operation</Link>{' '}
+                  <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian catering operation</Link>{' '}
                   to your location across Den Haag, Rijswijk, Delft, Zoetermeer and Voorburg.
                 </p>
               </>
@@ -306,76 +313,76 @@ export default function IndianBuffetPage({ params }: Props) {
       </section>
 
       {/* QUALITY AT SCALE */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
+      <section className="btn-gradient  py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             {isNl
               ? 'Indiaas Groepsdiner Den Haag - Meer Gasten, Dezelfde Standaard'
               : 'Indian Group Dining Den Haag - More Guests, The Same Standard'}
           </h2>
-          <div className="space-y-5 text-white/85 text-lg leading-relaxed">
+          <div className="space-y-5 text-white/85 text-base leading-relaxed">
             {isNl ? (
               <>
-                <p>
+                <p className='text-white'>
                   De meeste cateringoperaties draaien op volume ten koste van kwaliteit. De gerechten die in de
                   restaurantkeuken uren nodig hadden om te bereiden, worden in batches gemaakt in een cateringfaciliteit
                   met andere apparatuur, andere processen en andere prioriteiten. Gasten merken dit.
                   Organisatoren kunnen het niet meer corrigeren als de service eenmaal begonnen is.
                 </p>
-                <p>
+                <p className='text-white'>
                   Chopras werkt met een keuken. Het{' '}
-                  <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">menu van 143 gerechten</Link>{' '}
+                  <Link href={`${base}/menu`} className="text-white hover:text-white font-semibold">menu van 143 gerechten</Link>{' '}
                   opgebouwd voor het restaurant is hetzelfde menu waaruit het buffet put.
                   De specerijen zijn hetzelfde. De tandoor is dezelfde. De ochtendbereiding die uren voor de eerste
                   gast begint, geldt evenzeer voor een Indiaas groepsdiner in Den Haag als voor een tafeltje voor twee.
                   Kwaliteit is geen keuze die per bestelling wordt gemaakt - het is hoe de keuken werkt.
                 </p>
-                <p>
+                <p className='text-white'>
                   Voor bedrijfsevenementen in Den Haag is dit belangrijker dan de meeste organisatoren beseffen.
                   Een teamdiner, een klantreceptie, een Diwali-viering voor 60 medewerkers - het eten bij deze
                   evenementen wordt beoordeeld door mensen die goed eten en opmerken wanneer iets ondermaats is.
                   Een{' '}
-                  <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">bedrijfsevenement bij Chopras</Link>{' '}
+                  <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-white font-semibold">bedrijfsevenement bij Chopras</Link>{' '}
                   is geen cateringbenadering van Indiaas eten. Het is de werkelijke restaurantstandaard, geserveerd op schaal.
                 </p>
-                <p>
+                <p className='text-white'>
                   Of u nu{' '}
-                  <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indiaas verjaardagscatering</Link>{' '}
+                  <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-white font-semibold">Indiaas verjaardagscatering</Link>{' '}
                   voor 25 gasten organiseert of een volledige{' '}
-                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indiaas bruiloft catering</Link>{' '}
+                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-white font-semibold">Indiaas bruiloft catering</Link>{' '}
                   voor 80 - het proces is hetzelfde. Vertel ons uw datum, uw gastenlijst, uw dieetwensen.
                   De rest regelen wij.
                 </p>
               </>
             ) : (
               <>
-                <p>
+                <p className='text-white'>
                   Most catering operations are built for volume at the expense of quality. The dishes that took
                   hours to build in a restaurant kitchen are batch-produced in a catering facility running on
                   different equipment, different processes, different priorities. Guests notice.
                   Organizers cannot fix this once service has started.
                 </p>
-                <p>
+                <p className='text-white'>
                   Chopras operates one kitchen. The{' '}
-                  <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">143-dish menu</Link>{' '}
+                  <Link href={`${base}/menu`} className="text-white hover:text-white font-semibold">143-dish menu</Link>{' '}
                   built for the restaurant is the same menu the buffet draws from.
                   The spices are the same. The tandoor is the same. The morning preparation that starts hours
                   before the first guest arrives applies equally to Indian group dining in Den Haag as it does
                   to a table for two. Quality is not a choice made per order - it is how the kitchen operates.
                 </p>
-                <p>
+                <p className='text-white'>
                   For corporate events in Den Haag, this matters more than most organizers realize.
                   A team dinner, a client reception, a Diwali celebration for 60 staff members - the food at
                   these events is judged by people who eat well and notice when something falls short.
                   A{' '}
-                  <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">corporate event at Chopras</Link>{' '}
+                  <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-white font-semibold">corporate event at Chopras</Link>{' '}
                   is not a catering approximation of Indian food. It is the actual restaurant standard, served at scale.
                 </p>
-                <p>
+                <p className='text-white'>
                   Whether you are organizing{' '}
-                  <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indian birthday catering</Link>{' '}
+                  <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-white font-semibold">Indian birthday catering</Link>{' '}
                   for 25 guests or a full{' '}
-                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Indian wedding catering</Link>{' '}
+                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-white font-semibold">Indian wedding catering</Link>{' '}
                   operation for 80, the process is the same. Tell us your date, your headcount, your dietary requirements.
                   We handle the rest.
                 </p>
@@ -386,126 +393,156 @@ export default function IndianBuffetPage({ params }: Props) {
       </section>
 
       {/* WHAT IS INCLUDED */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
+      <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4 leading-[1.4]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-4 leading-[1.4]">
             {isNl
               ? 'Wat Is Inbegrepen bij een Chopras Indiaas Buffet in Den Haag'
               : 'What Is Included in a Chopras Indian Buffet Den Haag'}
           </h2>
-          <p className="text-[#1A1A1A] mb-10 text-lg">
+          <p className="text-[#1A1A1A] mb-10 text-base">
             {isNl
               ? 'Onderstaande spread is representatief. Elk buffet wordt afgestemd op uw evenement tijdens een menuoverleg.'
               : 'The following is a representative spread. Every buffet is tailored to your event during a menu consultation.'}
           </p>
-          <div className="space-y-6">
+          <div className="space-y-8">
 
-            <div className="bg-white rounded-xl p-6 border-l-4 border-white">
-              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
                 {isNl ? 'Chaat en Starters Station' : 'Chaat and Starters Station'}
               </h3>
               <p className="text-[#1A1A1A] leading-relaxed">
                 {isNl ? (
                   <>
-                    Pani puri met muntwater en tamarindwater, samosa met verse groene chutney, papdi chaat, uienbhaji
-                    en masalapapad. Het starters station doet het sociale werk van het doorbreken van het ijs bij aanvang van de service.
-                    Bekijk onze{' '}
-                    <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat in Den Haag</Link>{' '}
+                    U kunt kiezen uit een breed scala aan authentieke Indiase voorgerechten op ons menu, waaronder Pani Puri geserveerd met verfrissend munt- en pittig tamarindewater, knapperige Samosa's met verse groene chutney, smaakvolle Papdi Chaat, knapperige Uien Bhaji en knapperige Masala Papad. Elk voorgerecht wordt vers bereid met behulp van traditionele recepten en authentieke Indiase kruiden om u een echte smaak van India te geven. Het starters station doet het sociale werk van het doorbreken van het ijs bij aanvang van de service. Bekijk onze gespecialiseerde pagina's over{' '}
+                    <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat in Den Haag</Link>{' '}
                     en{' '}
-                    <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">pani puri in Den Haag</Link>{' '}
-                    voor meer over deze street food starters.
+                    <Link href={`${base}/pani-puri-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">pani puri in Den Haag</Link>{' '}
+                    voor meer informatie over deze street food starters.
                   </>
                 ) : (
                   <>
-                    Pani puri with mint and tamarind water, samosa with fresh green chutney, papdi chaat, onion bhaji,
-                    and masala papad. The starters station does the social work of breaking the ice at the start of service.
-                    See our dedicated pages on{' '}
-                    <Link href={`${base}/chaat-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">chaat in Den Haag</Link>{' '}
+                    You can choose from a wide range of authentic Indian starters on our menu, including Pani Puri served with refreshing mint and tangy tamarind water, crispy Samosas with fresh green chutney, flavorful Papdi Chaat, crunchy Onion Bhaji, and crispy Masala Papad. Each appetizer is freshly prepared using traditional recipes and authentic Indian spices to give you a true taste of India. The starters station does the social work of breaking the ice at the start of service. See our dedicated pages on{' '}
+                    <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat in Den Haag</Link>{' '}
                     and{' '}
-                    <Link href={`${base}/pani-puri-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">pani puri in Den Haag</Link>{' '}
+                    <Link href={`${base}/pani-puri-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">pani puri in Den Haag</Link>{' '}
                     for more on these street food starters.
                   </>
                 )}
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-l-4 border-white">
-              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">
-                {isNl ? "Curryselectie - 4 tot 6 Curry's" : 'Curry Selection - 4 to 6 Curries'}
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
+                {isNl ? 'Curryselectie' : 'Curry Selection'}
               </h3>
               <p className="text-[#1A1A1A] leading-relaxed">
                 {isNl ? (
                   <>
-                    <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Butter chicken</Link>{' '}
-                    (de universele publiekslievelingen),{' '}
-                    <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">dal makhani</Link>{' '}
-                    (waar vegetariers en vleesliefhebbers beiden meerdere keren op terugkomen),
-                    een paneer gerecht, een veganistische optie en lamsvlees voor groepen van 50 gasten of meer.
+                    U kunt kiezen uit een brede selectie van vegetarische curry's, kipcurry's en lams-curry's op ons menu, allemaal bereid met authentieke Indiase kruiden en traditionele recepten. Geniet van klantfavorieten zoals de wereldberoemde{' '}
+                    <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Butter Chicken</Link>, rijke en romige{' '}
+                    <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Dal Makhani</Link>, heerlijke Paneer-specialiteiten, smaakvolle veganistische curry's en malse lamsgerechten.
                   </>
                 ) : (
                   <>
-                    <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Butter chicken</Link>{' '}
-                    (the universal crowd-pleaser),{' '}
-                    <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">dal makhani</Link>{' '}
-                    (that vegetarians and meat-eaters both return to multiple times),
-                    a paneer dish, a vegan option, and a lamb dish for groups of 50 or more.
+                    You can choose from a wide selection of vegetarian curries, chicken curries, and mutton curries on our menu, all prepared with authentic Indian spices and traditional recipes. Enjoy customer favourites such as the world-famous{' '}
+                    <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Butter Chicken</Link>, rich and creamy{' '}
+                    <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Dal Makhani</Link>, delicious Paneer specialties, flavourful vegan curries, and tender lamb dishes.
                   </>
                 )}
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-l-4 border-white">
-              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">Biryani</h3>
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
+                {isNl ? 'Biryani en Rijst' : 'Biryani and Rice'}
+              </h3>
               <p className="text-[#1A1A1A] leading-relaxed">
                 {isNl ? (
                   <>
-                    Zowel groente biryani als kip{' '}
-                    <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani in Den Haag</Link>{' '}
-                    geserveerd als centrepieces vanuit grote potten, met raita erbij.
-                    De geur als de deksels eraf gaan bepaalt de toon voor de hele avond.
+                    U kunt kiezen uit een heerlijke selectie van authentieke Indiase biryani's en rijstgerechten op ons menu. Zowel groente biryani als kip{' '}
+                    <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani in Den Haag</Link>{' '}
+                    geserveerd als centrepieces met raita erbij. De geur als de deksels eraf gaan bepaalt de toon voor de hele avond.
                   </>
                 ) : (
                   <>
-                    Both veg biryani and chicken{' '}
-                    <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani in Den Haag</Link>{' '}
-                    served as centrepiece dishes from large pots, with raita alongside.
-                    The fragrance when the lids come off sets the tone for the entire evening.
+                    You can choose from a delicious selection of authentic Indian biryanis and rice dishes on our menu. Both veg biryani and chicken{' '}
+                    <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani in Den Haag</Link>{' '}
+                    served as centrepiece dishes with raita alongside. The fragrance when the lids come off sets the tone for the entire evening.
                   </>
                 )}
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-l-4 border-white">
-              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
                 {isNl ? 'Brood' : 'Breads'}
               </h3>
               <p className="text-[#1A1A1A] leading-relaxed">
                 {isNl ? (
                   <>
-                    Knoflooknaan, plain naan en roti - vers gebakken in batches gedurende de gehele service.
-                    Bekijk onze{' '}
-                    <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan in Den Haag</Link>{' '}
-                    pagina voor meer over ons tandoorbrood. Continu aangevuld zodat gasten altijd warm brood hebben.
+                    U kunt kiezen uit een brede selectie van vers gebakken Indiase broden op ons menu, waaronder Plain Naan, Butter Naan, Garlic Naan, Cheese Naan, Tandoori Roti en Lachha Paratha. Elk brood wordt vers bereid in onze traditionele tandoor en warm geserveerd, waardoor het de perfecte begeleiding is voor uw favoriete Indiase curry. Bekijk onze{' '}
+                    <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Naan in Den Haag</Link>{' '}
+                    pagina voor meer informatie over ons authentieke tandoorgebakken brood. Onze broden worden continu aangevuld gedurende de service, zodat gasten er altijd vers en warm van genieten.
                   </>
                 ) : (
                   <>
-                    Garlic naan, plain naan, and roti - baked fresh in batches throughout service.
-                    See our{' '}
-                    <Link href={`${base}/naan-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">naan in Den Haag</Link>{' '}
-                    page for more on our tandoor-baked bread. Replenished continuously so guests always have warm bread.
+                    You can choose from a wide selection of freshly baked Indian breads on our menu, including Plain Naan, Butter Naan, Garlic Naan, Cheese Naan, Tandoori Roti, and Lachha Paratha. Each bread is freshly prepared in our traditional tandoor and served warm, making it the perfect accompaniment to your favourite Indian curry. See our{' '}
+                    <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Naan in Den Haag</Link>{' '}
+                    page to learn more about our authentic tandoor-baked bread. Our breads are replenished continuously throughout service, so guests always enjoy them fresh and warm.
                   </>
                 )}
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-l-4 border-white">
-              <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">
-                {isNl ? 'Desserts' : 'Desserts'}
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
+                {isNl ? 'Salades en Raita' : 'Salads and Raita'}
               </h3>
               <p className="text-[#1A1A1A] leading-relaxed">
-                {isNl
-                  ? 'Gulab jamun in warme suikersiroop, moong dal halwa en kulfi - Indiaas ijs in individuele porties. Het desserstation biedt een duidelijk en bevredigend einde van de maaltijd.'
-                  : 'Gulab jamun in warm sugar syrup, moong dal halwa, and kulfi - Indian ice cream in individual portions. A clear and satisfying close to the meal.'}
+                {isNl ? (
+                  <>
+                    Elk buffet bevat een selectie van verse salades samen met een verscheidenheid aan huisgemaakte raita's, zoals Plain Raita, Komkommer Raita, Munt Raita en Boondi Raita. Deze verfrissende bijgerechten vullen onze authentieke Indiase gerechten perfect aan en helpen hun rijke, aromatische smaken in balans te brengen.
+                  </>
+                ) : (
+                  <>
+                    Every buffet includes a selection of fresh salads along with a variety of homemade raitas, such as Plain Raita, Cucumber Raita, Mint Raita, and Boondi Raita. These refreshing accompaniments perfectly complement our authentic Indian dishes and help balance their rich, aromatic flavours.
+                  </>
+                )}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
+                {isNl ? 'Nagerechten' : 'Desserts'}
+              </h3>
+              <p className="text-[#1A1A1A] leading-relaxed">
+                {isNl ? (
+                  <>
+                    U kunt kiezen uit een heerlijke selectie van authentieke Indiase desserts op ons menu, waaronder Gulab Jamun geserveerd in warme suikersiroop, rijke Moong Dal Halwa en romige Kulfi, het traditionele ijs van India. Elk dessert wordt geserveerd in individuele porties, wat de perfecte zoete afsluiting van uw maaltijd biedt.
+                  </>
+                ) : (
+                  <>
+                    You can choose from a delicious selection of authentic Indian desserts on our menu, including Gulab Jamun served in warm sugar syrup, rich Moong Dal Halwa, and creamy Kulfi, India's traditional ice cream. Each dessert is served in individual portions, providing the perfect sweet ending to your meal.
+                  </>
+                )}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-heading text-3xl text-[#06068a] mb-3">
+                {isNl ? 'Dranken' : 'Drinks'}
+              </h3>
+              <p className="text-[#1A1A1A] leading-relaxed">
+                {isNl ? (
+                  <>
+                    Maak uw buffetbeleving compleet met een brede selectie verfrissende dranken van ons menu. Kies uit traditionele Indiase dranken zoals Mango Lassi, Sweet Lassi en Masala Chai, samen met frisdranken, verse sappen en andere dranken om uw maaltijd aan te vullen.
+                  </>
+                ) : (
+                  <>
+                    Complete your buffet experience with a wide selection of refreshing beverages from our menu. Choose from traditional Indian drinks such as Mango Lassi, Sweet Lassi, and Masala Chai, along with soft drinks, fresh juices, and other beverages to complement your meal.
+                  </>
+                )}
               </p>
             </div>
 
@@ -516,34 +553,33 @@ export default function IndianBuffetPage({ params }: Props) {
       {/* GEO BLOCK */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Biedt Chopras Indian Restaurant een Buffet aan in Den Haag?'
               : 'Does Chopras Indian Restaurant Offer a Buffet in Den Haag?'}
           </h2>
           <div className="bg-[#F7F8FC] rounded-xl p-8 border-l-4 border-white">
             {isNl ? (
-              <p className="text-[#1A1A1A] text-lg leading-relaxed">
+              <p className="text-[#1A1A1A] text-base leading-relaxed">
                 Ja. Chopras Indian Restaurant op Leyweg 986, 2545 GW Den Haag biedt Indiaas buffetcatering
                 voor groepen van 15 tot 200 gasten. Het buffet omvat curry,{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>,
+                <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>,
                 tandoori, naan, street food starters en desserts. Alle gerechten zijn volledig halal gecertificeerd.
-                Chopras heeft een beoordeling van 4,9 sterren van 800+ geverifieerde Google-recensies.
+                Chopras heeft een beoordeling van 4,9 sterren van 1100+ geverifieerde Google-recensies.
                 Buffetten zijn beschikbaar in de privezaal van het restaurant en op uw externe locatie.
                 Open dinsdag tot en met zondag vanaf 16:30.{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Vraag een buffetofferte aan</Link>{' '}
+                <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Vraag een buffetofferte aan</Link>{' '}
                 via <EmailLink />.
               </p>
             ) : (
-              <p className="text-[#1A1A1A] text-lg leading-relaxed">
-                Yes. Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag offers Indian buffet catering
-                for groups of 15 to 200 guests. The buffet includes curries,{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">biryani</Link>,
+              <p className="text-[#1A1A1A] text-base leading-relaxed">
+                Yes. Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag offers Indian buffet catering. The buffet includes curries,{' '}
+                <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>,
                 tandoori, naan, street food starters and desserts. All dishes are fully halal certified.
-                Chopras holds a 4.9-star rating from 800+ verified Google reviews.
+                Chopras holds a 4.9-star rating from 1100+ verified Google reviews.
                 Buffets are available in the restaurant private hall and at your external venue.
                 Open Tuesday to Sunday from 16:30.{' '}
-                <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Request a buffet quote</Link>{' '}
+                <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Request a buffet quote</Link>{' '}
                 at <EmailLink />.
               </p>
             )}
@@ -552,11 +588,13 @@ export default function IndianBuffetPage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl ? 'Veelgestelde Vragen' : 'Frequently Asked Questions'}
-          </h2>
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              {isNl ? 'Veelgestelde Vragen' : 'Frequently Asked Questions'}
+            </h2>
+          </div>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>
@@ -564,10 +602,10 @@ export default function IndianBuffetPage({ params }: Props) {
       {/* CTA */}
       <section className="bg-white py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Vraag uw Indiaas Buffet Den Haag Offerte aan' : 'Get Your Indian Buffet Den Haag Quote'}
           </h2>
-          <p className="text-[#1A1A1A] text-lg leading-relaxed mb-8 max-w-2xl">
+          <p className="text-[#1A1A1A] text-base leading-relaxed mb-8 max-w-2xl">
             {isNl
               ? 'Elk buffet begint met een gesprek. Vertel ons uw datum, uw gastenlijst en eventuele dieetvereisten - wij stellen een voorstel op dat is afgestemd op uw evenement.'
               : 'Every buffet starts with a conversation. Tell us your date, your guest count, and any dietary requirements - we will put together a proposal tailored to your event.'}
@@ -575,13 +613,13 @@ export default function IndianBuffetPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${base}/catering#catering-form`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Offerte Aanvragen' : 'Request a Buffet Quote'}
             </Link>
             <a
               href={`tel:${RESTAURANT.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out  active:scale-[0.98] min-h-[48px]"
             >
               {RESTAURANT.contact.phoneDisplay}
             </a>
@@ -590,40 +628,40 @@ export default function IndianBuffetPage({ params }: Props) {
       </section>
 
       {/* INTERNAL LINKS */}
-      <section className="bg-[#F7F8FC] py-16 px-6 md:px-16">
+      <section className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-10 leading-[1.4]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-10 leading-[1.4]">
             {isNl ? 'Ontdek Meer van Onze Gerechten' : 'Explore More of Our Dishes'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Buffet Favoriet' : 'Buffet Favourite'}</p>
-              <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Butter chicken in Den Haag' : 'Butter chicken in Den Haag'}</p>
+            <Link href={`${base}/butter-chicken-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Buffet Favoriet' : 'Buffet Favourite'}</p>
+              <p className="text-[#06068a] font-semibold">{isNl ? 'Butter chicken in Den Haag' : 'Butter chicken in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Vegetarisch Hoogtepunt' : 'Vegetarian Highlight'}</p>
-              <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Dal makhani in Den Haag' : 'Dal makhani in Den Haag'}</p>
+            <Link href={`${base}/dal-makhani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Vegetarisch Hoogtepunt' : 'Vegetarian Highlight'}</p>
+              <p className="text-[#06068a] font-semibold">{isNl ? 'Dal makhani in Den Haag' : 'Dal makhani in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Buffet Centerpiece' : 'Buffet Centrepiece'}</p>
-              <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Biryani in Den Haag' : 'Biryani in Den Haag'}</p>
+            <Link href={`${base}/biryani-den-haag`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Buffet Centerpiece' : 'Buffet Centrepiece'}</p>
+              <p className="text-[#06068a] font-semibold">{isNl ? 'Biryani in Den Haag' : 'Biryani in Den Haag'}</p>
             </Link>
-            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all">
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Catering' : 'Catering'}</p>
-              <p className="text-[#1B2B5E] font-semibold">{isNl ? 'Indiaas buffetcatering voor evenementen' : 'Indian catering for your events'}</p>
+            <Link href={`${base}/catering`} className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">{isNl ? 'Catering' : 'Catering'}</p>
+              <p className="text-[#06068a] font-semibold">{isNl ? 'Indiaas buffetcatering voor evenementen' : 'Indian catering for your events'}</p>
             </Link>
           </div>
           <div className="mt-8 text-center space-y-4">
             <p className="text-[#1A1A1A] text-base">
-              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 {isNl ? 'Chopras Indian Restaurant - beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="text-[#1A1A1A] text-base">
               {isNl ? 'Bekijk ons' : 'View our'}{' '}
-              <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">{tr.common.viewMenu}</Link>
+              <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">{tr.common.viewMenu}</Link>
               {' '}{isNl ? 'of' : 'or'}{' '}
-              <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 {isNl ? 'maak een reservering voor uw buffet' : 'request a buffet quote at Chopras'}
               </Link>.
             </p>

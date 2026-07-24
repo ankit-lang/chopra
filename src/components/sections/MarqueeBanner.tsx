@@ -51,30 +51,47 @@ const SEASON_STYLE: Record<
   },
 }
 
-const ITEMS = [
-  'Authentic North Indian Restaurant in Den Haag',
-  'All Non-Vegetarian Food is 100% Halal',
-  ' Highly Rated Indian Restaurant in Netherlands',
-  'Famous for Butter Chicken, Biryani & Tandoori Grill',
-  'Vegan | Gluten - free options',
-  ' Dine-In | Takeaway | Delivery Available',
 
+
+
+
+const ITEMS_EN = [
+  'Vegan And Gluten free option',
+  'Halal ',
+  ' Dine in Takeaway Delivery ',
+  'Best Indian Restaurant in Den Haag',
+  'Highly Rated Restaurant ',
+  ' Party Hall ',
+  'Catering Services'
 ]
 
-export default function MarqueeBanner() {
+const ITEMS_NL = [
+  'Veganistische & Glutenvrije Opties',
+  'Halal ',
+  'Dine-in Afhalen Bezorgen',
+  'Beste Indiaas Restaurant in Den Haag',
+  'Hoog Beoordeeld Restaurant',
+  'Feestzaal',
+  'Catering Diensten'
+]
+
+export default function MarqueeBanner({ items, locale = 'en' }: { items?: string[]; locale?: string } = {}) {
   const season = getCurrentSeason()
   const s = SEASON_STYLE[season]
-  const doubled = [...ITEMS, ...ITEMS]
+  const defaultItems = locale === 'nl' ? ITEMS_NL : ITEMS_EN
+  const list = items && items.length > 0 ? items : defaultItems
+  const doubled = [...list, ...list, ...list]
 
   return (
     <div
-      className="relative w-full h-[12vh]     overflow-hidden select-none"
+      className="relative w-full h-[6vh]     overflow-hidden select-none"
       style={{ borderBottom: `2px solid ${s.border}` }}
     >
       {/* ── Season background image ── */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${s.image}')` }}
+        // style={{ backgroundImage: `url('${s.image}')` }}
+        style={{ backgroundColor: "#0000FF" }}
       />
 
       {/* ── Dark tinted overlay ── */}
@@ -95,7 +112,7 @@ export default function MarqueeBanner() {
       />
 
       {/* ── Scrolling text ── */}
-      <div className="relative z-[5] mt-[20px] flex items-center py-[11px] marquee-track">
+      <div className="relative z-[5] mt-[5px] flex items-center py-[5px] marquee-track">
         {doubled.map((item, i) => (
           <span
             key={i}

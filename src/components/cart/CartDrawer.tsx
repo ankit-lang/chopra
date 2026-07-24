@@ -43,11 +43,13 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
         aria-label="Shopping cart"
       >
         {/* Header */}
-        <div style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}>
+        <div className="bg-[#06068a]">
           <div className="px-6 py-5 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <ShoppingBag className="w-5 h-5 text-white" />
-              <span className="font-vibes text-xl text-white">Your Order</span>
+              <span className="font-vibes text-xl text-white">
+                {locale === 'nl' ? 'Uw Bestelling' : 'Your Order'}
+              </span>
             </div>
             <button
               onClick={closeCart}
@@ -57,8 +59,10 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
               <X className="w-5 h-5" />
             </button>
           </div>
-          <div className="px-6 py-2 bg-[#1B2B5E]">
-            <p className="text-white/60 text-xs">Pickup from Leyweg 986, Den Haag</p>
+          <div className="px-6 py-2 bg-[#06068a] border-t border-white/10">
+            <p className="text-white/80 text-xs">
+              {locale === 'nl' ? 'Afhalen op Leyweg 986, Den Haag' : 'Pickup from Leyweg 986, Den Haag'}
+            </p>
           </div>
         </div>
 
@@ -67,18 +71,22 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full py-16">
               <ShoppingBag className="w-16 h-16 text-[#1A1A1A]/20" />
-              <p className="font-vibes text-lg text-[#1A1A1A]/50 mt-4">Your cart is empty</p>
+              <p className="font-vibes text-lg text-[#1A1A1A]/50 mt-4">
+                {locale === 'nl' ? 'Uw winkelmand is leeg' : 'Your cart is empty'}
+              </p>
               <p className="text-[#1A1A1A]/40 text-sm mt-2 text-center max-w-[200px]">
-                Browse our menu and add your favourite dishes
+                {locale === 'nl'
+                  ? 'Bekijk ons menu en voeg uw favoriete gerechten toe'
+                  : 'Browse our menu and add your favourite dishes'}
               </p>
               <button
                 onClick={() => {
                   closeCart()
                   router.push(`${base}/menu`)
                 }}
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
               >
-                View Menu
+                {locale === 'nl' ? 'Bekijk Menu' : 'View Menu'}
               </button>
             </div>
           ) : (
@@ -99,8 +107,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                     />
                   ) : (
                     <div
-                      className="w-full h-full flex items-center justify-center text-white font-vibes text-lg"
-                      style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+                      className="w-full h-full flex items-center justify-center text-white font-vibes text-lg bg-[#06068a]"
                     >
                       {item.name.charAt(0)}
                     </div>
@@ -113,7 +120,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
                     {item.name}
                   </p>
                   <p className="text-[#1A1A1A]/40 text-xs capitalize mt-0.5">{item.category}</p>
-                  <p className="text-white text-sm font-semibold mt-1">{formatPrice(item.price)}</p>
+                  <p className="text-[#06068a] text-sm font-semibold mt-1">{formatPrice(item.price)}</p>
                 </div>
 
                 {/* Quantity controls */}
@@ -161,39 +168,41 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
             {/* Summary */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm text-[#1A1A1A]/60">
-                <span>Subtotal</span>
+                <span>{locale === 'nl' ? 'Subtotaal' : 'Subtotal'}</span>
                 <span>{formatPrice(totalPrice)}</span>
               </div>
               <div className="flex justify-between text-sm text-[#1A1A1A]/60">
-                <span>Pickup</span>
-                <span>Free</span>
+                <span>{locale === 'nl' ? 'Afhalen' : 'Pickup'}</span>
+                <span>{locale === 'nl' ? 'Gratis' : 'Free'}</span>
               </div>
               <div className="flex justify-between font-vibes text-xl text-[#1A1A1A] pt-2 border-t border-gray-100">
-                <span>Total</span>
-                <span className="text-white">{formatPrice(totalPrice)}</span>
+                <span>{locale === 'nl' ? 'Totaal' : 'Total'}</span>
+                <span className="text-[#06068a] font-bold">{formatPrice(totalPrice)}</span>
               </div>
             </div>
 
             {/* Cash badge */}
-            <div className="flex items-center gap-2 bg-[#0000B3]/10 border border-white/30 rounded-xl px-4 py-3">
-              <Banknote className="text-white w-4 h-4 flex-shrink-0" />
-              <p className="text-[#1A1A1A]/70 text-sm">Payment: Cash on Pickup</p>
+            <div className="flex items-center gap-2 bg-[#06068a]/10 border border-[#06068a]/20 rounded-xl px-4 py-3">
+              <Banknote className="text-[#06068a] w-4 h-4 flex-shrink-0" />
+              <p className="text-[#1A1A1A]/70 text-sm">
+                {locale === 'nl' ? 'Betaling: Contant bij afhalen' : 'Payment: Cash on Pickup'}
+              </p>
             </div>
 
             {/* Checkout button */}
             <button
               onClick={handleCheckout}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
             >
-              Proceed to Checkout
+              {locale === 'nl' ? 'GA NAAR AFREKENEN' : 'PROCEED TO CHECKOUT'}
             </button>
 
             {/* Continue browsing */}
             <button
               onClick={closeCart}
-              className="w-full border border-gray-200 text-[#1A1A1A]/60 py-3 text-sm hover:border-white hover:text-white transition-all rounded-xl"
+              className="w-full border border-gray-200 text-[#1A1A1A]/60 py-3 text-sm hover:border-[#06068a] hover:text-[#06068a] transition-all rounded-xl"
             >
-              Continue Browsing
+              {locale === 'nl' ? 'Verder Winkelen' : 'Continue Browsing'}
             </button>
           </div>
         )}

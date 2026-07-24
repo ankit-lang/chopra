@@ -28,26 +28,26 @@ export async function POST(req: NextRequest) {
       subject: 'Your Event Hall Request is Confirmed! – Chopras',
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A;">
-          <div style="background:#000066;padding:32px 40px;">
+          <div style="background:#06068a;padding:32px 40px;">
             <h1 style="color:#ffffff;margin:0;font-size:24px;">Chopras Indian Restaurant</h1>
             <p style="color:rgba(255,255,255,0.7);margin:4px 0 0;font-size:13px;">Private Event Hall · Den Haag</p>
           </div>
           <div style="padding:40px;">
-            <h2 style="color:#000066;font-size:20px;margin-top:0;">Thank you, ${name}!</h2>
+            <h2 style="color:#06068a;font-size:20px;margin-top:0;">Thank you, ${name}!</h2>
             <p style="color:#555;line-height:1.6;">
               We have received your event hall booking inquiry. Our team will get back to you within <strong>24 hours</strong> to confirm availability and discuss your menu.
             </p>
             <table style="width:100%;border-collapse:collapse;margin:24px 0;background:#F7F8FC;border-radius:8px;">
               <tr>
-                <td style="padding:12px 16px;font-weight:bold;color:#000066;width:40%;border-bottom:1px solid #e0e0e0;">Event Date</td>
+                <td style="padding:12px 16px;font-weight:bold;color:#06068a;width:40%;border-bottom:1px solid #e0e0e0;">Event Date</td>
                 <td style="padding:12px 16px;color:#1A1A1A;border-bottom:1px solid #e0e0e0;">${date}</td>
               </tr>
               <tr>
-                <td style="padding:12px 16px;font-weight:bold;color:#000066;border-bottom:1px solid #e0e0e0;">Number of Guests</td>
+                <td style="padding:12px 16px;font-weight:bold;color:#06068a;border-bottom:1px solid #e0e0e0;">Number of Guests</td>
                 <td style="padding:12px 16px;color:#1A1A1A;border-bottom:1px solid #e0e0e0;">${guests}</td>
               </tr>
               <tr>
-                <td style="padding:12px 16px;font-weight:bold;color:#000066;">Phone</td>
+                <td style="padding:12px 16px;font-weight:bold;color:#06068a;">Phone</td>
                 <td style="padding:12px 16px;color:#1A1A1A;">${phone || 'Not provided'}</td>
               </tr>
             </table>
@@ -75,27 +75,27 @@ export async function POST(req: NextRequest) {
           <div style="padding:32px;">
             <table style="width:100%;border-collapse:collapse;background:#F7F8FC;border-radius:8px;">
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;width:35%;border-bottom:1px solid #e0e0e0;">Name</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;width:35%;border-bottom:1px solid #e0e0e0;">Name</td>
                 <td style="padding:10px 16px;border-bottom:1px solid #e0e0e0;">${name}</td>
               </tr>
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;border-bottom:1px solid #e0e0e0;">Email</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;border-bottom:1px solid #e0e0e0;">Email</td>
                 <td style="padding:10px 16px;border-bottom:1px solid #e0e0e0;"><a href="mailto:${email}">${email}</a></td>
               </tr>
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;border-bottom:1px solid #e0e0e0;">Phone</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;border-bottom:1px solid #e0e0e0;">Phone</td>
                 <td style="padding:10px 16px;border-bottom:1px solid #e0e0e0;">${phone || '—'}</td>
               </tr>
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;border-bottom:1px solid #e0e0e0;">Event Date</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;border-bottom:1px solid #e0e0e0;">Event Date</td>
                 <td style="padding:10px 16px;border-bottom:1px solid #e0e0e0;">${date}</td>
               </tr>
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;border-bottom:1px solid #e0e0e0;">Guests</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;border-bottom:1px solid #e0e0e0;">Guests</td>
                 <td style="padding:10px 16px;border-bottom:1px solid #e0e0e0;">${guests}</td>
               </tr>
               <tr>
-                <td style="padding:10px 16px;font-weight:bold;color:#000066;">Message</td>
+                <td style="padding:10px 16px;font-weight:bold;color:#06068a;">Message</td>
                 <td style="padding:10px 16px;">${message || '—'}</td>
               </tr>
             </table>

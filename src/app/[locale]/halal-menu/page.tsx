@@ -101,21 +101,21 @@ export default function HalalMenuPage({ params }: Props) {
 
   const dishCategories = isNl
     ? [
-        { title: 'Kipgerechten', items: 'Butter chicken, chicken tikka, tandoori kip, chicken karahi, chicken biryani' },
-        { title: 'Lamgerechten', items: 'Rogan josh, seekh kebab, lamb karahi, lamb biryani, keema matar' },
-        { title: 'Vegetarisch', items: 'Dal makhani, chana masala, palak paneer, aloo gobi, paneer tikka' },
-        { title: 'Tandoor Specialiteiten', items: 'Tandoori vis, fish tikka, chicken tikka, seekh kebab, naan uit de kleioven' },
-        { title: 'Biryani', items: 'Chicken biryani, lamb biryani, veg biryani, special biryani met saffraan basmatirijst' },
-        { title: 'Streetfood', items: 'Pani puri, papdi chaat, aloo tikki, samosa, dahi puri' },
-      ]
+      { title: 'Kipgerechten', items: 'Butter chicken, chicken tikka, tandoori kip, chicken karahi, chicken biryani' },
+      { title: 'Lamgerechten', items: 'Rogan josh, seekh kebab, lamb karahi, lamb biryani, keema matar' },
+      { title: 'Vegetarisch', items: 'Dal makhani, chana masala, palak paneer, aloo gobi, paneer tikka' },
+      { title: 'Tandoor Specialiteiten', items: 'Tandoori vis, fish tikka, chicken tikka, seekh kebab, naan uit de kleioven' },
+      { title: 'Biryani', items: 'Chicken biryani, lamb biryani, veg biryani, special biryani met saffraan basmatirijst' },
+      { title: 'Streetfood', items: 'Pani puri, papdi chaat, aloo tikki, samosa, dahi puri' },
+    ]
     : [
-        { title: 'Chicken Dishes', items: 'Butter chicken, chicken tikka, tandoori chicken, chicken karahi, chicken biryani' },
-        { title: 'Lamb Dishes', items: 'Rogan josh, seekh kebab, lamb karahi, lamb biryani, keema matar' },
-        { title: 'Vegetarian', items: 'Dal makhani, chana masala, palak paneer, aloo gobi, paneer tikka' },
-        { title: 'Tandoor Specialties', items: 'Tandoori fish, fish tikka, chicken tikka, seekh kebab, naan from the clay oven' },
-        { title: 'Biryani', items: 'Chicken biryani, lamb biryani, veg biryani, special biryani with saffron basmati rice' },
-        { title: 'Street Food', items: 'Pani puri, papdi chaat, aloo tikki, samosa, dahi puri' },
-      ]
+      { title: 'Chicken Dishes', items: 'Butter chicken, chicken tikka, tandoori chicken, chicken karahi, chicken biryani' },
+      { title: 'Lamb Dishes', items: 'Rogan josh, seekh kebab, lamb karahi, lamb biryani, keema matar' },
+      { title: 'Vegetarian', items: 'Dal makhani, chana masala, palak paneer, aloo gobi, paneer tikka' },
+      { title: 'Tandoor Specialties', items: 'Tandoori fish, fish tikka, chicken tikka, seekh kebab, naan from the clay oven' },
+      { title: 'Biryani', items: 'Chicken biryani, lamb biryani, veg biryani, special biryani with saffron basmati rice' },
+      { title: 'Street Food', items: 'Pani puri, papdi chaat, aloo tikki, samosa, dahi puri' },
+    ]
 
   return (
     <>
@@ -128,17 +128,22 @@ export default function HalalMenuPage({ params }: Props) {
       <JsonLd data={getDietFoodEstablishmentSchema(locale, ['Halal', 'Halal Indian', 'North Indian'], 'halal-menu')} />
 
       {/* HERO */}
-      <section className="bg-[#1B2B5E] py-20 text-center">
+      <section className="btn-gradient py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
             <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+              MENU · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
             {isNl ? 'Halal Menu Den Haag - Volledig Gecertificeerd' : 'Halal Menu Den Haag - Fully Certified'}
           </h1>
-          <p className="text-white/75 text-lg md:text-xl mb-8">
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+            <span className="text-white/90 text-lg">✦</span>
+            <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+          </div>
+          <p className="text-white/75 text-lg md:text-xl mt-6 mb-8">
             {isNl
               ? 'Alle 143 gerechten zijn halal. Geen opties, geen uitzonderingen. De volledige keuken van Chopras Indian Restaurant aan Leyweg 986 is halal gecertificeerd.'
               : 'All 143 dishes are halal. No options, no exceptions. The complete kitchen at Chopras Indian Restaurant at Leyweg 986 is halal certified.'}
@@ -146,13 +151,13 @@ export default function HalalMenuPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
             >
               {tr.common.viewMenu}
             </Link>
@@ -162,8 +167,8 @@ export default function HalalMenuPage({ params }: Props) {
 
       {/* GEO BLOCK */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
             {isNl
               ? 'Wat is het halal menu van Chopras Indian Restaurant Den Haag?'
               : 'What is the halal menu at Chopras Indian Restaurant Den Haag?'}
@@ -173,14 +178,14 @@ export default function HalalMenuPage({ params }: Props) {
               Chopras Indian Restaurant Den Haag aan <strong>Leyweg 986</strong> serveert een volledig halal
               gecertificeerd menu van 143 gerechten. Elke vleesleverancier is halal gecertificeerd. Kip, lam en
               schapen worden verwerkt in een uitsluitend halal keuken. Van{' '}
-              <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 biryani
               </Link>{' '}
               tot{' '}
-              <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 tandoori
               </Link>
-              , van curry tot streetfood, elk gerecht is halal. Beoordeeld met 4.9 sterren door 800+ Google-bezoekers.
+              , van curry tot streetfood, elk gerecht is halal. Beoordeeld met 4.9 sterren door 1100+ Google-bezoekers.
               Open dinsdag tot en met zondag van 16:30 tot 22:30.
             </p>
           ) : (
@@ -188,14 +193,14 @@ export default function HalalMenuPage({ params }: Props) {
               Chopras Indian Restaurant Den Haag at <strong>Leyweg 986</strong> serves a fully halal certified menu
               of 143 dishes. Every meat supplier is certified halal. Chicken, lamb and mutton are processed in a
               dedicated dedicated halal kitchen. From{' '}
-              <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 biryani
               </Link>{' '}
               to{' '}
-              <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 tandoori
               </Link>
-              , from curry to street food, every dish is halal. Rated 4.9 stars by 800+ Google reviewers. Open
+              , from curry to street food, every dish is halal. Rated 4.9 stars by 1100+ Google reviewers. Open
               Tuesday to Sunday from 16:30 to 22:30.
             </p>
           )}
@@ -209,8 +214,8 @@ export default function HalalMenuPage({ params }: Props) {
 
       {/* WHY HALAL CERTIFICATION IS DIFFERENT */}
       <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Waarom de halal certificering bij Chopras verder gaat'
               : 'Why halal certification at Chopras goes further'}
@@ -221,7 +226,7 @@ export default function HalalMenuPage({ params }: Props) {
                 <p>
                   Veel restaurants bieden &quot;halal opties&quot; aan. Chopras Indian Restaurant werkt anders.
                   De volledige keuken aan{' '}
-                  <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Leyweg 986 Den Haag
                   </Link>{' '}
                   is halal gecertificeerd. Geen gedeelde snijplanken, geen gemengde opslag, geen halal op aanvraag.
@@ -231,7 +236,7 @@ export default function HalalMenuPage({ params }: Props) {
                   verschil tussen een restaurant dat halal als optie behandelt en een restaurant waar halal de
                   standaard is voor de volledige operatie. Moslimgezinnen in Den Haag, Rijswijk en Zoetermeer
                   kunnen naar{' '}
-                  <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Chopras Indian Restaurant
                   </Link>{' '}
                   komen zonder vragen te hoeven stellen.
@@ -239,7 +244,7 @@ export default function HalalMenuPage({ params }: Props) {
                 <p>
                   De specerijen worden elke ochtend vers gemalen van hele specerijen uit India. Dit is de reden
                   dat{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     butter chicken
                   </Link>{' '}
                   bij Chopras anders smaakt dan overal elders in Den Haag. Versgemalen specerijen bevatten aromatische
@@ -252,7 +257,7 @@ export default function HalalMenuPage({ params }: Props) {
                 <p>
                   Many restaurants offer &quot;halal options&quot;. Chopras Indian Restaurant operates differently.
                   The complete kitchen at{' '}
-                  <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Leyweg 986 Den Haag
                   </Link>{' '}
                   is halal certified. No shared chopping boards, no mixed storage, no halal on request.
@@ -261,7 +266,7 @@ export default function HalalMenuPage({ params }: Props) {
                   Every meat supplier must be certified halal before Chopras accepts them. This is the difference
                   between a restaurant that treats halal as an option and a restaurant where halal is the standard
                   for the complete operation. Muslim families in Den Haag, Rijswijk and Zoetermeer can visit{' '}
-                  <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Chopras Indian Restaurant
                   </Link>{' '}
                   without needing to ask questions.
@@ -269,7 +274,7 @@ export default function HalalMenuPage({ params }: Props) {
                 <p>
                   The spices are ground fresh every morning from whole spices sourced from India. This is the
                   reason that{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     butter chicken
                   </Link>{' '}
                   at Chopras tastes different from anywhere else in Den Haag. Freshly ground spices contain aromatic
@@ -282,9 +287,9 @@ export default function HalalMenuPage({ params }: Props) {
       </section>
 
       {/* DISH CATEGORIES */}
-      <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Elke categorie op het halal menu' : 'Every category on the halal menu'}
           </h2>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
@@ -292,7 +297,7 @@ export default function HalalMenuPage({ params }: Props) {
               <>
                 Chopras serveert 143 gerechten verdeeld over 13 categorieen. Hieronder staat elke hoofdcategorie
                 met voorbeelden. Het{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   volledige menu
                 </Link>{' '}
                 toont elk gerecht met naam en beschrijving.
@@ -300,7 +305,7 @@ export default function HalalMenuPage({ params }: Props) {
             ) : (
               <>
                 Chopras serves 143 dishes across 13 categories. Below is every main category with examples. The{' '}
-                <Link href={`${base}/menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   full menu
                 </Link>{' '}
                 shows every dish by name and description.
@@ -310,7 +315,7 @@ export default function HalalMenuPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {dishCategories.map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-6 border-l-4 border-white">
-                <h3 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-4">{item.title}</h3>
+                <h3 className="font-heading text-3xl text-[#06068a] mb-4">{item.title}</h3>
                 <p className="font-body text-[#1A1A1A] text-base leading-relaxed">{item.items}</p>
               </div>
             ))}
@@ -320,8 +325,8 @@ export default function HalalMenuPage({ params }: Props) {
 
       {/* TANDOOR SECTION */}
       <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Halal tandoori: de kleioven op 400 graden'
               : 'Halal tandoori: the clay oven at 400 degrees'}
@@ -337,12 +342,12 @@ export default function HalalMenuPage({ params }: Props) {
                 </p>
                 <p>
                   Bekijk de{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     tandoori gerechten pagina
                   </Link>{' '}
                   voor alle gerechten uit de kleioven. Hetzelfde halal-certificeringsniveau geldt ook voor
                   langzaam gegaarde gerechten zoals{' '}
-                  <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     dal makhani
                   </Link>
                   , die 8 uur op laag vuur wordt bereid. De integriteit van de keuken verandert niet per
@@ -359,12 +364,12 @@ export default function HalalMenuPage({ params }: Props) {
                 </p>
                 <p>
                   See the{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     tandoori dishes page
                   </Link>{' '}
                   for all clay oven dishes. The same halal certification standard applies to slow-cooked dishes
                   such as{' '}
-                  <Link href={`${base}/dal-makhani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     dal makhani
                   </Link>
                   , which is prepared for 8 hours on a low flame. The kitchen integrity does not change by
@@ -377,9 +382,9 @@ export default function HalalMenuPage({ params }: Props) {
       </section>
 
       {/* HALAL CATERING */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+      <section className="btn-gradient py-20 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             {isNl
               ? 'Halal catering voor evenementen in Den Haag'
               : 'Halal catering for events in Den Haag'}
@@ -387,18 +392,18 @@ export default function HalalMenuPage({ params }: Props) {
           <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
             {isNl ? (
               <>
-                <p>
+                <p className="text-white/80">
                   De halal certificering van Chopras geldt ook voor alle catering buiten het restaurant. Nikah-recepties,
                   bruiloften, verjaardagen en bedrijfsevenementen - dezelfde keuken, dezelfde leveranciers, dezelfde
                   standaard. Chopras heeft een privezaal aan Leyweg 986 voor 25 tot 80 gasten.
                 </p>
-                <p>
+                <p className="text-white/80">
                   Meer weten over{' '}
-                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-white font-semibold">
                     halal bruiloftscatering in Den Haag
                   </Link>
                   ? Of bekijk de{' '}
-                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-white font-semibold">
                     feestzaal voor groepen van 25 tot 80 personen
                   </Link>
                   . Dezelfde gecertificeerde keuken. Dezelfde verse specerijen. Geen verschil in kwaliteit tussen
@@ -407,18 +412,18 @@ export default function HalalMenuPage({ params }: Props) {
               </>
             ) : (
               <>
-                <p>
+                <p className="text-white/80">
                   The halal certification at Chopras applies to all catering outside the restaurant as well. Nikah
                   receptions, weddings, birthday parties and corporate events - the same kitchen, the same suppliers,
                   the same standard. Chopras has a private hall at Leyweg 986 for 25 to 80 guests.
                 </p>
-                <p>
+                <p className="text-white/80">
                   Want to know more about{' '}
-                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-white font-semibold">
                     halal wedding catering in Den Haag
                   </Link>
                   ? Or see the{' '}
-                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-white font-semibold">
                     venue for groups of 25 to 80 people
                   </Link>
                   . The same certified kitchen. The same fresh spices. No difference in quality between restaurant
@@ -432,8 +437,8 @@ export default function HalalMenuPage({ params }: Props) {
 
       {/* MIXED GROUPS: HALAL AND VEGAN */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Halal en vegetarisch in dezelfde ruimte'
               : 'Halal and vegetarian in the same room'}
@@ -443,7 +448,7 @@ export default function HalalMenuPage({ params }: Props) {
               <>
                 <p>
                   Niet elk gezelschap eet vlees. Chopras biedt een volledig{' '}
-                  <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     veganistisch menu
                   </Link>{' '}
                   en brede vegetarische keuze naast het halal vleesmenu. Dal makhani, chana masala, palak paneer,
@@ -454,7 +459,7 @@ export default function HalalMenuPage({ params }: Props) {
                   Dit betekent dat gemengde gezelschappen - halal-eters, vegetariers, veganisten - allemaal aan
                   dezelfde tafel kunnen zitten bij Chopras zonder dat iemand compromissen hoeft te sluiten. Lees
                   meer over het halal verhaal van Chopras in ons artikel over het{' '}
-                  <Link href={`${base}/blog/halal-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/blog/halal-indian-restaurant-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     halal Indiaas restaurant in Den Haag
                   </Link>
                   .
@@ -464,7 +469,7 @@ export default function HalalMenuPage({ params }: Props) {
               <>
                 <p>
                   Not every group eats meat. Chopras offers a full{' '}
-                  <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     vegan menu
                   </Link>{' '}
                   and a broad vegetarian selection alongside the halal meat menu. Dal makhani, chana masala, palak
@@ -475,7 +480,7 @@ export default function HalalMenuPage({ params }: Props) {
                   This means mixed groups - halal diners, vegetarians, vegans - can all sit at the same table at
                   Chopras without anyone making compromises. Read more about the halal story at Chopras in our
                   article on the{' '}
-                  <Link href={`${base}/blog/halal-indian-restaurant-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/blog/halal-indian-restaurant-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     halal Indian restaurant in Den Haag
                   </Link>
                   .
@@ -488,20 +493,22 @@ export default function HalalMenuPage({ params }: Props) {
 
       {/* FAQ */}
       <section className="bg-white py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
-            {isNl
-              ? 'Veelgestelde vragen over het halal menu'
-              : 'Frequently asked questions about the halal menu'}
-          </h2>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
+              {isNl
+                ? 'Veelgestelde Vragen Over Het Halal Menu'
+                : 'Frequently Asked Questions About The Halal Menu'}
+            </h2>
+          </div>
           <FaqAccordion faqs={isNl ? faqsNl : faqsEn} locale={locale} />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1B2B5E] py-20 px-6 md:px-16 text-center">
+      <section className="btn-gradient py-20 px-6 md:px-16 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
             {isNl
               ? 'Eet met vertrouwen bij Chopras Indian Restaurant'
               : 'Dine with confidence at Chopras Indian Restaurant'}
@@ -514,19 +521,19 @@ export default function HalalMenuPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`${base}/contact`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.reserve}
             </Link>
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {tr.common.viewMenu}
             </Link>
             <Link
               href={`${base}/indian-food-delivery-den-haag`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+              className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Bezorging' : 'Delivery'}
             </Link>

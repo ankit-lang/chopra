@@ -44,13 +44,13 @@ export default function FeedbackPage() {
                                     <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                                           <span className="text-green-500 text-xl">✓</span>
                                     </div>
-                                    <h2 className="text-xl font-bold text-gray-800 mb-2">Thank you!</h2>
+                                    <h2 className="text-xl font-bold text-gray-1100 mb-2">Thank you!</h2>
                                     <p className="text-gray-500 text-sm mb-6">Thank you for your feedback. We’re sorry your experience didn’t fully meet expectations. Your comments are valuable to us and we’ll work on improving. We hope to serve you better on your next visit. 🙏</p>
 
                                     {/* Button to reset the UI state */}
                                     <button
                                           onClick={handleReset}
-                                          className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-xl transition duration-200 text-sm"
+                                          className="w-full bg-gray-900 hover:bg-gray-1100 text-white font-medium py-2.5 px-4 rounded-xl transition duration-200 text-sm"
                                     >
                                           Back to Home
                                     </button>
@@ -64,7 +64,7 @@ export default function FeedbackPage() {
                                           </>
                                     ) : (
                                           <>
-                                                <h1 className="text-2xl font-bold text-gray-800 mb-2">Rate Your Experience</h1>
+                                                <h1 className="text-2xl font-bold text-gray-1100 mb-2">Rate Your Experience</h1>
                                                 <p className="text-gray-500 mb-6 text-sm">Your feedback helps us grow!</p>
                                           </>
                                     )}
@@ -104,7 +104,7 @@ export default function FeedbackPage() {
                                                 />
                                                 <button
                                                       type="submit"
-                                                      className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-xl transition duration-200 text-sm"
+                                                      className="w-full bg-gray-900 hover:bg-gray-1100 text-white font-medium py-2.5 px-4 rounded-xl transition duration-200 text-sm"
                                                 >
                                                       Submit Feedback
                                                 </button>

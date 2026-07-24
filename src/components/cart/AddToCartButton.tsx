@@ -27,7 +27,7 @@ export default function AddToCartButton({ dish }: AddToCartButtonProps) {
         <button
           onClick={() => updateQuantity(dish.id, quantity - 1)}
           aria-label="Decrease quantity"
-          className="w-8 h-8 rounded-full bg-[#0000B3]/10 border border-white text-white hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white flex items-center justify-center transition-all"
+          className="w-8 h-8 rounded-full btn-gradient flex items-center justify-center"
         >
           <Minus className="w-3.5 h-3.5" />
         </button>
@@ -35,7 +35,7 @@ export default function AddToCartButton({ dish }: AddToCartButtonProps) {
         <button
           onClick={handleAdd}
           aria-label="Increase quantity"
-          className="w-8 h-8 rounded-full bg-[#0000B3]/10 border border-white text-white hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white flex items-center justify-center transition-all"
+          className="w-8 h-8 rounded-full btn-gradient flex items-center justify-center"
         >
           <Plus className="w-3.5 h-3.5" />
         </button>
@@ -58,7 +58,7 @@ export default function AddToCartButton({ dish }: AddToCartButtonProps) {
   return (
     <button
       onClick={handleAdd}
-      className="bg-[#0000CC] text-white px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2 hover:bg-[#0000AA] transition-all"
+      className="btn-gradient px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2"
     >
       <Plus className="w-4 h-4" />
       Add to Cart

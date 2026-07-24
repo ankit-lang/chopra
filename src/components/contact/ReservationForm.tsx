@@ -91,16 +91,26 @@ export default function ReservationForm() {
         adminParams,
         'tlV8x_1C8JV1P63yT'
       )
-      // Optional: WhatsApp Fallback Dispatch Pipeline
+      console.log('Mail delivered successfully')
       setSuccess(true)
+
       try {
-        await fetch('https://itzankitrajput-whatsapp.hf.space/api/v1/send-lead', {
+        const whatsappResponse = await fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fullName, email, phone, date, time, persons, foundVia, dob, notes }),
         })
+
+        if (whatsappResponse.ok) {
+          console.log('WhatsApp delivered successfully')
+        } else {
+          console.error('WhatsApp not delivered', {
+            status: whatsappResponse.status,
+            statusText: whatsappResponse.statusText,
+          })
+        }
       } catch (waErr) {
-        console.error('WhatsApp Pipeline Fault:', waErr)
+        console.error('WhatsApp not delivered:', waErr)
       }
       setDate('')
       setTime('')
@@ -112,7 +122,7 @@ export default function ReservationForm() {
       setDob('')
       setNotes('')
     } catch (err: any) {
-      console.error('EmailJS Execution Error:', err)
+      console.error('Mail not delivered:', err)
       setError('Failed to submit reservation. Please try again.')
     } finally {
       setSubmitting(false)
@@ -122,7 +132,7 @@ export default function ReservationForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 md:px-6 py-6">
-      <h3 className="text-2xl md:text-lg font-semibold mb-6 md:mb-4">Reserve Your Table</h3>
+      <h3 className="text-2xl md:text-lg font-semibold text-[#06068a] mb-6 md:mb-4">Reserve Your Table</h3>
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-4">
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Date *</label>
@@ -186,7 +196,7 @@ export default function ReservationForm() {
           <br /> Get ready for great food, good vibes, and a wonderful time ahead!</div>}
 
         <div>
-          <button type="submit" disabled={submitting} className="w-full bg-[#1B2B5E] text-white rounded-lg px-4 py-3 md:py-2 text-base md:text-base font-medium hover:bg-[#0F1F4B] transition-colors disabled:opacity-50 mt-3">
+          <button type="submit" disabled={submitting} className="w-full bg-[#06068a] text-white rounded-lg px-4 py-3 md:py-2 text-base md:text-base font-medium hover:bg-[#0000B3] transition-colors disabled:opacity-50 mt-3">
             {submitting ? 'Sending...' : 'Submit'}
           </button>
         </div>

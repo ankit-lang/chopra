@@ -56,7 +56,7 @@ Must contain at least 2 inline Link components.
 - Hours: Tuesday to Sunday, 16:30 to 22:30. Closed Monday.
 - NO LUNCH SERVICE. Never write lunch, 11:30, 12:00, or any daytime food reference.
 - Capacity: 25 to 80 guests. Never claim above 80.
-- Reviews: "800+" not specific counts like "834".
+- Reviews: "1100+" not specific counts like "834".
 - Delivery: Thuisbezorgd and Uber Eats (both, not just one).
 - No alcohol served or permitted. Chopras is fully halal.
 
@@ -107,10 +107,10 @@ Funnel Stage: TOFU + BOFU
 Awareness Level: Problem-Aware to Solution-Aware
 Traffic Source: Organic
 Search Intent: Commercial + Navigational
-Content Angle: Den Haag has plenty of Indian restaurants. Only one grinds spices fresh every morning, runs a 400-degree clay oven, and holds 4.9 stars from 800+ verified reviews.
+Content Angle: Den Haag has plenty of Indian restaurants. Only one grinds spices fresh every morning, runs a 400-degree clay oven, and holds 4.9 stars from 1100+ verified reviews.
 Primary Keyword: Best Indian restaurant Den Haag
 Secondary Keywords: authentic Indian restaurant Den Haag, beste Indiaas restaurant Den Haag, Indian restaurant The Hague, halal Indian restaurant Den Haag, top Indian restaurant Den Haag
-LSI / Related Terms: North Indian food, butter chicken, biryani, tandoori, chaat, Leyweg, feestzaal, catering, 800+ reviews, 4.9 stars, clay oven, fresh spices
+LSI / Related Terms: North Indian food, butter chicken, biryani, tandoori, chaat, Leyweg, feestzaal, catering, 1100+ reviews, 4.9 stars, clay oven, fresh spices
 Internal Links: use sitemap.md
 Audience: Den Haag residents, South Asian community, Dutch families, corporate guests, tourists
 Customer Language: "proper Indian food", "real spices", "halal confirmed", "good for groups", "best curry Den Haag"
@@ -118,9 +118,9 @@ Already Tried: Indian restaurants that water down spices, questionable halal cla
 Language: English
 Tone Notes: Confident authority. Not boastful, just certain. Use Chopras brand voice from SEO-BRIEF.md throughout.
 Schema Type: LocalBusiness + FAQPage + Organization
-Word Count: 1200 to 1800
+Word Count: 1200 to 11100
 CTA Goal: Reserve a table or view menu
-Available Proof: 4.9 stars Google, 800+ reviews, 8.6 TheFork, Tripadvisor Excellent, 143 dishes, 13 categories, halal certified, spices from India ground daily, 400 degree tandoor, open since 2023, Arun Chopra founder, private hall 25 to 80 guests
+Available Proof: 4.9 stars Google, 1100+ reviews, 8.6 TheFork, Tripadvisor Excellent, 143 dishes, 13 categories, halal certified, spices from India ground daily, 400 degree tandoor, open since 2023, Arun Chopra founder, private hall 25 to 80 guests
 Do Not Include: competitor names, fake urgency, generic phrases like "culinary journey" or "passionate about food"
 ```
 
@@ -161,7 +161,7 @@ Already Tried: Menus that do not describe dishes properly, restaurants with limi
 Language: English
 Tone Notes: Knowledgeable guide tone. Help them navigate 143 dishes without overwhelming them. Lead with the category highlights.
 Schema Type: Menu + MenuSection + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: View full menu or reserve a table
 Available Proof: 143 dishes, 13 categories, halal certified, vegetarian options clearly labelled, vegan options, Indo Chinese exclusive to Den Haag, fresh spices daily
 Do Not Include: individual prices, competitor names, unverifiable superlatives
@@ -290,9 +290,9 @@ Already Tried: Butter chicken that is too sweet, too mild, or clearly made from 
 Language: English
 Tone Notes: Sensory and specific. Make them taste it before they arrive. No generic curry descriptions.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Reserve a table or order online
-Available Proof: 4.9 stars 800+ reviews, halal certified, chicken cooked in tandoor first then finished in slow-cooked tomato cream sauce, spices ground fresh that morning, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, halal certified, chicken cooked in tandoor first then finished in slow-cooked tomato cream sauce, spices ground fresh that morning, Leyweg 986
 Do Not Include: competitor dish comparisons, generic "creamy and delicious" language
 ```
 
@@ -333,9 +333,9 @@ Already Tried: Biryani that is just rice stirred with curry, dry biryani, biryan
 Language: English
 Tone Notes: Specific and technical where it adds credibility. The dum method. The saffron. The sealing. These details separate Chopras from every competitor.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Reserve a table or order online
-Available Proof: 4.9 stars 800+ reviews, halal certified, chicken and lamb and veg options, saffron basmati rice, slow cooked, Leyweg 986, spices ground fresh daily
+Available Proof: 4.9 stars 1100+ reviews, halal certified, chicken and lamb and veg options, saffron basmati rice, slow cooked, Leyweg 986, spices ground fresh daily
 Do Not Include: generic biryani descriptions, unverifiable cooking time claims
 ```
 
@@ -376,9 +376,9 @@ Already Tried: Tandoori chicken that is just baked chicken with red food colorin
 Language: English
 Tone Notes: The 400-degree clay oven fact is the anchor of this page. Build everything around it. Specificity is the differentiator.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Reserve a table or order online
-Available Proof: 4.9 stars 800+ reviews, halal certified, tandoor reaches 400 degrees Celsius, chicken tikka, seekh kebab, paneer tikka, tandoori chicken, marinated overnight, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, halal certified, tandoor reaches 400 degrees Celsius, chicken tikka, seekh kebab, paneer tikka, tandoori chicken, marinated overnight, Leyweg 986
 Do Not Include: generic grilled food descriptions, competitor names
 ```
 
@@ -421,7 +421,7 @@ Tone Notes: Slow, deliberate copy tone mirrors the dish. This is comfort food. W
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or view the full menu
-Available Proof: 4.9 stars 800+ reviews, vegetarian certified, slow cooked overnight, spices ground fresh, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, vegetarian certified, slow cooked overnight, spices ground fresh, Leyweg 986
 Do Not Include: competitor comparisons, cooking time claims unless verified
 ```
 
@@ -464,7 +464,7 @@ Tone Notes: Confident and specific. Educate lightly on what makes rogan josh Kas
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or order online
-Available Proof: 4.9 stars 800+ reviews, halal certified, Kashmiri spice gravy, slow cooked, Leyweg 986, spices from India
+Available Proof: 4.9 stars 1100+ reviews, halal certified, Kashmiri spice gravy, slow cooked, Leyweg 986, spices from India
 Do Not Include: generic lamb curry descriptions, unverifiable cooking time
 ```
 
@@ -507,7 +507,7 @@ Tone Notes: The clay oven is the story here. The 90-second bake. The char. Write
 Schema Type: Service + FAQPage
 Word Count: 600 to 900
 CTA Goal: Reserve a table or view the full menu
-Available Proof: 400 degree clay oven, 6 types of naan, Leyweg 986, 4.9 stars 800+ reviews
+Available Proof: 400 degree clay oven, 6 types of naan, Leyweg 986, 4.9 stars 1100+ reviews
 Do Not Include: generic bread descriptions
 ```
 
@@ -550,7 +550,7 @@ Tone Notes: Playful energy. This is street food. Quick, bright, specific. The ex
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table and try the chaat selection
-Available Proof: 4.9 stars 800+ reviews, papdi chaat, dahi puri, aloo tikki, pani puri all on menu, vegetarian, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, papdi chaat, dahi puri, aloo tikki, pani puri all on menu, vegetarian, Leyweg 986
 Do Not Include: competitor names
 ```
 
@@ -593,7 +593,7 @@ Tone Notes: Sensory first sentence. Make them experience the dish before they re
 Schema Type: Service + FAQPage
 Word Count: 600 to 900
 CTA Goal: Reserve a table and experience the street food
-Available Proof: 4.9 stars 800+ reviews, vegetarian and vegan, Leyweg 986, authentic recipe
+Available Proof: 4.9 stars 1100+ reviews, vegetarian and vegan, Leyweg 986, authentic recipe
 Do Not Include: generic street food descriptions
 ```
 
@@ -636,7 +636,7 @@ Tone Notes: Proud but not preachy. This dish earns its place on the menu. Write 
 Schema Type: Service + FAQPage
 Word Count: 600 to 900
 CTA Goal: Reserve a table or view the vegan menu
-Available Proof: 4.9 stars 800+ reviews, fully vegan, tandoor grilled, achari spices, Leyweg 986, vegan menu available
+Available Proof: 4.9 stars 1100+ reviews, fully vegan, tandoor grilled, achari spices, Leyweg 986, vegan menu available
 Do Not Include: preachy vegan messaging, competitor comparisons
 ```
 
@@ -679,7 +679,7 @@ Tone Notes: Generous and organised. Emphasise variety and quality consistency at
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Request a buffet catering quote
-Available Proof: 4.9 stars 800+ reviews, halal certified, 143 dish menu to draw from, private hall 25 to 80 guests, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, halal certified, 143 dish menu to draw from, private hall 25 to 80 guests, Leyweg 986
 Do Not Include: price per head claims unless verified, competitor names
 ```
 
@@ -722,7 +722,7 @@ Tone Notes: Educational first. Explain what Indo Chinese is. Then position Chopr
 Schema Type: Service + FAQPage
 Word Count: 900 to 1300
 CTA Goal: Reserve a table and try the Indo Chinese menu
-Available Proof: 4.9 stars 800+ reviews, only Indo Chinese restaurant in Den Haag, chilli chicken, chilli paneer, Hakka noodles, Manchow soup, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, only Indo Chinese restaurant in Den Haag, chilli chicken, chilli paneer, Hakka noodles, Manchow soup, Leyweg 986
 Do Not Include: generic Chinese food descriptions, competitor names
 ```
 
@@ -763,9 +763,9 @@ Already Tried: Restaurants claiming halal with no certification visible, restaur
 Language: English
 Tone Notes: Clear, trustworthy, specific. Halal guests do not want marketing. They want certainty. Give it to them.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Reserve a table with confidence
-Available Proof: 4.9 stars 800+ reviews, fully halal certified kitchen, all suppliers halal certified, 143 dishes all halal, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, fully halal certified kitchen, all suppliers halal certified, 143 dishes all halal, Leyweg 986
 Do Not Include: vague halal claims without specifics, competitor names
 ```
 
@@ -808,7 +808,7 @@ Tone Notes: Direct and reassuring. This page is a decision-maker for halal guest
 Schema Type: Service + FAQPage
 Word Count: 600 to 900
 CTA Goal: Visit Chopras and dine with confidence
-Available Proof: 4.9 stars 800+ reviews, full kitchen halal certified, all suppliers certified, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, full kitchen halal certified, all suppliers certified, Leyweg 986
 Do Not Include: non-halal menu items, competitor names
 ```
 
@@ -851,7 +851,7 @@ Tone Notes: Confident and appetising. Vegan food at Chopras is not an accommodat
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: View the vegan menu or reserve a table
-Available Proof: 4.9 stars 800+ reviews, dedicated vegan dishes, soya chaap in tandoor, dal makhani, chana masala, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, dedicated vegan dishes, soya chaap in tandoor, dal makhani, chana masala, Leyweg 986
 Do Not Include: preachy vegan messaging, health claims without evidence
 ```
 
@@ -894,7 +894,7 @@ Tone Notes: Celebratory but organised. This is one of the most important days of
 Schema Type: Service + FAQPage
 Word Count: 1000 to 1500
 CTA Goal: Request a free wedding catering quote
-Available Proof: 4.9 stars 800+ reviews, halal certified, nikah receptions served, 25 to 80 guests, serves Den Haag and surrounding areas, same kitchen as restaurant
+Available Proof: 4.9 stars 1100+ reviews, halal certified, nikah receptions served, 25 to 80 guests, serves Den Haag and surrounding areas, same kitchen as restaurant
 Do Not Include: capacity claims above 80 guests
 ```
 
@@ -937,7 +937,7 @@ Tone Notes: Light and celebratory. Make it easy. Show the process is simple.
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Book birthday catering
-Available Proof: 4.9 stars 800+ reviews, halal certified, private hall 25 to 80 guests, same kitchen as restaurant, serves Den Haag and surrounding areas
+Available Proof: 4.9 stars 1100+ reviews, halal certified, private hall 25 to 80 guests, same kitchen as restaurant, serves Den Haag and surrounding areas
 Do Not Include: fake minimum order guarantees, competitor names
 ```
 
@@ -978,9 +978,9 @@ Already Tried: Generic corporate caterers, restaurants that cannot guarantee con
 Language: English
 Tone Notes: Professional and efficient. Corporate buyers want reliability. Lead with that.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Request a corporate catering quote
-Available Proof: 4.9 stars 800+ reviews, halal certified, vegetarian options, 15 to 80 guests, private hall, near Peace Palace, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, halal certified, vegetarian options, 15 to 80 guests, private hall, near Peace Palace, Leyweg 986
 Do Not Include: fake minimum guest claims, competitor names
 ```
 
@@ -1023,7 +1023,7 @@ Tone Notes: Warm and culturally respectful. Acknowledge the significance of the 
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Book a Diwali dinner table or catering
-Available Proof: 4.9 stars 800+ reviews, halal certified, South Asian community focus, Leyweg 986, private hall available, traditional Indian sweets on menu
+Available Proof: 4.9 stars 1100+ reviews, halal certified, South Asian community focus, Leyweg 986, private hall available, traditional Indian sweets on menu
 Do Not Include: offensive cultural generalisations, fake Diwali promotions
 ```
 
@@ -1063,9 +1063,9 @@ Customer Language: "bruiloft catering Den Haag", "Indiaas trouwfeest catering", 
 Language: Dutch — write entirely in Dutch. No English mixing.
 Tone Notes: Warm en georganiseerd. Directe Nederlandse communicatiestijl, geen overdreven marketing, gewoon duidelijkheid.
 Schema Type: Service + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Vrijblijvende offerte aanvragen
-Available Proof: 4.9 sterren Google, 800+ reviews, volledig halal gecertificeerd, 25 tot 80 gasten, Leyweg 986, Den Haag en omgeving
+Available Proof: 4.9 sterren Google, 1100+ reviews, volledig halal gecertificeerd, 25 tot 80 gasten, Leyweg 986, Den Haag en omgeving
 Do Not Include: Engels in de copy, concurrent namen
 ```
 
@@ -1107,7 +1107,7 @@ Tone Notes: Direct en praktisch. Geef ze de feiten die ze nodig hebben om te bes
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Offerte aanvragen
-Available Proof: 4.9 sterren 800+ reviews, 25 tot 80 gasten, Leyweg 986, Indiaas catering inbegrepen, volledig halal
+Available Proof: 4.9 sterren 1100+ reviews, 25 tot 80 gasten, Leyweg 986, Indiaas catering inbegrepen, volledig halal
 Do Not Include: Engels in de copy, concurrent namen
 ```
 
@@ -1149,7 +1149,7 @@ Tone Notes: Professioneel en helder. Zakelijke tone.
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Offerte aanvragen voor uw evenement
-Available Proof: 4.9 sterren 800+ reviews, 25 tot 80 gasten, Leyweg 986, volledig halal, professionele service
+Available Proof: 4.9 sterren 1100+ reviews, 25 tot 80 gasten, Leyweg 986, volledig halal, professionele service
 Do Not Include: Engels in de copy, concurrent namen
 ```
 
@@ -1192,7 +1192,7 @@ Tone Notes: Convenient and reassuring. Same quality, delivered.
 Schema Type: Service + FAQPage
 Word Count: 600 to 900
 CTA Goal: Order online now
-Available Proof: 4.9 stars 800+ reviews, halal certified, same kitchen, Leyweg 986, online ordering available
+Available Proof: 4.9 stars 1100+ reviews, halal certified, same kitchen, Leyweg 986, online ordering available
 Do Not Include: delivery time guarantees unless verified, delivery radius claims unless confirmed
 ```
 
@@ -1233,9 +1233,9 @@ Already Tried: Takeaway that is worse quality than dining in, slow collection wa
 Language: English
 Tone Notes: Fast and practical. This audience is decision-ready. Make ordering easy.
 Schema Type: Service + FAQPage
-Word Count: 500 to 800
+Word Count: 500 to 1100
 CTA Goal: Order online for collection
-Available Proof: 4.9 stars 800+ reviews, halal certified, Leyweg 986, online ordering, same kitchen standard
+Available Proof: 4.9 stars 1100+ reviews, halal certified, Leyweg 986, online ordering, same kitchen standard
 Do Not Include: wait time guarantees, competitor names
 ```
 
@@ -1278,7 +1278,7 @@ Tone Notes: Reassuring about the short distance. Make the drive feel worth it be
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or get directions
-Available Proof: 4.9 stars 800+ reviews, 15 minutes from Delft via A13, halal certified, Leyweg 986, 143 dishes
+Available Proof: 4.9 stars 1100+ reviews, 15 minutes from Delft via A13, halal certified, Leyweg 986, 143 dishes
 Do Not Include: negative references to Delft restaurants, unverified distance claims
 ```
 
@@ -1321,7 +1321,7 @@ Tone Notes: Community-aware. Acknowledge that Rijswijk has a South Asian communi
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or get directions
-Available Proof: 4.9 stars 800+ reviews, 5 minutes from Rijswijk, halal certified, Leyweg 986, 143 dishes, South Asian community focus
+Available Proof: 4.9 stars 1100+ reviews, 5 minutes from Rijswijk, halal certified, Leyweg 986, 143 dishes, South Asian community focus
 Do Not Include: offensive cultural references, unverified distance claims
 ```
 
@@ -1351,7 +1351,7 @@ Funnel Stage: BOFU
 Awareness Level: Solution-Aware
 Traffic Source: Organic
 Search Intent: Commercial
-Content Angle: Indian restaurant near Zoetermeer. 20 minutes via the A12. Worth the drive for 4.9 stars, 800+ reviews, and spices ground fresh that morning.
+Content Angle: Indian restaurant near Zoetermeer. 20 minutes via the A12. Worth the drive for 4.9 stars, 1100+ reviews, and spices ground fresh that morning.
 Primary Keyword: Indian restaurant Zoetermeer
 Secondary Keywords: Indian food Zoetermeer, Indiaas restaurant Zoetermeer, halal Indian Zoetermeer, best Indian near Zoetermeer
 LSI / Related Terms: A12, 20 minutes, South Holland, Hindustani community Zoetermeer, halal food Zoetermeer area
@@ -1364,7 +1364,7 @@ Tone Notes: Make the 20-minute drive feel like a natural decision when the quali
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or get directions
-Available Proof: 4.9 stars 800+ reviews, 20 minutes via A12, halal certified, Leyweg 986, 143 dishes
+Available Proof: 4.9 stars 1100+ reviews, 20 minutes via A12, halal certified, Leyweg 986, 143 dishes
 Do Not Include: unverified distance claims, competitor names
 ```
 
@@ -1407,7 +1407,7 @@ Tone Notes: Professional and polished. This audience expects quality and reliabi
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table
-Available Proof: 4.9 stars 800+ reviews, 10 minutes from Peace Palace, halal certified, Leyweg 986, private hall for group dinners
+Available Proof: 4.9 stars 1100+ reviews, 10 minutes from Peace Palace, halal certified, Leyweg 986, private hall for group dinners
 Do Not Include: unverified distance claims, competitor names
 ```
 
@@ -1450,7 +1450,7 @@ Tone Notes: Practical and rewarding. The short tram ride is the only friction. E
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a table or get tram directions
-Available Proof: 4.9 stars 800+ reviews, 15 minutes by tram, halal certified, Leyweg 986, 143 dishes
+Available Proof: 4.9 stars 1100+ reviews, 15 minutes by tram, halal certified, Leyweg 986, 143 dishes
 Do Not Include: unverified transport time claims
 ```
 
@@ -1480,10 +1480,10 @@ Funnel Stage: MOFU to BOFU
 Awareness Level: Solution-Aware
 Traffic Source: Organic
 Search Intent: Commercial
-Content Angle: Het beste Indiaas restaurant in Den Haag, niet omdat wij het zeggen, maar omdat 800+ gasten het hebben beoordeeld met 4.9 sterren op Google.
+Content Angle: Het beste Indiaas restaurant in Den Haag, niet omdat wij het zeggen, maar omdat 1100+ gasten het hebben beoordeeld met 4.9 sterren op Google.
 Primary Keyword: Beste Indiaas restaurant Den Haag
 Secondary Keywords: Top Indiaas restaurant Den Haag, beste curry Den Haag, lekkerste Indiaas Den Haag, authentiek Indiaas Den Haag
-LSI / Related Terms: 4.9 sterren, 800+ reviews, Google beoordelingen, TheFork, Tripadvisor, halal, vers gemalen specerijen, Leyweg 986
+LSI / Related Terms: 4.9 sterren, 1100+ reviews, Google beoordelingen, TheFork, Tripadvisor, halal, vers gemalen specerijen, Leyweg 986
 Internal Links: use sitemap.md
 Audience: Dutch speakers in Den Haag searching for the best Indian restaurant in their language
 Customer Language: "beste Indiaas restaurant Den Haag", "lekkerste Indiaas eten Den Haag"
@@ -1492,7 +1492,7 @@ Tone Notes: Bescheiden zeker. Laat de bewijzen spreken. Directe Nederlandse comm
 Schema Type: LocalBusiness + FAQPage
 Word Count: 900 to 1300
 CTA Goal: Tafel reserveren of menu bekijken
-Available Proof: 4.9 sterren 800+ Google reviews, 8.6 TheFork, Tripadvisor Excellent, halal gecertificeerd, vers gemalen specerijen dagelijks, 143 gerechten, Leyweg 986
+Available Proof: 4.9 sterren 1100+ Google reviews, 8.6 TheFork, Tripadvisor Excellent, halal gecertificeerd, vers gemalen specerijen dagelijks, 143 gerechten, Leyweg 986
 Do Not Include: Engels in de copy, concurrent namen
 ```
 
@@ -1535,7 +1535,7 @@ Tone Notes: Warm and inclusive. Every family member feels accounted for before t
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Reserve a family table
-Available Proof: 4.9 stars 800+ reviews, dedicated kids menu with surprise gift, mild to spicy options, halal certified, wheelchair accessible, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, dedicated kids menu with surprise gift, mild to spicy options, halal certified, wheelchair accessible, Leyweg 986
 Do Not Include: unverified child facility claims, competitor names
 ```
 
@@ -1578,7 +1578,7 @@ Tone Notes: Confident and educational. Position Den Haag as the best destination
 Schema Type: LocalBusiness + FAQPage
 Word Count: 900 to 1300
 CTA Goal: Visit Chopras at Leyweg 986
-Available Proof: 4.9 stars 800+ reviews, spices from India, halal certified, 143 dishes, private hall, Tripadvisor Excellent, TheFork 8.6, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, spices from India, halal certified, 143 dishes, private hall, Tripadvisor Excellent, TheFork 8.6, Leyweg 986
 Do Not Include: competitor names, unverifiable national claims
 ```
 
@@ -1613,7 +1613,7 @@ Search Intent: Informational
 Content Angle: What actually makes the best Indian restaurant in Den Haag, and why the answer comes down to three things that most restaurants skip.
 Primary Keyword: Best Indian restaurant Den Haag
 Secondary Keywords: Top Indian restaurant The Hague, authentic Indian food Den Haag review, best curry Den Haag 2026, Indian restaurant review Den Haag
-LSI / Related Terms: spice freshness, halal certification, tandoor temperature, review volume, 4.9 stars, 800+ reviews, Leyweg 986, North Indian cuisine
+LSI / Related Terms: spice freshness, halal certification, tandoor temperature, review volume, 4.9 stars, 1100+ reviews, Leyweg 986, North Indian cuisine
 Internal Links: use sitemap.md
 Audience: People researching Indian restaurants in Den Haag before deciding where to go
 Customer Language: "best Indian restaurant Den Haag", "where to eat Indian in Den Haag", "top Indian food The Hague"
@@ -1622,7 +1622,7 @@ Tone Notes: Authoritative and genuine. This is editorial content, not a sales pa
 Schema Type: Article + FAQPage
 Word Count: 1500 to 2000
 CTA Goal: Soft CTA — visit Chopras Indian Restaurant at Leyweg 986
-Available Proof: 4.9 stars 800+ reviews, TheFork 8.6, Tripadvisor Excellent, fresh spices daily, 400 degree tandoor, halal certified, 143 dishes
+Available Proof: 4.9 stars 1100+ reviews, TheFork 8.6, Tripadvisor Excellent, fresh spices daily, 400 degree tandoor, halal certified, 143 dishes
 Do Not Include: competitor names directly, hard sales language
 ```
 
@@ -1664,9 +1664,9 @@ Already Tried: Restaurants claiming halal with no clear certification, menus whe
 Language: English
 Tone Notes: Informative and honest. This audience has been burned before. Give them the framework to ask the right questions, then show Chopras answers all of them.
 Schema Type: Article + FAQPage
-Word Count: 1200 to 1800
+Word Count: 1200 to 11100
 CTA Goal: Soft CTA — visit Chopras for fully certified halal Indian food
-Available Proof: Full kitchen halal certified, all suppliers halal certified, 143 dishes all halal, 4.9 stars 800+ reviews, Leyweg 986
+Available Proof: Full kitchen halal certified, all suppliers halal certified, 143 dishes all halal, 4.9 stars 1100+ reviews, Leyweg 986
 Do Not Include: competitor names, vague halal claims
 ```
 
@@ -1710,7 +1710,7 @@ Tone Notes: Informatief en praktisch. Directe Nederlandse communicatiestijl.
 Schema Type: Article + FAQPage
 Word Count: 1200 to 1600
 CTA Goal: Zachte CTA — offerte aanvragen bij Chopras Indian Restaurant
-Available Proof: 4.9 sterren 800+ reviews, halal gecertificeerd, 25 tot 80 gasten, Leyweg 986, zelfde keuken als het restaurant
+Available Proof: 4.9 sterren 1100+ reviews, halal gecertificeerd, 25 tot 80 gasten, Leyweg 986, zelfde keuken als het restaurant
 Do Not Include: Engels in de copy, concurrent namen
 ```
 
@@ -1752,9 +1752,9 @@ Already Tried: Vegetarian menus at Indian restaurants limited to three options
 Language: English
 Tone Notes: Celebratory and specific about dishes. North Indian vegetarian cuisine is vast and complex. Show that Chopras understands this.
 Schema Type: Article + FAQPage
-Word Count: 1200 to 1800
+Word Count: 1200 to 11100
 CTA Goal: Soft CTA — explore the vegetarian and vegan menu at Chopras
-Available Proof: 4.9 stars 800+ reviews, dedicated vegetarian section, soya chaap, dal makhani, chana masala, paneer dishes, vegan options clearly labelled, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, dedicated vegetarian section, soya chaap, dal makhani, chana masala, paneer dishes, vegan options clearly labelled, Leyweg 986
 Do Not Include: preachy messaging, unverifiable health claims
 ```
 
@@ -1795,9 +1795,9 @@ Customer Language: "Indian street food Den Haag", "chaat Den Haag", "pani puri D
 Language: English
 Tone Notes: Vivid and exploratory. Food journalism energy. Make them feel the heat of a Mumbai street before they arrive at Leyweg 986.
 Schema Type: Article + FAQPage
-Word Count: 1200 to 1800
+Word Count: 1200 to 11100
 CTA Goal: Soft CTA — try the street food selection at Chopras
-Available Proof: 4.9 stars 800+ reviews, pani puri, papdi chaat, dahi puri, aloo tikki, samosa chaat all on menu, Leyweg 986
+Available Proof: 4.9 stars 1100+ reviews, pani puri, papdi chaat, dahi puri, aloo tikki, samosa chaat all on menu, Leyweg 986
 Do Not Include: competitor names, unverifiable origin stories
 ```
 
@@ -1879,9 +1879,9 @@ Customer Language: "vacature restaurant Den Haag", "werken bij Indiaas restauran
 Language: English with Dutch vacancy terms naturally included
 Tone Notes: Warm and standards-driven. The best candidates want to work somewhere that takes quality seriously. Lead with that.
 Schema Type: LocalBusiness + FAQPage
-Word Count: 500 to 800
+Word Count: 500 to 1100
 CTA Goal: Apply for a position at Chopras
-Available Proof: 4.9 stars 800+ reviews, Leyweg 986, established 2023, growing restaurant, catering operation
+Available Proof: 4.9 stars 1100+ reviews, Leyweg 986, established 2023, growing restaurant, catering operation
 Do Not Include: specific salary claims unless confirmed, false vacancy counts
 ```
 
@@ -1925,9 +1925,9 @@ Customer Language: "Chopras menu", "Indian menu Den Haag", "what does Chopras se
 Language: English
 Tone Notes: Knowledgeable guide. Lead with highlights per category. Help them find their dish in 143 options without overwhelming them.
 Schema Type: Menu + MenuSection + MenuItem + FAQPage
-Word Count: 800 to 1200
+Word Count: 1100 to 1200
 CTA Goal: Dine in, order online, or view individual dish pages
-Available Proof: 143 dishes, 13 categories, halal certified, vegetarian and vegan labelled, Indo Chinese exclusive in Den Haag, spices ground fresh daily, 4.9 stars 800+ reviews, Leyweg 986
+Available Proof: 143 dishes, 13 categories, halal certified, vegetarian and vegan labelled, Indo Chinese exclusive in Den Haag, spices ground fresh daily, 4.9 stars 1100+ reviews, Leyweg 986
 Do Not Include: individual dish prices, competitor menu comparisons
 ```
 
@@ -1970,7 +1970,7 @@ Tone Notes: Local and specific. Name the route, the travel time, the community c
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Visit Chopras at Leyweg 986 Den Haag
-Available Proof: 4.9 stars 800+ reviews, 143 dishes, halal certified, Leyweg 986, 10 minutes from Leidschendam, TheFork 8.6, Tripadvisor Excellent
+Available Proof: 4.9 stars 1100+ reviews, 143 dishes, halal certified, Leyweg 986, 10 minutes from Leidschendam, TheFork 8.6, Tripadvisor Excellent
 Do Not Include: competitor names, unverifiable travel time claims beyond 10-15 minutes
 
 MANDATORY CHECKS BEFORE COMMITTING:
@@ -2024,7 +2024,7 @@ Tone Notes: Proximity is the angle. Voorburg is Den Haag's closest neighbour. Ma
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Visit Chopras at Leyweg 986 Den Haag
-Available Proof: 4.9 stars 800+ reviews, 143 dishes, halal certified, Leyweg 986, 5 minutes from Voorburg, TheFork 8.6, Tripadvisor Excellent
+Available Proof: 4.9 stars 1100+ reviews, 143 dishes, halal certified, Leyweg 986, 5 minutes from Voorburg, TheFork 8.6, Tripadvisor Excellent
 Do Not Include: competitor names, unverifiable travel time claims
 
 MANDATORY CHECKS BEFORE COMMITTING:
@@ -2078,7 +2078,7 @@ Tone Notes: Address the lack of authentic Indian food in the Westland area direc
 Schema Type: LocalBusiness + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Visit Chopras at Leyweg 986 Den Haag
-Available Proof: 4.9 stars 800+ reviews, 143 dishes, halal certified, Leyweg 986, 20 minutes from Westland, TheFork 8.6, Tripadvisor Excellent
+Available Proof: 4.9 stars 1100+ reviews, 143 dishes, halal certified, Leyweg 986, 20 minutes from Westland, TheFork 8.6, Tripadvisor Excellent
 Do Not Include: competitor names, claims about Westland restaurants, unverifiable travel times beyond 20-25 minutes
 
 MANDATORY CHECKS BEFORE COMMITTING:

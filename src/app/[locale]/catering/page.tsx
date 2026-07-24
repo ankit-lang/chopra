@@ -88,7 +88,7 @@ export default function LocaleCateringPage({ params }: Props) {
   const capacityStats = [
     { number: '25-80', label: isNl ? 'Gasten' : 'Guests' },
     { number: '4.9', label: isNl ? 'Google Sterren' : 'Google Stars' },
-    { number: '800+', label: isNl ? 'Beoordelingen' : 'Reviews' },
+    { number: '1100+', label: isNl ? 'Beoordelingen' : 'Reviews' },
   ]
 
   return (
@@ -99,32 +99,50 @@ export default function LocaleCateringPage({ params }: Props) {
 
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-center justify-center">
+        {/* Desktop Image */}
         <Image
-          src="/images/catering/wedding-celebrations---1.png"
+          src="/gal/catdesk.png"
           alt={isNl
             ? 'Indiaas catering voor bruiloften en evenementen bij Chopras Indian Restaurant Den Haag'
             : 'Indian catering for weddings and events at Chopras Indian Restaurant Den Haag'}
           fill
-          className="object-cover"
+          className="hidden md:block object-cover brightness-110"
           priority
           sizes="100vw"
         />
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%)' }}
+        {/* Mobile Image */}
+        <Image
+          src="/gal/catmob.png"
+          alt={isNl
+            ? 'Indiaas catering voor bruiloften en evenementen bij Chopras Indian Restaurant Den Haag'
+            : 'Indian catering for weddings and events at Chopras Indian Restaurant Den Haag'}
+          fill
+          className="block md:hidden object-cover brightness-110"
+          priority
+          sizes="100vw"
         />
+        {/* Clear subtle overlay for text readability */}
+        <div className="absolute inset-0 bg-black/15 pointer-events-none" />
+
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto py-20">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-4">
-            <span className="text-white text-xs font-medium uppercase tracking-widest">
-              • CATERING · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
+            <span className="text-white font-body text-xs font-medium uppercase tracking-widest">
+              CATERING · CHOPRAS INDIAN RESTAURANT · DEN HAAG
             </span>
           </div>
-          <h1 
-            className="font-vibes text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6"
-            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
+          <h1
+            className="font-heading font-bold text-5xl md:text-7xl text-white mb-6"
+            style={{
+              textShadow: '0 2px 6px rgba(0,0,0,0.99), 0 6px 24px rgba(0,0,0,0.85)'
+            }}
           >
             {tr.catering.heroH1}
           </h1>
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-white/40" />
+            <span className="text-white/90 text-lg">✦</span>
+            <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
+          </div>
           <p
             className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8"
             style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
@@ -136,7 +154,7 @@ export default function LocaleCateringPage({ params }: Props) {
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center justify-center gap-2 text-white/70 text-xs uppercase tracking-widest">
               <li>
-                <Link href={base || '/'} className="hover:text-white transition-colors">
+                <Link href={base || '/'} className=" transition-colors">
                   {tr.common.nav.home}
                 </Link>
               </li>
@@ -146,7 +164,7 @@ export default function LocaleCateringPage({ params }: Props) {
           </nav>
           <a
             href="#catering-form"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] backdrop-blur-[10px]"
+            className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
           >
             {isNl ? 'Offerte Aanvragen' : 'Get a Catering Quote'}
           </a>
@@ -158,10 +176,10 @@ export default function LocaleCateringPage({ params }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
+              <p className="text-xs uppercase tracking-widest text-[#06068a] font-medium mb-4">
                 {isNl ? 'WAT WIJ DOEN' : 'WHAT WE DO'}
               </p>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+              <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-left">
                 {tr.catering.serviceH2}
               </h2>
               <div className="space-y-4 text-[#1A1A1A] text-base md:text-lg leading-relaxed">
@@ -169,22 +187,22 @@ export default function LocaleCateringPage({ params }: Props) {
                   <>
                     <p>
                       Chopras inhuren voor je evenement betekent het echte restaurant op je locatie krijgen, geen cateringbedrijf dat toevallig ook Indiaas kookt. Onze koks zijn dezelfde koks die elke avond in onze keuken op{' '}
-                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Leyweg 986, Den Haag
                       </Link>{' '}
                       koken. De specerijen zijn dezelfde hele specerijen rechtstreeks uit India, die elke ochtend vers worden gemalen. De{' '}
-                      <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         biryani
                       </Link>{' '}
                       die je gasten eten op je evenement is dezelfde biryani waarvoor mensen vanuit heel Den Haag komen.
                     </p>
                     <p>
                       Elk menu wordt van scratch opgebouwd voor jouw evenement. Jouw datum, jouw gastenlijst, jouw dieetvereisten.{' '}
-                      <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Halal als standaard
                       </Link>
                       , zonder uitzondering.{' '}
-                      <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Vegetarische en veganistische opties
                       </Link>{' '}
                       standaard inbegrepen zonder dat je ernaar hoeft te vragen. Een bericht of telefoontje start het gesprek.
@@ -194,22 +212,22 @@ export default function LocaleCateringPage({ params }: Props) {
                   <>
                     <p>
                       Hiring Chopras Indian Restaurant for your event means getting the actual restaurant at your venue, not a catering company that happens to do Indian food. Our chefs are the same chefs who cook in our kitchen at{' '}
-                      <Link href={`${base}/contact`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Leyweg 986, Den Haag
                       </Link>{' '}
                       every evening. The spices are the same whole spices sourced directly from India, ground fresh every morning. The{' '}
-                      <Link href={`${base}/biryani-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         biryani
                       </Link>{' '}
                       your guests eat at your event is the same biryani that people drive across Den Haag to order.
                     </p>
                     <p>
                       Every menu is built from scratch for your event. Your date, your guest count, your dietary requirements.{' '}
-                      <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Halal as standard
                       </Link>
                       , no exceptions.{' '}
-                      <Link href={`${base}/vegan-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                      <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                         Vegetarian and vegan options
                       </Link>{' '}
                       included without being asked. One call or email starts the conversation.
@@ -229,7 +247,7 @@ export default function LocaleCateringPage({ params }: Props) {
                   key={label}
                   className="flex items-center gap-4 p-5 bg-[#F7F8FC] rounded-2xl border border-gray-100 shadow-sm"
                 >
-                  <CheckCircle className="text-white w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="text-[#06068a] w-5 h-5 flex-shrink-0" />
                   <span className="text-[#1A1A1A] text-base font-medium">{label}</span>
                 </div>
               ))}
@@ -241,14 +259,14 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* EVENT TYPES — dark navy */}
       <section
         className="py-20 md:py-28 px-6 md:px-16"
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
               {isNl ? 'VOOR WIE WE CATEREN' : 'WHO WE CATER FOR'}
             </p>
-            <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">
+            <h2 className="font-heading text-4xl md:text-5xl text-white">
               {tr.catering.eventsH2}
             </h2>
           </div>
@@ -269,10 +287,10 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* THE FOOD STANDARD — bg-[#F7F8FC] */}
       <section className="bg-[#F7F8FC] py-20 md:py-28 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
+          <p className="text-xs uppercase tracking-widest text-[#06068a] font-medium mb-4">
             {isNl ? 'DE STANDAARD' : 'THE DIFFERENCE'}
           </p>
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.4]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.4]">
             {isNl
               ? 'Het Eten op Uw Evenement Is Hetzelfde als in Ons Restaurant'
               : 'The Food at Your Event Is the Same Food We Serve in Our Restaurant'}
@@ -285,11 +303,11 @@ export default function LocaleCateringPage({ params }: Props) {
                 </p>
                 <p>
                   Bij Chopras Indian Restaurant wordt het eten op je evenement bereid met dezelfde methoden als in onze restaurantkeuken. Hele specerijen rechtstreeks uit India, op de dag vers gemalen.{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Butter chicken
                   </Link>{' '}
                   uit hetzelfde recept dat gasten 4.9 sterren op Google hebben gegeven.{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Tandoori gerechten
                   </Link>{' '}
                   bereid op de temperatuur waarvoor ze zijn ontworpen: 400 graden Celsius in onze kleioven.
@@ -305,11 +323,11 @@ export default function LocaleCateringPage({ params }: Props) {
                 </p>
                 <p>
                   At Chopras Indian Restaurant, the food at your event is prepared with the same methods as our restaurant kitchen. Whole spices sourced directly from India, ground fresh on the day.{' '}
-                  <Link href={`${base}/butter-chicken-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Butter chicken
                   </Link>{' '}
                   made from the same recipe that guests have rated 4.9 stars on Google.{' '}
-                  <Link href={`${base}/tandoori-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Tandoori dishes
                   </Link>{' '}
                   cooked at the temperature they were designed for: 400 degrees Celsius in our clay oven.
@@ -322,7 +340,7 @@ export default function LocaleCateringPage({ params }: Props) {
           </div>
           <a
             href="#catering-form"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
           >
             {isNl ? 'Offerte Aanvragen' : 'Request a Catering Quote'}
           </a>
@@ -340,15 +358,15 @@ export default function LocaleCateringPage({ params }: Props) {
                   ? 'Privé evenementenruimte bij Chopras Indian Restaurant Den Haag'
                   : 'Private event hall at Chopras Indian Restaurant Den Haag'}
                 fill
-                className="object-cover"
+                className="object-cover brightness-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div>
-              <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
+              <p className="text-xs uppercase tracking-widest text-[#06068a] font-medium mb-4">
                 {isNl ? 'ONZE EVENEMENTENRUIMTE' : 'OUR EVENT HALL'}
               </p>
-              <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+              <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6">
                 {isNl ? 'Privé Evenementenruimte in Den Haag' : 'Private Event Hall in Den Haag'}
               </h2>
               <div className="space-y-4 text-[#1A1A1A] text-base leading-relaxed">
@@ -359,14 +377,14 @@ export default function LocaleCateringPage({ params }: Props) {
               <div className="flex gap-8 mt-8 mb-8">
                 {capacityStats.map(({ number, label }) => (
                   <div key={label} className="text-center">
-                    <p className="font-vibes text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">{number}</p>
+                    <p className="font-heading text-4xl text-[#06068a]">{number}</p>
                     <p className="text-[#1A1A1A]/60 text-sm mt-1">{label}</p>
                   </div>
                 ))}
               </div>
               <Link
                 href={`${base}/contact`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+                className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
               >
                 {tr.catering.bookHall}
               </Link>
@@ -378,14 +396,14 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* WHY CHOPRAS — dark navy */}
       <section
         className="py-20 md:py-28 px-6 md:px-16"
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
               {isNl ? 'WAAROM CHOPRAS' : 'WHY CHOOSE US'}
             </p>
-            <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">
+            <h2 className="font-heading text-4xl md:text-5xl text-white">
               {tr.catering.whyH2}
             </h2>
           </div>
@@ -396,7 +414,7 @@ export default function LocaleCateringPage({ params }: Props) {
                 className="bg-white/10 border border-white/20 rounded-3xl p-8"
               >
                 <Icon className="text-white w-8 h-8 mb-4" />
-                <h3 className="font-vibes text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">{title}</h3>
+                <h3 className="font-heading text-xl text-white mb-3">{title}</h3>
                 <p className="text-white/70 text-base leading-relaxed">{body}</p>
               </div>
             ))}
@@ -407,10 +425,10 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* WHAT IS INCLUDED — bg-[#F7F8FC] */}
       <section className="bg-[#F7F8FC] py-20 md:py-28 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
+          <p className="text-xs uppercase tracking-widest text-[#06068a] font-medium mb-4">
             {isNl ? 'WAT IS INBEGREPEN' : 'WHAT IS INCLUDED'}
           </p>
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.4]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.4]">
             {isNl
               ? 'Alles Geregeld in Één Boeking'
               : 'Everything Handled in One Booking'}
@@ -420,7 +438,7 @@ export default function LocaleCateringPage({ params }: Props) {
               <>
                 <p>
                   Chopras Indian Restaurant verzorgt catering in Den Haag en de omgeving: Rijswijk, Delft, Zoetermeer, Voorburg en Leidschendam. Of je het evenement nu organiseert in onze{' '}
-                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     privé evenementenruimte op Leyweg 986
                   </Link>{' '}
                   of op je eigen locatie, het eten arriveert warm, netjes gepresenteerd en op tijd.
@@ -430,11 +448,11 @@ export default function LocaleCateringPage({ params }: Props) {
                 </p>
                 <p>
                   Dezelfde{' '}
-                  <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     halal-certificering
                   </Link>{' '}
                   die ons restaurantmenu dekt, dekt elk cateringevenement. Elk vleesgerecht, elke leverancier, altijd. Bekijk ook onze{' '}
-                  <Link href={`${base}/indian-buffet-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/indian-buffet-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Indiase buffetopties
                   </Link>{' '}
                   voor grotere groepen.
@@ -444,7 +462,7 @@ export default function LocaleCateringPage({ params }: Props) {
               <>
                 <p>
                   Chopras Indian Restaurant caters across Den Haag and the surrounding area: Rijswijk, Delft, Zoetermeer, Voorburg, and Leidschendam. Whether you host the event in our{' '}
-                  <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     private hall at Leyweg 986
                   </Link>{' '}
                   or at your own venue, the food arrives hot, properly presented, and on time.
@@ -454,11 +472,11 @@ export default function LocaleCateringPage({ params }: Props) {
                 </p>
                 <p>
                   The same{' '}
-                  <Link href={`${base}/halal-menu`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     halal certification
                   </Link>{' '}
                   that covers our restaurant menu covers every catering event. Every meat dish, every supplier, every time. See our{' '}
-                  <Link href={`${base}/indian-buffet-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                  <Link href={`${base}/indian-buffet-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Indian buffet options
                   </Link>{' '}
                   for larger groups.
@@ -468,7 +486,7 @@ export default function LocaleCateringPage({ params }: Props) {
           </div>
           <a
             href="#catering-form"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
           >
             {isNl ? 'Offerte Aanvragen' : 'Request a Catering Quote'}
           </a>
@@ -478,34 +496,34 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* POPULAR DISHES — bg-white */}
       <section className="bg-white py-20 md:py-28 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-12 text-center">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-12 text-center">
             {isNl ? 'Populaire Gerechten voor Catering' : 'Popular Dishes for Catering'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <Link
               href={`${base}/butter-chicken-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Kip Curry' : 'Chicken Curry'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold">Butter chicken Den Haag</p>
+              <p className="text-[#06068a] font-semibold">Butter chicken Den Haag</p>
             </Link>
             <Link
               href={`${base}/mutton-rogan-josh-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Lams Curry' : 'Lamb Curry'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold">Mutton rogan josh Den Haag</p>
+              <p className="text-[#06068a] font-semibold">Mutton rogan josh Den Haag</p>
             </Link>
             <Link
               href={`${base}/biryani-den-haag`}
-              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-[#F7F8FC] rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
-              <p className="text-[#1B2B5E] font-semibold">
+              <p className="text-[#06068a] text-sm font-semibold uppercase tracking-widest mb-2">Biryani</p>
+              <p className="text-[#06068a] font-semibold">
                 {isNl ? 'Authentieke biryani Den Haag' : 'Authentic biryani Den Haag'}
               </p>
             </Link>
@@ -513,7 +531,7 @@ export default function LocaleCateringPage({ params }: Props) {
           <div className="text-center">
             <Link
               href={`${base}/menu`}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+              className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
             >
               {isNl ? 'Bekijk het Volledige Menu' : 'View the Full Menu'}
             </Link>
@@ -524,69 +542,69 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* CATERING OCCASIONS — bg-[#F7F8FC] */}
       <section className="bg-[#F7F8FC] py-20 md:py-28 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-12 text-center">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-12 text-center">
             {isNl ? 'Catering voor Elke Gelegenheid' : 'Catering Options for Every Occasion'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Link
               href={`${base}/indian-wedding-catering-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Bruiloften' : 'Weddings'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">
+              <p className="text-[#06068a] font-semibold text-lg">
                 {isNl ? 'Indiaas bruiloftscatering Den Haag' : 'Indian wedding catering Den Haag'}
               </p>
             </Link>
             <Link
               href={`${base}/indian-birthday-catering-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Verjaardagen' : 'Birthdays'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">
+              <p className="text-[#06068a] font-semibold text-lg">
                 {isNl ? 'Verjaardagscatering Den Haag' : 'Birthday catering Den Haag'}
               </p>
             </Link>
             <Link
               href={`${base}/corporate-events-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Zakelijk' : 'Corporate'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">
+              <p className="text-[#06068a] font-semibold text-lg">
                 {isNl ? 'Zakelijke catering Den Haag' : 'Corporate events catering Den Haag'}
               </p>
             </Link>
             <Link
               href={`${base}/diwali-dinner-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Vieringen' : 'Celebrations'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">
+              <p className="text-[#06068a] font-semibold text-lg">
                 {isNl ? 'Diwali diner catering Den Haag' : 'Diwali dinner catering Den Haag'}
               </p>
             </Link>
             <Link
               href={`${base}/bruiloft-catering-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">Bruiloft catering Den Haag</p>
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">Bruiloft</p>
+              <p className="text-[#06068a] font-semibold text-lg">Bruiloft catering Den Haag</p>
             </Link>
             <Link
               href={`${base}/zaal-huren-den-haag`}
-              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-white hover:shadow-lg transition-all"
+              className="block p-6 bg-white rounded-lg border border-gray-200 hover:border-[#06068a]/30 hover:shadow-lg transition-all"
             >
-              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-2">
+              <p className="text-[#06068a]/60 text-sm font-semibold uppercase tracking-widest mb-2">
                 {isNl ? 'Zaal Huren' : 'Venue'}
               </p>
-              <p className="text-[#1B2B5E] font-semibold text-lg">
+              <p className="text-[#06068a] font-semibold text-lg">
                 {isNl ? 'Zaal huren Den Haag' : 'Zaal huren Den Haag'}
               </p>
             </Link>
@@ -595,11 +613,11 @@ export default function LocaleCateringPage({ params }: Props) {
             {isNl ? (
               <p className="text-[#1A1A1A] text-base">
                 Wil je een feestzaal huren in Den Haag met catering inbegrepen?{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Bekijk onze feestzaal
                 </Link>{' '}
                 voor de perfecte setting, of bezoek{' '}
-                <Link href={base || '/'} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={base || '/'} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Chopras Indian Restaurant Den Haag
                 </Link>{' '}
                 om ons restaurant te zien.
@@ -607,11 +625,11 @@ export default function LocaleCateringPage({ params }: Props) {
             ) : (
               <p className="text-[#1A1A1A] text-base">
                 Do you want to hire a party venue in Den Haag with catering included?{' '}
-                <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   View our event space
                 </Link>{' '}
                 for the perfect setting, or visit{' '}
-                <Link href={base || '/'} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+                <Link href={base || '/'} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Chopras Indian Restaurant Den Haag
                 </Link>{' '}
                 to see our restaurant.
@@ -624,7 +642,7 @@ export default function LocaleCateringPage({ params }: Props) {
       {/* GEO BLOCK — bg-white */}
       <section className="bg-white py-20 md:py-28 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h2 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl
               ? 'Verzorgt Chopras Indian Restaurant Catering in Den Haag?'
               : 'Does Chopras Indian Restaurant Do Catering in Den Haag?'}
@@ -632,51 +650,50 @@ export default function LocaleCateringPage({ params }: Props) {
           {isNl ? (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
               Ja. Chopras Indian Restaurant verzorgt volledige Indiase catering in Den Haag en omgeving, waaronder Rijswijk, Delft, Zoetermeer, Voorburg en Leidschendam. Vanuit Leyweg 986, Den Haag, verzorgen wij{' '}
-              <Link href={`${base}/bruiloft-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">bruiloften</Link>
+              <Link href={`${base}/bruiloft-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">bruiloften</Link>
               , nikah-recepties,{' '}
-              <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">verjaardagsfeesten</Link>
+              <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">verjaardagsfeesten</Link>
               ,{' '}
-              <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">zakelijke diners</Link>{' '}
+              <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">zakelijke diners</Link>{' '}
               en{' '}
-              <Link href={`${base}/diwali-dinner-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali-vieringen</Link>
+              <Link href={`${base}/diwali-dinner-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali-vieringen</Link>
               . Alle gerechten worden vers bereid door hetzelfde keukenteam als het restaurant, met specerijen die dagelijks vers worden gemalen. Elk vleesgerecht is standaard{' '}
-              <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal gecertificeerd</Link>
+              <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal gecertificeerd</Link>
               . De eigen evenementenruimte biedt ruimte aan{' '}
-              <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">25 tot 80 gasten</Link>
+              <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">25 tot 80 gasten</Link>
               . Open dinsdag tot en met zondag, 16:30 tot 22:30.
             </p>
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-8">
               Yes. Chopras Indian Restaurant provides full Indian catering in Den Haag and surrounding areas, including Rijswijk, Delft, Zoetermeer, Voorburg, and Leidschendam. Based at Leyweg 986, Den Haag, Chopras caters{' '}
-              <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">weddings</Link>
+              <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">weddings</Link>
               , nikah receptions,{' '}
-              <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">birthday parties</Link>
+              <Link href={`${base}/indian-birthday-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">birthday parties</Link>
               ,{' '}
-              <Link href={`${base}/corporate-events-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">corporate dinners</Link>
+              <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">corporate dinners</Link>
               , and{' '}
-              <Link href={`${base}/diwali-dinner-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">Diwali celebrations</Link>
+              <Link href={`${base}/diwali-dinner-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali celebrations</Link>
               . All food is prepared fresh by the same kitchen team as the restaurant, using spices ground daily in-house. Every meat dish is{' '}
-              <Link href={`${base}/halal-food-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">halal certified</Link>{' '}
+              <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>{' '}
               as standard. The private event hall accommodates{' '}
-              <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">25 to 80 guests</Link>
+              <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">25 to 80 guests</Link>
               . Open Tuesday to Sunday, 16:30 to 22:30.
             </p>
           )}
           <a
             href="#catering-form"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+            className="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out active:scale-[0.98] min-h-[48px]"
           >
             {isNl ? 'Offerte Aanvragen' : 'Request a Catering Quote'}
           </a>
         </div>
       </section>
 
-      {/* FAQ — bg-[#F7F8FC] */}
-      <section className="bg-[#F7F8FC] py-20 md:py-28 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto">
+      {/* FAQ */}
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">FAQ</p>
-            <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]">
+            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-[#06068a] mb-6 leading-tight mt-2 text-center">
               {tr.catering.faqH2}
             </h2>
           </div>
@@ -688,19 +705,19 @@ export default function LocaleCateringPage({ params }: Props) {
       <section
         id="catering-form"
         className="py-20 md:py-28 px-6 md:px-16"
-        style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
       >
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-xs uppercase tracking-widest text-white font-medium mb-4">
             {isNl ? 'OFFERTE AANVRAGEN' : 'GET A QUOTE'}
           </p>
-          <h2 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-3">
+          <h2 className="font-heading text-4xl md:text-5xl text-white mb-3">
             {tr.catering.formH2}
           </h2>
           <p className="text-white/60 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             {tr.catering.formSub}
           </p>
-          <CateringForm />
+          <CateringForm locale={locale} />
         </div>
       </section>
     </>

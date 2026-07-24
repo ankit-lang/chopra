@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -169,7 +169,7 @@ export default function Header({ locale }: { locale: Locale }) {
       {/* ─── Fixed Header Bar ─── */}
       <header
         className={cn(
-          'fixed top-9 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-sm border-b border-white/[0.08] bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF]',
+          'fixed top-9 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-sm border-b border-white/[0.08] btn-gradient',
           scrolled ? 'h-14 shadow-lg shadow-black/20' : 'h-16'
         )}
       >
@@ -190,7 +190,7 @@ export default function Header({ locale }: { locale: Locale }) {
           {/* GROUP 2  -  Nav (lg+)
               Order: Home | Menu↓ | Feestzaal | Catering↓ | Our Dishes↓ | Near You↓ | Blog | Vacancy | Contact
           */}
-          <nav className="hidden lg:flex items-center gap-1 flex-shrink-0">
+          <nav className="hidden lg:flex items-center gap-0.5 flex-shrink-0">
 
             {/* 1. Home */}
             {[HOME_LINK].map(({ label, href }) => (
@@ -198,7 +198,7 @@ export default function Header({ locale }: { locale: Locale }) {
                 key={href}
                 href={href}
                 className={cn(
-                  'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                  'px-2 py-1.5 xl:px-3 xl:py-2 rounded-lg text-xs xl:text-sm font-medium transition-all duration-150 whitespace-nowrap',
                   pathname === href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
                 )}
               >
@@ -208,17 +208,18 @@ export default function Header({ locale }: { locale: Locale }) {
 
             {/* 2–5. Dropdowns: Menu, Feestzaal (plain), Catering, Our Dishes, Near You */}
             {DROPDOWNS.map(({ key, label, links }, idx) => {
+              const parentHref = links[0].href
               const isActive = links.some((l) => pathname.startsWith(l.href))
               const isOpen = openDropdown === key
               return (
-                <>
+                <React.Fragment key={key}>
                   {/* Insert Feestzaal between Menu (idx=0) and Catering (idx=1) */}
                   {idx === 1 && (
                     <Link
                       key="feestzaal"
                       href={FEESTZAAL_LINK.href}
                       className={cn(
-                        'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                        'px-2 py-1.5 xl:px-3 xl:py-2 rounded-lg text-xs xl:text-sm font-medium transition-all duration-150 whitespace-nowrap',
                         pathname === FEESTZAAL_LINK.href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
                       )}
                     >
@@ -226,21 +227,36 @@ export default function Header({ locale }: { locale: Locale }) {
                     </Link>
                   )}
                   <div
-                    key={key}
                     className="relative"
                     onMouseEnter={() => handleMouseEnter(key)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <button
-                      aria-expanded={isOpen}
-                      className={cn(
-                        'flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
-                        isActive ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
-                      )}
-                    >
-                      {label}
-                      <ChevronDown className={cn('w-3.5 h-3.5 text-white/50 transition-transform duration-200', isOpen && 'rotate-180')} />
-                    </button>
+                    {/* Split trigger: Link navigates to parent page, caret button toggles dropdown */}
+                    <div className={cn(
+                      'flex items-center rounded-lg transition-all duration-150',
+                      isActive ? 'bg-white/10' : 'hover:bg-white/[0.08]'
+                    )}>
+                      <Link
+                        href={parentHref}
+                        className={cn(
+                          'pl-2 pr-0.5 xl:pl-3 xl:pr-1 py-1.5 xl:py-2 text-xs xl:text-sm font-medium whitespace-nowrap transition-colors duration-150',
+                          isActive ? 'text-white' : 'text-white/80 hover:text-white'
+                        )}
+                      >
+                        {label}
+                      </Link>
+                      <button
+                        aria-expanded={isOpen}
+                        aria-label={`Toggle ${label} dropdown`}
+                        onClick={() => setOpenDropdown(isOpen ? null : key)}
+                        className={cn(
+                          'pr-1.5 pl-0.5 xl:pr-2 py-1.5 xl:py-2 transition-colors duration-150',
+                          isActive ? 'text-white/70' : 'text-white/50 hover:text-white/80'
+                        )}
+                      >
+                        <ChevronDown className={cn('w-3.5 h-3.5 transition-transform duration-200', isOpen && 'rotate-180')} />
+                      </button>
+                    </div>
                     <div
                       className={cn(
                         'absolute top-full left-0 mt-0 pt-2 min-w-[200px] z-50 transition-all duration-200',
@@ -248,7 +264,7 @@ export default function Header({ locale }: { locale: Locale }) {
                       )}
                     >
                       <div className="absolute -top-2 left-0 right-0 h-2 bg-transparent" />
-                      <div className="bg-[#1B2B5E] border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
+                      <div className="btn-gradient border border-white/10 rounded-2xl shadow-2xl shadow-black/30 py-2">
                         {links.map(({ label: ll, href: lh }) => (
                           <Link key={lh} href={lh} className="flex items-center px-4 py-2.5 mx-1 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/[0.08] transition-all duration-150 whitespace-nowrap">
                             {ll}
@@ -257,7 +273,7 @@ export default function Header({ locale }: { locale: Locale }) {
                       </div>
                     </div>
                   </div>
-                </>
+                </React.Fragment>
               )
             })}
 
@@ -267,7 +283,7 @@ export default function Header({ locale }: { locale: Locale }) {
                 key={href}
                 href={href}
                 className={cn(
-                  'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap',
+                  'px-2 py-1.5 xl:px-3 xl:py-2 rounded-lg text-xs xl:text-sm font-medium transition-all duration-150 whitespace-nowrap',
                   pathname === href ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/[0.08]'
                 )}
               >
@@ -286,9 +302,9 @@ export default function Header({ locale }: { locale: Locale }) {
             {/* Order Online  -  desktop */}
             <Link
               href={`${base}/menu`}
-              className="hidden lg:flex items-center gap-2 bg-white/10 border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-white/15 transition-all duration-200 whitespace-nowrap"
+              className="hidden xl:flex items-center gap-1.5 bg-white/10 border border-white/20 text-white px-3 py-1.5 rounded-xl text-xs xl:text-sm font-medium hover:bg-white/15 transition-all duration-200 whitespace-nowrap"
             >
-              <ShoppingBag className="w-4 h-4 text-white/70" />
+              <ShoppingBag className="w-3.5 h-3.5 text-white/70" />
               Order Online
             </Link>
 
@@ -296,11 +312,11 @@ export default function Header({ locale }: { locale: Locale }) {
             <button
               onClick={openCart}
               aria-label={`Open cart, ${totalItems} item${totalItems !== 1 ? 's' : ''}`}
-              className="relative p-2 cursor-pointer hidden lg:block"
+              className="relative p-1.5 cursor-pointer hidden lg:block"
             >
               <ShoppingCart className="w-5 h-5 text-white/70 hover:text-white transition-colors duration-150" />
               {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 btn-gradient text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>
               )}
@@ -309,7 +325,7 @@ export default function Header({ locale }: { locale: Locale }) {
             {/* Reserve a Table  -  desktop */}
             <Link
               href={`${base}/contact`}
-              className="hidden lg:inline-flex items-center bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:scale-[1.05] transition-all border border-gray  duration-200 whitespace-nowrap"
+              className="hidden lg:inline-flex items-center btn-gradient text-white px-3 py-1.5 xl:px-4 xl:py-2 rounded-xl text-xs xl:text-sm font-semibold hover:scale-[1.05] transition-all border border-gray duration-200 whitespace-nowrap"
             >
               {tr.common.reserve}
             </Link>
@@ -322,7 +338,7 @@ export default function Header({ locale }: { locale: Locale }) {
             >
               <ShoppingCart className="w-5 h-5 text-white/70" />
               {totalItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 btn-gradient text-white rounded-full text-[10px] font-bold flex items-center justify-center leading-none">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>
               )}
@@ -354,7 +370,7 @@ export default function Header({ locale }: { locale: Locale }) {
       {/* ─── Mobile: side panel ─── */}
       <div
         className={cn(
-          'fixed top-0 left-0 h-full w-80 max-w-[85vw] z-50 flex flex-col bg-[#1B2B5E] transition-transform duration-300 ease-in-out lg:hidden'
+          'fixed top-0 left-0 h-full w-80 max-w-[85vw] z-50 flex flex-col btn-gradient transition-transform duration-300 ease-in-out lg:hidden'
           , mobileOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
@@ -394,9 +410,17 @@ export default function Header({ locale }: { locale: Locale }) {
           </Link>
 
           {/* 2. Menu dropdown */}
-          {DROPDOWNS.filter(d => d.key === 'menu').map(({ key, label: groupLabel, links }) => (
+          {DROPDOWNS.filter(d => d.key === 'menu').map(({ key, label: groupLabel, links }) => {
+            const parentHref = links[0].href
+            return (
             <div key={key} className="mt-1">
-              <p className="px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium">{groupLabel}</p>
+              <Link
+                href={parentHref}
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium hover:text-white/70 transition-colors"
+              >
+                {groupLabel}
+              </Link>
               {links.map(({ label: ll, href: lh }) => (
                 <Link key={lh} href={lh} onClick={() => setMobileOpen(false)}
                   className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150">
@@ -404,7 +428,8 @@ export default function Header({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </div>
-          ))}
+          )})
+          }
 
           {/* 3. Feestzaal */}
           <Link
@@ -419,9 +444,17 @@ export default function Header({ locale }: { locale: Locale }) {
           </Link>
 
           {/* 4. Catering | 5. Our Dishes | 6. Near You (dropdowns) */}
-          {DROPDOWNS.filter(d => d.key !== 'menu').map(({ key, label: groupLabel, links }) => (
+          {DROPDOWNS.filter(d => d.key !== 'menu').map(({ key, label: groupLabel, links }) => {
+            const parentHref = links[0].href
+            return (
             <div key={key} className="mt-1">
-              <p className="px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium">{groupLabel}</p>
+              <Link
+                href={parentHref}
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 pt-5 pb-2 text-white text-xs uppercase tracking-widest font-medium hover:text-white/70 transition-colors"
+              >
+                {groupLabel}
+              </Link>
               {links.map(({ label: ll, href: lh }) => (
                 <Link key={lh} href={lh} onClick={() => setMobileOpen(false)}
                   className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] rounded-lg transition-all duration-150">
@@ -429,7 +462,8 @@ export default function Header({ locale }: { locale: Locale }) {
                 </Link>
               ))}
             </div>
-          ))}
+          )})
+          }
 
           {/* 7. Blog | 8. Vacancy | 9. Contact */}
           {[BLOG_LINK, VAC_LINK, CONT_LINK].map(({ label, href }) => (
@@ -459,7 +493,7 @@ export default function Header({ locale }: { locale: Locale }) {
           <Link
             href={`${base}/contact`}
             onClick={() => setMobileOpen(false)}
-            className="block w-full bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] text-white py-3 rounded-xl text-sm font-semibold text-center hover:scale-[1.05] transition-all duration-150"
+            className="block w-full btn-gradient text-white py-3 rounded-xl text-sm font-semibold text-center hover:scale-[1.05] transition-all duration-150"
           >
             {tr.common.reserve}
           </Link>

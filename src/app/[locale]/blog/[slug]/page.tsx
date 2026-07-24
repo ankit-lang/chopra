@@ -91,7 +91,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
       ])} />
 
       {/* Hero */}
-      <section className="bg-[#1B2B5E] py-20">
+      <section className="btn-gradient py-20">
         <div className="max-w-4xl mx-auto px-4">
           <nav className="text-white/50 text-sm mb-6" aria-label="Breadcrumb">
             <Link href={base} className="hover:text-white/80 transition-colors">{tr.common.nav.home}</Link>
@@ -102,7 +102,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
           </nav>
 
           {post.language === 'nl' && (
-            <span className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]">
+            <span className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]">
               {tr.blog.nlBadge}
             </span>
           )}
@@ -112,7 +112,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
               • BLOG · CHOPRAS INDIAN RESTAURANT · DEN HAAG •
             </span>
           </div>
-          <h1 className="font-heading text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] max-w-4xl leading-tight mb-4">
+          <h1 className="font-heading text-3xl md:text-5xl text-white max-w-4xl leading-tight mb-4" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.99), 0 6px 24px rgba(0,0,0,0.85)' }}>
             {post.h1}
           </h1>
 
@@ -134,10 +134,10 @@ export default function LocaleBlogPostPage({ params }: Props) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <article
               className="flex-1 prose prose-lg max-w-none
-                prose-headings:font-vibes prose-headings:text-white prose-headings:leading-[1.3]
+                prose-headings:font-heading prose-headings:text-[#06068a] prose-headings:leading-[1.3]
                 prose-p:text-[#1A1A1A]/70 prose-p:leading-relaxed
-                prose-a:text-white prose-a:hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] prose-a:no-underline prose-a:font-semibold
-                prose-strong:text-[#1A1A1A]
+                prose-a:text-[#06068a] prose-a:hover:text-[#0000B3] prose-a:no-underline prose-a:font-semibold
+                prose-strong:text-[#1A1A1A]/70 prose-strong:font-normal
                 prose-ul:text-gray-700
                 prose-img:block prose-img:md:float-right prose-img:md:ml-6 prose-img:mb-4 prose-img:w-full prose-img:md:w-auto
                 [&_img]:block [&_img]:md:float-right [&_img]:md:ml-6 [&_img]:mb-4
@@ -149,11 +149,11 @@ export default function LocaleBlogPostPage({ params }: Props) {
             />
 
             <aside className="hidden lg:block w-full lg:w-80">
-              <div className="sticky top-24 bg-[#1B2B5E] rounded-2xl p-6 text-white overflow-visible">
-                <p className="font-vibes text-xl mb-4 leading-snug">{tr.blog.enjoySidebar}</p>
-                <p className="text-white/70 text-sm mb-1">Leyweg 986</p>
-                <p className="text-white/70 text-sm mb-1">2545 GW Den Haag</p>
-                <p className="text-white/70 text-sm mb-6">+31 6 30645930</p>
+              <div className="sticky top-24 bg-[#06068a] rounded-2xl p-6 text-white overflow-visible">
+                <p className="font-heading text-xl mb-4 leading-snug text-white">{tr.blog.enjoySidebar}</p>
+                <p className="text-white text-sm mb-1">Leyweg 986</p>
+                <p className="text-white text-sm mb-1">2545 GW Den Haag</p>
+                <p className="text-white text-sm mb-6">+31 6 30645930</p>
                 <Link
                   href={`${base}/contact`}
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] w-full backdrop-blur-[10px] mb-3"
@@ -162,9 +162,9 @@ export default function LocaleBlogPostPage({ params }: Props) {
                 </Link>
                 <Link
                   href={`${base}/menu`}
-                  className="block text-center text-white/70 text-sm hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-white/10 px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-[rgba(199,163,72,0.3)] active:scale-[0.98] min-h-[48px] w-full backdrop-blur-[10px]"
                 >
-                  {tr.common.viewMenu} →
+                  {tr.common.viewMenu}
                 </Link>
               </div>
             </aside>
@@ -174,20 +174,20 @@ export default function LocaleBlogPostPage({ params }: Props) {
 
       {/* Related Articles */}
       {relatedPosts.length > 0 && (
-        <section className="bg-[#F7F8FC] py-16">
+        <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="font-vibes text-3xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-8">{tr.blog.relatedH2}</h2>
+            <h2 className="font-heading text-3xl text-[#06068a] mb-8">{tr.blog.relatedH2}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {relatedPosts.map((related) => (
                 <Link
                   key={related.slug}
                   href={`${base}/blog/${related.slug}`}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow block"
+                  className="bg-[#F7F8FC] rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow block"
                 >
                   <p className="text-gray-400 text-xs mb-2">{formatDate(related.publishedAt, locale)}</p>
-                  <h3 className="font-vibes text-lg text-[#1A1A1A] leading-tight mb-2">{related.title}</h3>
+                  <h3 className="font-heading text-lg text-[#1A1A1A] leading-tight mb-2">{related.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{related.excerpt}</p>
-                  <span className="inline-block mt-3 text-[#1B2B5E] font-semibold text-sm">
+                  <span className="inline-block mt-3 text-[#06068a] font-semibold text-sm">
                     {tr.blog.readArticle}
                   </span>
                 </Link>
@@ -202,12 +202,12 @@ export default function LocaleBlogPostPage({ params }: Props) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-8 text-center space-y-4">
             <p className="text-[#1A1A1A] text-base">
-              <Link href={`${base}/`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 {locale === 'nl' ? 'Chopras Indiaas Restaurant - beste Indiaas restaurant in Den Haag' : 'Chopras Indian Restaurant - best Indian restaurant in Den Haag'}
               </Link>
             </p>
             <p className="text-[#1A1A1A] text-base">
-              {locale === 'nl' ? 'Voor catering en evenementen, zie ons' : 'For catering and events, see our'} <Link href={`${base}/catering`} className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold">{locale === 'nl' ? 'cateringmogelijkheden' : 'catering options'}</Link>.
+              {locale === 'nl' ? 'Voor catering en evenementen, zie ons' : 'For catering and events, see our'} <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">{locale === 'nl' ? 'cateringmogelijkheden' : 'catering options'}</Link>.
             </p>
           </div>
         </div>

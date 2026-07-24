@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
       {/* HERO */}
       <section className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="font-vibes text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6 leading-[1.3]">
+          <h1 className="font-heading text-4xl md:text-5xl text-[#06068a] mb-6 leading-[1.3]">
             {isNl ? 'Privacybeleid' : 'Privacy Policy'}
           </h1>
           <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 1: What Data We Collect */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '1. Welke Gegevens Verzamelen Wij?' : '1. What Data Do We Collect?'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 2: Why We Collect Your Data */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '2. Waarom Verzamelen Wij Uw Gegevens?' : '2. Why Do We Collect Your Data?'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 3: How Long We Store Your Data */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '3. Hoe Lang Slaan Wij Uw Gegevens Op?' : '3. How Long Do We Store Your Data?'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -179,7 +179,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 4: Your Rights */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '4. Uw Rechten onder de AVG' : '4. Your Rights Under GDPR'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -193,7 +193,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
                     <li><strong>Recht op beperking:</strong> U kunt verzoeken de verwerking van uw gegevens te beperken.</li>
                     <li><strong>Recht op gegevensportabiliteit:</strong> U kunt uw gegevens ontvangen in een gestructureerd, veelgebruikt formaat.</li>
                   </ul>
-                  <p className="mt-4">Neem contact op met <strong><EmailLink className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold" /></strong> om een van deze rechten uit te oefenen.</p>
+                  <p className="mt-4">Neem contact op met <strong><EmailLink className="text-[#06068a] hover:text-[#0000B3] font-semibold" /></strong> om een van deze rechten uit te oefenen.</p>
                 </>
               ) : (
                 <>
@@ -205,7 +205,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
                     <li><strong>Right to restrict processing:</strong> You can request processing of your data to be limited.</li>
                     <li><strong>Right to data portability:</strong> You can receive your data in a structured, commonly used format.</li>
                   </ul>
-                  <p className="mt-4">Contact <strong><EmailLink className="text-white hover:text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] font-semibold" /></strong> to exercise any of these rights.</p>
+                  <p className="mt-4">Contact <strong><EmailLink className="text-[#06068a] hover:text-[#0000B3] font-semibold" /></strong> to exercise any of these rights.</p>
                 </>
               )}
             </div>
@@ -213,7 +213,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 5: Data Security */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '5. Veiligheid van Uw Gegevens' : '5. Security of Your Data'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -227,7 +227,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 6: Cookies */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '6. Cookies' : '6. Cookies'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -241,7 +241,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 7: Third Parties */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '7. Derden' : '7. Third Parties'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -255,7 +255,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 8: Changes to This Policy */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '8. Wijzigingen van Dit Beleid' : '8. Changes to This Policy'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -269,7 +269,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
 
           {/* SECTION 9: Contact */}
           <div>
-            <h2 className="font-vibes text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-6">
               {isNl ? '9. Contact' : '9. Contact'}
             </h2>
             <div className="space-y-4 text-[#1A1A1A] leading-relaxed">
@@ -279,10 +279,10 @@ export default function PrivacyPolicyPage({ params }: Props) {
                   <div className="space-y-2 mt-4">
                     <p><strong>Chopras Indian Restaurant</strong></p>
                     <p>Leyweg 986<br />2545 GW Den Haag<br />Netherlands</p>
-                    <p>E-mail: <EmailLink className="text-white hover:underline font-semibold" /></p>
-                    <p>Telefoon: <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-white hover:underline font-semibold">{RESTAURANT.contact.phoneDisplay}</Link></p>
+                    <p>E-mail: <EmailLink className="text-[#06068a] hover:underline font-semibold" /></p>
+                    <p>Telefoon: <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-[#06068a] hover:underline font-semibold">{RESTAURANT.contact.phoneDisplay}</Link></p>
                   </div>
-                  <p className="mt-6">U kunt ook een klacht indienen bij de <Link href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-white hover:underline font-semibold">Autoriteit Persoonsgegevens (AP)</Link>, de Nederlandse toezichthouder voor gegevensbescherming.</p>
+                  <p className="mt-6">U kunt ook een klacht indienen bij de <Link href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-[#06068a] hover:underline font-semibold">Autoriteit Persoonsgegevens (AP)</Link>, de Nederlandse toezichthouder voor gegevensbescherming.</p>
                 </>
               ) : (
                 <>
@@ -290,10 +290,10 @@ export default function PrivacyPolicyPage({ params }: Props) {
                   <div className="space-y-2 mt-4">
                     <p><strong>Chopras Indian Restaurant</strong></p>
                     <p>Leyweg 986<br />2545 GW Den Haag<br />Netherlands</p>
-                    <p>Email: <EmailLink className="text-white hover:underline font-semibold" /></p>
-                    <p>Phone: <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-white hover:underline font-semibold">{RESTAURANT.contact.phoneDisplay}</Link></p>
+                    <p>Email: <EmailLink className="text-[#06068a] hover:underline font-semibold" /></p>
+                    <p>Phone: <Link href={`tel:${RESTAURANT.contact.phone}`} className="text-[#06068a] hover:underline font-semibold">{RESTAURANT.contact.phoneDisplay}</Link></p>
                   </div>
-                  <p className="mt-6">You can also file a complaint with the <Link href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-white hover:underline font-semibold">Autoriteit Persoonsgegevens (AP)</Link>, the Dutch data protection authority.</p>
+                  <p className="mt-6">You can also file a complaint with the <Link href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-[#06068a] hover:underline font-semibold">Autoriteit Persoonsgegevens (AP)</Link>, the Dutch data protection authority.</p>
                 </>
               )}
             </div>
@@ -312,7 +312,7 @@ export default function PrivacyPolicyPage({ params }: Props) {
           </p>
           <Link
             href={`${base}/contact`}
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-[rgba(199,163,72,0.1)] px-6 py-3 text-white text-sm font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] hover:text-white active:scale-[0.98] min-h-[48px]"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white text-sm font-semibold uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
           >
             {isNl ? 'Contact' : 'Contact'}
           </Link>

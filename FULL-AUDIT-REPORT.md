@@ -230,7 +230,7 @@ Brick-and-mortar restaurant. North Indian / Halal cuisine. Den Haag, Netherlands
 
 **C-S2: `generated-schema.json` contains multiple errors**
 - File: `generated-schema.json` (project root)
-- Contains broken `/en/` URLs, wrong geo coordinates (52.0583/4.2932 vs constants' 52.04874/4.27684), wrong rating (4.7/83 instead of 4.9/800), and "Founder and Head Chef" (CLAUDE.md explicitly forbids this title for Arun Chopra). Delete this file or correct every error.
+- Contains broken `/en/` URLs, wrong geo coordinates (52.0583/4.2932 vs constants' 52.04874/4.27684), wrong rating (4.7/83 instead of 4.9/1100), and "Founder and Head Chef" (CLAUDE.md explicitly forbids this title for Arun Chopra). Delete this file or correct every error.
 
 ### High
 
@@ -271,7 +271,7 @@ Brick-and-mortar restaurant. North Indian / Halal cuisine. Den Haag, Netherlands
 - `getBlogPostingSchema()`: `datePublished` and `dateModified` present — correct
 - All non-blog schemas: zero date fields — correct
 - LocalBusiness address, phone, hours, geo: all match `constants.ts`
-- `aggregateRating.reviewCount: '800'` with visible copy "800+": defensible and consistent
+- `aggregateRating.reviewCount: '1100'` with visible copy "1100+": defensible and consistent
 - Founder schema: `jobTitle: 'Founder'` — correct per CLAUDE.md (not "Head Chef")
 - `sameAs` arrays: TripAdvisor, Google Maps, Facebook, Instagram, YouTube — all present
 
@@ -363,8 +363,8 @@ Use `butter-chicken-den-haag/page.tsx` as the template — it is the best-execut
 
 - NAP fully consistent: Leyweg 986, 2545 GW Den Haag, +31 6 30645930, "Chopras Indian Restaurant" — match across constants.ts, schema.ts, faq-data.ts, footer, API email templates
 - Location pages (Delft, Rijswijk, Zoetermeer): strong unique content, low doorway risk
-- Rating display: "800+" consistently used across all pages — correct per CLAUDE.md
-- Schema aggregateRating: 4.9 / 800 — correct
+- Rating display: "1100+" consistently used across all pages — correct per CLAUDE.md
+- Schema aggregateRating: 4.9 / 1100 — correct
 - Google Place ID present in constants.ts
 
 ---

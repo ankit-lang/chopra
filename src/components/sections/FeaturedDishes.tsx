@@ -52,8 +52,8 @@ export default function FeaturedDishes({ locale = 'en' }: { locale?: Locale }) {
 
   return (
     <section
-      // style={{ background: 'linear-gradient(135deg, #000066 0%, #0000B3 100%)' }}
-      className="py-28 md:py-36 px-5 bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] md:px-12 overflow-hidden"
+      // style={{ background: 'linear-gradient(135deg, #06068a 0%, #0000B3 100%)' }}
+      className="py-28 md:py-36 px-5 btn-gradient md:px-12 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -98,8 +98,8 @@ export default function FeaturedDishes({ locale = 'en' }: { locale?: Locale }) {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] whitespace-nowrap cursor-pointer ${activeCategory === cat
-                    ? 'bg-white text-transparent bg-clip-text bg-gradient-to-b from-[#000066] via-[#0000B3] to-[#0000FF] shadow-[inset_0_1px_1px_rgba(0,0,0,0.1)]'
-                    : 'text-white/60 hover:text-white'
+                  ? 'bg-white text-transparent bg-clip-text btn-gradient shadow-[inset_0_1px_1px_rgba(0,0,0,0.1)]'
+                  : 'text-white/60 hover:text-white'
                   }`}
               >
                 {cat}
@@ -133,7 +133,7 @@ export default function FeaturedDishes({ locale = 'en' }: { locale?: Locale }) {
                 </div>
                 <div className="px-3 py-3">
                   <h3 className="text-white font-medium text-sm leading-tight font-body">{dish.name}</h3>
-                  <p className="text-white/70 text-sm font-semibold mt-1 font-body">{dish.price}</p>
+                  {/* <p className="text-[#D4AF37] text-sm font-semibold mt-1 font-body">{dish.price}</p> */}
                 </div>
               </div>
             </div>

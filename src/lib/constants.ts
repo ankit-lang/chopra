@@ -37,7 +37,7 @@ export const RESTAURANT = {
     ubereats: 'https://www.ubereats.com/nl/store/chopras-indian-restaurant/kFKhBtR-W3OkJyl2f6QmUg',
   },
   googlePlaceId: 'ChIJDUXdqSuxxUcRa6FxjpzGMvk',
-  googleMapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJDUXdqSuxxUcRa6FxjpzGMvk',
+  googleMapsUrl: 'https://www.google.com/maps/place/Chopras+Indian+Restaurant+Den+Haag/@52.0487367,4.276851,17z/data=!4m8!3m7!1s0x47c5b12ba9dd450d:0xf932c69c8e71a16b!8m2!3d52.0487367!4d4.2768403!9m1!1b1!16s%2Fg%2F11vj6zjsgq?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D',
   reviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJDUXdqSuxxUcRa6FxjpzGMvk',
   logo: 'https://chopras.nl/logo.png',
   cuisines: ['North Indian', 'Indo-Chinese', 'Indian Street Food'],
