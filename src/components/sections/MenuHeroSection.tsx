@@ -18,7 +18,7 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
         playsInline
         preload="metadata"
       >
-        <source src="/gal/menumob.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923037/menumob_ngkax0.mp4" type="video/mp4" />
       </video>
 
       {/* Desktop background video */}
@@ -30,7 +30,7 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
         playsInline
         preload="metadata"
       >
-        <source src="/gal/menudesktop.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923097/menudesktop_wp5olf.mp4" type="video/mp4" />
       </video>
 
       {/* Hero content */}

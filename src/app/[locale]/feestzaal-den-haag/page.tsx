@@ -320,31 +320,31 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
 
   const steps = isNl
     ? [
-        { n: 1, title: "Neem Contact Op", desc: "Bel +31 6 30645930 of gebruik het formulier hieronder. Geef uw datum en aantal gasten door." },
-        { n: 2, title: "Ontvang Een Offerte", desc: "Wij controleren de beschikbaarheid, bespreken menuopties en sturen een vrijblijvende offerte." },
-        { n: 3, title: "Stel Uw Menu Samen", desc: "Kies uit het volledige Chopras menu — buffet of uitgeserveerd. 100% halal gecertificeerd." },
-        { n: 4, title: "Vier Het Op Uw Manier", desc: "In onze feestzaal met een vers bereid op maat gemaakt buffet." }
-      ]
+      { n: 1, title: "Neem Contact Op", desc: "Bel +31 6 30645930 of gebruik het formulier hieronder. Geef uw datum en aantal gasten door." },
+      { n: 2, title: "Ontvang Een Offerte", desc: "Wij controleren de beschikbaarheid, bespreken menuopties en sturen een vrijblijvende offerte." },
+      { n: 3, title: "Stel Uw Menu Samen", desc: "Kies uit het volledige Chopras menu — buffet of uitgeserveerd. 100% halal gecertificeerd." },
+      { n: 4, title: "Vier Het Op Uw Manier", desc: "In onze feestzaal met een vers bereid op maat gemaakt buffet." }
+    ]
     : [
-        { n: 1, title: "Get in Touch", desc: "Call +31 6 30645930 or use the form below. Tell us your date and guest count." },
-        { n: 2, title: "Get A Quote", desc: "We check availability, discuss menu options, and send a no-obligation quote." },
-        { n: 3, title: "Build Menu", desc: "Choose from the full Chopras menu — buffet or plated. 100% halal certified." },
-        { n: 4, title: "Celebrate Your Way", desc: "At our Party Hall with freshly prepared customised buffet." }
-      ];
+      { n: 1, title: "Get in Touch", desc: "Call +31 6 30645930 or use the form below. Tell us your date and guest count." },
+      { n: 2, title: "Get A Quote", desc: "We check availability, discuss menu options, and send a no-obligation quote." },
+      { n: 3, title: "Build Menu", desc: "Choose from the full Chopras menu — buffet or plated. 100% halal certified." },
+      { n: 4, title: "Celebrate Your Way", desc: "At our Party Hall with freshly prepared customised buffet." }
+    ];
 
   const valueProps = isNl
     ? [
-        { title: "Restaurantkwaliteit", icon: "🍽️", desc: "Vers gemalen specerijen. Zelfde chefs als ons 4.9-sterren restaurant." },
-        { title: "Eén Boeking", icon: "📋", desc: "Zaal & catering in één contract. Geen dubbele logistiek." },
-        { title: "Halal Gecertificeerd", icon: "☪️", desc: "Elk gerecht en leverancier is 100% halal gecertificeerd." },
-        { title: "25–80 Gasten", icon: "👥", desc: "Past zich aan uw groepsgrootte aan zonder vaste pakketverplichtingen." }
-      ]
+      { title: "Restaurantkwaliteit", icon: "🍽️", desc: "Vers gemalen specerijen. Zelfde chefs als ons 4.9-sterren restaurant." },
+      { title: "Eén Boeking", icon: "📋", desc: "Zaal & catering in één contract. Geen dubbele logistiek." },
+      { title: "Halal Gecertificeerd", icon: "☪️", desc: "Elk gerecht en leverancier is 100% halal gecertificeerd." },
+      { title: "25–80 Gasten", icon: "👥", desc: "Past zich aan uw groepsgrootte aan zonder vaste pakketverplichtingen." }
+    ]
     : [
-        { title: "Restaurant Quality", icon: "🍽️", desc: "Freshly ground spices. Same chefs as our 4.9-star restaurant." },
-        { title: "One Booking", icon: "📋", desc: "Venue & catering in a single contract. No double logistics." },
-        { title: "Halal Certified", icon: "☪️", desc: "Every dish and supplier is 100% halal certified." },
-        { title: "25–80 Guests", icon: "👥", desc: "Adapts to your group size with no fixed minimum packages." }
-      ];
+      { title: "Restaurant Quality", icon: "🍽️", desc: "Freshly ground spices. Same chefs as our 4.9-star restaurant." },
+      { title: "One Booking", icon: "📋", desc: "Venue & catering in a single contract. No double logistics." },
+      { title: "Halal Certified", icon: "☪️", desc: "Every dish and supplier is 100% halal certified." },
+      { title: "25–80 Guests", icon: "👥", desc: "Adapts to your group size with no fixed minimum packages." }
+    ];
 
   return (
     <main className="bg-white min-h-screen text-[#1A1A1A] overflow-hidden font-body">
@@ -359,7 +359,7 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
           playsInline
           className="md:hidden absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
         >
-          <source src="/vacancy/feez2.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923262/feez2_x36civ.mp4" type="video/mp4" />
         </video>
 
         {/* Desktop Video */}
@@ -370,7 +370,7 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
           playsInline
           className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
         >
-          <source src="/feeztal/feeez.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923305/feeez_bglfdd.mp4" type="video/mp4" />
         </video>
 
         {/* Bright overlay */}

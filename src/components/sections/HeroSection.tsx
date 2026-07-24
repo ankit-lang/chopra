@@ -208,7 +208,7 @@ function HeroVideoBackground() {
         playsInline
         className="md:hidden absolute inset-0 w-full h-full object-cover brightness-110"
       >
-        <source src="/herobanner/bannermob.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922584/bannermob_edyapk.mp4" type="video/mp4" />
       </video>
 
       {/* Desktop Video */}
@@ -219,7 +219,7 @@ function HeroVideoBackground() {
         playsInline
         className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
       >
-        <source src="/herobanner/homevideo.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922887/homevideo_znd8qq.mp4" type="video/mp4" />
       </video>
     </div>
   )

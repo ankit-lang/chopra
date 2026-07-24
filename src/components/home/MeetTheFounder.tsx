@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useInView } from '@/hooks/useInView'
+import type { Locale } from '@/lib/useTranslations'
 
 export default function MeetTheFounder({ locale = 'en' }: { locale?: Locale }) {
   const { ref: headingRef, inView: headingInView } = useInView()
