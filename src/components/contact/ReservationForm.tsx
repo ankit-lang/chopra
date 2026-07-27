@@ -98,7 +98,26 @@ export default function ReservationForm() {
         const whatsappResponse = await fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fullName, email, phone, date, time, persons, foundVia, dob, notes }),
+          body: JSON.stringify({
+            name: fullName,
+            fullName: fullName,
+            email: email,
+            phone: phone,
+            serviceType: 'Table Reservation',
+            eventType: 'Table Reservation',
+            formType: 'Table Reservation Form',
+            eventDate: date,
+            date: date,
+            eventTime: time,
+            time: time,
+            numGuests: persons,
+            guests: persons,
+            persons: persons,
+            foundVia: foundVia || 'Direct',
+            additionalNotes: `Date of Birth: ${dob || 'Not Provided'} | Special Requests: ${notes || 'None'}`,
+            notes: notes || 'None',
+            message: `Date: ${date} | Time: ${time} | Persons: ${persons} | DOB: ${dob || 'Not Provided'} | Found via: ${foundVia || 'Direct'} | Special Requests: ${notes || 'None'}`
+          }),
         })
 
         if (whatsappResponse.ok) {

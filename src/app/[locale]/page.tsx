@@ -59,9 +59,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     en: 'Best Indian restaurant Den Haag and The Hague. Chopras Indian Restaurant. 4.9 stars, 1100+ reviews. Halal certified, vegetarian options. Book a table.',
     nl: 'Beste Indiaas restaurant Den Haag bij Chopras Indian Restaurant. 4,9 sterren, 1100+ reviews. Halal gecertificeerd. Reserveer een tafel vandaag.',
   }
+  const keywords = [
+    'best indian restaurant in den haag',
+    'Indian restaurant in the hague',
+    'best indian food den haag',
+    'Chicken biryani Den Haag',
+    'best butter chicken the huge',
+    'best butter chicken the hague',
+    'Vegetarian Indian food Den Haag'
+  ]
   return {
     title: titles[locale],
     description: descriptions[locale],
+    keywords,
     alternates: {
       canonical: getLocalizedUrl(locale),
       languages: {
