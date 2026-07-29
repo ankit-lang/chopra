@@ -207,11 +207,13 @@ export default function VeganMenuPage({ params }: Props) {
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {(isNl ? [
+              { title: 'Starters & Chaat', items: 'Dahi puri, mixed chaat, pani puri, aloo tikki, onion bhaji, papad' },
               { title: 'Dal en Peulvruchten', items: 'Dal makhani, dal tadka, chana masala, rajma, toor dal' },
               { title: "Groentecurry's", items: 'Aloo gobi, baingan bharta, okra fry, bloemkool tikka, gemengde groentenkerrie' },
               { title: 'Biryani en Rijst', items: 'Vegetable biryani, mushroom biryani, jeera rijst, gele rijst' },
               { title: 'Brood en Bijgerechten', items: 'Veganistische naan, knoflooknaan, roti, papadum, plantaardige raita' },
             ] : [
+              { title: 'Starters & Chaat', items: 'Dahi puri, mixed chaat, pani puri, aloo tikki, onion bhaji, papad' },
               { title: 'Lentils and Pulses', items: 'Dal makhani, dal tadka, chana masala, rajma, toor dal' },
               { title: 'Vegetable Curries', items: 'Aloo gobi, baingan bharta, okra fry, cauliflower tikka, mixed vegetable curry' },
               { title: 'Biryani and Rice', items: 'Vegetable biryani, mushroom biryani, jeera rice, yellow rice' },
