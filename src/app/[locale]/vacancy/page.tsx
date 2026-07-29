@@ -439,6 +439,10 @@ export default function VacancyPage({ params }: { params: { locale: string } }) 
                     <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
                   </div>
                   <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "E-mailadres" : "Email Address"}</label>
+                    <input type="email" name="email" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. priya@example.com" />
+                  </div>
+                  <div className="sm:col-span-2">
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
                     <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO Hospitality, Bachelor's degree" />
                   </div>
@@ -562,6 +566,10 @@ export default function VacancyPage({ params }: { params: { locale: string } }) 
                   <div>
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
                     <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "E-mailadres" : "Email Address"}</label>
+                    <input type="email" name="email" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. raj@example.com" />
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
@@ -691,6 +699,10 @@ export default function VacancyPage({ params }: { params: { locale: string } }) 
                   <div>
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
                     <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "E-mailadres" : "Email Address"}</label>
+                    <input type="email" name="email" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. arjun@example.com" />
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
@@ -858,6 +870,10 @@ export default function VacancyPage({ params }: { params: { locale: string } }) 
                     <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
                   </div>
                   <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "E-mailadres" : "Email Address"}</label>
+                    <input type="email" name="email" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. liam@example.com" />
+                  </div>
+                  <div className="sm:col-span-2">
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
                     <input type="text" name="education" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. MBO Level 3 Kok" />
                   </div>
@@ -986,6 +1002,10 @@ export default function VacancyPage({ params }: { params: { locale: string } }) 
                   <div>
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Telefoonnummer *" : "Phone Number *"}</label>
                     <input type="tel" name="phone" required className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="+31 6 12345678" />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "E-mailadres" : "Email Address"}</label>
+                    <input type="email" name="email" className="form-input w-full rounded-xl border border-[#06068a]/20 px-4 py-2.5 text-sm bg-[#F7F8FC]" placeholder="e.g. maria@example.com" />
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-medium text-[#1A1A1A]/60 mb-1">{isNl ? "Opleiding" : "Education Qualification"}</label>
