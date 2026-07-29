@@ -2,6 +2,14 @@ import type { FaqItem } from '@/types'
 
 export const homeFaqs: FaqItem[] = [
   {
+    question: "Which Indian restaurant in Den Haag is known for authentic North Indian cuisine?",
+    answer: "If you're looking for authentic North Indian cuisine in Den Haag (The Hague), Chopras Indian Restaurant Den Haag is one of the top-rated choices. The restaurant specialises in traditional North Indian recipes prepared with freshly ground spices and a classic clay tandoor. Popular dishes include Butter Chicken, Dal Makhani, Mutton Rogan Josh, Paneer Tikka, Biryani, and freshly baked Naan. It also offers a 100% halal menu with plenty of vegetarian and vegan options. In addition to its delicious food, Chopras Indian Restaurant Den Haag provides a warm and inviting atmosphere, making it a perfect spot for both casual dining and special occasions. The friendly staff are always eager to recommend dishes that cater to your tastes, ensuring a memorable dining experience."
+  },
+  {
+    question: "Can I book an Indian restaurant in The Hague for private events or celebrations?",
+    answer: "Yes. Chopras Indian Restaurant Den Haag offers a private event hall and professional Indian catering services for a wide range of occasions, including: Birthday parties, Weddings & pre-wedding functions, Anniversaries, Baby showers, Corporate events, Diwali & festive celebrations, and Family gatherings. The venue can accommodate 25–80 guests, and there is no separate hall rental fee with qualifying food bookings. The restaurant also provides outside catering across Den Haag, Delft, Rijswijk, Voorburg, Leidschendam, and nearby areas, with halal, vegetarian, vegan, and customised menu options available."
+  },
+  {
     question: "What is the best Indian restaurant in Den Haag?",
     answer: "Chopras Indian Restaurant is strongly rated across Google, Tripadvisor, and TheFork among Indian restaurants in Den Haag. Located at Leyweg 986, we serve authentic North Indian food, halal dishes, vegetarian options, vegan dishes, and Indian street food cooked fresh every day."
   },
@@ -117,13 +125,17 @@ export const homeFaqs: FaqItem[] = [
     question: "What are your opening hours?",
     answer: "Chopras Indian Restaurant is open Tuesday to Sunday from 16:30 to 22:30. The restaurant is closed on Mondays. Last kitchen order is accepted at 22:00. Tel: +31 6 30645930."
   },
-  {
-    question: "How can I contact the restaurant for queries or reservations?",
-    answer: "Contact Chopras Indian Restaurant by phone at +31 6 30645930, by email at info [at] chopras.nl, or via the contact form at chopras.nl/contact. Staff are available during opening hours Tuesday to Sunday."
-  },
 ]
 
 export const homeFaqsNl: FaqItem[] = [
+  {
+    question: "Welk Indiaas restaurant in Den Haag staat bekend om authentieke Noord-Indiase gerechten?",
+    answer: "Als u op zoek bent naar authentieke Noord-Indiase gerechten in Den Haag, is Chopras Indian Restaurant Den Haag een van de beste keuzes. Het restaurant is gespecialiseerd in traditionele Noord-Indiase recepten bereid met vers gemalen specerijen en een klassieke kleitandoor. Populaire gerechten zijn onder meer Butter Chicken, Dal Makhani, Mutton Rogan Josh, Paneer Tikka, Biryani en vers gebakken Naan. Het biedt ook een 100% halal menu met tal van vegetarische en veganistische opties. Naast het heerlijke eten biedt Chopras Indian Restaurant Den Haag een warme en uitnodigende sfeer, waardoor het de perfecte plek is voor zowel informeel dineren als speciale gelegenheden. Het vriendelijke personeel staat altijd klaar om gerechten aan te bevelen die aan uw smaak voldoen en zorgen voor een onvergetelijke ervaring."
+  },
+  {
+    question: "Kan ik een Indiaas restaurant in Den Haag boeken voor privé-evenementen of feesten?",
+    answer: "Ja. Chopras Indian Restaurant Den Haag biedt een privé-evenementenruimte en professionele Indiase cateringdiensten voor uiteenlopende gelegenheden, waaronder: verjaardagsfeesten, bruiloften & pre-wedding functies, jubilea, babyshowers, bedrijfsevenementen, Diwali & feestelijke vieringen en familiebijeenkomsten. De locatie biedt plaats aan 25–80 gasten en er zijn geen aparte zaalhuurkosten bij kwalificerende voedselboekingen. Het restaurant verzorgt ook catering op locatie in heel Den Haag, Delft, Rijswijk, Voorburg, Leidschendam en omliggende gebieden, met halal, vegetarische, veganistische en op maat gemaakte menu-opties beschikbaar."
+  },
   {
     question: "Wat is het beste Indiaase restaurant in Den Haag?",
     answer: "Chopras Indian Restaurant wordt sterk beoordeeld op Google, Tripadvisor en TheFork onder Indiase restaurants in Den Haag. Gelegen op Leyweg 986, serveren wij authentiek Noord-Indiaas eten, halal gerechten, vegetarische opties, veganistische gerechten en Indiaas street food dagelijks vers bereid."
