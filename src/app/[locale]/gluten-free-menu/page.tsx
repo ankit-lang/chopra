@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 const faqsEn: Array<{ question: string; answer: string }> = [
       {
             question: 'What gluten free dishes does Chopras Indian Restaurant serve in Den Haag?',
-            answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag, serves a full gluten-free menu including aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, veg manchow soup, rice dishes, biryani, and chicken fried rice. All dishes are naturally gluten-free and prepared without any gluten-containing ingredients.',
+            answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag, serves a full gluten-free menu including lamb curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, veg manchow soup, rice dishes, biryani, and chicken fried rice. All dishes are naturally gluten-free and prepared without any gluten-containing ingredients.',
       },
       {
             question: 'Are all rice and curry dishes at Chopras gluten free?',
@@ -31,7 +31,7 @@ const faqsEn: Array<{ question: string; answer: string }> = [
       },
       {
             question: 'Can celiac guests order at Chopras Indian Restaurant Den Haag?',
-            answer: 'Yes. Chopras offers a dedicated gluten-free menu with 15+ naturally gluten-free dishes. The kitchen follows strict preparation standards. All meat is halal certified. For celiac guests with severe allergies, mention gluten-free requirements when ordering. Call +31 6 30645930 to confirm specific dishes.',
+            answer: 'Yes. Chopras offers a dedicated gluten-free menu with 20+ naturally gluten-free dishes. The kitchen follows strict preparation standards. All meat is halal certified. For celiac guests with severe allergies, mention gluten-free requirements when ordering. Call +31 6 30645930 to confirm specific dishes.',
       },
       {
             question: 'Is the plain papad at Chopras gluten free?',
@@ -42,7 +42,7 @@ const faqsEn: Array<{ question: string; answer: string }> = [
 const faqsNl: Array<{ question: string; answer: string }> = [
       {
             question: 'Welke glutenvrije gerechten serveert Chopras Indian Restaurant in Den Haag?',
-            answer: 'Chopras Indian Restaurant op Leyweg 986, Den Haag, serveert een volledig glutenvrij menu met aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, vegetable manchow soep, rijstgerechten, biryani en chicken fried rice. Alle gerechten zijn van nature glutenvrij en bereid zonder glutenhoudende ingrediënten.',
+            answer: 'Chopras Indian Restaurant op Leyweg 986, Den Haag, serveert een volledig glutenvrij menu met lams curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, vegetable manchow soep, rijstgerechten, biryani en chicken fried rice. Alle gerechten zijn van nature glutenvrij en bereid zonder glutenhoudende ingrediënten.',
       },
       {
             question: 'Zijn alle rijst- en currygerechten bij Chopras glutenvrij?',
@@ -50,7 +50,7 @@ const faqsNl: Array<{ question: string; answer: string }> = [
       },
       {
             question: 'Kunnen mensen met coeliakie eten bij Chopras Indian Restaurant Den Haag?',
-            answer: 'Ja. Chopras biedt een speciaal glutenvrij menu met 15+ natuurlijk glutenvrije gerechten. De keuken volgt strikte bereidingsstandaards. Al het vlees is halal gecertificeerd. Voor gasten met ernstige glutenallergie, vermeld glutenvrije vereisten bij bestelling. Bel +31 6 30645930 om specifieke gerechten te bevestigen.',
+            answer: 'Ja. Chopras biedt een speciaal glutenvrij menu met 20+ natuurlijk glutenvrije gerechten. De keuken volgt strikte bereidingsstandaards. Al het vlees is halal gecertificeerd. Voor gasten met ernstige glutenallergie, vermeld glutenvrije vereisten bij bestelling. Bel +31 6 30645930 om specifieke gerechten te bevestigen.',
       },
       {
             question: 'Is de plain papad bij Chopras glutenvrij?',
@@ -65,8 +65,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             nl: 'Glutenvrij Menu Den Haag | Chopras Indian Restaurant',
       }
       const descriptions = {
-            en: 'Gluten free menu Den Haag at Chopras Indian Restaurant. 15+ naturally gluten-free dishes including curries, rice, biryani and tandoori. Celiac friendly. Order online.',
-            nl: 'Glutenvrij menu Den Haag bij Chopras Indian Restaurant. 15+ natuurlijk glutenvrije gerechten waaronder curries, rijst, biryani en tandoori. Coeliakie vriendelijk. Bestel online.',
+            en: 'Gluten free menu Den Haag at Chopras Indian Restaurant. 20+ naturally gluten-free dishes including lamb curries, veg curries, rice, biryani and tandoori. Celiac friendly. Order online.',
+            nl: 'Glutenvrij menu Den Haag bij Chopras Indian Restaurant. 20+ natuurlijk glutenvrije gerechten waaronder lamscurries, groentecurries, rijst, biryani en tandoori. Coeliakie vriendelijk. Bestel online.',
       }
       return {
             title: titles[locale],
@@ -147,10 +147,10 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 <p>
                                                       Glutenvrije voeding hoeft niet ingewikkeld of smakeloos te zijn. Bij Chopras Indian Restaurant op{' '}
                                                       <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Leyweg 986</Link>{' '}
-                                                      in Den Haag zijn meer dan 15 gerechten natuurlijk glutenvrij. Niet aangepast. Niet ingewikt. Gewoon echt Indiaas eten dat toevallig geen gluten bevat.
+                                                      in Den Haag zijn meer dan 20 gerechten natuurlijk glutenvrij. Niet aangepast. Niet ingewikt. Gewoon echt Indiaas eten dat toevallig geen gluten bevat.
                                                 </p>
                                                 <p>
-                                                      Dal tadka. Aloo gobi. Bhindi masala. Chana masala. Deze zijn stergerechten in de Noord-Indiase keuken sinds eeuwen. Geen graan. Geen bloem. Alleen verse groenten, linzen, rijst en kruiden rechtstreeks uit India, elke ochtend vers gemalen voordat de keuken opengaat om 16:30.
+                                                      Dal tadka. Mutton Rogan Josh. Aloo gobi. Bhindi masala. Chana masala. Deze zijn stergerechten in de Noord-Indiase keuken sinds eeuwen. Geen graan. Geen bloem. Alleen verse groenten, linzen, lamsvlees, rijst en kruiden rechtstreeks uit India, elke ochtend vers gemalen voordat de keuken opengaat om 16:30.
                                                 </p>
                                                 <p>
                                                       Voor mensen met coeliakie of glutengevoeligheid in Den Haag is Chopras het directe antwoord. Glutenvrije{' '}
@@ -163,10 +163,10 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 <p>
                                                       Gluten-free living does not need to be complicated or bland. At Chopras Indian Restaurant on{' '}
                                                       <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Leyweg 986</Link>{' '}
-                                                      in Den Haag, more than 15 dishes are naturally gluten-free. Not adapted. Not wrapped in celery. Just real Indian food that happens to contain no gluten.
+                                                      in Den Haag, more than 20 dishes are naturally gluten-free. Not adapted. Not wrapped in celery. Just real Indian food that happens to contain no gluten.
                                                 </p>
                                                 <p>
-                                                      Dal tadka. Aloo gobi. Bhindi masala. Chana masala. These are star dishes in North Indian cooking for centuries. No grain. No flour. Only fresh vegetables, lentils, rice and spices sourced directly from India, ground fresh every morning before service opens at 16:30.
+                                                      Dal tadka. Mutton Rogan Josh. Aloo gobi. Bhindi masala. Chana masala. These are star dishes in North Indian cooking for centuries. No grain. No flour. Only fresh vegetables, lentils, lamb, rice and spices sourced directly from India, ground fresh every morning before service opens at 16:30.
                                                 </p>
                                                 <p>
                                                       For people with celiac or gluten sensitivity in Den Haag, Chopras is the straightforward answer. Gluten-free{' '}
@@ -207,11 +207,13 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                     {(isNl ? [
                                           { title: 'Linzen en Peulvruchten', items: 'Dal tadka, chana masala, aloo jeera' },
                                           { title: "Groentecurry's", items: 'Aloo gobi, baingan bharta, bhindi masala, veg manchow soup' },
+                                          { title: "Lam- en Schapencurry's", items: 'Mutton Rogan Josh, Mutton Vindaloo, Mutton Korma, Mutton Handi, Mutton Karahi, Rara Gosht, Keema Saag' },
                                           { title: 'Biryani en Rijst', items: 'Vegetable biryani, steamed rice, jeera rice, chicken fried rice' },
                                           { title: 'Starters en Bijgerechten', items: 'Onion bhaji, plain papad, rijstgerechten' },
                                     ] : [
                                           { title: 'Lentils and Pulses', items: 'Dal tadka, chana masala, aloo jeera' },
                                           { title: 'Vegetable Curries', items: 'Aloo gobi, baingan bharta, bhindi masala, veg manchow soup' },
+                                          { title: 'Lamb & Mutton Curries', items: 'Mutton Rogan Josh, Mutton Vindaloo, Mutton Korma, Mutton Handi, Mutton Karahi, Rara Gosht, Keema Saag' },
                                           { title: 'Biryani and Rice', items: 'Vegetable biryani, steamed rice, jeera rice, chicken fried rice' },
                                           { title: 'Starters and Sides', items: 'Onion bhaji, plain papad, rice dishes' },
                                     ]).map((item) => (
