@@ -10,37 +10,44 @@ import { getBlogPostingSchema, getBreadcrumbSchema, getFaqPageSchema } from '@/l
 type Props = { params: { locale: Locale; slug: string } }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    locale: post.language,
-    slug: post.slug,
-  }))
+  const locales: Locale[] = ['en', 'nl']
+  return blogPosts.flatMap((post) =>
+    locales.map((locale) => ({
+      locale,
+      slug: post.slug,
+    }))
+  )
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug)
   if (!post) return {}
   const { locale } = params
+  const title = (locale === 'nl' && post.metaTitleNl) || post.metaTitle
+  const description = (locale === 'nl' && post.metaDescriptionNl) || post.metaDescription
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title,
+    description,
+    keywords: post.keywords || [post.primaryKeyword],
     alternates: {
       canonical: getLocalizedUrl(locale, `blog/${post.slug}`),
       languages: {
-        [post.language]: getLocalizedUrl(post.language, `blog/${post.slug}`),
-        'x-default': getLocalizedUrl(post.language, `blog/${post.slug}`),
+        en: getLocalizedUrl('en', `blog/${post.slug}`),
+        nl: getLocalizedUrl('nl', `blog/${post.slug}`),
+        'x-default': getLocalizedUrl('en', `blog/${post.slug}`),
       },
     },
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title,
+      description,
       url: getLocalizedUrl(locale, `blog/${post.slug}`),
-      images: [{ url: '/og/home-og.jpg', width: 1200, height: 630, alt: post.title }],
+      images: [{ url: '/og/home-og.jpg', width: 1200, height: 630, alt: title }],
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title,
+      description,
       images: ['/og/home-og.jpg'],
     },
   }
@@ -73,21 +80,28 @@ export default function LocaleBlogPostPage({ params }: Props) {
 
   const tr = getTranslations(locale)
   const base = locale === 'nl' ? '/nl' : ''
-  const localizedContent = localizeInternalLinks(post.content, locale)
+
+  const postTitle = (locale === 'nl' && post.titleNl) || post.title
+  const postH1 = (locale === 'nl' && post.h1Nl) || post.h1
+  const rawContent = (locale === 'nl' && post.contentNl) || post.content
+  const postKeyword = (locale === 'nl' && post.primaryKeywordNl) || post.primaryKeyword
+  const postFaqs = (locale === 'nl' && post.faqsNl) || post.faqs
+
+  const localizedContent = localizeInternalLinks(rawContent, locale)
   const relatedPosts = blogPosts
-    .filter((p) => p.slug !== post.slug && p.language === locale)
+    .filter((p) => p.slug !== post.slug)
     .slice(0, 2)
 
   return (
     <>
       <JsonLd data={getBlogPostingSchema(post, locale)} />
-      {post.faqs && post.faqs.length > 0 && (
-        <JsonLd data={getFaqPageSchema(post.faqs)} />
+      {postFaqs && postFaqs.length > 0 && (
+        <JsonLd data={getFaqPageSchema(postFaqs)} />
       )}
       <JsonLd data={getBreadcrumbSchema([
         { name: tr.common.nav.home, item: getLocalizedUrl(locale) },
         { name: tr.common.nav.blog, item: getLocalizedUrl(locale, 'blog') },
-        { name: post.title, item: getLocalizedUrl(locale, `blog/${post.slug}`) },
+        { name: postTitle, item: getLocalizedUrl(locale, `blog/${post.slug}`) },
       ])} />
 
       {/* Hero */}
@@ -98,7 +112,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
             <span className="mx-2">/</span>
             <Link href={`${base}/blog`} className="hover:text-white/80 transition-colors">{tr.common.nav.blog}</Link>
             <span className="mx-2">/</span>
-            <span className="text-white/70 line-clamp-1">{post.title}</span>
+            <span className="text-white/70 line-clamp-1">{postTitle}</span>
           </nav>
 
           {post.language === 'nl' && (
@@ -113,7 +127,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
             </span>
           </div>
           <h1 className="font-heading text-3xl md:text-5xl text-white max-w-4xl leading-tight mb-4" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.99), 0 6px 24px rgba(0,0,0,0.85)' }}>
-            {post.h1}
+            {postH1}
           </h1>
 
           <p className="text-white/60 text-sm mb-6">By {post.author} · Founder, Chopras Indian Restaurant</p>
@@ -121,7 +135,7 @@ export default function LocaleBlogPostPage({ params }: Props) {
           <div className="flex flex-wrap items-center gap-4 text-white/60 text-sm">
             <span>{formatDate(post.publishedAt, locale)}</span>
             <span className="bg-[#0000B3]/20 text-white text-xs px-3 py-1 rounded-full">
-              {post.primaryKeyword}
+              {postKeyword}
             </span>
             <span>{post.readingTime} {tr.blog.minRead}</span>
           </div>
@@ -178,20 +192,24 @@ export default function LocaleBlogPostPage({ params }: Props) {
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="font-heading text-3xl text-[#06068a] mb-8">{tr.blog.relatedH2}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relatedPosts.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={`${base}/blog/${related.slug}`}
-                  className="bg-[#F7F8FC] rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow block"
-                >
-                  <p className="text-gray-400 text-xs mb-2">{formatDate(related.publishedAt, locale)}</p>
-                  <h3 className="font-heading text-lg text-[#1A1A1A] leading-tight mb-2">{related.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{related.excerpt}</p>
-                  <span className="inline-block mt-3 text-[#06068a] font-semibold text-sm">
-                    {tr.blog.readArticle}
-                  </span>
-                </Link>
-              ))}
+              {relatedPosts.map((related) => {
+                const relTitle = (locale === 'nl' && related.titleNl) || related.title
+                const relExcerpt = (locale === 'nl' && related.excerptNl) || related.excerpt
+                return (
+                  <Link
+                    key={related.slug}
+                    href={`${base}/blog/${related.slug}`}
+                    className="bg-[#F7F8FC] rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow block"
+                  >
+                    <p className="text-gray-400 text-xs mb-2">{formatDate(related.publishedAt, locale)}</p>
+                    <h3 className="font-heading text-lg text-[#1A1A1A] leading-tight mb-2">{relTitle}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{relExcerpt}</p>
+                    <span className="inline-block mt-3 text-[#06068a] font-semibold text-sm">
+                      {tr.blog.readArticle}
+                    </span>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </section>

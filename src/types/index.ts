@@ -32,17 +32,27 @@ export type DietaryTag = 'veg' | 'vegan' | 'halal' | 'spicy' | 'mild' | 'glutenF
 export type BlogPost = {
   slug: string
   title: string
+  titleNl?: string
   metaTitle: string
+  metaTitleNl?: string
   metaDescription: string
+  metaDescriptionNl?: string
   h1: string
+  h1Nl?: string
   primaryKeyword: string
+  primaryKeywordNl?: string
   language: 'en' | 'nl'
   author: string
   excerpt: string
+  excerptNl?: string
   content: string
+  contentNl?: string
   publishedAt: string
   readingTime: number
+  image?: string
+  keywords?: string[]
   faqs?: Array<{ question: string; answer: string }>
+  faqsNl?: Array<{ question: string; answer: string }>
 }
 
 export type Vacancy = {

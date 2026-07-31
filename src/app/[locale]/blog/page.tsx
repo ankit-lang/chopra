@@ -63,7 +63,7 @@ export default function LocaleBlogPage({ params }: Props) {
   const { locale } = params
   const tr = getTranslations(locale)
   const base = locale === 'nl' ? '/nl' : ''
-  const localePosts = blogPosts.filter(post => post.language === locale)
+  const localePosts = blogPosts
 
   const blogListingSchema = {
     '@context': 'https://schema.org',
@@ -133,33 +133,39 @@ export default function LocaleBlogPage({ params }: Props) {
             {tr.blog.latestH2}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {localePosts.map((post) => (
-              <article
-                key={post.slug}
-                className="relative bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-              >
-                <div className={`h-2 ${post.language === 'nl' ? 'btn-gradient' : 'bg-[#06068a]'}`} />
-                <span className="absolute top-6 right-4 btn-gradient text-white text-xs font-bold px-2 py-1 rounded">
-                  {post.language === 'nl' ? 'NL' : 'EN'}
-                </span>
-                <div className="p-6">
-                  <p className="text-gray-400 text-xs mb-2">{formatDate(post.publishedAt, locale)}</p>
-                  <h3 className="font-heading text-xl text-[#1A1A1A] leading-tight mb-3">{post.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{post.excerpt}</p>
-                  <span className="inline-block bg-[#06068a]/10 text-[#06068a] text-xs px-3 py-1 rounded-full">
-                    {post.primaryKeyword}
+            {localePosts.map((post) => {
+              const cardTitle = (locale === 'nl' && post.titleNl) || post.title
+              const cardExcerpt = (locale === 'nl' && post.excerptNl) || post.excerpt
+              const cardKeyword = (locale === 'nl' && post.primaryKeywordNl) || post.primaryKeyword
+
+              return (
+                <article
+                  key={post.slug}
+                  className="relative bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                >
+                  <div className={`h-2 ${locale === 'nl' ? 'btn-gradient' : 'bg-[#06068a]'}`} />
+                  <span className="absolute top-6 right-4 btn-gradient text-white text-xs font-bold px-2 py-1 rounded">
+                    {locale.toUpperCase()}
                   </span>
-                  <div className="mt-4">
-                    <Link
-                      href={`${base}/blog/${post.slug}`}
-                      className="text-[#06068a] hover:text-[#0000B3] font-semibold text-sm transition-colors"
-                    >
-                      {tr.blog.readArticle}
-                    </Link>
+                  <div className="p-6">
+                    <p className="text-gray-400 text-xs mb-2">{formatDate(post.publishedAt, locale)}</p>
+                    <h3 className="font-heading text-xl text-[#1A1A1A] leading-tight mb-3">{cardTitle}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{cardExcerpt}</p>
+                    <span className="inline-block bg-[#06068a]/10 text-[#06068a] text-xs px-3 py-1 rounded-full">
+                      {cardKeyword}
+                    </span>
+                    <div className="mt-4">
+                      <Link
+                        href={`${base}/blog/${post.slug}`}
+                        className="text-[#06068a] hover:text-[#0000B3] font-semibold text-sm transition-colors"
+                      >
+                        {tr.blog.readArticle}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>
