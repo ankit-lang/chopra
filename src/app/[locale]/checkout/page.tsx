@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { MapPin, Banknote, ShieldCheck, Check } from 'lucide-react'
+import { MapPin, Banknote, ShieldCheck, Check, Clock } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 import type { Locale } from '@/lib/useTranslations'
 
@@ -23,7 +23,30 @@ const VALID_PICKUP_TIMES = [
   '20:30',
   '21:00',
   '21:30',
+  '22:00',
 ]
+
+function isOrderingClosed(): boolean {
+  try {
+    const now = new Date()
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Amsterdam',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    })
+    const parts = formatter.formatToParts(now)
+    let hours = 0
+    let minutes = 0
+    for (const part of parts) {
+      if (part.type === 'hour') hours = parseInt(part.value, 10)
+      if (part.type === 'minute') minutes = parseInt(part.value, 10)
+    }
+    return (hours * 60 + minutes) > (21 * 60 + 30)
+  } catch {
+    return false
+  }
+}
 
 export default function CheckoutPage({ params }: { params: { locale: Locale } }) {
   const { locale } = params
@@ -39,8 +62,13 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
     pickupTime: '',
     instructions: '',
   })
+  const [isClosed, setIsClosed] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    setIsClosed(isOrderingClosed())
+  }, [])
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -51,6 +79,15 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
+
+    if (isClosed || isOrderingClosed()) {
+      setError(
+        locale === 'nl'
+          ? 'Bestellingen kunnen niet meer worden geplaatst na 21:30. De laatste ophaaltijd is 22:00.'
+          : 'Orders cannot be placed after 9:30 PM (21:30). The last pickup time is 10:00 PM (22:00).'
+      )
+      return
+    }
 
     if (!form.name.trim() || !form.phone.trim()) {
       setError(
@@ -64,8 +101,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
     if (!form.pickupTime || !VALID_PICKUP_TIMES.includes(form.pickupTime)) {
       setError(
         locale === 'nl'
-          ? 'Selecteer a.u.b. een geldige ophaaltijd tussen 16:30 en 21:30.'
-          : 'Please select a valid pickup time between 16:30 and 21:30.'
+          ? 'Selecteer a.u.b. een geldige ophaaltijd tussen 16:30 en 22:00.'
+          : 'Please select a valid pickup time between 16:30 and 22:00.'
       )
       return
     }
@@ -177,6 +214,25 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               </h2>
               <div className="w-12 h-0.5 btn-gradient mt-2 mb-8" />
 
+              {/* Order Cutoff Banner */}
+              {isClosed && (
+                <div className="mb-6 bg-amber-50 border border-amber-300 rounded-2xl p-5 text-amber-900 flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-sm">
+                      {locale === 'nl'
+                        ? 'Bestellingen voor vandaag zijn gesloten'
+                        : 'Ordering is closed for today'}
+                    </p>
+                    <p className="text-xs text-amber-800 mt-1">
+                      {locale === 'nl'
+                        ? 'Bestellingen kunnen tot 21:30 worden geplaatst. De laatste ophaaltijd is 22:00. U bent morgen vanaf 16:30 weer van harte welkom!'
+                        : 'Orders can only be placed until 9:30 PM (21:30). The last pickup time is 10:00 PM (22:00). We welcome you back tomorrow from 16:30!'}
+                    </p>
+                  </div>
+                </div>
+              )}
+
               {/* Full Name */}
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm font-medium text-[#1A1A1A] mb-2">
@@ -259,8 +315,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 </select>
                 <p className="text-xs text-[#1A1A1A]/40 mt-1">
                   {locale === 'nl'
-                    ? 'Openingstijden: Dinsdag t/m Zondag van 16:30 tot 22:30'
-                    : 'Opening hours: Tuesday to Sunday from 16:30 to 22:30'}
+                    ? 'Openingstijden: Dinsdag t/m Zondag van 16:30 tot 22:30 (Bestellen tot 21:30, Laatste ophaaltijd 22:00)'
+                    : 'Opening hours: Tuesday to Sunday from 16:30 to 22:30 (Orders until 21:30, Last pickup 22:00)'}
                 </p>
               </div>
 
@@ -347,8 +403,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   </p>
                   <p className="text-[#1A1A1A]/50 text-xs">
                     {locale === 'nl'
-                      ? 'Openingstijden: Dinsdag t/m Zondag, 16:30 tot 22:30'
-                      : 'Opening hours: Tuesday to Sunday, 16:30 to 22:30'}
+                      ? 'Openingstijden: Dinsdag t/m Zondag, 16:30 tot 22:30 (Bestellen tot 21:30, Laatste ophaaltijd 22:00)'
+                      : 'Opening hours: Tuesday to Sunday, 16:30 to 22:30 (Orders until 21:30, Last pickup 22:00)'}
                   </p>
                 </div>
               </div>
@@ -363,7 +419,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               {/* Submit */}
               <button
                 type="submit"
-                disabled={isLoading}
+                disabled={isLoading || isClosed}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
