@@ -1,10 +1,12 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { X, ShoppingBag, Trash2, Minus, Plus, Banknote } from 'lucide-react'
+import { X, ShoppingBag, Trash2, Minus, Plus, Banknote, Clock } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 import type { Locale } from '@/lib/useTranslations'
+import { checkOpeningStatus, type OpeningStatus } from '@/lib/openingHours'
 
 function formatPrice(price: number): string {
   return price % 1 === 0 ? `€${price}` : `€${price.toFixed(2)}`
@@ -16,8 +18,19 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
 
   const totalPrice = getTotalPrice()
   const base = locale === 'nl' ? '/nl' : ''
+  const [openingStatus, setOpeningStatus] = useState<OpeningStatus>(() => checkOpeningStatus())
+
+  useEffect(() => {
+    function updateStatus() {
+      setOpeningStatus(checkOpeningStatus())
+    }
+    updateStatus()
+    const timer = setInterval(updateStatus, 30000)
+    return () => clearInterval(timer)
+  }, [])
 
   function handleCheckout() {
+    if (openingStatus.isClosed) return
     closeCart()
     router.push(`${base}/checkout`)
   }
@@ -189,12 +202,23 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
               </p>
             </div>
 
+            {/* Ordering Closed Banner */}
+            {openingStatus.isClosed && (
+              <div className="bg-amber-50 border border-amber-300 rounded-xl p-3 text-amber-900 text-xs flex items-start gap-2">
+                <Clock className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                <p>{locale === 'nl' ? openingStatus.messageNl : openingStatus.messageEn}</p>
+              </div>
+            )}
+
             {/* Checkout button */}
             <button
               onClick={handleCheckout}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px]"
+              disabled={openingStatus.isClosed}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] min-h-[48px] disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {locale === 'nl' ? 'GA NAAR AFREKENEN' : 'PROCEED TO CHECKOUT'}
+              {openingStatus.isClosed
+                ? (locale === 'nl' ? 'BESTELLEN GESLOTEN' : 'ORDERING CLOSED')
+                : (locale === 'nl' ? 'GA NAAR AFREKENEN' : 'PROCEED TO CHECKOUT')}
             </button>
 
             {/* Continue browsing */}

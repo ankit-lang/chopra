@@ -6,46 +6,10 @@ import { useRouter } from 'next/navigation'
 import { MapPin, Banknote, ShieldCheck, Check, Clock } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 import type { Locale } from '@/lib/useTranslations'
+import { checkOpeningStatus, getAvailablePickupTimes, ALL_PICKUP_TIMES, type OpeningStatus } from '@/lib/openingHours'
 
 function formatPrice(price: number): string {
   return price % 1 === 0 ? `€${price}` : `€${price.toFixed(2)}`
-}
-
-const VALID_PICKUP_TIMES = [
-  '16:30',
-  '17:00',
-  '17:30',
-  '18:00',
-  '18:30',
-  '19:00',
-  '19:30',
-  '20:00',
-  '20:30',
-  '21:00',
-  '21:30',
-  '22:00',
-]
-
-function isOrderingClosed(): boolean {
-  try {
-    const now = new Date()
-    const formatter = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Europe/Amsterdam',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false,
-    })
-    const parts = formatter.formatToParts(now)
-    let hours = 0
-    let minutes = 0
-    for (const part of parts) {
-      if (part.type === 'hour') hours = parseInt(part.value, 10)
-      if (part.type === 'minute') minutes = parseInt(part.value, 10)
-    }
-    return (hours * 60 + minutes) > (21 * 60 + 30)
-  } catch {
-    return false
-  }
 }
 
 export default function CheckoutPage({ params }: { params: { locale: Locale } }) {
@@ -62,12 +26,22 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
     pickupTime: '',
     instructions: '',
   })
-  const [isClosed, setIsClosed] = useState(false)
+  const [openingStatus, setOpeningStatus] = useState<OpeningStatus>(() => checkOpeningStatus())
+  const [availableTimes, setAvailableTimes] = useState<string[]>(() => getAvailablePickupTimes())
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    setIsClosed(isOrderingClosed())
+    function updateStatus() {
+      const status = checkOpeningStatus()
+      const times = getAvailablePickupTimes()
+      setOpeningStatus(status)
+      setAvailableTimes(times)
+    }
+
+    updateStatus()
+    const timer = setInterval(updateStatus, 30000)
+    return () => clearInterval(timer)
   }, [])
 
   function handleChange(
@@ -80,12 +54,10 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
     e.preventDefault()
     setError('')
 
-    if (isClosed || isOrderingClosed()) {
-      setError(
-        locale === 'nl'
-          ? 'Bestellingen kunnen niet meer worden geplaatst na 21:30. De laatste ophaaltijd is 22:00.'
-          : 'Orders cannot be placed after 9:30 PM (21:30). The last pickup time is 10:00 PM (22:00).'
-      )
+    const currentStatus = checkOpeningStatus()
+    if (currentStatus.isClosed) {
+      setError(locale === 'nl' ? currentStatus.messageNl : currentStatus.messageEn)
+      setOpeningStatus(currentStatus)
       return
     }
 
@@ -98,7 +70,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
       return
     }
 
-    if (!form.pickupTime || !VALID_PICKUP_TIMES.includes(form.pickupTime)) {
+    if (!form.pickupTime || !ALL_PICKUP_TIMES.includes(form.pickupTime)) {
       setError(
         locale === 'nl'
           ? 'Selecteer a.u.b. een geldige ophaaltijd tussen 16:30 en 22:00.'
@@ -142,10 +114,10 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
           `${base}/order-confirmation?order=${data.orderNumber}&name=${encodeURIComponent(form.name)}`
         )
       } else {
-        setError('Something went wrong. Please call us on +31 6 30645930.')
+        setError(data.error || (locale === 'nl' ? 'Er is iets misgegaan. Bel ons op +31 6 30645930.' : 'Something went wrong. Please call us on +31 6 30645930.'))
       }
     } catch {
-      setError('Something went wrong. Please call us on +31 6 30645930.')
+      setError(locale === 'nl' ? 'Er is iets misgegaan. Bel ons op +31 6 30645930.' : 'Something went wrong. Please call us on +31 6 30645930.')
     } finally {
       setIsLoading(false)
     }
@@ -164,7 +136,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
         <h1 className="font-heading text-4xl text-white font-semibold">
           {locale === 'nl' ? 'Rond Uw Bestelling Af' : 'Complete Your Order'}
         </h1>
-        <p className="text-white/60 mt-3 text-sm">
+        <p className="text-[#1A1A1A]/60 mt-3 text-sm text-white/60">
           {locale === 'nl'
             ? 'Vul uw gegevens in en haal op bij Leyweg 986'
             : 'Fill in your details and collect from Leyweg 986'}
@@ -215,19 +187,17 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               <div className="w-12 h-0.5 btn-gradient mt-2 mb-8" />
 
               {/* Order Cutoff Banner */}
-              {isClosed && (
+              {openingStatus.isClosed && (
                 <div className="mb-6 bg-amber-50 border border-amber-300 rounded-2xl p-5 text-amber-900 flex items-start gap-3">
                   <Clock className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-sm">
                       {locale === 'nl'
                         ? 'Bestellingen voor vandaag zijn gesloten'
-                        : 'Ordering is closed for today'}
+                        : 'Ordering is currently closed'}
                     </p>
                     <p className="text-xs text-amber-800 mt-1">
-                      {locale === 'nl'
-                        ? 'Bestellingen kunnen tot 21:30 worden geplaatst. De laatste ophaaltijd is 22:00. U bent morgen vanaf 16:30 weer van harte welkom!'
-                        : 'Orders can only be placed until 9:30 PM (21:30). The last pickup time is 10:00 PM (22:00). We welcome you back tomorrow from 16:30!'}
+                      {locale === 'nl' ? openingStatus.messageNl : openingStatus.messageEn}
                     </p>
                   </div>
                 </div>
@@ -300,14 +270,17 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   id="pickupTime"
                   name="pickupTime"
                   required
+                  disabled={openingStatus.isClosed || availableTimes.length === 0}
                   value={form.pickupTime}
                   onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#06068a] transition-colors bg-white cursor-pointer"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#06068a] transition-colors bg-white cursor-pointer disabled:bg-gray-100 disabled:cursor-not-allowed"
                 >
                   <option value="">
-                    {locale === 'nl' ? '-- Selecteer Ophaaltijd * --' : '-- Select Pickup Time * --'}
+                    {openingStatus.isClosed || availableTimes.length === 0
+                      ? (locale === 'nl' ? '-- Bestellingen Momenteel Gesloten --' : '-- Ordering Currently Closed --')
+                      : (locale === 'nl' ? '-- Selecteer Ophaaltijd * --' : '-- Select Pickup Time * --')}
                   </option>
-                  {VALID_PICKUP_TIMES.map((time) => (
+                  {availableTimes.map((time) => (
                     <option key={time} value={time}>
                       {time}
                     </option>
@@ -416,11 +389,27 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 </div>
               )}
 
+              {/* Closed Warning */}
+              {openingStatus.isClosed && (
+                <div className="mb-4 bg-amber-50 border border-amber-300 rounded-xl p-4 text-amber-900 text-sm flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                  <p className="font-medium text-xs md:text-sm">
+                    {locale === 'nl'
+                      ? 'Bestellingen zijn niet toegestaan na 21:30.'
+                      : 'Orders cannot be placed after 9:30 PM (21:30).'}
+                  </p>
+                </div>
+              )}
+
               {/* Submit */}
               <button
                 type="submit"
-                disabled={isLoading || isClosed}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full border-2 border-white btn-gradient px-6 py-3 text-white font-medium uppercase tracking-wide transition-all duration-200 ease-out hover:btn-gradient hover:text-white active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                disabled={isLoading || openingStatus.isClosed || items.length === 0}
+                className={`w-full inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 font-medium uppercase tracking-wide transition-all duration-200 ease-out ${
+                  openingStatus.isClosed || items.length === 0
+                    ? 'bg-gray-300 text-gray-500 border-gray-300 cursor-not-allowed shadow-none'
+                    : 'btn-gradient border-white text-white active:scale-[0.98]'
+                }`}
               >
                 {isLoading ? (
                   <>
@@ -446,6 +435,8 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                     </svg>
                     {locale === 'nl' ? 'Bestelling Plaatsen...' : 'Placing Your Order...'}
                   </>
+                ) : openingStatus.isClosed ? (
+                  locale === 'nl' ? 'BESTELLEN GESLOTEN' : 'ORDERING CLOSED'
                 ) : (
                   locale === 'nl' ? 'BESTELLING PLAATSEN -- CONTANT BIJ AFHALEN' : 'Place Order -- Cash on Pickup'
                 )}

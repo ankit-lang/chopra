@@ -15,42 +15,7 @@ const transporter = nodemailer.createTransport({
 // Restaurant Configuration
 const RESTAURANT_EMAIL = 'info@chopras.nl' 
 
-const VALID_PICKUP_TIMES = [
-  '16:30',
-  '17:00',
-  '17:30',
-  '18:00',
-  '18:30',
-  '19:00',
-  '19:30',
-  '20:00',
-  '20:30',
-  '21:00',
-  '21:30',
-  '22:00',
-]
-
-function isAfterCutoffTime(): boolean {
-  try {
-    const now = new Date()
-    const formatter = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Europe/Amsterdam',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false,
-    })
-    const parts = formatter.formatToParts(now)
-    let hours = 0
-    let minutes = 0
-    for (const part of parts) {
-      if (part.type === 'hour') hours = parseInt(part.value, 10)
-      if (part.type === 'minute') minutes = parseInt(part.value, 10)
-    }
-    return (hours * 60 + minutes) > (21 * 60 + 30)
-  } catch {
-    return false
-  }
-}
+import { checkOpeningStatus, ALL_PICKUP_TIMES } from '@/lib/openingHours'
 
 export async function POST(request: NextRequest) {
   try {
@@ -65,14 +30,15 @@ export async function POST(request: NextRequest) {
       specialInstructions,
     } = body
 
-    if (isAfterCutoffTime()) {
+    const openingStatus = checkOpeningStatus()
+    if (openingStatus.isClosed) {
       return NextResponse.json(
-        { success: false, error: 'Orders cannot be placed after 9:30 PM (21:30).' },
+        { success: false, error: openingStatus.messageEn },
         { status: 400 }
       )
     }
 
-    if (!pickupTime || !VALID_PICKUP_TIMES.includes(pickupTime)) {
+    if (!pickupTime || !ALL_PICKUP_TIMES.includes(pickupTime)) {
       return NextResponse.json(
         { success: false, error: 'Please select a valid pickup time between 16:30 and 22:00.' },
         { status: 400 }
