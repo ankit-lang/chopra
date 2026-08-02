@@ -134,8 +134,8 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
             <Banknote className="text-[#06068a] w-5 h-5 flex-shrink-0" />
             <p className="text-sm text-[#1A1A1A]/70">
               {locale === 'nl'
-                ? `Betaling: ${lastOrder?.paymentMethod === 'Cash on Pickup' ? 'Contant bij afhalen' : (lastOrder?.paymentMethod ?? 'Contant bij afhalen')}`
-                : `Payment: ${lastOrder?.paymentMethod ?? 'Cash on Pickup'}`}
+                ? `Betaling: ${lastOrder?.paymentMethod === 'Payment on Pickup' || lastOrder?.paymentMethod === 'Cash on Pickup' ? 'Betalen bij afhalen' : (lastOrder?.paymentMethod ?? 'Betalen bij afhalen')}`
+                : `Payment: ${lastOrder?.paymentMethod === 'Cash on Pickup' ? 'Payment on Pickup' : (lastOrder?.paymentMethod ?? 'Payment on Pickup')}`}
             </p>
           </div>
         </div>

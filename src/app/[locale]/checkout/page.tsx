@@ -323,14 +323,14 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   {locale === 'nl' ? 'Betaalmethode' : 'Payment Method'}
                 </p>
 
-                {/* Cash on pickup */}
+                {/* Payment on pickup */}
                 <div className="border-2 border-[#06068a] bg-[#0000B3]/5 rounded-2xl p-5 flex items-start gap-4">
                   <div className="w-5 h-5 rounded-full border-2 border-[#06068a] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-2.5 h-2.5 rounded-full btn-gradient" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A] text-sm">
-                      {locale === 'nl' ? 'Contant bij Afhalen' : 'Cash on Pickup'}
+                      {locale === 'nl' ? 'Betalen bij Afhalen' : 'Payment on Pickup'}
                     </p>
                     <p className="text-sm text-[#1A1A1A]/60 mt-1">
                       {locale === 'nl'
@@ -438,7 +438,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 ) : openingStatus.isClosed ? (
                   locale === 'nl' ? 'BESTELLEN GESLOTEN' : 'ORDERING CLOSED'
                 ) : (
-                  locale === 'nl' ? 'BESTELLING PLAATSEN -- CONTANT BIJ AFHALEN' : 'Place Order -- Cash on Pickup'
+                  locale === 'nl' ? 'BESTELLING PLAATSEN -- BETALEN BIJ AFHALEN' : 'Place Order -- Payment on Pickup'
                 )}
               </button>
 
@@ -526,7 +526,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   <div className="bg-[#0000B3]/10 border border-[#0000B3]/20 rounded-xl px-4 py-3 flex items-center gap-2">
                     <Banknote className="text-[#06068a] w-4 h-4 flex-shrink-0" />
                     <p className="text-sm text-[#1A1A1A]/70">
-                      {locale === 'nl' ? 'Contant bij afhalen op Leyweg 986' : 'Cash on Pickup at Leyweg 986'}
+                      {locale === 'nl' ? 'Betalen bij afhalen op Leyweg 986' : 'Payment on Pickup at Leyweg 986'}
                     </p>
                   </div>
                 </div>

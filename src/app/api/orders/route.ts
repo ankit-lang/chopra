@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
       </div>
 
       <div style="margin-top:24px;background:#f0f4ff;border-radius:8px;padding:16px;">
-        <p style="margin:0;font-size:13px;color:#1B2B5E;font-weight:600;">Payment: Cash on Pickup</p>
+        <p style="margin:0;font-size:13px;color:#1B2B5E;font-weight:600;">Payment: Payment on Pickup</p>
         <p style="margin:4px 0 0;font-size:13px;color:#555;">Ready in approximately 30 to 45 minutes</p>
       </div>
 
@@ -211,7 +211,7 @@ export async function POST(request: NextRequest) {
         pickupTime,
         items,
         totalAmount,
-        paymentMethod: 'Cash on Pickup',
+        paymentMethod: 'Payment on Pickup',
         specialInstructions,
         estimatedPickup: '30 to 45 minutes',
         restaurantAddress: 'Leyweg 986, 2545 GW Den Haag',

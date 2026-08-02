@@ -198,7 +198,7 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
             <div className="flex items-center gap-2 bg-[#06068a]/10 border border-[#06068a]/20 rounded-xl px-4 py-3">
               <Banknote className="text-[#06068a] w-4 h-4 flex-shrink-0" />
               <p className="text-[#1A1A1A]/70 text-sm">
-                {locale === 'nl' ? 'Betaling: Contant bij afhalen' : 'Payment: Cash on Pickup'}
+                {locale === 'nl' ? 'Betaling: Betalen bij afhalen' : 'Payment: Payment on Pickup'}
               </p>
             </div>
 
