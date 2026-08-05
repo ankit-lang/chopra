@@ -2,6 +2,83 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'what-makes-authentic-indian-food-different',
+    title: 'What Makes Authentic Indian Food Different? | Chopras Indian Restaurant Den Haag',
+    metaTitle: 'What Makes Authentic Indian Food Different? | Chopras Indian Restaurant Den Haag',
+    metaDescription:
+      'Discover what makes authentic Indian food different, from traditional recipes and fresh spices to regional flavours. Enjoy authentic Indian cuisine at Chopras Den Haag.',
+    h1: 'What Makes Authentic Indian Food Different?',
+    titleNl: 'Wat Maakt Authentiek Indiaas Eten Anders? | Chopras Indian Restaurant Den Haag',
+    metaTitleNl: 'Wat Maakt Authentiek Indiaas Eten Anders? | Chopras Indian Restaurant Den Haag',
+    metaDescriptionNl:
+      'Ontdek wat authentiek Indiaas eten anders maakt, van traditionele recepten en verse specerijen tot regionale smaken. Geniet van authentiek Indiaas eten bij Chopras Den Haag.',
+    h1Nl: 'Wat Maakt Authentiek Indiaas Eten Anders?',
+    primaryKeyword: 'Authentic Indian food',
+    primaryKeywordNl: 'Authentiek Indiaas eten',
+    keywords: [
+      'Authentic Indian food',
+      'Authentic Indian cuisine',
+      'Indian restaurant Den Haag',
+      'Traditional Indian food',
+      'Indian food',
+    ],
+    language: 'en' as const,
+    publishedAt: '2026-08-06',
+    readingTime: 5,
+    author: 'Arun Chopra',
+    image: '/images/blog/what-makes-authentic-indian-food-different.jpg',
+    excerpt:
+      'Authentic Indian food is defined by tradition, fresh ingredients and time-tested cooking techniques rather than just spices. Every dish is prepared with carefully balanced flavours.',
+    excerptNl:
+      'Authentiek Indiaas eten wordt gedefinieerd door traditie, verse ingrediënten en beproefde kooktechnieken in plaats van alleen specerijen. Elk gerecht wordt bereid met zorgvuldig gebalanceerde smaken.',
+    content: `
+<img src="/images/blog/what-makes-authentic-indian-food-different.jpg" alt="What Makes Authentic Indian Food Different?" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Authentic Indian food is defined by tradition, fresh ingredients and time-tested cooking techniques rather than just spices. Every dish is prepared with carefully balanced flavours, where spices are blended to enhance the natural taste of the ingredients instead of overpowering them.</p>
+
+<h2>The Magic of Freshly Ground Spices</h2>
+
+<p>One of the biggest differences is the use of freshly ground spices. Ingredients like cumin, coriander, turmeric, cardamom, cloves and cinnamon are combined in unique proportions for each recipe. This creates layers of flavour that are rich, aromatic and well-balanced.</p>
+
+<h2>Traditional Cooking Methods</h2>
+
+<p>Cooking methods also play an important role. Many traditional dishes are slow-cooked to allow the flavours to develop naturally, while tandoori specialities are prepared in a clay oven, giving them their signature smoky aroma and tender texture.</p>
+
+<h2>Regional Diversity & Flavours</h2>
+
+<p>Authentic Indian cuisine also celebrates regional diversity. North Indian dishes are known for their rich curries, creamy gravies and freshly baked naan, while other regions offer their own distinctive flavours and ingredients. This variety means there is something to suit every palate, from mild and comforting dishes to bold, spicy favourites.</p>
+
+<h2>Experience Authenticity at Chopras in Den Haag</h2>
+
+<p>At <a href="https://chopras.nl/">Chopras Indian Restaurant</a> in Den Haag (The Hague), authenticity is at the heart of every meal. Traditional recipes, quality ingredients and freshly prepared dishes bring the true taste of India to every table. Guests can choose from a wide selection of vegetarian, vegan and non-vegetarian options, along with tandoori specialities, <a href="https://chopras.nl/biryani-den-haag">biryanis</a> and classic Indian curries.</p>
+
+<p>Whether you're looking for authentic Indian food, a family dinner, takeaway, or a venue for a private celebration, Chopras Indian Restaurant in Den Haag offers it all under one roof. Enjoy traditional Indian cuisine alongside a private dining space and <a href="https://chopras.nl/feestzaal-den-haag">party hall (feestzaal)</a>, making it the perfect destination for birthdays, anniversaries, proposals, corporate events, family gatherings, and special occasions.</p>
+`,
+    contentNl: `
+<img src="/images/blog/what-makes-authentic-indian-food-different.jpg" alt="Wat Maakt Authentiek Indiaas Eten Anders?" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Authentiek Indiaas eten wordt gedefinieerd door traditie, verse ingrediënten en beproefde kooktechnieken in plaats van alleen specerijen. Elk gerecht wordt bereid met zorgvuldig gebalanceerde smaken, waarbij specerijen worden gemengd om de natuurlijke smaak van de ingrediënten te versterken in plaats van te overheersen.</p>
+
+<h2>De Magie van Vers Gemalen Specerijen</h2>
+
+<p>Een van de grootste verschillen is het gebruik van vers geraspte en gemalen specerijen. Ingrediënten zoals komijn, koriander, kurkuma, kardemom, kruidnagel en kaneel worden in unieke verhoudingen gecombineerd voor elk recept. Dit creëert smaaklagen die rijk, aromatisch en goed gebalanceerd zijn.</p>
+
+<h2>Traditionele Bereidingswijzen</h2>
+
+<p>Bereidingswijzen spelen ook een belangrijke rol. Veel traditionele gerechten worden langzaam gekookt om de smaken zich natuurlijk te laten ontwikkelen, terwijl tandoorigerechten worden bereid in een klei-oven, wat ze hun kenmerkende rokerige aroma en malse textuur geeft.</p>
+
+<h2>Regionale Diversiteit & Smaken</h2>
+
+<p>De authentieke Indiase keuken viert ook regionale diversiteit. Noord-Indiase gerechten staan bekend om hun rijke curry's, romige sauzen en vers gebakken naan, terwijl andere regio's hun eigen karakteristieke smaken en ingrediënten bieden. Deze variatie betekent dat er voor elk gehemelte wat wils is, van mild en troostrijk tot krachtige, pittige favorieten.</p>
+
+<h2>Ervaar Authenticiteit bij Chopras in Den Haag</h2>
+
+<p>Bij <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> in Den Haag staat authenticiteit centraal bij elke maaltijd. Traditionele recepten, kwaliteitsingrediënten en vers bereide gerechten brengen de echte smaak van India naar elke tafel. Gasten kunnen kiezen uit een ruime selectie van vegetarische, veganistische en non-vegetarische opties, samen met tandoorigerechten, <a href="https://chopras.nl/nl/biryani-den-haag">biryani's</a> en klassieke Indiase curry's.</p>
+
+<p>Of u nu op zoek bent naar authentiek Indiaas eten, een familiediner, afhalen of een locatie voor een privéfeest, Chopras Indian Restaurant in Den Haag biedt het allemaal onder één dak. Geniet van de traditionele Indiase keuken naast een privé dinerruimte en <a href="https://chopras.nl/nl/feestzaal-den-haag">feestzaal</a>, waardoor het de perfecte bestemming is voor verjaardagen, jubilea, huwelijksaanzoeken, bedrijfsevenementen en speciale gelegenheden.</p>
+`,
+  },
+  {
     slug: 'the-ultimate-guide-to-indian-spices-and-their-uses',
     title: 'The Ultimate Guide to Indian Spices and Their Uses | Chopras Indian Restaurant Den Haag',
     metaTitle: 'The Ultimate Guide to Indian Spices and Their Uses | Chopras Indian Restaurant Den Haag',
