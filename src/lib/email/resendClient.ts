@@ -74,12 +74,14 @@ export async function sendReservationNotification(
     <p><em>Sent from Chopras website reservation form</em></p>
   `
 
+  let ownerSuccess = false
   for (const targetEmail of ownerEmails) {
-    await sendEmail(
+    const res = await sendEmail(
       targetEmail,
       `New Reservation: ${reservation.fullName} - ${reservation.date}`,
       ownerHtml
     )
+    if (res.success) ownerSuccess = true
   }
 
   // Send confirmation to customer
@@ -106,7 +108,7 @@ export async function sendReservationNotification(
   )
 
   // Return success if at least one email was sent
-  if (ownerResult.success || customerResult.success) {
+  if (ownerSuccess || customerResult.success) {
     return { success: true }
   }
 
