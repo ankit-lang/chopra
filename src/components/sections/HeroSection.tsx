@@ -199,16 +199,18 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
 
 function HeroVideoBackground() {
   return (
-    <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
+    <div className="absolute inset-0 w-full h-full bg-[#0a0a1a] overflow-hidden">
       {/* Mobile Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
+        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
         className="md:hidden absolute inset-0 w-full h-full object-cover brightness-110"
       >
-        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1785302300/homemenubanner_xsoppv.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1785953647/homemobban_plpiio.mp4" type="video/mp4" />
       </video>
 
       {/* Desktop Video */}
@@ -217,6 +219,8 @@ function HeroVideoBackground() {
         loop
         muted
         playsInline
+        preload="auto"
+        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
         className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
       >
         <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922887/homevideo_znd8qq.mp4" type="video/mp4" />

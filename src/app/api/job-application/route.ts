@@ -1,4 +1,5 @@
 import { NextRequest } from 'next/server'
+import { sendBookingEmail } from '@/lib/email'
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,6 +12,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    await sendBookingEmail(`Job Application - ${position}`, body)
 
     return Response.json({ success: true })
   } catch {

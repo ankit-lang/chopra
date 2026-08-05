@@ -109,6 +109,15 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       await emailjs.send('service_h7g2zls', 'template_jjbx1xs', customerParams, 'X4zEaO59vJ2l3L64E')
       await emailjs.send('service_h7g2zls', 'template_z546bio', adminParams, 'X4zEaO59vJ2l3L64E')
 
+      fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: serviceType === 'feestzaal' ? 'Party Hall Enquiry' : 'Catering Request',
+          payload: adminParams
+        })
+      }).catch(err => console.error(err))
+
       fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

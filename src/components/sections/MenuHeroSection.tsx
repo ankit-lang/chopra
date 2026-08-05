@@ -16,7 +16,8 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923037/menumob_ngkax0.jpg"
       >
         <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923037/menumob_ngkax0.mp4" type="video/mp4" />
       </video>
@@ -28,7 +29,8 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923097/menudesktop_wp5olf.jpg"
       >
         <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923097/menudesktop_wp5olf.mp4" type="video/mp4" />
       </video>

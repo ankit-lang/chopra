@@ -57,9 +57,9 @@ export async function sendReservationNotification(
     notes?: string
   }
 ): Promise<{ success: boolean; error?: string }> {
-  const ownerEmail = process.env.CONTACT_EMAIL_TO || 'info@chopras.nl'
+  const ownerEmails = [process.env.CONTACT_EMAIL_TO || 'info@chopras.nl', 'choprasstreetfood@gmail.com']
 
-  // Send notification to restaurant owner
+  // Send notification to restaurant owners
   const ownerHtml = `
     <h2>New Reservation Received</h2>
     <p><strong>Name:</strong> ${reservation.fullName}</p>
@@ -74,11 +74,13 @@ export async function sendReservationNotification(
     <p><em>Sent from Chopras website reservation form</em></p>
   `
 
-  const ownerResult = await sendEmail(
-    ownerEmail,
-    `New Reservation: ${reservation.fullName} - ${reservation.date}`,
-    ownerHtml
-  )
+  for (const targetEmail of ownerEmails) {
+    await sendEmail(
+      targetEmail,
+      `New Reservation: ${reservation.fullName} - ${reservation.date}`,
+      ownerHtml
+    )
+  }
 
   // Send confirmation to customer
   const customerHtml = `

@@ -388,6 +388,8 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
             loop
             muted
             playsInline
+            preload="auto"
+            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923262/feez2_x36civ.jpg"
             className="md:hidden absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
           >
             <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923262/feez2_x36civ.mp4" type="video/mp4" />
@@ -399,6 +401,8 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
             loop
             muted
             playsInline
+            preload="auto"
+            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923305/feeez_bglfdd.jpg"
             className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
           >
             <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923305/feeez_bglfdd.mp4" type="video/mp4" />

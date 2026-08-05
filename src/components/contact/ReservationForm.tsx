@@ -84,13 +84,20 @@ export default function ReservationForm() {
         'tlV8x_1C8JV1P63yT'
       )
 
-      // Dispatch Copy 2: To Admin (info@chopras.nl)
+      // Dispatch Copy 2: To Admin (info@chopras.nl & choprasstreetfood@gmail.com)
       await emailjs.send(
         'service_di4ue46',
         'template_z546bio',
         adminParams,
         'tlV8x_1C8JV1P63yT'
       )
+
+      fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'Table Reservation', payload: adminParams })
+      }).catch(err => console.error(err))
+
       console.log('Mail delivered successfully')
       setSuccess(true)
 
@@ -151,7 +158,23 @@ export default function ReservationForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 md:px-6 py-6">
-      <h3 className="text-2xl md:text-lg font-semibold text-[#06068a] mb-6 md:mb-4">Reserve Your Table</h3>
+      <h3 className="text-2xl md:text-lg font-semibold text-[#06068a] mb-4">Reserve Your Table</h3>
+
+      {/* Free Private Parking Notice */}
+      <div className="bg-[#0000B3]/5 border border-[#0000B3]/15 rounded-2xl p-4 mb-6 flex items-start gap-3 text-left">
+        <div className="w-8 h-8 rounded-full bg-[#06068a] text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+          🅿️
+        </div>
+        <div>
+          <h4 className="text-[#06068a] font-bold text-sm">
+            Free Private Parking After 6:00 PM
+          </h4>
+          <p className="text-[#1A1A1A]/80 text-xs mt-0.5 leading-relaxed">
+            Complimentary limited private parking is available after 6:00 PM for both dine-in guests and takeaway orders. Please contact us in advance to check availability.
+          </p>
+        </div>
+      </div>
+
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-4">
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Date *</label>

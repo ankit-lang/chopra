@@ -66,6 +66,21 @@ export default function LocationSection({ locale = 'en' }: { locale?: Locale }) 
           </div>
         </div>
 
+        {/* Parking Information Banner */}
+        <div className="mt-6 max-w-4xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 md:p-5 flex items-center gap-4 text-left text-white shadow-lg">
+          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl shrink-0">
+            🚗
+          </div>
+          <div>
+            <h4 className="font-bold text-sm md:text-base tracking-wide text-white">
+              Free Private Parking After 6:00 PM
+            </h4>
+            <p className="text-white/80 text-xs md:text-sm mt-0.5 leading-relaxed">
+              Complimentary limited private parking is available after 6:00 PM for both dine-in guests and takeaway orders. Please contact us in advance to check availability.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   )

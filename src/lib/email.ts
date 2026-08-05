@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 export async function sendBookingEmail(subject: string, payload: Record<string, any>) {
   const customerEmail = payload.email || payload.customerEmail
   const gmailUser = process.env.GMAIL_USER
-  const adminEmail = 'info@chopras.nl' // Your actual business inbox
+  const adminEmails = ['info@chopras.nl', 'choprasstreetfood@gmail.com']
   
   const lines = Object.entries(payload)
     .filter(([, v]) => v !== undefined && v !== null && v !== '')
@@ -35,18 +35,18 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
       transporter.sendMail({
         from: `"Chopras Booking" <${gmailUser}>`,
         to: customerEmail,
-        replyTo: adminEmail, // If customer hits reply, it goes to your business mail
+        replyTo: 'info@chopras.nl', // If customer hits reply, it goes to business mail
         subject: `Booking Confirmation - ${timestamp}`,
         html,
       })
     )
   }
 
-  // 2. Queue email to restaurant admin (info@chopras.nl)
+  // 2. Queue email to restaurant admins (info@chopras.nl & choprasstreetfood@gmail.com)
   emailPromises.push(
     transporter.sendMail({
       from: `"System Alert" <${gmailUser}>`,
-      to: adminEmail, 
+      to: adminEmails, 
       subject: `New Booking [${subject}] - ${timestamp}`,
       html,
     })

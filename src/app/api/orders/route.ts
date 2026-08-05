@@ -13,9 +13,10 @@ const transporter = nodemailer.createTransport({
 } as any)
 
 // Restaurant Configuration
-const RESTAURANT_EMAIL = 'info@chopras.nl' 
+const RESTAURANT_EMAILS = ['info@chopras.nl', 'choprasstreetfood@gmail.com'] 
 
 import { checkOpeningStatus, ALL_PICKUP_TIMES } from '@/lib/openingHours'
+import { appendToGoogleSheet } from '@/lib/googleSheets'
 
 export async function POST(request: NextRequest) {
   try {
@@ -125,7 +126,7 @@ export async function POST(request: NextRequest) {
     emailPromises.push(
       transporter.sendMail({
         from: '"Chopras Indian Restaurant" <info@chopras.nl>',
-        to: RESTAURANT_EMAIL,
+        to: RESTAURANT_EMAILS,
         subject: `Order Confirmed ${orderNumber} - ${customerName}`,
         html: emailHtmlBody,
       })
@@ -195,6 +196,26 @@ export async function POST(request: NextRequest) {
       }
     } catch (waErr) {
       console.error('WhatsApp not delivered:', waErr)
+    }
+
+    // Append to Google Sheet: Order Tab
+    try {
+      const itemsSummary = items
+        .map((item: { name: string; quantity: number }) => `${item.name} (x${item.quantity})`)
+        .join(', ')
+
+      await appendToGoogleSheet('Order', {
+        orderNumber,
+        customerName,
+        customerPhone,
+        customerEmail: customerEmail || 'N/A',
+        pickupTime: pickupTime || 'N/A',
+        items: itemsSummary,
+        totalAmount: `€${totalAmount.toFixed(2)}`,
+        specialInstructions: specialInstructions || 'None',
+      })
+    } catch (sheetErr) {
+      console.error('[GoogleSheets Order Log Error]:', sheetErr)
     }
 
     // Return operational response structure to your frontend checkout form

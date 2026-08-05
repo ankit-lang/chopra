@@ -110,6 +110,12 @@ export default function CateringForm({ locale = 'en' }: { locale?: Locale }) {
         'X4zEaO59vJ2l3L64E'
       )
 
+      fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'Catering Enquiry', payload: templateParams })
+      }).catch(err => console.error(err))
+
       // Trigger WhatsApp Pipeline Lead API
       fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
         method: 'POST',

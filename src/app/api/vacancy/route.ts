@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { appendToGoogleSheet } from '@/lib/googleSheets'
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -11,7 +12,7 @@ const transporter = nodemailer.createTransport({
   },
 } as any)
 
-const ADMIN_EMAIL = 'info@chopras.nl'
+const ADMIN_EMAILS = ['info@chopras.nl', 'choprasstreetfood@gmail.com']
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,7 +41,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions: any = {
       from: '"Chopras Careers" <info@chopras.nl>',
-      to: ADMIN_EMAIL,
+      to: ADMIN_EMAILS,
       subject: `New Application for ${jobTitle} - ${fullName}`,
       html: emailHtmlBody,
     }
@@ -100,6 +101,19 @@ export async function POST(request: NextRequest) {
       }
     } catch (waErr) {
       console.error('WhatsApp not delivered:', waErr)
+    }
+
+    try {
+      await appendToGoogleSheet('Vacancy', {
+        fullName,
+        phone,
+        email: email || 'N/A',
+        education: education || 'N/A',
+        interest: interest || 'N/A',
+        jobTitle
+      })
+    } catch (sheetErr) {
+      console.error('[vacancy] Google Sheet logging error:', sheetErr)
     }
 
     return NextResponse.json({

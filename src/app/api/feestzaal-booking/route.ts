@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { appendToGoogleSheet } from '@/lib/googleSheets';
 
 const RESTAURANT_EMAIL = 'info@chopras.nl';
+const RESTAURANT_EMAILS = ['info@chopras.nl', 'choprasstreetfood@gmail.com'];
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -64,7 +66,7 @@ export async function POST(req: NextRequest) {
     // ── Email to restaurant (admin) ────────────────────────────────────
     await transporter.sendMail({
       from: `"Chopras Website" <${RESTAURANT_EMAIL}>`,
-      to: RESTAURANT_EMAIL,
+      to: RESTAURANT_EMAILS,
       subject: ` New Event Hall Booking – ${name} | ${date} | ${guests} guests`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A;">
@@ -123,6 +125,20 @@ export async function POST(req: NextRequest) {
       });
     } catch (waErr) {
       console.error('[feestzaal-booking] WhatsApp Pipeline Fault:', waErr);
+    }
+
+    try {
+      await appendToGoogleSheet('Reservation', {
+        name,
+        email,
+        phone: phone || 'N/A',
+        date,
+        guests,
+        message: message || 'None',
+        type: 'Feestzaal Event Hall Request'
+      })
+    } catch (sheetErr) {
+      console.error('[feestzaal-booking] Google Sheet logging error:', sheetErr)
     }
 
     return NextResponse.json({ success: true });

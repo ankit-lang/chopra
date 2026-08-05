@@ -1,4 +1,6 @@
 import { NextRequest } from 'next/server'
+import { sendBookingEmail } from '@/lib/email'
+import { appendToGoogleSheet } from '@/lib/googleSheets'
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,6 +13,9 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    await sendBookingEmail(`Catering Enquiry - ${eventType}`, body)
+    await appendToGoogleSheet('Contact', body)
 
     return Response.json({ success: true })
   } catch {
