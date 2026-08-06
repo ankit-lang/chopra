@@ -90,7 +90,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
                 <h3 className="font-heading font-bold text-3xl md:text-4xl text-[#1B2B5E] leading-tight max-w-sm">
                   {t.home.why1H3}
                 </h3>
-                <p className="font-body text-[#1A1A1A]/70 text-base leading-relaxed mt-5 max-w-sm">
+                <p className="font-body text-[#1A1A1A] text-base leading-relaxed mt-5 max-w-sm">
                   {t.home.why1P}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
                 <h3 className="font-heading font-bold text-2xl text-[#1B2B5E] leading-tight">
                   {t.home.why2H3}
                 </h3>
-                <p className="font-body text-[#1A1A1A]/70 text-sm leading-relaxed mt-3">
+                <p className="font-body text-[#1A1A1A] text-sm leading-relaxed mt-3">
                   {t.home.why2P}
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function WhySection({ locale = 'en' }: { locale?: Locale }) {
                 <h3 className="font-heading font-bold text-2xl text-[#1B2B5E] leading-tight">
                   {t.home.why3H3}
                 </h3>
-                <p className="font-body text-[#1A1A1A]/70 text-sm leading-relaxed mt-3">
+                <p className="font-body text-[#1A1A1A] text-sm leading-relaxed mt-3">
                   {t.home.why3P}
                 </p>
               </div>

@@ -10,7 +10,10 @@ const galleryImages = [
   "/feeztal/3.png",
   "/feeztal/4.png",
   "/feeztal/5.png",
-  "/feeztal/6.png"
+  "/feeztal/6.png",
+  "/feeztal/7.png",
+  "/feeztal/9.png",
+  "/feeztal/10.png"
 ];
 
 export default function GallerySection({ locale = 'en' }: { locale?: Locale }) {

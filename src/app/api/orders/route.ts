@@ -108,6 +108,21 @@ export async function POST(request: NextRequest) {
         <p style="margin:4px 0 0;font-size:13px;color:#555;">Ready in approximately 30 to 45 minutes</p>
       </div>
 
+      ${totalAmount >= 50 ? `
+      <div style="margin-top:16px;background:#fefce8;border:2px dashed #eab308;border-radius:10px;padding:16px;text-align:center;">
+        <p style="margin:0;font-size:15px;font-weight:700;color:#713f12;">🎁 5% Self-Collection Discount Applicable!</p>
+        <p style="margin:6px 0 0;font-size:13px;color:#854d0e;line-height:1.4;">
+          Your order is <strong>&euro;50 or more</strong>! A 5% discount (approx. <strong>&euro;${(totalAmount * 0.05).toFixed(2)} savings</strong>) will be applied at the restaurant during payment upon pickup.
+        </p>
+      </div>
+      ` : `
+      <div style="margin-top:16px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:12px 16px;text-align:center;">
+        <p style="margin:0;font-size:12px;color:#475569;">
+          💡 <strong>Special Offer:</strong> Get 5% OFF on all self-collection orders of &euro;50 or more when paying at the restaurant!
+        </p>
+      </div>
+      `}
+
     </div>
 
     <div style="background:#1B2B5E;padding:16px 32px;text-align:center;">

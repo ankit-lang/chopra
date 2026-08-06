@@ -43,7 +43,7 @@ export default function MenuLegend({ locale = 'en' }: { locale?: Locale }) {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-sm text-[#1A1A1A]/80 leading-relaxed font-body bg-[#F7F8FC] p-4 rounded-xl border border-gray-100">
+        <p className="mt-6 text-sm text-[#1A1A1A] leading-relaxed font-body bg-[#F7F8FC] p-4 rounded-xl border border-gray-100">
           {isNl ? (
             <>
               <strong className="text-[#06068a] font-semibold">Allergieën &amp; Pittigheid Voorkeur:</strong> Laat het ons voor het plaatsen van uw bestelling weten als u voedselallergieën of speciale dieetwensen heeft, zodat we hier optimaal rekening mee kunnen houden. U kunt ook uw gewenste pittigheidsniveau kiezen: Mild, Medium of Pittig.
@@ -51,6 +51,18 @@ export default function MenuLegend({ locale = 'en' }: { locale?: Locale }) {
           ) : (
             <>
               <strong className="text-[#06068a] font-semibold">Allergies &amp; Spice Preference:</strong> If you have any food allergies or dietary requirements, please let us know before placing your order so we can accommodate your needs as best as possible. You can also choose your preferred spice level—Mild, Medium, or Spicy. Simply let us know when ordering, and we&apos;ll prepare your meal just the way you like it.
+            </>
+          )}
+        </p>
+
+        <p className="mt-3 text-sm text-[#1A1A1A] leading-relaxed font-body bg-amber-50 p-4 rounded-xl border border-amber-200">
+          {isNl ? (
+            <>
+              <strong className="text-amber-900 font-bold">Belangrijk bij het bestellen:</strong> Vermeld bij uw bestelling uitdrukkelijk als u uw gerechten <span className="font-semibold underline">veganistisch</span> of <span className="font-semibold underline">glutenvrij</span> bereid wilt hebben. Gerechten worden niet standaard veganistisch of glutenvrij bereid.
+            </>
+          ) : (
+            <>
+              <strong className="text-amber-900 font-bold">Important Notice while ordering:</strong> Please explicitly mention when placing your order if you need your dishes prepared <span className="font-semibold underline">vegan</span> or <span className="font-semibold underline">gluten-free</span>. Dishes are not prepared vegan or gluten-free by default.
             </>
           )}
         </p>

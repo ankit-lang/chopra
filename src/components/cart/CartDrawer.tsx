@@ -210,6 +210,16 @@ export default function CartDrawer({ locale }: { locale: Locale }) {
               </div>
             )}
 
+            {/* Dietary Notice */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-950 text-xs flex items-start gap-2">
+              <span className="text-amber-600 font-bold flex-shrink-0">⚠️</span>
+              <p>
+                {locale === 'nl'
+                  ? 'Vermeld bij bestelling of uw gerechten veganistisch of glutenvrij moeten zijn (gerechten worden niet standaard vegan/glutenvrij bereid).'
+                  : 'Please mention in order notes if you need dishes vegan or gluten-free (dishes are not prepared vegan/gluten-free by default).'}
+              </p>
+            </div>
+
             {/* Checkout button */}
             <button
               onClick={handleCheckout}

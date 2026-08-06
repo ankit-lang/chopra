@@ -78,7 +78,7 @@ export default function StorySection({ locale = 'en' }: { locale?: Locale }) {
             )}
           </h2>
 
-          <div className="font-body text-[#1A1A1A]/80 text-base leading-relaxed mt-7 space-y-5">
+          <div className="font-body text-[#1A1A1A] text-base leading-relaxed mt-7 space-y-5">
             {locale === 'nl' ? (
               <>
                 <p>Chopras Indian Restaurant, opgericht door Arun Chopra, werd gecreëerd met één duidelijk doel: authentieke Indiase gerechten naar Nederland brengen zonder te compenseren in smaak of kwaliteit.</p>
@@ -110,7 +110,7 @@ export default function StorySection({ locale = 'en' }: { locale?: Locale }) {
           {/* Quote Block */}
           <div className="mt-8 rounded-2xl bg-white p-6 md:p-8 border-l-4 border-[#0000B3] shadow-sm relative">
             <div className="text-4xl text-[#0000B3]/20 absolute top-4 left-4 font-serif">"</div>
-            <p className="font-body text-[#1A1A1A]/80 text-lg italic leading-relaxed relative z-10 pl-6">
+            <p className="font-body text-[#1A1A1A] text-lg italic leading-relaxed relative z-10 pl-6">
               {locale === 'nl'
                 ? 'Bij Chopras Indian Restaurant vertelt elk gerecht een verhaal van authenticiteit. Van vers gebakken naan rechtstreeks uit onze traditionele tandoor tot de levendige Indiase street food: elke maaltijd wordt vers en met zorg bereid voor al onze gasten.'
                 : 'At Chopras Indian Restaurant, every dish tells a story of authenticity. We never compromise on fresh ingredients, premium quality, or genuine hospitality. From freshly baked naan straight out of our traditional tandoor to the vibrant Indian street food we were proud to introduce to the Netherlands, every meal is prepared fresh with care, passion, and attention to every guest.'}

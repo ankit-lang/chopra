@@ -265,7 +265,7 @@ export default function MenuPageClient({ categories, items }: MenuPageClientProp
       </nav>
 
       {/* Menu items by category */}
-      <div className="py-12 px-6 md:px-16 max-w-7xl mx-auto space-y-16">
+      <div className="pb-12 pt-6 px-6 md:px-16 max-w-7xl mx-auto space-y-16">
         {activeCategories.map((category) => {
           const categoryDishes = activeItems.filter((item) => item.category === category.id)
           if (categoryDishes.length === 0) return null

@@ -54,7 +54,7 @@ export default function MenuOverviewSection({ locale }: { locale: string }) {
             </AnimatedContent>
 
             <AnimatedContent direction="horizontal" distance={40} delay={0.2}>
-              <p className="font-body text-[#1A1A1A]/70 text-base md:text-lg leading-relaxed">
+              <p className="font-body text-[#1A1A1A] text-base md:text-lg leading-relaxed">
                 Discover one of the largest Indian menus in the Netherlands, featuring 143 authentic dishes across 13 carefully curated categories. From our famous butter chicken Den Haag and aromatic Biryani Den Haag to sizzling dishes prepared in our traditional 400-degree tandoor, every meal is made fresh using premium ingredients and authentic Indian recipes.
               </p>
             </AnimatedContent>

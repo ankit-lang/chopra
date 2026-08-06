@@ -19,12 +19,12 @@ export default function GallerySection({ locale = 'en' }: { locale?: Locale }) {
         <div className="w-full max-w-[1488px] mx-auto h-[350px] sm:h-[450px] md:h-[637px] overflow-hidden shadow-2xl md:rounded-2xl">
           <StoryGallery
             images={[
+              "/feeztal/8.png",
               "/gal/7.png",
               "/gal/5.png",
               "/gal/6.png",
               "/gal/3.png",
               "/gal/4.png?v=2",
-              "/gal/1.png",
             ]}
           />
         </div>

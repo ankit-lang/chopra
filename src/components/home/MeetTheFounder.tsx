@@ -83,7 +83,7 @@ export default function MeetTheFounder({ locale = 'en' }: { locale?: Locale }) {
             </div>
 
             {/* Body copy */}
-            <div className="font-body text-[#1A1A1A]/70 text-base leading-relaxed space-y-4">
+            <div className="font-body text-[#1A1A1A] text-base leading-relaxed space-y-4">
               {locale === 'nl' ? (
                 <>
                   <p>Chopras Indian Restaurant, opgericht door Arun Chopra, werd gecreëerd met één duidelijk doel: authentieke Indiase gerechten naar Nederland brengen zonder te compenseren in smaak of kwaliteit.</p>
@@ -107,7 +107,7 @@ export default function MeetTheFounder({ locale = 'en' }: { locale?: Locale }) {
             {/* Closing statement — accent card */}
             <div className="mt-8 rounded-2xl bg-[#0000B3]/[0.06] p-2 ring-1 ring-white/[0.12]">
               <div className="rounded-[calc(1rem-0.375rem)] bg-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] px-6 py-5">
-                <p className="font-body text-[#1A1A1A]/60 text-sm">{locale === 'nl' ? 'Dit is geen Indiaas-geïnspireerde keuken.' : 'This is not Indian-inspired cuisine.'}</p>
+                <p className="font-body text-[#1A1A1A] text-sm">{locale === 'nl' ? 'Dit is geen Indiaas-geïnspireerde keuken.' : 'This is not Indian-inspired cuisine.'}</p>
                 <p className="font-heading text-transparent bg-clip-text btn-gradient text-lg italic font-semibold mt-1">
                   {locale === 'nl'
                     ? 'Dit is authentiek Indiaas koken — bereid met traditie, passie en de smaken van India zoals ze bedoeld zijn.'

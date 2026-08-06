@@ -140,6 +140,23 @@ function OrderConfirmationContent({ locale }: { locale: Locale }) {
           </div>
         </div>
 
+        {/* 5% Discount Badge if totalAmount >= 50 */}
+        {lastOrder && lastOrder.totalAmount >= 50 && (
+          <div className="mt-4 bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 text-left flex items-start gap-3">
+            <span className="text-2xl flex-shrink-0">🎁</span>
+            <div>
+              <p className="font-heading font-bold text-amber-950 text-sm md:text-base">
+                {locale === 'nl' ? '5% Afhaalkorting van toepassing!' : '5% Self-Collection Discount Applicable!'}
+              </p>
+              <p className="font-body text-amber-900 text-xs md:text-sm mt-1 leading-relaxed">
+                {locale === 'nl'
+                  ? `Uw bestelling is €50 of meer. Een korting van 5% (ca. €${(lastOrder.totalAmount * 0.05).toFixed(2)}) wordt in het restaurant toegepast bij betaling tijdens het afhalen!`
+                  : `Your order is €50 or more. A 5% discount (approx. €${(lastOrder.totalAmount * 0.05).toFixed(2)}) will be applied at the restaurant during payment upon pickup!`}
+              </p>
+            </div>
+          </div>
+        )}
+
         <div className="border-t border-gray-100 my-8" />
 
         {/* Buttons */}

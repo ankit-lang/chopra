@@ -129,6 +129,18 @@ export default function VeganMenuPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Notice Banner */}
+      <section className="bg-amber-50 border-y border-amber-200 py-4 px-6">
+        <div className="max-w-4xl mx-auto flex items-center justify-center gap-3 text-amber-950 text-center">
+          <span className="text-xl flex-shrink-0">⚠️</span>
+          <p className="font-body text-sm md:text-base font-semibold leading-relaxed">
+            {isNl
+              ? 'Belangrijk: Vermeld bij uw bestelling uitdrukkelijk dat u de gerechten veganistisch wilt hebben. Gerechten worden niet standaard veganistisch bereid.'
+              : 'Important: While ordering, please mention that you need the dishes vegan. Dishes are not prepared vegan by default.'}
+          </p>
+        </div>
+      </section>
+
       {/* Main Intro */}
       <section className="bg-[#F7F8FC] py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">

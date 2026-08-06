@@ -10,6 +10,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 import DisableScrollRestoration from '@/components/DisableScrollRestoration'
 import WhatsAppWidget from '@/components/WhatsAppWidget'
 import ScrollToTopButton from '@/components/ScrollToTopButton'
+import DiscountPopupModal from '@/components/ui/DiscountPopupModal'
 import { type Locale } from '@/lib/useTranslations'
 import { RESTAURANT, SITE_URL } from '@/lib/constants'
 import { getWebSiteSchema } from '@/lib/schema'
@@ -154,6 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Footer locale={params.locale} />
         <WhatsAppWidget />
         <ScrollToTopButton />
+        <DiscountPopupModal locale={params.locale} />
       </body>
     </html>
   )
