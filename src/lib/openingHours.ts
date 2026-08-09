@@ -6,10 +6,28 @@ export interface OpeningStatus {
 }
 
 export function getAmsterdamTime(date: Date = new Date()) {
-  const hours = date.getHours()
-  const minutes = date.getMinutes()
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-  const weekday = days[date.getDay()]
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Amsterdam',
+    weekday: 'short',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
+  })
+
+  const parts = formatter.formatToParts(date)
+  let hours = 0
+  let minutes = 0
+  let weekday = 'Sun'
+
+  for (const part of parts) {
+    if (part.type === 'hour') {
+      hours = parseInt(part.value, 10) % 24
+    } else if (part.type === 'minute') {
+      minutes = parseInt(part.value, 10)
+    } else if (part.type === 'weekday') {
+      weekday = part.value
+    }
+  }
 
   return { hours, minutes, weekday, totalMinutes: hours * 60 + minutes }
 }
