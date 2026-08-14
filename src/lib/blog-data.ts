@@ -2,6 +2,523 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'best-event-venue-in-den-haag',
+    title: 'Planning a Birthday or Corporate Party? Why Chopras Indian Restaurant Is the Best Event Venue in Den Haag',
+    metaTitle: 'Planning a Birthday or Corporate Party? Why Chopras Indian Restaurant Is the Best Event Venue in Den Haag',
+    metaDescription:
+      'Planning a birthday or corporate event in Den Haag? Host your celebration at Chopras Indian Restaurant with authentic Indian food, private dining and catering.',
+    h1: 'Planning a Birthday or Corporate Party? Why Chopras Indian Restaurant Is the Best Event Venue in Den Haag',
+    titleNl: 'Een Verjaardag of Bedrijfsfeest Plannen? Waarom Chopras Indian Restaurant de Beste Evenementenlocatie in Den Haag Is',
+    metaTitleNl: 'Een Verjaardag of Bedrijfsfeest Plannen? Waarom Chopras Indian Restaurant de Beste Evenementenlocatie in Den Haag Is',
+    metaDescriptionNl:
+      'Een verjaardag of bedrijfsevenement plannen in Den Haag? Vier uw feest bij Chopras Indian Restaurant met authentiek Indiaas eten, zaalverhuur en catering.',
+    h1Nl: 'Een Verjaardag of Bedrijfsfeest Plannen? Waarom Chopras Indian Restaurant de Beste Evenementenlocatie in Den Haag Is',
+    primaryKeyword: 'Best event venue in Den Haag',
+    primaryKeywordNl: 'Beste evenementenlocatie in Den Haag',
+    keywords: [
+      'Best event venue in Den Haag',
+      'Event venue Den Haag',
+      'Indian event venue Den Haag',
+      'Chopras Indian Restaurant Den Haag',
+      'Private event hall Den Haag',
+      'Corporate event venue Den Haag',
+      'Birthday party venue Den Haag',
+    ],
+    language: 'en' as const,
+    publishedAt: '2026-08-14',
+    readingTime: 7,
+    author: 'Arun Chopra',
+    image: '/images/blog/best-event-venue-in-den-haag.png',
+    excerpt:
+      'Planning a birthday, corporate event, or cultural celebration in Den Haag? Discover why Chopras Indian Restaurant is the top choice with a private event hall for 25–80 guests, 100% halal kitchen, custom catering, and no hall rental fees on qualifying packages.',
+    excerptNl:
+      'Een verjaardag, bedrijfsevenement of cultureel feest plannen in Den Haag? Ontdek waarom Chopras Indian Restaurant de beste keuze is met een privé feestzaal voor 25–80 gasten, 100% halal keuken, catering op maat en geen zaalhuur bij kwalificerende arrangementen.',
+    faqs: [
+      {
+        question: 'How many guests can the private event hall accommodate?',
+        answer:
+          'The private party hall at Chopras Indian Restaurant can host 25 to 80 guests, making it suitable for birthdays, corporate events, family celebrations, baby showers, and private functions.',
+      },
+      {
+        question: 'Does Chopras Indian Restaurant offer catering outside the restaurant?',
+        answer:
+          'Yes. Chopras Indian Restaurant provides Indian catering across Den Haag, Rijswijk, Delft, Voorburg, Leidschendam, Zoetermeer, Loosduinen, Wateringen, Leyenburg, Houtwijk, Vruchtenbuurt, Transvaalkwartier, and surrounding South Holland areas.',
+      },
+      {
+        question: 'Is the food halal?',
+        answer:
+          'Yes. Every meat dish is prepared in a 100% halal-certified kitchen, and vegetarian, vegan, and gluten-free options are also available across the menu.',
+      },
+      {
+        question: 'Can I customise the event menu?',
+        answer:
+          'Absolutely. The team works with you to create a menu based on your guest count, dietary requirements, and event style.',
+      },
+      {
+        question: 'Is there a separate hall rental fee?',
+        answer:
+          'For qualifying food bookings, the private event hall is available without a separate hall rental fee. Contact the restaurant for package details and availability.',
+      },
+    ],
+    faqsNl: [
+      {
+        question: 'Hoeveel gasten passen er in de privé feestzaal?',
+        answer:
+          'De privé feestzaal bij Chopras Indian Restaurant biedt plaats aan 25 tot 80 gasten, geschikt voor verjaardagen, bedrijfsevenementen, familiefeesten en privébijeenkomsten.',
+      },
+      {
+        question: 'Biedt Chopras Indian Restaurant catering op locatie aan?',
+        answer:
+          'Ja. Chopras verzorgt Indiase catering in heel Den Haag, Rijswijk, Delft, Voorburg, Leidschendam, Zoetermeer en omstreken.',
+      },
+      {
+        question: 'Is het eten halal?',
+        answer:
+          'Ja. Alle vleesgerechten worden bereid in een 100% halal-gecertificeerde keuken. Vegetarische, veganistische en glutenvrije opties zijn eveneens ruimschoots aanwezig.',
+      },
+      {
+        question: 'Kan ik het evenementenmenu aanpassen?',
+        answer:
+          'Absoluut. Ons team stelt samen met u een menu op op basis van het aantal gasten, dieetwensen en het type evenement.',
+      },
+      {
+        question: 'Zijn er afzonderlijke zaalhuurkosten?',
+        answer:
+          'Bij kwalificerende catering- en dinerarrangementen is de privé feestzaal beschikbaar zonder afzonderlijke zaalhuur.',
+      },
+    ],
+    content: `
+<img src="/images/blog/best-event-venue-in-den-haag.png" alt="Planning a Birthday or Corporate Party? Why Chopras Indian Restaurant Is the Best Event Venue in Den Haag" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Planning a successful event isn't just about finding a venue—it's about creating an experience your guests will remember. The food, atmosphere, service, and organisation all play a part. Whether you're celebrating a birthday, anniversary, engagement, wedding, corporate dinner, business meeting, networking event, baby shower, gender reveal, naming ceremony, family reunion, retirement party, graduation, or private dinner, choosing the right venue can make all the difference. <a href="https://chopras.nl/">Chopras Indian Restaurant</a> also welcomes Diwali, Holi, Navratri, Garba, Eid, Christmas, New Year, Independence Day and other cultural celebrations, along with high teas, kitty parties, ladies' lunches, brunches, club meetings and social gatherings.</p>
+
+<p>If you're looking for an Indian event venue in Den Haag, Chopras Indian Restaurant offers everything you need under one roof. Located at Leyweg 986, Den Haag, Chopras Indian Restaurant combines authentic North Indian cuisine, a stylish <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a>, professional <a href="https://chopras.nl/catering">catering</a>, and warm hospitality, making it one of the city's most popular venues for private and corporate celebrations.</p>
+
+<h2>Why Choose Chopras Indian Restaurant for Your Birthday or Corporate Event?</h2>
+
+<div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-8">
+  <h3 class="text-amber-400 text-lg font-bold mb-2">Quick Answer:</h3>
+  <p class="mb-0">Chopras Indian Restaurant is one of the best event venues in Den Haag because it offers a private party hall for 25–80 guests, authentic Indian catering, a 100% halal-certified kitchen, vegetarian, vegan and gluten-free menu options, customised event packages, and professional service—all without a separate hall rental fee when booking qualifying food packages.</p>
+</div>
+
+<h2>A Private Event Space Designed for Every Celebration</h2>
+
+<p>Finding a venue that feels both welcoming and practical can be difficult. Chopras Indian Restaurant offers a beautifully designed private event hall with vibrant Indian décor, warm lighting, and a flexible layout that can be adapted to suit different occasions. Whether you prefer a formal seated dinner, a buffet, or a casual standing reception, the space can be arranged to match your event.</p>
+
+<p>The venue comfortably accommodates <strong>25 to 80 guests</strong>, making it ideal for intimate celebrations as well as larger gatherings. Perfect for:</p>
+
+<ul>
+  <li>Birthday Parties</li>
+  <li>Anniversary Celebrations</li>
+  <li>Corporate Events and Networking</li>
+  <li>Business Dinners</li>
+  <li>Team Lunches</li>
+  <li>Baby Showers</li>
+  <li>Engagement and Wedding Parties</li>
+  <li>Festive and Cultural Celebrations (Diwali &amp; Eid Celebrations)</li>
+  <li>Family Gatherings</li>
+  <li>Proposals and Romantic Dinners</li>
+  <li>High Tea and Gatherings</li>
+  <li>Community Events</li>
+  <li>Expat Events</li>
+  <li>Wellness and Creative workshops</li>
+  <li>Launches and Shoots</li>
+  <li>Charity and Fundraising events</li>
+</ul>
+
+<h2>Authentic Indian Food Your Guests Will Remember</h2>
+
+<p>Great events deserve great food.</p>
+
+<p>Unlike many catering companies that prepare meals in central production kitchens hours in advance, Chopras Indian Restaurant serves the same restaurant-quality food at every event. The dishes are prepared by the restaurant's own chefs using freshly ground Indian spices and traditional cooking methods, ensuring the same flavours guests enjoy when dining in.</p>
+
+<p>Popular event menu choices include:</p>
+
+<ul>
+  <li><a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a></li>
+  <li>Chicken Tikka Masala</li>
+  <li>Mutton Rogan Josh</li>
+  <li><a href="https://chopras.nl/biryani-den-haag">Chicken Biryani &amp; Lamb Biryani</a></li>
+  <li>Veg Biryani</li>
+  <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+  <li>Paneer Butter Masala</li>
+  <li>Palak Paneer</li>
+  <li>Chana Masala</li>
+  <li><a href="https://chopras.nl/tandoori-den-haag">Tandoori Chicken &amp; Chicken Tikka</a></li>
+  <li>Chicken Malai Tikka &amp; Chicken Hariyali Tikka</li>
+  <li>Lamb Seekh Kebab</li>
+  <li>Chopras Non Veg Platter</li>
+  <li>Paneer Tikka</li>
+  <li><a href="https://chopras.nl/soya-chaap-den-haag">Malai Soya Chaap</a></li>
+  <li><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a></li>
+  <li><a href="https://chopras.nl/chaat-den-haag">Veg Samosa Chaat &amp; Papdi Chaat</a></li>
+  <li>Garlic Naan, Pudina Paratha, Aloo Paratha, &amp; Lachha Paratha</li>
+</ul>
+
+<h3>Traditional Indian Desserts</h3>
+
+<ul>
+  <li>Moong Dal Halwa</li>
+  <li>Saffron Kheer</li>
+  <li>Kulfi Pistachio, Kulfi Malai, Kulfi Coconut, &amp; Kulfi Mango</li>
+  <li>Rasmalai &amp; Gulab Jamun</li>
+  <li>Ice Cream (Vanilla, Chocolate, Strawberry)</li>
+</ul>
+
+<p>Whether you're hosting a formal corporate dinner or a lively birthday party, every menu can be customised to suit your guests.</p>
+
+<h2>100% Halal Menu with Vegetarian &amp; Vegan Options</h2>
+
+<p>One of the biggest challenges when organising group events is accommodating different dietary preferences.</p>
+
+<p>At Chopras Indian Restaurant, every meat dish is prepared in a <a href="https://chopras.nl/halal-menu">fully halal-certified kitchen</a>, while <a href="https://chopras.nl/vegetarian-menu">vegetarian</a> and <a href="https://chopras.nl/vegan-menu">vegan</a> dishes are available across the menu. This makes it easy to cater for diverse groups without compromising on quality or flavour.</p>
+
+<p>Menu options include:</p>
+
+<ul>
+  <li>Halal Chicken</li>
+  <li>Halal Lamb</li>
+  <li>Vegetarian Curries</li>
+  <li>Vegan Specialities</li>
+  <li>Gluten-Free Choices</li>
+  <li>Indian Street Food</li>
+  <li>Tandoori Dishes</li>
+  <li>Buffet Menus</li>
+</ul>
+
+<p>Your guests can enjoy authentic Indian cuisine with complete confidence.</p>
+
+<h2>Corporate Events Made Easy</h2>
+
+<p>Planning a corporate event often means balancing professionalism with great hospitality.</p>
+
+<p>Chopras Indian Restaurant regularly hosts:</p>
+
+<ul>
+  <li>Team dinners</li>
+  <li>Client meetings</li>
+  <li>Business lunches</li>
+  <li>Product launches</li>
+  <li>Networking events</li>
+  <li>Employee appreciation dinners</li>
+  <li>Festival celebrations</li>
+  <li>Corporate catering</li>
+</ul>
+
+<p>The experienced team manages the food, service, and event setup, allowing you to focus on your guests rather than the logistics.</p>
+
+<h2>Celebrate Birthdays Without the Stress</h2>
+
+<p>Birthday celebrations should be about making memories—not worrying about cooking or coordinating suppliers.</p>
+
+<p>Whether you're planning a milestone birthday, a surprise party, or a family gathering, Chopras Indian Restaurant provides:</p>
+
+<ul>
+  <li>Private party space</li>
+  <li>Freshly prepared Indian food</li>
+  <li>Buffet and plated dining options</li>
+  <li>Friendly service</li>
+  <li>Customised menus</li>
+</ul>
+
+<p>With everything handled by one experienced team, you can simply relax and enjoy the celebration.</p>
+
+<h2>Professional Indian Catering Across Den Haag</h2>
+
+<p>Prefer to celebrate at your own venue?</p>
+
+<p><a href="https://chopras.nl/catering">Chopras Indian Restaurant also offers professional Indian catering</a> throughout:</p>
+
+<ul>
+  <li>Den Haag</li>
+  <li>Rijswijk</li>
+  <li>Delft</li>
+  <li>Voorburg</li>
+  <li>Leidschendam</li>
+  <li>Zoetermeer</li>
+  <li>Loosduinen</li>
+  <li>Wateringen (Gemeente Westland)</li>
+  <li>Leyenburg</li>
+  <li>Houtwijk</li>
+  <li>Vruchtenbuurt</li>
+  <li>Bouwlust en Vrederust</li>
+  <li>Regentessekwartier / Weimarstraat</li>
+  <li>Rustenburg en Oostbroek</li>
+  <li>Transvaalkwartier</li>
+  <li>Surrounding South Holland areas</li>
+</ul>
+
+<p>The catering menu includes authentic curries, biryanis, tandoori dishes, breads, desserts, and buffet options prepared by the same chefs who cook in the restaurant every day.</p>
+
+<h2>Why Guests Choose Chopras Indian Restaurant for Events</h2>
+
+<p>Chopras Indian Restaurant has earned the trust of families and businesses because it consistently delivers:</p>
+
+<ul>
+  <li><strong>4.9 Google Rating:</strong> More than 1,100 verified Google reviews</li>
+  <li><strong>Private Event Hall:</strong> Elegant venue for 25 to 80 guests</li>
+  <li><strong>No Separate Hall Rental:</strong> No extra fee with qualifying food packages</li>
+  <li><strong>Authentic North Indian Cuisine:</strong> Freshly prepared food</li>
+  <li><strong>100% Halal Kitchen:</strong> Certified halal meat options</li>
+  <li><strong>Vegetarian &amp; Vegan Menus:</strong> Extensive choices for all dietary preferences</li>
+  <li><strong>Professional Catering Team:</strong> Experienced service for all occasions</li>
+  <li><strong>Convenient Location:</strong> Easily accessible in Den Haag (Leyweg 986)</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="space-y-4 my-6">
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">How many guests can the private event hall accommodate?</h3>
+    <p class="text-neutral-300 mb-0">The private party hall at Chopras Indian Restaurant can host 25 to 80 guests, making it suitable for birthdays, corporate events, family celebrations, baby showers, cultural events, and private functions.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Does Chopras Indian Restaurant offer catering outside the restaurant?</h3>
+    <p class="text-neutral-300 mb-0">Yes. Chopras Indian Restaurant provides Indian catering across Den Haag, Rijswijk, Delft, Voorburg, Leidschendam, Zoetermeer, Loosduinen, Wateringen, Leyenburg, Houtwijk, Vruchtenbuurt, Transvaalkwartier, and surrounding South Holland areas.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Is the food halal?</h3>
+    <p class="text-neutral-300 mb-0">Yes. Every meat dish is prepared in a 100% halal-certified kitchen, and vegetarian, vegan, and gluten-free options are also available across the menu.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Can I customise the event menu?</h3>
+    <p class="text-neutral-300 mb-0">Absolutely. The team works with you to create a menu based on your guest count, dietary requirements, and event style.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Is there a separate hall rental fee?</h3>
+    <p class="text-neutral-300 mb-0">For qualifying food bookings, the private event hall is available without a separate hall rental fee. Contact the restaurant for package details and availability.</p>
+  </div>
+</div>
+
+<h2>Make Your Next Celebration Unforgettable at Chopras Indian Restaurant</h2>
+
+<p>Whether you're organising a birthday party, anniversary, corporate dinner, baby shower, or festive celebration, Chopras Indian Restaurant offers the perfect combination of exceptional food, a welcoming private venue, and professional event planning.</p>
+
+<p>From authentic North Indian cuisine and a 100% halal-certified kitchen to customised catering and attentive service, every detail is designed to help you host a memorable event. Conveniently located in Den Haag and serving surrounding areas including Delft, Rijswijk, Voorburg, Leidschendam, and Zoetermeer, Chopras Indian Restaurant is ready to make your celebration effortless.</p>
+
+<p><a href="https://chopras.nl/contact">Contact the Chopras Indian Restaurant team today</a> or <a href="https://chopras.nl/reserveren">reserve the private event hall online</a> to request a personalised catering quote and let your guests enjoy an event filled with authentic Indian flavours and warm hospitality.</p>
+`,
+    contentNl: `
+<img src="/images/blog/best-event-venue-in-den-haag.png" alt="Een Verjaardag of Bedrijfsfeest Plannen? Waarom Chopras Indian Restaurant de Beste Evenementenlocatie in Den Haag Is" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Het plannen van een succesvol evenement gaat niet alleen over het vinden van een locatie—het gaat over het creëren van een ervaring die uw gasten zich herinneren. Het eten, de sfeer, de bediening en de organisatie spelen allemaal een rol. Of u nu een verjaardag, jubileum, verloving, bruiloft, bedrijfsdiner, zakelijke bijeenkomst, netwerkevenement, babyshower, gender reveal, naamceremonie, familiereünie, pensioenfeest, afstuderen of privédiner viert, het kiezen van de juiste locatie maakt het verschil. <a href="https://chopras.nl/">Chopras Indian Restaurant</a> verwelkomt ook Diwali, Holi, Navratri, Garba, Eid, Kerstmis, Nieuwjaar, Onafhankelijkheidsdag en andere culturele feesten, evenals high tea's, kitty parties, ladies lunches, brunches en sociale bijeenkomsten.</p>
+
+<p>Als u op zoek bent naar een Indiase evenementenlocatie in Den Haag, biedt Chopras Indian Restaurant alles wat u nodig heeft onder één dak. Gelegen aan de Leyweg 986 in Den Haag combineert Chopras Indian Restaurant authentieke Noord-Indiase gerechten, een stijlvolle <a href="https://chopras.nl/feestzaal-den-haag">privé feestzaal</a>, professionele <a href="https://chopras.nl/catering">catering</a> en warme gastvrijheid, wat het tot een van de populairste locaties van de stad maakt voor privé- en bedrijfsevenementen.</p>
+
+<h2>Waarom Kiezen voor Chopras Indian Restaurant voor Uw Verjaardag of Bedrijfsevenement?</h2>
+
+<div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-8">
+  <h3 class="text-amber-400 text-lg font-bold mb-2">Snel Antwoord:</h3>
+  <p class="mb-0">Chopras Indian Restaurant is een van de beste evenementenlocaties in Den Haag omdat het een privé feestzaal biedt voor 25–80 gasten, authentieke Indiase catering, een 100% halal-gecertificeerde keuken, vegetarische, veganistische en glutenvrije opties, arrangementen op maat en professionele service—alles zonder afzonderlijke zaalhuur bij kwalificerende arrangementen.</p>
+</div>
+
+<h2>Een Privé Feestzaal Ontworpen voor Elke Gelegenheid</h2>
+
+<p>Het vinden van een locatie die zowel gastvrij als praktisch is kan lastig zijn. Chopras Indian Restaurant biedt een prachtig ontworpen privé feestzaal met sfeervolle Indiase sfeer, warme verlichting en een flexibele opstelling die kan worden aangepast aan verschillende gelegenheden. Of u nu de voorkeur geeft aan een formeel zittend diner, een buffet of een informele staande receptie, de ruimte kan naar wens worden ingericht.</p>
+
+<p>De locatie biedt comfortabel plaats aan <strong>25 tot 80 gasten</strong>, waardoor het ideaal is voor zowel intieme feesten als grotere bijeenkomsten. Perfect voor:</p>
+
+<ul>
+  <li>Verjaardagsfeesten</li>
+  <li>Jubileumvieringen</li>
+  <li>Bedrijfsevenementen &amp; Netwerken</li>
+  <li>Zakelijke Diners</li>
+  <li>Teamlunches</li>
+  <li>Babyshowers &amp; Gender Reveals</li>
+  <li>Verlovings- en Bruiloftsfeesten</li>
+  <li>Feestelijke &amp; Culturele Vieringen (Diwali &amp; Eid)</li>
+  <li>Familiebijeenkomsten</li>
+  <li>Huwelijksaanzoeken &amp; Romantische Diners</li>
+  <li>High Tea &amp; Sociale Bijeenkomsten</li>
+  <li>Community Evenementen</li>
+  <li>Expat Events</li>
+  <li>Workshops &amp; Creatieve Sessies</li>
+  <li>Lanceringen &amp; Shoots</li>
+  <li>Liefdadigheids- &amp; Inzamelingsacties</li>
+</ul>
+
+<h2>Authentiek Indiaas Eten Dat Uw Gasten Bijblijft</h2>
+
+<p>Geweldige evenementen verdienen geweldig eten.</p>
+
+<p>In tegenstelling tot veel cateringbedrijven die maaltijden uren van tevoren bereiden in centrale keukens, serveert Chopras Indian Restaurant bij elk evenement dezelfde kwaliteit als in het restaurant. De gerechten worden vers bereid door de eigen chef-koks met versgemalen Indiase specerijen en traditionele kookmethoden, waardoor gasten genieten van dezelfde smaken als bij een diner in het restaurant.</p>
+
+<p>Populaire keuzes op het evenementenmenu zijn onder meer:</p>
+
+<ul>
+  <li><a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a></li>
+  <li>Chicken Tikka Masala</li>
+  <li>Mutton Rogan Josh</li>
+  <li><a href="https://chopras.nl/biryani-den-haag">Chicken Biryani &amp; Lamb Biryani</a></li>
+  <li>Veg Biryani</li>
+  <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+  <li>Paneer Butter Masala</li>
+  <li>Palak Paneer</li>
+  <li>Chana Masala</li>
+  <li><a href="https://chopras.nl/tandoori-den-haag">Tandoori Chicken &amp; Chicken Tikka</a></li>
+  <li>Chicken Malai Tikka &amp; Hariyali Tikka</li>
+  <li>Lamb Seekh Kebab</li>
+  <li>Chopras Non-Veg Platter</li>
+  <li>Paneer Tikka</li>
+  <li><a href="https://chopras.nl/soya-chaap-den-haag">Malai Soya Chaap</a></li>
+  <li><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a></li>
+  <li><a href="https://chopras.nl/chaat-den-haag">Veg Samosa Chaat &amp; Papdi Chaat</a></li>
+  <li>Knoflook Naan, Pudina Paratha, Aloo Paratha &amp; Lachha Paratha</li>
+</ul>
+
+<h3>Traditionele Indiase Desserts</h3>
+
+<ul>
+  <li>Moong Dal Halwa</li>
+  <li>Saffraan Kheer</li>
+  <li>Kulfi (Pistache, Malai, Kokos, Mango)</li>
+  <li>Rasmalai &amp; Gulab Jamun</li>
+  <li>IJs (Vanille, Chocolade, Aardbei)</li>
+</ul>
+
+<p>Of u nu een formeel bedrijfsdiner organiseert of een gezellig verjaardagsfeest, elk menu kan worden aangepast aan uw gasten.</p>
+
+<h2>100% Halal Menu met Vegetarische &amp; Veganistische Opties</h2>
+
+<p>Een van de grootste uitdagingen bij het organiseren van groepsevenementen is het accommoderen van verschillende dieetwensen.</p>
+
+<p>Bij Chopras Indian Restaurant wordt elk vleesgerecht bereid in een <a href="https://chopras.nl/halal-menu">100% halal-gecertificeerde keuken</a>, terwijl <a href="https://chopras.nl/vegetarian-menu">vegetarische</a> en <a href="https://chopras.nl/vegan-menu">veganistische</a> gerechten ruimschoots beschikbaar zijn. Dit maakt het eenvoudig om voor diverse groepen te cateren zonder in te leveren op kwaliteit of smaak.</p>
+
+<p>Menu opties omvatten:</p>
+
+<ul>
+  <li>Halal Kip</li>
+  <li>Halal Lamsvlees</li>
+  <li>Vegetarische Curry's</li>
+  <li>Veganistische Specialiteiten</li>
+  <li>Glutenvrije Keuzes</li>
+  <li>Indiase Street Food</li>
+  <li>Tandoori Gerechten</li>
+  <li>Buffet Menu's</li>
+</ul>
+
+<p>Uw gasten kunnen met het volste vertrouwen genieten van authentieke Indiase gerechten.</p>
+
+<h2>Bedrijfsevenementen Zonder Zorgen</h2>
+
+<p>Het plannen van een bedrijfsevenement vraagt om de juiste balans tussen professionaliteit en gastvrijheid.</p>
+
+<p>Chopras Indian Restaurant verzorgt regelmatig:</p>
+
+<ul>
+  <li>Teamdiners</li>
+  <li>Klantbijeenkomsten</li>
+  <li>Zakelijke lunches</li>
+  <li>Productlanceringen</li>
+  <li>Netwerkevenementen</li>
+  <li>Personeelsfeesten</li>
+  <li>Feestdagvieringen</li>
+  <li>Zakelijke catering</li>
+</ul>
+
+<p>Het ervaren team regelt het eten, de bediening en de opstelling, zodat u zich kunt richten op uw gasten.</p>
+
+<h2>Vier Verjaardagen Zonder Stress</h2>
+
+<p>Verjaardagsfeesten horen te gaan om het maken van herinneringen—niet om stress over koken of leveranciers.</p>
+
+<p>Of u nu een kroonjaar viert, een verrassingsfeest organiseert of een familiebijeenkomst plant, Chopras Indian Restaurant biedt:</p>
+
+<ul>
+  <li>Privé feestruimte</li>
+  <li>Vers bereid Indiaas eten</li>
+  <li>Buffet- en uitgeserveerde dinermogelijkheden</li>
+  <li>Vriendelijke bediening</li>
+  <li>Menu's op maat</li>
+</ul>
+
+<p>Met alles geregeld door één ervaren team kunt u simpelweg ontspannen en genieten.</p>
+
+<h2>Professionele Indiase Catering in Heel Den Haag</h2>
+
+<p>Viert u het feest liever op uw eigen locatie?</p>
+
+<p><a href="https://chopras.nl/catering">Chopras Indian Restaurant biedt ook professionele Indiase catering</a> in:</p>
+
+<ul>
+  <li>Den Haag</li>
+  <li>Rijswijk</li>
+  <li>Delft</li>
+  <li>Voorburg</li>
+  <li>Leidschendam</li>
+  <li>Zoetermeer</li>
+  <li>Loosduinen</li>
+  <li>Wateringen (Gemeente Westland)</li>
+  <li>Leyenburg</li>
+  <li>Houtwijk</li>
+  <li>Vruchtenbuurt</li>
+  <li>Bouwlust en Vrederust</li>
+  <li>Regentessekwartier / Weimarstraat</li>
+  <li>Rustenburg en Oostbroek</li>
+  <li>Transvaalkwartier</li>
+  <li>Omliggende regio's in Zuid-Holland</li>
+</ul>
+
+<p>Het cateringmenu bevat authentieke curry's, biryani's, tandoori gerechten, broden, desserts en buffetopties bereid door dezelfde chef-koks die dagelijks in het restaurant koken.</p>
+
+<h2>Waarom Gasten voor Chopras Indian Restaurant Kiezen</h2>
+
+<p>Chopras Indian Restaurant heeft het vertrouwen gewonnen van gezinnen en bedrijven dankzij:</p>
+
+<ul>
+  <li><strong>4.9 Google Score:</strong> Meer dan 1.100 geverifieerde Google-reviews</li>
+  <li><strong>Privé Feestzaal:</strong> Stijlvolle locatie voor 25 tot 80 gasten</li>
+  <li><strong>Geen Zaalhuur:</strong> Geen extra kosten bij kwalificerende arrangementen</li>
+  <li><strong>Authentieke Noord-Indiase Keuken:</strong> Vers bereide gerechten</li>
+  <li><strong>100% Halal Keuken:</strong> Gecertificeerd halal vlees</li>
+  <li><strong>Vegetarisch &amp; Veganistisch:</strong> Uitgebreide menukeuzes</li>
+  <li><strong>Professioneel Cateringteam:</strong> Ervaren service voor alle feesten</li>
+  <li><strong>Gunstige Locatie:</strong> Uitstekend bereikbaar aan Leyweg 986, Den Haag</li>
+</ul>
+
+<h2>Veelgestelde Vragen</h2>
+
+<div class="space-y-4 my-6">
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Hoeveel gasten passen er in de privé feestzaal?</h3>
+    <p class="text-neutral-300 mb-0">De privé zaal bij Chopras Indian Restaurant biedt plaats aan 25 tot 80 gasten, geschikt voor verjaardagen, bedrijfsevenementen, familiefeesten en privébijeenkomsten.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Biedt Chopras Indian Restaurant catering op locatie aan?</h3>
+    <p class="text-neutral-300 mb-0">Ja. Chopras verzorgt Indiase catering in heel Den Haag, Rijswijk, Delft, Voorburg, Leidschendam, Zoetermeer, Loosduinen, Wateringen, Leyenburg, Houtwijk, Vruchtenbuurt, Transvaalkwartier en omstreken.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Is het eten halal?</h3>
+    <p class="text-neutral-300 mb-0">Ja. Alle vleesgerechten worden bereid in een 100% halal-gecertificeerde keuken. Vegetarische, veganistische en glutenvrije opties zijn eveneens ruimschoots aanwezig.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Kan ik het evenementenmenu aanpassen?</h3>
+    <p class="text-neutral-300 mb-0">Absoluut. Ons team stelt samen met u een menu op op basis van het aantal gasten, dieetwensen en het type evenement.</p>
+  </div>
+
+  <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Zijn er afzonderlijke zaalhuurkosten?</h3>
+    <p class="text-neutral-300 mb-0">Bij kwalificerende catering- en dinerarrangementen is de privé feestzaal beschikbaar zonder afzonderlijke zaalhuur. Neem contact op met het restaurant voor pakketdetails en beschikbaarheid.</p>
+  </div>
+</div>
+
+<h2>Maak Uw Volgende Feest Onvergetelijk bij Chopras Indian Restaurant</h2>
+
+<p>Of u nu een verjaardagsfeest, jubileum, bedrijfsdiner, babyshower of feestelijke bijeenkomst organiseert, Chopras Indian Restaurant biedt de perfecte combinatie van heerlijk eten, een sfeervolle privézaal en professionele organisatie.</p>
+
+<p>Van authentieke Noord-Indiase gerechten en een 100% halal-gecertificeerde keuken tot catering op maat en gastvrije bediening, elk detail is ontworpen om uw evenement een succes te maken. Handig gelegen in Den Haag en actief in omliggende steden zoals Delft, Rijswijk, Voorburg, Leidschendam en Zoetermeer, staat Chopras Indian Restaurant voor u klaar.</p>
+
+<p><a href="https://chopras.nl/contact">Neem vandaag nog contact op met het Chopras team</a> of <a href="https://chopras.nl/reserveren">reserveer de privé zaal online</a> om uw feest te plannen!</p>
+`,
+  },
+  {
     slug: 'why-is-chopras-one-of-the-highest-rated-indian-restaurants-in-den-haag',
     title: 'Why Is Chopras One of the Highest-Rated Indian Restaurants in Den Haag? | Chopras Indian Restaurant',
     metaTitle: 'Why Is Chopras One of the Highest-Rated Indian Restaurants in Den Haag?',
