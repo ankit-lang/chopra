@@ -26,10 +26,10 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
         href={getLocalePath('en')}
         aria-label="Switch to English"
         className={cn(
-          'px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
+          'px-3.5 py-2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-full text-xs font-semibold transition-all duration-200',
           locale === 'en'
             ? 'bg-white text-[#1B2B5E] shadow-sm'
-            : 'text-white/60 hover:text-white'
+            : 'text-white/80 hover:text-white'
         )}
       >
         EN
@@ -38,10 +38,10 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
         href={getLocalePath('nl')}
         aria-label="Switch to Nederlands"
         className={cn(
-          'px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
+          'px-3.5 py-2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-full text-xs font-semibold transition-all duration-200',
           locale === 'nl'
             ? 'bg-white text-[#1B2B5E] shadow-sm'
-            : 'text-white/60 hover:text-white'
+            : 'text-white/80 hover:text-white'
         )}
       >
         NL
@@ -346,7 +346,7 @@ export default function Header({ locale }: { locale: Locale }) {
 
             {/* Hamburger  -  mobile */}
             <button
-              className="lg:hidden p-2 text-white"
+              className="lg:hidden p-2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center text-white"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
@@ -388,7 +388,7 @@ export default function Header({ locale }: { locale: Locale }) {
           <button
             onClick={() => setMobileOpen(false)}
             aria-label="Close menu"
-            className="text-white/60 hover:text-white transition-colors p-1"
+            className="text-white/80 hover:text-white transition-colors p-2 min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
           >
             <X className="w-6 h-6" />
           </button>

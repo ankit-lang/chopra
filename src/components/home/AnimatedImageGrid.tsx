@@ -25,6 +25,7 @@ export default function AnimatedImageGrid({ className }: { className?: string })
             src="/images/dishes/tandoori-dishes.webp"
             alt="Authentic Indian Cuisine"
             fill
+            sizes="(max-width: 768px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           {/* Hover overlay with text */}
@@ -46,6 +47,7 @@ export default function AnimatedImageGrid({ className }: { className?: string })
             src="/images/restaurant/arun-chopra.jpg"
             alt="Chef Arun Chopra"
             fill
+            sizes="(max-width: 768px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           {/* Hover overlay with text */}

@@ -100,11 +100,14 @@ export default function LocaleLayout({
   return (
     <html lang={params.locale} className={`${playfair.variable} ${sourceSerif.variable} ${dmSans.variable} ${greatVibes.variable}`}>
       <head>
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZKMF6VZ9Q2"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -116,7 +119,7 @@ export default function LocaleLayout({
         <link rel="profile" href="https://chopras.nl/llms.txt" />
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -127,7 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <Script
           id="clarity-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wg5a6xl2c0");`,
           }}

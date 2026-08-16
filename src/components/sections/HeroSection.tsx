@@ -1,6 +1,8 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, ShoppingBag } from 'lucide-react'
 import { getTranslations, type Locale } from '@/lib/useTranslations'
 import { RESTAURANT } from '@/lib/constants'
@@ -150,7 +152,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
                 <span className="font-heading text-lg md:text-xl font-bold text-white">4.9</span>
                 <span className="text-white text-sm md:text-base">★</span>
               </div>
-              <div className="text-[7px] md:text-[9px] text-white/50 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">
+              <div className="text-[9px] md:text-[10px] text-white/80 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">
                 {locale === 'nl' ? <>Google<br className="md:hidden" />Beoordeling</> : <>Google<br className="md:hidden" />Rating</>}
               </div>
             </div>
@@ -158,7 +160,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
             {/* Stat 2: Reviews */}
             <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4 py-2 md:py-3 px-2 md:px-4">
               <div className="font-heading text-lg md:text-xl font-bold text-white">1100+</div>
-              <div className="text-[7px] md:text-[9px] text-white/50 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">
+              <div className="text-[9px] md:text-[10px] text-white/80 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">
                 {locale === 'nl' ? <>Google<br className="md:hidden" />Recensies</> : <>Google<br className="md:hidden" />Reviews</>}
               </div>
             </div>
@@ -169,7 +171,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
                 <svg viewBox="0 0 32 32" className="w-4 h-4 md:w-5 md:h-5 fill-[#34E0A1] flex-shrink-0"><path d="M28.5 8H3.5A1.5 1.5 0 002 9.5v13A1.5 1.5 0 003.5 24h25a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0028.5 8zM16 21a5 5 0 110-10 5 5 0 010 10zm0-8a3 3 0 100 6 3 3 0 000-6z" /></svg>
                 <span className="font-heading text-base md:text-lg font-bold text-white">{locale === 'nl' ? 'Uitstekend' : 'Excellent'}</span>
               </div>
-              <div className="text-[7px] md:text-[9px] text-white/50 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">Tripadvisor</div>
+              <div className="text-[9px] md:text-[10px] text-white/80 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">Tripadvisor</div>
             </div>
 
           </div>
@@ -182,7 +184,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
         <div className="rounded-full bg-[#0000B3]/10 p-1.5 ring-1 ring-white/20">
           <Link
             href={`${base}/contact`}
-            className="group flex items-center justify-between rounded-full btn-gradient pl-6 pr-2 py-2 text-white text-sm font-semibold uppercase tracking-widest shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
+            className="group flex items-center justify-between rounded-full btn-gradient pl-6 pr-2 py-2 text-white text-sm font-semibold uppercase tracking-widest shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] min-h-[48px]"
           >
             {tr.common.reserve}
             <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-black/10">
@@ -198,33 +200,68 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
 }
 
 function HeroVideoBackground() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <div className="absolute inset-0 w-full h-full bg-[#0a0a1a] overflow-hidden">
-      {/* Mobile Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
-        className="md:hidden absolute inset-0 w-full h-full object-cover brightness-110"
-      >
-        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1785953647/homemobban_plpiio.mp4" type="video/mp4" />
-      </video>
+      {/* Mobile Poster Image for Instant LCP */}
+      <div className="md:hidden absolute inset-0 w-full h-full">
+        <Image
+          src="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
+          alt="Chopras Indian Restaurant Den Haag"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover brightness-110"
+        />
+      </div>
 
-      {/* Desktop Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
-      >
-        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922887/homevideo_znd8qq.mp4" type="video/mp4" />
-      </video>
+      {/* Desktop Poster Image for Instant LCP */}
+      <div className="hidden md:block absolute inset-0 w-full h-full">
+        <Image
+          src="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
+          alt="Chopras Indian Restaurant Den Haag"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover brightness-110"
+        />
+      </div>
+
+      {/* Lazy-loaded Video streams after hydration */}
+      {mounted && (
+        <>
+          {/* Mobile Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
+            className="md:hidden absolute inset-0 w-full h-full object-cover brightness-110"
+          >
+            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1785953647/homemobban_plpiio.mp4" type="video/mp4" />
+          </video>
+
+          {/* Desktop Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
+          >
+            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922887/homevideo_znd8qq.mp4" type="video/mp4" />
+          </video>
+        </>
+      )}
     </div>
   )
 }

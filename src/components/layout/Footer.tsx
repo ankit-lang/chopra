@@ -93,8 +93,8 @@ export default function Footer({ locale }: { locale: Locale }) {
                 <span className="text-[#06068a] font-bold bg-white px-3 py-1 rounded-full text-sm">16:30 - 22:30</span>
               </div>
               <div className="flex justify-between items-center p-4">
-                <span className="text-white/60 tracking-wide">Monday</span>
-                <span className="text-white/50 font-medium uppercase text-xs tracking-widest">Closed</span>
+                <span className="text-white/80 tracking-wide">Monday</span>
+                <span className="text-white/80 font-medium uppercase text-xs tracking-widest">Closed</span>
               </div>
             </div>
           </div>

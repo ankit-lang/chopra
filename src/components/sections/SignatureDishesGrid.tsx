@@ -40,7 +40,7 @@ function DishCard({ dish, base, index }: { dish: Dish; base: string; index: numb
         alt={dish.name}
         fill
         className={`object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105 brightness-110 ${dish.desktopImage ? 'md:hidden' : ''}`}
-        sizes="(max-width: 768px) 100vw, 20vw"
+        sizes="(max-width: 768px) 100vw, 25vw"
       />
 
       {/* Desktop Image */}
@@ -50,7 +50,7 @@ function DishCard({ dish, base, index }: { dish: Dish; base: string; index: numb
           alt={dish.name}
           fill
           className="hidden md:block object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105 brightness-110"
-          sizes="20vw"
+          sizes="(max-width: 768px) 1px, 20vw"
         />
       )}
 
