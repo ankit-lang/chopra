@@ -1,7 +1,6 @@
 'use client'
 import { type Locale } from '@/lib/useTranslations'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 export default function CateringForm({ locale = 'en' }: { locale?: Locale }) {
   const isNl = locale === 'nl'
@@ -50,71 +49,35 @@ export default function CateringForm({ locale = 'en' }: { locale?: Locale }) {
 
     setSubmitting(true)
 
-    // 1. Build Dynamic Variables for Customer Email Template
-    const mailHeader = 'CATERING ENQUIRY RECEIVED!'
-    const mailSubtitle = 'Thank you for contacting Chopras Indian Restaurant regarding your catering request. Our team is currently reviewing your event details.'
-    const mailRows = `
-      <tr><td style="padding: 6px 0; width: 40%;"><b>Full Name:</b></td><td style="padding: 6px 0; color: #111;">${fullName}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Phone Number:</b></td><td style="padding: 6px 0; color: #111;">${phone}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Email Address:</b></td><td style="padding: 6px 0; color: #111;">${email}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Event Type:</b></td><td style="padding: 6px 0; color: #111;">${eventType}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Event Date:</b></td><td style="padding: 6px 0; color: #111;">${eventDate}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Event Time:</b></td><td style="padding: 6px 0; color: #111;">${eventTime || 'N/A'}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Number of Guests:</b></td><td style="padding: 6px 0; color: #111;">${numGuests}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Location / Address:</b></td><td style="padding: 6px 0; color: #111;">${venue}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Kitchen Setup:</b></td><td style="padding: 6px 0; color: #111;">${kitchenSetup || 'N/A'}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Food Preference:</b></td><td style="padding: 6px 0; color: #111;">${vegNonVeg}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Dietary Requirements:</b></td><td style="padding: 6px 0; color: #111;">${dietaryRequirements || 'None'}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Catering Type:</b></td><td style="padding: 6px 0; color: #111;">${cateringType}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Staff Required:</b></td><td style="padding: 6px 0; color: #111;">${staffRequired || 'N/A'}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Crockery Required:</b></td><td style="padding: 6px 0; color: #111;">${crockeryRequired || 'N/A'}</td></tr>
-      ${additionalNotes ? `<tr><td style="padding: 6px 0;"><b>Additional Notes:</b></td><td style="padding: 6px 0; color: #111;">${additionalNotes}</td></tr>` : ''}
-    `
-
     const templateParams = {
-      customer_name: fullName,
-      customer_email: email,
-      customer_phone: phone,
-      event_type: eventType,
-      event_date: eventDate,
-      event_time: eventTime || 'N/A',
-      num_guests: numGuests,
-      venue: venue,
-      service_type: 'Catering Enquiry',
-      mail_header: mailHeader,
-      mail_subtitle: mailSubtitle,
-      mail_rows: mailRows,
-      kitchen_setup: kitchenSetup || 'N/A',
-      veg_non_veg: vegNonVeg,
-      dietary_requirements: dietaryRequirements || 'None',
-      catering_type: cateringType,
-      staff_required: staffRequired || 'N/A',
-      crockery_required: crockeryRequired || 'N/A',
-      additional_notes: additionalNotes || 'None'
+      fullName,
+      email,
+      phone,
+      eventType,
+      eventDate,
+      eventTime: eventTime || 'N/A',
+      numGuests,
+      venue,
+      kitchenSetup: kitchenSetup || 'N/A',
+      vegNonVeg,
+      dietaryRequirements: dietaryRequirements || 'None',
+      cateringType,
+      staffRequired: staffRequired || 'N/A',
+      crockeryRequired: crockeryRequired || 'N/A',
+      additionalNotes: additionalNotes || 'None'
     }
 
     try {
-      // Send Auto-Reply to Customer
-      await emailjs.send(
-        'service_h7g2zls',
-        'template_jjbx1xs',
-        templateParams,
-        'X4zEaO59vJ2l3L64E'
-      )
-
-      // Send Alert to Admin
-      await emailjs.send(
-        'service_h7g2zls',
-        'template_z546bio',
-        templateParams,
-        'X4zEaO59vJ2l3L64E'
-      )
-
-      fetch('/api/booking', {
+      const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'Catering Enquiry', payload: templateParams })
-      }).catch(err => console.error(err))
+      })
+
+      const resData = await res.json()
+      if (!res.ok || !resData.success) {
+        throw new Error(resData.error || 'Failed to submit enquiry')
+      }
 
       // Trigger WhatsApp Pipeline Lead API
       fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
@@ -159,7 +122,7 @@ export default function CateringForm({ locale = 'en' }: { locale?: Locale }) {
       setAdditionalNotes('')
 
     } catch (err: any) {
-      console.error('EmailJS Execution Error:', err)
+      console.error('Submission Error:', err)
       setError(isNl ? 'Verzenden mislukt. Probeer het opnieuw.' : 'Failed to submit enquiry. Please try again.')
     } finally {
       setSubmitting(false)

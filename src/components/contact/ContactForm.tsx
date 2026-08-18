@@ -2,7 +2,6 @@
 
 import { type Locale } from '@/lib/useTranslations'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
   const isNl = locale === 'nl'
@@ -61,16 +60,6 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
 
     setSubmitting(true)
 
-    // Build customer email params
-    const customerParams = {
-      fullName,
-      email,
-      mailHeader: serviceType === 'feestzaal' ? 'FEESTZAAL REPLY FORM' : 'REPLY to CATERING FORM',
-      mailSubtitle: serviceType === 'feestzaal' 
-        ? 'Thank you for your interest in our Feestzaal (Party Hall). We have successfully received your enquiry.'
-        : 'Thank you for contacting Chopras Indian Restaurant. We have received your catering inquiry.'
-    }
-
     // Build admin notes
     let customizedAdminNotes = `Service Context: ${serviceType.toUpperCase()}\n`
     customizedAdminNotes += `Event Type: ${eventType}\n`
@@ -106,17 +95,19 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     }
 
     try {
-      await emailjs.send('service_h7g2zls', 'template_jjbx1xs', customerParams, 'X4zEaO59vJ2l3L64E')
-      await emailjs.send('service_h7g2zls', 'template_z546bio', adminParams, 'X4zEaO59vJ2l3L64E')
-
-      fetch('/api/booking', {
+      const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           type: serviceType === 'feestzaal' ? 'Party Hall Enquiry' : 'Catering Request',
           payload: adminParams
         })
-      }).catch(err => console.error(err))
+      })
+
+      const resData = await res.json()
+      if (!res.ok || !resData.success) {
+        throw new Error(resData.error || 'Failed to submit enquiry')
+      }
 
       fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
         method: 'POST',

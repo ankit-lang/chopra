@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 export default function ReservationForm() {
   const [date, setDate] = useState('')
@@ -42,26 +41,6 @@ export default function ReservationForm() {
 
     setSubmitting(true)
 
-    // 1. Construct dynamic rows and headers for the unified Customer Template
-    const mailHeader = 'BOOKING CONFIRMED!'
-    const mailSubtitle = 'Thank you for booking with Chopras Indian Restaurant. Your reservation has been successfully confirmed. We look forward to welcoming you!'
-    const mailRows = `
-      <tr><td style="padding: 6px 0; width: 40%;"><b>Email:</b></td><td style="padding: 6px 0; color: #111111;">${email}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Phone:</b></td><td style="padding: 6px 0; color: #111111;">${phone}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Date:</b></td><td style="padding: 6px 0; color: #111111;">${date}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Time:</b></td><td style="padding: 6px 0; color: #111111;">${time}</td></tr>
-      <tr><td style="padding: 6px 0;"><b>Persons:</b></td><td style="padding: 6px 0; color: #111111;">${persons}</td></tr>
-    `
-
-    const customerParams = {
-      fullName: fullName,
-      email: email,
-      mailHeader: mailHeader,
-      mailSubtitle: mailSubtitle,
-      mailRows: mailRows
-    }
-
-    // 2. Structural parameters for your Admin Template
     const adminParams = {
       fullName: fullName,
       email: email,
@@ -76,27 +55,16 @@ export default function ReservationForm() {
     }
 
     try {
-      // Dispatch Copy 1: To Customer
-      await emailjs.send(
-        'service_di4ue46',
-        'template_jjbx1xs',
-        customerParams,
-        'tlV8x_1C8JV1P63yT'
-      )
-
-      // Dispatch Copy 2: To Admin (info@chopras.nl & choprasstreetfood@gmail.com)
-      await emailjs.send(
-        'service_di4ue46',
-        'template_z546bio',
-        adminParams,
-        'tlV8x_1C8JV1P63yT'
-      )
-
-      fetch('/api/booking', {
+      const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'Table Reservation', payload: adminParams })
-      }).catch(err => console.error(err))
+      })
+
+      const resData = await res.json()
+      if (!res.ok || !resData.success) {
+        throw new Error(resData.error || 'Failed to submit reservation')
+      }
 
       console.log('Mail delivered successfully')
       setSuccess(true)
