@@ -211,7 +211,7 @@ function HeroVideoBackground() {
       {/* Mobile Poster Image for Instant LCP */}
       <div className="md:hidden absolute inset-0 w-full h-full">
         <Image
-          src="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
+          src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_640,c_limit,so_0/v1785953647/homemobban_plpiio.jpg"
           alt="Chopras Indian Restaurant Den Haag"
           fill
           priority
@@ -223,7 +223,7 @@ function HeroVideoBackground() {
       {/* Desktop Poster Image for Instant LCP */}
       <div className="hidden md:block absolute inset-0 w-full h-full">
         <Image
-          src="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
+          src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit,so_0/v1784922887/homevideo_znd8qq.jpg"
           alt="Chopras Indian Restaurant Den Haag"
           fill
           priority
@@ -232,35 +232,28 @@ function HeroVideoBackground() {
         />
       </div>
 
-      {/* Lazy-loaded Video streams after hydration */}
+      {/* Lazy-loaded Video streams after hydration (responsive source selection + preload="none") */}
       {mounted && (
-        <>
-          {/* Mobile Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1785953647/homemobban_plpiio.jpg"
-            className="md:hidden absolute inset-0 w-full h-full object-cover brightness-110"
-          >
-            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1785953647/homemobban_plpiio.mp4" type="video/mp4" />
-          </video>
-
-          {/* Desktop Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784922887/homevideo_znd8qq.jpg"
-            className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
-          >
-            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784922887/homevideo_znd8qq.mp4" type="video/mp4" />
-          </video>
-        </>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          poster="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit,so_0/v1784922887/homevideo_znd8qq.jpg"
+          className="absolute inset-0 w-full h-full object-cover brightness-110"
+        >
+          <source
+            src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_640,c_limit/v1785953647/homemobban_plpiio.mp4"
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          <source
+            src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit/v1784922887/homevideo_znd8qq.mp4"
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
+        </video>
       )}
     </div>
   )

@@ -382,30 +382,26 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
 
         {/* 1. HERO BANNER */}
         <section className="relative w-full h-screen min-h-[600px] flex flex-col items-center justify-center bg-[#06068a]">
-          {/* Mobile Video */}
+          {/* Responsive Video Background (preload="none" + media queries) */}
           <video
             autoPlay
             loop
             muted
             playsInline
-            preload="auto"
-            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923262/feez2_x36civ.jpg"
-            className="md:hidden absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
+            preload="none"
+            poster="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit,so_0/v1784923305/feeez_bglfdd.jpg"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
           >
-            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923262/feez2_x36civ.mp4" type="video/mp4" />
-          </video>
-
-          {/* Desktop Video */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923305/feeez_bglfdd.jpg"
-            className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-0 brightness-110"
-          >
-            <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923305/feeez_bglfdd.mp4" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_640,c_limit/v1784923262/feez2_x36civ.mp4"
+              type="video/mp4"
+              media="(max-width: 767px)"
+            />
+            <source
+              src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit/v1784923305/feeez_bglfdd.mp4"
+              type="video/mp4"
+              media="(min-width: 768px)"
+            />
           </video>
 
           {/* Bright overlay */}

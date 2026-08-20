@@ -9,30 +9,26 @@ export default function MenuHeroSection({ locale = 'en' }: { locale?: Locale }) 
   return (
     <div className="relative h-screen overflow-hidden">
 
-      {/* Mobile background video */}
+      {/* Background video (responsive source selection + preload="none") */}
       <video
-        className="absolute inset-0 w-full h-full object-cover block md:hidden brightness-105"
+        className="absolute inset-0 w-full h-full object-cover brightness-105"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
-        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923037/menumob_ngkax0.jpg"
+        preload="none"
+        poster="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit,so_0/v1784923097/menudesktop_wp5olf.jpg"
       >
-        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923037/menumob_ngkax0.mp4" type="video/mp4" />
-      </video>
-
-      {/* Desktop background video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover hidden md:block brightness-105"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="https://res.cloudinary.com/demy9se9a/video/upload/so_0/v1784923097/menudesktop_wp5olf.jpg"
-      >
-        <source src="https://res.cloudinary.com/demy9se9a/video/upload/v1784923097/menudesktop_wp5olf.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_640,c_limit/v1784923037/menumob_ngkax0.mp4"
+          type="video/mp4"
+          media="(max-width: 767px)"
+        />
+        <source
+          src="https://res.cloudinary.com/demy9se9a/video/upload/f_auto,q_auto,w_1280,c_limit/v1784923097/menudesktop_wp5olf.mp4"
+          type="video/mp4"
+          media="(min-width: 768px)"
+        />
       </video>
 
       {/* Hero content */}
