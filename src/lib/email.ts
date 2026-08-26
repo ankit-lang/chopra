@@ -21,6 +21,40 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
     .map(([k, v]) => `<tr><td style="padding:6px 12px 6px 0;font-weight:600;text-transform:capitalize;color:#06068a;">${k.replace(/([A-Z])/g, ' $1')}</td><td style="padding:6px 0;color:#1a1a1a;">${v}</td></tr>`)
     .join('')
 
+  const dateStr = payload.date || payload.eventDate
+  const timeStr = payload.time || payload.eventTime || '18:00'
+  let calendarHtml = ''
+
+  if (dateStr) {
+    const [year, month, day] = dateStr.split('-').map(Number)
+    const [hours, minutes] = timeStr.split(':').map(Number)
+    if (year && month && day && !isNaN(hours) && !isNaN(minutes)) {
+      const startDateObj = new Date(year, month - 1, day, hours, minutes)
+      const endDateObj = new Date(year, month - 1, day, hours + 2, minutes)
+      const toIsoCompact = (d: Date) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'
+      const datesParam = `${toIsoCompact(startDateObj)}/${toIsoCompact(endDateObj)}`
+      const persons = payload.persons || payload.numGuests || payload.guests || '2'
+      const title = `Table Reservation: ${customerName} (${persons} Persons)`
+      const location = 'Chopras Indian Restaurant, Leyweg 986, 2545 GV Den Haag'
+      const details = `Reservation Details:\nName: ${customerName}\nGuests: ${persons}\nPhone: ${payload.phone || 'N/A'}\nEmail: ${customerEmail || 'N/A'}`
+
+      const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${datesParam}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`
+      const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${encodeURIComponent(title)}&startdt=${startDateObj.toISOString()}&enddt=${endDateObj.toISOString()}&body=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`
+
+      calendarHtml = `
+        <div style="margin:20px 0;padding:16px;background:#f0f4ff;border-radius:8px;border:1px solid #c7d2fe;text-align:center;">
+          <p style="margin:0 0 12px 0;font-weight:bold;color:#06068a;font-size:14px;">📅 Add Reservation to Calendar</p>
+          <a href="${googleUrl}" target="_blank" style="display:inline-block;background:#4285F4;color:#ffffff;padding:8px 16px;margin:4px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;">
+            Add to Google Calendar
+          </a>
+          <a href="${outlookUrl}" target="_blank" style="display:inline-block;background:#0078D4;color:#ffffff;padding:8px 16px;margin:4px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;">
+            Add to Outlook Calendar
+          </a>
+        </div>
+      `
+    }
+  }
+
   const adminHtml = `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A;">
       <div style="background:#06068a;padding:24px 32px;border-radius:8px 8px 0 0;">
@@ -32,6 +66,7 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
         <table style="width:100%;border-collapse:collapse;font-size:14px;background:#F7F8FC;padding:16px;border-radius:8px;">
           ${lines}
         </table>
+        ${calendarHtml}
         <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
         <p style="color:#888;font-size:12px;">Chopras Indian Restaurant · Leyweg 986, Den Haag · +31 6 30645930</p>
       </div>
@@ -50,6 +85,7 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
         <table style="width:100%;border-collapse:collapse;font-size:14px;background:#F7F8FC;padding:16px;border-radius:8px;">
           ${lines}
         </table>
+        ${calendarHtml}
         <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
         <p style="color:#888;font-size:12px;">Chopras Indian Restaurant · Leyweg 986, Den Haag · +31 6 30645930</p>
       </div>
