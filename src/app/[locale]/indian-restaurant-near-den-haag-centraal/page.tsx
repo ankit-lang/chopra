@@ -173,13 +173,13 @@ export default function IndianRestaurantCentraalPage({ params }: Props) {
           ) : (
             <div className="space-y-5">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Commuters who walk past the same station restaurants every evening know the feeling: quick, predictable, and disappointing. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986 is fifteen minutes by tram from Den Haag Centraal station. That is the only friction. What follows is an entirely different category of dinner.
+                Commuters who walk past the same station restaurants every evening know the feeling: quick, predictable, and disappointing. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986 is fifteen minutes by tram from Den Haag Centraal station, making it an accessible dining option for visitors coming from Den Haag Centrum, Central Station and Spuiplein. That is the only friction. What follows is an entirely different category of dinner.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Our <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken</Link>, and <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori</Link> are made with spices sourced directly from India and ground fresh every morning in our kitchen. Not from a bag. Not from a supplier blend. This is the difference that brings commuters and tourists back to Leyweg, evening after evening.
+                Our <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">butter chicken</Link>, and <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori</Link> are made with spices sourced directly from India and ground fresh every morning in our kitchen. Not from a bag. Not from a supplier blend. This is the difference that brings commuters, residents and tourists from Den Haag Centrum, Binnenhof, Mauritshuis, Hofvijver and Plein back to Leyweg, evening after evening.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                At 4.9 stars from over 1100 Google reviews, Chopras Indian Restaurant is one of the strongest-rated Indian restaurants in Den Haag by both rating and review volume. A high rating becomes more meaningful when it is supported by hundreds of reviews, and Chopras has both.
+                At 4.9 stars from over 1200 Google reviews, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> is one of the strongest-rated Indian restaurants in Den Haag by both rating and review volume. A high rating becomes more meaningful when it is supported by hundreds of reviews, and Chopras has both. Guests from nearby neighbourhoods such as Zeeheldenkwartier, Regentessekwartier and Duinoord can also choose <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> when looking for authentic Indian food in Den Haag.
               </p>
             </div>
           )}
@@ -207,13 +207,13 @@ export default function IndianRestaurantCentraalPage({ params }: Props) {
           ) : (
             <div className="space-y-5">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The tandoor at Leyweg 986 reaches 400 degrees Celsius. This is not an oven you will find elsewhere in Den Haag. It is the temperature that gives <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">naan its char at the edges</Link> and chicken tikka its smoky crust. No conventional oven can replicate this. That is the reason tandoori dishes at Chopras taste the way they were designed to taste.
+                The tandoor at Leyweg 986 reaches 400 degrees Celsius. This is not an oven you will find elsewhere in Den Haag. It is the temperature that gives <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">naan its char at the edges</Link> and chicken tikka its smoky crust. No conventional oven can replicate this. That is the reason tandoori dishes at <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> taste the way they were designed to taste.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras is also fully <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>. Not partially. The entire kitchen, every supplier, every dish. For guests who need to know exactly what is on their plate, that is not a minor detail. It is precisely why families travel from across Den Haag, Rijswijk, and Zoetermeer to Leyweg 986.
+                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> is also fully <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>. Not partially. The entire kitchen, every supplier, every dish. For guests who need to know exactly what is on their plate, that is not a minor detail. It is precisely why families travel from across Den Haag Centrum, Zeeheldenkwartier, Regentessekwartier, Duinoord and Voorburg to Leyweg 986.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                With 143 dishes across 13 categories, there is also a complete menu for <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarian and vegan guests</Link>. No token dish at the top of the menu. A genuine offering, from <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">dal makhani</Link> to soya chaap and chaat.
+                With 143 dishes across 13 categories, there is also a complete menu for <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarian and vegan guests</Link>. No token dish at the top of the menu. A genuine offering, from <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">dal makhani</Link> to soya chaap and chaat. This variety also makes <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> a convenient dining destination for visitors spending the day around Zuiderpark, Escamp, Zuidwest and Morgenstond.
               </p>
             </div>
           )}
@@ -261,25 +261,28 @@ export default function IndianRestaurantCentraalPage({ params }: Props) {
                 <div>
                   <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">By Tram</h3>
                   <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                    Take the tram from Den Haag Centraal toward Leyweg. The journey takes approximately fifteen minutes. Get off at the Leyweg stop and Chopras Indian Restaurant is at number 986 at the end of the street. Free on-site parking is available for guests who prefer to drive.
+                    Take the tram from Den Haag Centraal toward Leyweg. The journey takes approximately fifteen minutes. Get off at the Leyweg stop and <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> is at number 986 at the end of the street. The tram route makes the restaurant easy to reach from Den Haag Centrum, Spuiplein and Plein, while visitors who have been exploring Binnenhof, Mauritshuis or Hofvijver can continue their evening with dinner at <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link>. Free on-site parking is available for guests who prefer to drive.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">By Bus</h3>
                   <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                    Several bus lines run from the city centre toward Leyweg. Journey time is typically twenty minutes. A solid alternative for travellers who prefer the bus, with stops within easy walking distance of Leyweg 986.
+                    Several bus lines run from the city centre toward Leyweg. Journey time is typically twenty minutes. A solid alternative for travellers who prefer the bus, with stops within easy walking distance of Leyweg 986. The connection is useful for guests travelling from Voorburg, Wateringse Veld and the wider Den Haag Zuidwest area, as well as those coming from central Den Haag.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">By Car</h3>
                   <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                    From Den Haag Centraal, the drive to Leyweg 986 takes around ten minutes. Chopras has its own on-site parking. No car park. No walking distance from a meter. You pull in, you park, and you are at the door.
+                    From Den Haag Centraal, the drive to Leyweg 986 takes around ten minutes. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> has its own on-site parking. No car park. No walking distance from a meter. You pull in, you park, and you are at the door. The location is also convenient for guests travelling from Escamp, Morgenstond, Zuidwest, Zuiderpark and Wateringse Veld.
                   </p>
                 </div>
                 <div>
+                  <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed mb-6">
+                    Visitors spending the day at Madurodam or travelling from Kijkduin can also include <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> in their Den Haag dining plans. Leyweg provides a straightforward destination for an authentic Indian dinner away from the busiest city-centre restaurant areas.
+                  </p>
                   <h3 className="font-heading text-3xl md:text-4xl text-[#06068a] mb-4 leading-[1.3]">Delivery to Your Door</h3>
                   <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                    Prefer to stay home? <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian food delivery from Chopras</Link> is available through Thuisbezorgd and Uber Eats across Den Haag. You can also call to arrange collection at Leyweg 986. Available Tuesday to Sunday from 16:30 to 22:30.
+                    Prefer to stay home? <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian food delivery from Chopras</Link> is available through Thuisbezorgd and Uber Eats across Den Haag. You can also call to arrange collection at Leyweg 986. Delivery and collection are convenient for residents across Den Haag Centrum, Zeeheldenkwartier, Regentessekwartier, Duinoord, Escamp, Zuidwest, Morgenstond, Wateringse Veld and Kijkduin. Available Tuesday to Sunday from 16:30 to 22:30.
                   </p>
                 </div>
               </>

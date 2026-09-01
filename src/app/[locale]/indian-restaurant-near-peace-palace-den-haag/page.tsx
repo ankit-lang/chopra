@@ -177,7 +177,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              at Leyweg 986, Den Haag is 10 minutes from the Peace Palace by car. Rated 4.9 stars from 1100+ Google reviews, Chopras serves authentic North Indian cuisine with a fully halal certified kitchen. Choose from biryani, tandoori and curry across 143 dishes. Open Tuesday to Sunday from 16:30 to 22:30.{' '}
+              at Leyweg 986, Den Haag is 10 minutes from the Peace Palace by car. Rated 4.9 stars from 1100+ Google reviews, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves authentic North Indian cuisine with a fully halal certified kitchen. Convenient for visitors from nearby neighbourhoods including Zeeheldenkwartier, Piet Heinstraat, Prins Hendrikstraat and Duinoord, the restaurant offers biryani, tandoori and curry across 143 dishes. Open Tuesday to Sunday from 16:30 to 22:30.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserve your table
               </Link>{' '}
@@ -222,14 +222,14 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The Peace Palace draws some of the most internationally minded visitors in Europe. Diplomats. Legal professionals from the International Court of Justice. Journalists covering global institutions. After a full day in Den Haag&apos;s diplomatic quarter, the question is not &quot;where is a restaurant?&quot; The question is &quot;where is a restaurant that actually delivers?&quot; Chopras Indian Restaurant at Leyweg 986 is the answer. Ten minutes by car. No detour required.
+                The Peace Palace draws some of the most internationally minded visitors in Europe. Diplomats. Legal professionals from the International Court of Justice. Journalists covering global institutions. After a full day in Den Haag&apos;s diplomatic quarter, the question is not &quot;where is a restaurant?&quot; The question is &quot;where is a restaurant that actually delivers?&quot; <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986 is the answer. Ten minutes by car. No detour required. Guests from Thomsonlaan, Thomsonplein, Frederik Hendriklaan, Valkenboskwartier, Regentessekwartier and Bomenbuurt can also reach Chopras when looking for authentic Indian food in Den Haag.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The kitchen at Leyweg grinds masalas from whole spices sourced directly from India, every morning before the first service. The volatile aromatic oils in cumin, cardamom and coriander begin evaporating within hours of grinding. A kitchen using pre-mixed supplier blends is serving yesterday&apos;s flavour. At Chopras, the spice is ground that morning and cooked that evening. Browse the{' '}
+                The kitchen at Leyweg grinds masalas from whole spices sourced directly from India, every morning before the first service. The volatile aromatic oils in cumin, cardamom and coriander begin evaporating within hours of grinding. A kitchen using pre-mixed supplier blends is serving yesterday&apos;s flavour. At <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link>, the spice is ground that morning and cooked that evening. Browse the{' '}
                 <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   full Indian restaurant menu at Chopras
                 </Link>{' '}
-                and you will see 143 dishes built on that standard.
+                and you will see 143 dishes built on that standard. This makes Chopras a convenient choice for residents and visitors from Zeeheldenkwartier, Duinoord, Regentessekwartier and Valkenboskwartier who want freshly prepared North Indian cuisine.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 The tandoor clay oven at Leyweg reaches 400 degrees Celsius. That temperature is what gives{' '}
@@ -240,7 +240,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                 <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   garlic naan
                 </Link>{' '}
-                its char on the edges. No conventional oven replicates this. It is also why 1100+ guests have left 4.9-star reviews on Google.
+                its char on the edges. No conventional oven replicates this. It is also why 1100+ guests have left 4.9-star reviews on Google. Visitors exploring Scheveningen, Keizerstraat, the Boulevard, Beach, Pier or Kurhaus can also choose Chopras for an authentic Indian dinner after spending time along the coast.
               </p>
             </div>
           )}
@@ -346,7 +346,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                   <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     butter chicken at Chopras
                   </Link>{' '}
-                  starts with halal chicken in a tomato and cream sauce built from masala ground that morning. Garlic naan comes direct from the 400-degree tandoor, with a char on the edges that no conventional oven can replicate. This combination converts first-time visitors into regulars.
+                  starts with halal chicken in a tomato and cream sauce built from masala ground that morning. Garlic naan comes direct from the 400-degree tandoor, with a char on the edges that no conventional oven can replicate. This combination converts first-time visitors into regulars. It is also a popular choice for guests travelling from Duinoord, Thomsonplein, Frederik Hendriklaan and Bomenbuurt who want a classic North Indian meal.
                 </p>
               </div>
               <div>
@@ -356,7 +356,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                   <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     biryani at Chopras
                   </Link>{' '}
-                  uses saffron basmati rice and is available with chicken, lamb or vegetables. It is cooked separately from the gravy and combined at the moment of service. The aroma when it arrives at the table is the difference between a kitchen that cares and one that does not.
+                  uses saffron basmati rice and is available with chicken, lamb or vegetables. It is cooked separately from the gravy and combined at the moment of service. The aroma when it arrives at the table is the difference between a kitchen that cares and one that does not. Guests coming from Valkenboskwartier, Regentessekwartier, Piet Heinstraat and Prins Hendrikstraat can enjoy this traditional Indian speciality as part of a relaxed dinner at Leyweg.
                 </p>
               </div>
               <div>
@@ -365,7 +365,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                   <Link href={`${base}/mutton-rogan-josh-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     Mutton rogan josh
                   </Link>{' '}
-                  is a Kashmiri dish built on a deep, slow-cooked gravy. At Chopras, the lamb is halal and the spice blend is ground in-house. It is not a dish for guests who want mild. It is a dish for guests who want the real thing.
+                  is a Kashmiri dish built on a deep, slow-cooked gravy. At <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link>, the lamb is halal and the spice blend is ground in-house. It is not a dish for guests who want mild. It is a dish for guests who want the real thing. For visitors from Zeeheldenkwartier, Duinoord, Thomsonlaan and surrounding Den Haag neighbourhoods, it offers a rich and traditional North Indian dining experience.
                 </p>
               </div>
             </div>
@@ -401,18 +401,18 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Chopras Indian Restaurant has a private hall at Leyweg 986 that accommodates 25 to 80 guests. This is suitable for{' '}
+                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> has a private hall at Leyweg 986 that accommodates 25 to 80 guests. This is suitable for{' '}
                 <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   corporate events in Den Haag
                 </Link>
-                , diplomatic receptions, and formal group dinners. The food at events comes from the same kitchen, the same spices, and the same standard as the restaurant.
+                , diplomatic receptions, and formal group dinners. The food at events comes from the same kitchen, the same spices, and the same standard as the restaurant. The venue can be a convenient option for groups based around Zeeheldenkwartier, Duinoord, Regentessekwartier, Valkenboskwartier and Bomenbuurt, as well as businesses and organisations near the Peace Palace.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                For catering needs off-site, Chopras also provides{' '}
+                For catering needs off-site, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> also provides{' '}
                 <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indian catering across Den Haag
                 </Link>{' '}
-                for weddings, birthdays and corporate events. Contact us at <EmailLink /> or call +31 6 30645930 to discuss availability and menu options.
+                for weddings, birthdays and corporate events. Catering can serve clients and events across Zeeheldenkwartier, Piet Heinstraat, Prins Hendrikstraat, Duinoord, Thomsonlaan, Thomsonplein, Frederik Hendriklaan, Valkenboskwartier, Regentessekwartier and Bomenbuurt, as well as locations around Scheveningen, Keizerstraat, Duindorp, Madurodam and Kijkduin. Contact us at <EmailLink /> or call +31 6 30645930 to discuss availability and menu options.
               </p>
             </div>
           )}

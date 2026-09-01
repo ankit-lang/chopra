@@ -8,8 +8,8 @@ import { getTranslations, type Locale } from '@/lib/useTranslations'
 
 const faqsEn = [
   {
-    question: 'How far is Chopras Indian Restaurant from Delft?',
-    answer: 'Chopras Indian Restaurant is at Leyweg 986, Den Haag, approximately 15 minutes by car from central Delft via the A13. The route bypasses central Den Haag entirely. By tram or bus via Den Haag Centraal, the journey takes around 25 minutes.',
+    question: 'Is Chopras Indian Restaurant near Delft Centrum and Delft University?',
+    answer: 'Yes. Chopras Indian Restaurant is located at Leyweg 986, Den Haag, approximately 15 minutes by car from Delft Centrum via the A13. It is also conveniently accessible for students and staff from Delft University (TU Delft), with public transport connections available from Delft.',
   },
   {
     question: 'Is Chopras Indian Restaurant halal certified?',
@@ -143,7 +143,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           >
             {isNl
               ? 'Authentiek Noord-Indiaas eten, volledig halal gecertificeerd, 4,9 sterren van meer dan 1100 beoordelingen. Leyweg 986, Den Haag - direct bereikbaar vanuit Delft via de A13.'
-              : 'Authentic North Indian food, fully halal certified, 4.9 stars from 1100+ reviews. Leyweg 986, Den Haag - directly accessible from Delft via the A13.'}
+              : 'Authentic North Indian food near Delft Centrum, fully halal certified, with easy access from Delft University (TU Delft). Chopras Indian Restaurant in Den Haag is approximately 15 minutes from Delft via the A13.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -187,17 +187,16 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Delft and Den Haag share a continuous urban footprint. The municipal boundary runs through built-up streets, not open countryside.{' '}
-                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link>{' '}
-                at Leyweg 986 sits approximately 15 minutes from central Delft by car via the A13, and most routes bypass Den Haag city centre entirely.
+                Delft and Den Haag share a continuous urban footprint. The municipal boundary runs through built-up streets, not open countryside. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986 sits approximately 15 minutes from central Delft by car via the A13, and most routes bypass Den Haag city centre entirely.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Paid parking is available in the Leyweg area. Tram line 2 stops at Leyweg, a short walk from the entrance, making Chopras straightforward to reach without a car as well.
+                Paid parking is available in the Leyweg area. Tram line 2 stops at Leyweg, a short walk from the entrance, making <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> straightforward to reach without a car as well.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                By public transport, the journey from Delft station takes 20 to 25 minutes via tram or bus connections through Den Haag Centraal to the Leyweg stop. For TU Delft students and staff without a car, this is a straightforward evening out. Browse the{' '}
-                <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full 143-dish menu</Link>{' '}
-                before you leave so you arrive knowing exactly what you want.
+                By public transport, the journey from Delft station takes 20 to 25 minutes via tram or bus connections through Den Haag Centraal to the Leyweg stop. Whether you are visiting from Delft Centrum, studying at Delft University (TU Delft), or living in the surrounding Delft area, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> offers a convenient option for authentic Indian dining just a short journey from Delft.
+              </p>
+              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+                For TU Delft students and staff without a car, this is a straightforward evening out. Browse the <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full 143-dish menu</Link> before you leave so you arrive knowing exactly what you want.
               </p>
             </div>
           )}
@@ -232,14 +231,13 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
                 The 4.9-star Google rating across 1100+ verified reviews is the number that matters most to anyone comparing options. High ratings with low review counts are common and easy to achieve. 1100+ reviews at 4.9 stars means a sustained standard across hundreds of separate evenings, not a lucky streak.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The kitchen runs on a specific discipline. Spices are sourced directly from India and ground fresh every morning before service opens. The volatile aromatic compounds in cumin, cardamom, and coriander begin evaporating within hours of grinding. Pre-mixed blends from suppliers are the shortcut most restaurants take. Chopras does not.
+                The kitchen runs on a specific discipline. Spices are sourced directly from India and ground fresh every morning before service opens. The volatile aromatic compounds in cumin, cardamom, and coriander begin evaporating within hours of grinding. Pre-mixed blends from suppliers are the shortcut most restaurants take. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> does not.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The tandoor clay oven at Leyweg reaches 400 degrees Celsius. That temperature gives{' '}
-                <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">naan bread</Link>{' '}
-                its charred edges and{' '}
-                <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori dishes</Link>{' '}
-                their smoky exterior crust. No conventional oven replicates this. It is the physical fact behind the taste difference, and it is exactly what Delft visitors describe in their reviews.
+                The tandoor clay oven at Leyweg reaches 400 degrees Celsius. That temperature gives <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">naan bread</Link> its charred edges and <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">tandoori dishes</Link> their smoky exterior crust. No conventional oven replicates this. It is the physical fact behind the taste difference, and it is exactly what Delft visitors describe in their reviews.
+              </p>
+              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> is also a convenient choice for students, staff and visitors from Delft University (TU Delft), as well as families and professionals living around Delft Centrum. Whether you are looking for authentic Indian food near Delft Centrum or an Indian restaurant near Delft University, the short journey to Leyweg makes Chopras an easy option for an evening meal, family dinner or casual gathering.
               </p>
             </div>
           )}
@@ -309,19 +307,16 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Visitors from Delft order{' '}
-                <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>{' '}
-                at above-average rates. The saffron basmati rice and fresh-ground spices at Chopras represent exactly the gap between restaurant biryani and what most home kitchens can produce. The quality is immediately apparent and consistently repeatable.
+                Visitors from Delft order <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link> at above-average rates. The saffron basmati rice and fresh-ground spices at <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> represent exactly the gap between restaurant biryani and what most home kitchens can produce. The quality is immediately apparent and consistently repeatable.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The street food section draws TU Delft&apos;s international community in particularly strong numbers.{' '}
-                <Link href={`${base}/pani-puri-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Pani puri</Link>,{' '}
-                <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat</Link>,{' '}
-                and samosa are dishes that carry genuine nostalgia for South Asian visitors. Finding authentic versions outside of a South Asian home kitchen is genuinely rare in this region.
+                The street food section draws TU Delft&apos;s international community in particularly strong numbers. <Link href={`${base}/pani-puri-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Pani puri</Link>, <Link href={`${base}/chaat-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">chaat</Link>, and samosa are dishes that carry genuine nostalgia for South Asian visitors. Finding authentic versions outside of a South Asian home kitchen is genuinely rare in this region.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Butter chicken</Link>{' '}
-                remains the entry point for most Dutch guests visiting Chopras for the first time from Delft. The richness of the tomato and cream sauce, made with fresh-ground masala rather than a jarred base, sets an immediate benchmark for what Indian food can be.
+                <Link href={`${base}/butter-chicken-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Butter chicken</Link> remains the entry point for most Dutch guests visiting <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> for the first time from Delft. The richness of the tomato and cream sauce, made with fresh-ground masala rather than a jarred base, sets an immediate benchmark for what Indian food can be.
+              </p>
+              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+                For students and international visitors from Delft University (TU Delft), popular choices also include pani puri, chaat, samosa, biryani and butter chicken, offering a taste of authentic Indian street food and North Indian cuisine. Visitors from Delft Centrum can enjoy these dishes as part of a relaxed dinner, whether they are looking for an authentic Indian restaurant near Delft University or Indian food near Delft Centrum.
               </p>
             </div>
           )}

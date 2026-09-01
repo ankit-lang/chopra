@@ -180,16 +180,7 @@ export default function IndianRestaurantZoetermeerPage({ params }: Props) {
             </p>
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-              Chopras Indian Restaurant at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway.
-              Rated 4.9 stars by 1100+ verified guests on Google, Chopras serves 143{' '}
-              <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
-                halal-certified dishes
-              </Link>{' '}
-              from a kitchen that grinds its spices fresh each morning. The{' '}
-              <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
-                full 143-dish menu
-              </Link>{' '}
-              spans curries, tandoori, and biryani. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway. It is also conveniently accessible for visitors from Nootdorp, Leidschenveen and Voorburg, making <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> a practical choice for those looking for an authentic Indian restaurant near Zoetermeer and the surrounding areas. Rated 4.9 stars by 1100+ verified guests on Google, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves 143 <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal-certified dishes</Link> from a kitchen that grinds its spices fresh each morning. The <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full 143-dish menu</Link> spans curries, tandoori, and biryani. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.
             </p>
           )}
         </div>
@@ -223,14 +214,13 @@ export default function IndianRestaurantZoetermeerPage({ params }: Props) {
                 Zoetermeer sits directly east of Den Haag, connected by the A12 motorway and the Randstadrail tram network. From central Zoetermeer, take the A12 westbound and exit at Leyweg. The drive takes approximately 20 minutes. Paid parking is available in the Leyweg area.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
+                For visitors coming from Nootdorp, Leidschenveen and Voorburg, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg is also easily reachable by car and public transport, making it a convenient destination for an evening of authentic North Indian cuisine.
+              </p>
+              <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 By public transport, the Randstadrail connects Zoetermeer directly to Den Haag Centrum station. From there, a bus runs toward Leyweg. Total travel time is typically 30 to 40 minutes depending on departure time and connection.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                Zoetermeer has one of the largest South Asian communities in the Den Haag region. Hindustani families, Pakistani and Indian expats, and a growing generation of Dutch households with an Indian food tradition at home. For them, Chopras is the nearest authentic option with the{' '}
-                <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
-                  confirmed halal certification
-                </Link>{' '}
-                the community requires. Tram line 2 stops at Leyweg, a short walk from the entrance, making Chopras accessible without a car as well.
+                Zoetermeer has one of the largest South Asian communities in the Den Haag region. Hindustani families, Pakistani and Indian expats, and a growing generation of Dutch households with an Indian food tradition at home. For them, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> is the nearest authentic option with the <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">confirmed halal certification</Link> the community requires. Tram line 2 stops at Leyweg, a short walk from the entrance, making <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> accessible without a car as well. Whether you are coming from Zoetermeer, Nootdorp, Leidschenveen or Voorburg, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> offers a convenient destination for halal, vegetarian, vegan and authentic North Indian food.
               </p>
             </div>
           )}
