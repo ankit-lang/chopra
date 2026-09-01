@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { appendToGoogleSheet } from '@/lib/googleSheets'
+import { sendGreenApiSelfMessage, formatLeadToWhatsAppMessage } from '@/lib/greenApi'
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -85,19 +86,12 @@ export async function POST(request: NextRequest) {
 
       if (email) whatsappData.email = email
 
-      const whatsappResponse = await fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(whatsappData),
-      })
-
-      if (whatsappResponse.ok) {
+      const formattedMsg = formatLeadToWhatsAppMessage(whatsappData)
+      const greenApiRes = await sendGreenApiSelfMessage(formattedMsg)
+      if (greenApiRes.success) {
         whatsappDelivered = true
       } else {
-        console.error('WhatsApp not delivered', {
-          status: whatsappResponse.status,
-          statusText: whatsappResponse.statusText,
-        })
+        console.error('[Vacancy] WhatsApp Green API self message error:', greenApiRes.error)
       }
     } catch (waErr) {
       console.error('WhatsApp not delivered:', waErr)

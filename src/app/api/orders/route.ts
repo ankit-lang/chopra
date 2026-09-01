@@ -17,6 +17,7 @@ const RESTAURANT_EMAILS = ['info@chopras.nl', 'choprasstreetfood@gmail.com']
 
 import { checkOpeningStatus, ALL_PICKUP_TIMES } from '@/lib/openingHours'
 import { appendToGoogleSheet } from '@/lib/googleSheets'
+import { sendGreenApiSelfMessage, formatLeadToWhatsAppMessage } from '@/lib/greenApi'
 
 export async function POST(request: NextRequest) {
   try {
@@ -194,20 +195,12 @@ export async function POST(request: NextRequest) {
       if (customerEmail) whatsappData.email = customerEmail
       if (specialInstructions) whatsappData.dietaryRequirements = `Instructions: ${specialInstructions}`
 
-      // Await this network fetch request completely so Vercel does not terminate the pipeline prematurely
-      const whatsappResponse = await fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(whatsappData),
-      })
-
-      if (whatsappResponse.ok) {
+      const formattedMsg = formatLeadToWhatsAppMessage(whatsappData)
+      const greenApiRes = await sendGreenApiSelfMessage(formattedMsg)
+      if (greenApiRes.success) {
         whatsappDelivered = true
       } else {
-        console.error('WhatsApp not delivered', {
-          status: whatsappResponse.status,
-          statusText: whatsappResponse.statusText,
-        })
+        console.error('[Orders] WhatsApp Green API self message error:', greenApiRes.error)
       }
     } catch (waErr) {
       console.error('WhatsApp not delivered:', waErr)

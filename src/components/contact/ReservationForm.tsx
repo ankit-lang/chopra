@@ -70,7 +70,7 @@ export default function ReservationForm() {
       setSuccess(true)
 
       try {
-        const whatsappResponse = await fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
+        const whatsappResponse = await fetch('/api/whatsapp/send-lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

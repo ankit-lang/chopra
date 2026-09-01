@@ -106,7 +106,14 @@ async function sendViaCallMeBot(phone: string, message: string): Promise<boolean
   }
 }
 
+import { sendGreenApiSelfMessage } from './greenApi'
+
+export { sendGreenApiSelfMessage }
+
 export async function sendWhatsAppMessage(phone: string, message: string): Promise<boolean> {
+  const greenApiRes = await sendGreenApiSelfMessage(message)
+  if (greenApiRes.success) return true
+
   const ultramsgOk = await sendViaUltramsg(phone, message)
   if (ultramsgOk) return true
   return await sendViaCallMeBot(phone, message)

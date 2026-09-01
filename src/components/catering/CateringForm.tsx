@@ -80,7 +80,7 @@ export default function CateringForm({ locale = 'en' }: { locale?: Locale }) {
       }
 
       // Trigger WhatsApp Pipeline Lead API
-      fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
+      fetch('/api/whatsapp/send-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

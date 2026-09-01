@@ -109,7 +109,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
         throw new Error(resData.error || 'Failed to submit enquiry')
       }
 
-      fetch('https://whatsapp-0gwb.onrender.com/api/v1/send-lead', {
+      fetch('/api/whatsapp/send-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

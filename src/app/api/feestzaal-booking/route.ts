@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { appendToGoogleSheet } from '@/lib/googleSheets';
+import { sendGreenApiSelfMessage, formatLeadToWhatsAppMessage } from '@/lib/greenApi';
 
 const RESTAURANT_EMAIL = 'info@chopras.nl';
 const RESTAURANT_EMAILS = ['info@chopras.nl', 'choprasstreetfood@gmail.com'];
@@ -112,19 +113,17 @@ export async function POST(req: NextRequest) {
         serviceType: 'Chopras Event Hall Booking',
         fullName: name,
         phone: phone || 'Not provided',
-        message: `Event Hall Request | Date: ${date} | Guests: ${guests}${message ? ` | Notes: ${message}` : ''}`,
+        eventDate: date,
+        numGuests: guests,
+        additionalNotes: message || '',
       };
 
       if (email) whatsappData.email = email;
 
-      // Await completely so Vercel does not terminate the pipeline prematurely
-      await fetch('https://itzankitrajput-whatsapp.hf.space/api/v1/send-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(whatsappData),
-      });
+      const formattedMsg = formatLeadToWhatsAppMessage(whatsappData);
+      await sendGreenApiSelfMessage(formattedMsg);
     } catch (waErr) {
-      console.error('[feestzaal-booking] WhatsApp Pipeline Fault:', waErr);
+      console.error('[feestzaal-booking] WhatsApp Green API Fault:', waErr);
     }
 
     try {
