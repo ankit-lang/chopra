@@ -62,6 +62,9 @@ export async function generateMetadata(): Promise<Metadata> {
       'Authentic Indian restaurant in Den Haag serving fresh curries, tandoori, chaat and biryani. Halal certified. Vegetarian and vegan options. Open Tuesday to Sunday.',
     authors: [{ name: RESTAURANT.name }],
     creator: RESTAURANT.name,
+    verification: {
+      google: 'wlKf4_QucGxe_8EzgzvDW-5o4TVD1vcuhPaBtHSZkz8',
+    },
     robots: { index: true, follow: true },
     openGraph: {
       type: 'website',
