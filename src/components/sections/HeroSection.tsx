@@ -13,7 +13,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
 
   return (
     <>
-      <div className="relative h-[125vh] md:h-[120vh] min-h-[1100px] overflow-hidden">
+      <div className="relative min-h-[115vh] md:min-h-[1100px] overflow-hidden flex flex-col">
 
         {/* Video Background */}
         <HeroVideoBackground />
@@ -22,7 +22,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
         <div className="absolute inset-0 bg-black/15" />
 
         {/* Hero content */}
-        <div className="relative z-10  md:-mt-24 lg:-mt-24 xl:-mt-24 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 flex-1 md:-mt-24 lg:-mt-24 xl:-mt-24 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
           {/* Eyebrow pill */}
           <span className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-black/40 px-5 py-2 text-[9px] md:text-[11px] uppercase tracking-[0.25em] text-white font-bold mb-8 backdrop-blur-md">
@@ -143,7 +143,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
         </div>
 
         {/* ── Stats Banner ── */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 w-full bg-black/55 backdrop-blur-md border-t border-white/15 shadow-[0_-8px_40px_rgba(0,0,0,0.5)]">
+        <div className="relative z-20 w-full bg-black/55 backdrop-blur-md border-t border-white/15 shadow-[0_-8px_40px_rgba(0,0,0,0.5)] mt-auto">
           <div className="max-w-5xl mx-auto flex items-stretch divide-x divide-white/10">
 
             {/* Stat 1: Rating */}

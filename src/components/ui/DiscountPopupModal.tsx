@@ -29,8 +29,8 @@ export default function DiscountPopupModal({ locale = 'en' }: { locale?: string 
   const base = isNl ? '/nl' : ''
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="relative w-full max-w-lg rounded-3xl bg-white shadow-2xl overflow-hidden border border-amber-200 transform transition-all duration-300 scale-100">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/60 backdrop-blur-sm animate-fade-in">
+      <div className="relative w-full max-w-lg max-h-full overflow-y-auto overflow-x-hidden rounded-3xl bg-white shadow-2xl border border-amber-200 transform transition-all duration-300 scale-100">
         
         {/* Header background with gradient & close button */}
         <div className="relative bg-gradient-to-r from-[#000066] via-[#0000B3] to-[#0000FF] p-6 text-center text-white">
