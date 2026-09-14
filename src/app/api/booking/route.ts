@@ -3,6 +3,7 @@ import { notifyChannels } from '@/lib/notifications'
 import { appendToGoogleSheet } from '@/lib/googleSheets'
 import { sendBookingEmail } from '@/lib/email'
 import { createGoogleCalendarEvent } from '@/lib/googleCalendar'
+import { isMondayInAmsterdam } from '@/lib/openingHours'
 
 export const dynamic = 'force-dynamic';
 
@@ -18,6 +19,14 @@ export async function POST(req: Request) {
 
     const typeStr = String(type || data.type || data.serviceType || 'Booking')
     const tabName = typeStr.toLowerCase().includes('reservation') || typeStr.toLowerCase().includes('table') ? 'Reservation' : 'Contact'
+
+    const reservationDate = data.date || data.eventDate
+    if (reservationDate && isMondayInAmsterdam(reservationDate)) {
+      return NextResponse.json(
+        { success: false, error: 'We are closed on Mondays (Netherlands time). Reservations are unavailable on Mondays.' },
+        { status: 400 }
+      )
+    }
 
     // 1. Send confirmation & alert emails via Nodemailer
     await sendBookingEmail(typeStr, data)

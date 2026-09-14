@@ -32,6 +32,42 @@ export function getAmsterdamTime(date: Date = new Date()) {
   return { hours, minutes, weekday, totalMinutes: hours * 60 + minutes }
 }
 
+export function isMondayInAmsterdam(dateInput?: string | Date): boolean {
+  try {
+    let dateObj: Date
+    if (!dateInput) {
+      dateObj = new Date()
+    } else if (typeof dateInput === 'string') {
+      if (!dateInput.trim()) return false
+      dateObj = new Date(`${dateInput.trim()}T12:00:00Z`)
+    } else {
+      dateObj = dateInput
+    }
+
+    if (isNaN(dateObj.getTime())) return false
+
+    const { weekday } = getAmsterdamTime(dateObj)
+    return weekday === 'Mon'
+  } catch (err) {
+    console.error('Error checking Monday in Amsterdam:', err)
+    return false
+  }
+}
+
+export function getTodayAmsterdamDate(): string {
+  try {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Amsterdam',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    })
+    return formatter.format(new Date())
+  } catch {
+    return new Date().toISOString().split('T')[0]
+  }
+}
+
 export function checkOpeningStatus(date: Date = new Date()): OpeningStatus {
   try {
     const { hours, minutes, weekday, totalMinutes } = getAmsterdamTime(date)

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { isMondayInAmsterdam, getTodayAmsterdamDate } from '@/lib/openingHours'
 
 export default function ReservationForm() {
   const [date, setDate] = useState('')
@@ -15,10 +16,21 @@ export default function ReservationForm() {
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
+  const minDate = getTodayAmsterdamDate()
   const timeOptions = ['16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30']
+
+  function handleDateChange(val: string) {
+    setDate(val)
+    if (isMondayInAmsterdam(val)) {
+      setError('We are closed on Mondays (Netherlands time). Please select another date from Tuesday to Sunday.')
+    } else if (error?.includes('closed on Mondays')) {
+      setError(null)
+    }
+  }
 
   function validate() {
     if (!date) return 'Please select a date.'
+    if (isMondayInAmsterdam(date)) return 'We are closed on Mondays (Netherlands time). Please select another date from Tuesday to Sunday.'
     if (!time) return 'Please select a time.'
     if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return 'Please enter a valid email.'
     if (!fullName) return 'Please enter full name.'
@@ -146,7 +158,19 @@ export default function ReservationForm() {
       <form onSubmit={handleSubmit} className="space-y-4 md:space-y-4">
         <div>
           <label className="block text-sm md:text-xs font-medium text-[#1A1A1A]/70 mb-2">Date *</label>
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white" required />
+          <input
+            type="date"
+            value={date}
+            min={minDate}
+            onChange={(e) => handleDateChange(e.target.value)}
+            className="w-full border border-gray-200 rounded-lg px-4 py-3 md:px-3 md:py-2 text-base md:text-sm focus:outline-none focus:border-white"
+            required
+          />
+          {date && isMondayInAmsterdam(date) && (
+            <p className="text-red-600 text-xs mt-1 font-medium">
+              ⚠️ We are closed on Mondays (Netherlands time). Please select another date.
+            </p>
+          )}
         </div>
 
         <div>
@@ -206,7 +230,11 @@ export default function ReservationForm() {
           <br /> Get ready for great food, good vibes, and a wonderful time ahead!</div>}
 
         <div>
-          <button type="submit" disabled={submitting} className="w-full bg-[#06068a] text-white rounded-lg px-4 py-3 md:py-2 text-base md:text-base font-medium hover:bg-[#0000B3] transition-colors disabled:opacity-50 mt-3">
+          <button
+            type="submit"
+            disabled={submitting || (!!date && isMondayInAmsterdam(date))}
+            className="w-full bg-[#06068a] text-white rounded-lg px-4 py-3 md:py-2 text-base md:text-base font-medium hover:bg-[#0000B3] transition-colors disabled:opacity-50 mt-3"
+          >
             {submitting ? 'Sending...' : 'Submit'}
           </button>
         </div>
