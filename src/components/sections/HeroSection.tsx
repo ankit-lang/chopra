@@ -89,7 +89,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
               <>
                 Looking for authentic Indian food in Den Haag? Welcome to Chopras Indian Restaurant, where
                 every dish is prepared using traditional recipes, freshly ground spices and generations of Indian
-                culinary expertise. Enjoy our famous butter chicken Den Haag, rich dal makhana, slow-cooked
+                culinary expertise. Enjoy our famous butter chicken Den Haag, rich dal makhani, slow-cooked
                 mutton rogan josh, authentic tandoori dishes, freshly baked fresh naan Den Haag, and flavourful
                 biryani Den Haag. <br /> Whether you're dining in, ordering Indian takeaway, choosing Indian food
                 delivery Den Haag, or looking for halal Indian food Den Haag, every meal is prepared in our
