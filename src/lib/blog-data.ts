@@ -1,6 +1,6 @@
 import type { BlogPost } from '@/types'
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = ([
   {
     slug: 'where-to-find-the-best-halal-indian-food-in-den-haag',
     title: 'Where to Find the Best Halal Indian Food in Den Haag?',
@@ -5591,4 +5591,4 @@ export const blogPosts: BlogPost[] = [
 <p>For private events of approximately 25–80 guests, Chopras Indian Restaurant in Den Haag offers a combination of private space and Indian catering under one roof. Discussing the guest count, event type, menu format and dietary requirements in advance can help create an arrangement that works for both the host and guests.</p>
     `,
   }
-].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+] as BlogPost[]).sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
