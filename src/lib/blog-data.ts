@@ -5517,6 +5517,78 @@ export const blogPosts: BlogPost[] = [
 <p>The <a href="https://chopras.nl/menu">full street food menu at Chopras Indian Restaurant</a> is the place to start. Come with friends, order the Mixed Chaat Platter, and let the kitchen take it from there.</p>
 `,
   },
+  {
+    slug: 'feestzaal-in-den-haag-for-25-80-guests-choose-the-right-event-format',
+    title: 'Feestzaal in Den Haag for 25–80 Guests: Choose the Right Event Format',
+    metaTitle: 'Feestzaal in Den Haag for 25–80 Guests: Choose the Right Event Format',
+    metaDescription: 'Looking for a feestzaal in Den Haag for 25–80 guests? Learn how to choose the right event format for birthdays, weddings, corporate events and private celebrations.',
+    h1: 'Feestzaal in Den Haag for 25–80 Guests: How to Choose the Right Event Format',
+    primaryKeyword: 'Feestzaal in Den Haag',
+    keywords: [
+      'Feestzaal in Den Haag',
+      'Party venue Den Haag',
+      'Private event venue Den Haag',
+      'Halal catering Den Haag',
+      'Indian catering Den Haag'
+    ],
+    language: 'en',
+    author: 'Arun Chopra',
+    image: '/images/blog/16sep.png',
+    publishedAt: '2026-09-16',
+    readingTime: 4,
+    excerpt: 'Looking for a feestzaal in Den Haag for 25–80 guests? Learn how to choose the right event format for birthdays, weddings, corporate events and private celebrations.',
+    faqs: [],
+    faqsNl: [],
+    content: `
+<img src="/images/blog/16sep.png" alt="Feestzaal in Den Haag for 25–80 Guests: Choose the Right Event Format" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Planning an event is about more than finding a beautiful room. The way guests eat, move around and interact can make a big difference to the atmosphere. If you are looking for a feestzaal in Den Haag for a birthday, wedding, baby shower, family celebration or business event, it helps to decide the format before you book the venue.</p>
+
+<p>At Chopras Indian Restaurant, the private Feestzaal at Leyweg 986 in Den Haag is designed for approximately 25–80 guests. The venue combines a private event space with Indian catering, so the room and food can be organised together through one team.</p>
+
+<h2>Perfect for your special occasions</h2>
+
+<p>A seated dinner is a natural choice when the meal is an important part of the celebration. Weddings, anniversaries, baby showers, private family dinners and formal corporate dinners can all work well with guests seated together. Depending on the selected arrangement, guests can enjoy a varied menu rather than repeating the same few dishes.</p>
+
+<p>For example, starters can include Pani Puri, Aloo Tikki, Veg Samosa Chaat or Onion Bhaji. Main-course choices can range from Dal Makhani, Paneer Butter Masala and Shahi Paneer to Butter Chicken, Chicken Karahi, Mutton Rogan Josh and Biryani. Fresh breads such as Garlic Naan, Butter Naan, Peshwari Naan and Roti can accompany the meal, followed by desserts such as Gulab Jamun, Rasmalai, Kulfi or Saffron Kheer. Indian drinks such as Mango Lassi, Sweet Lassi, Masala Tea, Jal Jeera and Shikanji can also be included. A seated format works especially well when speeches, presentations or planned moments are part of the evening.</p>
+
+<h2>Buffet for variety and flexibility</h2>
+
+<p>A buffet can be a practical option when guests have different tastes. People can choose what they prefer and enjoy several dishes without everyone having to order the same meal.</p>
+
+<p>A group menu can combine vegetarian dishes, vegan options where specifically prepared, gluten-free options where suitable, and halal-certified meat dishes. Chopras Indian Restaurant advises guests to communicate allergies and dietary requirements before ordering so suitable preparation can be discussed. The restaurant’s menu also identifies dietary options.</p>
+
+<p>Instead of focusing only on tandoori dishes, a buffet can include a broader Indian spread: starters and chaat, tandoori selections such as Chicken Tikka, Malai Soya Chaap, Paneer Tikka, Lamb Seekh Kebab or Seekh Kebab, vegetarian curries, chicken curries, lamb and mutton curries, biryani, breads, rice and sides, desserts and Indian drinks. This gives guests more choice across different parts of the menu.</p>
+
+<h2>Reception or mixed-format event</h2>
+
+<p>Not every event needs everyone seated for the entire evening. A standing reception or mixed format can be useful for networking, workshops, team gatherings, cultural events and community occasions. Guests can begin with starters and drinks, move into a buffet or seated meal, and then return to a more relaxed social format.</p>
+
+<p>The Chopras Indian Restaurant event space can be arranged around the type of gathering. Event formats can include weddings, baby showers, birthdays, corporate events, networking sessions, private dinners and cultural celebrations. The space can also suit Nikah receptions, engagement parties, team celebrations, yoga and meditation sessions, dance workshops and charity evenings.</p>
+
+<p>Cultural and seasonal celebrations can cover both Indian and Dutch occasions. Depending on the group and programme, this can include Diwali, Holi, Eid, Ramadan iftar gatherings, Navratri and Garba-related events, as well as Christmas dinners, New Year gatherings, King’s Day-related celebrations and other Dutch community occasions.</p>
+
+<h2>Think about the guest list</h2>
+
+<p>The number of guests should influence the layout and menu. A group of 25 people may want a more intimate dinner, while a group closer to 80 may benefit from a buffet or mixed arrangement. Guests can also discuss ordering à la carte, a Veg Thali or a Non-Veg Thali when that suits the event format.</p>
+
+<p>It is important to think about dietary requirements. Chopras Indian Restaurant offers vegetarian choices and vegan and gluten-free options where suitable preparation is requested. All meat dishes are halal-certified. Guests should tell the restaurant about allergies and dietary requirements in advance so the team can advise on suitable preparation.</p>
+
+<h2>Make location part of the planning</h2>
+
+<p>Location matters when guests are travelling to a private event. Chopras Indian Restaurant is on Leyweg in Den Haag, making the Feestzaal relevant for local South Den Haag areas such as Escamp, Zuidwest, Zuiderpark, Morgenstond and Wateringse Veld, as well as guests coming from Rijswijk, Delft, Zoetermeer, Voorburg, Leidschenveen, Nootdorp and Leidschendam.</p>
+
+<p>For guests combining an event with sightseeing or a wider city visit, useful Den Haag areas and attractions include Den Haag Centrum, Binnenhof, Mauritshuis, Hofvijver, Plein, Den Haag Centraal and Spuiplein. Other recognised visitor areas include Zeeheldenkwartier, Piet Heinstraat, Prins Hendrikstraat, Duinoord, Thomsonlaan, Thomsonplein, Frederik Hendriklaan, Scheveningen, Keizerstraat, Boulevard, Beach, Pier, Kurhaus, Duindorp and Madurodam. These locations should be used contextually rather than as a list of repeated keywords.</p>
+
+<h2>Why one venue and one catering team can help</h2>
+
+<p>One practical advantage of choosing a restaurant with a private event space is simpler coordination. At Chopras Indian Restaurant, the private venue and Indian catering are managed together. Organisers can discuss guest numbers, event type, menu preferences and dietary requirements with one team.</p>
+
+<h2>Which format should you choose?</h2>
+
+<p>There is no single format that fits every occasion. A wedding may suit a seated dinner or buffet. A birthday may work with either. A networking event may benefit from a reception or mixed format. A cultural celebration can combine food, conversation and a flexible layout.</p>
+
+<p>For private events of approximately 25–80 guests, Chopras Indian Restaurant in Den Haag offers a combination of private space and Indian catering under one roof. Discussing the guest count, event type, menu format and dietary requirements in advance can help create an arrangement that works for both the host and guests.</p>
+    `,
+  }
 ]
-
-
