@@ -5591,4 +5591,4 @@ export const blogPosts: BlogPost[] = [
 <p>For private events of approximately 25–80 guests, Chopras Indian Restaurant in Den Haag offers a combination of private space and Indian catering under one roof. Discussing the guest count, event type, menu format and dietary requirements in advance can help create an arrangement that works for both the host and guests.</p>
     `,
   }
-]
+].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
