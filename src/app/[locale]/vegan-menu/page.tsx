@@ -163,7 +163,7 @@ export default function VeganMenuPage({ params }: Props) {
                 <p>
                   Voor veganisten in Den Haag die op zoek zijn naar{' '}
                   <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">plantaardig Indiaas eten dat echt vult</Link>,{' '}
-                  is Chopras het directe antwoord. 4,9 sterren van 1100+ beoordelingen. Geen concessies aan smaak.
+                  is Chopras het directe antwoord. 4,9 sterren van 1300+ beoordelingen. Geen concessies aan smaak.
                 </p>
               </>
             ) : (
@@ -181,7 +181,7 @@ export default function VeganMenuPage({ params }: Props) {
                 <p>
                   For vegans in Den Haag searching for{' '}
                   <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">plant-based Indian food that genuinely fills you up</Link>,{' '}
-                  Chopras is the straightforward answer. Rated 4.9 stars from 1100+ reviews. No compromise on flavour.
+                  Chopras is the straightforward answer. Rated 4.9 stars from 1300+ reviews. No compromise on flavour.
                 </p>
               </>
             )}
@@ -303,7 +303,7 @@ export default function VeganMenuPage({ params }: Props) {
                 <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">dal makhani</Link>,{' '}
                 chana masala,{' '}
                 <Link href={`${base}/soya-chaap-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">soya chaap gegrild in de tandoor</Link>,{' '}
-                vegetable biryani en veganistische naan. Het restaurant is geopend van dinsdag tot en met zondag van 16:30 tot 22:30. Beoordeeld met 4,9 sterren van 1100+ recensies. Reserveer een tafel of bestel online voor bezorging en afhaal.
+                vegetable biryani en veganistische naan. Het restaurant is geopend van dinsdag tot en met zondag van 16:30 tot 22:30. Beoordeeld met 4,9 sterren van 1300+ recensies. Reserveer een tafel of bestel online voor bezorging en afhaal.
               </p>
             ) : (
               <p>
@@ -311,7 +311,7 @@ export default function VeganMenuPage({ params }: Props) {
                 <Link href={`${base}/dal-makhani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">dal makhani</Link>,{' '}
                 chana masala,{' '}
                 <Link href={`${base}/soya-chaap-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">soya chaap grilled in the tandoor</Link>,{' '}
-                vegetable biryani, and vegan naan. The restaurant is open Tuesday to Sunday from 16:30 to 22:30. Rated 4.9 stars from 1100+ reviews. Reserve a table or order online for delivery and takeaway.
+                vegetable biryani, and vegan naan. The restaurant is open Tuesday to Sunday from 16:30 to 22:30. Rated 4.9 stars from 1300+ reviews. Reserve a table or order online for delivery and takeaway.
               </p>
             )}
             {isNl ? (

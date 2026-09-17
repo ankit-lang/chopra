@@ -271,7 +271,7 @@ Brick-and-mortar restaurant. North Indian / Halal cuisine. Den Haag, Netherlands
 - `getBlogPostingSchema()`: `datePublished` and `dateModified` present — correct
 - All non-blog schemas: zero date fields — correct
 - LocalBusiness address, phone, hours, geo: all match `constants.ts`
-- `aggregateRating.reviewCount: '1100'` with visible copy "1100+": defensible and consistent
+- `aggregateRating.reviewCount: '1100'` with visible copy "1300+": defensible and consistent
 - Founder schema: `jobTitle: 'Founder'` — correct per CLAUDE.md (not "Head Chef")
 - `sameAs` arrays: TripAdvisor, Google Maps, Facebook, Instagram, YouTube — all present
 
@@ -363,7 +363,7 @@ Use `butter-chicken-den-haag/page.tsx` as the template — it is the best-execut
 
 - NAP fully consistent: Leyweg 986, 2545 GW Den Haag, +31 6 30645930, "Chopras Indian Restaurant" — match across constants.ts, schema.ts, faq-data.ts, footer, API email templates
 - Location pages (Delft, Rijswijk, Zoetermeer): strong unique content, low doorway risk
-- Rating display: "1100+" consistently used across all pages — correct per CLAUDE.md
+- Rating display: "1300+" consistently used across all pages — correct per CLAUDE.md
 - Schema aggregateRating: 4.9 / 1100 — correct
 - Google Place ID present in constants.ts
 

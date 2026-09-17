@@ -347,7 +347,7 @@ export default function IndianWeddingCateringPage({ params }: Props) {
                   day as it does on a regular Tuesday evening. No shortcut produces that result.
                 </p>
                 <p>
-                  Chopras holds a 4.9-star rating on Google from 1100+ verified reviews. Guests who return
+                  Chopras holds a 4.9-star rating on Google from 1300+ verified reviews. Guests who return
                   for a wedding have already experienced this restaurant at the{' '}
                   <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                     dinner menu
@@ -521,7 +521,7 @@ export default function IndianWeddingCateringPage({ params }: Props) {
                 </Link>
                 . The team caters for nikah receptions, walima dinners, sangeet nights and full wedding
                 dinners for groups of 25 to 80 guests. All meat is halal certified. The restaurant holds
-                a 4.9-star rating from 1100+ Google reviews and is open Tuesday to Sunday from 16:30 to
+                a 4.9-star rating from 1300+ Google reviews and is open Tuesday to Sunday from 16:30 to
                 22:30. Submit a wedding catering enquiry via the{' '}
                 <Link href={`${base}/catering#catering-form`} className="text-white hover:text-white font-semibold">
                   catering form

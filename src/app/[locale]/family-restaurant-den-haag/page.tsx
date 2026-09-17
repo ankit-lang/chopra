@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Familierestaurant Den Haag | Kindvriendelijk Indiaas Restaurant | Chopras'
     : 'Family Restaurant Den Haag | Child-Friendly Indian Restaurant | Chopras'
   const description = isNl
-    ? 'Zoekt u een familierestaurant in Den Haag? Chopras Indian Restaurant op Leyweg 986 biedt ruim opgezette tafels, een speciaal kindermenu, milde gerechten en een speelse attentie voor kinderen. 4.9 sterren van 1100+ reviews. Reserveer online.'
-    : 'Searching for a family restaurant in Den Haag? Chopras Indian Restaurant at Leyweg 986 features spacious seating, a dedicated kids menu, mild dish options, and a small gift for children. 4.9 stars from 1100+ reviews. Book online.'
+    ? 'Zoekt u een familierestaurant in Den Haag? Chopras Indian Restaurant op Leyweg 986 biedt ruim opgezette tafels, een speciaal kindermenu, milde gerechten en een speelse attentie voor kinderen. 4.9 sterren van 1300+ reviews. Reserveer online.'
+    : 'Searching for a family restaurant in Den Haag? Chopras Indian Restaurant at Leyweg 986 features spacious seating, a dedicated kids menu, mild dish options, and a small gift for children. 4.9 stars from 1300+ reviews. Book online.'
 
   return {
     title,
@@ -126,8 +126,8 @@ export default function FamilyRestaurantPage({ params }: Props) {
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl mt-6 mb-8 max-w-2xl mx-auto leading-relaxed">
             {isNl
-              ? 'Ruime zitplaatsen, milde kindergerechten, gratis verrassing voor elk kind en 100% halal gecertificeerd. Leyweg 986, Den Haag. 4.9 sterren uit 1100+ reviews.'
-              : 'Spacious seating, mild options for kids, complimentary gift for every child, and 100% halal certified. Leyweg 986, Den Haag. Rated 4.9 stars from 1100+ reviews.'}
+              ? 'Ruime zitplaatsen, milde kindergerechten, gratis verrassing voor elk kind en 100% halal gecertificeerd. Leyweg 986, Den Haag. 4.9 sterren uit 1300+ reviews.'
+              : 'Spacious seating, mild options for kids, complimentary gift for every child, and 100% halal certified. Leyweg 986, Den Haag. Rated 4.9 stars from 1300+ reviews.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -196,8 +196,8 @@ export default function FamilyRestaurantPage({ params }: Props) {
               <p className="font-heading text-3xl text-white mb-3 leading-[1.3]">4.9 Sterren</p>
               <p className="font-body text-white/85 text-base leading-relaxed">
                 {isNl
-                  ? 'Over 1100+ geverifieerde reviews op Google met een 4.9 beoordeling.'
-                  : 'Over 1100+ verified Google reviews with an outstanding 4.9 rating.'}
+                  ? 'Over 1300+ geverifieerde reviews op Google met een 4.9 beoordeling.'
+                  : 'Over 1300+ verified Google reviews with an outstanding 4.9 rating.'}
               </p>
             </div>
           </div>

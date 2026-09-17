@@ -9,7 +9,7 @@ import { getTranslations, type Locale } from '@/lib/useTranslations'
 const faqsEn = [
   {
     question: 'Is there an Indian restaurant near Westland?',
-    answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag is 20 minutes from Westland via the N211. There is no comparable Indian restaurant within the Westland municipality itself. Chopras serves 143 halal-certified dishes, holds a 4.9-star rating from 1100+ verified Google reviews, and grinds its spices fresh every morning. Open Tuesday to Sunday from 16:30 to 22:30.',
+    answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag is 20 minutes from Westland via the N211. There is no comparable Indian restaurant within the Westland municipality itself. Chopras serves 143 halal-certified dishes, holds a 4.9-star rating from 1300+ verified Google reviews, and grinds its spices fresh every morning. Open Tuesday to Sunday from 16:30 to 22:30.',
   },
   {
     question: 'How do I get from Westland to Chopras Indian Restaurant?',
@@ -197,7 +197,7 @@ export default function IndianRestaurantWestlandPage({ params }: Props) {
               <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 full 143-dish menu
               </Link>.{' '}
-              Rated 4.9 stars by 1100+ verified guests on Google.
+              Rated 4.9 stars by 1300+ verified guests on Google.
               Open Tuesday to Sunday from 16:30 to 22:30.
             </p>
           )}
@@ -301,7 +301,7 @@ export default function IndianRestaurantWestlandPage({ params }: Props) {
                 <strong className="text-white">Full halal certification, not selective.</strong> Halal at Chopras is not a menu option. It is the entire kitchen. Every meat supplier, every dish, every preparation surface. There is no cross-contamination risk because there is no non-halal meat anywhere on the premises. Westland families who require confirmed halal food can order the full 143-dish menu without reservation.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
-                <strong className="text-white">4.9 stars from 1100+ guests.</strong> Few Indian restaurants in Den Haag show both a strong rating and this review volume. A high rating with few reviews is unreliable. 1100+ guests over multiple months is a data point that is difficult to fabricate and even harder to maintain.
+                <strong className="text-white">4.9 stars from 1300+ guests.</strong> Few Indian restaurants in Den Haag show both a strong rating and this review volume. A high rating with few reviews is unreliable. 1300+ guests over multiple months is a data point that is difficult to fabricate and even harder to maintain.
               </p>
             </div>
           )}

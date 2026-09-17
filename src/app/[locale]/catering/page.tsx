@@ -88,7 +88,7 @@ export default function LocaleCateringPage({ params }: Props) {
   const capacityStats = [
     { number: '25-80', label: isNl ? 'Gasten' : 'Guests' },
     { number: '4.9', label: isNl ? 'Google Sterren' : 'Google Stars' },
-    { number: '1100+', label: isNl ? 'Beoordelingen' : 'Reviews' },
+    { number: '1300+', label: isNl ? 'Beoordelingen' : 'Reviews' },
   ]
 
   return (

@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Halal Eten Den Haag | 100% Gecertificeerd Halal Restaurant | Chopras'
     : 'Halal Food Den Haag | 100% Certified Halal Restaurant | Chopras'
   const description = isNl
-    ? 'Zoekt u 100% halal eten in Den Haag? Chopras Indian Restaurant op Leyweg 986 biedt een volledig halal gecertificeerd menu met 143 gerechten. Geen alcohol in het eten, geen kruisbesmetting. 4.9 sterren van 1100+ reviews. Reserveer online.'
-    : 'Looking for 100% certified halal food in Den Haag? Chopras Indian Restaurant at Leyweg 986 serves an entire menu of 143 halal dishes. No alcohol in cooking, zero cross-contamination. 4.9 stars from 1100+ reviews. Book online.'
+    ? 'Zoekt u 100% halal eten in Den Haag? Chopras Indian Restaurant op Leyweg 986 biedt een volledig halal gecertificeerd menu met 143 gerechten. Geen alcohol in het eten, geen kruisbesmetting. 4.9 sterren van 1300+ reviews. Reserveer online.'
+    : 'Looking for 100% certified halal food in Den Haag? Chopras Indian Restaurant at Leyweg 986 serves an entire menu of 143 halal dishes. No alcohol in cooking, zero cross-contamination. 4.9 stars from 1300+ reviews. Book online.'
 
   return {
     title,

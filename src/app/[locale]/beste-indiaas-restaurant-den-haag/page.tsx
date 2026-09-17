@@ -110,7 +110,7 @@ export default function BesteIndiaasPage({ params }: Props) {
             <div className="h-[1px] w-16 bg-gradient-to-l from-white/40 to-transparent" />
           </div>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-body font-light leading-relaxed mt-6 mb-10">
-            4,9 sterren op Google van 1100+ gasten. Volledig halal gecertificeerd. Noord-Indiaas koken zoals het hoort, op Leyweg 986 Den Haag.
+            4,9 sterren op Google van 1300+ gasten. Volledig halal gecertificeerd. Noord-Indiaas koken zoals het hoort, op Leyweg 986 Den Haag.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -324,7 +324,7 @@ export default function BesteIndiaasPage({ params }: Props) {
             Kom zelf ontdekken waarom Den Haag kiest voor Chopras
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-            Het beste Indiaas restaurant in Den Haag zit op Leyweg 986. Open dinsdag tot en met zondag vanaf 16:30. 4,9 sterren. 1100+ beoordelingen. Volledig halal gecertificeerd. Geen verdere overtuiging nodig. Kom langs.
+            Het beste Indiaas restaurant in Den Haag zit op Leyweg 986. Open dinsdag tot en met zondag vanaf 16:30. 4,9 sterren. 1300+ beoordelingen. Volledig halal gecertificeerd. Geen verdere overtuiging nodig. Kom langs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

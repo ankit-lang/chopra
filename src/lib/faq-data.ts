@@ -361,7 +361,7 @@ export const feestzaalFaqs: FaqItem[] = [
   },
   {
     question: "Is catering included with the hall hire?",
-    answer: "Yes. Full authentic Indian catering from the Chopras kitchen is included. The menu is customised to your occasion, with buffet or plated dinner service available. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 1100+ reviews.",
+    answer: "Yes. Full authentic Indian catering from the Chopras kitchen is included. The menu is customised to your occasion, with buffet or plated dinner service available. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 1300+ reviews.",
   },
   {
     question: "How many guests does the event hall accommodate?",

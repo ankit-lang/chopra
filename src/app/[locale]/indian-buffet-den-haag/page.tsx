@@ -255,7 +255,7 @@ export default function IndianBuffetPage({ params }: Props) {
                   gebakken in batches gedurende de service - wordt bereid op de temperatuur waarvoor het ontworpen is.
                 </p>
                 <p>
-                  Chopras Indian Restaurant heeft een beoordeling van 4,9 sterren van 1100+ geverifieerde Google-recensies.
+                  Chopras Indian Restaurant heeft een beoordeling van 4,9 sterren van 1300+ geverifieerde Google-recensies.
                   Die beoordeling komt van dezelfde curry, hetzelfde tandoorgeroosterde tikka en hetzelfde verse naan
                   die bij elke buffetbestelling aanwezig zijn. Een evenement gecatered door Chopras is geen ander,
                   lager product. Het is het restaurant - op uw gastenlijst.
@@ -291,7 +291,7 @@ export default function IndianBuffetPage({ params }: Props) {
                   baked in batches throughout service - is cooked at the temperature it was designed for.
                 </p>
                 <p>
-                  Chopras Indian Restaurant holds a 4.9-star rating from 1100+ verified Google reviews.
+                  Chopras Indian Restaurant holds a 4.9-star rating from 1300+ verified Google reviews.
                   That rating comes from the same curries, the same tandoor-fired tikka and the same fresh naan
                   that feature on every buffet order. An event catered by Chopras is not a different, lower-tier
                   product. It is the restaurant - at your guest count.
@@ -565,7 +565,7 @@ export default function IndianBuffetPage({ params }: Props) {
                 voor groepen van 15 tot 200 gasten. Het buffet omvat curry,{' '}
                 <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>,
                 tandoori, naan, street food starters en desserts. Alle gerechten zijn volledig halal gecertificeerd.
-                Chopras heeft een beoordeling van 4,9 sterren van 1100+ geverifieerde Google-recensies.
+                Chopras heeft een beoordeling van 4,9 sterren van 1300+ geverifieerde Google-recensies.
                 Buffetten zijn beschikbaar in de privezaal van het restaurant en op uw externe locatie.
                 Open dinsdag tot en met zondag vanaf 16:30.{' '}
                 <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Vraag een buffetofferte aan</Link>{' '}
@@ -576,7 +576,7 @@ export default function IndianBuffetPage({ params }: Props) {
                 Yes. Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag offers Indian buffet catering. The buffet includes curries,{' '}
                 <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>,
                 tandoori, naan, street food starters and desserts. All dishes are fully halal certified.
-                Chopras holds a 4.9-star rating from 1100+ verified Google reviews.
+                Chopras holds a 4.9-star rating from 1300+ verified Google reviews.
                 Buffets are available in the restaurant private hall and at your external venue.
                 Open Tuesday to Sunday from 16:30.{' '}
                 <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Request a buffet quote</Link>{' '}

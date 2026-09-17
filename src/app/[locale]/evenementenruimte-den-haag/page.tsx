@@ -137,7 +137,7 @@ export default function EvenementenruimtePage({ params }: Props) {
             </p>
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Chopras Indian Restaurant staat beoordeeld met{' '}
-              <strong>4,9 sterren op basis van 1100+ Google-beoordelingen</strong>. Geen enkel ander Indiaas restaurant in Den Haag combineert dit cijfer met dit volume aan beoordelingen. Als u uw gasten onder de indruk wilt brengen, begint dat met de keuze van de locatie. Bekijk ons{' '}
+              <strong>4,9 sterren op basis van 1300+ Google-beoordelingen</strong>. Geen enkel ander Indiaas restaurant in Den Haag combineert dit cijfer met dit volume aan beoordelingen. Als u uw gasten onder de indruk wilt brengen, begint dat met de keuze van de locatie. Bekijk ons{' '}
               <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledig Indiaas menu</Link>{' '}
               voor een indruk van de 143 gerechten die wij serveren.
             </p>
@@ -216,7 +216,7 @@ export default function EvenementenruimtePage({ params }: Props) {
             <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20">
               <p className="font-body text-white font-semibold text-xl mb-2">4,9 sterren op Google</p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
-                1100+ beoordelingen, het hoogste cijfer van elk Indiaas restaurant in Den Haag. Bewijs dat publiek zichtbaar en controleerbaar is.
+                1300+ beoordelingen, het hoogste cijfer van elk Indiaas restaurant in Den Haag. Bewijs dat publiek zichtbaar en controleerbaar is.
               </p>
             </div>
             <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20">
@@ -260,7 +260,7 @@ export default function EvenementenruimtePage({ params }: Props) {
             <Link href={`${base}/contact`} className="text-white hover:text-white font-semibold">Leyweg 986 in Den Haag</Link>,{' '}
             geschikt voor 25 tot 80 gasten. De ruimte is ideaal voor bedrijfsfeesten, personeelsevenementen, vergaderingen en teambuildingevenementen. Ons{' '}
             <Link href={`${base}/catering`} className="text-white hover:text-white font-semibold">Indiaas catering aanbod</Link>{' '}
-            is volledig halal gecertificeerd en bij elk evenement inbegrepen. Chopras staat beoordeeld met 4,9 sterren op basis van 1100+ Google-beoordelingen. De evenementenruimte is beschikbaar van dinsdag tot en met zondag.
+            is volledig halal gecertificeerd en bij elk evenement inbegrepen. Chopras staat beoordeeld met 4,9 sterren op basis van 1300+ Google-beoordelingen. De evenementenruimte is beschikbaar van dinsdag tot en met zondag.
           </p>
         </div>
       </section>

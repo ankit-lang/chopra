@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Indiaas Eten Nederland | Authentiek Indiaas Restaurant Den Haag | Chopras'
     : 'Indian Food Netherlands | Authentic Indian Restaurant Den Haag | Chopras'
   const description = isNl
-    ? 'Zoekt u het beste Indiase eten in Nederland? Chopras Indian Restaurant op Leyweg 986 in Den Haag serveert 143 authentieke Noord-Indiase halal gerechten bereid met vers gemalen specerijen. 4.9 sterren van 1100+ reviews. Reserveer online.'
-    : 'Looking for authentic Indian food in the Netherlands? Chopras Indian Restaurant at Leyweg 986, Den Haag serves 143 North Indian halal dishes made with daily freshly ground spices. 4.9 stars from 1100+ reviews. Book online.'
+    ? 'Zoekt u het beste Indiase eten in Nederland? Chopras Indian Restaurant op Leyweg 986 in Den Haag serveert 143 authentieke Noord-Indiase halal gerechten bereid met vers gemalen specerijen. 4.9 sterren van 1300+ reviews. Reserveer online.'
+    : 'Looking for authentic Indian food in the Netherlands? Chopras Indian Restaurant at Leyweg 986, Den Haag serves 143 North Indian halal dishes made with daily freshly ground spices. 4.9 stars from 1300+ reviews. Book online.'
 
   return {
     title,
@@ -116,8 +116,8 @@ export default function IndianFoodNetherlandsPage({ params }: Props) {
           </h1>
           <p className="font-body text-white/85 text-lg md:text-xl mt-6 mb-8 max-w-2xl mx-auto leading-relaxed">
             {isNl
-              ? '143 authentieke Noord-Indiase gerechten bereid met dagelijks vers gemalen specerijen. 100% halal. Leyweg 986, Den Haag. 4.9 sterren van 1100+ reviews.'
-              : '143 authentic North Indian dishes made with spices ground fresh daily. 100% halal. Leyweg 986, Den Haag. Rated 4.9 stars from 1100+ reviews.'}
+              ? '143 authentieke Noord-Indiase gerechten bereid met dagelijks vers gemalen specerijen. 100% halal. Leyweg 986, Den Haag. 4.9 sterren van 1300+ reviews.'
+              : '143 authentic North Indian dishes made with spices ground fresh daily. 100% halal. Leyweg 986, Den Haag. Rated 4.9 stars from 1300+ reviews.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

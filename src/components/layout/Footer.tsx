@@ -142,7 +142,7 @@ export default function Footer({ locale }: { locale: Locale }) {
                 <div className="flex text-white group-hover:text-[#06068a] text-2xl tracking-widest leading-none transition-colors duration-300">★★★★★</div>
                 <div className="flex flex-col relative z-10">
                   <span className="text-sm font-bold tracking-wide text-white group-hover:text-[#06068a] transition-colors duration-300">Google Reviews</span>
-                  <span className="text-[10px] text-white/80 group-hover:text-[#06068a]/80 uppercase tracking-widest transition-colors duration-300 mt-1">Based on 1100+ Reviews</span>
+                  <span className="text-[10px] text-white/80 group-hover:text-[#06068a]/80 uppercase tracking-widest transition-colors duration-300 mt-1">Based on 1300+ Reviews</span>
                 </div>
               </a>
 

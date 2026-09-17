@@ -167,7 +167,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 <p>
                                                       Voor mensen met coeliakie of glutengevoeligheid in Den Haag is Chopras het directe antwoord. Glutenvrije{' '}
                                                       <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledige menu in Den Haag</Link>.{' '}
-                                                      Halal gecertificeerd. 4,9 sterren van 1100+ beoordelingen. Geen compromissen op smaak of voedingswaarde.
+                                                      Halal gecertificeerd. 4,9 sterren van 1300+ beoordelingen. Geen compromissen op smaak of voedingswaarde.
                                                 </p>
                                           </>
                                     ) : (
@@ -183,7 +183,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                                 <p>
                                                       For people with celiac or gluten sensitivity in Den Haag, Chopras is the straightforward answer. Gluten-free{' '}
                                                       <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full menu in Den Haag</Link>.{' '}
-                                                      Halal certified. Rated 4.9 stars from 1100+ reviews. No compromise on flavor or nutrition.
+                                                      Halal certified. Rated 4.9 stars from 1300+ reviews. No compromise on flavor or nutrition.
                                                 </p>
                                           </>
                                     )}

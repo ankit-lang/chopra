@@ -41,7 +41,7 @@ export default function ReviewsSection({ locale = 'en' }: { locale?: Locale }) {
             </div>
           ))}
           <span className="font-body text-[#1A1A1A]/60 text-sm ml-2">
-            4.9  &middot; 1100+ Google reviews
+            4.9  &middot; 1300+ Google reviews
           </span>
         </div>
       </div>

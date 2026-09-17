@@ -326,8 +326,8 @@ export default function IndianBirthdayCateringPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-4xl md:text-5xl text-justify text-white mb-6 leading-[1.3]">
             {isNl
-              ? 'Waarom 1100+ Gasten Chopras Vertrouwen voor hun Feesten'
-              : 'Why 1100+ Guests Trust Chopras for Their Celebrations'}
+              ? 'Waarom 1300+ Gasten Chopras Vertrouwen voor hun Feesten'
+              : 'Why 1300+ Guests Trust Chopras for Their Celebrations'}
           </h2>
           {isNl ? (
             <div className="space-y-5 font-body !text-white/80 text-lg leading-relaxed">
@@ -381,7 +381,7 @@ export default function IndianBirthdayCateringPage({ params }: Props) {
               <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian birthday catering</Link>{' '}
               for groups of 25 to 80 guests. The food is prepared in the restaurant kitchen, delivered hot, and set up at your venue. All dishes are{' '}
               <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>.
-              Chopras holds a 4.9-star Google rating from 1100+ reviews and serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, and Leidschendam. The restaurant is open Tuesday to Sunday from 16:30.
+              Chopras holds a 4.9-star Google rating from 1300+ reviews and serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, and Leidschendam. The restaurant is open Tuesday to Sunday from 16:30.
             </p>
           )}
         </div>

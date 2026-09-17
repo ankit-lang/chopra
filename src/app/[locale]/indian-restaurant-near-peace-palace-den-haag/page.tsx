@@ -131,8 +131,8 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           </div>
           <p className="font-body text-white/85 text-lg md:text-xl mt-6 mb-8 max-w-2xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
             {isNl
-              ? 'Chopras Indian Restaurant op Leyweg 986. Tien minuten van het Vredespaleis. 4.9 sterren, 1100+ recensies. Volledig halal. Open dinsdag tot en met zondag.'
-              : 'Chopras Indian Restaurant on Leyweg 986. Ten minutes from the Peace Palace. 4.9 stars, 1100+ reviews. Fully halal certified. Open Tuesday to Sunday.'}
+              ? 'Chopras Indian Restaurant op Leyweg 986. Tien minuten van het Vredespaleis. 4.9 sterren, 1300+ recensies. Volledig halal. Open dinsdag tot en met zondag.'
+              : 'Chopras Indian Restaurant on Leyweg 986. Ten minutes from the Peace Palace. 4.9 stars, 1300+ reviews. Fully halal certified. Open Tuesday to Sunday.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -165,7 +165,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              op Leyweg 986, Den Haag ligt op 10 minuten rijden van het Vredespaleis. Met een 4.9-sterren beoordeling van 1100+ Google-recensies serveert Chopras authentieke Noord-Indiaase keuken, volledig halal gecertificeerd. Kies uit biryani, tandoori en curry over 143 gerechten. Open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
+              op Leyweg 986, Den Haag ligt op 10 minuten rijden van het Vredespaleis. Met een 4.9-sterren beoordeling van 1300+ Google-recensies serveert Chopras authentieke Noord-Indiaase keuken, volledig halal gecertificeerd. Kies uit biryani, tandoori en curry over 143 gerechten. Open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserveer uw tafel
               </Link>{' '}
@@ -177,7 +177,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              at Leyweg 986, Den Haag is 10 minutes from the Peace Palace by car. Rated 4.9 stars from 1100+ Google reviews, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves authentic North Indian cuisine with a fully halal certified kitchen. Convenient for visitors from nearby neighbourhoods including Zeeheldenkwartier, Piet Heinstraat, Prins Hendrikstraat and Duinoord, the restaurant offers biryani, tandoori and curry across 143 dishes. Open Tuesday to Sunday from 16:30 to 22:30.{' '}
+              at Leyweg 986, Den Haag is 10 minutes from the Peace Palace by car. Rated 4.9 stars from 1300+ Google reviews, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves authentic North Indian cuisine with a fully halal certified kitchen. Convenient for visitors from nearby neighbourhoods including Zeeheldenkwartier, Piet Heinstraat, Prins Hendrikstraat and Duinoord, the restaurant offers biryani, tandoori and curry across 143 dishes. Open Tuesday to Sunday from 16:30 to 22:30.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserve your table
               </Link>{' '}
@@ -216,7 +216,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                 <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   knoflooknaan
                 </Link>{' '}
-                zijn kenmerkende rand. Geen gewone oven reproduceert dit resultaat. Dit is ook waarom 1100+ gasten een 4.9-sterren beoordeling op Google hebben achtergelaten.
+                zijn kenmerkende rand. Geen gewone oven reproduceert dit resultaat. Dit is ook waarom 1300+ gasten een 4.9-sterren beoordeling op Google hebben achtergelaten.
               </p>
             </div>
           ) : (
@@ -240,7 +240,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
                 <Link href={`${base}/naan-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   garlic naan
                 </Link>{' '}
-                its char on the edges. No conventional oven replicates this. It is also why 1100+ guests have left 4.9-star reviews on Google. Visitors exploring Scheveningen, Keizerstraat, the Boulevard, Beach, Pier or Kurhaus can also choose Chopras for an authentic Indian dinner after spending time along the coast.
+                its char on the edges. No conventional oven replicates this. It is also why 1300+ guests have left 4.9-star reviews on Google. Visitors exploring Scheveningen, Keizerstraat, the Boulevard, Beach, Pier or Kurhaus can also choose Chopras for an authentic Indian dinner after spending time along the coast.
               </p>
             </div>
           )}
@@ -258,7 +258,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           {isNl ? (
             <div className="space-y-6">
               <p className="font-body text-white/85 text-lg leading-relaxed">
-                Den Haag herbergt meer internationale instellingen per vierkante kilometer dan vrijwel elke andere stad in Europa. Het Permanente Hof van Arbitrage. Het Internationaal Strafhof. De Organisatie voor het Verbod op Chemische Wapens. Gasten uit deze professionele wereld hebben Chopras Indian Restaurant gevonden. Zij keren terug omdat de kwaliteit standhoudt. Niet alleen een keer. Elke keer. 4.9 sterren van 1100+ geverifieerde Google-recensies documenteert die consistentie.
+                Den Haag herbergt meer internationale instellingen per vierkante kilometer dan vrijwel elke andere stad in Europa. Het Permanente Hof van Arbitrage. Het Internationaal Strafhof. De Organisatie voor het Verbod op Chemische Wapens. Gasten uit deze professionele wereld hebben Chopras Indian Restaurant gevonden. Zij keren terug omdat de kwaliteit standhoudt. Niet alleen een keer. Elke keer. 4.9 sterren van 1300+ geverifieerde Google-recensies documenteert die consistentie.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 Chopras is ook een van de weinige restaurants in Den Haag dat{' '}
@@ -278,7 +278,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-white/85 text-lg leading-relaxed">
-                Den Haag hosts more international institutions per square kilometre than almost anywhere else in Europe. The Permanent Court of Arbitration. The International Criminal Court. The Organisation for the Prohibition of Chemical Weapons. Guests from this professional world have found Chopras Indian Restaurant. They return because the quality holds. Not just once. Every visit. 4.9 stars from 1100+ verified Google reviews documents that consistency.
+                Den Haag hosts more international institutions per square kilometre than almost anywhere else in Europe. The Permanent Court of Arbitration. The International Criminal Court. The Organisation for the Prohibition of Chemical Weapons. Guests from this professional world have found Chopras Indian Restaurant. They return because the quality holds. Not just once. Every visit. 4.9 stars from 1300+ verified Google reviews documents that consistency.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
                 Chopras also serves{' '}

@@ -185,7 +185,7 @@ export default function HalalMenuPage({ params }: Props) {
               <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 tandoori
               </Link>
-              , van curry tot streetfood, elk gerecht is halal. Beoordeeld met 4.9 sterren door 1100+ Google-bezoekers.
+              , van curry tot streetfood, elk gerecht is halal. Beoordeeld met 4.9 sterren door 1300+ Google-bezoekers.
               Open dinsdag tot en met zondag van 16:30 tot 22:30.
             </p>
           ) : (
@@ -200,7 +200,7 @@ export default function HalalMenuPage({ params }: Props) {
               <Link href={`${base}/tandoori-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 tandoori
               </Link>
-              , from curry to street food, every dish is halal. Rated 4.9 stars by 1100+ Google reviewers. Open
+              , from curry to street food, every dish is halal. Rated 4.9 stars by 1300+ Google reviewers. Open
               Tuesday to Sunday from 16:30 to 22:30.
             </p>
           )}

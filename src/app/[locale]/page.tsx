@@ -56,8 +56,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     nl: 'Beste Indiaas Restaurant Den Haag | Chopras Indian Restaurant',
   }
   const descriptions = {
-    en: 'Best Indian restaurant Den Haag and The Hague. Chopras Indian Restaurant. 4.9 stars, 1100+ reviews. Halal certified, vegetarian options. Book a table.',
-    nl: 'Beste Indiaas restaurant Den Haag bij Chopras Indian Restaurant. 4,9 sterren, 1100+ reviews. Halal gecertificeerd. Reserveer een tafel vandaag.',
+    en: 'Best Indian restaurant Den Haag and The Hague. Chopras Indian Restaurant. 4.9 stars, 1300+ reviews. Halal certified, vegetarian options. Book a table.',
+    nl: 'Beste Indiaas restaurant Den Haag bij Chopras Indian Restaurant. 4,9 sterren, 1300+ reviews. Halal gecertificeerd. Reserveer een tafel vandaag.',
   }
   const keywords = [
     'best indian restaurant in den haag',
@@ -286,7 +286,7 @@ export default function LocaleHomePage({ params }: Props) {
                   {
                     icon: 'trophy',
                     title: 'Hoog Beoordeeld',
-                    desc: '4.9★ op Google · 1100+ beoordelingen · Uitstekend op Tripadvisor.',
+                    desc: '4.9★ op Google · 1300+ beoordelingen · Uitstekend op Tripadvisor.',
                     href: `${base}/blog/best-indian-restaurant-den-haag`,
                   },
                 ] : [
@@ -311,7 +311,7 @@ export default function LocaleHomePage({ params }: Props) {
                   {
                     icon: 'trophy',
                     title: 'Highly Rated',
-                    desc: '4.9★ on Google · 1100+ reviews · Tripadvisor Excellent — Den Haag\'s most trusted restaurant.',
+                    desc: '4.9★ on Google · 1300+ reviews · Tripadvisor Excellent — Den Haag\'s most trusted restaurant.',
                     href: `${base}/blog/best-indian-restaurant-den-haag`,
                   },
                 ]}
@@ -359,7 +359,7 @@ export default function LocaleHomePage({ params }: Props) {
               </div>
               <p className="font-body text-[#1A1A1A] font-semibold mb-2">Google Rating</p>
               <p className="font-body text-3xl font-bold text-[#1B2B5E] mb-1">4.9 stars</p>
-              <p className="font-body text-[#666]">1100+ verified reviews</p>
+              <p className="font-body text-[#666]">1300+ verified reviews</p>
             </div>
             <div className="bg-white rounded-lg p-8 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
@@ -523,7 +523,7 @@ export default function LocaleHomePage({ params }: Props) {
               </h3>
               {isNl ? (
                 <p className="font-body text-[#1A1A1A]/80 text-lg leading-relaxed font-normal">
-                  Chopras Indian Restaurant op Leyweg 986, 2545 GW Den Haag, is een van de sterkst beoordeelde halal Indiase restaurants in Den Haag, met 4,9 sterren van 1100+ geverifieerde Google-beoordelingen, 8,7 op TheFork en de beoordeling Uitstekend op Tripadvisor. Opgericht door Arun Chopra in 2023, serveert Chopras authentieke Noord-Indiase gerechten zoals{' '}
+                  Chopras Indian Restaurant op Leyweg 986, 2545 GW Den Haag, is een van de sterkst beoordeelde halal Indiase restaurants in Den Haag, met 4,9 sterren van 1300+ geverifieerde Google-beoordelingen, 8,7 op TheFork en de beoordeling Uitstekend op Tripadvisor. Opgericht door Arun Chopra in 2023, serveert Chopras authentieke Noord-Indiase gerechten zoals{' '}
                   <Link href={`${base}/biryani-den-haag`} className=" hover:text-[#0000B3] ">biryani Den Haag</Link>,
                   {' '}butter chicken, tandoori, dal makhani en chaat, bereid met dagelijks vers gemalen specerijen uit India. Het volledig{' '}
                   <Link href={`${base}/halal-menu`} className="hover:text-[#0000B3] transition-colors">halal gecertificeerd menu</Link>{' '}
@@ -561,7 +561,7 @@ export default function LocaleHomePage({ params }: Props) {
               )}
               {isNl ? (
                 <p>
-                  Chopras Indian Restaurant heeft 4,9 sterren op Google met 1100+ beoordelingen en 8,7 op TheFork, waarmee het het hoogst beoordeelde Indiaas restaurant in Den Haag is. Het restaurant is volledig halal gecertificeerd en biedt uitgebreide <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className=" hover:text-[#0000B3] transition-colors">vegetarische Indiaas eten Den Haag</Link> opties naast het volledige vleesmenu.
+                  Chopras Indian Restaurant heeft 4,9 sterren op Google met 1300+ beoordelingen en 8,7 op TheFork, waarmee het het hoogst beoordeelde Indiaas restaurant in Den Haag is. Het restaurant is volledig halal gecertificeerd en biedt uitgebreide <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className=" hover:text-[#0000B3] transition-colors">vegetarische Indiaas eten Den Haag</Link> opties naast het volledige vleesmenu.
                 </p>
               ) : (
                 <p>

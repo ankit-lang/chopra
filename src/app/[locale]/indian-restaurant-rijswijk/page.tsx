@@ -142,8 +142,8 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
             style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
           >
             {isNl
-              ? 'Authentiek Noord-Indiaas eten, volledig halal gecertificeerd, open dinsdag tot en met zondag. Leyweg 986, Den Haag - vlak over de grens van Rijswijk. Beoordeeld met 4.9 sterren door 1100+ gasten.'
-              : 'Authentic North Indian food, fully halal certified, open Tuesday to Sunday. Leyweg 986, Den Haag - just across the Rijswijk border. Rated 4.9 stars by 1100+ guests.'}
+              ? 'Authentiek Noord-Indiaas eten, volledig halal gecertificeerd, open dinsdag tot en met zondag. Leyweg 986, Den Haag - vlak over de grens van Rijswijk. Beoordeeld met 4.9 sterren door 1300+ gasten.'
+              : 'Authentic North Indian food, fully halal certified, open Tuesday to Sunday. Leyweg 986, Den Haag - just across the Rijswijk border. Rated 4.9 stars by 1300+ guests.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -218,7 +218,7 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
       <section className="btn-gradient py-20 px-6 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-4xl md:text-5xl text-white mb-6 leading-[1.3]">
-            {isNl ? '4.9 Sterren. 1100+ Reviews. Het Rijswijk Oordeel.' : '4.9 Stars. 1100+ Reviews. The Rijswijk Verdict.'}
+            {isNl ? '4.9 Sterren. 1300+ Reviews. Het Rijswijk Oordeel.' : '4.9 Stars. 1300+ Reviews. The Rijswijk Verdict.'}
           </h2>
           <p className="font-body text-white/85 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             {isNl
@@ -227,11 +227,11 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {(isNl ? [
-              { stat: '4.9 Sterren', desc: 'Google-beoordeling van 1100+ geverifieerde reviews - meer reviews op een hogere score dan enig ander Indiaas restaurant in Den Haag.' },
+              { stat: '4.9 Sterren', desc: 'Google-beoordeling van 1300+ geverifieerde reviews - meer reviews op een hogere score dan enig ander Indiaas restaurant in Den Haag.' },
               { stat: 'Volledig Halal', desc: 'Elk vleesgerecht, elke leverancier, elke bestelling. De gehele keuken is halal gecertificeerd - geen uitzonderingen en geen risico op kruisbesmetting.' },
               { stat: '143 Gerechten', desc: 'Dertien categorieen van biryani tot Indo-Chinees - het grootste authentieke Indiaase menu in Den Haag.' },
             ] : [
-              { stat: '4.9 Stars', desc: 'Google rating from 1100+ verified reviews - more reviews at a higher rating than any other Indian restaurant in Den Haag.' },
+              { stat: '4.9 Stars', desc: 'Google rating from 1300+ verified reviews - more reviews at a higher rating than any other Indian restaurant in Den Haag.' },
               { stat: 'Fully Halal', desc: 'Every meat dish, every supplier, every order. The entire kitchen is halal certified - no exceptions and no cross-contamination risk.' },
               { stat: '143 Dishes', desc: 'Thirteen categories from biryani to Indo Chinese - the largest authentic Indian menu in The Hague.' },
             ]).map((item) => (
@@ -272,9 +272,9 @@ export default function IndianRestaurantRijswijkPage({ params }: Props) {
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             {isNl ? (
-              <p>Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is minder dan 5 minuten rijden van centraal Rijswijk. Met 4.9 sterren van 1100+ Google-reviews serveert Chopras 143 gerechten uit een volledig halal gecertificeerde keuken, waar specerijen dagelijks vers worden gemalen van hele ingredienten rechtstreeks uit India. Open dinsdag tot en met zondag van 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Reserveer een tafel bij Chopras</Link> of <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">bekijk het volledige menu</Link> online.</p>
+              <p>Ja. Chopras Indian Restaurant op Leyweg 986, Den Haag, is minder dan 5 minuten rijden van centraal Rijswijk. Met 4.9 sterren van 1300+ Google-reviews serveert Chopras 143 gerechten uit een volledig halal gecertificeerde keuken, waar specerijen dagelijks vers worden gemalen van hele ingredienten rechtstreeks uit India. Open dinsdag tot en met zondag van 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Reserveer een tafel bij Chopras</Link> of <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">bekijk het volledige menu</Link> online.</p>
             ) : (
-              <p>Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag is less than 5 minutes from central Rijswijk by car. Rated 4.9 stars from 1100+ Google reviews, Chopras serves 143 dishes from a fully halal certified kitchen where spices are ground fresh every morning from whole ingredients sourced directly in India. Open Tuesday to Sunday from 16:30 to 22:30. <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Reserve a table at Chopras</Link> or <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">view the full menu</Link> online.</p>
+              <p>Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag is less than 5 minutes from central Rijswijk by car. Rated 4.9 stars from 1300+ Google reviews, Chopras serves 143 dishes from a fully halal certified kitchen where spices are ground fresh every morning from whole ingredients sourced directly in India. Open Tuesday to Sunday from 16:30 to 22:30. <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Reserve a table at Chopras</Link> or <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">view the full menu</Link> online.</p>
             )}
           </div>
         </div>

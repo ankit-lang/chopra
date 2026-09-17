@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Indiaas Restaurant bij Leidschendam | Chopras Indian Restaurant'
     : 'Indian Restaurant Near Leidschendam | Chopras Indian Restaurant'
   const description = isNl
-    ? 'Zoekt u een Indiaas restaurant bij Leidschendam? Chopras op Leyweg 986 in Den Haag ligt op slechts 12-15 minuten. 143 authentieke halal gerechten, tandoori kleioven, 4.9 sterren van 1100+ reviews. Reserveer online.'
-    : 'Searching for an Indian restaurant near Leidschendam? Chopras at Leyweg 986, Den Haag is just 12-15 minutes away. 143 authentic halal dishes, 400° tandoor clay oven, 4.9 stars from 1100+ reviews. Reserve a table.'
+    ? 'Zoekt u een Indiaas restaurant bij Leidschendam? Chopras op Leyweg 986 in Den Haag ligt op slechts 12-15 minuten. 143 authentieke halal gerechten, tandoori kleioven, 4.9 sterren van 1300+ reviews. Reserveer online.'
+    : 'Searching for an Indian restaurant near Leidschendam? Chopras at Leyweg 986, Den Haag is just 12-15 minutes away. 143 authentic halal dishes, 400° tandoor clay oven, 4.9 stars from 1300+ reviews. Reserve a table.'
 
   return {
     title,

@@ -9,7 +9,7 @@ import { getTranslations, type Locale } from '@/lib/useTranslations'
 const faqsEn = [
   {
     question: 'Is there a good Indian restaurant near Zoetermeer?',
-    answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway. Rated 4.9 stars by 1100+ verified guests on Google, Chopras serves 143 halal-certified dishes from a kitchen that grinds its spices fresh each morning. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.',
+    answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway. Rated 4.9 stars by 1300+ verified guests on Google, Chopras serves 143 halal-certified dishes from a kitchen that grinds its spices fresh each morning. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.',
   },
   {
     question: 'How do I get from Zoetermeer to Chopras Indian Restaurant?',
@@ -180,7 +180,7 @@ export default function IndianRestaurantZoetermeerPage({ params }: Props) {
             </p>
           ) : (
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway. It is also conveniently accessible for visitors from Nootdorp, Leidschenveen and Voorburg, making <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> a practical choice for those looking for an authentic Indian restaurant near Zoetermeer and the surrounding areas. Rated 4.9 stars by 1100+ verified guests on Google, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves 143 <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal-certified dishes</Link> from a kitchen that grinds its spices fresh each morning. The <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full 143-dish menu</Link> spans curries, tandoori, and biryani. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.
+              <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> at Leyweg 986, Den Haag is 20 minutes from central Zoetermeer via the A12 motorway. It is also conveniently accessible for visitors from Nootdorp, Leidschenveen and Voorburg, making <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> a practical choice for those looking for an authentic Indian restaurant near Zoetermeer and the surrounding areas. Rated 4.9 stars by 1300+ verified guests on Google, <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> serves 143 <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal-certified dishes</Link> from a kitchen that grinds its spices fresh each morning. The <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full 143-dish menu</Link> spans curries, tandoori, and biryani. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.
             </p>
           )}
         </div>
@@ -282,7 +282,7 @@ export default function IndianRestaurantZoetermeerPage({ params }: Props) {
                 <strong className="text-white">Full halal certification, not selective.</strong> Halal at Chopras is not a menu option. It is the entire kitchen. Every meat supplier, every dish, every preparation surface. There is no cross-contamination risk because there is no non-halal meat anywhere on the premises. Zoetermeer families who require confirmed halal food can order the full 143-dish menu without reservation.
               </p>
               <p className="font-body text-white/85 text-lg leading-relaxed">
-                <strong className="text-white">4.9 stars from 1100+ guests.</strong> Few Indian restaurants in Den Haag show both a strong rating and this review volume. A high rating with few reviews is unreliable. 1100+ guests over multiple months is a data point that is difficult to fabricate and even harder to maintain.
+                <strong className="text-white">4.9 stars from 1300+ guests.</strong> Few Indian restaurants in Den Haag show both a strong rating and this review volume. A high rating with few reviews is unreliable. 1300+ guests over multiple months is a data point that is difficult to fabricate and even harder to maintain.
               </p>
             </div>
           )}

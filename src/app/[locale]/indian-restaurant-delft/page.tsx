@@ -228,7 +228,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                The 4.9-star Google rating across 1100+ verified reviews is the number that matters most to anyone comparing options. High ratings with low review counts are common and easy to achieve. 1100+ reviews at 4.9 stars means a sustained standard across hundreds of separate evenings, not a lucky streak.
+                The 4.9-star Google rating across 1300+ verified reviews is the number that matters most to anyone comparing options. High ratings with low review counts are common and easy to achieve. 1300+ reviews at 4.9 stars means a sustained standard across hundreds of separate evenings, not a lucky streak.
               </p>
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
                 The kitchen runs on a specific discipline. Spices are sourced directly from India and ground fresh every morning before service opens. The volatile aromatic compounds in cumin, cardamom, and coriander begin evaporating within hours of grinding. Pre-mixed blends from suppliers are the shortcut most restaurants take. <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> does not.
@@ -343,7 +343,7 @@ export default function IndianRestaurantDelftPage({ params }: Props) {
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Yes.{' '}
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link>{' '}
-              at Leyweg 986, Den Haag is 15 minutes from central Delft via the A13. Rated 4.9 stars from 1100+ Google reviews and fully halal certified, Chopras serves a 143-dish North Indian menu including biryani, tandoori, and Indo Chinese dishes. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.{' '}
+              at Leyweg 986, Den Haag is 15 minutes from central Delft via the A13. Rated 4.9 stars from 1300+ Google reviews and fully halal certified, Chopras serves a 143-dish North Indian menu including biryani, tandoori, and Indo Chinese dishes. Open Tuesday to Sunday from 16:30 to 22:30. Paid parking is available in the Leyweg area.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Reserve a table</Link>{' '}
               or call +31 6 30645930.
             </p>

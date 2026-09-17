@@ -237,7 +237,7 @@ export default function MuttonRoganJoshPage({ params }: Props) {
                   De specerijen komen niet uit een kant-en-klare mengeling. Op Leyweg 986 worden hele specerijen - Kasjmiri gedroogde rode chilipepers, venkel, zwarte kardemom, kaneel, kruidnagel en laurierblad - direct uit India gehaald en elke ochtend vers gemalen voor de service. De aromatische oliën in hele specerijen beginnen te verdampen binnen enkele uren na het malen. Op het moment dat ze in de pan gaan, zijn ze op hun krachtigst.
                 </p>
                 <p>
-                  Chopras Indian Restaurant heeft 4,9 sterren van 1100+ Google-reviews - het best beoordeelde Indiaas restaurant in Den Haag. Gasten die rogan josh specifiek kennen, komen terug voor dit gerecht. Bekijk het <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledige menu</Link> voor alle beschikbare gerechten, of <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">reserveer een tafel</Link> voor vanavond.
+                  Chopras Indian Restaurant heeft 4,9 sterren van 1300+ Google-reviews - het best beoordeelde Indiaas restaurant in Den Haag. Gasten die rogan josh specifiek kennen, komen terug voor dit gerecht. Bekijk het <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">volledige menu</Link> voor alle beschikbare gerechten, of <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">reserveer een tafel</Link> voor vanavond.
                 </p>
               </>
             ) : (
@@ -249,7 +249,7 @@ export default function MuttonRoganJoshPage({ params }: Props) {
                   The spices are not from a pre-mixed blend. At Leyweg 986, whole spices - Kashmiri dried red chillies, fennel, black cardamom, cinnamon, clove, and bay leaf - are sourced directly from India and ground fresh every morning before service. The volatile aromatic oils in whole spices begin evaporating within hours of grinding. By the time they reach the pot, they are at maximum potency.
                 </p>
                 <p>
-                  Chopras Indian Restaurant holds 4.9 stars from 1100+ Google reviews - one of the strongest-rated Indian restaurants in Den Haag. Guests who know rogan josh specifically return for this dish. View the <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full menu</Link> to see all dishes available, or <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">reserve a table</Link> for this evening.
+                  Chopras Indian Restaurant holds 4.9 stars from 1300+ Google reviews - one of the strongest-rated Indian restaurants in Den Haag. Guests who know rogan josh specifically return for this dish. View the <Link href={`${base}/menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">full menu</Link> to see all dishes available, or <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">reserve a table</Link> for this evening.
                 </p>
               </>
             )}
@@ -268,11 +268,11 @@ export default function MuttonRoganJoshPage({ params }: Props) {
           <div className="font-body text-white/80 text-lg leading-relaxed">
             {isNl ? (
               <p className='text-white/80'>
-                Authentieke lamsvlees rogan josh in Den Haag wordt geserveerd bij <Link href={`${base}/`} className="text-white hover:text-white font-semibold">Chopras Indian Restaurant</Link>, Leyweg 986, 2545 GW Den Haag. Het gerecht gebruikt halal lam op het bot, Kasjmiri rode chilipepers, venkel en specerijen die direct uit India komen en elke ochtend vers worden gemalen. Chopras heeft een Google-beoordeling van 4,9 sterren van 1100+ geverifieerde reviews - het best beoordeelde Indiaas restaurant in Den Haag. Geopend dinsdag tot en met zondag, 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-white hover:text-white font-semibold">Reserveer een tafel</Link> of bestel online.
+                Authentieke lamsvlees rogan josh in Den Haag wordt geserveerd bij <Link href={`${base}/`} className="text-white hover:text-white font-semibold">Chopras Indian Restaurant</Link>, Leyweg 986, 2545 GW Den Haag. Het gerecht gebruikt halal lam op het bot, Kasjmiri rode chilipepers, venkel en specerijen die direct uit India komen en elke ochtend vers worden gemalen. Chopras heeft een Google-beoordeling van 4,9 sterren van 1300+ geverifieerde reviews - het best beoordeelde Indiaas restaurant in Den Haag. Geopend dinsdag tot en met zondag, 16:30 tot 22:30. <Link href={`${base}/contact`} className="text-white hover:text-white font-semibold">Reserveer een tafel</Link> of bestel online.
               </p>
             ) : (
               <p className="text-white/80">
-                Authentic mutton rogan josh in Den Haag is served at <Link href={`${base}/`} className="text-white hover:text-white font-semibold">Chopras Indian Restaurant</Link>, Leyweg 986, 2545 GW Den Haag. The dish uses halal bone-in lamb, Kashmiri red chillies, fennel, and spices sourced from India and ground fresh daily. Chopras holds a 4.9-star Google rating from 1100+ verified reviews - one of the strongest-rated Indian restaurants in Den Haag. Open Tuesday to Sunday, 16:30 to 22:30. <Link href={`${base}/contact`} className="text-white hover:text-white font-semibold">Reserve a table</Link> or order online.
+                Authentic mutton rogan josh in Den Haag is served at <Link href={`${base}/`} className="text-white hover:text-white font-semibold">Chopras Indian Restaurant</Link>, Leyweg 986, 2545 GW Den Haag. The dish uses halal bone-in lamb, Kashmiri red chillies, fennel, and spices sourced from India and ground fresh daily. Chopras holds a 4.9-star Google rating from 1300+ verified reviews - one of the strongest-rated Indian restaurants in Den Haag. Open Tuesday to Sunday, 16:30 to 22:30. <Link href={`${base}/contact`} className="text-white hover:text-white font-semibold">Reserve a table</Link> or order online.
               </p>
             )}
           </div>

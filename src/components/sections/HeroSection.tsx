@@ -159,7 +159,7 @@ export default function HeroSection({ locale = 'en' }: { locale?: Locale }) {
 
             {/* Stat 2: Reviews */}
             <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4 py-2 md:py-3 px-2 md:px-4">
-              <div className="font-heading text-lg md:text-xl font-bold text-white">1100+</div>
+              <div className="font-heading text-lg md:text-xl font-bold text-white">1300+</div>
               <div className="text-[9px] md:text-[10px] text-white/80 tracking-[0.1em] md:tracking-[0.2em] uppercase font-body md:border-l md:border-white/20 md:pl-4 text-center md:text-left">
                 {locale === 'nl' ? <>Google<br className="md:hidden" />Recensies</> : <>Google<br className="md:hidden" />Reviews</>}
               </div>

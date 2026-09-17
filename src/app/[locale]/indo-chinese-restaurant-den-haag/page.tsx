@@ -339,7 +339,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              op Leyweg 986 in Den Haag is een van de weinige restaurants in Den Haag dat authentiek Indo-Chinees eten serveert. Het menu bevat chilli chicken, chilli paneer, Hakka noedels en Manchow soep, bereid met kruiden die rechtstreeks uit India komen. Chopras heeft een 4.9-sterren beoordeling op basis van 1100+ Google reviews en is open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
+              op Leyweg 986 in Den Haag is een van de weinige restaurants in Den Haag dat authentiek Indo-Chinees eten serveert. Het menu bevat chilli chicken, chilli paneer, Hakka noedels en Manchow soep, bereid met kruiden die rechtstreeks uit India komen. Chopras heeft een 4.9-sterren beoordeling op basis van 1300+ Google reviews en is open van dinsdag tot en met zondag van 16:30 tot 22:30.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserveer een tafel
               </Link>{' '}
@@ -351,7 +351,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
               <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Chopras Indian Restaurant
               </Link>{' '}
-              at Leyweg 986, Den Haag serves authentic Indo Chinese food alongside a full North Indian menu. The menu includes chilli chicken, chilli paneer, Hakka noodles and Manchow soup, made with spices sourced directly from India. Chopras holds a 4.9-star rating from 1100+ Google reviews and is open Tuesday to Sunday from 16:30 to 22:30.{' '}
+              at Leyweg 986, Den Haag serves authentic Indo Chinese food alongside a full North Indian menu. The menu includes chilli chicken, chilli paneer, Hakka noodles and Manchow soup, made with spices sourced directly from India. Chopras holds a 4.9-star rating from 1300+ Google reviews and is open Tuesday to Sunday from 16:30 to 22:30.{' '}
               <Link href={`${base}/contact`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                 Reserve a table
               </Link>{' '}
@@ -370,7 +370,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           {isNl ? (
             <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
               <p className="text-white/80">
-                De 4.9-sterren beoordeling op basis van 1100+ geverifieerde Google reviews is niet het argument. Het is de bevestiging. Het argument staat in de keuken: kruiden die rechtstreeks uit India worden betrokken en elke ochtend vers worden gemalen voor de service begint. De vluchtige aromatische oliën in komijn, koriander en chili beginnen te verdampen binnen uren na het malen. Dat verschil proeft u.
+                De 4.9-sterren beoordeling op basis van 1300+ geverifieerde Google reviews is niet het argument. Het is de bevestiging. Het argument staat in de keuken: kruiden die rechtstreeks uit India worden betrokken en elke ochtend vers worden gemalen voor de service begint. De vluchtige aromatische oliën in komijn, koriander en chili beginnen te verdampen binnen uren na het malen. Dat verschil proeft u.
               </p>
               <p className="text-white/80">
                 Indo-Chinees eten vereist hoge hitte, snelle bereiding en verse ingrediënten. De keuken bij Chopras is ingericht op precies dat. Geen voorgemaakte sauzen. Geen kruidenmix uit een zak. Dezelfde standaard die geldt voor elk Noord-Indiaas gerecht in de keuken geldt ook voor het Indo-Chinese menu.
@@ -386,7 +386,7 @@ export default function IndoChineseRestaurantPage({ params }: Props) {
           ) : (
             <div className="space-y-5 font-body text-white/80 text-lg leading-relaxed">
               <p className="text-white/80">
-                The 4.9-star rating from 1100+ verified Google reviews is not the argument. It is the confirmation. The argument lives in the kitchen: spices sourced directly from India, ground fresh every morning before service begins. The volatile aromatic oils in cumin, coriander and chilli begin evaporating within hours of grinding. That difference is what you taste.
+                The 4.9-star rating from 1300+ verified Google reviews is not the argument. It is the confirmation. The argument lives in the kitchen: spices sourced directly from India, ground fresh every morning before service begins. The volatile aromatic oils in cumin, coriander and chilli begin evaporating within hours of grinding. That difference is what you taste.
               </p>
               <p className="text-white/80">
                 Indo Chinese food demands high heat, fast cooking and fresh ingredients. The kitchen at Chopras is built for exactly that. No pre-made sauces. No spice blend from a bag. The same standard that applies to every North Indian dish in the kitchen applies to the Indo Chinese menu too.

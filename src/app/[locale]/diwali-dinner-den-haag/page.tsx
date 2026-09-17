@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const faqsEn = [
   {
     question: 'Where can I book a Diwali dinner in Den Haag?',
-    answer: 'Chopras Indian Restaurant at Leyweg 986 in Den Haag offers Diwali dinners for dine-in and catering. Rated 4.9 stars from 1100+ Google reviews, fully halal certified, and open Tuesday to Sunday from 16:30. Reserve a table or call +31 6 30645930.',
+    answer: 'Chopras Indian Restaurant at Leyweg 986 in Den Haag offers Diwali dinners for dine-in and catering. Rated 4.9 stars from 1300+ Google reviews, fully halal certified, and open Tuesday to Sunday from 16:30. Reserve a table or call +31 6 30645930.',
   },
   {
     question: 'How far in advance should I book for Diwali dinner in Den Haag?',
@@ -75,7 +75,7 @@ const faqsEn = [
 const faqsNl = [
   {
     question: 'Waar kan ik een Diwali-diner boeken in Den Haag?',
-    answer: 'Chopras Indian Restaurant op Leyweg 986 in Den Haag biedt Diwali-diners aan voor in het restaurant en catering. Beoordeeld met 4,9 sterren op basis van 1100+ Google-recensies, volledig halal gecertificeerd, geopend dinsdag tot en met zondag vanaf 16:30. Reserveer een tafel of bel +31 6 30645930.',
+    answer: 'Chopras Indian Restaurant op Leyweg 986 in Den Haag biedt Diwali-diners aan voor in het restaurant en catering. Beoordeeld met 4,9 sterren op basis van 1300+ Google-recensies, volledig halal gecertificeerd, geopend dinsdag tot en met zondag vanaf 16:30. Reserveer een tafel of bel +31 6 30645930.',
   },
   {
     question: 'Hoe ver van tevoren moet ik boeken voor Diwali-diner in Den Haag?',
@@ -103,13 +103,13 @@ export default function DiwaliDinnerPage({ params }: Props) {
 
   const eventSchema = getEventSchema(isNl ? {
     name: 'Diwali Diner Den Haag bij Chopras Indian Restaurant',
-    description: 'Reserveer uw Diwali-diner bij Chopras Indian Restaurant op Leyweg 986 in Den Haag. Volledig halal gecertificeerd, 4,9 sterren van 1100+ recensies.',
+    description: 'Reserveer uw Diwali-diner bij Chopras Indian Restaurant op Leyweg 986 in Den Haag. Volledig halal gecertificeerd, 4,9 sterren van 1300+ recensies.',
     startDate: '2026-10-20T16:30:00',
     endDate: '2026-10-20T22:30:00',
     url: getLocalizedUrl(locale, 'diwali-dinner-den-haag'),
   } : {
     name: 'Diwali Dinner Den Haag at Chopras Indian Restaurant',
-    description: 'Book your Diwali dinner at Chopras Indian Restaurant at Leyweg 986 in Den Haag. Fully halal certified, rated 4.9 stars from 1100+ reviews.',
+    description: 'Book your Diwali dinner at Chopras Indian Restaurant at Leyweg 986 in Den Haag. Fully halal certified, rated 4.9 stars from 1300+ reviews.',
     startDate: '2026-10-20T16:30:00',
     endDate: '2026-10-20T22:30:00',
     url: getLocalizedUrl(locale, 'diwali-dinner-den-haag'),
@@ -174,13 +174,13 @@ export default function DiwaliDinnerPage({ params }: Props) {
             {isNl ? (
               <>
                 <p>Diwali vraagt om een tafel die werkelijk vol staat. Niet een bord eten bij een restaurant dat toevallig Indiaas kookt. Families in Den Haag die dit feest kennen, weten het verschil. Bij Chopras Indian Restaurant op Leyweg 986 worden de kruiden elke ochtend vers gemalen. Hele specerijzaden, rechtstreeks uit India, worden voor de service gemalen. Wat u proeft is kruidenintensiteit op zijn hoogtepunt.</p>
-                <p>U kunt bij ons dineren met uw familie of een volledig <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali-catering voor Den Haag</Link> boeken die aan uw deur of locatie wordt bezorgd. Onze privezaal op Leyweg 986 biedt ruimte aan 25 tot 80 gasten voor grotere familievieringen. Het eten bij evenementen is precies hetzelfde als in het restaurant - dezelfde keuken, dezelfde kruiden, dezelfde standaard die Chopras 4,9 sterren van 1100+ Google-recensies heeft opgeleverd.</p>
+                <p>U kunt bij ons dineren met uw familie of een volledig <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali-catering voor Den Haag</Link> boeken die aan uw deur of locatie wordt bezorgd. Onze privezaal op Leyweg 986 biedt ruimte aan 25 tot 80 gasten voor grotere familievieringen. Het eten bij evenementen is precies hetzelfde als in het restaurant - dezelfde keuken, dezelfde kruiden, dezelfde standaard die Chopras 4,9 sterren van 1300+ Google-recensies heeft opgeleverd.</p>
                 <p>Het <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal-gecertificeerde menu</Link> bij Chopras is niet een selectie gerechten met een certificaat ernaast. Het is de volledige keuken. Elk vlees, elke leverancier, elk gerecht is halal gecertificeerd zonder uitzonderingen. Voor families die alleen eten bij volledig gecertificeerde restaurants, is dit geen kleine bijzonderheid. Het is de reden dat zij voor Diwali naar Chopras komen.</p>
               </>
             ) : (
               <>
                 <p>Diwali calls for a table that is genuinely full. Not a plate of food at a restaurant that happens to cook Indian. Families in Den Haag who know this festival understand the difference. At Chopras Indian Restaurant at Leyweg 986, the kitchen prepares spices fresh every morning. Whole seeds, sourced directly from India, ground before service begins. What you taste is spice intensity at its peak.</p>
-                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 80 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 1100+ Google reviews.</p>
+                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 80 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 1300+ Google reviews.</p>
                 <p>The <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified menu</Link> at Chopras is not a few dishes with a certificate attached. It is the entire kitchen. Every meat dish, every supplier, every plate - halal certified without exception. For families who only eat at fully certified restaurants, this is not a small detail. It is the reason they choose Chopras for Diwali.</p>
               </>
             )}
@@ -198,9 +198,9 @@ export default function DiwaliDinnerPage({ params }: Props) {
           </h2>
           <div className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
             {isNl ? (
-              <p>Chopras Indian Restaurant op Leyweg 986 in Den Haag verzorgt Diwali-diners voor families die het lichtfeest vieren. Met 4,9 sterren van 1100+ Google-recensies en volledig halal gecertificeerd bereidt Chopras <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, tandoori en dal van elke ochtend vers gemalen kruiden. De privezaal biedt ruimte voor maximaal 80 gasten. Dineer in het restaurant of boek <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali-catering</Link> aan huis. Geopend dinsdag tot en met zondag vanaf 16:30.</p>
+              <p>Chopras Indian Restaurant op Leyweg 986 in Den Haag verzorgt Diwali-diners voor families die het lichtfeest vieren. Met 4,9 sterren van 1300+ Google-recensies en volledig halal gecertificeerd bereidt Chopras <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, tandoori en dal van elke ochtend vers gemalen kruiden. De privezaal biedt ruimte voor maximaal 80 gasten. Dineer in het restaurant of boek <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali-catering</Link> aan huis. Geopend dinsdag tot en met zondag vanaf 16:30.</p>
             ) : (
-              <p>Chopras Indian Restaurant at Leyweg 986 in Den Haag serves Diwali dinner for families celebrating the festival of lights. Rated 4.9 stars from 1100+ Google reviews and fully halal certified, Chopras prepares <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, tandoori and dal from spices ground fresh each morning. The private hall seats up to 80 guests. Dine in or book <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering</Link> for your home or venue. Open Tuesday to Sunday from 16:30.</p>
+              <p>Chopras Indian Restaurant at Leyweg 986 in Den Haag serves Diwali dinner for families celebrating the festival of lights. Rated 4.9 stars from 1300+ Google reviews and fully halal certified, Chopras prepares <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">biryani</Link>, tandoori and dal from spices ground fresh each morning. The private hall seats up to 80 guests. Dine in or book <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering</Link> for your home or venue. Open Tuesday to Sunday from 16:30.</p>
             )}
           </div>
         </div>

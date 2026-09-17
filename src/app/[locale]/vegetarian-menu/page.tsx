@@ -155,7 +155,7 @@ export default function VegetarianMenuPage({ params }: Props) {
                                                 <p>
                                                       Voor vegetariërs in Den Haag die op zoek zijn naar{' '}
                                                       <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarisch Indiaas eten dat echt vult</Link>,{' '}
-                                                      is Chopras het directe antwoord. 4,9 sterren van 1100+ beoordelingen. Geen concessies aan smaak of variatie.
+                                                      is Chopras het directe antwoord. 4,9 sterren van 1300+ beoordelingen. Geen concessies aan smaak of variatie.
                                                 </p>
                                           </>
                                     ) : (
@@ -173,7 +173,7 @@ export default function VegetarianMenuPage({ params }: Props) {
                                                 <p>
                                                       For vegetarians in Den Haag searching for{' '}
                                                       <Link href={`${base}/blog/vegetarian-indian-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">vegetarian Indian food that genuinely fills you up</Link>,{' '}
-                                                      Chopras is the straightforward answer. Rated 4.9 stars from 1100+ reviews. No compromise on flavor or variety.
+                                                      Chopras is the straightforward answer. Rated 4.9 stars from 1300+ reviews. No compromise on flavor or variety.
                                                 </p>
                                           </>
                                     )}
