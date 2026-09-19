@@ -2,6 +2,107 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: 'chopras-indian-restaurant-featured-in-times-of-india',
+    title: 'Chopras Indian Restaurant Featured in The Times of India: When Hospitality Goes Beyond the Food',
+    metaTitle: 'Chopras Indian Restaurant Featured in The Times of India',
+    metaDescription: 'Chopras Indian Restaurant in Den Haag was recently mentioned in a blog published by The Times of India. Read more about our approach to hospitality and technology.',
+    h1: 'Chopras Indian Restaurant Featured in The Times of India: When Hospitality Goes Beyond the Food',
+    primaryKeyword: 'Chopras Indian Restaurant The Times of India',
+    keywords: [
+      'Chopras Indian Restaurant',
+      'The Times of India',
+      'Indian Restaurant Den Haag',
+      'Hospitality',
+      'Indian restaurant Netherlands'
+    ],
+    language: 'en',
+    publishedAt: '2026-09-19',
+    readingTime: 3,
+    author: 'Arun Chopra',
+    image: '/images/blog/19sep.png',
+    excerpt: 'Chopras Indian Restaurant in Den Haag has been mentioned in a recent blog published by The Times of India about hospitality and technology.',
+    faqs: [],
+    faqsNl: [],
+    content: `
+<img src="/images/blog/19sep.png" alt="Chopras Indian Restaurant Featured in The Times of India: When Hospitality Goes Beyond the Food" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>At Chopras Indian Restaurant, Den Haag, Netherlands, we have always believed that a great dining experience is about more than what is served on the plate. It is about the people, the conversations, the familiar faces, and the feeling of being genuinely welcomed.</p>
+
+<p>We are pleased to share that Chopras Indian Restaurant in Den Haag has been mentioned in a recent blog published by The Times of India, titled "Robots can serve my food. But who will listen?"</p>
+
+<p>The article explores an increasingly relevant question for the hospitality industry: as restaurants adopt more technology, automation, and artificial intelligence, what happens to the human connection that has always been at the heart of hospitality?</p>
+
+<p>For Chopras Indian Restaurant, Den Haag, this is a conversation that resonates deeply with what we try to create every day.</p>
+
+<h2>Hospitality Is About People</h2>
+
+<p>Technology can make many parts of a restaurant experience faster and more convenient. Digital ordering, online reservations, and automated systems can certainly make things easier for both restaurants and guests.</p>
+
+<p>But hospitality is also about something that cannot always be measured by technology.</p>
+
+<p>It is the smile when a regular guest walks through the door.</p>
+
+<p>It is remembering a guest's favorite dish.</p>
+
+<p>It is helping someone choose from the menu.</p>
+
+<p>It is noticing when a family is celebrating something special.</p>
+
+<p>It is taking the time to have a conversation.</p>
+
+<p>These small interactions are often what turn a restaurant visit into a memorable experience.</p>
+
+<p>The Times of India blog reflects on this human side of dining and includes experiences from restaurants, including Chopra's Indian Restaurant in the Netherlands, as part of the wider conversation about how technology is changing hospitality.</p>
+
+<h2>More Than Just an Indian Restaurant in Den Haag, Netherlands.</h2>
+
+<p>At Chopras Indian Restaurant, our aim has always been to create an experience where guests feel comfortable, welcomed, and connected.</p>
+
+<p>Whether someone is visiting us for an everyday dinner, bringing their family, celebrating a birthday, meeting friends or hosting a special event, we want the experience to feel personal.</p>
+
+<p>Our food is an important part of that experience. From traditional Indian curries and dal makhani to tandoori dishes, biryanis, vegetarian options, and Indian street food, we want to bring the flavors and warmth of Indian cuisine to Den Haag.</p>
+
+<p>But food is only one part of hospitality.</p>
+
+<p>The other part is how you make people feel.</p>
+
+<h2>Can Technology Replace Human Hospitality?</h2>
+
+<p>We don't believe technology and hospitality have to be opposites.</p>
+
+<p>Technology can help restaurants improve convenience, communication, and efficiency. But the human element remains essential.</p>
+
+<p>A digital system can remember an order.</p>
+
+<p>A person can remember a guest.</p>
+
+<p>A machine can deliver food.</p>
+
+<p>A member of the hospitality team can notice that a guest needs something before they ask.</p>
+
+<p>That difference is at the heart of the conversation explored by The Times of India.</p>
+
+<h2>A Conversation We Are Happy to Be Part Of</h2>
+
+<p>We are grateful to be mentioned in The Times of India as part of this wider conversation about the future of restaurants and hospitality.</p>
+
+<p>For us, the future isn't about choosing between technology and people.</p>
+
+<p>It is about using technology where it helps—while continuing to keep hospitality human.</p>
+
+<p>Because ultimately, people may remember what they ate, but they also remember how a place made them feel.</p>
+
+<p>A sincere thank you to Dr. Pallavi Bansal and The Times of India for featuring Chopras Indian Restaurant, Den Haag, Netherlands, in such a thoughtful blog about technology, hospitality, and the importance of human connection.</p>
+
+<p>We truly appreciate the opportunity to be part of this discussion.</p>
+
+<div class="mt-8 text-center">
+  <a href="https://timesofindia.indiatimes.com/toi-blogs/digital-life/robots-can-serve-my-food-but-who-will-listen/articleshow/134316958.cms" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#06068a] !text-white font-semibold py-3 px-8 rounded-full hover:bg-[#0000B3] transition-colors">
+    Read More on The Times of India
+  </a>
+</div>
+`,
+  },  {
     slug: 'where-to-find-the-best-halal-indian-food-in-den-haag',
     title: 'Where to Find the Best Halal Indian Food in Den Haag?',
     metaTitle: 'Where to Find the Best Halal Indian Food in Den Haag?',
