@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import StoryGallery from '@/components/ui/StoryGallery';
+import StoryGallery, { type GalleryImage } from '@/components/ui/StoryGallery';
 import { type Locale } from '@/lib/useTranslations';
 
-const galleryImages = [
+const galleryImages: GalleryImage[] = [
+  { desktop: "/feeztal/24sepd.png", mobile: "/feeztal/24sep.png" },
   "/feeztal/1.png",
   "/feeztal/2.png",
   "/feeztal/3.png",

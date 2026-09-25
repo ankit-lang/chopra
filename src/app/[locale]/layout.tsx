@@ -146,6 +146,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1622159612955260');fbq('track','PageView');`,
           }}
         />
+
+        {/* //24sep */}
+        {/* <!-- Event snippet for Page view (2) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> */}
+        <Script
+          id="google-conversion-snippet"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18150061008/NfDjCNbB964cENDnz85D',
+                  'value': 1.0,
+                  'currency': 'EUR',
+                  'event_callback': callback
+                });
+                return false;
+              }
+            `
+          }}
+        />
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <noscript>
@@ -181,6 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <WhatsAppWidget />
         <ScrollToTopButton />
         <DiscountPopupModal locale={params.locale} />
+
       </body>
     </html>
   )

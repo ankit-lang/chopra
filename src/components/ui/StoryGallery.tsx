@@ -5,7 +5,21 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Pause, Play, Maximize } from 'lucide-react'
 
-export default function StoryGallery({ images }: { images: string[] }) {
+export type GalleryImage = string | { desktop: string; mobile: string };
+
+const ResponsiveImage = ({ img, ...props }: { img: GalleryImage, [key: string]: any }) => {
+  if (typeof img === 'string') {
+    return <Image src={img} {...props} />
+  }
+  return (
+    <>
+      <Image src={img.mobile} {...props} className={`${props.className || ''} md:hidden`} />
+      <Image src={img.desktop} {...props} className={`${props.className || ''} hidden md:block`} />
+    </>
+  )
+}
+
+export default function StoryGallery({ images }: { images: GalleryImage[] }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [prevIndex, setPrevIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
@@ -17,10 +31,17 @@ export default function StoryGallery({ images }: { images: string[] }) {
   // Preload all gallery images in browser cache upon mount
   useEffect(() => {
     if (!images || images.length === 0) return
-    images.forEach((src) => {
-      if (src) {
-        const img = new window.Image()
-        img.src = src
+    images.forEach((imgSrc) => {
+      if (imgSrc) {
+        if (typeof imgSrc === 'string') {
+          const img = new window.Image()
+          img.src = imgSrc
+        } else {
+          const img1 = new window.Image()
+          img1.src = imgSrc.desktop
+          const img2 = new window.Image()
+          img2.src = imgSrc.mobile
+        }
       }
     })
   }, [images])
@@ -94,15 +115,15 @@ export default function StoryGallery({ images }: { images: string[] }) {
     >
       {/* Hidden preloader for Next.js image optimization cache */}
       <div className="hidden" aria-hidden="true">
-        {images.map((src, i) => (
-          <Image key={`preload-${i}-${src}`} src={src} alt="" width={1} height={1} priority />
+        {images.map((img, i) => (
+          <ResponsiveImage key={`preload-${i}`} img={img} alt="" width={1} height={1} priority />
         ))}
       </div>
 
       {/* Ambient blurred backdrop layer (prevents pitch-black background) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <Image
-          src={images[currentIndex] || images[0]}
+        <ResponsiveImage
+          img={images[currentIndex] || images[0]}
           alt=""
           fill
           className="object-cover blur-2xl opacity-40 scale-110 transition-all duration-700 brightness-90"
@@ -113,8 +134,8 @@ export default function StoryGallery({ images }: { images: string[] }) {
 
       {/* Base static layer under transitions (prevents black flash during slide) */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={images[prevIndex] || images[0]}
+        <ResponsiveImage
+          img={images[prevIndex] || images[0]}
           alt="Gallery base"
           fill
           className="object-cover brightness-105"
@@ -139,8 +160,8 @@ export default function StoryGallery({ images }: { images: string[] }) {
           }}
           className="absolute inset-0 z-10"
         >
-          <Image
-            src={images[currentIndex]}
+          <ResponsiveImage
+            img={images[currentIndex]}
             alt="Gallery image"
             fill
             className="object-cover brightness-105"
