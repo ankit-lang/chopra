@@ -7,14 +7,14 @@ import { ChevronLeft, ChevronRight, Pause, Play, Maximize } from 'lucide-react'
 
 export type GalleryImage = string | { desktop: string; mobile: string };
 
-const ResponsiveImage = ({ img, ...props }: { img: GalleryImage, [key: string]: any }) => {
+const ResponsiveImage = ({ img, alt = "", ...props }: { img: GalleryImage, alt?: string, [key: string]: any }) => {
   if (typeof img === 'string') {
-    return <Image src={img} {...props} />
+    return <Image src={img} alt={alt} {...props} />
   }
   return (
     <>
-      <Image src={img.mobile} {...props} className={`${props.className || ''} md:hidden`} />
-      <Image src={img.desktop} {...props} className={`${props.className || ''} hidden md:block`} />
+      <Image src={img.mobile} alt={alt} {...props} className={`${props.className || ''} md:hidden`} />
+      <Image src={img.desktop} alt={alt} {...props} className={`${props.className || ''} hidden md:block`} />
     </>
   )
 }
