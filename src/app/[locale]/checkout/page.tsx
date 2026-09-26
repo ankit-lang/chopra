@@ -74,11 +74,11 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
       return
     }
 
-    if (!form.name.trim() || !form.phone.trim()) {
+    if (!form.name.trim() || !form.phone.trim() || !form.email.trim()) {
       setError(
         locale === 'nl'
-          ? 'Vul a.u.b. uw naam en telefoonnummer in.'
-          : 'Please fill in your name and phone number.'
+          ? 'Vul a.u.b. uw naam, telefoonnummer en e-mailadres in.'
+          : 'Please fill in your name, phone number, and email address.'
       )
       return
     }
@@ -305,12 +305,13 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               {/* Email */}
               <div className="mb-6">
                 <label htmlFor="email" className="block text-sm font-medium text-[#1A1A1A] mb-2">
-                  {locale === 'nl' ? 'E-mailadres' : 'Email Address'} <span className="text-[#1A1A1A]/40 font-normal">{locale === 'nl' ? '(optioneel)' : '(optional)'}</span>
+                  {locale === 'nl' ? 'E-mailadres' : 'Email Address'} <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
+                  required
                   value={form.email}
                   onChange={handleChange}
                   placeholder={locale === 'nl' ? 'uw@email.nl' : 'your@email.com'}
