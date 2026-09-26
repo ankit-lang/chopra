@@ -140,6 +140,16 @@ export const ALL_PICKUP_TIMES = [
   '22:00',
 ]
 
+export const ALL_DELIVERY_TIMES = [
+  '18:00',
+  '18:30',
+  '19:00',
+  '19:30',
+  '20:00',
+  '20:30',
+  '21:00',
+]
+
 export function getAvailablePickupTimes(date: Date = new Date()): string[] {
   const status = checkOpeningStatus(date)
   if (status.isClosed) {
@@ -155,6 +165,27 @@ export function getAvailablePickupTimes(date: Date = new Date()): string[] {
   
   // Require pickup time to be at least 15 minutes after current order time
   return ALL_PICKUP_TIMES.filter((timeStr) => {
+    const [h, m] = timeStr.split(':').map(Number)
+    const slotMinutes = h * 60 + m
+    return slotMinutes >= totalMinutes + 15
+  })
+}
+
+export function getAvailableDeliveryTimes(date: Date = new Date()): string[] {
+  const status = checkOpeningStatus(date)
+  if (status.isClosed) {
+    return []
+  }
+
+  // --- TEMPORARY BYPASS FOR LOCAL TESTING ---
+  if (process.env.NODE_ENV === 'development') {
+    return ALL_DELIVERY_TIMES
+  }
+
+  const { totalMinutes } = getAmsterdamTime(date)
+  
+  // Require pickup time to be at least 15 minutes after current order time
+  return ALL_DELIVERY_TIMES.filter((timeStr) => {
     const [h, m] = timeStr.split(':').map(Number)
     const slotMinutes = h * 60 + m
     return slotMinutes >= totalMinutes + 15

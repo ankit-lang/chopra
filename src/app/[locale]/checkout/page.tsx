@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { MapPin, Banknote, ShieldCheck, Check, Clock } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 import type { Locale } from '@/lib/useTranslations'
-import { checkOpeningStatus, getAvailablePickupTimes, ALL_PICKUP_TIMES, type OpeningStatus } from '@/lib/openingHours'
+import { checkOpeningStatus, getAvailablePickupTimes, getAvailableDeliveryTimes, ALL_PICKUP_TIMES, ALL_DELIVERY_TIMES, type OpeningStatus } from '@/lib/openingHours'
 
 function formatPrice(price: number): string {
   return price % 1 === 0 ? `€${price}` : `€${price.toFixed(2)}`
@@ -39,15 +39,23 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
   useEffect(() => {
     function updateStatus() {
       const status = checkOpeningStatus()
-      const times = getAvailablePickupTimes()
+      const times = orderType === 'delivery' ? getAvailableDeliveryTimes() : getAvailablePickupTimes()
       setOpeningStatus(status)
       setAvailableTimes(times)
+      
+      // Reset selected time if it's no longer valid in the new times list
+      setForm((prev) => {
+        if (prev.pickupTime && !times.includes(prev.pickupTime)) {
+          return { ...prev, pickupTime: '' }
+        }
+        return prev
+      })
     }
 
     updateStatus()
     const timer = setInterval(updateStatus, 30000)
     return () => clearInterval(timer)
-  }, [])
+  }, [orderType])
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -75,11 +83,12 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
       return
     }
 
-    if (!form.pickupTime || !ALL_PICKUP_TIMES.includes(form.pickupTime)) {
+    const validTimes = orderType === 'delivery' ? ALL_DELIVERY_TIMES : ALL_PICKUP_TIMES;
+    if (!form.pickupTime || !validTimes.includes(form.pickupTime)) {
       setError(
         locale === 'nl'
-          ? 'Selecteer a.u.b. een geldige ophaaltijd tussen 16:30 en 22:00.'
-          : 'Please select a valid pickup time between 16:30 and 22:00.'
+          ? `Selecteer a.u.b. een geldige ${orderType === 'delivery' ? 'bezorgtijd tussen 18:00 en 21:00' : 'ophaaltijd tussen 16:30 en 22:00'}.`
+          : `Please select a valid ${orderType === 'delivery' ? 'delivery time between 18:00 and 21:00' : 'pickup time between 16:30 and 22:00'}.`
       )
       return
     }
@@ -348,7 +357,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   <option value="">
                     {openingStatus.isClosed || availableTimes.length === 0
                       ? (locale === 'nl' ? '-- Bestellingen Momenteel Gesloten --' : '-- Ordering Currently Closed --')
-                      : (locale === 'nl' ? '-- Selecteer Ophaaltijd * --' : '-- Select Pickup Time * --')}
+                      : (locale === 'nl' ? (orderType === 'delivery' ? '-- Selecteer Bezorgtijd * --' : '-- Selecteer Ophaaltijd * --') : (orderType === 'delivery' ? '-- Select Delivery Time * --' : '-- Select Pickup Time * --'))}
                   </option>
                   {availableTimes.map((time) => (
                     <option key={time} value={time}>
@@ -357,9 +366,13 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   ))}
                 </select>
                 <p className="text-xs text-[#1A1A1A]/40 mt-1">
-                  {locale === 'nl'
-                    ? 'Openingstijden: Dinsdag t/m Zondag van 16:30 tot 22:30 (Bestellen tot 21:30, Laatste ophaaltijd 22:00)'
-                    : 'Opening hours: Tuesday to Sunday from 16:30 to 22:30 (Orders until 21:30, Last pickup 22:00)'}
+                  {orderType === 'delivery'
+                    ? (locale === 'nl'
+                      ? 'Bezorgtijden: Dinsdag t/m Zondag van 18:00 tot 21:00'
+                      : 'Delivery times: Tuesday to Sunday from 18:00 to 21:00')
+                    : (locale === 'nl'
+                      ? 'Openingstijden: Dinsdag t/m Zondag van 16:30 tot 22:30 (Bestellen tot 21:30, Laatste ophaaltijd 22:00)'
+                      : 'Opening hours: Tuesday to Sunday from 16:30 to 22:30 (Orders until 21:30, Last pickup 22:00)')}
                 </p>
               </div>
 
