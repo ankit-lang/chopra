@@ -73,7 +73,33 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
     </div>
   `
 
-  const customerHtml = `
+  const isReservation = subject.toLowerCase().includes('reservation') || subject.toLowerCase().includes('booking')
+
+  const customerHtml = isReservation ? `
+    <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A;">
+      <div style="background:#1e293b;padding:32px 32px 24px;border-radius:8px 8px 0 0;text-align:center;">
+        <h1 style="color:#ffffff;margin:0;font-size:26px;">Booking Confirmed!</h1>
+        <p style="color:#cbd5e1;margin:12px 0 0;font-size:15px;line-height:1.5;">Your table is reserved. Get ready for great food, good vibes, and a wonderful time ahead!</p>
+      </div>
+      <div style="padding:32px;background:#ffffff;border:1px solid #e0e0e0;border-top:none;border-radius:0 0 8px 8px;">
+        <p style="font-size:15px;color:#334155;margin-top:0;">Dear <strong>${customerName}</strong>,</p>
+        <p style="color:#475569;line-height:1.6;margin-bottom:32px;font-size:15px;">Thank you for booking with <strong>Chopras</strong> Indian Restaurant. Your reservation has been successfully confirmed. We look forward to welcoming you!</p>
+        
+        <div style="background:#f8fafc;border-radius:8px;padding:24px;margin-bottom:24px;border:1px solid #f1f5f9;">
+          <h3 style="font-size:13px;text-transform:uppercase;color:#0f172a;margin:0 0 16px 0;letter-spacing:0.5px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">RESERVATION DETAILS</h3>
+          <table style="width:100%;border-collapse:collapse;font-size:15px;">
+            ${lines}
+          </table>
+        </div>
+        ${calendarHtml}
+        
+        <p style="color:#64748b;font-size:14px;line-height:1.6;margin-top:24px;">If you need to modify or cancel your reservation, please contact us in advance.</p>
+        
+        <p style="color:#334155;font-size:15px;margin-top:24px;margin-bottom:4px;">Warm regards,</p>
+        <p style="color:#0f172a;font-size:15px;font-weight:bold;margin:0;">Team Chopras</p>
+      </div>
+    </div>
+  ` : `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A;">
       <div style="background:#06068a;padding:24px 32px;border-radius:8px 8px 0 0;">
         <h1 style="color:#ffffff;margin:0;font-size:22px;">Chopras Indian Restaurant</h1>
@@ -94,6 +120,7 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
 
   const emailPromises = []
   const timestamp = new Date().toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam' })
+  const customerSubject = isReservation ? `Booking Confirmed - Chopras Indian Restaurant [${timestamp}]` : `Enquiry Confirmation - ${subject} [${timestamp}]`
 
   // 1. Queue email to customer
   if (customerEmail) {
@@ -102,7 +129,7 @@ export async function sendBookingEmail(subject: string, payload: Record<string, 
         from: `"Chopras Indian Restaurant" <${gmailUser}>`,
         to: customerEmail,
         replyTo: 'info@chopras.nl',
-        subject: `Enquiry Confirmation - ${subject} [${timestamp}]`,
+        subject: customerSubject,
         html: customerHtml,
       }).catch(err => console.error('[Nodemailer] Customer email error:', err))
     )
