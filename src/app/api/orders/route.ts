@@ -30,6 +30,9 @@ export async function POST(request: NextRequest) {
       items,
       totalAmount,
       specialInstructions,
+      orderType,
+      deliveryAddress,
+      deliveryFee,
     } = body
 
     const openingStatus = checkOpeningStatus()
@@ -67,7 +70,7 @@ export async function POST(request: NextRequest) {
   <div style="max-width:600px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
     <div style="background:linear-gradient(135deg,#000066,#0000FF);padding:24px 32px;">
-      <h1 style="color:white;margin:0;font-size:22px;">New Pickup Order</h1>
+      <h1 style="color:white;margin:0;font-size:22px;">New ${orderType === 'delivery' ? 'Delivery' : 'Pickup'} Order</h1>
       <p style="color:rgba(255,255,255,0.7);margin:4px 0 0;font-size:14px;">Order #${orderNumber}</p>
     </div>
 
@@ -78,7 +81,8 @@ export async function POST(request: NextRequest) {
         <p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#1a1a1a;">${customerName}</p>
         <p style="margin:2px 0 0;font-size:14px;color:#555;">Phone: ${customerPhone}</p>
         <p style="margin:2px 0 0;font-size:14px;color:#555;">Email: ${customerEmail || 'Not provided'}</p>
-        <p style="margin:4px 0 0;font-size:14px;font-weight:600;color:#0000B3;">Scheduled Pickup Time: ${pickupTime || 'Not specified'}</p>
+        <p style="margin:4px 0 0;font-size:14px;font-weight:600;color:#0000B3;">Scheduled ${orderType === 'delivery' ? 'Delivery' : 'Pickup'} Time: ${pickupTime || 'Not specified'}</p>
+        ${orderType === 'delivery' ? `<p style="margin:4px 0 0;font-size:14px;font-weight:600;color:#0000B3;">Delivery Address: ${deliveryAddress}</p>` : ''}
       </div>
 
       <h2 style="font-size:16px;color:#1B2B5E;margin:0 0 12px;">Order Items</h2>
@@ -96,6 +100,8 @@ export async function POST(request: NextRequest) {
       </table>
 
       <div style="border-top:2px solid #1B2B5E;padding-top:12px;text-align:right;">
+        ${orderType === 'delivery' ? `<p style="margin:0 0 4px;font-size:14px;color:#555;">Subtotal: &euro;${(totalAmount - deliveryFee).toFixed(2)}</p>
+        <p style="margin:0 0 8px;font-size:14px;color:#555;">Delivery Fee: &euro;${deliveryFee.toFixed(2)}</p>` : ''}
         <span style="font-size:18px;font-weight:700;color:#1B2B5E;">Total: &euro;${totalAmount.toFixed(2)}</span>
       </div>
 
@@ -105,24 +111,24 @@ export async function POST(request: NextRequest) {
       </div>
 
       <div style="margin-top:24px;background:#f0f4ff;border-radius:8px;padding:16px;">
-        <p style="margin:0;font-size:13px;color:#1B2B5E;font-weight:600;">Payment: Payment on Pickup</p>
+        <p style="margin:0;font-size:13px;color:#1B2B5E;font-weight:600;">Payment: ${orderType === 'delivery' ? 'Payment on Delivery' : 'Payment on Pickup'}</p>
         <p style="margin:4px 0 0;font-size:13px;color:#555;">Ready in approximately 30 to 45 minutes</p>
       </div>
 
-      ${totalAmount >= 50 ? `
+      ${orderType === 'pickup' && totalAmount >= 50 ? `
       <div style="margin-top:16px;background:#fefce8;border:2px dashed #eab308;border-radius:10px;padding:16px;text-align:center;">
         <p style="margin:0;font-size:15px;font-weight:700;color:#713f12;">🎁 5% Self-Collection Discount Applicable!</p>
         <p style="margin:6px 0 0;font-size:13px;color:#854d0e;line-height:1.4;">
           Your order is <strong>&euro;50 or more</strong>! A 5% discount (approx. <strong>&euro;${(totalAmount * 0.05).toFixed(2)} savings</strong>) will be applied at the restaurant during payment upon pickup.
         </p>
       </div>
-      ` : `
+      ` : orderType === 'pickup' ? `
       <div style="margin-top:16px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:12px 16px;text-align:center;">
         <p style="margin:0;font-size:12px;color:#475569;">
           💡 <strong>Special Offer:</strong> Get 5% OFF on all self-collection orders of &euro;50 or more when paying at the restaurant!
         </p>
       </div>
-      `}
+      ` : ''}
 
     </div>
 
@@ -186,10 +192,10 @@ export async function POST(request: NextRequest) {
       })
 
       const whatsappData: Record<string, any> = {
-        serviceType: 'Chopras Pickup Order',
+        serviceType: `Chopras ${orderType === 'delivery' ? 'Delivery' : 'Pickup'} Order`,
         fullName: customerName,
         phone: customerPhone,
-        message: `Date: ${currentDate} | Order Number: ${orderNumber} | Pickup Time: ${pickupTime || 'N/A'} | Items: ${itemsListSummary} | Total: €${totalAmount.toFixed(2)}`,
+        message: `Date: ${currentDate} | Order Number: ${orderNumber} | ${orderType === 'delivery' ? 'Delivery' : 'Pickup'} Time: ${pickupTime || 'N/A'} | Items: ${itemsListSummary} | Total: €${totalAmount.toFixed(2)}${orderType === 'delivery' ? ` | Delivery Address: ${deliveryAddress}` : ''}`,
       }
 
       if (customerEmail) whatsappData.email = customerEmail
@@ -214,13 +220,14 @@ export async function POST(request: NextRequest) {
 
       await appendToGoogleSheet('Order', {
         orderNumber,
+        orderType,
         customerName,
         customerPhone,
         customerEmail: customerEmail || 'N/A',
         pickupTime: pickupTime || 'N/A',
         items: itemsSummary,
         totalAmount: `€${totalAmount.toFixed(2)}`,
-        specialInstructions: specialInstructions || 'None',
+        specialInstructions: (orderType === 'delivery' ? `Delivery Address: ${deliveryAddress}\n` : '') + (specialInstructions || 'None'),
       })
     } catch (sheetErr) {
       console.error('[GoogleSheets Order Log Error]:', sheetErr)
@@ -240,7 +247,9 @@ export async function POST(request: NextRequest) {
         pickupTime,
         items,
         totalAmount,
-        paymentMethod: 'Payment on Pickup',
+        orderType,
+        deliveryAddress: orderType === 'delivery' ? deliveryAddress : undefined,
+        paymentMethod: orderType === 'delivery' ? 'Payment on Delivery' : 'Payment on Pickup',
         specialInstructions,
         estimatedPickup: '30 to 45 minutes',
         restaurantAddress: 'Leyweg 986, 2545 GW Den Haag',

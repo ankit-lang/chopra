@@ -16,8 +16,12 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
   const { locale } = params
   const router = useRouter()
   const { items, clearCart, getTotalPrice } = useCartStore()
-  const totalPrice = getTotalPrice()
+  const cartTotal = getTotalPrice()
   const base = locale === 'nl' ? '/nl' : ''
+
+  const [orderType, setOrderType] = useState<'pickup' | 'delivery'>('pickup')
+  const deliveryFee = orderType === 'delivery' ? 5 : 0
+  const finalTotal = cartTotal + deliveryFee
 
   const [form, setForm] = useState({
     name: '',
@@ -25,6 +29,7 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
     email: '',
     pickupTime: '',
     instructions: '',
+    address: '',
   })
   const [openingStatus, setOpeningStatus] = useState<OpeningStatus>(() => checkOpeningStatus())
   const [availableTimes, setAvailableTimes] = useState<string[]>(() => getAvailablePickupTimes())
@@ -84,6 +89,25 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
       return
     }
 
+    if (orderType === 'delivery') {
+      if (cartTotal < 70) {
+        setError(
+          locale === 'nl'
+            ? 'Minimum bestelbedrag voor bezorging is €70.'
+            : 'Minimum order amount for delivery is €70.'
+        )
+        return
+      }
+      if (!form.address.trim()) {
+        setError(
+          locale === 'nl'
+            ? 'Vul a.u.b. uw bezorgadres in.'
+            : 'Please fill in your delivery address.'
+        )
+        return
+      }
+    }
+
     setIsLoading(true)
 
     try {
@@ -96,9 +120,12 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
           customerEmail: form.email,
           pickupTime: form.pickupTime,
           items,
-          totalAmount: totalPrice,
+          totalAmount: finalTotal,
           specialInstructions: form.instructions,
           locale,
+          orderType,
+          deliveryAddress: form.address,
+          deliveryFee,
         }),
       })
 
@@ -186,6 +213,30 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
               </h2>
               <div className="w-12 h-0.5 btn-gradient mt-2 mb-8" />
 
+              {/* Order Type Toggle */}
+              <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+                <button
+                  type="button"
+                  onClick={() => setOrderType('pickup')}
+                  className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-colors ${orderType === 'pickup' ? 'bg-white shadow-sm text-[#06068a]' : 'text-gray-500 hover:text-gray-700'}`}
+                >
+                  {locale === 'nl' ? 'Afhalen' : 'Pickup'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setOrderType('delivery')}
+                  className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-colors ${orderType === 'delivery' ? 'bg-white shadow-sm text-[#06068a]' : 'text-gray-500 hover:text-gray-700'}`}
+                >
+                  {locale === 'nl' ? 'Bezorgen' : 'Delivery'}
+                </button>
+              </div>
+
+              {orderType === 'delivery' && (
+                <div className="mb-6 bg-blue-50 border border-blue-200 rounded-2xl p-4 text-blue-900 text-sm">
+                  <p><strong>{locale === 'nl' ? 'Let op:' : 'Note:'}</strong> {locale === 'nl' ? 'Bezorging is alleen mogelijk binnen een straal van 5 km. Minimum bestelbedrag is €70. Bezorgkosten zijn €5.' : 'Delivery is only available within a 5km radius. Minimum order is €70. Delivery fee is €5.'}</p>
+                </div>
+              )}
+
               {/* Order Cutoff Banner */}
               {openingStatus.isClosed && (
                 <div className="mb-6 bg-amber-50 border border-amber-300 rounded-2xl p-5 text-amber-900 flex items-start gap-3">
@@ -261,10 +312,29 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 </p>
               </div>
 
+              {/* Delivery Address */}
+              {orderType === 'delivery' && (
+                <div className="mb-6">
+                  <label htmlFor="address" className="block text-sm font-medium text-[#1A1A1A] mb-2">
+                    {locale === 'nl' ? 'Bezorgadres (Straat, Huisnummer, Postcode, Woonplaats)' : 'Delivery Address (Street, House No, Postcode, City)'} <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    required={orderType === 'delivery'}
+                    rows={2}
+                    value={form.address}
+                    onChange={handleChange}
+                    placeholder={locale === 'nl' ? 'Uw volledige adres...' : 'Your full address...'}
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#06068a] transition-colors resize-none"
+                  />
+                </div>
+              )}
+
               {/* Pickup Time Dropdown */}
               <div className="mb-6">
                 <label htmlFor="pickupTime" className="block text-sm font-medium text-[#1A1A1A] mb-2">
-                  {locale === 'nl' ? 'Ophaaltijd' : 'Pickup Time'} <span className="text-red-500">*</span>
+                  {orderType === 'delivery' ? (locale === 'nl' ? 'Bezorgtijd' : 'Delivery Time') : (locale === 'nl' ? 'Ophaaltijd' : 'Pickup Time')} <span className="text-red-500">*</span>
                 </label>
                 <select
                   id="pickupTime"
@@ -330,12 +400,14 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A] text-sm">
-                      {locale === 'nl' ? 'Betalen bij Afhalen' : 'Payment on Pickup'}
+                      {orderType === 'delivery' 
+                        ? (locale === 'nl' ? 'Betalen bij Bezorging' : 'Payment on Delivery')
+                        : (locale === 'nl' ? 'Betalen bij Afhalen' : 'Payment on Pickup')}
                     </p>
                     <p className="text-sm text-[#1A1A1A]/60 mt-1">
-                      {locale === 'nl'
-                        ? 'Betaal wanneer u uw bestelling ophaalt op Leyweg 986, Den Haag'
-                        : 'Pay when you collect your order at Leyweg 986, Den Haag'}
+                      {orderType === 'delivery'
+                        ? (locale === 'nl' ? 'Betaal (contant of pin) wanneer uw bestelling wordt bezorgd' : 'Pay (cash or card) when your order is delivered')
+                        : (locale === 'nl' ? 'Betaal wanneer u uw bestelling ophaalt op Leyweg 986, Den Haag' : 'Pay when you collect your order at Leyweg 986, Den Haag')}
                     </p>
                   </div>
                 </div>
@@ -366,7 +438,9 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 <MapPin className="text-[#06068a] w-5 h-5 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-[#1B2B5E] text-sm">
-                    {locale === 'nl' ? 'Ophaallocatie' : 'Pickup Location'}
+                    {orderType === 'delivery' 
+                      ? (locale === 'nl' ? 'Bezorging vanuit' : 'Delivery from')
+                      : (locale === 'nl' ? 'Ophaallocatie' : 'Pickup Location')}
                   </p>
                   <p className="text-[#1A1A1A]/70 text-sm mt-1">Leyweg 986, 2545 GW Den Haag</p>
                   <p className="text-[#1A1A1A]/50 text-xs mt-1">
@@ -438,7 +512,9 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 ) : openingStatus.isClosed ? (
                   locale === 'nl' ? 'BESTELLEN GESLOTEN' : 'ORDERING CLOSED'
                 ) : (
-                  locale === 'nl' ? 'BESTELLING PLAATSEN -- BETALEN BIJ AFHALEN' : 'Place Order -- Payment on Pickup'
+                  orderType === 'delivery' 
+                    ? (locale === 'nl' ? 'BESTELLING PLAATSEN -- BETALEN BIJ BEZORGING' : 'Place Order -- Payment on Delivery')
+                    : (locale === 'nl' ? 'BESTELLING PLAATSEN -- BETALEN BIJ AFHALEN' : 'Place Order -- Payment on Pickup')
                 )}
               </button>
 
@@ -509,15 +585,15 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                 <div className="px-6 py-4 border-t border-gray-100 space-y-3">
                   <div className="flex justify-between text-sm text-[#1A1A1A]/60">
                     <span>{locale === 'nl' ? 'Subtotaal' : 'Subtotal'}</span>
-                    <span>{formatPrice(totalPrice)}</span>
+                    <span>{formatPrice(cartTotal)}</span>
                   </div>
                   <div className="flex justify-between text-sm text-[#1A1A1A]/60">
-                    <span>{locale === 'nl' ? 'Afhaalkosten' : 'Pickup fee'}</span>
-                    <span>{locale === 'nl' ? 'Gratis' : 'Free'}</span>
+                    <span>{orderType === 'delivery' ? (locale === 'nl' ? 'Bezorgkosten' : 'Delivery fee') : (locale === 'nl' ? 'Afhaalkosten' : 'Pickup fee')}</span>
+                    <span>{orderType === 'delivery' ? formatPrice(deliveryFee) : (locale === 'nl' ? 'Gratis' : 'Free')}</span>
                   </div>
                   <div className="border-t border-gray-100 pt-3 flex justify-between font-heading text-2xl text-[#1A1A1A]">
                     <span>{locale === 'nl' ? 'Totaal' : 'Total'}</span>
-                    <span className="text-[#06068a] font-bold">{formatPrice(totalPrice)}</span>
+                    <span className="text-[#06068a] font-bold">{formatPrice(finalTotal)}</span>
                   </div>
                 </div>
 
@@ -526,7 +602,9 @@ export default function CheckoutPage({ params }: { params: { locale: Locale } })
                   <div className="bg-[#0000B3]/10 border border-[#0000B3]/20 rounded-xl px-4 py-3 flex items-center gap-2">
                     <Banknote className="text-[#06068a] w-4 h-4 flex-shrink-0" />
                     <p className="text-sm text-[#1A1A1A]/70">
-                      {locale === 'nl' ? 'Betalen bij afhalen op Leyweg 986' : 'Payment on Pickup at Leyweg 986'}
+                      {orderType === 'delivery' 
+                        ? (locale === 'nl' ? 'Betalen bij bezorging' : 'Payment on Delivery')
+                        : (locale === 'nl' ? 'Betalen bij afhalen op Leyweg 986' : 'Payment on Pickup at Leyweg 986')}
                     </p>
                   </div>
                 </div>

@@ -69,6 +69,11 @@ export function getTodayAmsterdamDate(): string {
 }
 
 export function checkOpeningStatus(date: Date = new Date()): OpeningStatus {
+  // --- TEMPORARY BYPASS FOR LOCAL TESTING ---
+  if (process.env.NODE_ENV === 'development') {
+    return { isClosed: false, messageEn: '', messageNl: '' }
+  }
+  
   try {
     const { hours, minutes, weekday, totalMinutes } = getAmsterdamTime(date)
 
@@ -139,6 +144,11 @@ export function getAvailablePickupTimes(date: Date = new Date()): string[] {
   const status = checkOpeningStatus(date)
   if (status.isClosed) {
     return []
+  }
+
+  // --- TEMPORARY BYPASS FOR LOCAL TESTING ---
+  if (process.env.NODE_ENV === 'development') {
+    return ALL_PICKUP_TIMES
   }
 
   const { totalMinutes } = getAmsterdamTime(date)
