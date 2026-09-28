@@ -113,7 +113,7 @@ export default function CateringBanner({ locale = 'en' }: { locale?: Locale }) {
             </div>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center mt-9">
-              {['Indian Buffet Den Haag', 'Party Venue Den Haag', 'Halal Certified', '25–80 Guests'].map((fact) => (
+              {['Indian Buffet Den Haag', 'Party Venue Den Haag', 'Halal Certified', '25 to 50 Guests'].map((fact) => (
                 <span key={fact} className="font-body text-white/40 text-xs uppercase tracking-wider">{fact}</span>
               ))}
             </div>

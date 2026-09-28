@@ -172,7 +172,7 @@ export default function AboutPage({ params }: Props) {
               </>
             ) : (
               <>
-                <p>Chopras opened in 2023 at Leyweg 986 in Den Haag. The restaurant seats 25 to 80 guests and features a dedicated <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:underline font-semibold">private event hall for weddings, birthdays and corporate celebrations</Link>. Open Tuesday to Sunday from 16:30 to 22:30. Closed Mondays.</p>
+                <p>Chopras opened in 2023 at Leyweg 986 in Den Haag. The restaurant seats 25 to 50 guests and features a dedicated <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:underline font-semibold">private event hall for weddings, birthdays and corporate celebrations</Link>. Open Tuesday to Sunday from 16:30 to 22:30. Closed Mondays.</p>
                 <p>The menu offers 143+ dishes - <Link href={`${base}/vegan-menu`} className="text-[#06068a] hover:underline font-semibold">vegetarian and vegan options</Link>, biryani, tandoori, North Indian curries and <Link href={`${base}/indo-chinese-restaurant-den-haag`} className="text-[#06068a] hover:underline font-semibold">Indo-Chinese fusion food</Link>. All dishes can be <Link href={`${base}/indian-food-delivery-den-haag`} className="text-[#06068a] hover:underline font-semibold">delivered or collected</Link> for those who want to enjoy at home.</p>
                 <p>Chopras history is short but purposeful. A restaurant created not for profit but to bring authentic North Indian food to the Netherlands. A place where you can taste the real thing.</p>
               </>

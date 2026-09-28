@@ -301,7 +301,7 @@ export default function IndianBuffetPage({ params }: Props) {
                   <Link href={`${base}/halal-menu`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">fully halal certified</Link>.
                   Not an option. Not a section of the menu. The entire kitchen is halal and every supplier is certified.
                   Families who need complete confidence on halal status do not need to ask twice.
-                  The private hall at Leyweg 986 accommodates 25 to 80 guests.
+                  The private hall at Leyweg 986 accommodates 25 to 50 guests.
                   For larger events and off-site venues, Chopras brings the full{' '}
                   <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian catering operation</Link>{' '}
                   to your location across Den Haag, Rijswijk, Delft, Zoetermeer and Voorburg.

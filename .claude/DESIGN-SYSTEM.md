@@ -230,7 +230,7 @@ Non-vegetarian: filled dark red circle inside square border, color #8B0000
 - Email: info@chopras.nl
 - Hours: Tuesday to Sunday, 16:30 to 22:30. Closed Monday.
 - NO LUNCH SERVICE. Never write lunch, 11:30, 12:00, or any daytime food reference.
-- Capacity: 25 to 80 guests. Never claim above 80.
+- Capacity: 25 to 50 guests. Never claim above 80.
 - Founded: 2023 by Arun Chopra (Founder only — never "Head Chef")
 - Google rating: 4.9 stars, 1300+ reviews
 - TheFork rating: 8.6

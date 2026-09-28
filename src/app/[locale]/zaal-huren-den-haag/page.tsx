@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = params
-  const title = 'Zaal Huren Den Haag | Feestzaal voor 25-80 Personen | Chopras'
+  const title = 'Zaal Huren Den Haag | Feestzaal voor 25-50 Personen | Chopras'
   const description = 'Zaal huren in Den Haag voor bruiloften, verjaardagen en feesten. Privézaal bij Chopras Indian Restaurant op Leyweg 986 voor 25 tot 80 personen met 100% halal catering. Reserveer direct.'
   return {
     title,

@@ -21,7 +21,7 @@ const faqsEn = [
   },
   {
     question: 'Can Chopras cater for a group or event from Westland?',
-    answer: 'Yes. Chopras Indian Restaurant has a private event hall at Leyweg 986 that seats 25 to 80 guests. The hall is suitable for birthday dinners, wedding receptions, nikah celebrations, corporate events, and family gatherings. Groups from Westland and the surrounding towns of Naaldwijk, Monster, and De Lier regularly book for special occasions. Contact the restaurant to discuss availability.',
+    answer: 'Yes. Chopras Indian Restaurant has a private event hall at Leyweg 986 that seats 25 to 50 guests. The hall is suitable for birthday dinners, wedding receptions, nikah celebrations, corporate events, and family gatherings. Groups from Westland and the surrounding towns of Naaldwijk, Monster, and De Lier regularly book for special occasions. Contact the restaurant to discuss availability.',
   },
   {
     question: 'What are the opening hours at Chopras Indian Restaurant?',
@@ -361,7 +361,7 @@ export default function IndianRestaurantWestlandPage({ params }: Props) {
                 <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   biryani
                 </Link>{' '}
-                as the centrepiece. Saffron basmati rice, halal meat, fresh spices. For groups of 25 to 80 guests, the private event hall at Leyweg provides the space.{' '}
+                as the centrepiece. Saffron basmati rice, halal meat, fresh spices. For groups of 25 to 50 guests, the private event hall at Leyweg provides the space.{' '}
                 <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indian catering at Chopras
                 </Link>{' '}

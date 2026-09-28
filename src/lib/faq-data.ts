@@ -7,7 +7,7 @@ export const homeFaqs: FaqItem[] = [
   },
   {
     question: "Can I book an Indian restaurant in The Hague for private events or celebrations?",
-    answer: "Yes. Chopras Indian Restaurant Den Haag offers a private event hall and professional Indian catering services for a wide range of occasions, including: Birthday parties, Weddings & pre-wedding functions, Anniversaries, Baby showers, Corporate events, Diwali & festive celebrations, and Family gatherings. The venue can accommodate 25–80 guests, and there is no separate hall rental fee with qualifying food bookings. The restaurant also provides outside catering across Den Haag, Delft, Rijswijk, Voorburg, Leidschendam, and nearby areas, with halal, vegetarian, vegan, and customised menu options available."
+    answer: "Yes. Chopras Indian Restaurant Den Haag offers a private event hall and professional Indian catering services for a wide range of occasions, including: Birthday parties, Weddings & pre-wedding functions, Anniversaries, Baby showers, Corporate events, Diwali & festive celebrations, and Family gatherings. The venue can accommodate 25 to 50 guests, and there is no separate hall rental fee with qualifying food bookings. The restaurant also provides outside catering across Den Haag, Delft, Rijswijk, Voorburg, Leidschendam, and nearby areas, with halal, vegetarian, vegan, and customised menu options available."
   },
   {
     question: "What is the best Indian restaurant in Den Haag?",
@@ -134,7 +134,7 @@ export const homeFaqsNl: FaqItem[] = [
   },
   {
     question: "Kan ik een Indiaas restaurant in Den Haag boeken voor privé-evenementen of feesten?",
-    answer: "Ja. Chopras Indian Restaurant Den Haag biedt een privé-evenementenruimte en professionele Indiase cateringdiensten voor uiteenlopende gelegenheden, waaronder: verjaardagsfeesten, bruiloften & pre-wedding functies, jubilea, babyshowers, bedrijfsevenementen, Diwali & feestelijke vieringen en familiebijeenkomsten. De locatie biedt plaats aan 25–80 gasten en er zijn geen aparte zaalhuurkosten bij kwalificerende voedselboekingen. Het restaurant verzorgt ook catering op locatie in heel Den Haag, Delft, Rijswijk, Voorburg, Leidschendam en omliggende gebieden, met halal, vegetarische, veganistische en op maat gemaakte menu-opties beschikbaar."
+    answer: "Ja. Chopras Indian Restaurant Den Haag biedt een privé-evenementenruimte en professionele Indiase cateringdiensten voor uiteenlopende gelegenheden, waaronder: verjaardagsfeesten, bruiloften & pre-wedding functies, jubilea, babyshowers, bedrijfsevenementen, Diwali & feestelijke vieringen en familiebijeenkomsten. De locatie biedt plaats aan 25 to 50 gasten en er zijn geen aparte zaalhuurkosten bij kwalificerende voedselboekingen. Het restaurant verzorgt ook catering op locatie in heel Den Haag, Delft, Rijswijk, Voorburg, Leidschendam en omliggende gebieden, met halal, vegetarische, veganistische en op maat gemaakte menu-opties beschikbaar."
   },
   {
     question: "Wat is het beste Indiaase restaurant in Den Haag?",
@@ -200,14 +200,14 @@ export const cateringFaqs: FaqItem[] = [
   },
   {
     question: "Do you host group dining or private parties in Den Haag?",
-    answer: "Yes. Chopras Indian Restaurant has a private event hall for 25 to 80 guests in Den Haag, suitable for birthdays, corporate dinners, weddings, Diwali celebrations, and other private events with customisable menus."
+    answer: "Yes. Chopras Indian Restaurant has a private event hall for 25 to 50 guests in Den Haag, suitable for birthdays, corporate dinners, weddings, Diwali celebrations, and other private events with customisable menus."
   },
 ]
 
 export const eventFaqs: FaqItem[] = [
   {
     question: "Do you have a private event space in Den Haag?",
-    answer: "Yes. Chopras Indian Restaurant has a private event hall accommodating 25 to 80 guests in Den Haag, available for weddings, corporate events, birthdays, and cultural celebrations with customisable Indian menus."
+    answer: "Yes. Chopras Indian Restaurant has a private event hall accommodating 25 to 50 guests in Den Haag, available for weddings, corporate events, birthdays, and cultural celebrations with customisable Indian menus."
   },
   {
     question: "What types of events can I host at Chopras Indian Restaurant?",
@@ -319,7 +319,7 @@ export const cateringPageFaqs: FaqItem[] = [
   },
   {
     question: "How many guests can you cater for in Den Haag?",
-    answer: "Chopras Indian Restaurant caters for groups of 25 to 80 guests in its private event hall at Leyweg 986, Den Haag. For off-site catering at your own venue, we have served larger groups. Contact us with your guest count and we will confirm availability and logistics.",
+    answer: "Chopras Indian Restaurant caters for groups of 25 to 50 guests in its private event hall at Leyweg 986, Den Haag. For off-site catering at your own venue, we have served larger groups. Contact us with your guest count and we will confirm availability and logistics.",
   },
   {
     question: "How far in advance do I need to book catering?",
@@ -357,7 +357,7 @@ export const cateringPageFaqsNl: FaqItem[] = [
 export const feestzaalFaqs: FaqItem[] = [
   {
     question: "Can I hire the event hall at Chopras Indian Restaurant?",
-    answer: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. The hall is available for birthdays, weddings, nikah receptions, corporate events, Diwali dinners, and private parties. Full authentic Indian catering from the Chopras kitchen is included.",
+    answer: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 50 guests. The hall is available for birthdays, weddings, nikah receptions, corporate events, Diwali dinners, and private parties. Full authentic Indian catering from the Chopras kitchen is included.",
   },
   {
     question: "Is catering included with the hall hire?",

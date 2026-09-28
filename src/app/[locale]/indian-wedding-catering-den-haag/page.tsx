@@ -57,7 +57,7 @@ const faqsEn: Array<{ question: string; answer: string }> = [
   },
   {
     question: 'How many guests can you accommodate for wedding catering?',
-    answer: 'Chopras caters for weddings of 25 to 80 guests at the private hall at Leyweg 986, Den Haag. Every table receives the same quality of food whether the count is 25 or 80 - there is no reduced standard for larger numbers.',
+    answer: 'Chopras caters for weddings of 25 to 50 guests at the private hall at Leyweg 986, Den Haag. Every table receives the same quality of food whether the count is 25 or 80 - there is no reduced standard for larger numbers.',
   },
   {
     question: 'Can we customise the wedding menu?',
@@ -126,7 +126,7 @@ export default function IndianWeddingCateringPage({ params }: Props) {
     { title: 'Sangeet Night', desc: 'Music, dance and food before the wedding. A street food station or a light buffet works excellently for a Sangeet - guests eat while they move and socialise.' },
     { title: 'Mehndi Party', desc: 'Lighter catering for the mehndi evening. Indian chaat, snacks and sweets - food that guests can pick up while the mehndi artists are at work.' },
     { title: 'Haldi Ceremony', desc: 'Simple, joyful catering for the Haldi. Fruit, sweets, pakora, samosa - a light spread that accompanies the celebration without taking it over.' },
-    { title: 'Reception and Wedding Dinner', desc: 'Large formal dinner for 25 to 80 guests. Full buffet service or plated service. Professional serving staff. Fresh naan replenished throughout the evening.' },
+    { title: 'Reception and Wedding Dinner', desc: 'Large formal dinner for 25 to 50 guests. Full buffet service or plated service. Professional serving staff. Fresh naan replenished throughout the evening.' },
   ]
 
   return (
@@ -174,7 +174,7 @@ export default function IndianWeddingCateringPage({ params }: Props) {
           <p className="text-white/75 text-lg md:text-xl mb-8" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}>
             {isNl
               ? 'Halal bruiloftsmenus voor 25 tot 80 gasten. Nikah, Walima, Sangeet, Mehndi en grote bruiloftsdiners. Den Haag, Rijswijk, Delft en omgeving.'
-              : 'Halal wedding menus for 25 to 80 guests. Nikah, Walima, Sangeet, Mehndi and full wedding dinners. Den Haag, Rijswijk, Delft and surrounding areas.'}
+              : 'Halal wedding menus for 25 to 50 guests. Nikah, Walima, Sangeet, Mehndi and full wedding dinners. Den Haag, Rijswijk, Delft and surrounding areas.'}
           </p>
           <Link
             href={`${base}/catering#catering-form`}
@@ -520,7 +520,7 @@ export default function IndianWeddingCateringPage({ params }: Props) {
                   Leyweg 986, 2545 GW Den Haag
                 </Link>
                 . The team caters for nikah receptions, walima dinners, sangeet nights and full wedding
-                dinners for groups of 25 to 80 guests. All meat is halal certified. The restaurant holds
+                dinners for groups of 25 to 50 guests. All meat is halal certified. The restaurant holds
                 a 4.9-star rating from 1300+ Google reviews and is open Tuesday to Sunday from 16:30 to
                 22:30. Submit a wedding catering enquiry via the{' '}
                 <Link href={`${base}/catering#catering-form`} className="text-white hover:text-white font-semibold">

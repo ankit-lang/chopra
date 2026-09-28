@@ -21,7 +21,7 @@ const faqsEn = [
   },
   {
     question: 'Can I book a private event space for a group from Zoetermeer?',
-    answer: 'Yes. Chopras Indian Restaurant has a private event hall at Leyweg 986 that accommodates 25 to 80 guests. The hall is suitable for weddings, birthday dinners, nikah receptions, corporate events, and Diwali celebrations. Groups from Zoetermeer regularly book for special occasions. Contact the restaurant directly to discuss availability and catering arrangements.',
+    answer: 'Yes. Chopras Indian Restaurant has a private event hall at Leyweg 986 that accommodates 25 to 50 guests. The hall is suitable for weddings, birthday dinners, nikah receptions, corporate events, and Diwali celebrations. Groups from Zoetermeer regularly book for special occasions. Contact the restaurant directly to discuss availability and catering arrangements.',
   },
   {
     question: 'What are the opening hours at Chopras Indian Restaurant?',
@@ -342,7 +342,7 @@ export default function IndianRestaurantZoetermeerPage({ params }: Props) {
                 <Link href={`${base}/biryani-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   biryani
                 </Link>{' '}
-                as the centrepiece. Saffron basmati rice, halal meat, fresh spices. For larger groups from Zoetermeer, the private event hall at Leyweg seats 25 to 80 guests.{' '}
+                as the centrepiece. Saffron basmati rice, halal meat, fresh spices. For larger groups from Zoetermeer, the private event hall at Leyweg seats 25 to 50 guests.{' '}
                 <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   Indian catering at Chopras
                 </Link>{' '}

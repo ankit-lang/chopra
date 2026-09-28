@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const faqsEn: Array<{ question: string; answer: string }> = [
   {
     question: 'How many guests can Chopras cater for a birthday in Den Haag?',
-    answer: 'Chopras Indian Restaurant caters birthday celebrations for groups of 25 to 80 guests. Our private hall at Leyweg 986, Den Haag is also available for parties that want to dine on site rather than have food delivered to a separate venue.',
+    answer: 'Chopras Indian Restaurant caters birthday celebrations for groups of 25 to 50 guests. Our private hall at Leyweg 986, Den Haag is also available for parties that want to dine on site rather than have food delivered to a separate venue.',
   },
   {
     question: 'Is the birthday catering food halal certified?',
@@ -352,7 +352,7 @@ export default function IndianBirthdayCateringPage({ params }: Props) {
                 The spices for every dish are sourced directly from India and ground fresh each morning in our kitchen. The volatile aromatic oils in cumin, cardamom, and coriander begin to fade within hours of grinding. This is why Chopras food tastes different. Not better on paper. Different on the plate.
               </p>
               <p className='text-white/80'>
-                The private hall at Leyweg 986 accommodates 25 to 80 guests. Chopras is not a restaurant that sometimes does events. Events are built into how Chopras operates from the start. Same kitchen, same spices, same standard for every celebration.
+                The private hall at Leyweg 986 accommodates 25 to 50 guests. Chopras is not a restaurant that sometimes does events. Events are built into how Chopras operates from the start. Same kitchen, same spices, same standard for every celebration.
               </p>
             </div>
           )}
@@ -379,7 +379,7 @@ export default function IndianBirthdayCateringPage({ params }: Props) {
             <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
               Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag provides{' '}
               <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian birthday catering</Link>{' '}
-              for groups of 25 to 80 guests. The food is prepared in the restaurant kitchen, delivered hot, and set up at your venue. All dishes are{' '}
+              for groups of 25 to 50 guests. The food is prepared in the restaurant kitchen, delivered hot, and set up at your venue. All dishes are{' '}
               <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>.
               Chopras holds a 4.9-star Google rating from 1300+ reviews and serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, and Leidschendam. The restaurant is open Tuesday to Sunday from 16:30.
             </p>

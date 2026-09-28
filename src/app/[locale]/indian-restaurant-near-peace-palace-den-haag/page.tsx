@@ -61,7 +61,7 @@ const faqsEn = [
   },
   {
     question: 'Can Chopras host a private group dinner near the Peace Palace?',
-    answer: 'Yes. Chopras Indian Restaurant has a private hall at Leyweg 986 that accommodates 25 to 80 guests. This is suitable for diplomatic receptions, team dinners, and corporate group meals. Contact us at info [at] chopras.nl or call +31 6 30645930 to discuss availability and menu options.',
+    answer: 'Yes. Chopras Indian Restaurant has a private hall at Leyweg 986 that accommodates 25 to 50 guests. This is suitable for diplomatic receptions, team dinners, and corporate group meals. Contact us at info [at] chopras.nl or call +31 6 30645930 to discuss availability and menu options.',
   },
   {
     question: 'What are the opening hours at Chopras Indian Restaurant?',
@@ -401,7 +401,7 @@ export default function IndianRestaurantPeacePalacePage({ params }: Props) {
           ) : (
             <div className="space-y-6">
               <p className="font-body text-[#1A1A1A]/70 text-lg leading-relaxed">
-                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> has a private hall at Leyweg 986 that accommodates 25 to 80 guests. This is suitable for{' '}
+                <Link href={`${base}/`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Chopras Indian Restaurant</Link> has a private hall at Leyweg 986 that accommodates 25 to 50 guests. This is suitable for{' '}
                 <Link href={`${base}/corporate-events-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">
                   corporate events in Den Haag
                 </Link>

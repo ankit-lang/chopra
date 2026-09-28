@@ -86,7 +86,7 @@ export default function LocaleCateringPage({ params }: Props) {
   ]
 
   const capacityStats = [
-    { number: '25-80', label: isNl ? 'Gasten' : 'Guests' },
+    { number: '25-50', label: isNl ? 'Gasten' : 'Guests' },
     { number: '4.9', label: isNl ? 'Google Sterren' : 'Google Stars' },
     { number: '1300+', label: isNl ? 'Beoordelingen' : 'Reviews' },
   ]
@@ -240,7 +240,7 @@ export default function LocaleCateringPage({ params }: Props) {
               {[
                 isNl ? 'Halal Gecertificeerd als Standaard' : 'Halal Certified as Standard',
                 isNl ? 'Vegetarische en Veganistische Opties Inbegrepen' : 'Vegetarian and Vegan Options Included',
-                isNl ? 'Privé Evenementenruimte: 25 tot 80 Gasten' : 'Private Hall: 25 to 80 Guests',
+                isNl ? 'Privé Evenementenruimte: 25 tot 80 Gasten' : 'Private Hall: 25 to 50 Guests',
                 isNl ? 'Den Haag, Rijswijk, Delft en Omgeving' : 'Den Haag, Rijswijk, Delft and Surroundings',
               ].map((label) => (
                 <div
@@ -676,7 +676,7 @@ export default function LocaleCateringPage({ params }: Props) {
               . All food is prepared fresh by the same kitchen team as the restaurant, using spices ground daily in-house. Every meat dish is{' '}
               <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified</Link>{' '}
               as standard. The private event hall accommodates{' '}
-              <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">25 to 80 guests</Link>
+              <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">25 to 50 guests</Link>
               . Open Tuesday to Sunday, 16:30 to 22:30.
             </p>
           )}

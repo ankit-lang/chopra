@@ -68,7 +68,7 @@ const faqsEn = [
   },
   {
     question: 'Can Chopras accommodate large family groups and multi-generational celebrations?',
-    answer: 'Yes. Our main dining room features flexible table arrangements for multi-generational family dinners, birthday celebrations, and family gatherings. For private family events of 25 to 80 guests, we also offer a dedicated private hall at Leyweg 986.',
+    answer: 'Yes. Our main dining room features flexible table arrangements for multi-generational family dinners, birthday celebrations, and family gatherings. For private family events of 25 to 50 guests, we also offer a dedicated private hall at Leyweg 986.',
   },
 ]
 

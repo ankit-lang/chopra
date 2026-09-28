@@ -45,7 +45,7 @@ Tone Notes: Confident authority. Den Haag best restaurant energy — not boastfu
 Schema Type: LocalBusiness + FAQPage + Organization
 Word Count: 1200 to 11100
 CTA Goal: Reserve a table or view menu
-Available Proof: 4.9 stars Google, 1300+ reviews, 8.6 TheFork, Tripadvisor Excellent, 143 dishes, 12 categories, halal certified, spices from India ground daily, 400 degree tandoor, open since 2023, Arun Chopra founder, private hall 25 to 80 guests
+Available Proof: 4.9 stars Google, 1300+ reviews, 8.6 TheFork, Tripadvisor Excellent, 143 dishes, 12 categories, halal certified, spices from India ground daily, 400 degree tandoor, open since 2023, Arun Chopra founder, private hall 25 to 50 guests
 Do Not Include: competitor names, fake urgency, unverifiable claims, generic phrases like "culinary journey" or "passionate about food"
 ```
 
@@ -94,7 +94,7 @@ Search Intent: Transactional
 Content Angle: Indian catering in Den Haag that handles everything — food, setup, service — so you can actually enjoy your own event.
 Primary Keyword: Indian catering Den Haag
 Secondary Keywords: Indiaas catering Den Haag, halal catering Den Haag, Indian corporate catering Den Haag, Indian party catering Den Haag
-LSI / Related Terms: wedding catering, birthday catering, corporate dinner, Diwali catering, nikah reception, private hall, 25 to 80 guests, Leyweg 986, feestzaal, buffet
+LSI / Related Terms: wedding catering, birthday catering, corporate dinner, Diwali catering, nikah reception, private hall, 25 to 50 guests, Leyweg 986, feestzaal, buffet
 Competing URL: https://www.indiancurryclub.nl/catering
 Internal Links: sitemap
 Audience: Event planners, families organising celebrations, corporate HR managers, anyone who needs Indian food for a group
@@ -105,7 +105,7 @@ Tone Notes: Reassuring and organised. They are handing you responsibility for th
 Schema Type: Service + FAQPage
 Word Count: 1000 to 1500
 CTA Goal: Request a catering quote
-Available Proof: Private hall 25 to 80 guests, halal certified, same kitchen as restaurant, serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, Leidschendam, wedding catering, corporate dinners, Diwali, birthdays, nikah receptions
+Available Proof: Private hall 25 to 50 guests, halal certified, same kitchen as restaurant, serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, Leidschendam, wedding catering, corporate dinners, Diwali, birthdays, nikah receptions
 Do Not Include: competitor names, fake capacity claims, vague pricing
 ```
 
@@ -135,7 +135,7 @@ Tone Notes: Organised and warm. Show them the vision of their event going perfec
 Schema Type: Service + FAQPage
 Word Count: 1000 to 1400
 CTA Goal: Request a free quote for the event hall
-Available Proof: Private hall 25 to 80 guests, Leyweg 986 location, full catering included, same kitchen as restaurant, halal certified, serves all event types, 4.9 Google rating
+Available Proof: Private hall 25 to 50 guests, Leyweg 986 location, full catering included, same kitchen as restaurant, halal certified, serves all event types, 4.9 Google rating
 Do Not Include: competitor venue names, fake availability claims
 ```
 
@@ -424,7 +424,7 @@ Search Intent: Commercial
 Content Angle: Indian buffet in Den Haag for groups who want variety — curries, tandoori, biryani, naan, desserts. All halal. All from the same kitchen. No quality drop for catering quantity.
 Primary Keyword: Indian buffet Den Haag
 Secondary Keywords: Indiaas buffet Den Haag, Indian all you can eat Den Haag, buffet catering Den Haag, Indian group dining Den Haag
-LSI / Related Terms: group dining, catering, halal buffet, corporate lunch, event catering, 25 to 80 guests, Leyweg 986, variety, fresh daily
+LSI / Related Terms: group dining, catering, halal buffet, corporate lunch, event catering, 25 to 50 guests, Leyweg 986, variety, fresh daily
 Competing URL: https://junoonthehague.nl
 Internal Links: sitemap
 Audience: Groups organising team events, families celebrating, corporate event planners who want Indian buffet
@@ -435,7 +435,7 @@ Tone Notes: Generous and organised. Emphasise variety and quality consistency at
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Request a buffet catering quote
-Available Proof: 4.9 stars 1300+ reviews, halal certified, 143 dish menu to draw from, private hall 25 to 80 guests, Leyweg 986
+Available Proof: 4.9 stars 1300+ reviews, halal certified, 143 dish menu to draw from, private hall 25 to 50 guests, Leyweg 986
 Do Not Include: price per head claims unless verified, competitor names
 ```
 
@@ -574,7 +574,7 @@ Search Intent: Transactional
 Content Angle: Indian wedding catering in Den Haag where every dish at the reception is made from the same kitchen as the restaurant. No drop in quality for scale. Nikah, walima, sangeet — all handled.
 Primary Keyword: Indian wedding catering Den Haag
 Secondary Keywords: Bruiloft catering Den Haag, nikah catering Den Haag, walima dinner Den Haag, Indian wedding food Netherlands, trouwen catering Den Haag
-LSI / Related Terms: nikah reception, walima dinner, sangeet catering, 25 to 80 guests, halal certified, full service, Leyweg 986, Den Haag, Rijswijk, Delft, South Holland catering
+LSI / Related Terms: nikah reception, walima dinner, sangeet catering, 25 to 50 guests, halal certified, full service, Leyweg 986, Den Haag, Rijswijk, Delft, South Holland catering
 Competing URL: https://www.indiancurryclub.nl
 Internal Links: sitemap
 Audience: Couples planning Indian weddings, families organising nikah receptions, wedding planners looking for halal Indian catering
@@ -585,7 +585,7 @@ Tone Notes: Celebratory but organised. This is one of the most important days of
 Schema Type: Service + FAQPage
 Word Count: 1000 to 1500
 CTA Goal: Request a free wedding catering quote
-Available Proof: 4.9 stars 1300+ reviews, halal certified, nikah receptions served, 25 to 80 guests, serves Den Haag and surrounding areas, same kitchen as restaurant
+Available Proof: 4.9 stars 1300+ reviews, halal certified, nikah receptions served, 25 to 50 guests, serves Den Haag and surrounding areas, same kitchen as restaurant
 Do Not Include: fake wedding photography references, capacity claims above 80 guests
 ```
 
@@ -604,7 +604,7 @@ Search Intent: Transactional
 Content Angle: Indian birthday catering in Den Haag — arrive, eat, celebrate. Chopras handles the food so the birthday person can actually enjoy their own party.
 Primary Keyword: Indian birthday catering Den Haag
 Secondary Keywords: Birthday catering Den Haag, verjaardag catering Den Haag, Indian party catering Den Haag, verjaardagsfeest catering Den Haag
-LSI / Related Terms: birthday party food, halal catering, group Indian food, delivery catering, private hall, 25 to 80 guests, Leyweg 986
+LSI / Related Terms: birthday party food, halal catering, group Indian food, delivery catering, private hall, 25 to 50 guests, Leyweg 986
 Competing URL: https://www.indiancurryclub.nl
 Internal Links: sitemap
 Audience: Anyone organising a birthday celebration in Den Haag who wants Indian food catered
@@ -615,7 +615,7 @@ Tone Notes: Light and celebratory. Make it easy. Show the process is simple.
 Schema Type: Service + FAQPage
 Word Count: 700 to 1000
 CTA Goal: Book birthday catering
-Available Proof: 4.9 stars 1300+ reviews, halal certified, private hall 25 to 80 guests, same kitchen as restaurant, serves Den Haag and surrounding areas
+Available Proof: 4.9 stars 1300+ reviews, halal certified, private hall 25 to 50 guests, same kitchen as restaurant, serves Den Haag and surrounding areas
 Do Not Include: fake minimum order guarantees, competitor names
 ```
 

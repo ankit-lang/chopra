@@ -451,7 +451,7 @@ export default function LocaleHomePage({ params }: Props) {
                 <p>
                   For groups, the full{' '}
                   <Link href={`${base}/indian-buffet-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian buffet Den Haag</Link>{' '}
-                  covers all 13 categories in a single service, suitable for events from 10 to 200 guests. The private hall at Leyweg 986 accommodates 25 to 80 guests for{' '}
+                  covers all 13 categories in a single service, suitable for events from 10 to 200 guests. The private hall at Leyweg 986 accommodates 25 to 50 guests for{' '}
                   <Link href={`${base}/indian-wedding-catering-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Indian wedding catering Den Haag</Link>,{' '}
                   corporate dinners, and Diwali celebrations. Same kitchen. Same standard. No event-specific shortcuts.
                 </p>

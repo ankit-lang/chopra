@@ -43,7 +43,7 @@ Detection signals (all present):
 - Service pages: `/catering`, `/biryani-den-haag`, `/butter-chicken-den-haag`, `/tandoori-den-haag`
 - Cuisine types: North Indian, Indo-Chinese, Chaat (Indian Street Food)
 - Dietary certifications: Halal, Vegetarian, Vegan
-- Seating/event capacity: "Private event hall for 25 to 80 guests"
+- Seating/event capacity: "Private event hall for 25 to 50 guests"
 - Reservation functionality present (`ReservationForm` component)
 - Delivery integrations: Thuisbezorgd, Uber Eats mentioned in llms.txt
 
@@ -454,7 +454,7 @@ Schema.org correctly notes that `FAQPage` rich results are **restricted to gover
 | **Chamber of Commerce membership** | ❌ Not detected | Not mentioned on site or in llms.txt |
 | **BBB accreditation** | ❌ Not detected | No badge or membership visible |
 | **Local press mentions** | ⚠️ Unknown | Not detectable from website; may exist offline |
-| **Community involvement** | ⚠️ Minimal | "Private event hall for 25-80 guests" mentioned; no specific sponsorships visible |
+| **Community involvement** | ⚠️ Minimal | "Private event hall for 25-50 guests" mentioned; no specific sponsorships visible |
 | **"Best of" list placements** | ⚠️ Unknown | High-impact factor (Whitespark #1 AI visibility); not detectable from website |
 
 ### "Best of" List Opportunity (CRITICAL)

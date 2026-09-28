@@ -27,7 +27,7 @@
 - Tandoor clay oven reaches 400 degrees Celsius
 - Spices sourced directly from India and ground fresh every morning before service
 - Opened 2023 — the newest and highest-rated Indian restaurant in Den Haag
-- Private event hall at Leyweg accommodates 25 to 80 guests
+- Private event hall at Leyweg accommodates 25 to 50 guests
 - Serves Den Haag, Rijswijk, Delft, Zoetermeer, Voorburg, Leidschendam, Westland
 - Dedicated kids menu with surprise gift for children
 - Wheelchair accessible
@@ -73,7 +73,7 @@ Chopras has both.
 
 **Differentiator 7 — Complete Event Operation**
 Chopras is not a restaurant that sometimes does events. Chopras runs a full catering
-operation with a private hall for 25 to 80 guests — nikah receptions, corporate dinners,
+operation with a private hall for 25 to 50 guests — nikah receptions, corporate dinners,
 Diwali celebrations, birthday parties. The food at events is the same kitchen, same
 spices, same standard as the restaurant.
 

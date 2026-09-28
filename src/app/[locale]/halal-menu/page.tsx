@@ -415,7 +415,7 @@ export default function HalalMenuPage({ params }: Props) {
                 <p className="text-white/80">
                   The halal certification at Chopras applies to all catering outside the restaurant as well. Nikah
                   receptions, weddings, birthday parties and corporate events - the same kitchen, the same suppliers,
-                  the same standard. Chopras has a private hall at Leyweg 986 for 25 to 80 guests.
+                  the same standard. Chopras has a private hall at Leyweg 986 for 25 to 50 guests.
                 </p>
                 <p className="text-white/80">
                   Want to know more about{' '}
@@ -424,7 +424,7 @@ export default function HalalMenuPage({ params }: Props) {
                   </Link>
                   ? Or see the{' '}
                   <Link href={`${base}/feestzaal-den-haag`} className="text-white hover:text-white font-semibold">
-                    venue for groups of 25 to 80 people
+                    venue for groups of 25 to 50 people
                   </Link>
                   . The same certified kitchen. The same fresh spices. No difference in quality between restaurant
                   and catering.

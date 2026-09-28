@@ -180,7 +180,7 @@ export default function DiwaliDinnerPage({ params }: Props) {
             ) : (
               <>
                 <p>Diwali calls for a table that is genuinely full. Not a plate of food at a restaurant that happens to cook Indian. Families in Den Haag who know this festival understand the difference. At Chopras Indian Restaurant at Leyweg 986, the kitchen prepares spices fresh every morning. Whole seeds, sourced directly from India, ground before service begins. What you taste is spice intensity at its peak.</p>
-                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 80 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 1300+ Google reviews.</p>
+                <p>You can dine with your family in our restaurant or book a full <Link href={`${base}/catering`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">Diwali catering for Den Haag</Link> delivered to your door or venue. Our private hall at Leyweg 986 seats 25 to 50 guests for larger family celebrations. The food at events is identical to what is served in the restaurant - same kitchen, same spices, same standard that has earned Chopras 4.9 stars from 1300+ Google reviews.</p>
                 <p>The <Link href={`${base}/halal-food-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">halal certified menu</Link> at Chopras is not a few dishes with a certificate attached. It is the entire kitchen. Every meat dish, every supplier, every plate - halal certified without exception. For families who only eat at fully certified restaurants, this is not a small detail. It is the reason they choose Chopras for Diwali.</p>
               </>
             )}
@@ -263,8 +263,8 @@ export default function DiwaliDinnerPage({ params }: Props) {
                   <p>Want to celebrate Diwali at your home or your own venue? Chopras delivers the full feast. Everything is prepared fresh and delivered hot. You invite your family. We handle the rest. Minimum six guests for home catering.</p>
                 </div>
                 <div>
-                  <h3 className="font-heading text-3xl text-[#06068a] mb-4">Private Hall for 25 to 80 Guests</h3>
-                  <p>For larger family celebrations, our <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">private event hall in Den Haag</Link> at Leyweg 986 seats 25 to 80 guests. Food is served from the same kitchen as the restaurant. No external caterer, no compromise on quality.</p>
+                  <h3 className="font-heading text-3xl text-[#06068a] mb-4">Private Hall for 25 to 50 Guests</h3>
+                  <p>For larger family celebrations, our <Link href={`${base}/feestzaal-den-haag`} className="text-[#06068a] hover:text-[#0000B3] font-semibold">private event hall in Den Haag</Link> at Leyweg 986 seats 25 to 50 guests. Food is served from the same kitchen as the restaurant. No external caterer, no compromise on quality.</p>
                 </div>
               </>
             )}

@@ -25,7 +25,7 @@ const faqsEn = [
   },
   {
     question: 'Does Chopras provide catering for events in the Delft area?',
-    answer: 'Yes. Chopras Indian Restaurant provides full catering services for events across South Holland, including the Delft area. The private hall at Leyweg 986 accommodates 25 to 80 guests. Catering is also available at external venues for birthdays, weddings, and corporate dinners.',
+    answer: 'Yes. Chopras Indian Restaurant provides full catering services for events across South Holland, including the Delft area. The private hall at Leyweg 986 accommodates 25 to 50 guests. Catering is also available at external venues for birthdays, weddings, and corporate dinners.',
   },
 ]
 

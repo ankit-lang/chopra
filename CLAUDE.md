@@ -89,7 +89,7 @@ Package manager: pnpm. Node: 20.x.
 - NO LUNCH SERVICE — Chopras opens at 16:30 only
   Never write: "lunch", "open for lunch", "working lunches", "lunchtime",
   "11:30", "12:00", "13:00", or any implication of daytime food service
-- Capacity: 25 to 80 guests (private hall) — never claim above 80
+- Capacity: 25 to 50 guests (private hall) — never claim above 80
 - Review proof point: use "1300+" not specific counts like "834"
   (specific counts go stale — "1300+" stays accurate)
 - Address: Leyweg 986, 2545 GW Den Haag

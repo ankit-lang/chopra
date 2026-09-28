@@ -16,7 +16,7 @@ const faqSchemaData = {
       "name": "What is the best event venue in Den Haag for private events?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Chopras offers a private event venue in Den Haag for 25 to 80 guests with catering included."
+        "text": "Chopras offers a private event venue in Den Haag for 25 to 50 guests with catering included."
       }
     },
     {
@@ -31,7 +31,7 @@ const faqSchemaData = {
 };
 
 const faqsEn = [
-  { q: "Can I hire the event hall at Chopras Indian Restaurant?", a: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 80 guests. Full authentic Indian catering from the Chopras kitchen is included." },
+  { q: "Can I hire the event hall at Chopras Indian Restaurant?", a: "Yes. Chopras Indian Restaurant at Leyweg 986, Den Haag operates a private event hall accommodating 25 to 50 guests. Full authentic Indian catering from the Chopras kitchen is included." },
   { q: "Is catering included with the hall hire?", a: "Yes. Full authentic Indian catering from the Chopras kitchen is included. Everything is prepared fresh on the day by the same team that earns 4.9 stars on Google from 1,100+ reviews." },
   { q: "How many guests does the event hall accommodate?", a: "The private event hall accommodates between 25 and 80 guests. This covers intimate family dinners and large wedding or corporate receptions." },
   { q: "Is the food fully halal certified?", a: "Yes. Every dish at Chopras Indian Restaurant is fully halal certified. Every meat supplier holds halal certification. Muslim families planning any event can book with complete confidence." },
@@ -361,20 +361,20 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
       { title: "Restaurantkwaliteit", icon: "🍽️", desc: "Vers gemalen specerijen. Zelfde chefs als ons 4.9-sterren restaurant." },
       { title: "Eén Boeking", icon: "📋", desc: "Zaal & catering in één contract. Geen dubbele logistiek." },
       { title: "Halal Gecertificeerd", icon: "☪️", desc: "Elk gerecht en leverancier is 100% halal gecertificeerd." },
-      { title: "25–80 Gasten", icon: "👥", desc: "Past zich aan uw groepsgrootte aan zonder vaste pakketverplichtingen." }
+      { title: "25 to 50 Gasten", icon: "👥", desc: "Past zich aan uw groepsgrootte aan zonder vaste pakketverplichtingen." }
     ]
     : [
       { title: "Restaurant Quality", icon: "🍽️", desc: "Freshly ground spices. Same chefs as our 4.9-star restaurant." },
       { title: "One Booking", icon: "📋", desc: "Venue & catering in a single contract. No double logistics." },
       { title: "Halal Certified", icon: "☪️", desc: "Every dish and supplier is 100% halal certified." },
-      { title: "25–80 Guests", icon: "👥", desc: "Adapts to your group size with no fixed minimum packages." }
+      { title: "25 to 50 Guests", icon: "👥", desc: "Adapts to your group size with no fixed minimum packages." }
     ];
 
   return (
     <>
       <head>
         <title>Feestzaal Huren Den Haag | Event Venue &amp; Catering | Chopras</title>
-        <meta name="description" content="Feestzaal Huren Den Haag – Hire a private event venue in The Hague for 25-80 guests. Enjoy halal Indian catering for weddings, birthday parties, corporate events, receptions and special celebrations." />
+        <meta name="description" content="Feestzaal Huren Den Haag – Hire a private event venue in The Hague for 25-50 guests. Enjoy halal Indian catering for weddings, birthday parties, corporate events, receptions and special celebrations." />
         <meta name="keywords" content="Feestzaal Huren Den Haag, Event Venue Den Haag, Party Venue Den Haag, Wedding Venue Den Haag, Banquet Hall Den Haag, Private Event Hall Den Haag, Feestzaal met Catering Den Haag, Halal Event Venue Den Haag, Feestzaal voor bruiloften Den Haag" />
       </head>
       <main className="bg-white min-h-screen text-[#1A1A1A] overflow-hidden font-body">
@@ -596,7 +596,7 @@ export default function EventHallPage({ params }: { params?: { locale?: Locale }
                       At Chopras Indian Restaurant, the private event hall and catering are managed under one roof, making the planning process simple and convenient. <strong className="text-[#06068a] font-medium">One booking. One team. One point of contact.</strong>
                     </p>
                     <p>
-                      The private event hall accommodates approximately <strong className="text-[#06068a] font-medium">25 to 80 guests</strong> in an exclusive setting. Every dish is prepared by the same team that serves guests daily at Chopras, earning a 4.9-star rating on Google. The result is an event experience built around fresh food, professional hospitality, and authentic Indian cuisine.
+                      The private event hall accommodates approximately <strong className="text-[#06068a] font-medium">25 to 50 guests</strong> in an exclusive setting. Every dish is prepared by the same team that serves guests daily at Chopras, earning a 4.9-star rating on Google. The result is an event experience built around fresh food, professional hospitality, and authentic Indian cuisine.
                     </p>
                   </>
                 )}
