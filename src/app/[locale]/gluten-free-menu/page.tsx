@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 const faqsEn: Array<{ question: string; answer: string }> = [
       {
             question: 'What gluten free dishes does Chopras Indian Restaurant serve in Den Haag?',
-            answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag, serves a full gluten-free menu including lamb curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, veg manchow soup, rice dishes, biryani, and chicken fried rice. All dishes are naturally gluten-free and prepared without any gluten-containing ingredients.',
+            answer: 'Chopras Indian Restaurant at Leyweg 986, Den Haag, serves a full gluten-free menu including lamb curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, onion bhaji, rice dishes, biryani, and chicken fried rice. All dishes are naturally gluten-free and prepared without any gluten-containing ingredients.',
       },
       {
             question: 'Are all rice and curry dishes at Chopras gluten free?',
@@ -33,16 +33,12 @@ const faqsEn: Array<{ question: string; answer: string }> = [
             question: 'Can celiac guests order at Chopras Indian Restaurant Den Haag?',
             answer: 'Yes. Chopras offers a dedicated gluten-free menu with 20+ naturally gluten-free dishes. The kitchen follows strict preparation standards. All meat is halal certified. For celiac guests with severe allergies, mention gluten-free requirements when ordering. Call +31 6 30645930 to confirm specific dishes.',
       },
-      {
-            question: 'Is the plain papad at Chopras gluten free?',
-            answer: 'Yes. Plain papad at Chopras is made from lentil flour only and is completely gluten-free. It is crispy, light and served as a traditional Indian starter. One serving is 3.5 euro.',
-      },
 ]
 
 const faqsNl: Array<{ question: string; answer: string }> = [
       {
             question: 'Welke glutenvrije gerechten serveert Chopras Indian Restaurant in Den Haag?',
-            answer: 'Chopras Indian Restaurant op Leyweg 986, Den Haag, serveert een volledig glutenvrij menu met lams curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, plain papad, onion bhaji, vegetable manchow soep, rijstgerechten, biryani en chicken fried rice. Alle gerechten zijn van nature glutenvrij en bereid zonder glutenhoudende ingrediënten.',
+            answer: 'Chopras Indian Restaurant op Leyweg 986, Den Haag, serveert een volledig glutenvrij menu met lams curries (Rogan Josh, Korma, Vindaloo), aloo gobi, aloo jeera, bhindi masala, baingan bharta, chana masala, dal tadka, onion bhaji, rijstgerechten, biryani en chicken fried rice. Alle gerechten zijn van nature glutenvrij en bereid zonder glutenhoudende ingrediënten.',
       },
       {
             question: 'Zijn alle rijst- en currygerechten bij Chopras glutenvrij?',
@@ -51,10 +47,6 @@ const faqsNl: Array<{ question: string; answer: string }> = [
       {
             question: 'Kunnen mensen met coeliakie eten bij Chopras Indian Restaurant Den Haag?',
             answer: 'Ja. Chopras biedt een speciaal glutenvrij menu met 20+ natuurlijk glutenvrije gerechten. De keuken volgt strikte bereidingsstandaards. Al het vlees is halal gecertificeerd. Voor gasten met ernstige glutenallergie, vermeld glutenvrije vereisten bij bestelling. Bel +31 6 30645930 om specifieke gerechten te bevestigen.',
-      },
-      {
-            question: 'Is de plain papad bij Chopras glutenvrij?',
-            answer: 'Ja. Plain papad bij Chopras is gemaakt van alleen lintenmeel en is volledig glutenvrij. Het is knapperig, licht en geserveerd als traditionele Indiase starter. Een portie kost 3,50 euro.',
       },
 ]
 
@@ -218,16 +210,16 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                                     {(isNl ? [
                                           { title: 'Linzen en Peulvruchten', items: 'Dal tadka, chana masala, aloo jeera' },
-                                          { title: "Groentecurry's", items: 'Aloo gobi, baingan bharta, bhindi masala, veg manchow soup' },
+                                          { title: "Groentecurry's", items: 'Aloo gobi, baingan bharta, bhindi masala' },
                                           { title: "Lam- en Schapencurry's", items: 'Mutton Rogan Josh, Mutton Vindaloo, Mutton Korma, Mutton Handi, Mutton Karahi, Rara Gosht, Keema Saag' },
                                           { title: 'Biryani en Rijst', items: 'Vegetable biryani, steamed rice, jeera rice, chicken fried rice' },
-                                          { title: 'Starters en Bijgerechten', items: 'Onion bhaji, plain papad, rijstgerechten' },
+                                          { title: 'Starters en Bijgerechten', items: 'Onion bhaji, rijstgerechten' },
                                     ] : [
                                           { title: 'Lentils and Pulses', items: 'Dal tadka, chana masala, aloo jeera' },
-                                          { title: 'Vegetable Curries', items: 'Aloo gobi, baingan bharta, bhindi masala, veg manchow soup' },
+                                          { title: 'Vegetable Curries', items: 'Aloo gobi, baingan bharta, bhindi masala' },
                                           { title: 'Lamb & Mutton Curries', items: 'Mutton Rogan Josh, Mutton Vindaloo, Mutton Korma, Mutton Handi, Mutton Karahi, Rara Gosht, Keema Saag' },
                                           { title: 'Biryani and Rice', items: 'Vegetable biryani, steamed rice, jeera rice, chicken fried rice' },
-                                          { title: 'Starters and Sides', items: 'Onion bhaji, plain papad, rice dishes' },
+                                          { title: 'Starters and Sides', items: 'Onion bhaji, rice dishes' },
                                     ]).map((item) => (
                                           <div key={item.title} className="bg-[#F7F8FC] rounded-xl p-6 border-l-4 border-white">
                                                 <h3 className="font-heading text-3xl text-[#06068a] mb-4">{item.title}</h3>
@@ -248,7 +240,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                     {isNl ? (
                                           <>
                                                 <p className="text-white/80">
-                                                      Alle gerechten op het glutenvrije menu worden bereid met verse groenten, linzen en rijst. Geen bindmiddelen van tarwemeel. Geen roux. Geen brood. Alle papad wordt gemaakt van linzenmeel. Alle sauzen zijn verdikt met kokosmelk, yogurt of natuurlijke plantaardige ingrediënten.
+                                                      Alle gerechten op het glutenvrije menu worden bereid met verse groenten, linzen en rijst. Geen bindmiddelen van tarwemeel. Geen roux. Geen brood. Alle sauzen zijn verdikt met kokosmelk, yogurt of natuurlijke plantaardige ingrediënten.
                                                 </p>
                                                 <p className="text-white/80">
                                                       Voor gasten met ernstige glutenallergie of coeliakie wordt voedsel bereid op een apart werkblad. Alle kruiden zijn glutenvrij gecertificeerd. Al het vlees is halal. Dit is voedsel dat veilig is voor je lichaam en niet het compromis insluit dat ik "glutenvrij" betekent.
@@ -264,7 +256,7 @@ export default function GlutenFreeMenuPage({ params }: Props) {
                                     ) : (
                                           <>
                                                 <p className="text-white/80">
-                                                      All dishes on the gluten-free menu are prepared with fresh vegetables, lentils and rice. No wheat flour binders. No roux. No bread. All papad is made from lentil flour. All sauces are thickened with coconut milk, yogurt or natural plant-based ingredients.
+                                                      All dishes on the gluten-free menu are prepared with fresh vegetables, lentils and rice. No wheat flour binders. No roux. No bread. All sauces are thickened with coconut milk, yogurt or natural plant-based ingredients.
                                                 </p>
                                                 <p className="text-white/80">
                                                       For guests with serious gluten allergy or celiac, food is prepared on a separate workstation. All spices are certified gluten-free. All meat is halal. This is food that is safe for your body and does not include the compromise that "gluten-free" means.
