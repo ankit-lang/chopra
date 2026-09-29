@@ -15,7 +15,14 @@ export const blogPosts: BlogPost[] = ([
       'Best Indian restaurant Duinoord',
       'best Indian restaurant den haag'
     ],
-    language: 'en' as const,
+    
+    titleNl: 'Indiaas Restaurant Nabij Zeeheldenkwartier en Duinoord',
+    metaTitleNl: 'Indiaas Restaurant Nabij Zeeheldenkwartier en Duinoord | Chopras',
+    metaDescriptionNl: 'Op zoek naar Indiaas eten nabij Zeeheldenkwartier of Duinoord? Bezoek Chopras Indian Restaurant voor authentieke curries, tandoori gerechten en meer.',
+    h1Nl: 'Indiaas Restaurant Nabij Zeeheldenkwartier en Duinoord: Een Lokale Gids',
+    primaryKeywordNl: 'Beste Indiaas restaurant Zeeheldenkwartier',
+    excerptNl: 'Op zoek naar een Indiaas restaurant in de buurt van het Zeeheldenkwartier of Duinoord in Den Haag? Chopras Indian Restaurant aan de Leyweg 986 biedt Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische keuzes, halal eten en glutenvrije opties.',
+language: 'en' as const,
     publishedAt: '2026-09-27',
     readingTime: 5,
     author: 'Arun Chopra',
@@ -43,7 +50,28 @@ export const blogPosts: BlogPost[] = ([
         answer: 'Yes. Chopras Indian Restaurant offers an event space for approximately 25–50 guests with Indian catering, making it suitable for birthdays, family gatherings, corporate events and other celebrations.'
       }
     ],
-    faqsNl: [],
+    faqsNl: [
+      {
+        question: 'Wat is het beste Indiase restaurant in de buurt van het Zeeheldenkwartier?',
+        answer: 'Als u op zoek bent naar Indiaas eten in de buurt van het Zeeheldenkwartier, biedt Chopras Indian Restaurant aan de Leyweg 986 in Den Haag Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische keuzes, halal eten en glutenvrije opties. Chopras Indian Restaurant is een Indiase eetgelegenheid in Den Haag die tandoori gerechten, Indiaas streetfood, biryani en vegetarische keuzes aanbiedt.'
+      },
+      {
+        question: 'Waar kan ik Indiaas eten vinden in de buurt van Duinoord?',
+        answer: 'Chopras Indian Restaurant aan de Leyweg 986 biedt een uitgebreid Indiaas menu met traditionele gerechten, tandoori specialiteiten, biryani en vegetarische opties voor gasten die op zoek zijn naar Indiaas eten in Den Haag. Er zijn overal in Den Haag Indiase eetgelegenheden. Chopras Indian Restaurant aan de Leyweg 986 biedt een uitgebreid Indiaas menu met traditionele gerechten, tandoori specialiteiten, biryani en vegetarische opties.'
+      },
+      {
+        question: 'Is er glutenvrij Indiaas eten in Den Haag?',
+        answer: 'Ja. De Indiase keuken omvat verschillende gerechten die van nature glutenvrij kunnen zijn, met name rijst, linzen, groenten en sommige tandoori-bereidingen. Bij Chopras Indian Restaurant dienen gasten met coeliakie of ernstige glutenallergieën ingrediënten, bereidingswijzen en mogelijke kruisbesmetting voor het bestellen te bevestigen.'
+      },
+      {
+        question: 'Biedt Chopras Indian Restaurant vegetarisch eten?',
+        answer: 'Ja. Het menu bevat een verscheidenheid aan vegetarische gerechten zoals Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Palak Paneer en Paneer Butter Masala.'
+      },
+      {
+        question: 'Kan ik een evenement organiseren bij Chopras Indian Restaurant?',
+        answer: 'Ja. Chopras Indian Restaurant biedt een evenementenruimte voor ongeveer 25 – 50 gasten met Indiase catering, waardoor het geschikt is voor verjaardagen, familiebijeenkomsten, bedrijfsevenementen en andere feesten.'
+      }
+    ],
     content: `
 <img src="/images/blog/27sep.png" alt="Indian Restaurant Near Zeeheldenkwartier and Duinoord" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
 
@@ -193,7 +221,159 @@ export const blogPosts: BlogPost[] = ([
 <p>With its selection of Indian street food, tandoori dishes, biryani, vegetarian and vegan meals, halal food and gluten-free options, Chopras Indian Restaurant in Den Haag offers a varied menu for individual diners, families and groups.</p>
 
 <p>Planning your next Indian meal in Den Haag? Explore the Chopras Indian Restaurant menu, choose dishes to share and contact the restaurant if you are interested in dining, group meals or private events.</p>
-`
+`,
+
+    contentNl: `
+<img src="/images/blog/27sep.png" alt="Indiaas Restaurant Nabij Zeeheldenkwartier en Duinoord" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Op zoek naar een Indiaas restaurant in de buurt van het Zeeheldenkwartier of Duinoord in Den Haag? Chopras Indian Restaurant aan de Leyweg 986 biedt Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische keuzes, halal eten en glutenvrije opties. Als u de Piet Heinstraat, Prins Hendrikstraat, Thomsonlaan, Thomsonplein of Frederik Hendriklaan verkent, legt deze gids uit wat u bij Chopras Indian restaurant kunt vinden en waar u op moet letten bij het kiezen van een Indiaas restaurant in de omgeving.</p>
+
+<p><strong>Kort antwoord:</strong> Chopras Indian Restaurant aan de Leyweg 986 in Den Haag biedt Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische keuzes, halal eten en glutenvrije opties. Het restaurant biedt ook een evenementenruimte voor ongeveer 25 - 50 gasten en Indiase catering voor grotere gelegenheden.</p>
+
+<h2>Waarom Kiezen Voor Chopras Indian Restaurant in Den Haag?</h2>
+
+<p>Chopras Indian Restaurant biedt een uitgebreid menu dat is ontworpen voor verschillende smaken en eetgelegenheden. Gasten kunnen kiezen uit Indiaas streetfood, tandoori specialiteiten, curries, biryani, vegetarische gerechten en andere traditionele Indiase favorieten. De variëteit maakt Indiaas eten ook geschikt voor families, vrienden en groepen met verschillende dieetvoorkeuren.</p>
+
+<p>Zo kan de ene gast kiezen voor tandoori kip, een ander voor paneer, terwijl weer iemand anders een vegetarisch, veganistisch of passend glutenvrij gerecht kan selecteren. Deze reeks maakt het voor groepen makkelijker om gerechten te delen of individuele maaltijden te kiezen.</p>
+
+<p>Een goede Indiase maaltijd kan verschillende texturen en smaken bevatten—van knapperige streetfood voorgerechten tot rokerige tandoori gerechten, geurige biryani, vers bereid naan en traditionele Indiase desserts.</p>
+
+<h2>Indiaas Eten Nabij Zeeheldenkwartier, Duinoord en Omgeving</h2>
+
+<p>Bij het zoeken naar Indiaas eten in de buurt van het Zeeheldenkwartier of Duinoord, kunnen gasten rekening houden met menuvariatie, dieetwensen, eetstijl en of het restaurant geschikt is voor gezinnen of groepen. Chopras Indian Restaurant aan de Leyweg 986 biedt een breed Indiaas menu voor deze verschillende eetgelegenheden.</p>
+
+<p>De omliggende gebieden omvatten verschillende bekende straten en buurten:</p>
+
+<ul>
+    <li>Piet Heinstraat</li>
+    <li>Prins Hendrikstraat</li>
+    <li>Duinoord</li>
+    <li>Thomsonlaan</li>
+    <li>Thomsonplein</li>
+    <li>Frederik Hendriklaan</li>
+</ul>
+
+<p>Als u deze buurten verkent en op zoek bent naar Indiaas eten in Den Haag, biedt Chopras Indian Restaurant een menu gebouwd rond Indiaas streetfood, tandoori gerechten, curries, biryani, vegetarische specialiteiten en andere traditionele gerechten.</p>
+
+<h2>Wat Kunt U Eten Bij Chopras Indian Restaurant?</h2>
+
+<p>De Indiase keuken brengt verschillende kruiden, ingrediënten en kooktechnieken samen, dus gerechten kunnen heel verschillende smaken bieden. Bij Chopras Indian Restaurant omvat het menu Indiaas streetfood, tandoori gerechten, vegetarische specialiteiten, kip-, lams- en schapenvleesgerechten, biryani, rijst, Indiase broden en desserts.</p>
+
+<p>Het menu bij Chopras Indian Restaurant omvat Indiaas streetfood, tandoori gerechten, vegetarische specialiteiten, kip-, lams- en schapenvleesgerechten, biryani, rijst, Indiase broden en desserts.</p>
+
+<p>Tandoori gerechten worden traditioneel bereid in een kleioven, wat een kenmerkende rokerige en geroosterde smaak creëert. Biryani combineert geurige rijst met gekruide ingrediënten en biedt een andere stijl van Indiaas dineren.</p>
+
+<h2>Indiaas Eten Nabij Piet Heinstraat en Prins Hendrikstraat</h2>
+
+<p>Als u in de buurt van de Piet Heinstraat of Prins Hendrikstraat bent en op zoek bent naar Indiaas eten, kan Indiaas streetfood een goede manier zijn om een maaltijd bij Chopras Indian Restaurant te beginnen.</p>
+
+<p>Populaire Indiase voorgerechten zijn:</p>
+
+<ul>
+    <li>Pani Puri</li>
+    <li>Dahi Puri</li>
+    <li>Samosa Chaat</li>
+    <li>Papdi Chaat</li>
+    <li>Aloo Tikki</li>
+    <li>Chicken Tikka</li>
+    <li>Paneer Tikka</li>
+</ul>
+
+<p>U kunt dan verdergaan met een hoofdgerecht zoals Butter Chicken, Dal Makhani, Paneer Butter Masala, Chicken Biryani of Mutton Rogan Josh.</p>
+
+<p>Verschillende gerechten delen is ook een goede manier om verschillende Indiase smaken aan één tafel te ervaren.</p>
+
+<h2>Vegetarisch, Veganistisch en Glutenvrij Indiaas Eten</h2>
+
+<h3>Vegetarisch Indiaas Eten</h3>
+<p>Vegetarische gasten kunnen genieten van gerechten zoals:</p>
+<ul>
+    <li>Dal Makhani</li>
+    <li>Dal Tadka</li>
+    <li>Chana Masala</li>
+    <li>Aloo Gobi</li>
+    <li>Palak Paneer</li>
+    <li>Paneer Butter Masala</li>
+    <li>Bhindi Masala</li>
+    <li>Shahi Paneer</li>
+</ul>
+<p>Deze gerechten combineren groenten, linzen, paneer en Indiase kruiden om vullende en smaakvolle maaltijden te creëren.</p>
+
+<h3>Veganistisch Indiaas Eten</h3>
+<p>De Indiase keuken biedt ook van nature veganvriendelijke gerechten. Afhankelijk van de bereiding kunnen opties zijn: Chana Masala, Dal Tadka, Aloo Gobi, Bhindi Masala en gemengde groentegerechten.</p>
+<p>Als u een strikt veganistisch dieet volgt, bevestig dan altijd de ingrediënten en de bereidingswijze bij het restaurant voordat u bestelt.</p>
+
+<h3>Glutenvrij Indiaas Eten</h3>
+<p>Voor mensen die op zoek zijn naar glutenvrij Indiaas eten in Den Haag, kan de Indiase keuken verschillende geschikte keuzes bieden.</p>
+<p>Op rijst gebaseerde gerechten zoals biryani en veel linzen-, groente- en vleesbereidingen kunnen van nature glutenvrij zijn. Gerechten zoals Dal Tadka, Chana Masala, Aloo Gobi en sommige tandoori opties kunnen ook geschikt zijn, afhankelijk van ingrediënten en bereiding.</p>
+<p>Gluten kunnen echter aanwezig zijn in broden zoals naan en in bepaalde sauzen of bereide ingrediënten. Als u coeliakie of een ernstige glutenallergie heeft, vertel dit het restaurant dan duidelijk voordat u bestelt en vraag naar kruisbesmetting en bereiding.</p>
+
+<h2>Indiaas Eten Nabij Thomsonlaan en Thomsonplein</h2>
+
+<p>Voor gasten rond de Thomsonlaan en het Thomsonplein kan het kiezen van een Indiaas restaurant gaan over het vinden van een menu dat voor iedereen werkt. Bij Chopras Indian Restaurant kunnen gasten vegetarische gerechten combineren met tandoori specialiteiten, rijst, broden en andere Indiase gerechten.</p>
+
+<p>Een gedeelde Indiase maaltijd maakt verschillende voorkeuren aan dezelfde tafel mogelijk. Voor een eerste bezoek aan Chopras Indian Restaurant, kunt u Pani Puri of Samosa Chaat als voorgerecht proberen, gevolgd door Chicken Tikka of Paneer Tikka en een hoofdgerecht zoals Butter Chicken, Dal Makhani of biryani.</p>
+
+<p>Voor een eerste bezoek, kunt u Pani Puri of Samosa Chaat als voorgerecht proberen, gevolgd door Chicken Tikka of Paneer Tikka. Voeg een hoofdgerecht zoals Butter Chicken, Dal Makhani of een biryani toe, afhankelijk van uw voorkeur.</p>
+
+<h2>Indiaas Restaurant Nabij Frederik Hendriklaan</h2>
+
+<p>Als u op zoek bent naar Indiaas eten in de buurt van de Frederik Hendriklaan, overweeg dan het soort eetervaring dat u wilt, zoals Indiaas streetfood, een familiediner, vegetarisch eten, halal opties, glutenvrije keuzes of een maaltijd voor een groep.</p>
+
+<p>Bent u op zoek naar Indiaas streetfood, een familiediner, vegetarisch eten, halal opties, glutenvrije keuzes of een maaltijd voor een groep?</p>
+
+<p>Chopras Indian Restaurant biedt een uitgebreid Indiaas menu, waardoor gasten gerechten kunnen kiezen op basis van individuele smaken en dieetvoorkeuren.</p>
+
+<h2>Wat Moet U Proberen Bij Chopras Indian Restaurant?</h2>
+
+<p>Als u Chopras Indian Restaurant voor de eerste keer bezoekt, kunt u een uitgebalanceerde Indiase maaltijd samenstellen door gerechten te kiezen uit verschillende delen van het menu.</p>
+
+<ul>
+    <li><strong>Voor voorgerechten:</strong> Probeer Pani Puri, Dahi Puri, Samosa Chaat of Papdi Chaat.</li>
+    <li><strong>Voor tandoori:</strong> Chicken Tikka, Tandoori Chicken of Paneer Tikka, Malai Soya Chaap zijn populaire keuzes.</li>
+    <li><strong>Voor vegetarische gasten (hoofdgerecht):</strong> Dal Makhani, Dal Tadka, Rajma Masala, Palak Paneer of Chana Masala zijn opties om te ontdekken.</li>
+    <li><strong>Voor de niet-vegetarische gasten (hoofdgerecht):</strong> Butter Chicken, Chicken Biryani, Mutton Rogan Josh bieden verschillende Indiase smaken.</li>
+    <li><strong>Voor broden:</strong> Garlic Naan, Tandoori Roti, Cheese Naan, Keema Naan, Aloo Paratha of andere Indiase broden kunnen de maaltijd aanvullen.</li>
+</ul>
+
+<p>Als u op zoek bent naar glutenvrij eten, vraag het restaurantteam dan welke gerechten en bereidingswijzen geschikt zijn voor uw dieetwensen.</p>
+
+<h2>Is Chopras Indian Restaurant Halal?</h2>
+
+<p>Ja. Chopras Indian Restaurant stelt dat de keuken en vleesleveranciers volledig halal gecertificeerd zijn.</p>
+
+<p>Dit maakt het een optie voor gasten die op zoek zijn naar een halal Indiaas restaurant in Den Haag. Het restaurant biedt ook vegetarische, veganistische en glutenvrije keuzes.</p>
+
+<p>Voor allergieën of strikte dieetwensen is het raadzaam om uw wensen met het restaurant te bespreken voordat u bestelt.</p>
+
+<h2>Indiaas Restaurant voor Families, Groepen en Privé Evenementen</h2>
+
+<p>Chopras Indian restaurant kan ook geschikt zijn voor groepsdiners, omdat gasten verschillende gerechten kunnen kiezen en ze aan tafel kunnen delen. Het restaurant kan geschikt zijn voor familiediners, verjaardagsvieringen, vriendenbijeenkomsten, bedrijfsmaaltijden, culturele feesten en privé evenementen.</p>
+
+<p>De Indiase keuken kan geschikt zijn voor:</p>
+<ul>
+    <li>Familiediners</li>
+    <li>Verjaardagsvieringen</li>
+    <li>Babyshowers</li>
+    <li>Vriendenbijeenkomsten</li>
+    <li>Bedrijfsdiners</li>
+    <li>Culturele feesten</li>
+    <li>Privé evenementen</li>
+</ul>
+
+<p>Chopras Indian Restaurant biedt ook een evenementenruimte voor ongeveer 25–50 gasten, samen met Indiase catering voor grotere gelegenheden.</p>
+
+<h2>Bezoek Chopras Indian Restaurant in Den Haag</h2>
+
+<p>Als u op zoek bent naar Indiaas eten in de buurt van het Zeeheldenkwartier, Duinoord, Thomsonlaan, Thomsonplein of Frederik Hendriklaan, biedt Chopras Indian Restaurant een gevarieerd menu met Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische maaltijden, halal eten en glutenvrije keuzes.</p>
+
+<p>Of u nu rond de Piet Heinstraat, Prins Hendrikstraat, Duinoord, Thomsonlaan, Thomsonplein of Frederik Hendriklaan bent, u kunt het menu van Chopras Indian Restaurant verkennen voor Indiase gerechten geschikt voor individuele gasten, families en groepen.</p>
+
+<p>Met zijn selectie van Indiaas streetfood, tandoori gerechten, biryani, vegetarische en veganistische maaltijden, halal eten en glutenvrije opties, biedt Chopras Indian Restaurant in Den Haag een gevarieerd menu voor individuele gasten, families en groepen.</p>
+
+<p>Plant u uw volgende Indiase maaltijd in Den Haag? Verken het menu van Chopras Indian Restaurant, kies gerechten om te delen en neem contact op met het restaurant als u geïnteresseerd bent in dineren, groepsmaaltijden of privé evenementen.</p>
+`,
+
   },
   {
     slug: 'chopras-indian-restaurant-featured-in-times-of-india',
@@ -209,7 +389,14 @@ export const blogPosts: BlogPost[] = ([
       'Hospitality',
       'Indian restaurant Netherlands'
     ],
-    language: 'en',
+    
+    titleNl: 'Chopras Indian Restaurant Uitgelicht in The Times of India: Waar Gastvrijheid Verder Gaat Dan Het Eten',
+    metaTitleNl: 'Chopras Indian Restaurant Uitgelicht in The Times of India',
+    metaDescriptionNl: 'Chopras Indian Restaurant in Den Haag werd onlangs genoemd in een blog gepubliceerd door The Times of India. Lees meer over onze benadering van gastvrijheid en technologie.',
+    h1Nl: 'Chopras Indian Restaurant Uitgelicht in The Times of India: Waar Gastvrijheid Verder Gaat Dan Het Eten',
+    primaryKeywordNl: 'Chopras Indian Restaurant The Times of India',
+    excerptNl: 'Chopras Indian Restaurant in Den Haag is onlangs genoemd in een blog gepubliceerd door The Times of India over gastvrijheid en technologie.',
+language: 'en',
     publishedAt: '2026-09-19',
     readingTime: 3,
     author: 'Arun Chopra',
@@ -296,6 +483,87 @@ export const blogPosts: BlogPost[] = ([
   </a>
 </div>
 `,
+
+    contentNl: `
+<img src="/images/blog/19sep.png" alt="Chopras Indian Restaurant Uitgelicht in The Times of India: Waar Gastvrijheid Verder Gaat Dan Het Eten" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Bij Chopras Indian Restaurant in Den Haag, Nederland, hebben we altijd geloofd dat een geweldige eetervaring om meer draait dan wat er op het bord wordt geserveerd. Het gaat om de mensen, de gesprekken, de bekende gezichten en het gevoel echt welkom te zijn.</p>
+
+<p>We zijn verheugd te kunnen delen dat Chopras Indian Restaurant in Den Haag is genoemd in een recente blog gepubliceerd door The Times of India, getiteld "Robots kunnen mijn eten serveren. Maar wie luistert er?"</p>
+
+<p>Het artikel onderzoekt een steeds relevantere vraag voor de horeca: als restaurants meer technologie, automatisering en kunstmatige intelligentie toepassen, wat gebeurt er dan met de menselijke connectie die altijd centraal heeft gestaan in gastvrijheid?</p>
+
+<p>Voor Chopras Indian Restaurant, Den Haag, is dit een gesprek dat diep resoneert met wat we elke dag proberen te creëren.</p>
+
+<h2>Gastvrijheid Gaat Om Mensen</h2>
+
+<p>Technologie kan veel onderdelen van een restaurantervaring sneller en handiger maken. Digitaal bestellen, online reserveren en geautomatiseerde systemen kunnen het zeker gemakkelijker maken voor zowel restaurants als gasten.</p>
+
+<p>Maar gastvrijheid gaat ook over iets dat niet altijd door technologie kan worden gemeten.</p>
+
+<p>Het is de glimlach wanneer een vaste gast de deur binnenstapt.</p>
+
+<p>Het is het onthouden van het favoriete gerecht van een gast.</p>
+
+<p>Het is iemand helpen bij het kiezen van het menu.</p>
+
+<p>Het is opmerken wanneer een familie iets speciaals viert.</p>
+
+<p>Het is de tijd nemen voor een gesprek.</p>
+
+<p>Deze kleine interacties zijn vaak wat een restaurantbezoek tot een onvergetelijke ervaring maakt.</p>
+
+<p>De blog in The Times of India reflecteert op deze menselijke kant van dineren en bevat ervaringen van restaurants, waaronder Chopra's Indian Restaurant in Nederland, als onderdeel van het bredere gesprek over hoe technologie de gastvrijheid verandert.</p>
+
+<h2>Meer Dan Alleen Een Indiaas Restaurant in Den Haag, Nederland.</h2>
+
+<p>Bij Chopras Indian Restaurant is ons doel altijd geweest om een ervaring te creëren waar gasten zich op hun gemak, welkom en verbonden voelen.</p>
+
+<p>Of iemand ons nu bezoekt voor een alledaags diner, zijn of haar familie meebrengt, een verjaardag viert, vrienden ontmoet of een speciaal evenement organiseert, we willen dat de ervaring persoonlijk aanvoelt.</p>
+
+<p>Ons eten is een belangrijk onderdeel van die ervaring. Van traditionele Indiase curries en dal makhani tot tandoori gerechten, biryanis, vegetarische opties en Indiaas streetfood, we willen de smaken en warmte van de Indiase keuken naar Den Haag brengen.</p>
+
+<p>Maar eten is slechts één onderdeel van gastvrijheid.</p>
+
+<p>Het andere deel is hoe je mensen laat voelen.</p>
+
+<h2>Kan Technologie Menselijke Gastvrijheid Vervangen?</h2>
+
+<p>We geloven niet dat technologie en gastvrijheid tegenpolen hoeven te zijn.</p>
+
+<p>Technologie kan restaurants helpen bij het verbeteren van gemak, communicatie en efficiëntie. Maar het menselijke element blijft essentieel.</p>
+
+<p>Een digitaal systeem kan een bestelling onthouden.</p>
+
+<p>Een persoon kan een gast onthouden.</p>
+
+<p>Een machine kan eten bezorgen.</p>
+
+<p>Een lid van het horecateam kan opmerken dat een gast iets nodig heeft voordat deze erom vraagt.</p>
+
+<p>Dat verschil vormt de kern van het gesprek dat wordt verkend door The Times of India.</p>
+
+<h2>Een Gesprek Waar We Graag Deel Van Uit Maken</h2>
+
+<p>We zijn dankbaar dat we in The Times of India worden genoemd als onderdeel van dit bredere gesprek over de toekomst van restaurants en gastvrijheid.</p>
+
+<p>Voor ons gaat de toekomst niet over het kiezen tussen technologie en mensen.</p>
+
+<p>Het gaat erom technologie te gebruiken waar het helpt, terwijl we gastvrijheid menselijk blijven houden.</p>
+
+<p>Want uiteindelijk onthouden mensen misschien wat ze gegeten hebben, maar ze onthouden ook hoe een plek ze liet voelen.</p>
+
+<p>Een oprechte dank aan Dr. Pallavi Bansal en The Times of India voor het vermelden van Chopras Indian Restaurant, Den Haag, Nederland, in zo'n doordachte blog over technologie, gastvrijheid en het belang van menselijke connectie.</p>
+
+<p>We waarderen de kans om deel uit te maken van deze discussie ten zeerste.</p>
+
+<div class="mt-8 text-center">
+  <a href="https://timesofindia.indiatimes.com/toi-blogs/digital-life/robots-can-serve-my-food-but-who-will-listen/articleshow/134316958.cms" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#06068a] !text-white font-semibold py-3 px-8 rounded-full hover:bg-[#0000B3] transition-colors">
+    Lees Meer op The Times of India
+  </a>
+</div>
+`,
+
   }, {
     slug: 'where-to-find-the-best-halal-indian-food-in-den-haag',
     title: 'Where to Find the Best Halal Indian Food in Den Haag?',
@@ -1052,7 +1320,40 @@ export const blogPosts: BlogPost[] = ([
         answer: 'Yes. The venue welcomes corporate dinners, business lunches, meetings, networking events, workshops, training sessions, team-building activities and client presentations.'
       }
     ],
-    faqsNl: [],
+    faqsNl: [
+      {
+        question: 'Wat zijn de beste plekken om te bezoeken in Den Haag?',
+        answer: 'Enkele van de meest populaire plekken zijn Scheveningen Strand, Madurodam, Binnenhof, Mauritshuis, Vredespaleis, Escher in Het Paleis, Lange Voorhout en Kunstmuseum Den Haag.'
+      },
+      {
+        question: 'Wat is de beste plek om te bezoeken in Den Haag voor families?',
+        answer: 'Madurodam en Scheveningen zijn bijzonder geschikt voor families en bieden een combinatie van interactieve bezienswaardigheden en activiteiten aan zee.'
+      },
+      {
+        question: 'Waar kan ik authentiek Indiaas eten krijgen in Den Haag?',
+        answer: 'Chopras Indian Restaurant aan de Leyweg biedt authentieke Indiase gerechten, waaronder tandoori gerechten, curries, biryani, Indiase broden en vegetarische opties.'
+      },
+      {
+        question: 'Serveert Chopras Indian Restaurant halal eten?',
+        answer: 'Ja. Chopras Indian Restaurant geeft aan dat het eten volledig halal gecertificeerd is, inclusief de event catering.'
+      },
+      {
+        question: 'Biedt Chopras Indian Restaurant vegetarisch en veganistisch eten aan?',
+        answer: 'Ja. Het menu bevat vegetarische en veganistische opties en het restaurant biedt ook speciale categorieën voor vegetarisch en veganistisch eten op de menukaart.'
+      },
+      {
+        question: 'Biedt Chopras Indian Restaurant glutenvrij eten aan?',
+        answer: 'Ja. Er zijn glutenvrije opties beschikbaar. Gasten dienen hun wens voor glutenvrij duidelijk te vermelden bij de bestelling, omdat gerechten niet standaard glutenvrij worden bereid.'
+      },
+      {
+        question: 'Kan ik een privé-evenement organiseren bij Chopras Indian Restaurant?',
+        answer: 'Ja. De privé evenementenzaal is geschikt voor ongeveer 25 tot 50 gasten en is ideaal voor bruiloften, verjaardagen, bedrijfsevenementen, culturele feesten en vele andere bijeenkomsten.'
+      },
+      {
+        question: 'Is Chopras Indian Restaurant geschikt voor bedrijfsevenementen?',
+        answer: 'Ja. De locatie verwelkomt bedrijfsdiners, zakelijke lunches, vergaderingen, netwerkevenementen, workshops, trainingssessies, teambuildingactiviteiten en klantpresentaties.'
+      }
+    ],
     content: `
 <img src="/images/blog/blog8sep.jpeg" alt="Best Indian Restaurant in Den Haag | Authentic Indian Food – Chopras" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
 
@@ -1378,119 +1679,119 @@ export const blogPosts: BlogPost[] = ([
 
 `,
     contentNl: `
-<img src="/images/blog/blog8sep.jpeg" alt="Best Indian Restaurant in Den Haag | Authentic Indian Food – Chopras" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+<img src="/images/blog/blog8sep.jpeg" alt="Beste Indiase Restaurant in Den Haag | Authentiek Indiaas Eten – Chopras" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
 
-<p>Taste Authentic  Indian Food Best Indian Restaurant in Den Haag - Chopras Indian Restaurant</p>
+<p>Proef Authentiek Indiaas Eten Bij Het Beste Indiase Restaurant in Den Haag - Chopras Indian Restaurant</p>
 
-<p>Den Haag, also known as The Hague, is one of the Netherlands’ most interesting cities for a day out. You can move from historic government buildings to world-class art, walk beside the Hofvijver, browse the shops of the city centre, and still have time to enjoy a proper meal.</p>
+<p>Den Haag, is een van de meest interessante steden van Nederland voor een dagje uit. Je kunt van historische regeringsgebouwen naar kunst van wereldklasse wandelen, langs de Hofvijver lopen, winkelen in het stadscentrum en toch tijd overhouden voor een goede maaltijd.</p>
 
-<p>For visitors exploring Central Den Haag and Den Haag Centrum, the historic heart of the city brings several major attractions within a relatively compact area. The Binnenhof, Mauritshuis, Hofvijver, Plein, Central Station and Spuiplein all make useful points on a city itinerary, while Scheveningen and Delft provide easy options for extending the trip.</p>
+<p>Voor bezoekers die Centraal Den Haag en Den Haag Centrum verkennen, brengt het historische hart van de stad verschillende grote attracties samen in een relatief compact gebied. Het Binnenhof, Mauritshuis, de Hofvijver, het Plein, Centraal Station en het Spuiplein zijn allemaal handige punten voor een stadsroute, terwijl Scheveningen en Delft gemakkelijke opties bieden om de reis te verlengen.</p>
 
-<p>And after several hours of sightseeing, there is nothing wrong with making food part of the plan. Chopras Indian Restaurant at Leyweg 986, Den Haag, offers a broad Indian menu with halal, vegetarian, vegan and gluten-free options, making it a convenient stop for diners with different tastes and dietary preferences.</p>
+<p>En na enkele uren sightseeing is er niets mis mee om eten deel te laten uitmaken van het plan. Chopras Indian Restaurant aan de Leyweg 986, Den Haag, biedt een uitgebreid Indiaas menu met halal, vegetarische, veganistische en glutenvrije opties, waardoor het een handige tussenstop is voor gasten met verschillende smaken en dieetvoorkeuren.</p>
 
-<h3>Why Visit Den Haag?</h3>
+<h3>Waarom Den Haag Bezoeken?</h3>
 
-<p>Den Haag is one of the Netherlands' most varied destinations, combining historic attractions, museums, the North Sea coast, international landmarks and excellent dining. It is possible to explore the city centre in the morning, visit a museum in the afternoon, enjoy Scheveningen in the evening and finish the day with fresh, authentic Indian food at one of the best Indian restaurants in the Netherlands, Chopras Indian Restaurant in Den Haag.</p>
+<p>Den Haag is een van de meest gevarieerde bestemmingen van Nederland, met een combinatie van historische attracties, musea, de Noordzeekust, internationale bezienswaardigheden en uitstekend eten. Het is mogelijk om 's ochtends het stadscentrum te verkennen, 's middags een museum te bezoeken, 's avonds van Scheveningen te genieten en de dag af te sluiten met vers, authentiek Indiaas eten in een van de beste Indiase restaurants van Nederland, Chopras Indian Restaurant in Den Haag.</p>
 
-<p>Unlike destinations where attractions are concentrated in one small area, Den Haag gives visitors several distinct experiences.</p>
+<p>In tegenstelling tot bestemmingen waar attracties in één klein gebied zijn geconcentreerd, biedt Den Haag bezoekers verschillende unieke ervaringen.</p>
 
-<p>You can explore the historic centre, walk along the coast, visit major art collections, see international institutions and enjoy different cuisines—all within the same city and surrounding area, while also enjoying authentic Indian cuisine in Den Haag, including traditional curries, biryani, tandoori dishes, vegetarian and vegan specialities at Chopras Indian Restaurant.</p>
+<p>Je kunt het historische centrum verkennen, langs de kust wandelen, grote kunstcollecties bezoeken, internationale instellingen zien en genieten van verschillende keukens — allemaal binnen dezelfde stad en omgeving, terwijl je ook kunt genieten van de authentieke Indiase keuken in Den Haag, inclusief traditionele curries, biryani, tandoori gerechten, vegetarische en veganistische specialiteiten bij Chopras Indian Restaurant.</p>
 
-<h2>Best Places to Visit in Den Haag</h2>
+<h2>Beste Plekken Om Te Bezoeken in Den Haag</h2>
 
 <h3>Den Haag Centrum</h3>
 
-<p>Den Haag Centrum is the heart of the city, offering a mix of shopping streets, museums, historic buildings, cafés and restaurants. It is an excellent starting point for first-time visitors exploring The Hague.</p>
+<p>Den Haag Centrum is het hart van de stad en biedt een mix van winkelstraten, musea, historische gebouwen, cafés en restaurants. Het is een uitstekend startpunt voor bezoekers die Den Haag voor het eerst verkennen.</p>
 
 <h3>Binnenhof</h3>
 
-<p>Binnenhof is one of The Hague's most famous historic landmarks and has played an important role in Dutch political history. The complex is known for its historic buildings and the Ridderzaal (Hall of Knights).</p>
+<p>Het Binnenhof is een van de meest bekende historische bezienswaardigheden van Den Haag en heeft een belangrijke rol gespeeld in de Nederlandse politieke geschiedenis. Het complex staat bekend om zijn historische gebouwen en de Ridderzaal.</p>
 
 <h3>Mauritshuis</h3>
 
-<p>Mauritshuis is a renowned art museum famous for its collection of Dutch and Flemish masterpieces. One of its most well-known paintings is Vermeer's Girl with a Pearl Earring.</p>
+<p>Het Mauritshuis is een gerenommeerd kunstmuseum dat bekend staat om zijn collectie Nederlandse en Vlaamse meesterwerken. Een van de beroemdste schilderijen is Vermeers Meisje met de Parel.</p>
 
 <h3>Hofvijver</h3>
 
-<p>Hofvijver is a historic lake located beside the Binnenhof. It is a beautiful place for a relaxing walk, photography and views of some of The Hague's most recognisable landmarks.</p>
+<p>De Hofvijver is een historisch meer gelegen naast het Binnenhof. Het is een prachtige plek voor een ontspannende wandeling, fotografie en uitzicht op enkele van de meest herkenbare bezienswaardigheden van Den Haag.</p>
 
 <h3>Plein</h3>
 
-<p>Plein is a lively square in the centre of The Hague, surrounded by cafés, restaurants and terraces. It is a convenient place to relax and enjoy a coffee or meal while exploring the city.</p>
+<p>Het Plein is een levendig plein in het centrum van Den Haag, omgeven door cafés, restaurants en terrassen. Het is een handige plek om te ontspannen en te genieten van een kopje koffie of een maaltijd terwijl je de stad verkent.</p>
 
-<h3>Central Station</h3>
+<h3>Centraal Station</h3>
 
-<p>Den Haag Central Station is one of the city's main transport hubs and a convenient starting point for exploring The Hague. From here, visitors can easily reach the city centre, shopping areas, museums and other neighbourhoods.</p>
+<p>Den Haag Centraal Station is een van de belangrijkste vervoersknooppunten van de stad en een handig startpunt om Den Haag te verkennen. Vanaf hier kunnen bezoekers eenvoudig het stadscentrum, winkelgebieden, musea en andere buurten bereiken.</p>
 
 <h3>Spuiplein</h3>
 
-<p>Spuiplein is a modern cultural area in The Hague, surrounded by theatres, cultural venues, restaurants and public spaces. It offers visitors a look at the city's contemporary side.</p>
+<p>Het Spuiplein is een modern cultureel gebied in Den Haag, omgeven door theaters, culturele locaties, restaurants en openbare ruimtes. Het biedt bezoekers een blik op de hedendaagse kant van de stad.</p>
 
 <h3>Scheveningen</h3>
 
-<p>Scheveningen is The Hague's famous seaside district, known for its beach, promenade, restaurants and lively coastal atmosphere. It is an excellent place to unwind after exploring the city centre.</p>
+<p>Scheveningen is de beroemde badplaats van Den Haag, bekend om het strand, de boulevard, de restaurants en de levendige kustsfeer. Het is een uitstekende plek om te ontspannen na het verkennen van het stadscentrum.</p>
 
 <h3>Keizerstraat</h3>
 
-<p>Keizerstraat is one of Scheveningen's historic streets, featuring local shops, cafés, restaurants and a distinctive neighbourhood atmosphere. It is a pleasant area to explore away from the main beach.</p>
+<p>De Keizerstraat is een van de historische straten van Scheveningen, met lokale winkels, cafés, restaurants en een kenmerkende buurtsfeer. Het is een gezellig gebied om te verkennen buiten het hoofdstrand.</p>
 
 <h3>Boulevard</h3>
 
-<p>Scheveningen Boulevard stretches along the coast and is ideal for walking, cycling, shopping and enjoying views of the North Sea. Its seaside restaurants and cafés also make it a popular stop.</p>
+<p>De Boulevard van Scheveningen strekt zich uit langs de kust en is ideaal om te wandelen, fietsen, winkelen en te genieten van het uitzicht op de Noordzee. De restaurants en cafés aan zee maken het ook een populaire stop.</p>
 
-<h3>Beach</h3>
+<h3>Strand</h3>
 
-<p>Scheveningen Beach is one of the most popular beaches in The Hague. Visitors can enjoy a peaceful beach walk, relax by the sea or take part in seasonal water activities.</p>
+<p>Het strand van Scheveningen is een van de meest populaire stranden in Den Haag. Bezoekers kunnen genieten van een rustige strandwandeling, ontspannen aan zee of deelnemen aan seizoensgebonden wateractiviteiten.</p>
 
 <h3>Pier</h3>
 
-<p>Scheveningen Pier extends over the North Sea and is one of the area's most recognisable attractions. It offers restaurants, entertainment, viewpoints and impressive sea views.</p>
+<p>De Pier van Scheveningen strekt zich uit over de Noordzee en is een van de meest herkenbare attracties van het gebied. Het biedt restaurants, entertainment, uitzichtpunten en een indrukwekkend uitzicht op zee.</p>
 
 <h3>Kurhaus</h3>
 
-<p>Kurhaus is a historic landmark on the Scheveningen beachfront. Its elegant architecture, history and prominent location near the sea make it one of the area's most photographed buildings.</p>
+<p>Het Kurhaus is een historisch herkenningspunt aan de boulevard van Scheveningen. De elegante architectuur, geschiedenis en prominente locatie vlakbij zee maken het een van de meest gefotografeerde gebouwen van het gebied.</p>
 
 <h3>Duindorp</h3>
 
-<p>Duindorp is a traditional coastal neighbourhood near Scheveningen. It offers a quieter, more residential side of The Hague and gives visitors a glimpse of local life away from the main tourist areas.</p>
+<p>Duindorp is een traditionele kustwijk nabij Scheveningen. Het biedt een rustigere, meer residentiële kant van Den Haag en geeft bezoekers een glimp van het lokale leven, ver weg van de belangrijkste toeristische gebieden.</p>
 
 <h3>Madurodam</h3>
 
-<p>Madurodam is a popular miniature park showcasing detailed models of famous Dutch buildings, landmarks and landscapes. It is especially enjoyable for families and visitors who want to see the Netherlands in miniature.</p>
+<p>Madurodam is een populair miniatuurpark dat gedetailleerde modellen toont van beroemde Nederlandse gebouwen, bezienswaardigheden en landschappen. Het is vooral leuk voor families en bezoekers die Nederland in miniatuur willen zien.</p>
 
-<p>For travellers spending a weekend in Den Haag, attractions such as Kunstmuseum Den Haag, the Museum Quarter and Scheveningen can be combined depending on your interests. Visitors who enjoy art can spend more time exploring the museums, while families may prefer combining Madurodam and Scheveningen.</p>
+<p>Voor reizigers die een weekend in Den Haag doorbrengen, kunnen attracties zoals het Kunstmuseum Den Haag, het Museumkwartier en Scheveningen worden gecombineerd, afhankelijk van uw interesses. Bezoekers die van kunst houden, kunnen meer tijd besteden aan het verkennen van de musea, terwijl gezinnen er wellicht de voorkeur aan geven Madurodam en Scheveningen te combineren.</p>
 
-<p>After a day of sightseeing, Chopras Indian Restaurant offers an inviting place to enjoy fresh, authentic Indian food in Den Haag, with options ranging from aromatic curries and tandoori specialities to Butter Chicken, Chicken Tikka Masala, Mutton Rogan Josh, Chicken Biryani, Lamb Biryani, Dal Makhani, Paneer Butter Masala, Palak Paneer, Chana Masala, Tandoori Chicken, Chicken Tikka, Seekh Kebab, Paneer Tikka, Pani Puri, Samosa , Papdi Chaat, Roti, Garlic Naan, Pudina Paratha, Aloo Paratha, Indian desserts, vegetarian dishes, vegan choices and gluten-free options.</p>
+<p>Na een dag sightseeing biedt Chopras Indian Restaurant een uitnodigende plek om te genieten van vers, authentiek Indiaas eten in Den Haag, met opties variërend van aromatische curries en tandoori specialiteiten tot Butter Chicken, Chicken Tikka Masala, Mutton Rogan Josh, Chicken Biryani, Lamb Biryani, Dal Makhani, Paneer Butter Masala, Palak Paneer, Chana Masala, Tandoori Chicken, Chicken Tikka, Seekh Kebab, Paneer Tikka, Pani Puri, Samosa, Papdi Chaat, Roti, Garlic Naan, Pudina Paratha, Aloo Paratha, Indiase desserts, vegetarische gerechten, veganistische keuzes en glutenvrije opties.</p>
 
-<h2>Delft: A Perfect Nearby Day Trip</h2>
+<h2>Delft: Een Perfecte Nabijgelegen Dagtocht</h2>
 
-<p>Delft is an excellent nearby destination for travellers staying in Den Haag who want to explore another historic Dutch city.</p>
+<p>Delft is een uitstekende nabijgelegen bestemming voor reizigers die in Den Haag verblijven en een andere historische Nederlandse stad willen verkennen.</p>
 
-<p>Known for its historic centre, canals, traditional architecture and connection with Delft Blue pottery, Delft can easily be included in a broader South Holland itinerary.</p>
+<p>Bekend om zijn historische centrum, grachten, traditionele architectuur en de band met Delfts Blauw aardewerk, kan Delft eenvoudig worden opgenomen in een bredere Zuid-Hollandse route.</p>
 
-<p>Visitors travelling between Den Haag and Delft can also include an Indian dining stop at Chopras Indian Restaurant.</p>
+<p>Bezoekers die tussen Den Haag en Delft reizen, kunnen ook een Indiase maaltijd inlassen bij Chopras Indian Restaurant.</p>
 
-<p>This is particularly relevant for people searching for an Indian restaurant near Delft or Indian food between Delft and Den Haag.</p>
+<p>Dit is bijzonder relevant voor mensen die zoeken naar een Indiaas restaurant in de buurt van Delft of Indiaas eten tussen Delft en Den Haag.</p>
 
-<h2>Where to Eat Indian Food in Den Haag?</h2>
+<h2>Waar Kun Je Indiaas Eten in Den Haag?</h2>
 
-<p>After exploring Den Haag's attractions, food becomes part of the travel experience.</p>
+<p>Na het verkennen van de attracties van Den Haag, wordt eten een onderdeel van de reiservaring.</p>
 
-<p>Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag, and offers authentic Indian cuisine with a menu covering starters, street food, tandoori dishes, vegetarian curries, chicken, lamb and mutton, biryani, breads, desserts and drinks. The current menu lists 144 dishes across 13 categories.</p>
+<p>Chopras Indian Restaurant bevindt zich aan de Leyweg 986, 2545 GW Den Haag, en biedt authentieke Indiase gerechten met een menu dat bestaat uit voorgerechten, streetfood, tandoori gerechten, vegetarische curries, kip, lams- en schapenvlees, biryani, broden, desserts en drankjes. Het huidige menu bevat 144 gerechten in 13 categorieën.</p>
 
-<p>For travellers searching for the best Indian restaurant in Den Haag, the restaurant offers a practical choice for both casual dining and larger celebrations.</p>
+<p>Voor reizigers die zoeken naar het beste Indiase restaurant in Den Haag, biedt het restaurant een praktische keuze voor zowel casual diners als grotere vieringen.</p>
 
-<p>The menu also identifies halal, vegetarian, vegan and gluten-free options, giving groups more flexibility when different guests have different dietary preferences.</p>
+<p>Het menu identificeert ook halal, vegetarische, veganistische en glutenvrije opties, wat groepen meer flexibiliteit geeft wanneer verschillende gasten verschillende dieetvoorkeuren hebben.</p>
 
-<h2>What to Order at Chopras Indian Restaurant?</h2>
+<h2>Wat Te Bestellen Bij Chopras Indian Restaurant?</h2>
 
-<p>If you are visiting Chopras Indian Restaurant for the first time, choosing a few representative dishes can be a good way to explore different sides of Indian cuisine.</p>
+<p>Als u Chopras Indian Restaurant voor de eerste keer bezoekt, kan het kiezen van een paar representatieve gerechten een goede manier zijn om de verschillende kanten van de Indiase keuken te ontdekken.</p>
 
-<h3>Tandoori Dishes</h3>
+<h3>Tandoori Gerechten</h3>
 
-<p>The tandoori section is ideal for anyone who enjoys grilled Indian food prepared in a clay oven.</p>
+<p>De tandoori sectie is ideaal voor iedereen die geniet van gegrild Indiaas eten bereid in een kleioven.</p>
 
-<h3>Popular choices include:</h3>
+<h3>Populaire keuzes zijn:</h3>
 
 <ul>
   <li>Paneer Tikka</li>
@@ -1507,23 +1808,23 @@ export const blogPosts: BlogPost[] = ([
   <li>Chopras Non Veg Platter</li>
 </ul>
 
-<p>The menu identifies the tandoori section as clay oven grill specialities, making it particularly relevant for visitors interested in traditional Indian cooking.</p>
+<p>Het menu identificeert de tandoori sectie als kleioven grillspecialiteiten, wat het bijzonder relevant maakt voor bezoekers die geïnteresseerd zijn in traditionele Indiase kookkunsten.</p>
 
-<h3>Indian Curries and Biryani</h3>
+<h3>Indiase Curries en Biryani</h3>
 
-<p>For a more traditional Indian meal, guests can combine a curry with rice or naan.</p>
+<p>Voor een meer traditionele Indiase maaltijd kunnen gasten een curry combineren met rijst of naan.</p>
 
-<p>Popular dishes include Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera and other vegetarian curries. The menu also features chicken, lamb and mutton dishes alongside biryani selections.</p>
+<p>Populaire gerechten zijn onder andere Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera en andere vegetarische curries. Het menu bevat ook kip-, lams- en schapenvleesgerechten naast biryani-selecties.</p>
 
-<p>A shared table with tandoori starters, curry, biryani and fresh Indian bread is a simple way to experience several flavours in one meal.</p>
+<p>Een gedeelde tafel met tandoori voorgerechten, curry, biryani en vers Indiaas brood is een eenvoudige manier om verschillende smaken in één maaltijd te ervaren.</p>
 
-<h3>Vegetarian, Vegan and Gluten-Free Indian Food in Den Haag</h3>
+<h3>Vegetarisch, Veganistisch en Glutenvrij Indiaas Eten in Den Haag</h3>
 
-<p>Chopras Indian Restaurant offers vegetarian, vegan and gluten-free options, making it suitable for groups with different dietary preferences.</p>
+<p>Chopras Indian Restaurant biedt vegetarische, veganistische en glutenvrije opties, waardoor het geschikt is voor groepen met verschillende dieetvoorkeuren.</p>
 
-<p>The restaurant's menu clearly marks dishes using dietary indicators for vegetarian, vegan, gluten-free and halal options. Guests are also asked to mention vegan or gluten-free requirements when ordering because dishes are not automatically prepared that way by default.</p>
+<p>Op het menu van het restaurant worden gerechten duidelijk gemarkeerd met dieetindicatoren voor vegetarische, veganistische, glutenvrije en halal opties. Gasten worden ook verzocht om veganistische of glutenvrije vereisten te vermelden bij de bestelling, omdat gerechten niet standaard op die manier worden bereid.</p>
 
-<h3>Some menu examples include:</h3>
+<h3>Enkele voorbeelden van het menu zijn:</h3>
 
 <ul>
   <li>Aloo Tikki</li>
@@ -1538,77 +1839,77 @@ export const blogPosts: BlogPost[] = ([
   <li>Dal Makhani</li>
 </ul>
 
-<p>For anyone searching for a vegetarian Indian restaurant in Den Haag, vegan Indian food in Den Haag, or gluten-free Indian food in The Hague, checking the menu and communicating dietary requirements when ordering is recommended.</p>
+<p>Voor iedereen die zoekt naar een vegetarisch Indiaas restaurant in Den Haag, veganistisch Indiaas eten in Den Haag, of glutenvrij Indiaas eten in Den Haag, is het raadzaam het menu te controleren en dieetwensen door te geven bij de bestelling.</p>
 
-<p>Make Your Den Haag Celebration Special at Chopras Indian Restaurant</p>
+<p>Maak Jouw Feest in Den Haag Speciaal bij Chopras Indian Restaurant</p>
 
-<p>Sightseeing isn't the only reason visitors look for a restaurant in Den Haag. Chopras Indian Restaurant also has a private event hall for approximately 25 to 50 guests, with the venue and catering managed under one roof.</p>
+<p>Sightseeing is niet de enige reden waarom bezoekers een restaurant in Den Haag zoeken. Chopras Indian Restaurant heeft ook een besloten feestzaal voor circa 25 tot 50 gasten, waarbij de locatie en catering onder één dak worden beheerd.</p>
 
-<p>This makes Chopras Indian Restaurant suitable for a wide range of celebrations and gatherings.</p>
+<p>Dit maakt Chopras Indian Restaurant geschikt voor uiteenlopende vieringen en bijeenkomsten.</p>
 
-<h3>Weddings and Engagements</h3>
+<h3>Bruiloften en Verlovingen</h3>
 
-<p>The private venue welcomes engagements, weddings, pre-wedding celebrations and family gatherings with Indian food and hospitality.</p>
+<p>De besloten locatie verwelkomt verlovingen, bruiloften, pre-wedding feesten en familiebijeenkomsten met Indiaas eten en gastvrijheid.</p>
 
-<h3>Festivals and Cultural Celebrations</h3>
+<h3>Festivals en Culturele Feesten</h3>
 
-<p>Diwali, Holi, Navratri, Garba, Eid, Christmas, New Year and Independence Day, along with important Dutch holidays and festive occasions such as Goede Vrijdag (Good Friday), Eerste Paasdag (Easter Sunday), Tweede Paasdag (Easter Monday), Koningsdag (King's Day), Bevrijdingsdag (Liberation Day), Hemelvaartsdag (Ascension Day), Eerste Pinksterdag (Whit Sunday), Tweede Pinksterdag (Whit Monday), Eerste Kerstdag (Christmas Day) and Tweede Kerstdag (Boxing Day), are among the festive and cultural occasions highlighted by Chopras Indian Restaurant.</p>
+<p>Diwali, Holi, Navratri, Garba, Eid, Kerstmis, Oud en Nieuw en Onafhankelijkheidsdag, samen met belangrijke Nederlandse feestdagen zoals Goede Vrijdag, Eerste Paasdag, Tweede Paasdag, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Eerste Pinksterdag, Tweede Pinksterdag, Eerste Kerstdag en Tweede Kerstdag behoren tot de feestelijke en culturele gelegenheden die bij Chopras Indian Restaurant gevierd kunnen worden.</p>
 
-<h3>Birthdays and Family Celebrations</h3>
+<h3>Verjaardagen en Familiefeesten</h3>
 
-<p>The event venue can also be used for birthdays, anniversaries, retirement parties, graduation celebrations, naming ceremonies and family reunions.</p>
+<p>De evenementenlocatie kan ook gebruikt worden voor verjaardagen, jubilea, pensioenfeesten, afstudeerfeesten, naamceremonies en familiereünies.</p>
 
-<h3>Romantic Celebrations</h3>
+<h3>Romantische Vieringen</h3>
 
-<p>For more intimate occasions, the venue welcomes proposals, date nights, Valentine's celebrations, anniversary dinners and private dining experiences.</p>
+<p>Voor intiemere gelegenheden verwelkomt de locatie huwelijksaanzoeken, date nights, Valentijnsvieringen, jubileumdiners en privé dinerervaringen.</p>
 
-<h3>Baby Showers and Family Parties</h3>
+<h3>Babyshowers en Familiefeestjes</h3>
 
-<p>Families can organise baby showers, gender reveal parties, naming ceremonies, family lunches and special get-togethers at Chopras Indian Restaurant.</p>
+<p>Families kunnen babyshowers, gender reveal party's, naamceremonies, familielunches en speciale bijeenkomsten organiseren bij Chopras Indian Restaurant.</p>
 
-<h3>High Tea and Social Gatherings</h3>
+<h3>High Tea en Sociale Bijeenkomsten</h3>
 
-<p>The venue is also suitable for high tea, kitty parties, ladies' lunches, brunches, friends' reunions and club meetings.</p>
+<p>De locatie is ook geschikt voor high tea, kitty party's, dameslunches, brunches, reünies van vrienden en clubvergaderingen.</p>
 
-<h3>Corporate Events and Networking</h3>
+<h3>Bedrijfsevenementen en Netwerken</h3>
 
-<p>For businesses, Chopras Indian Restaurant welcomes corporate dinners, business lunches, meetings, networking events, workshops, training sessions, team-building activities, brainstorming sessions and client presentations.</p>
+<p>Voor bedrijven verwelkomt Chopras Indian Restaurant bedrijfsdiners, zakelijke lunches, vergaderingen, netwerkevenementen, workshops, trainingssessies, teambuildingactiviteiten, brainstormsessies en klantpresentaties.</p>
 
-<h3>Community and Expat Events</h3>
+<h3>Gemeenschaps- en Expat Evenementen</h3>
 
-<p>The venue can accommodate student events, expat gatherings, cultural exchanges, alumni groups, community organisations and local clubs.</p>
+<p>De locatie biedt ruimte voor studentenevenementen, expat bijeenkomsten, culturele uitwisselingen, alumnigroepen, maatschappelijke organisaties en lokale clubs.</p>
 
-<h3>Wellness and Creative Activities</h3>
+<h3>Wellness en Creatieve Activiteiten</h3>
 
-<p>The event space can also be used for yoga sessions, meditation classes, dance workshops, art workshops, cooking classes and wellness events.</p>
+<p>De evenementenruimte kan ook worden gebruikt voor yogasessies, meditatielessen, dansworkshops, kunstworkshops, kooklessen en wellnessevenementen.</p>
 
-<h3>Launches, Shoots and Brand Events</h3>
+<h3>Lanceringen, Shoots en Merkevenementen</h3>
 
-<p>For creative and commercial purposes, the venue is available for product launches, book launches, press events, media gatherings, food photography, commercial shoots, influencer collaborations, brand promotions, interviews and social media content creation.</p>
+<p>Voor creatieve en commerciële doeleinden is de locatie beschikbaar voor productlanceringen, boekpresentaties, persevenementen, mediabijeenkomsten, foodfotografie, commerciële shoots, samenwerkingen met influencers, merkpromoties, interviews en creatie van sociale media content.</p>
 
-<h3>Charity and Fundraising Events</h3>
+<h3>Liefdadigheids- en Fondsenwervingsevenementen</h3>
 
-<p>Chopras Indian Restaurant also welcomes charity dinners, fundraising events, awareness campaigns, community initiatives and non-profit gatherings.</p>
+<p>Chopras Indian Restaurant verwelkomt ook liefdadigheidsdiners, fondsenwervingsevenementen, bewustwordingscampagnes, gemeenschapsinitiatieven en bijeenkomsten zonder winstoogmerk.</p>
 
-<p>The private hall offers an important advantage for event organisers: venue and catering are handled through one booking and one team. The hall accommodates approximately 25 to 50 guests, and the restaurant states that its event food is fully halal certified.</p>
+<p>De besloten zaal biedt een belangrijk voordeel voor evenementenorganisatoren: de locatie en catering worden via één boeking en één team geregeld. De zaal biedt ruimte aan ongeveer 25 tot 50 gasten en het restaurant geeft aan dat hun evenementencatering volledig halal is gecertificeerd.</p>
 
-<h2>Areas to Explore Around Den Haag</h2>
+<h2>Gebieden Om Te Verkennen Rond Den Haag</h2>
 
-<p>Den Haag is surrounded by neighbourhoods and cities that are useful to include when planning a food, sightseeing or event itinerary.</p>
+<p>Den Haag is omringd door wijken en steden die handig zijn om op te nemen bij het plannen van een reisroute voor eten, sightseeing of evenementen.</p>
 
-<h3>Important local areas include:</h3>
+<h3>Belangrijke lokale gebieden zijn onder meer:</h3>
 
-<h3>Scheveningen Beach, Boulevard & Pier</h3>
+<h3>Scheveningen Strand, Boulevard & Pier</h3>
 
 <h3>Madurodam</h3>
 
-<h3>Den Haag City Centre / Binnenhof</h3>
+<h3>Den Haag Centrum / Binnenhof</h3>
 
-<h3>Central Den Haag & Scheveningen Hotels</h3>
+<h3>Hotels in Centraal Den Haag & Scheveningen</h3>
 
-<h3>Mauritshuis / Museum Quarter</h3>
+<h3>Mauritshuis / Museumkwartier</h3>
 
-<h3>Peace Palace</h3>
+<h3>Vredespaleis</h3>
 
 <h3>Escher in Het Paleis / Lange Voorhout</h3>
 
@@ -1616,91 +1917,89 @@ export const blogPosts: BlogPost[] = ([
 
 <h3>Delft</h3>
 
-<p>These locations create useful search clusters around terms such as Indian restaurant Den Haag, Indian restaurant near me, Indian food The Hague, Indian restaurant Rijswijk, Indian restaurant Delft, Indian restaurant Voorburg and Indian catering Den Haag.</p>
+<p>Deze locaties creëren nuttige zoekclusters rond termen zoals Indiaas restaurant Den Haag, Indiaas restaurant in de buurt, Indiaas eten Den Haag, Indiaas restaurant Rijswijk, Indiaas restaurant Delft, Indiaas restaurant Voorburg en Indiase catering Den Haag.</p>
 
-<p>For visitors travelling around South Holland, Chopras Indian Restaurant can therefore work as part of a wider food itinerary rather than only a destination for people staying near Leyweg.</p>
+<p>Voor bezoekers die in Zuid-Holland rondreizen, kan Chopras Indian Restaurant daarom werken als onderdeel van een bredere eetroute in plaats van alleen een bestemming voor mensen die in de buurt van Leyweg verblijven.</p>
 
-<h2>A Simple One-Day Den Haag Itinerary</h2>
+<h2>Een Eenvoudige Eendaagse Reisroute in Den Haag</h2>
 
-<p>If you have only one day in the city, you don't need to see everything.</p>
+<p>Als u slechts één dag in de stad heeft, hoeft u niet alles te zien.</p>
 
-<h3>Morning</h3>
+<h3>Ochtend</h3>
 
-<p>Start in Den Haag City Centre and explore the historic area around the Binnenhof.</p>
+<p>Begin in het Centrum van Den Haag en verken het historische gebied rond het Binnenhof.</p>
 
-<h3>Late Morning</h3>
+<h3>Laat in de Ochtend</h3>
 
-<p>Walk towards Mauritshuis and explore the Museum Quarter.</p>
+<p>Wandel richting het Mauritshuis en verken het Museumkwartier.</p>
 
-<h3>Afternoon</h3>
+<h3>Middag</h3>
 
-<p>Visit Peace Palace or Escher in Het Paleis and Lange Voorhout, depending on your interests.</p>
+<p>Bezoek het Vredespaleis of Escher in Het Paleis en Lange Voorhout, afhankelijk van uw interesses.</p>
 
-<h3>Late Afternoon</h3>
+<h3>Eind van de Middag</h3>
 
-<p>Head towards Scheveningen Beach and Boulevard for sea views and a relaxed walk.</p>
+<p>Ga richting Scheveningen Strand en Boulevard voor uitzicht op zee en een ontspannen wandeling.</p>
 
-<h3>Evening</h3>
+<h3>Avond</h3>
 
-<p>Finish the day with authentic Indian food at Chopras Indian Restaurant.</p>
+<p>Sluit de dag af met authentiek Indiaas eten bij Chopras Indian Restaurant.</p>
 
-<p>Choose from tandoori dishes, Indian curries, biryani, naan, vegetarian specialities and desserts according to your preferences.</p>
+<p>Kies uit tandoori gerechten, Indiase curries, biryani, naan, vegetarische specialiteiten en desserts, naar uw eigen smaak.</p>
 
-<p>For visitors planning a group celebration, the private event hall at Chopras Indian Restaurant can also turn dinner into a complete private gathering.</p>
+<p>Voor bezoekers die een groepsfeest plannen, kan de besloten feestzaal bij Chopras Indian Restaurant het diner ook veranderen in een complete privébijeenkomst.</p>
 
-<h2>Frequently Asked Questions</h2>
+<h2>Veelgestelde Vragen</h2>
 
 <div class="space-y-4 my-6">
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">What are the best places to visit in Den Haag?</h3>
-    <p class="text-neutral-300 mb-0">Some of the most popular places include Scheveningen Beach, Madurodam, Binnenhof, Mauritshuis, Peace Palace, Escher in Het Paleis, Lange Voorhout and Kunstmuseum Den Haag.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Wat zijn de beste plekken om te bezoeken in Den Haag?</h3>
+    <p class="text-neutral-300 mb-0">Enkele van de meest populaire plekken zijn Scheveningen Strand, Madurodam, Binnenhof, Mauritshuis, Vredespaleis, Escher in Het Paleis, Lange Voorhout en Kunstmuseum Den Haag.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">What is the best place to visit in Den Haag for families?</h3>
-    <p class="text-neutral-300 mb-0">Madurodam and Scheveningen are particularly suitable for families, offering a combination of interactive sightseeing and seaside activities.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Wat is de beste plek om te bezoeken in Den Haag voor families?</h3>
+    <p class="text-neutral-300 mb-0">Madurodam en Scheveningen zijn bijzonder geschikt voor families en bieden een combinatie van interactieve bezienswaardigheden en activiteiten aan zee.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Where can I eat authentic Indian food in Den Haag?</h3>
-    <p class="text-neutral-300 mb-0">Chopras Indian Restaurant on Leyweg offers authentic Indian cuisine, including tandoori dishes, curries, biryani, Indian breads and vegetarian options.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Waar kan ik authentiek Indiaas eten krijgen in Den Haag?</h3>
+    <p class="text-neutral-300 mb-0">Chopras Indian Restaurant aan de Leyweg biedt authentieke Indiase gerechten, waaronder tandoori gerechten, curries, biryani, Indiase broden en vegetarische opties.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Does Chopras Indian Restaurant serve halal food?</h3>
-    <p class="text-neutral-300 mb-0">Yes. Chopras Indian Restaurant states that its food is fully halal certified, including its event catering.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Serveert Chopras Indian Restaurant halal eten?</h3>
+    <p class="text-neutral-300 mb-0">Ja. Chopras Indian Restaurant geeft aan dat het eten volledig halal gecertificeerd is, inclusief de event catering.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Does Chopras Indian Restaurant offer vegetarian and vegan food?</h3>
-    <p class="text-neutral-300 mb-0">Yes. The menu includes vegetarian and vegan options, and the restaurant also provides dedicated vegetarian and vegan menu categories.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Biedt Chopras Indian Restaurant vegetarisch en veganistisch eten aan?</h3>
+    <p class="text-neutral-300 mb-0">Ja. Het menu bevat vegetarische en veganistische opties en het restaurant biedt ook speciale categorieën voor vegetarisch en veganistisch eten op de menukaart.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Does Chopras Indian Restaurant offer gluten-free food?</h3>
-    <p class="text-neutral-300 mb-0">Yes. Gluten-free options are available. Guests should clearly mention their gluten-free requirement when ordering because dishes are not automatically prepared gluten-free.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Biedt Chopras Indian Restaurant glutenvrij eten aan?</h3>
+    <p class="text-neutral-300 mb-0">Ja. Er zijn glutenvrije opties beschikbaar. Gasten dienen hun wens voor glutenvrij duidelijk te vermelden bij de bestelling, omdat gerechten niet standaard glutenvrij worden bereid.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Can I organise a private event at Chopras Indian Restaurant?</h3>
-    <p class="text-neutral-300 mb-0">Yes. The private event hall accommodates approximately 25 to 50 guests and is suitable for weddings, birthdays, corporate events, cultural celebrations and many other gatherings.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Kan ik een privé-evenement organiseren bij Chopras Indian Restaurant?</h3>
+    <p class="text-neutral-300 mb-0">Ja. De privé evenementenzaal is geschikt voor ongeveer 25 tot 50 gasten en is ideaal voor bruiloften, verjaardagen, bedrijfsevenementen, culturele feesten en vele andere bijeenkomsten.</p>
   </div>
   <div class="border border-neutral-800 rounded-xl p-4 bg-neutral-900/50">
-    <h3 class="font-semibold text-amber-400 text-lg mb-2">Is Chopras Indian Restaurant suitable for corporate events?</h3>
-    <p class="text-neutral-300 mb-0">Yes. The venue welcomes corporate dinners, business lunches, meetings, networking events, workshops, training sessions, team-building activities and client presentations.</p>
+    <h3 class="font-semibold text-amber-400 text-lg mb-2">Is Chopras Indian Restaurant geschikt voor bedrijfsevenementen?</h3>
+    <p class="text-neutral-300 mb-0">Ja. De locatie verwelkomt bedrijfsdiners, zakelijke lunches, vergaderingen, netwerkevenementen, workshops, trainingssessies, teambuildingactiviteiten en klantpresentaties.</p>
   </div>
 </div>
 
-<h2>Final Thoughts</h2>
+<h2>Laatste Gedachten</h2>
 
-<p>Den Haag rewards visitors who give themselves time to explore beyond one attraction. From the seaside atmosphere of Scheveningen and the miniature world of Madurodam to the history of the Binnenhof, the art of Mauritshuis and Kunstmuseum Den Haag, the international significance of the Peace Palace, and the distinctive atmosphere of Lange Voorhout, there is something for almost every type of traveller.</p>
+<p>Den Haag beloont bezoekers die zichzelf de tijd gunnen om verder te kijken dan één attractie. Van de sfeer aan zee in Scheveningen en de miniatuurwereld van Madurodam tot de geschiedenis van het Binnenhof, de kunst van het Mauritshuis en het Kunstmuseum Den Haag, de internationale betekenis van het Vredespaleis en de kenmerkende sfeer van het Lange Voorhout; er is iets voor vrijwel elk type reiziger.</p>
 
-<p>Food can be an equally important part of the experience.</p>
+<p>Eten kan een net zo belangrijk onderdeel van de ervaring zijn.</p>
 
-<p>For visitors looking for authentic Indian food in Den Haag, Chopras Indian Restaurant offers a broad menu with tandoori specialities, biryani, curries, Indian breads, vegetarian dishes, vegan options and gluten-free choices.</p>
+<p>Voor bezoekers die op zoek zijn naar authentiek Indiaas eten in Den Haag, biedt Chopras Indian Restaurant een uitgebreid menu met tandoori specialiteiten, biryani, curries, Indiase broden, vegetarische gerechten, veganistische opties en glutenvrije keuzes.</p>
 
-<p>And if your visit is connected to a celebration rather than sightseeing, Chopras Indian Restaurant offers a private event hall for approximately 25 to 50 guests, covering weddings, birthdays, anniversaries, baby showers, corporate events, cultural celebrations, networking, workshops, launches, charity events and many other occasions.</p>
+<p>En als uw bezoek verbonden is aan een viering in plaats van sightseeing, biedt Chopras Indian Restaurant een privé evenementenzaal voor circa 25 tot 50 gasten, geschikt voor bruiloften, verjaardagen, jubilea, babyshowers, bedrijfsevenementen, culturele feesten, netwerken, workshops, lanceringen, liefdadigheidsevenementen en vele andere gelegenheden.</p>
 
-<p>So, whether you're spending a day exploring Den Haag, visiting Scheveningen, taking a trip to Delft, staying near the city centre or planning a special event, make authentic Indian food part of your itinerary.</p>
+<p>Dus of je nu een dag Den Haag gaat verkennen, Scheveningen bezoekt, een uitstapje naar Delft maakt, in de buurt van het centrum verblijft of een speciaal evenement plant, maak authentiek Indiaas eten een onderdeel van je route.</p>
 
-<p>Visit Chopras Indian Restaurant at Leyweg 986, Den Haag, reserve your table, explore the menu and enjoy a taste of India after discovering the best of The Hague.</p>
-
-
-`
+<p>Bezoek Chopras Indian Restaurant aan de Leyweg 986, Den Haag, reserveer uw tafel, verken het menu en geniet van de smaak van India na het ontdekken van het beste van Den Haag.</p>
+`,
   },
 
   {
