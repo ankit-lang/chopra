@@ -54,6 +54,7 @@ const staticPages: SitemapPage[] = [
   { slug: 'indian-restaurant-in-the-hague-for-private-events', lastMod: '2026-08-18', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'best-indian-restaurant-in-den-haag-for-family-dining-parties-corporate-events', lastMod: '2026-08-26', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'why-chopras-indian-restaurant-is-a-top-choice-for-authentic-indian-food-in-den-haag', lastMod: '2026-08-30', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'indian-restaurant-near-me-in-den-haag-a-food-lovers-guide', lastMod: '2026-09-30', priority: 0.8, changeFreq: 'weekly' },
 
   // Location pages
   { slug: 'indian-restaurant-delft', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
