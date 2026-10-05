@@ -33,6 +33,8 @@ export const RESTAURANT = {
     tiktok: 'https://www.tiktok.com/@choprasindianrestaurant',
     x: 'https://x.com/choprasdenhaag',
     thefork: 'https://www.thefork.nl/restaurant/chopras-indian-restaurant-r825662',
+    theforkWidget: 'https://widget.thefork.com/en/1b30051f-4e07-4fe9-8386-b9a1501fdf2a?step=date',
+    googleReserve: 'https://www.google.com/maps/reserve/v/dine/c/BqdcA6F1JOY?source=pa&opi=89978449&hl=en-IN&gei=ffPDaoCAMdzb4-EPtq_vmQk',
     thuisbezorgd: 'https://www.thuisbezorgd.nl/menu/chopras-indian-street-food',
     ubereats: 'https://www.ubereats.com/nl/store/chopras-indian-restaurant/kFKhBtR-W3OkJyl2f6QmUg',
   },
