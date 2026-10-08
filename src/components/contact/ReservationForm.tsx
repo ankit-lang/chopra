@@ -192,7 +192,7 @@ export default function ReservationForm({ locale = 'en' }: ReservationFormProps)
           }`}
         >
           <span className="text-base">📋</span>
-          <span>{isNl ? 'Direct Formulier' : 'Website Form'}</span>
+          <span>{isNl ? 'Boeken via Website' : 'Book via Website'}</span>
         </button>
       </div>
 
