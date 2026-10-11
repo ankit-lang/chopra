@@ -22,7 +22,7 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
 
   return (
     <div className="flex items-center bg-white/[0.08] rounded-full p-0.5">
-      <a
+      <Link
         href={getLocalePath('en')}
         aria-label="Switch to English"
         className={cn(
@@ -33,8 +33,8 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
         )}
       >
         EN
-      </a>
-      <a
+      </Link>
+      <Link
         href={getLocalePath('nl')}
         aria-label="Switch to Nederlands"
         className={cn(
@@ -45,7 +45,7 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
         )}
       >
         NL
-      </a>
+      </Link>
     </div>
   )
 }

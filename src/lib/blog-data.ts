@@ -2,6 +2,397 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "indian-restaurant-near-me-in-rijswijk-authentic-indian-food",
+    title: "Indian Restaurant Near Me in Rijswijk: Authentic Indian Food",
+    metaTitle: "Indian Restaurant Near Me in Rijswijk: Authentic Indian Food | Chopras",
+    metaDescription: "Looking for an Indian restaurant near you in Rijswijk? Explore authentic Indian food, flavourful curries, biryani, tandoori dishes and traditional Indian flavours.",
+    h1: "Indian Restaurant Near Me in Rijswijk: Where to Find Authentic Indian Food?",
+    primaryKeyword: "Indian restaurant near me in Rijswijk",
+    keywords: [
+      "Indian restaurant near me in Rijswijk",
+      "Indian restaurant near Den Haag",
+      "Best Indian food in Rijswijk",
+      "best indian restaurant den haag"
+    ],
+    
+    titleNl: "Indiaas Restaurant Bij Mij in de Buurt in Rijswijk: Authentiek Indiaas Eten",
+    metaTitleNl: "Indiaas Restaurant Bij Mij in de Buurt in Rijswijk | Chopras",
+    metaDescriptionNl: "Op zoek naar een Indiaas restaurant bij u in de buurt in Rijswijk? Ontdek authentiek Indiaas eten, smaakvolle curries, biryani, tandoori gerechten en traditionele smaken.",
+    h1Nl: "Indiaas Restaurant Bij Mij in de Buurt in Rijswijk: Waar Vind Je Authentiek Indiaas Eten?",
+    primaryKeywordNl: "Indiaas restaurant bij mij in de buurt in Rijswijk",
+    excerptNl: "Zoeken naar een Indiaas restaurant bij mij in de buurt in Rijswijk betekent vaak meer dan alleen een handige plek om te eten. Liefhebbers van goed eten zoeken naar authentieke smaken, vers bereide gerechten, halal opties, vegetarische en veganistische keuzes, en een restaurant dat geschikt is voor zowel een ontspannen diner als een speciale viering.",
+    language: 'en' as const,
+    publishedAt: "2026-10-11",
+    readingTime: 6,
+    author: "Arun Chopra",
+    image: "/images/blog/11oct.png",
+    excerpt: "Searching for an Indian restaurant near me in Rijswijk often means looking for more than just a convenient place to eat. Food lovers want authentic flavours, freshly prepared dishes, halal options, vegetarian and vegan choices, and a restaurant that works for both a casual dinner and a special celebration.",
+    faqs: [
+      {
+        question: "Where can I find an Indian restaurant near Rijswijk?",
+        answer: "Chopras Indian Restaurant is located at Leyweg 986, Den Haag, just across the Rijswijk border. The restaurant offers authentic North Indian food, tandoori dishes, biryani, Indian street food, vegetarian, vegan, gluten-free and halal options."
+      },
+      {
+        question: "What Indian food can I try near Rijswijk?",
+        answer: "You can try Indian street food such as Pani Puri, Samosa Chaat and Papdi Chaat, tandoori dishes such as Chicken Tikka and Tandoori Chicken, and main courses such as Butter Chicken, Mutton Rogan Josh, Dal Makhani and Chicken Biryani."
+      },
+      {
+        question: "Does Chopras Indian Restaurant offer vegetarian Indian food?",
+        answer: "Yes. The menu includes vegetarian dishes such as Paneer Tikka, Dal Makhani, Chana Masala, Aloo Gobi, Palak Paneer and Vegetable Biryani."
+      },
+      {
+        question: "What does “feestzaal huren Den Haag” mean?",
+        answer: "“Feestzaal huren Den Haag” means renting a party or event venue in Den Haag. Chopras Indian Restaurant offers a private event hall for approximately 25–80 guests, combined with authentic Indian catering."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Waar kan ik een Indiaas restaurant bij Rijswijk vinden?",
+        answer: "Chopras Indian Restaurant is gevestigd aan de Leyweg 986 in Den Haag, net over de grens met Rijswijk. Het restaurant biedt authentiek Noord-Indiaas eten, tandoori gerechten, biryani, Indiaas streetfood, vegetarische, veganistische, glutenvrije en halal opties."
+      },
+      {
+        question: "Welk Indiaas eten kan ik proberen nabij Rijswijk?",
+        answer: "U kunt Indiaas streetfood proberen zoals Pani Puri, Samosa Chaat en Papdi Chaat, tandoori gerechten zoals Chicken Tikka en Tandoori Chicken, en hoofdgerechten zoals Butter Chicken, Mutton Rogan Josh, Dal Makhani en Chicken Biryani."
+      },
+      {
+        question: "Biedt Chopras Indian Restaurant vegetarisch Indiaas eten aan?",
+        answer: "Ja. Het menu bevat vegetarische gerechten zoals Paneer Tikka, Dal Makhani, Chana Masala, Aloo Gobi, Palak Paneer en Vegetable Biryani."
+      },
+      {
+        question: "Wat betekent “feestzaal huren Den Haag”?",
+        answer: "“Feestzaal huren Den Haag” betekent het huren van een feest- of evenementenlocatie in Den Haag. Chopras Indian Restaurant biedt een privé feestzaal voor circa 25 tot 80 gasten, gecombineerd met authentieke Indiase catering."
+      }
+    ],
+    content: `
+<img src="/images/blog/11oct.png" alt="Indian Restaurant Near Me in Rijswijk: Authentic Indian Food" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Searching for an <strong>Indian restaurant near me in Rijswijk</strong> often means looking for more than just a convenient place to eat. Food lovers want authentic flavours, freshly prepared dishes, halal options, vegetarian and vegan choices, and a restaurant that works for both a casual dinner and a special celebration.</p>
+
+<p>For diners in Rijswijk looking for authentic Indian food nearby, <a href="https://chopras.nl">Chopras Indian Restaurant</a> at Leyweg 986, Den Haag, is a convenient option just across the Rijswijk border. The restaurant serves North Indian cuisine, Indian street food, tandoori dishes, biryani, vegetarian and vegan food, gluten-free options, and a fully halal-certified menu.</p>
+
+<p>Whether you are coming from Rijswijk Centrum, exploring Den Haag, or spending the day around Scheveningen, Keizerstraat, the Boulevard, Scheveningen Beach, the Pier, Kurhaus, Duindorp or Madurodam, Chopras Indian Restaurant offers a place to enjoy a complete Indian meal after your day out.</p>
+
+<h2>Indian Restaurant Near Rijswijk: Why Location Matters</h2>
+
+<p>Rijswijk and Den Haag are closely connected, making it easy for people in Rijswijk to travel into Den Haag for dining. Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag, close to the Rijswijk side of the city.</p>
+
+<p>For people searching online for &ldquo;Indian restaurant near Rijswijk&rdquo;, &ldquo;Indian food near me Rijswijk&rdquo; or &ldquo;authentic Indian restaurant near me&rdquo;, location is only one part of the decision. The food, menu variety and dietary choices matter just as much.</p>
+
+<p>Chopras Indian Restaurant offers a broad <a href="https://chopras.nl/menu">menu</a> covering Indian street food, tandoori specialities, curries, biryani, Indian breads, vegetarian dishes and Indo-Chinese favourites. The current menu lists 144 dishes across 13 categories, with vegetarian, vegan, gluten-free and halal options clearly identified.</p>
+
+<h2>What Makes Indian Food at Chopras Indian Restaurant Different?</h2>
+
+<p>Authentic Indian cuisine is about the balance of spices, cooking techniques and fresh ingredients. At Chopras Indian Restaurant, spices are sourced from India and freshly ground, while dishes are prepared using traditional Indian cooking methods.</p>
+
+<p>The menu includes familiar favourites as well as dishes for diners who want to explore different regional flavours. You can start with Indian street food, continue with a tandoori dish or curry, and finish with rice, naan and an Indian dessert.</p>
+
+<p>For someone searching for Indian food near me in Rijswijk, this variety makes it easier to build a meal according to your taste.</p>
+
+<h2>Must-Try Indian Street Food</h2>
+
+<p>Indian street food is one of the easiest ways to experience different textures and flavours in one meal.</p>
+
+<p>At Chopras Indian Restaurant, guests can try <a href="https://chopras.nl/chaat-den-haag">street food dishes</a> such as:</p>
+<ul>
+  <li><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a></li>
+  <li>Samosa Chaat</li>
+  <li>Dahi Puri</li>
+  <li>Papdi Chaat</li>
+  <li>Aloo Tikki</li>
+  <li>Samosa</li>
+  <li>Mixed chaat</li>
+</ul>
+
+<p>Pani Puri combines crisp shells with potato, chickpeas, mint, tamarind and tangy water, while chaat dishes bring together sweet, sour, spicy and savoury flavours. These options are particularly useful for groups because guests can share several starters before ordering their main courses.</p>
+
+<h2>Tandoori Food Near Rijswijk: Fresh From the Clay Oven</h2>
+
+<p>If you are searching for <a href="https://chopras.nl/tandoori-den-haag">tandoori food near Rijswijk</a>, the tandoori section at Chopras Indian Restaurant is worth exploring.</p>
+
+<p>The restaurant uses a traditional clay tandoor that reaches around 400&deg;C, helping create the characteristic smoky flavour and lightly charred texture associated with tandoori cooking.</p>
+
+<p>Popular examples from the menu include:</p>
+<ul>
+  <li>Tandoori Chicken</li>
+  <li>Chicken Tikka</li>
+  <li>Chicken Malai Tikka</li>
+  <li>Chicken Hariyali Tikka</li>
+  <li>Chicken Lasooni Tikka</li>
+  <li>Seekh Kebab</li>
+  <li>Chicken Seekh Kebab</li>
+  <li>Lamb Seekh Kebab</li>
+  <li>Paneer Tikka</li>
+  <li>Malai Soya Chaap</li>
+  <li>Chopras Non-Veg Platter</li>
+</ul>
+
+<p>For vegetarian diners, Paneer Tikka and Malai Soya Chaap offer a tandoori-style option, while meat lovers can explore Chicken Tikka, Tandoori Chicken, Seekh Kebab and the Chopras Non-Veg Platter.</p>
+
+<h2>Biryani, Curries and Indian Comfort Food</h2>
+
+<p>A good Indian restaurant should offer more than one type of curry. At Chopras Indian Restaurant, the menu includes popular North Indian dishes such as:</p>
+
+<h3>Biryani</h3>
+<ul>
+  <li>Prawn Biryani</li>
+  <li>Lamb Biryani</li>
+  <li>Veg Biryani</li>
+  <li><a href="https://chopras.nl/biryani-den-haag">Chicken Biryani</a></li>
+</ul>
+
+<h3>Indian Comfort Food</h3>
+<ul>
+  <li><a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a></li>
+  <li>Chicken Tikka Masala</li>
+  <li>Chicken Karahi</li>
+  <li>Chicken Korma</li>
+  <li><a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+  <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+  <li>Dal Tadka</li>
+  <li>Rajma Masala</li>
+  <li>Chana Masala</li>
+  <li>Palak Paneer</li>
+  <li>Paneer Butter Masala</li>
+</ul>
+
+<p>Butter Chicken is a popular choice for diners who prefer a rich and creamy curry, while Mutton Rogan Josh offers a deeper, aromatic flavour. <a href="https://chopras.nl/biryani-den-haag">Biryani</a> is another popular choice when you want a complete rice-based Indian meal.</p>
+
+<h2>Vegetarian Indian Food Near Rijswijk</h2>
+
+<p>If you are looking for a <a href="https://chopras.nl/vegetarian-menu">vegetarian Indian restaurant near Rijswijk</a>, you do not have to settle for one or two basic options.</p>
+
+<p>Chopras Indian Restaurant has a wide selection of vegetarian dishes, including Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Palak Paneer, Paneer Butter Masala, Vegetable Biryani and Soya Chaap.</p>
+
+<p>Indian cuisine naturally offers a wide range of vegetarian meals, from lentils and vegetables to paneer and tandoori dishes. The menu clearly identifies vegetarian choices so guests can select dishes according to their preferences.</p>
+
+<h2>Vegan Indian Food Near Me</h2>
+
+<p>For people searching for <a href="https://chopras.nl/vegan-menu">vegan Indian food near Rijswijk</a>, Indian cuisine offers plenty of naturally plant-based possibilities.</p>
+
+<p>Chopras Indian Restaurant marks vegan options on its menu. Vegan diners should clearly mention that they require vegan preparation when ordering because dishes are not automatically prepared vegan by default.</p>
+
+<p>This makes the restaurant suitable for groups where different people have different dietary preferences.</p>
+
+<h2>Gluten-Free Indian Food Near Rijswijk</h2>
+
+<p>Finding <a href="https://chopras.nl/gluten-free-menu">gluten-free Indian food near me</a> can be important when dining with friends or family who have dietary restrictions.</p>
+
+<p>Chopras Indian Restaurant provides gluten-free options, including dishes such as Dal Tadka, Mutton Rogan Josh, Aloo Gobi, Bhindi Masala and Chana Masala. Guests should clearly tell the restaurant team that they require gluten-free preparation when ordering because dishes are not prepared gluten-free by default.</p>
+
+<p>For people with allergies or strict dietary requirements, it is always best to discuss ingredients and preparation with the restaurant before ordering.</p>
+
+<h2>Halal Indian Food Near Rijswijk</h2>
+
+<p>For diners searching for a <a href="https://chopras.nl/halal-menu">halal Indian restaurant near Rijswijk</a>, Chopras Indian Restaurant provides a fully halal-certified menu. The restaurant states that every meat dish and supplier is halal certified.</p>
+
+<p>This can make group dining easier when guests have different dietary requirements or when halal food is an important consideration.</p>
+
+<h2>A Feestzaal in Den Haag for Special Events</h2>
+
+<p>Chopras Indian Restaurant is not only a destination for everyday dining. It also has a private <a href="https://chopras.nl/feestzaal-den-haag">feestzaal in Den Haag</a> for celebrations and group events.</p>
+
+<p>The private event hall at Leyweg 986 can accommodate approximately 25 to 50 guests (up to 80 guests for receptions), with Indian catering provided by the Chopras kitchen. The space can be arranged for different event formats, including seated dinners, standing receptions and mixed arrangements.</p>
+
+<h2>Festivals and Cultural Celebrations</h2>
+
+<p>Diwali, Holi, Navratri, Garba, Eid, Christmas, New Year and Independence Day, along with important Dutch holidays and festive occasions such as Goede Vrijdag (Good Friday), Eerste Paasdag (Easter Sunday), Tweede Paasdag (Easter Monday), Koningsdag (King's Day), Bevrijdingsdag (Liberation Day), Hemelvaartsdag (Ascension Day), Eerste Pinksterdag (Whit Sunday), Tweede Pinksterdag (Whit Monday), Eerste Kerstdag (Christmas Day) and Tweede Kerstdag (Boxing Day), are among the festive and cultural occasions highlighted by Chopras Indian Restaurant.</p>
+
+<h2>Plan Your Indian Food Experience in Den Haag</h2>
+
+<p>Whether you are coming from Rijswijk, visiting Scheveningen, walking along Keizerstraat, spending time on the Boulevard or Beach, visiting the Pier or Kurhaus, exploring Duindorp, or enjoying a family day at Madurodam, food can be an important part of the experience.</p>
+
+<p>For anyone searching &ldquo;Indian restaurant near me Rijswijk&rdquo;, &ldquo;Indian food near me&rdquo;, &ldquo;Indian restaurant near Rijswijk&rdquo; or &ldquo;authentic Indian food near Rijswijk&rdquo;, Chopras Indian Restaurant offers a broad menu that combines North Indian cuisine, tandoori cooking, Indian street food, vegetarian and vegan choices, gluten-free options and halal food.</p>
+
+<p>For a special celebration, the feestzaal and <a href="https://chopras.nl/catering">catering service</a> provide another way to enjoy Chopras Indian Restaurant with family, friends, colleagues or a larger group.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br />
+Leyweg 986, 2545 GW Den Haag, Netherlands<br />
+Open Tuesday to Sunday, 16:30&ndash;22:30.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Where can I find an Indian restaurant near Rijswijk?</h3>
+<p>Chopras Indian Restaurant is located at Leyweg 986, Den Haag, just across the Rijswijk border. The restaurant offers authentic North Indian food, tandoori dishes, biryani, Indian street food, vegetarian, vegan, gluten-free and halal options.</p>
+
+<h3>What Indian food can I try near Rijswijk?</h3>
+<p>You can try Indian street food such as Pani Puri, Samosa Chaat and Papdi Chaat, tandoori dishes such as Chicken Tikka and Tandoori Chicken, and main courses such as Butter Chicken, Mutton Rogan Josh, Dal Makhani and Chicken Biryani.</p>
+
+<h3>Does Chopras Indian Restaurant offer vegetarian Indian food?</h3>
+<p>Yes. The menu includes vegetarian dishes such as Paneer Tikka, Dal Makhani, Chana Masala, Aloo Gobi, Palak Paneer and Vegetable Biryani.</p>
+
+<h3>What does &ldquo;feestzaal huren Den Haag&rdquo; mean?</h3>
+<p>&ldquo;Feestzaal huren Den Haag&rdquo; means renting a party or event venue in Den Haag. Chopras Indian Restaurant offers a private event hall for approximately 25&ndash;80 guests, combined with authentic Indian catering.</p>
+
+<h2>Plan Your Next Indian Food Experience</h2>
+
+<p>Whether you are visiting from Rijswijk or exploring Scheveningen, Keizerstraat, the Boulevard, Beach, Pier, Kurhaus, Duindorp or Madurodam, Chopras Indian Restaurant offers authentic Indian cuisine with halal, vegetarian, vegan and gluten-free options. From tandoori specialities and biryani to Indian street food and private events, there is something for every occasion.</p>
+`,
+    contentNl: `
+<img src="/images/blog/11oct.png" alt="Indiaas Restaurant Bij Mij in de Buurt in Rijswijk: Authentiek Indiaas Eten" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Zoeken naar een <strong>Indiaas restaurant bij mij in de buurt in Rijswijk</strong> betekent vaak meer dan alleen een handige plek om te eten. Liefhebbers van goed eten zoeken naar authentieke smaken, vers bereide gerechten, halal opties, vegetarische en veganistische keuzes, en een restaurant dat geschikt is voor zowel een ontspannen diner als een speciale viering.</p>
+
+<p>Voor gasten in Rijswijk die op zoek zijn naar authentiek Indiaas eten dichtbij, is <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> aan de Leyweg 986 in Den Haag een ideale optie, vlak over de gemeentegrens van Rijswijk. Het restaurant serveert de Noord-Indiase keuken, Indiaas streetfood, tandoori gerechten, biryani, vegetarisch en veganistisch eten, glutenvrije opties en een volledig halal-gecertificeerd menu.</p>
+
+<p>Of u nu komt vanuit Rijswijk Centrum, Den Haag verkent, of de dag doorbrengt rond Scheveningen, Keizerstraat, de Boulevard, het Scheveningse strand, de Pier, het Kurhaus, Duindorp of Madurodam: Chopras Indian Restaurant biedt de perfecte plek om na uw dagje uit te genieten van een complete Indiase maaltijd.</p>
+
+<h2>Indiaas Restaurant Nabij Rijswijk: Waarom Locatie Belangrijk Is</h2>
+
+<p>Rijswijk en Den Haag zijn nauw met elkaar verbonden, waardoor het voor inwoners van Rijswijk heel eenvoudig is om naar Den Haag te reizen voor een heerlijk diner. Chopras Indian Restaurant bevindt zich aan de Leyweg 986, 2545 GW Den Haag, gunstig gelegen aan de Rijswijkse kant van de stad.</p>
+
+<p>Voor mensen die online zoeken naar &ldquo;Indiaas restaurant in de buurt van Rijswijk&rdquo;, &ldquo;Indiaas eten bij mij in de buurt Rijswijk&rdquo; of &ldquo;authentiek Indiaas restaurant in de buurt&rdquo;, is locatie slechts een deel van de overweging. Het eten, de variatie op de menukaart en de dieetkeuzes zijn minstens zo belangrijk.</p>
+
+<p>Chopras Indian Restaurant biedt een brede <a href="https://chopras.nl/nl/menu">menukaart</a> met Indiaas streetfood, tandoori specialiteiten, curry's, biryani, Indiase broden, vegetarische gerechten en Indo-Chinese favorieten. Het huidige menu telt 144 gerechten verdeeld over 13 categorieën, waarbij vegetarische, veganistische, glutenvrije en halal keuzes duidelijk zijn aangegeven.</p>
+
+<h2>Wat Maakt Indiaas Eten Bij Chopras Indian Restaurant Anders?</h2>
+
+<p>De authentieke Indiase keuken draait om de perfecte balans van specerijen, kooktechnieken en verse ingrediënten. Bij Chopras Indian Restaurant worden specerijen rechtstreeks uit India geïmporteerd en dagelijks vers gemalen, terwijl de gerechten worden bereid volgens traditionele Indiase kookmethoden.</p>
+
+<p>Het menu bevat vertrouwde klassiekers en gerechten voor fijnproevers die verschillende regionale smaken willen ontdekken. U kunt beginnen met Indiaas streetfood, vervolgen met een tandoori gerecht of curry, en afsluiten met geurige rijst, versgebakken naan en een traditioneel Indiaas dessert.</p>
+
+<p>Voor wie zoekt naar Indiaas eten bij mij in de buurt in Rijswijk, maakt deze veelzijdigheid het eenvoudig om een maaltijd samen te stellen die precies aansluit bij uw smaak.</p>
+
+<h2>Must-Try Indiaas Streetfood</h2>
+
+<p>Indiaas streetfood is een van de leukste manieren om verschillende texturen en intense smaken in één maaltijd te ervaren.</p>
+
+<p>Bij Chopras Indian Restaurant kunnen gasten genieten van <a href="https://chopras.nl/nl/chaat-den-haag">streetfood gerechten</a> zoals:</p>
+<ul>
+  <li><a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a></li>
+  <li>Samosa Chaat</li>
+  <li>Dahi Puri</li>
+  <li>Papdi Chaat</li>
+  <li>Aloo Tikki</li>
+  <li>Samosa</li>
+  <li>Mixed Chaat</li>
+</ul>
+
+<p>Pani Puri combineert knapperige deegbolletjes met aardappel, kikkererwten, munt, tamarinde en fris gekruid water, terwijl chaat-gerechten zoete, zure, pittige en hartige smaken harmonieus samenbrengen. Deze gerechten zijn bijzonder geschikt voor gezelschappen, omdat gasten verschillende voorgerechten kunnen delen alvorens over te gaan naar het hoofdgerecht.</p>
+
+<h2>Tandoori Eten Nabij Rijswijk: Vers Uit de Klei-Oven</h2>
+
+<p>Als u op zoek bent naar <a href="https://chopras.nl/nl/tandoori-den-haag">tandoori gerechten</a> nabij Rijswijk, is de tandoori-sectie bij Chopras Indian Restaurant absoluut het ontdekken waard.</p>
+
+<p>Het restaurant maakt gebruik van een traditionele klei-tandoor die temperaturen tot circa 400&deg;C bereikt. Dit zorgt voor de karakteristieke rokerige smaak en de licht geschroeide textuur die tandoori bereidingen zo bijzonder maakt.</p>
+
+<p>Populaire gerechten op het menu zijn onder andere:</p>
+<ul>
+  <li>Tandoori Chicken</li>
+  <li>Chicken Tikka</li>
+  <li>Chicken Malai Tikka</li>
+  <li>Chicken Hariyali Tikka</li>
+  <li>Chicken Lasooni Tikka</li>
+  <li>Seekh Kebab</li>
+  <li>Chicken Seekh Kebab</li>
+  <li>Lamb Seekh Kebab</li>
+  <li>Paneer Tikka</li>
+  <li>Malai Soya Chaap</li>
+  <li>Chopras Non-Veg Platter</li>
+</ul>
+
+<p>Voor vegetarische gasten bieden Paneer Tikka en Malai Soya Chaap een verrukkelijke tandoori-optie, terwijl vleesliefhebbers kunnen genieten van Chicken Tikka, Tandoori Chicken, Seekh Kebab en de rijkgevulde Chopras Non-Veg Platter.</p>
+
+<h2>Biryani, Curry's en Indiaas Comfort Food</h2>
+
+<p>Een goed Indiaas restaurant hoort meer te bieden dan slechts één type curry. Bij Chopras Indian Restaurant bevat het menu geliefde Noord-Indiase specialiteiten:</p>
+
+<h3>Biryani</h3>
+<ul>
+  <li>Prawn Biryani</li>
+  <li>Lamb Biryani</li>
+  <li>Veg Biryani</li>
+  <li><a href="https://chopras.nl/nl/biryani-den-haag">Chicken Biryani</a></li>
+</ul>
+
+<h3>Indiaas Comfort Food</h3>
+<ul>
+  <li><a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a></li>
+  <li>Chicken Tikka Masala</li>
+  <li>Chicken Karahi</li>
+  <li>Chicken Korma</li>
+  <li><a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+  <li><a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a></li>
+  <li>Dal Tadka</li>
+  <li>Rajma Masala</li>
+  <li>Chana Masala</li>
+  <li>Palak Paneer</li>
+  <li>Paneer Butter Masala</li>
+</ul>
+
+<p>Butter Chicken is een favoriet bij gasten die houden van een rijke, romige curry, terwijl Mutton Rogan Josh een diepere, aromatische smaak biedt. <a href="https://chopras.nl/nl/biryani-den-haag">Biryani</a> is een fantastische keuze wanneer u zin heeft in een complete, geurige rijstmaaltijd.</p>
+
+<h2>Vegetarisch Indiaas Eten Nabij Rijswijk</h2>
+
+<p>Zoekt u een <a href="https://chopras.nl/nl/vegetarian-menu">vegetarisch Indiaas restaurant</a> nabij Rijswijk, dan hoeft u geen genoegen te nemen met slechts een of twee basisopties.</p>
+
+<p>Chopras Indian Restaurant heeft een ruime keuze aan vegetarische gerechten, waaronder Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Palak Paneer, Paneer Butter Masala, Vegetable Biryani en Soya Chaap.</p>
+
+<p>De Indiase keuken biedt van nature een rijk scala aan vegetarische gerechten, van linzen en seizoensgroenten tot paneer en tandoori gerechten. De menukaart geeft vegetarische keuzes helder aan, zodat gasten moeiteloos gerechten naar hun smaak kunnen selecteren.</p>
+
+<h2>Veganistisch Indiaas Eten Bij Mij in de Buurt</h2>
+
+<p>Voor wie zoekt naar <a href="https://chopras.nl/nl/vegan-menu">veganistisch Indiaas eten</a> nabij Rijswijk, biedt de Indiase eetcultuur talloze van nature plantaardige mogelijkheden.</p>
+
+<p>Chopras Indian Restaurant markeert veganistische opties duidelijk op de kaart. Veganistische gasten dienen bij het bestellen nadrukkelijk te vermelden dat zij een veganistische bereiding wensen, omdat gerechten niet standaard volledig vegan worden bereid.</p>
+
+<p>Dit maakt het restaurant uitermate geschikt voor groepen waarin gasten uiteenlopende dieetwensen hebben.</p>
+
+<h2>Glutenvrij Indiaas Eten Nabij Rijswijk</h2>
+
+<p>Het vinden van <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrij Indiaas eten</a> in de buurt is essentieel wanneer u dineert met vrienden of familie met voedselintoleranties.</p>
+
+<p>Chopras Indian Restaurant biedt glutenvrije opties, waaronder gerechten zoals Dal Tadka, Mutton Rogan Josh, Aloo Gobi, Bhindi Masala en Chana Masala. Gasten dienen het serviceteam bij bestelling duidelijk te informeren over een glutenvrije bereiding, omdat gerechten niet standaard als glutenvrij worden voorbereid.</p>
+
+<p>Bij allergieën of strikte dieetvereisten is het altijd verstandig om ingrediënten en bereidingswijzen vooraf met het restaurantteam af te stemmen.</p>
+
+<h2>Halal Indiaas Eten Nabij Rijswijk</h2>
+
+<p>Voor wie zoekt naar een <a href="https://chopras.nl/nl/halal-menu">halal Indiaas restaurant</a> nabij Rijswijk, biedt Chopras Indian Restaurant een volledig halal-gecertificeerd menu. Het restaurant bevestigt dat elk vleesgerecht en iedere vleesleverancier halal-gecertificeerd is.</p>
+
+<p>Dit zorgt voor zorgeloos dineren met gezelschappen waarin halal eten een belangrijke voorwaarde is.</p>
+
+<h2>Een Feestzaal in Den Haag voor Speciale Evenementen</h2>
+
+<p>Chopras Indian Restaurant is niet alleen een bestemming voor het dagelijkse diner. Het beschikt tevens over een exclusieve <a href="https://chopras.nl/nl/feestzaal-den-haag">feestzaal in Den Haag</a> voor vieringen en groepsevenementen.</p>
+
+<p>De sfeervolle zaal aan de Leyweg 986 biedt plaats aan ongeveer 25 tot 50 gasten (tot 80 personen in receptie-opstelling), compleet verzorgd met Indiase catering vanuit de Chopras-keuken. De ruimte kan worden ingericht voor zittende diners, walking dinners en feestelijke recepties.</p>
+
+<h2>Festivals en Culturele Vieringen</h2>
+
+<p>Diwali, Holi, Navratri, Garba, Eid, Kerstmis, Oud en Nieuw en Onafhankelijkheidsdag, samen met belangrijke Nederlandse feestdagen zoals Goede Vrijdag, Eerste Paasdag, Tweede Paasdag, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Eerste Pinksterdag, Tweede Pinksterdag, Eerste Kerstdag en Tweede Kerstdag, behoren tot de feestelijke en culturele gelegenheden die Chopras Indian Restaurant feestelijk viert.</p>
+
+<h2>Plan Uw Indiase Dinerervaring in Den Haag</h2>
+
+<p>Of u nu komt vanuit Rijswijk, Scheveningen bezoekt, wandelt over de Keizerstraat, ontspant aan de Boulevard of het strand, een bezoek brengt aan de Pier of het Kurhaus, Duindorp ontdekt, of geniet van een gezinsuitje bij Madurodam: lekker eten maakt uw dag compleet.</p>
+
+<p>Voor iedereen die zoekt naar &ldquo;Indiaas restaurant bij mij in de buurt Rijswijk&rdquo;, &ldquo;Indiaas eten bij mij in de buurt&rdquo;, &ldquo;Indiaas restaurant nabij Rijswijk&rdquo; of &ldquo;authentiek Indiaas eten nabij Rijswijk&rdquo;, biedt Chopras Indian Restaurant een gevarieerd menu met de Noord-Indiase keuken, tandoori gerechten, streetfood, vegetarische en veganistische keuzes, glutenvrije gerechten en 100% halal vlees.</p>
+
+<p>Voor speciale evenementen bieden de feestzaal en <a href="https://chopras.nl/nl/catering">cateringservice</a> de perfecte gelegenheid om samen met familie, vrienden of collega's te genieten.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br />
+Leyweg 986, 2545 GW Den Haag, Nederland<br />
+Geopend van dinsdag tot en met zondag, 16:30 &ndash; 22:30.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Waar kan ik een Indiaas restaurant bij Rijswijk vinden?</h3>
+<p>Chopras Indian Restaurant is gevestigd aan de Leyweg 986 in Den Haag, net over de gemeentegrens van Rijswijk. Het restaurant biedt authentiek Noord-Indiaas eten, tandoori gerechten, biryani, Indiaas streetfood, vegetarische, veganistische, glutenvrije en halal opties.</p>
+
+<h3>Welk Indiaas eten kan ik proberen nabij Rijswijk?</h3>
+<p>U kunt Indiaas streetfood proberen zoals Pani Puri, Samosa Chaat en Papdi Chaat, tandoori gerechten zoals Chicken Tikka en Tandoori Chicken, en hoofdgerechten zoals Butter Chicken, Mutton Rogan Josh, Dal Makhani en Chicken Biryani.</p>
+
+<h3>Biedt Chopras Indian Restaurant vegetarisch Indiaas eten aan?</h3>
+<p>Ja. Het menu bevat vegetarische gerechten zoals Paneer Tikka, Dal Makhani, Chana Masala, Aloo Gobi, Palak Paneer en Vegetable Biryani.</p>
+
+<h3>Wat betekent &ldquo;feestzaal huren Den Haag&rdquo;?</h3>
+<p>&ldquo;Feestzaal huren Den Haag&rdquo; betekent het huren van een feest- of evenementenlocatie in Den Haag. Chopras Indian Restaurant biedt een priv&eacute; feestzaal voor circa 25 tot 80 gasten, gecombineerd met authentieke Indiase catering.</p>
+
+<h2>Plan Uw Volgende Indiase Eetervaring</h2>
+
+<p>Of u nu op bezoek komt vanuit Rijswijk of Scheveningen, Keizerstraat, de Boulevard, het strand, de Pier, het Kurhaus, Duindorp of Madurodam ontdekt: Chopras Indian Restaurant biedt de authentieke Indiase keuken met halal, vegetarische, veganistische en glutenvrije opties. Van tandoori specialiteiten en biryani tot Indiaas streetfood en priv&eacute;-evenementen: er is voor ieder wat wils.</p>
+`
+  },
+  {
     slug: "indiaas-restaurant-den-haag-where-can-you-find-authentiek-indiaas-eten-in-den-haag",
     title: "Indiaas Restaurant Den Haag: Where Can You Find Authentiek Indiaas Eten in Den Haag?",
     metaTitle: "Indiaas Restaurant Den Haag: Where Can You Find Authentiek Indiaas Eten in Den Haag? | Chopras",
