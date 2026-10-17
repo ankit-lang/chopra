@@ -58,6 +58,8 @@ const staticPages: SitemapPage[] = [
   { slug: 'halal-food-in-den-haag-a-complete-guide-to-authentic-halal-indian-cuisine', lastMod: '2026-10-03', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indiaas-restaurant-den-haag-where-can-you-find-authentiek-indiaas-eten-in-den-haag', lastMod: '2026-10-06', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-restaurant-near-me-in-rijswijk-authentic-indian-food', lastMod: '2026-10-11', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal', lastMod: '2026-10-18', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'best-indian-restaurant-near-den-haag-centraal', lastMod: '2026-10-18', priority: 0.8, changeFreq: 'weekly' },
 
   // Location pages
   { slug: 'indian-restaurant-delft', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },

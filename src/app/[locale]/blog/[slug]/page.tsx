@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+  const post = blogPosts.find((p) => p.slug === params.slug || (params.slug === 'best-indian-restaurant-near-den-haag-centraal' && p.slug === 'how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal'))
   if (!post) return {}
   const { locale } = params
   const title = (locale === 'nl' && post.metaTitleNl) || post.metaTitle
@@ -75,7 +75,7 @@ function localizeInternalLinks(html: string, locale: Locale): string {
 
 export default function LocaleBlogPostPage({ params }: Props) {
   const { locale, slug } = params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPosts.find((p) => p.slug === slug || (slug === 'best-indian-restaurant-near-den-haag-centraal' && p.slug === 'how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal'))
   if (!post) notFound()
 
   const tr = getTranslations(locale)
