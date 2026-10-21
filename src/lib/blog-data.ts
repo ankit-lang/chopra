@@ -2,6 +2,189 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "indian-restaurant-near-thomsonplein-den-haag",
+    title: "Indian Restaurant Near Thomsonplein Den Haag",
+    metaTitle: "Indian Restaurant Near Thomsonplein Den Haag | Chopras",
+    metaDescription: "Find Chopras Indian Restaurant near Thomsonplein Den Haag for authentic Indian food, family dinners, takeaway, tandoori dishes and event catering.",
+    h1: "Indian Restaurant Near Thomsonplein Den Haag for Family Dinners, Takeaway and Catering",
+    primaryKeyword: "Indian restaurant near Thomsonplein",
+    keywords: [
+      "Indian restaurant near Thomsonplein",
+      "Indian restaurant near Thomsonlaan",
+      "Indian food Thomsonlaan Den Haag",
+      "Indian restaurant near Thomsonlaan Den Haag"
+    ],
+    
+    titleNl: "Indiaas Restaurant Nabij Thomsonplein Den Haag",
+    metaTitleNl: "Indiaas Restaurant Nabij Thomsonplein Den Haag | Chopras",
+    metaDescriptionNl: "Vind Chopras Indian Restaurant nabij Thomsonplein Den Haag voor authentiek Indiaas eten, familiediners, afhaal, tandoori gerechten en event catering.",
+    h1Nl: "Indiaas Restaurant Nabij Thomsonplein Den Haag voor Familiediners, Afhalen en Catering",
+    primaryKeywordNl: "Indiaas restaurant nabij Thomsonplein",
+    excerptNl: "Op zoek naar een Indiaas restaurant nabij het Thomsonplein in Den Haag voor een gezellig familiediner, een ontspannen avond of een speciale viering? Chopras Indian Restaurant biedt authentiek Noord-Indiaas eten, tandoori specialiteiten, biryani en catering dichtbij de Thomsonlaan en het Thomsonplein.",
+    language: 'en' as const,
+    publishedAt: "2026-10-21",
+    readingTime: 6,
+    author: "Arun Chopra",
+    image: "/images/blog/21oct.png",
+    excerpt: "Looking for an Indian restaurant near Thomsonplein Den Haag for a family dinner, a relaxed evening with friends or a special celebration? Chopras Indian Restaurant offers a welcoming dining experience with North Indian dishes, tandoori specialities, biryani and event catering close to Thomsonlaan and Thomsonplein.",
+    faqs: [
+      {
+        question: "Where can I find an Indian restaurant near Thomsonplein Den Haag?",
+        answer: "Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag. You can explore the menu online and check the route from Thomsonplein before visiting. The restaurant is not located at Thomsonplein itself, so check the distance and travel time when planning your visit."
+      },
+      {
+        question: "Does Chopras Indian Restaurant offer vegan, vegetarian and gluten-free options?",
+        answer: "Yes, the restaurant lists vegetarian, vegan and gluten-free options. Confirm ingredients and preparation requirements directly with the restaurant, particularly if you have a food allergy or require strict gluten-free preparation."
+      },
+      {
+        question: "Which tandoori dishes can I order?",
+        answer: "Menu examples include Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Paneer Tikka and Seekh Kebab varieties. Availability may vary, so consult the current menu before ordering."
+      },
+      {
+        question: "Can I book a private event hall in Den Haag?",
+        answer: "Chopras Indian Restaurant offers a private event hall for 25–80 guests. Contact the restaurant to confirm availability, event packages and catering arrangements."
+      },
+      {
+        question: "Does Chopras Indian Restaurant offer Indian catering in Den Haag?",
+        answer: "Yes, Chopras Indian Restaurant offers Indian catering for occasions such as weddings, birthday parties, baby showers, corporate dinners and Diwali/ Eid/ Christmas celebrations. Catering is available for events at the restaurant and other venues, subject to confirmation of the event requirements. Contact the restaurant for a tailored quotation."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Waar vind ik een Indiaas restaurant nabij Thomsonplein Den Haag?",
+        answer: "Chopras Indian Restaurant is gevestigd aan de Leyweg 986, 2545 GW Den Haag. U kunt het menu online bekijken en de route vanaf het Thomsonplein controleren vóór uw bezoek. Het restaurant bevindt zich niet direct op het Thomsonplein zelf; controleer daarom de afstand en reistijd bij het plannen van uw bezoek."
+      },
+      {
+        question: "Biedt Chopras Indian Restaurant veganistische, vegetarische en glutenvrije opties?",
+        answer: "Ja, het restaurant biedt vegetarische, veganistische en glutenvrije keuzes. Stem ingrediënten en bereidingswijzen direct af met het restaurant, zeker als u een voedselallergie heeft of een strikt glutenvrije bereiding nodig heeft."
+      },
+      {
+        question: "Welke tandoori gerechten kan ik bestellen?",
+        answer: "Voorbeelden op het menu zijn Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Paneer Tikka en diverse Seekh Kebab varianten. De beschikbaarheid kan variëren, raadpleeg daarom de actuele menukaart voor het bestellen."
+      },
+      {
+        question: "Kan ik een privé feestzaal boeken in Den Haag?",
+        answer: "Chopras Indian Restaurant biedt een privé feestzaal voor 25 tot 80 gasten. Neem contact op met het restaurant om beschikbaarheid, feestarrangementen en catering te bespreken."
+      },
+      {
+        question: "Biedt Chopras Indian Restaurant Indiase catering in Den Haag?",
+        answer: "Ja, Chopras Indian Restaurant biedt Indiase catering voor gelegenheden zoals bruiloften, verjaardagsfeesten, babyshowers, zakelijke diners en vieringen rondom Diwali, Eid en Kerstmis. Catering is mogelijk in het restaurant en op externe locaties, afhankelijk van de vereisten van uw evenement. Neem contact op met het restaurant voor een offerte op maat."
+      }
+    ],
+    content: `
+<img src="/images/blog/21oct.png" alt="Indian Restaurant Near Thomsonplein Den Haag | Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Looking for an <strong>Indian restaurant near Thomsonplein Den Haag</strong> for a family dinner, a relaxed evening with friends or a special celebration? <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a welcoming dining experience with a diverse selection of North Indian dishes, tandoori specialities, biryani and traditional Indian desserts. Whether you prefer dining in, ordering takeaway for a cosy evening at home or arranging catering for a gathering, the menu includes options for different tastes and dietary preferences. With vegetarian, vegan and gluten-free choices, Chopras Indian Restaurant is an option for guests planning meals and celebrations in The Hague. If you are travelling from Thomsonplein or Thomsonlaan, check the route and travel time before visiting.</p>
+
+<h2>Traditional Indian Food Near Thomsonlaan Den Haag</h2>
+
+<p>If you are searching for <strong>Indian food Thomsonlaan Den Haag</strong>, <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a variety of traditional Indian recipes prepared with aromatic spices and familiar regional flavours. The menu brings together rich curries, grilled tandoori dishes, rice specialities, Indian breads and popular starters, giving families and groups plenty of options to choose from. You can enjoy favourites such as <a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a>, <a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, Chicken Tikka Masala, <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a> and Paneer Butter Masala with Naan or Roti, or explore different dishes including the Indian Street Food (<a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Samosa, Aloo Tikki, <a href="https://chopras.nl/chaat-den-haag">Papdi Chaat</a>) to share at the table. For anyone looking for an <strong>Indian restaurant near Thomsonlaan Den Haag</strong>, browsing the <a href="https://chopras.nl/menu">menu</a> in advance makes it easier to plan a meal that suits your preferences.</p>
+
+<h2>Tandoori Dishes, Biryani and Indian Desserts</h2>
+
+<p><a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a selection of <a href="https://chopras.nl/tandoori-den-haag">tandoori specialities</a> for guests who enjoy Indian grilled dishes. Examples include Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Chicken Hariyali Tikka, Paneer Tikka, Malai Soya Chaap, Achari Soya Chaap, Lamb Seekh Kebab and Chicken Seekh Kebab, subject to current menu availability.</p>
+
+<p>Biryani options include <a href="https://chopras.nl/biryani-den-haag">Chicken Biryani</a>, Lamb Biryani, Veg Biryani and Prawn Biryani. Guests can also explore traditional Indian desserts such as Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa and different varieties of kulfi (Mango, Pistache, Coconut, Malai Kulfi etc).</p>
+
+<h2>Vegan, Vegetarian and Gluten-Free Indian Food</h2>
+
+<p>Finding suitable food for everyone is important when planning a family meal. Chopras Indian Restaurant offers <a href="https://chopras.nl/vegetarian-menu">vegetarian dishes</a>, <a href="https://chopras.nl/vegan-menu">vegan options</a> and <a href="https://chopras.nl/gluten-free-menu">gluten-free choices</a>. Popular menu options include Chana Masala, Aloo Gobi, and other vegetable- and lentil-based dishes (<a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a>, Dal Tadka), alongside vegetarian specialities such as Paneer Tikka and Veg Biryani. Check the current menu for dishes suitable for your specific dietary requirements.</p>
+
+<p>Guests with specific dietary requirements should confirm ingredients and preparation methods when ordering, especially for vegan meals and gluten-free food. The restaurant states that its kitchen is fully <a href="https://chopras.nl/halal-food-den-haag">halal certified</a> and that its meat dishes are halal certified.</p>
+
+<h2>Private Event Hall and Indian Catering in Den Haag</h2>
+
+<p>Planning a birthday, wedding, anniversary or corporate gathering? Chopras Indian Restaurant offers a <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a> that accommodates 25–80 guests, along with <a href="https://chopras.nl/catering">catering services</a> for special occasions.</p>
+
+<p>The venue can be considered for weddings, engagement parties, Nikah receptions, birthdays, anniversaries, baby showers, family reunions, corporate dinners, networking events, workshops and private celebrations. Guests can also enquire about arrangements for Indian festivals such as Diwali, Holi, Navratri and Eid, as well as Dutch holidays including Koningsdag, Easter and Christmas.</p>
+
+<p>For those looking for an Indian restaurant near Thomsonplein Den Haag that also offers event options, Chopras Indian Restaurant provides a place to discuss food, guest numbers and suitable arrangements. Outside catering is also offered for events at other venues, subject to confirmation.</p>
+
+<h2>Family Dinners, Takeaway and Delivery</h2>
+
+<p>Whether you want to dine with family or enjoy Indian food at home, Chopras Indian Restaurant offers different ways to plan your meal. Guests can explore curries, tandoori dishes, biryani, Indian breads and vegetarian options for their preferred occasion.</p>
+
+<p>If you are comparing options for an <strong>Indian restaurant near Thomsonlaan</strong>, check the online menu, current ordering options and travel arrangements before placing an order or visiting. The restaurant's official website provides access to its menu and online <a href="https://chopras.nl/indian-takeaway-den-haag">takeaway ordering</a>. <a href="https://chopras.nl/indian-food-delivery-den-haag">Delivery availability</a> should be checked when ordering.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Where can I find an Indian restaurant near Thomsonplein Den Haag?</h3>
+<p>Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag. You can explore the menu online and check the route from Thomsonplein before visiting. The restaurant is not located at Thomsonplein itself, so check the distance and travel time when planning your visit.</p>
+
+<h3>Does Chopras Indian Restaurant offer vegan, vegetarian and gluten-free options?</h3>
+<p>Yes, the restaurant lists vegetarian, vegan and gluten-free options. Confirm ingredients and preparation requirements directly with the restaurant, particularly if you have a food allergy or require strict gluten-free preparation.</p>
+
+<h3>Which tandoori dishes can I order?</h3>
+<p>Menu examples include Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Paneer Tikka and Seekh Kebab varieties. Availability may vary, so consult the current menu before ordering.</p>
+
+<h3>Can I book a private event hall in Den Haag?</h3>
+<p>Chopras Indian Restaurant offers a private event hall for 25–80 guests. Contact the restaurant to confirm availability, event packages and catering arrangements.</p>
+
+<h3>Does Chopras Indian Restaurant offer Indian catering in Den Haag?</h3>
+<p>Yes, Chopras Indian Restaurant offers Indian catering for occasions such as weddings, birthday parties, baby showers, corporate dinners and Diwali/ Eid/ Christmas celebrations. Catering is available for events at the restaurant and other venues, subject to confirmation of the event requirements. Contact the restaurant for a tailored quotation.</p>
+
+<h2>Plan Your Visit to Chopras Indian Restaurant</h2>
+
+<p>Whether you are planning a family dinner, looking for Indian takeaway or organising a special celebration, Chopras Indian Restaurant offers a variety of dining and catering options to explore. From flavourful curries and tandoori specialities to biryani, Indian desserts and vegetarian, vegan and gluten-free choices, the menu caters to different tastes and preferences. Guests can also enquire about private event arrangements for birthdays, weddings, baby showers, anniversaries, corporate gatherings and festive occasions. If you are searching for an Indian restaurant near Thomsonplein or Thomsonlaan Den Haag, explore the menu, check the available services and contact Chopras Indian Restaurant to plan your next meal or special event.</p>
+`,
+    contentNl: `
+<img src="/images/blog/21oct.png" alt="Indiaas Restaurant Nabij Thomsonplein Den Haag | Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Op zoek naar een <strong>Indiaas restaurant nabij Thomsonplein Den Haag</strong> voor een gezellig familiediner, een ontspannen avond met vrienden of een feestelijke viering? <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> biedt een gastvrije dinerervaring met een gevarieerde selectie Noord-Indiase gerechten, tandoori specialiteiten, biryani en traditionele Indiase desserts. Of u nu liever ter plaatse dineert, afhaalt voor een knusse avond thuis of catering regelt voor een feestelijk samenzijn: de menukaart biedt opties voor diverse smaken en dieetvoorkeuren. Met vegetarische, veganistische en glutenvrije keuzes is Chopras Indian Restaurant een uitstekende keuze voor etentjes en vieringen in Den Haag. Reist u vanaf het Thomsonplein of de Thomsonlaan? Controleer dan vooraf de route en reistijd.</p>
+
+<h2>Traditioneel Indiaas Eten Nabij Thomsonlaan Den Haag</h2>
+
+<p>Als u zoekt naar <strong>Indiaas eten Thomsonlaan Den Haag</strong>, biedt <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> een rijke variatie aan traditionele Indiase recepten, bereid met aromatische specerijen en herkenbare regionale smaken. De menukaart brengt rijke curry's, gegrilde tandoori gerechten, rijstspecialiteiten, Indiase broden en populaire voorgerechten samen, zodat gezinnen en groepen volop keuze hebben. Geniet van favorieten zoals <a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a>, <a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, Chicken Tikka Masala, <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a> en Paneer Butter Masala met Naan of Roti, of ontdek ons Indiase streetfood (<a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Samosa, Aloo Tikki, <a href="https://chopras.nl/nl/chaat-den-haag">Papdi Chaat</a>) om samen aan tafel te delen. Voor iedereen die zoekt naar een <strong>Indiaas restaurant nabij Thomsonlaan Den Haag</strong>, maakt het vooraf bekijken van het <a href="https://chopras.nl/nl/menu">menu</a> het eenvoudig om een maaltijd te plannen die aansluit op uw wensen.</p>
+
+<h2>Tandoori Gerechten, Biryani en Indiase Desserts</h2>
+
+<p><a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> biedt een selectie <a href="https://chopras.nl/nl/tandoori-den-haag">tandoori specialiteiten</a> voor gasten die houden van authentiek gegrilde gerechten. Voorbeelden zijn onder meer Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Chicken Hariyali Tikka, Paneer Tikka, Malai Soya Chaap, Achari Soya Chaap, Lamb Seekh Kebab en Chicken Seekh Kebab, afhankelijk van de actuele menukaart.</p>
+
+<p>De biryani-keuzes omvatten <a href="https://chopras.nl/nl/biryani-den-haag">Chicken Biryani</a>, Lamb Biryani, Veg Biryani en Prawn Biryani. Gasten kunnen daarnaast kennismaken met traditionele Indiase nagerechten zoals Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa en verschillende soorten kulfi (zoals Mango, Pistache, Kokos en Malai Kulfi).</p>
+
+<h2>Veganistisch, Vegetarisch en Glutenvrij Indiaas Eten</h2>
+
+<p>Het vinden van gerechten die voor iedereen geschikt zijn, is belangrijk bij het plannen van een familiemaaltijd. Chopras Indian Restaurant biedt <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische gerechten</a>, <a href="https://chopras.nl/nl/vegan-menu">veganistische opties</a> en <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrije keuzes</a>. Populaire gerechten zijn onder meer Chana Masala, Aloo Gobi en andere creaties op basis van groenten en linzen (<a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a>, Dal Tadka), naast vegetarische specialiteiten zoals Paneer Tikka en Veg Biryani. Raadpleeg het actuele menu voor gerechten die passen bij uw specifieke dieetwensen.</p>
+
+<p>Gasten met specifieke dieetvereisten wordt geadviseerd ingrediënten en bereidingswijzen bij het bestellen na te vragen, met name bij veganistische maaltijden en glutenvrij eten. Het restaurant verklaart dat de keuken volledig <a href="https://chopras.nl/nl/halal-food-den-haag">halal gecertificeerd</a> is en dat alle vleesgerechten halal zijn.</p>
+
+<h2>Privé Feestzaal en Indiase Catering in Den Haag</h2>
+
+<p>Organiseert u een verjaardag, bruiloft, jubileum of zakelijke bijeenkomst? Chopras Indian Restaurant beschikt over een <a href="https://chopras.nl/nl/feestzaal-den-haag">privé evenementenzaal / feestzaal</a> voor 25 tot 80 gasten, evenals <a href="https://chopras.nl/nl/catering">Indiase catering</a> voor speciale gelegenheden.</p>
+
+<p>De locatie is geschikt voor bruiloften, verlovingsfeesten, Nikah-recepties, verjaardagen, jubilea, babyshowers, familiereünies, zakelijke diners, netwerkbijeenkomsten, workshops en besloten vieringen. Gasten kunnen tevens informeren naar mogelijkheden voor Indiase feesten zoals Diwali, Holi, Navratri en Eid, alsook Nederlandse feestdagen zoals Koningsdag, Pasen en Kerstmis.</p>
+
+<p>Voor wie zoekt naar een Indiaas restaurant nabij het Thomsonplein in Den Haag dat ook evenementenfaciliteiten biedt, vormt Chopras Indian Restaurant een uitstekende plek om menu's, gastenaantallen en passende zaalopstellingen af te stemmen. Tevens verzorgen wij catering op externe locaties, onder voorbehoud van bevestiging.</p>
+
+<h2>Familiediners, Afhalen en Bezorging</h2>
+
+<p>Of u nu gezellig met de familie wilt dineren of thuis wilt genieten van Indiaas eten: Chopras Indian Restaurant biedt verschillende mogelijkheden om uw maaltijd te plannen. Gasten kunnen genieten van curry's, tandoori gerechten, biryani, Indiase broden en vegetarische gerechten voor elke gelegenheid.</p>
+
+<p>Vergelijkt u opties voor een <strong>Indiaas restaurant nabij Thomsonlaan</strong>? Bekijk het online menu, de actuele bestelmogelijkheden en de reisroute voordat u bestelt of langskomt. Op de officiële website vindt u de menukaart en kunt u online <a href="https://chopras.nl/nl/indian-takeaway-den-haag">afhaalmaaltijden bestellen</a>. Controleer ook direct de opties voor <a href="https://chopras.nl/nl/indian-food-delivery-den-haag">bezorging</a>.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Waar vind ik een Indiaas restaurant nabij Thomsonplein Den Haag?</h3>
+<p>Chopras Indian Restaurant is gevestigd aan de Leyweg 986, 2545 GW Den Haag. U kunt het menu online bekijken en de route vanaf het Thomsonplein controleren vóór uw bezoek. Het restaurant bevindt zich niet direct op het Thomsonplein zelf; controleer daarom de afstand en reistijd bij het plannen van uw bezoek.</p>
+
+<h3>Biedt Chopras Indian Restaurant veganistische, vegetarische en glutenvrije opties?</h3>
+<p>Ja, het restaurant biedt vegetarische, veganistische en glutenvrije keuzes. Stem ingrediënten en bereidingswijzen direct af met het restaurant, zeker als u een voedselallergie heeft of een strikt glutenvrije bereiding nodig heeft.</p>
+
+<h3>Welke tandoori gerechten kan ik bestellen?</h3>
+<p>Voorbeelden op het menu zijn Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Paneer Tikka en diverse Seekh Kebab varianten. De beschikbaarheid kan variëren, raadpleeg daarom de actuele menukaart voor het bestellen.</p>
+
+<h3>Kan ik een privé feestzaal boeken in Den Haag?</h3>
+<p>Chopras Indian Restaurant biedt een privé feestzaal voor 25 tot 80 gasten. Neem contact op met het restaurant om beschikbaarheid, feestarrangementen en catering te bespreken.</p>
+
+<h3>Biedt Chopras Indian Restaurant Indiase catering in Den Haag?</h3>
+<p>Ja, Chopras Indian Restaurant biedt Indiase catering voor gelegenheden zoals bruiloften, verjaardagsfeesten, babyshowers, zakelijke diners en vieringen rondom Diwali, Eid en Kerstmis. Catering is mogelijk in het restaurant en op externe locaties, afhankelijk van de vereisten van uw evenement. Neem contact op met het restaurant voor een offerte op maat.</p>
+
+<h2>Plan Uw Bezoek aan Chopras Indian Restaurant</h2>
+
+<p>Of u nu een familiediner plant, op zoek bent naar Indiase afhaalmaaltijden of een speciale gelegenheid viert: Chopras Indian Restaurant biedt een ruime keuze aan diner- en cateringopties. Van smaakvolle curry's en tandoori gerechten tot biryani, Indiase desserts en vegetarische, veganistische en glutenvrije keuzes; het menu voorziet in verschillende smaken en voorkeuren. Gasten kunnen bovendien informeren naar privézaalverhuur voor verjaardagen, bruiloften, babyshowers, jubilea, zakelijke bijeenkomsten en feestelijke dagen. Als u zoekt naar een Indiaas restaurant nabij Thomsonplein of Thomsonlaan Den Haag, bekijk dan de menukaart, ontdek de diensten en neem contact op met Chopras Indian Restaurant om uw volgende maaltijd of evenement te organiseren.</p>
+`
+  },
+  {
     slug: "how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal",
     title: "Best Indian Restaurant Near Den Haag Centraal",
     metaTitle: "Best Indian Restaurant Near Den Haag Centraal | Chopras Indian Restaurant",
