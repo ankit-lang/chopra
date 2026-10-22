@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { RESTAURANT } from '@/lib/constants'
 import type { Locale } from '@/lib/useTranslations'
 import EmailLink from '../ui/EmailLink'
+import RestaurantGuruBadge from '../ui/RestaurantGuruBadge'
 
 type HourEntry = {
   day: string
@@ -83,84 +84,119 @@ export default function Footer({ locale }: { locale: Locale }) {
           </div>
 
           {/* 2. Hours */}
-          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col">
-            <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-10">
-              Opening Hours
-            </h3>
-            <div className="flex flex-col gap-5 font-body font-light text-[15px] text-white/90">
-              <div className="flex justify-between items-center bg-white/10 rounded-xl p-4 border border-white/10">
-                <span className="tracking-wide">Tue - Sun</span>
-                <span className="text-[#06068a] font-bold bg-white px-3 py-1 rounded-full text-sm">16:30 - 22:30</span>
+          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col justify-between">
+            <div>
+              <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-8">
+                Opening Hours
+              </h3>
+              <div className="flex flex-col gap-4 font-body font-light text-[15px] text-white/90">
+                <div className="flex justify-between items-center bg-white/10 rounded-xl p-4 border border-white/10">
+                  <span className="tracking-wide">Tue - Sun</span>
+                  <span className="text-[#06068a] font-bold bg-white px-3 py-1 rounded-full text-sm">16:30 - 22:30</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/[0.03] rounded-xl border border-white/5">
+                  <span className="text-white/80 tracking-wide">Monday</span>
+                  <span className="text-white/70 font-semibold uppercase text-xs tracking-widest">Closed</span>
+                </div>
               </div>
-              <div className="flex justify-between items-center p-4">
-                <span className="text-white/80 tracking-wide">Monday</span>
-                <span className="text-white/80 font-medium uppercase text-xs tracking-widest">Closed</span>
-              </div>
+            </div>
+
+            <div className="pt-6 border-t border-white/10 text-xs text-white/60 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Dine-In, Takeaway & Halal Delivery</span>
             </div>
           </div>
 
           {/* 3. Menu Links */}
-          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col">
-            <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-10">Quick Links</h3>
-            <ul className="flex flex-col gap-4">
-              {MENU_LINKS.map(({ label, href }) => (
-                <li key={href}>
-                  <Link href={href} className="group flex items-center justify-between text-[15px] font-light text-white/80 hover:text-white transition-all duration-300 bg-white/[0.05] hover:bg-white/20 border border-transparent hover:border-white/20 rounded-xl p-3">
-                    <span className="transform group-hover:translate-x-2 transition-transform duration-300">{label}</span>
-                    <span className="opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-white">→</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 4. Social & Badges */}
-          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col">
-            <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-10">Connect</h3>
-            <div className="flex flex-wrap items-center gap-3 mb-10">
-              <a href={RESTAURANT.social.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-lg">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
-              </a>
-              <a href={RESTAURANT.social.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-lg">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
-              </a>
-              <a href={RESTAURANT.social.tiktok} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-lg">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" /></svg>
-              </a>
-              <a href={RESTAURANT.social.x} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-lg">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
-              </a>
-            </div>
-
-            <div className="flex flex-col gap-4 mt-auto">
-              <a
-                href={RESTAURANT.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-hidden flex flex-col items-center justify-center gap-1.5 bg-white/10 border border-white/20 rounded-2xl p-4 transition-all duration-500 hover:bg-white hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] text-center"
-              >
-                <div className="flex text-white group-hover:text-[#06068a] text-2xl tracking-widest leading-none transition-colors duration-300">★★★★★</div>
-                <div className="flex flex-col relative z-10">
-                  <span className="text-sm font-bold tracking-wide text-white group-hover:text-[#06068a] transition-colors duration-300">Google Reviews</span>
-                  <span className="text-[10px] text-white/80 group-hover:text-[#06068a]/80 uppercase tracking-widest transition-colors duration-300 mt-1">Based on 1300+ Reviews</span>
-                </div>
-              </a>
-
-              <a
-                href={RESTAURANT.social.tripadvisor}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-hidden flex flex-col items-center justify-center gap-1.5 bg-white/10 border border-white/20 rounded-2xl p-4 transition-all duration-500 hover:bg-white hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] text-center"
-              >
-                <div className="flex text-white group-hover:text-[#06068a] text-2xl tracking-widest leading-none transition-colors duration-300">★★★★★</div>
-                <div className="flex flex-col relative z-10">
-                  <span className="text-sm font-bold tracking-wide text-white group-hover:text-[#06068a] transition-colors duration-300">TripAdvisor</span>
-                  <span className="text-[10px] text-white/80 group-hover:text-[#06068a]/80 uppercase tracking-widest transition-colors duration-300 mt-1">Rated Excellent</span>
-                </div>
-              </a>
+          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col justify-between">
+            <div>
+              <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-8">Quick Links</h3>
+              <ul className="flex flex-col gap-3">
+                {MENU_LINKS.map(({ label, href }) => (
+                  <li key={href}>
+                    <Link href={href} className="group flex items-center justify-between text-[15px] font-light text-white/80 hover:text-white transition-all duration-300 bg-white/[0.05] hover:bg-white/20 border border-transparent hover:border-white/20 rounded-xl px-4 py-2.5">
+                      <span className="transform group-hover:translate-x-2 transition-transform duration-300">{label}</span>
+                      <span className="opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-white">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
+          {/* 4. Connect & Reservations */}
+          <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-[2rem] p-8 md:p-10 hover:bg-white/[0.08] transition-colors duration-500 flex flex-col justify-between">
+            <div>
+              <h3 className="font-heading text-white text-2xl font-bold tracking-wide mb-6">Connect</h3>
+              <p className="text-sm font-light text-white/70 mb-6">
+                Follow our culinary journey on social media or reach out directly for reservations.
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a href={RESTAURANT.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-md">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                </a>
+                <a href={RESTAURANT.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-md">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                </a>
+                <a href={RESTAURANT.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-md">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" /></svg>
+                </a>
+                <a href={RESTAURANT.social.x} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-[#06068a] hover:scale-110 transition-all duration-300 shadow-md">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-white/10">
+              <Link
+                href={`${base}/contact`}
+                className="group flex items-center justify-between p-3.5 bg-white/10 hover:bg-white hover:text-[#06068a] border border-white/20 rounded-xl transition-all duration-300 text-sm font-medium"
+              >
+                <span>Reserve a Table</span>
+                <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Awards & Recognition Row */}
+        <div className="mt-8 pt-8 border-t border-white/10">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-6">
+            Recognized & Highly Rated Across Platforms
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-5xl mx-auto">
+            {/* 1. Google Reviews */}
+            <a
+              href={RESTAURANT.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white/[0.05] hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-white/25 rounded-2xl p-6 transition-all duration-300 flex flex-col items-center justify-center text-center shadow-md min-h-[160px]"
+            >
+              <div className="flex text-amber-300 text-lg tracking-widest leading-none mb-2">★★★★★</div>
+              <span className="text-base font-bold tracking-wide text-white group-hover:text-amber-200 transition-colors">Google Reviews</span>
+              <span className="text-xs text-white/70 mt-1">4.9 Rating &middot; Based on 1300+ Reviews</span>
+              <span className="text-[11px] text-white/40 group-hover:text-white uppercase tracking-wider mt-3 transition-colors">View Verified Reviews →</span>
+            </a>
+
+            {/* 2. Restaurant Guru 2026 Recommended Award */}
+            <div className="bg-white/[0.05] backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col items-center justify-center shadow-md min-h-[160px]">
+              <RestaurantGuruBadge />
+            </div>
+
+            {/* 3. TripAdvisor */}
+            <a
+              href={RESTAURANT.social.tripadvisor}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white/[0.05] hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-white/25 rounded-2xl p-6 transition-all duration-300 flex flex-col items-center justify-center text-center shadow-md min-h-[160px]"
+            >
+              <div className="flex text-amber-300 text-lg tracking-widest leading-none mb-2">★★★★★</div>
+              <span className="text-base font-bold tracking-wide text-white group-hover:text-amber-200 transition-colors">TripAdvisor</span>
+              <span className="text-xs text-white/70 mt-1">Rated Excellent &middot; Den Haag</span>
+              <span className="text-[11px] text-white/40 group-hover:text-white uppercase tracking-wider mt-3 transition-colors">Read Traveler Reviews →</span>
+            </a>
+          </div>
         </div>
       </div>
 

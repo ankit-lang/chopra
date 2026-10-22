@@ -106,6 +106,8 @@ export default function LocaleLayout({
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://awards.infcdn.net" />
+        <link href="https://awards.infcdn.net/2026_new/circ5_n.css" rel="stylesheet" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZKMF6VZ9Q2"
           strategy="lazyOnload"
