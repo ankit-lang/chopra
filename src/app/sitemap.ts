@@ -61,6 +61,8 @@ const staticPages: SitemapPage[] = [
   { slug: 'how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal', lastMod: '2026-10-18', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'best-indian-restaurant-near-den-haag-centraal', lastMod: '2026-10-18', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-restaurant-near-thomsonplein-den-haag', lastMod: '2026-10-21', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'authentic-indian-food-near-zoetermeer-and-the-hague', lastMod: '2026-10-24', priority: 0.8, changeFreq: 'weekly' },
+
 
   // Location pages
   { slug: 'indian-restaurant-delft', lastMod: '2026-04-21', priority: 0.8, changeFreq: 'weekly' },
