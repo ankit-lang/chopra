@@ -2,6 +2,382 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "indian-food-den-haag-for-vegetarians-vegans",
+    title: "Indian Food Den Haag for Vegetarians & Vegans",
+    metaTitle: "Indian Food Den Haag for Vegetarians & Vegans | Chopras",
+    metaDescription: "Explore Indian food in Den Haag with vegetarian, vegan and gluten-free options at Chopras Indian Restaurant. Enjoy flavourful dishes for every taste.",
+    h1: "Indian Food Den Haag for Vegetarians, Vegans and Gluten-Free Diners",
+    primaryKeyword: "Indian food Den Haag",
+    keywords: [
+      "Indian food Den Haag",
+      "best indian restaurant den haag",
+      "Chopras Indian Restaurant",
+      "Vegetarian Indian food Den Haag",
+      "Indian restaurant Den Haag"
+    ],
+    
+    titleNl: "Indiaas Eten Den Haag voor Vegetariërs & Veganisten",
+    metaTitleNl: "Indiaas Eten Den Haag voor Vegetariërs & Veganisten | Chopras",
+    metaDescriptionNl: "Ontdek Indiaas eten in Den Haag met vegetarische, veganistische en glutenvrije opties bij Chopras Indian Restaurant. Geniet van smaakvolle gerechten voor iedereen.",
+    h1Nl: "Indiaas Eten in Den Haag voor Vegetariërs, Veganisten en Glutenvrije Diners: Een Complete Gids",
+    primaryKeywordNl: "Indiaas eten Den Haag",
+    excerptNl: "Ontdek Indiaas eten in Den Haag met vegetarische, veganistische en glutenvrije opties bij Chopras Indian Restaurant. Geniet van smaakvolle gerechten en tandoori specialiteiten voor iedereen.",
+    language: 'en' as const,
+    publishedAt: "2026-10-29",
+    readingTime: 7,
+    author: "Arun Chopra",
+    image: "/images/blog/29oct.png",
+    excerpt: "Explore Indian food in Den Haag with vegetarian, vegan and gluten-free options at Chopras Indian Restaurant. Enjoy flavourful dishes for every taste.",
+    faqs: [
+      {
+        question: "Where can I find vegetarian Indian food in Den Haag?",
+        answer: "Chopras Indian Restaurant at Leyweg 986 in Den Haag offers a range of vegetarian dishes including Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Bhindi Masala, Palak Paneer and several paneer curries."
+      },
+      {
+        question: "Does Chopras Indian Restaurant have vegan food?",
+        answer: "Yes. The menu identifies vegan-friendly options such as Pani Puri, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Aloo Gobi, Mixed Veg, Bhindi Masala and Baingan Bharta. Vegan preparation should be confirmed when ordering."
+      },
+      {
+        question: "Is gluten-free Indian food available in Den Haag?",
+        answer: "Yes, the Chopras Indian Restaurant menu identifies several gluten-free options, including Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta and Dal Makhani. Guests with allergies or strict dietary requirements should inform the restaurant before ordering."
+      },
+      {
+        question: "What vegetarian tandoori dishes can I order?",
+        answer: "Vegetarian tandoori choices include Paneer Tikka, Malai Soya Chaap and Achari Soya Chaap. Tandoori Naan and Tandoori Roti can also accompany a meal."
+      },
+      {
+        question: "Can vegetarian and non-vegetarian guests dine together at Chopras Indian Restaurant?",
+        answer: "Yes. Chopras Indian Restaurant offers vegetarian, vegan and gluten-free options alongside chicken, lamb and mutton dishes, so mixed groups can choose from different sections of the menu."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Waar kan ik vegetarisch Indiaas eten vinden in Den Haag?",
+        answer: "Chopras Indian Restaurant aan de Leyweg 986 in Den Haag biedt een scala aan vegetarische gerechten, waaronder Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Bhindi Masala, Palak Paneer en verschillende paneer curry's."
+      },
+      {
+        question: "Heeft Chopras Indian Restaurant veganistisch eten?",
+        answer: "Ja. Het menu vermeldt veganistische opties zoals Pani Puri, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Aloo Gobi, Mixed Veg, Bhindi Masala en Baingan Bharta. Veganistische bereiding moet bij de bestelling worden bevestigd."
+      },
+      {
+        question: "Is er glutenvrij Indiaas eten beschikbaar in Den Haag?",
+        answer: "Ja, het menu van Chopras Indian Restaurant vermeldt verschillende glutenvrije opties, waaronder Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta en Dal Makhani. Gasten met allergieën of strikte dieetwensen dienen het restaurant hiervan voor de bestelling op de hoogte te stellen."
+      },
+      {
+        question: "Welke vegetarische tandoori gerechten kan ik bestellen?",
+        answer: "Vegetarische tandoori keuzes omvatten Paneer Tikka, Malai Soya Chaap en Achari Soya Chaap. Tandoori Naan en Tandoori Roti kunnen ook bij de maaltijd worden geserveerd."
+      },
+      {
+        question: "Kunnen vegetarische en niet-vegetarische gasten samen eten bij Chopras Indian Restaurant?",
+        answer: "Ja. Chopras Indian Restaurant biedt vegetarische, veganistische en glutenvrije opties naast kip-, lams- en schapenvleesgerechten, zodat gemengde groepen uit verschillende delen van het menu kunnen kiezen."
+      }
+    ],
+    content: `
+<img src="/images/blog/29oct.png" alt="Indian Food Den Haag for Vegetarians, Vegans and Gluten-Free Diners | Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Finding an <strong>Indian food in Den Haag</strong> is easy. Finding an Indian restaurant where vegetarians, vegans, gluten-free diners and mixed groups can all enjoy a proper meal together is a little more important.</p>
+
+<p>Indian cuisine naturally offers a wide range of plant-based dishes, lentil preparations, vegetable curries, chaat, tandoori specialities and rice dishes. At <a href="https://chopras.nl">Chopras Indian Restaurant</a>, Leyweg 986 in Den Haag, the menu offers a variety of choices for different dietary preferences, including <a href="https://chopras.nl/vegetarian-menu">vegetarian</a>, <a href="https://chopras.nl/vegan-menu">vegan</a> and <a href="https://chopras.nl/gluten-free-menu">gluten-free options</a>. The menu also includes <a href="https://chopras.nl/halal-food-den-haag">halal-certified</a> meat dishes and choices across starters, tandoori, curries, biryani, breads, desserts and more.</p>
+
+<p>Whether you are searching for <strong>Indian food Den Haag</strong>, <strong>Vegetarian Indian food Den Haag</strong>, vegan Indian food in Den Haag, gluten-free Indian food in The Hague, or an <strong>Indiaas restaurant Den Haag</strong>, <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a menu worth exploring as the <strong>best indian restaurant den haag</strong>.</p>
+
+<h2>Why Indian Food Works So Well for Different Dietary Preferences</h2>
+
+<p>One of the nicest things about Indian dining is that a table does not have to order the same type of food.</p>
+
+<p>One person may want a creamy paneer curry, another may prefer a spicy vegetable dish, while someone else may be looking for vegan or gluten-free Indian food. You can build a meal around different dishes and still share the experience.</p>
+
+<p>Guests with allergies or specific dietary requirements are advised to mention them before ordering so the kitchen can guide them appropriately.</p>
+
+<p>This makes it easier for families, couples, friends and larger groups to explore Indian cuisine without limiting the entire table to one dietary preference.</p>
+
+<h2>Vegetarian Indian Food in Den Haag: What Can You Try?</h2>
+
+<p>For anyone searching for <strong>Vegetarian Indian food Den Haag</strong>, there is much more to Indian cuisine than one paneer curry.</p>
+
+<p>At Chopras Indian Restaurant, vegetarian diners can explore dishes such as Paneer Tikka, <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a>, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta, Malai Kofta, Palak Paneer, Karahi Paneer, Shahi Paneer, Handi Paneer, Paneer Butter Masala, Tawa Paneer Masala and Chopras Special Paneer.</p>
+
+<h3>Start with Indian Street Food</h3>
+
+<p>If you enjoy trying several flavours, <a href="https://chopras.nl/chaat-den-haag">Indian street food</a> is a fun way to begin.</p>
+
+<p><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a>, Veg Samosa Chaat, Dahi Puri, Papdi Chaat, Aloo Tikki and Mixed Chaat bring different textures and flavours to the table. They are especially useful for sharing when dining with friends or family.</p>
+
+<p>For someone visiting an <strong>Indian restaurant Den Haag</strong> for the first time, chaat can also be a simple introduction to the sweet, spicy, tangy and savoury side of Indian food.</p>
+
+<h3>Try Paneer and Dal Specialities</h3>
+
+<p>For a comforting vegetarian main course, <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a> is a classic choice. Other options include Dal Tadka, Chana Masala, Palak Paneer, Malai Kofta, Paneer Butter Masala, Shahi Paneer and Karahi Paneer.</p>
+
+<p>You can pair a curry or dal with rice or <a href="https://chopras.nl/naan-den-haag">Indian bread</a> to create a complete meal.</p>
+
+<h2>Vegan Indian Food Den Haag: Plant-Based Choices</h2>
+
+<p>Searching for vegan Indian food in Den Haag does not mean settling for a small side dish.</p>
+
+<p>The <a href="https://chopras.nl/vegan-menu">Chopras Indian Restaurant menu</a> includes vegan-friendly choices such as <a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Rajma Raseela, Aloo Gobi, Mixed Veg, Bhindi Masala and Baingan Bharta.</p>
+
+<p>The advantage of Indian cooking is that lentils, chickpeas, vegetables and spices can create satisfying dishes without relying on meat.</p>
+
+<p>If you follow a strict vegan diet, it is still important to tell the restaurant before ordering. Some preparations may require specific adjustments, and the restaurant asks guests to communicate vegan requirements so the kitchen can prepare the food accordingly.</p>
+
+<h2>Gluten-Free Indian Food in Den Haag</h2>
+
+<p>For people searching for <a href="https://chopras.nl/gluten-free-menu">gluten-free Indian food in Den Haag</a>, checking individual dishes and preparation requirements is important.</p>
+
+<p>The menu identifies gluten-free options including Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta and <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a>.</p>
+
+<p>If you have coeliac disease, an allergy or another medical dietary requirement, always tell the restaurant before ordering. Gluten-free preparation should be confirmed with the restaurant rather than assumed from the name of a dish.</p>
+
+<p>That small conversation can make dining out much more comfortable and helps the kitchen understand exactly what you need.</p>
+
+<h2>Tandoori Food for Vegetarians and Other Diners</h2>
+
+<p><a href="https://chopras.nl/tandoori-den-haag">Tandoori cooking</a> is one of the most recognisable parts of Indian cuisine. The traditional clay oven gives food a distinctive roasted aroma and charred flavour.</p>
+
+<p>At Chopras Indian Restaurant, the tandoori menu includes both meat and vegetarian choices. Examples include Paneer Tikka, <a href="https://chopras.nl/soya-chaap-den-haag">Malai Soya Chaap</a>, Achari Soya Chaap, Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Chicken Hariyali Tikka, Chicken Lasooni Tikka, Lamb Seekh Kebab, Chicken Seekh Kebab and Tandoori Prawn/Fish. Tandoori breads such as Tandoori Naan and Tandoori Roti are also available.</p>
+
+<p>For vegetarian diners, Paneer Tikka, <a href="https://chopras.nl/soya-chaap-den-haag">Malai Soya Chaap</a> and Achari Soya Chaap are natural choices when you want the smoky character of tandoori cooking without ordering meat.</p>
+
+<p>The restaurant's tandoori information describes the dishes as freshly prepared, with spices prepared for the kitchen and ingredients cooked in the traditional tandoor.</p>
+
+<h2>Indian Curries, Biryani and Comfort Food</h2>
+
+<p>Sometimes you simply want a proper Indian curry with rice or bread.</p>
+
+<p>The <a href="https://chopras.nl/menu">menu</a> at Chopras Indian Restaurant includes vegetarian curries alongside chicken, lamb and mutton dishes, as well as <a href="https://chopras.nl/biryani-den-haag">biryani</a> and Indian breads. Examples from the menu include <a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a>, Chicken Tikka Masala, <a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, Dal Makhani, Paneer Butter Masala, Chicken Biryani, Lamb Biryani and Veg Biryani.</p>
+
+<p>For vegetarian diners, a combination such as Dal Makhani + Paneer Butter Masala + <a href="https://chopras.nl/naan-den-haag">naan</a> or rice can make a hearty meal.</p>
+
+<p>If your table includes both vegetarians and meat eaters, everyone can choose from different sections of the menu without having to compromise.</p>
+
+<h2>Indian Desserts Worth Saving Room For</h2>
+
+<p>A meal does not have to end with curry and rice.</p>
+
+<p>For a traditional Indian dessert experience, Chopras Indian Restaurant serves options including Moong Dal Halwa, Saffron Kheer, Kulfi Pistachio, Kulfi Malai, Kulfi Coconut, Kulfi Mango, Rasmalai and Gulab Jamun.</p>
+
+<p>If you are new to Indian desserts, Gulab Jamun, Rasmalai, Saffron Kheer or Kulfi are easy places to start.</p>
+
+<h2>A Feestzaal in Den Haag for More Than Just Dinner</h2>
+
+<p>Indian food is not only about an ordinary evening meal. Sometimes the food is part of the occasion.</p>
+
+<p>The <a href="https://chopras.nl/feestzaal-den-haag">Feestzaal at Chopras Indian Restaurant</a> offers a private event space for approximately 25–50 guests, with food and <a href="https://chopras.nl/catering">catering</a> available through the restaurant. The venue can be used for a wide range of private, family, cultural and professional gatherings.</p>
+
+<h3>Weddings, Birthdays and Family Celebrations</h3>
+
+<p>The event space can be used for <a href="https://chopras.nl/indian-wedding-catering-den-haag">weddings</a>, engagements, pre-wedding celebrations, <a href="https://chopras.nl/indian-birthday-catering-den-haag">birthdays</a>, anniversaries, retirement parties, graduation celebrations, naming ceremonies and family reunions.</p>
+
+<p>For smaller social occasions, it can also work for baby showers, gender-reveal parties, romantic dinners, Valentine's celebrations, family lunches and get-togethers.</p>
+
+<h3>Indian Festivals and Cultural Events</h3>
+
+<p>For people looking for an Indian event venue in Den Haag, the Feestzaal can also be used for cultural celebrations such as <a href="https://chopras.nl/diwali-dinner-den-haag">Diwali</a>, Holi, Navratri, Garba, Eid, Christmas, New Year and Indian Independence Day.</p>
+
+<p>Dutch festive occasions such as Goede Vrijdag, Eerste Paasdag, Tweede Paasdag, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Eerste Pinksterdag, Tweede Pinksterdag, Eerste Kerstdag and Tweede Kerstdag can also be occasions for group dining and private gatherings.</p>
+
+<h3>Corporate and Community Events</h3>
+
+<p>The Feestzaal is not limited to family celebrations. It can also accommodate <a href="https://chopras.nl/corporate-events-den-haag">corporate dinners</a>, business lunches, meetings, networking events, workshops, training sessions, team-building activities, brainstorming sessions and client presentations.</p>
+
+<h2>Indian Catering in Den Haag for Vegetarian, Vegan and Gluten-Free Guests</h2>
+
+<p>If you are organising an event rather than dining out, dietary variety becomes even more important.</p>
+
+<p>Chopras Indian Restaurant offers <a href="https://chopras.nl/catering">catering</a> for occasions including weddings, birthdays, corporate events and <a href="https://chopras.nl/indian-buffet-den-haag">Indian buffets</a>.</p>
+
+<p>A mixed Indian catering menu can include vegetarian dishes alongside other Indian specialities, allowing guests with different preferences to enjoy the same event.</p>
+
+<p>When arranging catering for vegan or gluten-free guests, communicate the requirements in advance so the dishes and preparation can be discussed with the restaurant team.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Where can I find vegetarian Indian food in Den Haag?</h3>
+<p>Chopras Indian Restaurant at Leyweg 986 in Den Haag offers a range of vegetarian dishes including Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Bhindi Masala, Palak Paneer and several paneer curries.</p>
+
+<h3>Does Chopras Indian Restaurant have vegan food?</h3>
+<p>Yes. The menu identifies vegan-friendly options such as Pani Puri, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Aloo Gobi, Mixed Veg, Bhindi Masala and Baingan Bharta. Vegan preparation should be confirmed when ordering.</p>
+
+<h3>Is gluten-free Indian food available in Den Haag?</h3>
+<p>Yes, the Chopras Indian Restaurant menu identifies several gluten-free options, including Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta and Dal Makhani. Guests with allergies or strict dietary requirements should inform the restaurant before ordering.</p>
+
+<h3>What vegetarian tandoori dishes can I order?</h3>
+<p>Vegetarian tandoori choices include Paneer Tikka, Malai Soya Chaap and Achari Soya Chaap. Tandoori Naan and Tandoori Roti can also accompany a meal.</p>
+
+<h3>Can vegetarian and non-vegetarian guests dine together at Chopras Indian Restaurant?</h3>
+<p>Yes. Chopras Indian Restaurant offers vegetarian, vegan and gluten-free options alongside chicken, lamb and mutton dishes, so mixed groups can choose from different sections of the menu.</p>
+
+<h2>Visit Chopras Indian Restaurant in Den Haag</h2>
+
+<p>If you are searching for <strong>Indian food Den Haag</strong> that works for vegetarians, vegans, gluten-free diners and mixed groups, the menu at <a href="https://chopras.nl">Chopras Indian Restaurant</a> gives you plenty to explore. The Leyweg location also makes Chopras Indian Restaurant relevant for diners coming from nearby <a href="https://chopras.nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/indian-restaurant-zoetermeer">Zoetermeer</a> and <a href="https://chopras.nl/indian-restaurant-delft">Delft</a>.</p>
+
+<p>From Pani Puri and chaat to Paneer Tikka, Malai Soya Chaap, Achari Soya Chaap, Dal Makhani, Veg Biryani and traditional Indian desserts, there is room to create a meal around your own preferences.</p>
+
+<p>And if the occasion is bigger than dinner, the <a href="https://chopras.nl/feestzaal-den-haag">Feestzaal</a> adds another option for weddings, birthdays, anniversaries, baby showers, corporate gatherings, festivals and private events.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>
+Leyweg 986<br/>
+2545 GW Den Haag, Netherlands</p>
+
+<p>The restaurant currently lists opening hours from Tuesday to Sunday, 16:30–22:30.</p>
+
+<p>For reservations, <a href="https://chopras.nl/indian-takeaway-den-haag">takeaway</a>, <a href="https://chopras.nl/indian-food-delivery-den-haag">delivery</a>, catering or event enquiries, check the official Chopras Indian Restaurant website and <a href="https://chopras.nl/menu">menu</a> before visiting.</p>
+`,
+    contentNl: `
+<img src="/images/blog/29oct.png" alt="Indiaas Eten Den Haag voor Vegetariërs, Veganisten & Glutenvrije Diners | Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Het vinden van <strong>Indiaas eten in Den Haag</strong> is eenvoudig. Maar een Indiaas restaurant vinden waar vegetariërs, veganisten, glutenvrije gasten en gemengde gezelschappen allemaal samen van een volwaardige maaltijd kunnen genieten, is pas écht waardevol.</p>
+
+<p>De Indiase keuken biedt van nature een rijk aanbod aan plantaardige gerechten, linzenspecialiteiten, groentecurry's, chaat, tandoori gerechten en geurige rijstschotels. Bij <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> aan de Leyweg 986 in Den Haag biedt de menukaart een veelzijdige selectie voor uiteenlopende dieetvoorkeuren, waaronder <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische</a>, <a href="https://chopras.nl/nl/vegan-menu">veganistische</a> en <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrije opties</a>. Daarnaast bevat de kaart <a href="https://chopras.nl/nl/halal-food-den-haag">halal-gecertificeerde</a> vleesgerechten en keuzes uit voorgerechten, tandoori, curry's, biryani, versgebakken broden, desserts en meer.</p>
+
+<p>Of u nu zoekt naar <strong>Indiaas eten Den Haag</strong>, <strong>vegetarisch Indiaas eten in Den Haag</strong>, veganistisch Indiaas eten in Den Haag, glutenvrij Indiaas eten of een authentiek <strong>Indiaas restaurant Den Haag</strong>: Chopras Indian Restaurant biedt een menu dat het ontdekken meer dan waard is als het <strong>beste Indiase restaurant in Den Haag</strong>.</p>
+
+<h2>Waarom de Indiase Keuken Zo Goed Werkt voor Verschillende Dieetwensen</h2>
+
+<p>Een van de mooiste aspecten van de Indiase eetcultuur is dat niet iedereen aan tafel hetzelfde hoeft te bestellen.</p>
+
+<p>De een kan genieten van een romige paneer curry, een ander kiest een kruidige groenteschotel, terwijl weer iemand anders verlangt naar een veganistische of glutenvrije Indiase maaltijd. U kunt samen een gevarieerde tafel samenstellen en alsnog de gezamenlijke eetervaring delen.</p>
+
+<p>Gasten met allergieën of specifieke dieetwensen wordt geadviseerd dit vooraf bij de bestelling door te geven, zodat onze koks u optimaal kunnen adviseren.</p>
+
+<p>Dit maakt uit eten gaan ideaal voor gezinnen, stellen, vriendengroepen en grotere gezelschappen om de authentieke Indiase keuken te ontdekken zonder dat iemand hoeft in te leveren op smaak of dieetvoorkeur.</p>
+
+<h2>Vegetarisch Indiaas Eten in Den Haag: Wat Kunt u Proberen?</h2>
+
+<p>Voor iedereen die zoekt naar <strong>vegetarisch Indiaas eten in Den Haag</strong> is er zoveel meer te ontdekken dan alleen een paneer curry.</p>
+
+<p>Bij Chopras Indian Restaurant kunnen vegetarische gasten een rijke selectie gerechten ontdekken, waaronder Paneer Tikka, <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a>, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta, Malai Kofta, Palak Paneer, Karahi Paneer, Shahi Paneer, Handi Paneer, Paneer Butter Masala, Tawa Paneer Masala en Chopras Special Paneer.</p>
+
+<h3>Begin met Indiaas Streetfood</h3>
+
+<p>Houdt u ervan om diverse smaken uit te proberen? Dan is <a href="https://chopras.nl/nl/chaat-den-haag">Indiaas streetfood</a> een fantastisch startpunt.</p>
+
+<p><a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a>, Veg Samosa Chaat, Dahi Puri, Papdi Chaat, Aloo Tikki en Mixed Chaat brengen verschillende texturen en explosieve smaken naar de tafel. Ze zijn bovendien perfect geschikt om te delen met vrienden of familie.</p>
+
+<p>Voor wie voor het eerst een <strong>Indiaas restaurant in Den Haag</strong> bezoekt, is chaat de ultieme kennismaking met het zoete, pittige, frisse en hartige smaakpalet van India.</p>
+
+<h3>Proef Onze Paneer- en Dal-Specialiteiten</h3>
+
+<p>Voor een troostend vegetarisch hoofdgerecht is <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a> een absolute klassieker. Andere aanraders zijn Dal Tadka, Chana Masala, Palak Paneer, Malai Kofta, Paneer Butter Masala, Shahi Paneer en Karahi Paneer.</p>
+
+<p>Combineer een geurige curry of dal met basmatirijst of traditioneel <a href="https://chopras.nl/nl/naan-den-haag">Indiaas naanbrood</a> voor een complete maaltijd.</p>
+
+<h2>Veganistisch Indiaas Eten in Den Haag: Plantaardige Verwennerij</h2>
+
+<p>Zoeken naar veganistisch Indiaas eten in Den Haag betekent geenszins dat u genoegen hoeft te nemen met een eenvoudig bijgerecht.</p>
+
+<p>Het menu van Chopras Indian Restaurant biedt volop veganistische keuzes zoals <a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Rajma Raseela, Aloo Gobi, Mixed Veg, Bhindi Masala en Baingan Bharta.</p>
+
+<p>De kracht van de traditionele Indiase kookkunst is dat linzen, kikkererwten, verse groenten en specerijen zorgen voor rijke, verzadigende gerechten zonder gebruik van vlees of zuivel.</p>
+
+<p>Volgt u een strikt veganistisch dieet? Geef dit gerust door bij uw bestelling. Bepaalde bereidingen kunnen specifiek worden aangepast zodat de keuken uw maaltijd met zorg op maat klaarmaakt.</p>
+
+<h2>Glutenvrij Indiaas Eten in Den Haag</h2>
+
+<p>Voor gasten die zoeken naar <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrij Indiaas eten in Den Haag</a> is aandacht voor ingrediënten en bereidingswijzen essentieel.</p>
+
+<p>Op de menukaart staan diverse glutenvrije gerechten vermeld, waaronder Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta en <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a>.</p>
+
+<p>Heeft u coeliakie of een ernstige glutenallergie? Meld dit altijd vooraf bij onze bediening. De bereiding kan dan zorgvuldig worden afgestemd met onze chef-koks.</p>
+
+<p>Een korte toelichting zorgt voor een zorgeloze en comfortabele dinerervaring.</p>
+
+<h2>Tandoori Gerechten voor Vegetariërs en Vleesliefhebbers</h2>
+
+<p><a href="https://chopras.nl/nl/tandoori-den-haag">Tandoori koken</a> is een van de meest iconische bereidingswijzen van India. De traditionele klei-oven geeft gerechten een onmiskenbare rokerige smaak en krokante textuur.</p>
+
+<p>Bij Chopras Indian Restaurant omvat het tandoori menu zowel vegetarische als vleesopties. Probeer bijvoorbeeld Paneer Tikka, <a href="https://chopras.nl/nl/soya-chaap-den-haag">Malai Soya Chaap</a>, Achari Soya Chaap, Tandoori Chicken, Chicken Tikka, Chicken Malai Tikka, Chicken Hariyali Tikka, Chicken Lasooni Tikka, Lamb Seekh Kebab, Chicken Seekh Kebab en Tandoori Prawn/Fish. Ook tandoori broden zoals Tandoori Naan en Tandoori Roti worden vers bereid.</p>
+
+<p>Voor vegetarische gasten zijn Paneer Tikka, <a href="https://chopras.nl/nl/soya-chaap-den-haag">Malai Soya Chaap</a> en Achari Soya Chaap fantastische keuzes om te genieten van de authentieke tandoori rooksmaak zonder vlees te bestellen.</p>
+
+<p>Alle tandoori gerechten worden vers klaargemaakt met huisgemaakte marinades en gegrild in de gloeiend hete tandoor.</p>
+
+<h2>Indiase Curry's, Biryani en Comfort Food</h2>
+
+<p>Soms verlangt u gewoon naar een authentieke Indiase curry met geurige rijst of vers naanbrood.</p>
+
+<p>Het <a href="https://chopras.nl/nl/menu">menu</a> van Chopras Indian Restaurant biedt een rijke keuze aan vegetarische curry's naast gerechten met kip, lam en schapenvlees, evenals traditionele <a href="https://chopras.nl/nl/biryani-den-haag">biryani</a> en Indiase broden. Populaire favorieten zijn onder andere <a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a>, Chicken Tikka Masala, <a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, Dal Makhani, Paneer Butter Masala, Chicken Biryani, Lamb Biryani en Veg Biryani.</p>
+
+<p>Voor vegetariërs vormt een combinatie zoals Dal Makhani + Paneer Butter Masala + versgebakken <a href="https://chopras.nl/nl/naan-den-haag">naan</a> of rijst een vorstelijke en vullende maaltijd.</p>
+
+<p>Zitten er zowel vegetariërs als vleeseters aan tafel? Iedereen kan naar hartenlust kiezen uit de verschillende menusecties zonder concessies te doen.</p>
+
+<h2>Traditionele Indiase Desserts</h2>
+
+<p>Een heerlijke maaltijd hoeft niet te eindigen bij curry en rijst.</p>
+
+<p>Voor een authentieke Indiase dessertbeleving serveert Chopras Indian Restaurant klassiekers zoals Moong Dal Halwa, Saffron Kheer, Kulfi Pistachio, Kulfi Malai, Kulfi Coconut, Kulfi Mango, Rasmalai en Gulab Jamun.</p>
+
+<p>Maakt u voor het eerst kennis met Indiase nagerechten? Dan zijn warme Gulab Jamun, fluweelzachte Rasmalai of ambachtelijke Kulfi de ideale afsluiter.</p>
+
+<h2>Een Feestzaal in Den Haag voor Meer Dan Alleen Dineren</h2>
+
+<p>De Indiase keuken draait niet alleen om het dagelijkse avondeten; eten vormt het hart van elk feest en elke bijzondere gebeurtenis.</p>
+
+<p>De <a href="https://chopras.nl/nl/feestzaal-den-haag">Feestzaal van Chopras Indian Restaurant</a> biedt een sfeervolle privéruimte voor circa 25 tot 50 personen, inclusief complete <a href="https://chopras.nl/nl/catering">catering</a> vanuit ons restaurant. De zaal is geschikt voor uiteenlopende familie-, culturele en zakelijke bijeenkomsten.</p>
+
+<h3>Bruiloften, Verjaardagen en Familiefeesten</h3>
+
+<p>Onze evenementenruimte kan worden gereserveerd voor <a href="https://chopras.nl/nl/bruiloft-catering-den-haag">bruiloften</a>, verlovingen, pre-wedding feesten, <a href="https://chopras.nl/nl/indian-birthday-catering-den-haag">verjaardagen</a>, jubilea, pensioenfeesten, diploma-uitreikingen en familiereünies.</p>
+
+<p>Voor intiemere gelegenheden is de ruimte uitermate geschikt voor babyshowers, gender reveals, romantische diners, familielunches en gezellige borrels.</p>
+
+<h3>Indiase Festivals en Culturele Evenementen</h3>
+
+<p>Zoekt u een feestlocatie in Den Haag voor culturele vieringen? De Feestzaal verwelkomt feestelijke bijeenkomsten voor <a href="https://chopras.nl/nl/diwali-dinner-den-haag">Diwali</a>, Holi, Navratri, Garba, Eid, Kerstmis, Oud & Nieuw en Indian Independence Day.</p>
+
+<p>Ook Nederlandse feestdagen zoals Goede Vrijdag, Eerste en Tweede Paasdag, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Pinksteren en Kerst zijn uitgelezen momenten voor groepslunches en diners in besloten kring.</p>
+
+<h3>Zakelijke en Bedrijfsbijeenkomsten</h3>
+
+<p>De feestzaal leent zich uitstekend voor <a href="https://chopras.nl/nl/corporate-events-den-haag">bedrijfsdiners</a>, zakelijke lunches, vergaderingen, netwerkbijeenkomsten, workshops, trainingen, teambuildingactiviteiten en presentaties.</p>
+
+<h2>Indiaas Catering in Den Haag voor Vegetarische, Veganistische en Glutenvrije Gasten</h2>
+
+<p>Organiseert u een evenement op uw eigen locatie? Dan is een gevarieerd menu essentieel voor al uw gasten.</p>
+
+<p>Chopras Indian Restaurant verzorgt professionele <a href="https://chopras.nl/nl/catering">Indiaas catering</a> voor bruiloften, verjaardagen, bedrijfsfeesten en <a href="https://chopras.nl/nl/indian-buffet-den-haag">Indiase buffetten</a>.</p>
+
+<p>Een compleet verzorgd Indiaas cateringmenu combineert smaakvolle vegetarische gerechten met andere Indiase specialiteiten, zodat iedere aanwezige zorgeloos mee kan genieten.</p>
+
+<p>Heeft u veganistische of glutenvrije gasten? Geef uw wensen vooraf door, zodat ons cateringteam het menu tot in detail kan afstemmen.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Waar kan ik vegetarisch Indiaas eten vinden in Den Haag?</h3>
+<p>Chopras Indian Restaurant aan de Leyweg 986 in Den Haag biedt een scala aan vegetarische gerechten, waaronder Paneer Tikka, Dal Makhani, Dal Tadka, Chana Masala, Aloo Gobi, Bhindi Masala, Palak Paneer en verschillende paneer curry's.</p>
+
+<h3>Heeft Chopras Indian Restaurant veganistisch eten?</h3>
+<p>Ja. Het menu vermeldt veganistische opties zoals Pani Puri, Dahi Puri, Aloo Tikki, Mixed Chaat, Dal Tadka, Chana Masala, Aloo Gobi, Mixed Veg, Bhindi Masala en Baingan Bharta. Veganistische bereiding moet bij de bestelling worden bevestigd.</p>
+
+<h3>Is er glutenvrij Indiaas eten beschikbaar in Den Haag?</h3>
+<p>Ja, het menu van Chopras Indian Restaurant vermeldt verschillende glutenvrije opties, waaronder Aloo Tikki, Plain Papad, Masala Papad, Onion Bhaji, Dal Tadka, Chana Masala, Aloo Gobi, Aloo Jeera, Mixed Veg, Bhindi Masala, Baingan Bharta en Dal Makhani. Gasten met allergieën of strikte dieetwensen dienen het restaurant hiervan voor de bestelling op de hoogte te stellen.</p>
+
+<h3>Welke vegetarische tandoori gerechten kan ik bestellen?</h3>
+<p>Vegetarische tandoori keuzes omvatten Paneer Tikka, Malai Soya Chaap en Achari Soya Chaap. Tandoori Naan en Tandoori Roti kunnen ook bij de maaltijd worden geserveerd.</p>
+
+<h3>Kunnen vegetarische en niet-vegetarische gasten samen eten bij Chopras Indian Restaurant?</h3>
+<p>Ja. Chopras Indian Restaurant biedt vegetarische, veganistische en glutenvrije opties naast kip-, lams- en schapenvleesgerechten, zodat gemengde groepen uit verschillende delen van het menu kunnen kiezen.</p>
+
+<h2>Bezoek Chopras Indian Restaurant in Den Haag</h2>
+
+<p>Zoekt u authentiek <strong>Indiaas eten in Den Haag</strong> met ruime keuze voor vegetariërs, veganisten, glutenvrije gasten en gemengde gezelschappen? Bij <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> staat een gastvrije beleving centraal. Dankzij de gunstige ligging aan de Leyweg is het restaurant ook uitstekend bereikbaar vanuit <a href="https://chopras.nl/nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/nl/indian-restaurant-zoetermeer">Zoetermeer</a> en <a href="https://chopras.nl/nl/indian-restaurant-delft">Delft</a>.</p>
+
+<p>Van knapperige Pani Puri en chaat tot malse Paneer Tikka, Malai Soya Chaap, romige Dal Makhani, Veg Biryani en verrukkelijke desserts: stel uw ideale maaltijd geheel naar wens samen.</p>
+
+<p>En heeft u iets te vieren? Onze <a href="https://chopras.nl/nl/feestzaal-den-haag">Feestzaal</a> staat klaar voor bruiloften, verjaardagen, babyshowers, zakelijke bijeenkomsten en feestelijke evenementen.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>
+Leyweg 986<br/>
+2545 GW Den Haag, Nederland</p>
+
+<p>Het restaurant is geopend van dinsdag tot en met zondag, van 16:30 tot 22:30 uur.</p>
+
+<p>Voor reserveringen, <a href="https://chopras.nl/nl/indian-takeaway-den-haag">afhaal</a>, <a href="https://chopras.nl/nl/indian-food-delivery-den-haag">bezorging</a>, catering of zaalverhuur kunt u terecht op onze website of onze <a href="https://chopras.nl/nl/menu">menukaart</a> bekijken.</p>
+`
+  },
+  {
     slug: "authentic-indian-food-near-zoetermeer-and-the-hague",
     title: "Authentic Indian Food Near Zoetermeer and The Hague",
     metaTitle: "Authentic Indian Food Near Zoetermeer and The Hague | Chopras",
