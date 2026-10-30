@@ -55,7 +55,6 @@ const staticPages: SitemapPage[] = [
   { slug: 'best-indian-restaurant-in-den-haag-for-family-dining-parties-corporate-events', lastMod: '2026-08-26', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'why-chopras-indian-restaurant-is-a-top-choice-for-authentic-indian-food-in-den-haag', lastMod: '2026-08-30', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-restaurant-near-me-in-den-haag-a-food-lovers-guide', lastMod: '2026-09-30', priority: 0.8, changeFreq: 'weekly' },
-  { slug: 'halal-food-in-den-haag-a-complete-guide-to-authentic-halal-indian-cuisine', lastMod: '2026-10-03', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indiaas-restaurant-den-haag-where-can-you-find-authentiek-indiaas-eten-in-den-haag', lastMod: '2026-10-06', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-restaurant-near-me-in-rijswijk-authentic-indian-food', lastMod: '2026-10-11', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'how-to-find-the-best-indian-restaurant-near-me-in-den-haag-centraal', lastMod: '2026-10-18', priority: 0.8, changeFreq: 'weekly' },
@@ -63,6 +62,7 @@ const staticPages: SitemapPage[] = [
   { slug: 'indian-restaurant-near-thomsonplein-den-haag', lastMod: '2026-10-21', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'authentic-indian-food-near-zoetermeer-and-the-hague', lastMod: '2026-10-24', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-food-den-haag-for-vegetarians-vegans', lastMod: '2026-10-29', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'halal-food-in-den-haag-a-complete-guide-to-authentic-halal-indian-cuisine', lastMod: '2026-10-30', priority: 0.8, changeFreq: 'weekly' },
 
 
   // Location pages
