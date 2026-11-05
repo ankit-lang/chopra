@@ -63,6 +63,7 @@ const staticPages: SitemapPage[] = [
   { slug: 'authentic-indian-food-near-zoetermeer-and-the-hague', lastMod: '2026-10-24', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'indian-food-den-haag-for-vegetarians-vegans', lastMod: '2026-10-29', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'halal-food-in-den-haag-a-complete-guide-to-authentic-halal-indian-cuisine', lastMod: '2026-10-30', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'traditional-indian-diwali-food-den-haag', lastMod: '2026-11-05', priority: 0.8, changeFreq: 'weekly' },
 
 
   // Location pages

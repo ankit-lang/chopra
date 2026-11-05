@@ -2,6 +2,368 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "traditional-indian-diwali-food-den-haag",
+    title: "Traditional Indian Diwali Food in Den Haag | Chopras",
+    metaTitle: "Traditional Indian Diwali Food in Den Haag | Chopras",
+    metaDescription: "Discover traditional Indian Diwali food at Chopras Indian Restaurant in Den Haag. Enjoy delicious vegetarian dishes, Indian curries and festive desserts.",
+    h1: "Traditional Indian Diwali Food: Popular Dishes to Enjoy at Chopras Indian Restaurant",
+    primaryKeyword: "Traditional Indian Diwali food Den Haag",
+    keywords: [
+      "Indian vegetarian food Den Haag",
+      "Indian restaurant in Den Haag",
+      "Diwali sweets and desserts",
+      "Vegetarian Indian restaurant Den Haag",
+      "Indian festive food",
+      "Indian food in Den Haag",
+      "Best Indian food Den Haag"
+    ],
+
+    titleNl: "Traditioneel Indiaas Diwali Eten in Den Haag | Chopras",
+    metaTitleNl: "Traditioneel Indiaas Diwali Eten in Den Haag | Chopras",
+    metaDescriptionNl: "Ontdek traditioneel Indiaas Diwali eten bij Chopras Indian Restaurant in Den Haag. Vegetarische gerechten, Indiase curry's en feestelijke desserts.",
+    h1Nl: "Traditioneel Indiaas Diwali Eten: Populaire Gerechten bij Chopras Indian Restaurant",
+    primaryKeywordNl: "Traditioneel Indiaas Diwali eten Den Haag",
+    excerptNl: "Ontdek traditioneel Indiaas Diwali eten bij Chopras Indian Restaurant in Den Haag. Vegetarische gerechten, Indiase curry's en feestelijke desserts.",
+    language: 'en' as const,
+    publishedAt: "2026-11-05",
+    readingTime: 6,
+    author: "Arun Chopra",
+    image: "/images/blog/5nov.png",
+    excerpt: "Discover traditional Indian Diwali food at Chopras Indian Restaurant in Den Haag. Enjoy delicious vegetarian dishes, Indian curries and festive desserts.",
+    faqs: [
+      {
+        question: "What are the most popular traditional Indian foods for Diwali?",
+        answer: "Popular traditional Indian Diwali foods include Paneer Butter Masala, Shahi Paneer, Dal Makhani, Veg Biryani, Indian breads such as naan and tandoori roti, and sweets such as Gulab Jamun, Rasmalai and Saffron Kheer."
+      },
+      {
+        question: "Where can I enjoy traditional Indian Diwali food in Den Haag?",
+        answer: "You can visit Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag, to enjoy North Indian vegetarian dishes, curries, rice preparations, Indian breads and desserts. The restaurant is open Tuesday to Sunday from 16:30 to 22:30."
+      },
+      {
+        question: "Which vegetarian Indian dishes are popular during Diwali?",
+        answer: "Popular vegetarian choices for Diwali include Paneer Butter Masala, Palak Paneer, Dal Makhani, Malai Kofta, Chana Masala and Veg Biryani. All of these dishes are on the menu at Chopras Indian Restaurant in Den Haag."
+      },
+      {
+        question: "What are traditional Indian sweets served during Diwali?",
+        answer: "Traditional Diwali sweets include Gulab Jamun, Rasmalai, Kheer, Gajar Halwa, ladoos and barfi. At Chopras Indian Restaurant in Den Haag, you can finish your meal with Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa or Kulfi."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Wat zijn de populairste traditionele Indiase gerechten voor Diwali?",
+        answer: "Populaire traditionele Indiase Diwali gerechten zijn Paneer Butter Masala, Shahi Paneer, Dal Makhani, Veg Biryani, Indiaas brood zoals naan en tandoori roti, en zoetigheden zoals Gulab Jamun, Rasmalai en Saffron Kheer."
+      },
+      {
+        question: "Waar kan ik traditioneel Indiaas Diwali eten vinden in Den Haag?",
+        answer: "U kunt Chopras Indian Restaurant bezoeken aan de Leyweg 986, 2545 GW Den Haag, voor Noord-Indiase vegetarische gerechten, curry's, rijstgerechten, Indiaas brood en desserts. Het restaurant is geopend van dinsdag tot en met zondag van 16:30 tot 22:30."
+      },
+      {
+        question: "Welke vegetarische Indiase gerechten zijn populair tijdens Diwali?",
+        answer: "Populaire vegetarische keuzes voor Diwali zijn Paneer Butter Masala, Palak Paneer, Dal Makhani, Malai Kofta, Chana Masala en Veg Biryani. Al deze gerechten staan op het menu van Chopras Indian Restaurant in Den Haag."
+      },
+      {
+        question: "Welke traditionele Indiase zoetigheden worden tijdens Diwali geserveerd?",
+        answer: "Traditionele Diwali zoetigheden zijn onder meer Gulab Jamun, Rasmalai, Kheer, Gajar Halwa, ladoos en barfi. Bij Chopras Indian Restaurant in Den Haag kunt u uw maaltijd afsluiten met Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa of Kulfi."
+      }
+    ],
+    content: `
+<img src="/images/blog/5nov.png" alt="Traditional Indian Diwali food at Chopras Indian Restaurant in Den Haag" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Diwali is one of the most celebrated festivals in Indian culture. Known as the festival of lights, it brings families and friends together to enjoy delicious food, traditional sweets and beautiful celebrations. From rich vegetarian curries to freshly prepared Indian breads and mouth-watering desserts, food plays an important role in making Diwali special.</p>
+
+<p>For people celebrating Diwali in Den Haag, enjoying traditional Indian cuisine is a wonderful way to experience the flavours and traditions of India. Whether you are planning a family dinner, meeting friends or organising a festive gathering, <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a variety of Indian dishes to make your celebration memorable.</p>
+
+<p>Below are some popular traditional Indian foods that you can enjoy during Diwali at Chopras Indian Restaurant.</p>
+
+<h2>Why Is Food an Important Part of Diwali Celebrations?</h2>
+
+<p>Food is an essential part of Indian festivals, and Diwali is no exception. During the festival, families prepare special meals, exchange sweets and welcome guests with delicious homemade dishes.</p>
+
+<p>Traditional Diwali food often includes:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Rich and flavourful vegetarian curries.</li>
+    <li>Traditional Indian breads and rice dishes.</li>
+    <li>Snacks and savoury starters.</li>
+    <li>Milk-based Indian sweets and desserts.</li>
+    <li>Special festive meals shared with family and friends.</li>
+</ul>
+
+<p>For Indians living in the Netherlands, enjoying traditional Indian food during Diwali is also a beautiful way to stay connected with their culture and traditions.</p>
+
+<h2>Popular Traditional Vegetarian Indian Dishes for Diwali</h2>
+
+<p>Vegetarian food has a special place in many Indian Diwali celebrations. From creamy paneer curries to comforting lentil dishes, Indian vegetarian cuisine offers plenty of delicious choices.</p>
+
+<p>At Chopras Indian Restaurant in Den Haag, you can enjoy a variety of dishes from the <a href="https://chopras.nl/vegetarian-menu">vegetarian menu</a> during your festive dinner:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Paneer Butter Masala</li>
+    <li>Shahi Paneer</li>
+    <li>Palak Paneer</li>
+    <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li>Chana Masala</li>
+    <li>Aloo Gobi</li>
+    <li>Mixed Veg</li>
+    <li>Malai Kofta</li>
+    <li><a href="https://chopras.nl/biryani-den-haag">Veg Biryani</a></li>
+</ul>
+
+<h2>Traditional Indian Breads and Rice for a Festive Meal</h2>
+
+<p>No Indian festive dinner feels complete without freshly prepared bread and flavourful rice. These dishes complement vegetarian curries and make the meal even more enjoyable.</p>
+
+<p>Some popular choices include:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Tandoori Roti</li>
+    <li>Plain Naan</li>
+    <li>Jeera Rice</li>
+    <li>Veg Biryani</li>
+</ul>
+
+<p>Enjoying these combinations is a great way to experience the variety of North Indian cuisine on the <a href="https://chopras.nl/menu">Chopras Indian Restaurant menu</a>.</p>
+
+<h2>Traditional Indian Diwali Sweets and Desserts</h2>
+
+<p>Diwali celebrations are incomplete without sweets. In Indian culture, sharing sweets represents happiness, prosperity and good wishes for family and friends.</p>
+
+<p>If you are enjoying Diwali in Den Haag, traditional Indian desserts can add a sweet ending to your festive meal.</p>
+
+<p>Here are some popular Indian desserts you can order at Chopras Indian Restaurant:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Kulfi Malai</li>
+    <li>Kulfi Pistachio</li>
+    <li>Kulfi Mango</li>
+    <li>Moong Dal Halwa</li>
+</ul>
+
+<h2>Celebrate Diwali with Vegetarian Indian Food in Den Haag</h2>
+
+<p>Planning a <a href="https://chopras.nl/diwali-dinner-den-haag">Diwali dinner in Den Haag</a> with family or friends? Choosing a restaurant that offers a variety of vegetarian Indian dishes can make your celebration more enjoyable.</p>
+
+<p>Chopras Indian Restaurant, located at Leyweg 986, Den Haag, offers a range of North Indian dishes, including vegetarian curries, rice preparations, Indian breads and other specialities.</p>
+
+<p>Whether you are craving Paneer Butter Masala, <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a>, Veg Biryani or other traditional Indian flavours, you can enjoy a memorable evening with your loved ones. Guests who prefer plant-based food can also explore the <a href="https://chopras.nl/vegan-menu">vegan menu</a>.</p>
+
+<p>You can also explore the restaurant's <a href="https://chopras.nl/catering">catering services</a> for family gatherings, festive parties and special events.</p>
+
+<h2>Diwali Catering in Den Haag for Family and Group Celebrations</h2>
+
+<p>If you are planning a larger Diwali celebration, catering is a convenient way to serve delicious Indian food to your guests.</p>
+
+<p>Chopras Indian Restaurant provides <a href="https://chopras.nl/catering">Indian catering services</a> for private parties, family gatherings and <a href="https://chopras.nl/corporate-events-den-haag">corporate events in Den Haag</a>.</p>
+
+<p>You can enquire about vegetarian catering options, customised menus and arrangements according to your guest count.</p>
+
+<p>The restaurant also has a <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a> suitable for approximately 25 to 50 guests, making it a convenient option for those planning a festive gathering.</p>
+
+<h2>Why Choose Chopras Indian Restaurant for Traditional Indian Food?</h2>
+
+<p>When celebrating a festival like Diwali, good food and a welcoming atmosphere make the occasion more special.</p>
+
+<p>Here are some reasons to consider Chopras Indian Restaurant:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Traditional Indian Flavours:</strong> Enjoy a variety of North Indian curries, vegetarian dishes and traditional specialities.</li>
+    <li><strong>Vegetarian Food Choices:</strong> Explore popular paneer dishes, lentil curries and vegetable preparations.</li>
+    <li><strong>Freshly Prepared Food:</strong> Enjoy Indian dishes prepared with fresh ingredients and aromatic spices.</li>
+    <li><strong>Private Event Hall:</strong> Arrange festive gatherings for approximately 25 to 50 guests.</li>
+    <li><strong>Indian Catering Services:</strong> Enquire about customised food arrangements for Diwali parties and family events.</li>
+    <li><strong>Convenient Location:</strong> Visit Leyweg 986, Den Haag, with tram line 2 stopping at Leyweg.</li>
+</ul>
+
+<h2>Visit Chopras Indian Restaurant for a Memorable Diwali Celebration</h2>
+
+<p>Make this Diwali special by enjoying traditional Indian food, delicious vegetarian dishes and festive moments with your loved ones.</p>
+
+<p>Whether you are planning a family dinner, exploring Indian vegetarian food in Den Haag or arranging catering for a Diwali party, Chopras Indian Restaurant is ready to welcome you. You can also order <a href="https://chopras.nl/indian-takeaway-den-haag">Indian takeaway</a> or <a href="https://chopras.nl/indian-food-delivery-den-haag">Indian food delivery in Den Haag</a> for a Diwali dinner at home.</p>
+
+<p><strong>Restaurant Details:</strong></p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Restaurant: Chopras Indian Restaurant</li>
+    <li>Address: Leyweg 986, 2545 GW Den Haag, Netherlands</li>
+    <li>Phone: +31 6 30645930</li>
+    <li>Opening Hours: Tuesday to Sunday, 16:30 to 22:30 (closed on Monday)</li>
+    <li>Services: Dine-in, takeaway, delivery, catering and private events</li>
+    <li>Website: <a href="https://chopras.nl">https://www.chopras.nl/</a></li>
+</ul>
+
+<p>Celebrate the flavours of India and make your Diwali gathering even more special with Chopras Indian Restaurant.</p>
+
+<h2>Frequently Asked Questions (FAQs)</h2>
+
+<h3>What are the most popular traditional Indian foods for Diwali?</h3>
+<p>Popular traditional Indian Diwali foods include Paneer Butter Masala, Shahi Paneer, Dal Makhani, Veg Biryani, Indian breads such as naan and tandoori roti, and sweets such as Gulab Jamun, Rasmalai and Saffron Kheer.</p>
+
+<h3>Where can I enjoy traditional Indian Diwali food in Den Haag?</h3>
+<p>You can visit Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag, to enjoy North Indian vegetarian dishes, curries, rice preparations, Indian breads and desserts. The restaurant is open Tuesday to Sunday from 16:30 to 22:30.</p>
+
+<h3>Which vegetarian Indian dishes are popular during Diwali?</h3>
+<p>Popular vegetarian choices for Diwali include Paneer Butter Masala, Palak Paneer, Dal Makhani, Malai Kofta, Chana Masala and Veg Biryani. All of these dishes are on the menu at Chopras Indian Restaurant in Den Haag.</p>
+
+<h3>What are traditional Indian sweets served during Diwali?</h3>
+<p>Traditional Diwali sweets include Gulab Jamun, Rasmalai, Kheer, Gajar Halwa, ladoos and barfi. At Chopras Indian Restaurant in Den Haag, you can finish your meal with Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa or Kulfi.</p>
+
+<h2>Bring the Flavours of India to Your Diwali Celebration</h2>
+
+<p>Diwali is about happiness, togetherness and sharing delicious food with the people we love. From traditional vegetarian curries to sweet Indian desserts, every dish adds something special to the celebration.</p>
+
+<p>Enjoy the taste of Indian tradition at Chopras Indian Restaurant in Den Haag this festive season and create wonderful memories with family and friends.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Tuesday to Sunday: 16:30 to 22:30<br/>Phone: +31 6 30645930</p>
+`,
+    contentNl: `
+<img src="/images/blog/5nov.png" alt="Traditioneel Indiaas Diwali eten bij Chopras Indian Restaurant in Den Haag" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Diwali is een van de meest gevierde feesten in de Indiase cultuur. Het staat bekend als het lichtjesfeest en brengt families en vrienden samen om te genieten van heerlijk eten, traditionele zoetigheden en mooie vieringen. Van rijke vegetarische curry's tot vers bereid Indiaas brood en verrukkelijke desserts: eten speelt een belangrijke rol om Diwali bijzonder te maken.</p>
+
+<p>Voor mensen die Diwali in Den Haag vieren, is genieten van de traditionele Indiase keuken een prachtige manier om de smaken en tradities van India te beleven. Of u nu een familiediner plant, vrienden ontmoet of een feestelijke bijeenkomst organiseert, <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> biedt een grote variatie aan Indiase gerechten om uw viering onvergetelijk te maken.</p>
+
+<p>Hieronder vindt u enkele populaire traditionele Indiase gerechten die u tijdens Diwali kunt proeven bij Chopras Indian Restaurant.</p>
+
+<h2>Waarom Is Eten Zo Belangrijk Tijdens Diwali?</h2>
+
+<p>Eten is een essentieel onderdeel van Indiase feesten, en Diwali is daarop geen uitzondering. Tijdens het feest bereiden families speciale maaltijden, wisselen ze zoetigheden uit en verwelkomen ze gasten met heerlijke zelfgemaakte gerechten.</p>
+
+<p>Traditioneel Diwali eten bestaat vaak uit:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Rijke en smaakvolle vegetarische curry's.</li>
+    <li>Traditioneel Indiaas brood en rijstgerechten.</li>
+    <li>Snacks en hartige voorgerechten.</li>
+    <li>Indiase zoetigheden en desserts op basis van melk.</li>
+    <li>Speciale feestmaaltijden om te delen met familie en vrienden.</li>
+</ul>
+
+<p>Voor Indiërs die in Nederland wonen, is genieten van traditioneel Indiaas eten tijdens Diwali ook een mooie manier om verbonden te blijven met hun cultuur en tradities.</p>
+
+<h2>Populaire Traditionele Vegetarische Indiase Gerechten voor Diwali</h2>
+
+<p>Vegetarisch eten heeft een bijzondere plek in veel Indiase Diwali vieringen. Van romige paneer curry's tot troostende linzengerechten: de Indiase vegetarische keuken biedt volop heerlijke keuzes.</p>
+
+<p>Bij Chopras Indian Restaurant in Den Haag kunt u tijdens uw feestelijke diner genieten van gerechten van het <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische menu</a>:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Paneer Butter Masala</li>
+    <li>Shahi Paneer</li>
+    <li>Palak Paneer</li>
+    <li><a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li>Chana Masala</li>
+    <li>Aloo Gobi</li>
+    <li>Mixed Veg</li>
+    <li>Malai Kofta</li>
+    <li><a href="https://chopras.nl/nl/biryani-den-haag">Veg Biryani</a></li>
+</ul>
+
+<h2>Traditioneel Indiaas Brood en Rijst voor een Feestmaaltijd</h2>
+
+<p>Geen Indiaas feestdiner is compleet zonder vers bereid brood en smaakvolle rijst. Deze gerechten passen perfect bij vegetarische curry's en maken de maaltijd nog lekkerder.</p>
+
+<p>Enkele populaire keuzes zijn:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Tandoori Roti</li>
+    <li>Plain Naan</li>
+    <li>Jeera Rice</li>
+    <li>Veg Biryani</li>
+</ul>
+
+<p>Met deze combinaties ervaart u de variatie van de Noord-Indiase keuken op het <a href="https://chopras.nl/nl/menu">menu van Chopras Indian Restaurant</a>.</p>
+
+<h2>Traditionele Indiase Diwali Zoetigheden en Desserts</h2>
+
+<p>Een Diwali viering is niet compleet zonder zoetigheden. In de Indiase cultuur staat het delen van zoetigheden voor geluk, voorspoed en goede wensen voor familie en vrienden.</p>
+
+<p>Viert u Diwali in Den Haag? Dan zorgen traditionele Indiase desserts voor een zoete afsluiting van uw feestmaaltijd.</p>
+
+<p>Dit zijn enkele populaire Indiase desserts die u bij Chopras Indian Restaurant kunt bestellen:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Kulfi Malai</li>
+    <li>Kulfi Pistachio</li>
+    <li>Kulfi Mango</li>
+    <li>Moong Dal Halwa</li>
+</ul>
+
+<h2>Vier Diwali met Vegetarisch Indiaas Eten in Den Haag</h2>
+
+<p>Plant u een <a href="https://chopras.nl/nl/diwali-dinner-den-haag">Diwali diner in Den Haag</a> met familie of vrienden? Een restaurant met een ruime keuze aan vegetarische Indiase gerechten maakt uw viering nog aangenamer.</p>
+
+<p>Chopras Indian Restaurant, gevestigd aan de Leyweg 986 in Den Haag, biedt een breed aanbod aan Noord-Indiase gerechten, waaronder vegetarische curry's, rijstgerechten, Indiaas brood en andere specialiteiten.</p>
+
+<p>Of u nu zin heeft in Paneer Butter Masala, <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a>, Veg Biryani of andere traditionele Indiase smaken, u geniet van een onvergetelijke avond met uw dierbaren. Gasten die de voorkeur geven aan plantaardig eten, kunnen ook het <a href="https://chopras.nl/nl/vegan-menu">veganistische menu</a> bekijken.</p>
+
+<p>Bekijk ook de <a href="https://chopras.nl/nl/catering">cateringdiensten</a> van het restaurant voor familiebijeenkomsten, feestelijke partijen en speciale evenementen.</p>
+
+<h2>Diwali Catering in Den Haag voor Familie en Groepen</h2>
+
+<p>Plant u een grotere Diwali viering? Dan is catering een handige manier om uw gasten heerlijk Indiaas eten te serveren.</p>
+
+<p>Chopras Indian Restaurant verzorgt <a href="https://chopras.nl/nl/catering">Indiase catering</a> voor privéfeesten, familiebijeenkomsten en <a href="https://chopras.nl/nl/corporate-events-den-haag">bedrijfsevenementen in Den Haag</a>.</p>
+
+<p>U kunt informeren naar vegetarische cateringopties, menu's op maat en afspraken die passen bij het aantal gasten.</p>
+
+<p>Het restaurant beschikt ook over een <a href="https://chopras.nl/nl/feestzaal-den-haag">privé feestzaal</a> voor ongeveer 25 tot 50 gasten, een handige optie voor wie een feestelijke bijeenkomst plant.</p>
+
+<h2>Waarom Kiezen voor Chopras Indian Restaurant voor Traditioneel Indiaas Eten?</h2>
+
+<p>Bij het vieren van een feest als Diwali maken goed eten en een gastvrije sfeer de gelegenheid extra bijzonder.</p>
+
+<p>Enkele redenen om voor Chopras Indian Restaurant te kiezen:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Traditionele Indiase Smaken:</strong> Geniet van Noord-Indiase curry's, vegetarische gerechten en traditionele specialiteiten.</li>
+    <li><strong>Vegetarische Keuzes:</strong> Ontdek populaire paneer gerechten, linzencurry's en groentegerechten.</li>
+    <li><strong>Vers Bereid Eten:</strong> Indiase gerechten bereid met verse ingrediënten en aromatische kruiden.</li>
+    <li><strong>Privé Feestzaal:</strong> Organiseer feestelijke bijeenkomsten voor ongeveer 25 tot 50 gasten.</li>
+    <li><strong>Indiase Catering:</strong> Informeer naar eten op maat voor Diwali feesten en familie-evenementen.</li>
+    <li><strong>Handige Locatie:</strong> Bezoek de Leyweg 986 in Den Haag, met tramlijn 2 tot halte Leyweg.</li>
+</ul>
+
+<h2>Bezoek Chopras Indian Restaurant voor een Onvergetelijke Diwali</h2>
+
+<p>Maak deze Diwali bijzonder met traditioneel Indiaas eten, heerlijke vegetarische gerechten en feestelijke momenten met uw dierbaren.</p>
+
+<p>Of u nu een familiediner plant, vegetarisch Indiaas eten in Den Haag wilt ontdekken of catering regelt voor een Diwali feest, Chopras Indian Restaurant heet u van harte welkom. U kunt ook <a href="https://chopras.nl/nl/indian-takeaway-den-haag">Indiaas afhalen</a> of kiezen voor <a href="https://chopras.nl/nl/indian-food-delivery-den-haag">Indiaas eten laten bezorgen in Den Haag</a> voor een Diwali diner thuis.</p>
+
+<p><strong>Restaurantgegevens:</strong></p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Restaurant: Chopras Indian Restaurant</li>
+    <li>Adres: Leyweg 986, 2545 GW Den Haag, Nederland</li>
+    <li>Telefoon: +31 6 30645930</li>
+    <li>Openingstijden: dinsdag tot en met zondag, 16:30 tot 22:30 (maandag gesloten)</li>
+    <li>Diensten: dineren, afhalen, bezorgen, catering en privé evenementen</li>
+    <li>Website: <a href="https://chopras.nl/nl">https://www.chopras.nl/</a></li>
+</ul>
+
+<p>Vier de smaken van India en maak uw Diwali bijeenkomst nog specialer met Chopras Indian Restaurant.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Wat zijn de populairste traditionele Indiase gerechten voor Diwali?</h3>
+<p>Populaire traditionele Indiase Diwali gerechten zijn Paneer Butter Masala, Shahi Paneer, Dal Makhani, Veg Biryani, Indiaas brood zoals naan en tandoori roti, en zoetigheden zoals Gulab Jamun, Rasmalai en Saffron Kheer.</p>
+
+<h3>Waar kan ik traditioneel Indiaas Diwali eten vinden in Den Haag?</h3>
+<p>U kunt Chopras Indian Restaurant bezoeken aan de Leyweg 986, 2545 GW Den Haag, voor Noord-Indiase vegetarische gerechten, curry's, rijstgerechten, Indiaas brood en desserts. Het restaurant is geopend van dinsdag tot en met zondag van 16:30 tot 22:30.</p>
+
+<h3>Welke vegetarische Indiase gerechten zijn populair tijdens Diwali?</h3>
+<p>Populaire vegetarische keuzes voor Diwali zijn Paneer Butter Masala, Palak Paneer, Dal Makhani, Malai Kofta, Chana Masala en Veg Biryani. Al deze gerechten staan op het menu van Chopras Indian Restaurant in Den Haag.</p>
+
+<h3>Welke traditionele Indiase zoetigheden worden tijdens Diwali geserveerd?</h3>
+<p>Traditionele Diwali zoetigheden zijn onder meer Gulab Jamun, Rasmalai, Kheer, Gajar Halwa, ladoos en barfi. Bij Chopras Indian Restaurant in Den Haag kunt u uw maaltijd afsluiten met Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa of Kulfi.</p>
+
+<h2>Breng de Smaken van India naar Uw Diwali Viering</h2>
+
+<p>Diwali draait om geluk, samenzijn en heerlijk eten delen met de mensen van wie we houden. Van traditionele vegetarische curry's tot zoete Indiase desserts: elk gerecht voegt iets bijzonders toe aan de viering.</p>
+
+<p>Geniet dit feestseizoen van de smaak van de Indiase traditie bij Chopras Indian Restaurant in Den Haag en creëer mooie herinneringen met familie en vrienden.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Dinsdag tot en met zondag: 16:30 tot 22:30<br/>Telefoon: +31 6 30645930</p>
+`
+  },
+  {
     slug: "halal-food-in-den-haag-a-complete-guide-to-authentic-halal-indian-cuisine",
     title: "Halal Food in Den Haag | Halal Indian Cuisine",
     metaTitle: "Halal Food in Den Haag | Halal Indian Cuisine",
