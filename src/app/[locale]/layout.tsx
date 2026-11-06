@@ -110,14 +110,16 @@ export default function LocaleLayout({
         <link href="https://awards.infcdn.net/2026_new/circ5_n.css" rel="stylesheet" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZKMF6VZ9Q2"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        {/* Google Analytics (G-ZKMF6VZ9Q2) + Google Ads tag (AW-18150061008) share one gtag.js load */}
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ZKMF6VZ9Q2');
+      gtag('config', 'AW-18150061008');
     `}
         </Script>
 
