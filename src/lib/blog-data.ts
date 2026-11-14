@@ -2,6 +2,395 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "where-to-eat-indian-food-near-den-haag-central-station",
+    title: "Where to Eat Indian Food Near Den Haag Centraal",
+    metaTitle: "Where to Eat Indian Food Near Den Haag Centraal | Chopras",
+    metaDescription: "Enjoy Indian food near Den Haag Centraal at Chopras Indian Restaurant. Explore halal, vegetarian, vegan, gluten-free dishes, tandoori and catering.",
+    h1: "Where to Eat Indian Food Near Den Haag Central Station? A Guide to Delicious Indian Dining",
+    primaryKeyword: "Indian food near Den Haag Central",
+    keywords: [
+      "Indian food near Den Haag Central",
+      "Indian food Den Haag",
+      "Best Indian restaurant Den Haag",
+      "Halal Indian restaurant Den Haag"
+    ],
+
+    titleNl: "Waar Indiaas Eten bij Den Haag Centraal",
+    metaTitleNl: "Waar Indiaas Eten bij Den Haag Centraal | Chopras",
+    metaDescriptionNl: "Indiaas eten bij Den Haag Centraal? Bezoek Chopras Indian Restaurant. Halal, vegetarische, veganistische en glutenvrije gerechten, tandoori en catering.",
+    h1Nl: "Waar Eet u Indiaas bij Station Den Haag Centraal? Een Gids voor Heerlijk Indiaas Dineren",
+    primaryKeywordNl: "Indiaas eten bij Den Haag Centraal",
+    excerptNl: "Indiaas eten bij Den Haag Centraal? Bezoek Chopras Indian Restaurant. Halal, vegetarische, veganistische en glutenvrije gerechten, tandoori en catering.",
+    language: 'en' as const,
+    publishedAt: "2026-11-14",
+    readingTime: 7,
+    author: "Arun Chopra",
+    image: "/images/blog/14nov.png",
+    excerpt: "Enjoy Indian food near Den Haag Centraal at Chopras Indian Restaurant. Explore halal, vegetarian, vegan, gluten-free dishes, tandoori and catering.",
+    faqs: [
+      {
+        question: "Does Chopras Indian Restaurant offer vegan and vegetarian food?",
+        answer: "Yes, Chopras Indian Restaurant in Den Haag has vegetarian dishes and vegan-friendly options on its menu. Guests should confirm ingredients with the restaurant team before ordering."
+      },
+      {
+        question: "Are gluten-free options available at Chopras Indian Restaurant?",
+        answer: "Yes. Guests can ask the team at Chopras Indian Restaurant about suitable gluten-free dishes and how they are prepared. Anyone with an allergy should discuss possible cross-contact before ordering."
+      },
+      {
+        question: "Does Chopras Indian Restaurant serve halal food?",
+        answer: "Yes. Chopras Indian Restaurant states that its restaurant menu is fully halal certified. The restaurant is at Leyweg 986, 2545 GW Den Haag."
+      },
+      {
+        question: "Can I organise a private event at Chopras Indian Restaurant?",
+        answer: "Yes, the private event hall at Chopras Indian Restaurant can accommodate approximately 25 to 50 guests and can be considered for weddings, birthdays, anniversaries, corporate gatherings and cultural celebrations. Contact the restaurant to confirm availability and event arrangements."
+      },
+      {
+        question: "Does Chopras Indian Restaurant offer takeaway and delivery?",
+        answer: "Yes. Chopras Indian Restaurant in Den Haag offers dine-in, takeaway and delivery. Check the website for current ordering options and availability."
+      },
+      {
+        question: "How do I get to Chopras Indian Restaurant from Den Haag Centraal?",
+        answer: "Take tram 2 towards Leyenburg from Den Haag Centraal and get off at the Leyweg stop. The journey takes approximately 15 minutes. Chopras Indian Restaurant is at Leyweg 986, 2545 GW Den Haag."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Heeft Chopras Indian Restaurant veganistisch en vegetarisch eten?",
+        answer: "Ja, Chopras Indian Restaurant in Den Haag heeft vegetarische gerechten en veganistische opties op het menu. Gasten wordt gevraagd de ingrediënten met het team te bevestigen voordat zij bestellen."
+      },
+      {
+        question: "Zijn er glutenvrije opties bij Chopras Indian Restaurant?",
+        answer: "Ja. Gasten kunnen het team van Chopras Indian Restaurant vragen naar geschikte glutenvrije gerechten en de bereiding ervan. Wie een allergie heeft, bespreekt mogelijke kruisbesmetting het best vooraf."
+      },
+      {
+        question: "Serveert Chopras Indian Restaurant halal eten?",
+        answer: "Ja. Chopras Indian Restaurant geeft aan dat het restaurantmenu volledig halal gecertificeerd is. Het restaurant ligt aan de Leyweg 986, 2545 GW Den Haag."
+      },
+      {
+        question: "Kan ik een privé evenement organiseren bij Chopras Indian Restaurant?",
+        answer: "Ja, de privé feestzaal van Chopras Indian Restaurant biedt plaats aan ongeveer 25 tot 50 gasten en is geschikt voor bruiloften, verjaardagen, jubilea, bedrijfsbijeenkomsten en culturele vieringen. Neem contact op met het restaurant om de beschikbaarheid en afspraken te bevestigen."
+      },
+      {
+        question: "Biedt Chopras Indian Restaurant afhalen en bezorgen aan?",
+        answer: "Ja. Chopras Indian Restaurant in Den Haag biedt dineren, afhalen en bezorgen. Bekijk de website voor de actuele bestelmogelijkheden en beschikbaarheid."
+      },
+      {
+        question: "Hoe kom ik vanaf Den Haag Centraal bij Chopras Indian Restaurant?",
+        answer: "Neem vanaf Den Haag Centraal tram 2 richting Leyenburg en stap uit bij halte Leyweg. De reis duurt ongeveer 15 minuten. Chopras Indian Restaurant ligt aan de Leyweg 986, 2545 GW Den Haag."
+      }
+    ],
+    content: `
+<img src="/images/blog/14nov.png" alt="Indian food near Den Haag Centraal at Chopras Indian Restaurant, Leyweg 986" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Are you searching for an <a href="https://chopras.nl/indian-restaurant-near-den-haag-centraal">Indian restaurant near Den Haag Centraal</a> where you can enjoy delicious food with family and friends? Whether you are a local resident, tourist or food lover exploring the city, Indian cuisine offers a wonderful combination of aromatic spices, traditional curries, tandoori specialities and flavourful vegetarian dishes.</p>
+
+<p>If you are looking for the <a href="https://chopras.nl">best Indian food in Den Haag</a>, Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag, is a place to explore. The restaurant is around 15 minutes away by tram from Den Haag Centraal, with dine-in, <a href="https://chopras.nl/indian-takeaway-den-haag">takeaway</a> and <a href="https://chopras.nl/indian-food-delivery-den-haag">delivery</a> options.</p>
+
+<p>Chopras Indian Restaurant is a fully <a href="https://chopras.nl/halal-food-den-haag">halal-certified Indian restaurant in Den Haag</a>, serving meat, vegetarian dishes and vegan options. Guests can also request suitable gluten-free choices. The restaurant welcomes families and groups, and offers a private event hall and outside catering for celebrations and business events.</p>
+
+<h2>Enjoy Indian Food Near Den Haag Centraal</h2>
+
+<p>After shopping, sightseeing or exploring Den Haag Centrum, enjoying a delicious Indian meal can make your day even better. From rich curries and freshly baked naan to biryani and traditional starters, Indian food offers plenty of choices for different tastes.</p>
+
+<p>Chopras Indian Restaurant is located at Leyweg 986, Den Haag. It is approximately 15 minutes by tram from Den Haag Centraal, making it an option for visitors travelling from the central station and other parts of the city. From Den Haag Centraal, take tram 2 towards Leyenburg and get off at the Leyweg stop. The tram journey takes approximately 15 minutes. Check current public transport information before travelling.</p>
+
+<p>Whether you are searching for an Indian restaurant near Den Haag Central Station, Indiaas eten Den Haag or a place for <a href="https://chopras.nl/family-restaurant-den-haag">family dining</a>, you can explore the menu at Chopras Indian Restaurant and <a href="https://chopras.nl/contact">contact the restaurant to reserve a table</a>.</p>
+
+<h2>Discover Traditional Indian Dishes at Chopras Indian Restaurant</h2>
+
+<p>Indian cuisine is famous for its variety of flavours, cooking techniques and regional specialities. At Chopras Indian Restaurant, guests can explore starters, traditional curries, tandoori dishes, biryani and Indian breads.</p>
+
+<p>Some popular menu choices include:</p>
+
+<h3>Indian Starters</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Samosa</li>
+    <li><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a></li>
+    <li>Aloo Tikki</li>
+    <li><a href="https://chopras.nl/chaat-den-haag">Papdi Chaat</a></li>
+</ul>
+
+<h3>Tandoori Specialities</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Chicken Tikka</li>
+    <li>Tandoori Chicken</li>
+    <li>Paneer Tikka</li>
+    <li>Chicken Seekh Kebab</li>
+</ul>
+
+<h3>Indian Curries</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a></li>
+    <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li><a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+    <li>Paneer Butter Masala</li>
+</ul>
+
+<h3>Rice and Biryani</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/biryani-den-haag">Chicken Biryani</a></li>
+    <li>Lamb Biryani</li>
+    <li>Veg Biryani</li>
+</ul>
+
+<h3>Indian Breads</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Plain Naan</li>
+    <li>Missi Roti</li>
+    <li>Lachha Paratha</li>
+    <li>Aloo Paratha</li>
+</ul>
+
+<h3>Traditional Indian Desserts</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Moong Dal Halwa</li>
+    <li>Kulfi</li>
+</ul>
+
+<p>From smoky tandoori flavours to creamy curries and aromatic rice, these dishes offer a variety of Indian dining experiences. You can explore the complete selection on the <a href="https://chopras.nl/menu">Chopras Indian Restaurant menu</a>.</p>
+
+<h2>Enjoy Tandoori Food in Den Haag</h2>
+
+<p>If you enjoy grilled Indian specialities, tandoori food is a great choice. Traditionally, tandoori dishes are marinated with yoghurt, herbs and spices before being cooked in a clay oven. The clay oven gives the food its distinctive smoky aroma and flavour.</p>
+
+<p>At Chopras Indian Restaurant, guests can explore tandoori options such as Chicken Tikka, Tandoori Chicken, Paneer Tikka and Chicken Seekh Kebab. These dishes can be enjoyed as starters or alongside naan and rice for a satisfying meal.</p>
+
+<p>If you are looking for a <a href="https://chopras.nl/tandoori-den-haag">tandoori restaurant in Den Haag</a>, explore the tandoori selection at Chopras Indian Restaurant.</p>
+
+<h2>Vegan, Vegetarian and Gluten-Free Indian Food</h2>
+
+<p>Choosing a restaurant for a family or group becomes easier when different dietary preferences are considered. Chopras Indian Restaurant offers <a href="https://chopras.nl/vegetarian-menu">vegetarian choices</a> alongside <a href="https://chopras.nl/vegan-menu">vegan-friendly</a> and <a href="https://chopras.nl/gluten-free-menu">gluten-free options</a>.</p>
+
+<p>Vegetarian guests can explore dishes such as Dal Makhani, Paneer Butter Masala and Veg Biryani. Those looking for vegan Indian food can ask about suitable vegetable and lentil preparations. Guests who require gluten-free food can also discuss suitable dishes with the restaurant team.</p>
+
+<p>Indian dishes may contain dairy products, wheat or other allergens depending on their ingredients and preparation. If you have an allergy or strict dietary requirement, confirm the ingredients and possible cross-contact with the restaurant before ordering.</p>
+
+<p>With this variety, Chopras Indian Restaurant is a good fit for people searching for vegetarian Indian food in Den Haag, vegan Indian food Den Haag and gluten-free Indian food Den Haag.</p>
+
+<h2>A Comfortable Choice for Family Dining and Food Lovers</h2>
+
+<p>Indian meals are often enjoyed together, making them a popular choice for family dinners and friendly gatherings. At Chopras Indian Restaurant, guests can choose from starters, curries, tandoori specialities, biryani, breads and desserts.</p>
+
+<p>The menu includes a range of vegetarian dishes, vegan options and fully <a href="https://chopras.nl/halal-menu">halal-certified food</a>. Families can ask the team about spice levels and suitable dishes for children before ordering.</p>
+
+<p>Whether you are visiting after exploring the city or planning a relaxed dinner with friends, Chopras Indian Restaurant offers a variety of Indian food choices in Den Haag.</p>
+
+<h2>Celebrate Special Occasions at the Chopras Private Event Hall</h2>
+
+<p>Planning a birthday, wedding celebration or family gathering? Chopras Indian Restaurant also offers a <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a> at Leyweg 986, Den Haag, with space for approximately 25 to 50 guests. Confirm the layout and availability directly with the team when enquiring.</p>
+
+<p>The venue can be considered for different occasions, including:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/indian-wedding-catering-den-haag">Weddings and Nikah receptions</a></li>
+    <li>Engagement and pre-wedding celebrations</li>
+    <li><a href="https://chopras.nl/indian-birthday-catering-den-haag">Birthday parties</a> and anniversaries</li>
+    <li>Baby showers and family gatherings</li>
+    <li><a href="https://chopras.nl/corporate-events-den-haag">Corporate dinners and team celebrations</a></li>
+    <li><a href="https://chopras.nl/diwali-dinner-den-haag">Diwali</a>, Eid, Christmas and other festive celebrations</li>
+    <li>Cultural and community events</li>
+    <li>Charity evenings</li>
+    <li>Yoga sessions and dance workshops</li>
+    <li>Photo shoots and private gatherings</li>
+</ul>
+
+<p>Guests can discuss their preferred seating arrangements, event requirements and food packages with the restaurant team. If you are searching for <a href="https://chopras.nl/zaal-huren-den-haag">feestzaal huren Den Haag</a>, a private event hall or a party venue with Indian food, explore the Chopras event hall.</p>
+
+<h2>Indian Catering in Den Haag for Every Occasion</h2>
+
+<p>Not every celebration needs to take place at a restaurant. Chopras Indian Restaurant also provides Indian catering for events at homes, offices and other venues.</p>
+
+<p>The catering service can be considered for weddings, baby showers, birthdays, corporate gatherings, Diwali and Eid celebrations, Christmas parties and family functions. Guests can discuss menu choices, the number of people and dietary preferences when planning an event.</p>
+
+<p>Catering enquiries can be made for Den Haag and surrounding areas, including <a href="https://chopras.nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/indian-restaurant-zoetermeer">Zoetermeer</a>, <a href="https://chopras.nl/indian-restaurant-voorburg">Voorburg</a>, <a href="https://chopras.nl/indian-restaurant-leidschendam">Leidschendam</a> and <a href="https://chopras.nl/indian-restaurant-westland">Westland</a>. For more information, visit the <a href="https://chopras.nl/catering">Indian catering in Den Haag</a> page.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Does Chopras Indian Restaurant offer vegan and vegetarian food?</h3>
+<p>Yes, Chopras Indian Restaurant in Den Haag has vegetarian dishes and vegan-friendly options on its menu. Guests should confirm ingredients with the restaurant team before ordering.</p>
+
+<h3>Are gluten-free options available at Chopras Indian Restaurant?</h3>
+<p>Yes. Guests can ask the team at Chopras Indian Restaurant about suitable gluten-free dishes and how they are prepared. Anyone with an allergy should discuss possible cross-contact before ordering.</p>
+
+<h3>Does Chopras Indian Restaurant serve halal food?</h3>
+<p>Yes. Chopras Indian Restaurant states that its restaurant menu is fully halal certified. The restaurant is at Leyweg 986, 2545 GW Den Haag.</p>
+
+<h3>Can I organise a private event at Chopras Indian Restaurant?</h3>
+<p>Yes, the private event hall at Chopras Indian Restaurant can accommodate approximately 25 to 50 guests and can be considered for weddings, birthdays, anniversaries, corporate gatherings and cultural celebrations. Contact the restaurant to confirm availability and event arrangements.</p>
+
+<h3>Does Chopras Indian Restaurant offer takeaway and delivery?</h3>
+<p>Yes. Chopras Indian Restaurant in Den Haag offers dine-in, takeaway and delivery. Check the website for current ordering options and availability.</p>
+
+<h3>How do I get to Chopras Indian Restaurant from Den Haag Centraal?</h3>
+<p>Take tram 2 towards Leyenburg from Den Haag Centraal and get off at the Leyweg stop. The journey takes approximately 15 minutes. Chopras Indian Restaurant is at Leyweg 986, 2545 GW Den Haag.</p>
+
+<h2>Enjoy Delicious Indian Food at Chopras Indian Restaurant</h2>
+
+<p>Whether you are exploring Den Haag, planning a family dinner or organising a special celebration, Chopras Indian Restaurant offers a variety of Indian food and event services. From tandoori specialities and traditional curries to halal, vegetarian, vegan and gluten-free choices, there are different options to explore. Visit the restaurant at Leyweg 986, 2545 GW Den Haag or enquire about its private event hall and catering for your next occasion.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Tuesday to Sunday: 16:30 to 22:30<br/>Phone: +31 6 30645930</p>
+`,
+    contentNl: `
+<img src="/images/blog/14nov.png" alt="Indiaas eten bij Den Haag Centraal bij Chopras Indian Restaurant, Leyweg 986" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Bent u op zoek naar een <a href="https://chopras.nl/nl/indian-restaurant-near-den-haag-centraal">Indiaas restaurant bij Den Haag Centraal</a> waar u met familie en vrienden kunt genieten van heerlijk eten? Of u nu in de stad woont, toerist bent of als fijnproever de stad verkent, de Indiase keuken biedt een prachtige combinatie van aromatische kruiden, traditionele curry's, tandoori specialiteiten en smaakvolle vegetarische gerechten.</p>
+
+<p>Zoekt u het <a href="https://chopras.nl/nl">beste Indiase eten in Den Haag</a>? Dan is Chopras Indian Restaurant aan de Leyweg 986, 2545 GW Den Haag, een plek om te ontdekken. Het restaurant ligt op ongeveer 15 minuten met de tram van Den Haag Centraal, en u kunt er dineren, <a href="https://chopras.nl/nl/indian-takeaway-den-haag">afhalen</a> of laten <a href="https://chopras.nl/nl/indian-food-delivery-den-haag">bezorgen</a>.</p>
+
+<p>Chopras Indian Restaurant is een volledig <a href="https://chopras.nl/nl/halal-food-den-haag">halal gecertificeerd Indiaas restaurant in Den Haag</a> met vleesgerechten, vegetarische gerechten en veganistische opties. Gasten kunnen ook vragen naar geschikte glutenvrije keuzes. Het restaurant verwelkomt families en groepen, en biedt een privé feestzaal en catering op locatie voor vieringen en zakelijke evenementen.</p>
+
+<h2>Geniet van Indiaas Eten bij Den Haag Centraal</h2>
+
+<p>Na het winkelen, sightseeing of een wandeling door Den Haag Centrum maakt een heerlijke Indiase maaltijd uw dag nog beter. Van rijke curry's en vers gebakken naan tot biryani en traditionele voorgerechten: Indiaas eten biedt volop keuze voor elke smaak.</p>
+
+<p>Chopras Indian Restaurant ligt aan de Leyweg 986 in Den Haag, op ongeveer 15 minuten met de tram van Den Haag Centraal. Daarmee is het restaurant goed bereikbaar voor bezoekers die vanaf het centraal station of uit andere delen van de stad komen. Neem vanaf Den Haag Centraal tram 2 richting Leyenburg en stap uit bij halte Leyweg. De tramrit duurt ongeveer 15 minuten. Controleer vooraf de actuele reisinformatie van het openbaar vervoer.</p>
+
+<p>Of u nu zoekt naar een Indiaas restaurant bij station Den Haag Centraal, Indiaas eten in Den Haag of een plek om <a href="https://chopras.nl/nl/family-restaurant-den-haag">met het gezin te dineren</a>, bekijk het menu van Chopras Indian Restaurant en <a href="https://chopras.nl/nl/contact">neem contact op om een tafel te reserveren</a>.</p>
+
+<h2>Ontdek Traditionele Indiase Gerechten bij Chopras Indian Restaurant</h2>
+
+<p>De Indiase keuken staat bekend om haar variatie aan smaken, kooktechnieken en regionale specialiteiten. Bij Chopras Indian Restaurant ontdekt u voorgerechten, traditionele curry's, tandoori gerechten, biryani en Indiaas brood.</p>
+
+<p>Enkele populaire keuzes van het menu:</p>
+
+<h3>Indiase Voorgerechten</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Samosa</li>
+    <li><a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a></li>
+    <li>Aloo Tikki</li>
+    <li><a href="https://chopras.nl/nl/chaat-den-haag">Papdi Chaat</a></li>
+</ul>
+
+<h3>Tandoori Specialiteiten</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Chicken Tikka</li>
+    <li>Tandoori Chicken</li>
+    <li>Paneer Tikka</li>
+    <li>Chicken Seekh Kebab</li>
+</ul>
+
+<h3>Indiase Curry's</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a></li>
+    <li><a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li><a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+    <li>Paneer Butter Masala</li>
+</ul>
+
+<h3>Rijst en Biryani</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/biryani-den-haag">Chicken Biryani</a></li>
+    <li>Lamb Biryani</li>
+    <li>Veg Biryani</li>
+</ul>
+
+<h3>Indiaas Brood</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Plain Naan</li>
+    <li>Missi Roti</li>
+    <li>Lachha Paratha</li>
+    <li>Aloo Paratha</li>
+</ul>
+
+<h3>Traditionele Indiase Desserts</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Moong Dal Halwa</li>
+    <li>Kulfi</li>
+</ul>
+
+<p>Van rokerige tandoori smaken tot romige curry's en aromatische rijst: deze gerechten bieden een gevarieerde kennismaking met de Indiase keuken. Bekijk de volledige selectie op het <a href="https://chopras.nl/nl/menu">menu van Chopras Indian Restaurant</a>.</p>
+
+<h2>Geniet van Tandoori Eten in Den Haag</h2>
+
+<p>Houdt u van gegrilde Indiase specialiteiten? Dan is tandoori een uitstekende keuze. Tandoori gerechten worden traditioneel gemarineerd in yoghurt, kruiden en specerijen en daarna bereid in een kleioven. De kleioven geeft het eten zijn kenmerkende rokerige aroma en smaak.</p>
+
+<p>Bij Chopras Indian Restaurant kunt u kiezen uit tandoori gerechten zoals Chicken Tikka, Tandoori Chicken, Paneer Tikka en Chicken Seekh Kebab. U kunt deze gerechten als voorgerecht bestellen of combineren met naan en rijst voor een volwaardige maaltijd.</p>
+
+<p>Zoekt u een <a href="https://chopras.nl/nl/tandoori-den-haag">tandoori restaurant in Den Haag</a>? Ontdek dan de tandoori selectie van Chopras Indian Restaurant.</p>
+
+<h2>Veganistisch, Vegetarisch en Glutenvrij Indiaas Eten</h2>
+
+<p>Een restaurant kiezen voor een gezin of groep wordt makkelijker wanneer er rekening wordt gehouden met verschillende dieetwensen. Chopras Indian Restaurant biedt <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische keuzes</a> naast <a href="https://chopras.nl/nl/vegan-menu">veganistische</a> en <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrije opties</a>.</p>
+
+<p>Vegetarische gasten kunnen kiezen uit gerechten zoals Dal Makhani, Paneer Butter Masala en Veg Biryani. Wie veganistisch Indiaas eten zoekt, kan vragen naar geschikte groente- en linzengerechten. Gasten die glutenvrij eten, kunnen geschikte gerechten bespreken met het team van het restaurant.</p>
+
+<p>Indiase gerechten kunnen zuivel, tarwe of andere allergenen bevatten, afhankelijk van de ingrediënten en bereiding. Heeft u een allergie of een strikt dieet? Bevestig dan de ingrediënten en mogelijke kruisbesmetting met het restaurant voordat u bestelt.</p>
+
+<p>Met deze variatie past Chopras Indian Restaurant goed bij mensen die zoeken naar vegetarisch Indiaas eten in Den Haag, veganistisch Indiaas eten in Den Haag en glutenvrij Indiaas eten in Den Haag.</p>
+
+<h2>Een Fijne Keuze voor Gezinnen en Fijnproevers</h2>
+
+<p>Indiase maaltijden worden vaak samen gegeten, wat ze populair maakt voor familiediners en gezellige avonden met vrienden. Bij Chopras Indian Restaurant kiest u uit voorgerechten, curry's, tandoori specialiteiten, biryani, brood en desserts.</p>
+
+<p>Het menu omvat een ruime keuze aan vegetarische gerechten, veganistische opties en volledig <a href="https://chopras.nl/nl/halal-menu">halal gecertificeerd eten</a>. Gezinnen kunnen het team vooraf vragen naar het pittigheidsniveau en geschikte gerechten voor kinderen.</p>
+
+<p>Of u nu langskomt na een dag in de stad of een ontspannen diner met vrienden plant, Chopras Indian Restaurant biedt een gevarieerde keuze aan Indiaas eten in Den Haag.</p>
+
+<h2>Vier Speciale Gelegenheden in de Privé Feestzaal van Chopras</h2>
+
+<p>Plant u een verjaardag, bruiloft of familiebijeenkomst? Chopras Indian Restaurant biedt ook een <a href="https://chopras.nl/nl/feestzaal-den-haag">privé feestzaal</a> aan de Leyweg 986 in Den Haag, met ruimte voor ongeveer 25 tot 50 gasten. Bevestig de indeling en beschikbaarheid rechtstreeks met het team bij uw aanvraag.</p>
+
+<p>De zaal is geschikt voor verschillende gelegenheden, waaronder:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/indian-wedding-catering-den-haag">Bruiloften en Nikah recepties</a></li>
+    <li>Verlovingen en feesten voorafgaand aan de bruiloft</li>
+    <li><a href="https://chopras.nl/nl/indian-birthday-catering-den-haag">Verjaardagsfeesten</a> en jubilea</li>
+    <li>Babyshowers en familiebijeenkomsten</li>
+    <li><a href="https://chopras.nl/nl/corporate-events-den-haag">Bedrijfsdiners en teamvieringen</a></li>
+    <li><a href="https://chopras.nl/nl/diwali-dinner-den-haag">Diwali</a>, Eid, Kerst en andere feestdagen</li>
+    <li>Culturele en gemeenschapsevenementen</li>
+    <li>Benefietavonden</li>
+    <li>Yogasessies en dansworkshops</li>
+    <li>Fotoshoots en privébijeenkomsten</li>
+</ul>
+
+<p>Gasten kunnen hun gewenste opstelling, wensen voor het evenement en eetpakketten bespreken met het team. Zoekt u een <a href="https://chopras.nl/nl/zaal-huren-den-haag">feestzaal huren Den Haag</a>, een privé evenementenzaal of een feestlocatie met Indiaas eten? Ontdek dan de feestzaal van Chopras.</p>
+
+<h2>Indiase Catering in Den Haag voor Elke Gelegenheid</h2>
+
+<p>Niet elke viering hoeft in een restaurant plaats te vinden. Chopras Indian Restaurant verzorgt ook Indiase catering voor evenementen bij u thuis, op kantoor en op andere locaties.</p>
+
+<p>De catering is geschikt voor bruiloften, babyshowers, verjaardagen, bedrijfsbijeenkomsten, Diwali en Eid vieringen, kerstfeesten en familiefeesten. U kunt menukeuzes, het aantal gasten en dieetwensen bespreken bij het plannen van uw evenement.</p>
+
+<p>U kunt catering aanvragen voor Den Haag en omgeving, waaronder <a href="https://chopras.nl/nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/nl/indian-restaurant-zoetermeer">Zoetermeer</a>, <a href="https://chopras.nl/nl/indian-restaurant-voorburg">Voorburg</a>, <a href="https://chopras.nl/nl/indian-restaurant-leidschendam">Leidschendam</a> en het <a href="https://chopras.nl/nl/indian-restaurant-westland">Westland</a>. Meer informatie vindt u op de pagina <a href="https://chopras.nl/nl/catering">Indiase catering in Den Haag</a>.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Heeft Chopras Indian Restaurant veganistisch en vegetarisch eten?</h3>
+<p>Ja, Chopras Indian Restaurant in Den Haag heeft vegetarische gerechten en veganistische opties op het menu. Gasten wordt gevraagd de ingrediënten met het team te bevestigen voordat zij bestellen.</p>
+
+<h3>Zijn er glutenvrije opties bij Chopras Indian Restaurant?</h3>
+<p>Ja. Gasten kunnen het team van Chopras Indian Restaurant vragen naar geschikte glutenvrije gerechten en de bereiding ervan. Wie een allergie heeft, bespreekt mogelijke kruisbesmetting het best vooraf.</p>
+
+<h3>Serveert Chopras Indian Restaurant halal eten?</h3>
+<p>Ja. Chopras Indian Restaurant geeft aan dat het restaurantmenu volledig halal gecertificeerd is. Het restaurant ligt aan de Leyweg 986, 2545 GW Den Haag.</p>
+
+<h3>Kan ik een privé evenement organiseren bij Chopras Indian Restaurant?</h3>
+<p>Ja, de privé feestzaal van Chopras Indian Restaurant biedt plaats aan ongeveer 25 tot 50 gasten en is geschikt voor bruiloften, verjaardagen, jubilea, bedrijfsbijeenkomsten en culturele vieringen. Neem contact op met het restaurant om de beschikbaarheid en afspraken te bevestigen.</p>
+
+<h3>Biedt Chopras Indian Restaurant afhalen en bezorgen aan?</h3>
+<p>Ja. Chopras Indian Restaurant in Den Haag biedt dineren, afhalen en bezorgen. Bekijk de website voor de actuele bestelmogelijkheden en beschikbaarheid.</p>
+
+<h3>Hoe kom ik vanaf Den Haag Centraal bij Chopras Indian Restaurant?</h3>
+<p>Neem vanaf Den Haag Centraal tram 2 richting Leyenburg en stap uit bij halte Leyweg. De reis duurt ongeveer 15 minuten. Chopras Indian Restaurant ligt aan de Leyweg 986, 2545 GW Den Haag.</p>
+
+<h2>Geniet van Heerlijk Indiaas Eten bij Chopras Indian Restaurant</h2>
+
+<p>Of u nu Den Haag verkent, een familiediner plant of een speciale viering organiseert, Chopras Indian Restaurant biedt een gevarieerd aanbod aan Indiaas eten en evenementdiensten. Van tandoori specialiteiten en traditionele curry's tot halal, vegetarische, veganistische en glutenvrije keuzes: er is volop te ontdekken. Bezoek het restaurant aan de Leyweg 986, 2545 GW Den Haag of informeer naar de privé feestzaal en catering voor uw volgende gelegenheid.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Dinsdag tot en met zondag: 16:30 tot 22:30<br/>Telefoon: +31 6 30645930</p>
+`
+  },
+  {
     slug: "celebrate-diwali-in-den-haag-indian-food-catering",
     title: "Celebrate Diwali in Den Haag | Indian Food & Catering",
     metaTitle: "Celebrate Diwali in Den Haag | Indian Food & Catering",
