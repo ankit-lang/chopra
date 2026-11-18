@@ -2,6 +2,303 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "where-to-celebrate-christmas-in-den-haag",
+    title: "Where to Celebrate Christmas in Den Haag?",
+    metaTitle: "Where to Celebrate Christmas in Den Haag? | Chopras Indian Restaurant",
+    metaDescription: "Celebrate Christmas in Den Haag at Chopras Indian Restaurant. Indian food, festive dining, vegetarian, vegan and halal options for family and friends.",
+    h1: "Where to Celebrate Christmas in Den Haag? Enjoy Festive Indian Dining at Chopras Indian Restaurant",
+    primaryKeyword: "Celebrate Christmas in Den Haag",
+    keywords: [
+      "Indian restaurant in Den Haag",
+      "Christmas dining Den Haag",
+      "Indian food for Christmas dinner",
+      "Halal food for Christmas dinner Den Haag"
+    ],
+
+    titleNl: "Waar Kerst Vieren in Den Haag?",
+    metaTitleNl: "Waar Kerst Vieren in Den Haag? | Chopras Indian Restaurant",
+    metaDescriptionNl: "Kerst vieren in Den Haag bij Chopras Indian Restaurant. Indiaas eten, feestelijk dineren, vegetarisch, veganistisch en halal voor familie en vrienden.",
+    h1Nl: "Waar Kerst Vieren in Den Haag? Geniet van Feestelijk Indiaas Dineren bij Chopras Indian Restaurant",
+    primaryKeywordNl: "Kerst vieren in Den Haag",
+    excerptNl: "Kerst vieren in Den Haag bij Chopras Indian Restaurant. Indiaas eten, feestelijk dineren, vegetarisch, veganistisch en halal voor familie en vrienden.",
+    language: 'en' as const,
+    publishedAt: "2026-11-19",
+    readingTime: 6,
+    author: "Arun Chopra",
+    image: "/images/blog/19nov.png",
+    excerpt: "Celebrate Christmas in Den Haag at Chopras Indian Restaurant. Indian food, festive dining, vegetarian, vegan and halal options for family and friends.",
+    faqs: [
+      {
+        question: "Can I organise a private Christmas party at Chopras Indian Restaurant?",
+        answer: "Yes, Chopras Indian Restaurant offers a private event hall at Leyweg 986, Den Haag, for approximately 25 to 50 guests. You can discuss Christmas parties, family gatherings and corporate celebrations with the team."
+      },
+      {
+        question: "Does Chopras Indian Restaurant offer Christmas catering in Den Haag?",
+        answer: "Yes, Chopras Indian Restaurant provides Indian catering for private and corporate events in Den Haag and surrounding areas such as Rijswijk, Delft, Zoetermeer, Voorburg and Leidschendam. Contact the restaurant to discuss your Christmas catering requirements."
+      },
+      {
+        question: "Can I arrange a corporate Christmas dinner at Chopras Indian Restaurant?",
+        answer: "Yes, you can discuss private corporate dinners, office Christmas celebrations and customised catering arrangements with the Chopras Indian Restaurant team in Den Haag."
+      },
+      {
+        question: "Is Chopras Indian Restaurant open at Christmas?",
+        answer: "Chopras Indian Restaurant in Den Haag is normally open Tuesday to Sunday from 16:30 to 22:30 and closed on Monday. Call +31 6 30645930 to confirm Christmas opening times, table availability and any special festive arrangements."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Kan ik een privé kerstfeest organiseren bij Chopras Indian Restaurant?",
+        answer: "Ja, Chopras Indian Restaurant biedt een privé feestzaal aan de Leyweg 986 in Den Haag voor ongeveer 25 tot 50 gasten. U kunt kerstfeesten, familiebijeenkomsten en bedrijfsvieringen bespreken met het team."
+      },
+      {
+        question: "Verzorgt Chopras Indian Restaurant kerstcatering in Den Haag?",
+        answer: "Ja, Chopras Indian Restaurant verzorgt Indiase catering voor privé en zakelijke evenementen in Den Haag en omgeving, zoals Rijswijk, Delft, Zoetermeer, Voorburg en Leidschendam. Neem contact op met het restaurant om uw wensen voor kerstcatering te bespreken."
+      },
+      {
+        question: "Kan ik een zakelijk kerstdiner organiseren bij Chopras Indian Restaurant?",
+        answer: "Ja, u kunt privé bedrijfsdiners, kerstvieringen op kantoor en catering op maat bespreken met het team van Chopras Indian Restaurant in Den Haag."
+      },
+      {
+        question: "Is Chopras Indian Restaurant open met Kerst?",
+        answer: "Chopras Indian Restaurant in Den Haag is normaal geopend van dinsdag tot en met zondag van 16:30 tot 22:30 en op maandag gesloten. Bel +31 6 30645930 om de openingstijden met Kerst, de beschikbaarheid van tafels en eventuele feestelijke afspraken te bevestigen."
+      }
+    ],
+    content: `
+<img src="/images/blog/19nov.png" alt="Celebrate Christmas in Den Haag with Indian food at Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Christmas is a wonderful time to enjoy delicious food, celebrate with family and friends, and create unforgettable memories. Whether you are planning a festive family dinner, a Christmas gathering with friends or a <a href="https://chopras.nl/corporate-events-den-haag">corporate celebration</a>, choosing the right restaurant can make your occasion even more special.</p>
+
+<p>If you are wondering where to celebrate Christmas in Den Haag, <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a welcoming place with authentic Indian cuisine, traditional flavours and a wide variety of food choices. Located at Leyweg 986, 2545 GW Den Haag, the restaurant brings together delicious Indian dishes, <a href="https://chopras.nl/halal-menu">halal-certified food</a>, vegetarian options and friendly hospitality.</p>
+
+<p>For anyone searching for an Indian restaurant in Den Haag for Christmas dining, Chopras Indian Restaurant is a great place to explore something different from the usual festive menu.</p>
+
+<h2>Why Choose Indian Food for Christmas in Den Haag?</h2>
+
+<p>Christmas celebrations are often associated with special meals and family gatherings. However, you do not always have to choose a traditional Christmas menu. Indian cuisine offers a wonderful combination of rich spices, aromatic curries, freshly prepared breads and flavourful starters.</p>
+
+<p>At Chopras Indian Restaurant, guests can enjoy a variety of Indian specialities prepared using traditional cooking techniques and fresh ingredients.</p>
+
+<p>From creamy <a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a> and aromatic <a href="https://chopras.nl/biryani-den-haag">biryani</a> to freshly baked <a href="https://chopras.nl/naan-den-haag">Garlic Naan</a> and delicious Indian desserts, the menu offers something for different tastes.</p>
+
+<p>Whether you enjoy mild flavours or spicy Indian food, you can explore a variety of dishes while celebrating Christmas with your loved ones.</p>
+
+<h2>Make Your Christmas Feast Special with Traditional Indian Flavours</h2>
+
+<p>Add a delicious Indian touch to your Christmas celebration with a menu full of rich flavours, aromatic spices and freshly prepared specialities. At Chopras Indian Restaurant, guests can explore a variety of Indian dishes, from crispy starters and smoky <a href="https://chopras.nl/tandoori-den-haag">tandoori favourites</a> to flavourful curries, biryani and traditional sweets. Whether you enjoy mild and creamy dishes or spicy Indian flavours, there is something to make your festive meal enjoyable.</p>
+
+<p>Popular dishes to enjoy:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Starters:</strong> Veg Samosa Chaat, <a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Aloo Tikki, <a href="https://chopras.nl/chaat-den-haag">Papdi Chaat</a>, Mixed Chaat, Plain Papad, Masala Papad, Onion Bhaji and Samosa (Veg, Lamb or Chicken)</li>
+    <li><strong>Tandoori Specialities:</strong> Chicken Tikka, Paneer Tikka, Lamb Seekh Kebab, Chicken Seekh Kebab and the Chopras Non Veg Platter</li>
+    <li><strong>Main Course:</strong> Butter Chicken, Chicken Tikka Masala, <a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, <a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a> and Paneer Butter Masala</li>
+    <li><strong>Rice and Biryani:</strong> Chicken Biryani, Lamb Biryani and Veg Biryani</li>
+    <li><strong>Indian Breads:</strong> Garlic Naan, Butter Naan and Plain Naan</li>
+    <li><strong>Indian Desserts:</strong> Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa and Kulfi</li>
+</ul>
+
+<p>These festive food choices make Christmas dining more exciting, bringing together traditional Indian taste and the joy of celebrating with family and friends. See the full <a href="https://chopras.nl/menu">Chopras Indian Restaurant menu</a> for every dish.</p>
+
+<h2>Halal, Vegetarian, Vegan and Gluten-Free Christmas Dining</h2>
+
+<p>When celebrating Christmas with family, friends or colleagues, everyone may have different food preferences and dietary requirements. Choosing a restaurant that offers a variety of food options makes festive dining more comfortable and enjoyable.</p>
+
+<p>At Chopras Indian Restaurant, guests can explore <a href="https://chopras.nl/halal-food-den-haag">halal-certified meat dishes</a> alongside <a href="https://chopras.nl/vegetarian-menu">vegetarian</a>, <a href="https://chopras.nl/vegan-menu">vegan</a> and <a href="https://chopras.nl/gluten-free-menu">gluten-free</a> food choices. From flavourful Indian curries and vegetable specialities to plant-based dishes, there are options for different tastes.</p>
+
+<p>Whether you are looking for halal chicken dishes, vegetarian Indian food, vegan meals or gluten-free options, the restaurant offers variety for your festive gathering.</p>
+
+<p>Guests with allergies or strict dietary requirements are encouraged to discuss ingredients, preparation methods and possible cross-contact with the restaurant team before ordering.</p>
+
+<p>With so many choices, Chopras Indian Restaurant is a convenient option for families and groups looking for halal, vegetarian, vegan and gluten-free Indian food in Den Haag during the Christmas season.</p>
+
+<h2>Celebrate Christmas with Family and Friends</h2>
+
+<p>Christmas is all about spending quality time with the people who matter most. A comfortable restaurant, delicious food and a welcoming atmosphere can make family celebrations even more enjoyable.</p>
+
+<p>Chopras Indian Restaurant provides an opportunity to bring everyone together over authentic Indian food. Families can enjoy a variety of starters, curries, tandoori dishes and desserts while sharing conversations and festive moments.</p>
+
+<p>Whether you are planning a Christmas dinner or a casual festive evening, Indian dining offers plenty of choices for adults and children.</p>
+
+<p>For families searching for a <a href="https://chopras.nl/family-restaurant-den-haag">family-friendly Indian restaurant in Den Haag</a>, Chopras Indian Restaurant offers a diverse menu with different flavours and dietary options.</p>
+
+<h2>Christmas Parties and Private Celebrations at Chopras Indian Restaurant</h2>
+
+<p>Looking for a private place to celebrate Christmas with a larger group? Chopras Indian Restaurant also offers a <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a> at Leyweg 986, 2545 GW Den Haag.</p>
+
+<p>The private hall accommodates approximately 25 to 50 guests and is suitable for family gatherings, private dinners and smaller corporate celebrations.</p>
+
+<p>You can discuss different arrangements for:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Family Christmas parties</li>
+    <li>Christmas dinners with friends</li>
+    <li><a href="https://chopras.nl/corporate-events-den-haag">Corporate Christmas celebrations</a></li>
+    <li>Office team gatherings</li>
+    <li>End-of-year business dinners</li>
+    <li>Private festive events</li>
+</ul>
+
+<p>Guests can discuss their preferred food menu, seating arrangements and event requirements with the Chopras Indian Restaurant team.</p>
+
+<p>If you are searching for <a href="https://chopras.nl/zaal-huren-den-haag">feestzaal huren in Den Haag</a>, kerstfeest locatie Den Haag or a private Christmas party venue, Chopras Indian Restaurant offers the option of combining a private event space with Indian catering.</p>
+
+<h2>Christmas Catering in Den Haag for Home and Office Parties</h2>
+
+<p>Not everyone wants to celebrate Christmas at a restaurant. Some families prefer hosting festive dinners at home, while businesses may organise Christmas parties at their offices.</p>
+
+<p>Chopras Indian Restaurant provides <a href="https://chopras.nl/catering">Indian catering</a> for private and corporate events, making it easier to enjoy authentic Indian food at your chosen venue.</p>
+
+<p>Catering can be discussed for occasions such as family Christmas dinners, office celebrations, corporate parties and festive gatherings.</p>
+
+<p>The menu can include Indian starters, tandoori specialities, curries, biryani, vegetarian dishes and desserts.</p>
+
+<p>Chopras Indian Restaurant also serves catering customers in surrounding areas, including <a href="https://chopras.nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/indian-restaurant-zoetermeer">Zoetermeer</a>, <a href="https://chopras.nl/indian-restaurant-voorburg">Voorburg</a> and <a href="https://chopras.nl/indian-restaurant-leidschendam">Leidschendam</a>.</p>
+
+<p>For anyone searching for Christmas catering Den Haag, Indian catering Den Haag or halal catering Den Haag, Chopras Indian Restaurant offers customised food arrangements according to event requirements.</p>
+
+<h2>Frequently Asked Questions About Christmas Dining in Den Haag</h2>
+
+<h3>Can I organise a private Christmas party at Chopras Indian Restaurant?</h3>
+<p>Yes, Chopras Indian Restaurant offers a private event hall at Leyweg 986, Den Haag, for approximately 25 to 50 guests. You can discuss Christmas parties, family gatherings and corporate celebrations with the team.</p>
+
+<h3>Does Chopras Indian Restaurant offer Christmas catering in Den Haag?</h3>
+<p>Yes, Chopras Indian Restaurant provides Indian catering for private and corporate events in Den Haag and surrounding areas such as Rijswijk, Delft, Zoetermeer, Voorburg and Leidschendam. Contact the restaurant to discuss your Christmas catering requirements.</p>
+
+<h3>Can I arrange a corporate Christmas dinner at Chopras Indian Restaurant?</h3>
+<p>Yes, you can discuss private corporate dinners, office Christmas celebrations and customised catering arrangements with the Chopras Indian Restaurant team in Den Haag.</p>
+
+<h3>Is Chopras Indian Restaurant open at Christmas?</h3>
+<p>Chopras Indian Restaurant in Den Haag is normally open Tuesday to Sunday from 16:30 to 22:30 and closed on Monday. Call +31 6 30645930 to confirm Christmas opening times, table availability and any special festive arrangements.</p>
+
+<h2>Make Your Christmas Special at Chopras Indian Restaurant</h2>
+
+<p>Christmas is not just about celebrating a festival; it is about sharing happiness, enjoying good food and creating beautiful memories with the people around you.</p>
+
+<p>Whether you are planning a family Christmas dinner, a festive gathering with friends, a corporate celebration or a private Christmas party, Chopras Indian Restaurant brings authentic Indian flavours and welcoming hospitality to your celebration.</p>
+
+<p>Visit Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag, and enjoy festive dining with halal Indian food, vegetarian and vegan choices, tandoori specialities, biryani and traditional Indian desserts.</p>
+
+<p>Bring everyone together this Christmas over great food, warm hospitality and unforgettable Indian flavours at Chopras Indian Restaurant! Call +31 6 30645930 to confirm Christmas opening, table availability and any special festive arrangements.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Tuesday to Sunday: 16:30 to 22:30<br/>Phone: +31 6 30645930</p>
+`,
+    contentNl: `
+<img src="/images/blog/19nov.png" alt="Kerst vieren in Den Haag met Indiaas eten bij Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Kerst is een prachtige tijd om te genieten van heerlijk eten, samen te zijn met familie en vrienden en onvergetelijke herinneringen te maken. Of u nu een feestelijk familiediner plant, een kerstavond met vrienden of een <a href="https://chopras.nl/nl/corporate-events-den-haag">bedrijfsviering</a>, het juiste restaurant maakt uw gelegenheid nog specialer.</p>
+
+<p>Vraagt u zich af waar u Kerst kunt vieren in Den Haag? <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> is een gastvrije plek met authentieke Indiase keuken, traditionele smaken en een ruime keuze aan gerechten. Het restaurant aan de Leyweg 986, 2545 GW Den Haag, combineert heerlijke Indiase gerechten, <a href="https://chopras.nl/nl/halal-menu">halal gecertificeerd eten</a>, vegetarische opties en vriendelijke gastvrijheid.</p>
+
+<p>Zoekt u een Indiaas restaurant in Den Haag voor een kerstdiner? Bij Chopras Indian Restaurant ontdekt u iets anders dan het gebruikelijke kerstmenu.</p>
+
+<h2>Waarom Indiaas Eten met Kerst in Den Haag?</h2>
+
+<p>Kerstvieringen worden vaak geassocieerd met speciale maaltijden en familiebijeenkomsten. Toch hoeft u niet altijd voor een traditioneel kerstmenu te kiezen. De Indiase keuken biedt een prachtige combinatie van rijke kruiden, aromatische curry's, vers bereid brood en smaakvolle voorgerechten.</p>
+
+<p>Bij Chopras Indian Restaurant geniet u van een variatie aan Indiase specialiteiten, bereid met traditionele kooktechnieken en verse ingrediënten.</p>
+
+<p>Van romige <a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a> en aromatische <a href="https://chopras.nl/nl/biryani-den-haag">biryani</a> tot vers gebakken <a href="https://chopras.nl/nl/naan-den-haag">Garlic Naan</a> en heerlijke Indiase desserts: het menu biedt iets voor elke smaak.</p>
+
+<p>Of u nu houdt van milde smaken of pittig Indiaas eten, u kunt tijdens uw kerstviering met uw dierbaren een grote variatie aan gerechten ontdekken.</p>
+
+<h2>Maak Uw Kerstmaal Bijzonder met Traditionele Indiase Smaken</h2>
+
+<p>Geef uw kerstviering een heerlijk Indiaas tintje met een menu vol rijke smaken, aromatische kruiden en vers bereide specialiteiten. Bij Chopras Indian Restaurant ontdekt u een variatie aan Indiase gerechten, van knapperige voorgerechten en rokerige <a href="https://chopras.nl/nl/tandoori-den-haag">tandoori favorieten</a> tot smaakvolle curry's, biryani en traditionele zoetigheden. Of u nu houdt van milde en romige gerechten of pittige Indiase smaken, er is altijd iets dat uw feestmaal compleet maakt.</p>
+
+<p>Populaire gerechten:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Voorgerechten:</strong> Veg Samosa Chaat, <a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a>, Dahi Puri, Aloo Tikki, <a href="https://chopras.nl/nl/chaat-den-haag">Papdi Chaat</a>, Mixed Chaat, Plain Papad, Masala Papad, Onion Bhaji en Samosa (Veg, Lamb of Chicken)</li>
+    <li><strong>Tandoori Specialiteiten:</strong> Chicken Tikka, Paneer Tikka, Lamb Seekh Kebab, Chicken Seekh Kebab en de Chopras Non Veg Platter</li>
+    <li><strong>Hoofdgerechten:</strong> Butter Chicken, Chicken Tikka Masala, <a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a>, <a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a> en Paneer Butter Masala</li>
+    <li><strong>Rijst en Biryani:</strong> Chicken Biryani, Lamb Biryani en Veg Biryani</li>
+    <li><strong>Indiaas Brood:</strong> Garlic Naan, Butter Naan en Plain Naan</li>
+    <li><strong>Indiase Desserts:</strong> Gulab Jamun, Rasmalai, Saffron Kheer, Moong Dal Halwa en Kulfi</li>
+</ul>
+
+<p>Deze feestelijke gerechten maken uw kerstdiner extra bijzonder en combineren de traditionele Indiase smaak met het plezier van samen vieren met familie en vrienden. Bekijk het volledige <a href="https://chopras.nl/nl/menu">menu van Chopras Indian Restaurant</a> voor alle gerechten.</p>
+
+<h2>Halal, Vegetarisch, Veganistisch en Glutenvrij Kerstdiner</h2>
+
+<p>Wanneer u Kerst viert met familie, vrienden of collega's, heeft iedereen vaak andere voorkeuren en dieetwensen. Een restaurant met een ruime keuze aan gerechten maakt feestelijk dineren comfortabeler en aangenamer.</p>
+
+<p>Bij Chopras Indian Restaurant vindt u <a href="https://chopras.nl/nl/halal-food-den-haag">halal gecertificeerde vleesgerechten</a> naast <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische</a>, <a href="https://chopras.nl/nl/vegan-menu">veganistische</a> en <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrije</a> keuzes. Van smaakvolle Indiase curry's en groentespecialiteiten tot plantaardige gerechten: er zijn opties voor elke smaak.</p>
+
+<p>Of u nu zoekt naar halal kipgerechten, vegetarisch Indiaas eten, veganistische maaltijden of glutenvrije opties, het restaurant biedt volop keuze voor uw feestelijke bijeenkomst.</p>
+
+<p>Gasten met allergieën of strikte dieetwensen wordt gevraagd ingrediënten, bereidingswijzen en mogelijke kruisbesmetting vooraf met het team te bespreken.</p>
+
+<p>Met zoveel keuze is Chopras Indian Restaurant een handige optie voor families en groepen die tijdens de kerstperiode zoeken naar halal, vegetarisch, veganistisch en glutenvrij Indiaas eten in Den Haag.</p>
+
+<h2>Vier Kerst met Familie en Vrienden</h2>
+
+<p>Kerst draait om waardevolle tijd met de mensen die het meest voor u betekenen. Een comfortabel restaurant, heerlijk eten en een gastvrije sfeer maken familievieringen nog aangenamer.</p>
+
+<p>Chopras Indian Restaurant brengt iedereen samen rond authentiek Indiaas eten. Families genieten van een variatie aan voorgerechten, curry's, tandoori gerechten en desserts terwijl zij gesprekken en feestelijke momenten delen.</p>
+
+<p>Of u nu een kerstdiner of een ontspannen feestelijke avond plant, Indiaas dineren biedt volop keuze voor volwassenen en kinderen.</p>
+
+<p>Zoekt u een <a href="https://chopras.nl/nl/family-restaurant-den-haag">kindvriendelijk Indiaas restaurant in Den Haag</a>? Chopras Indian Restaurant biedt een gevarieerd menu met verschillende smaken en dieetopties.</p>
+
+<h2>Kerstfeesten en Privévieringen bij Chopras Indian Restaurant</h2>
+
+<p>Op zoek naar een privé plek om Kerst te vieren met een grotere groep? Chopras Indian Restaurant biedt ook een <a href="https://chopras.nl/nl/feestzaal-den-haag">privé feestzaal</a> aan de Leyweg 986, 2545 GW Den Haag.</p>
+
+<p>De privézaal biedt plaats aan ongeveer 25 tot 50 gasten en is geschikt voor familiebijeenkomsten, privédiners en kleinere bedrijfsvieringen.</p>
+
+<p>U kunt verschillende mogelijkheden bespreken voor:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Familiekerstfeesten</li>
+    <li>Kerstdiners met vrienden</li>
+    <li><a href="https://chopras.nl/nl/corporate-events-den-haag">Zakelijke kerstvieringen</a></li>
+    <li>Teambijeenkomsten op kantoor</li>
+    <li>Zakelijke eindejaarsdiners</li>
+    <li>Privé feestelijke evenementen</li>
+</ul>
+
+<p>Gasten kunnen hun gewenste menu, opstelling en wensen voor het evenement bespreken met het team van Chopras Indian Restaurant.</p>
+
+<p>Zoekt u een <a href="https://chopras.nl/nl/zaal-huren-den-haag">feestzaal huren in Den Haag</a>, een kerstfeest locatie in Den Haag of een privé locatie voor uw kerstfeest? Chopras Indian Restaurant combineert een privé evenementenruimte met Indiase catering.</p>
+
+<h2>Kerstcatering in Den Haag voor Feesten Thuis en op Kantoor</h2>
+
+<p>Niet iedereen wil Kerst in een restaurant vieren. Sommige families organiseren liever een feestelijk diner thuis, terwijl bedrijven hun kerstfeest vaak op kantoor houden.</p>
+
+<p>Chopras Indian Restaurant verzorgt <a href="https://chopras.nl/nl/catering">Indiase catering</a> voor privé en zakelijke evenementen, zodat u op uw eigen locatie kunt genieten van authentiek Indiaas eten.</p>
+
+<p>Catering is bespreekbaar voor gelegenheden zoals familiekerstdiners, kantoorvieringen, bedrijfsfeesten en feestelijke bijeenkomsten.</p>
+
+<p>Het menu kan bestaan uit Indiase voorgerechten, tandoori specialiteiten, curry's, biryani, vegetarische gerechten en desserts.</p>
+
+<p>Chopras Indian Restaurant verzorgt ook catering in de omliggende plaatsen, waaronder <a href="https://chopras.nl/nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/nl/indian-restaurant-zoetermeer">Zoetermeer</a>, <a href="https://chopras.nl/nl/indian-restaurant-voorburg">Voorburg</a> en <a href="https://chopras.nl/nl/indian-restaurant-leidschendam">Leidschendam</a>.</p>
+
+<p>Zoekt u kerstcatering in Den Haag, Indiase catering in Den Haag of halal catering in Den Haag? Chopras Indian Restaurant stemt het eten af op de wensen van uw evenement.</p>
+
+<h2>Veelgestelde Vragen over Kerstdiners in Den Haag</h2>
+
+<h3>Kan ik een privé kerstfeest organiseren bij Chopras Indian Restaurant?</h3>
+<p>Ja, Chopras Indian Restaurant biedt een privé feestzaal aan de Leyweg 986 in Den Haag voor ongeveer 25 tot 50 gasten. U kunt kerstfeesten, familiebijeenkomsten en bedrijfsvieringen bespreken met het team.</p>
+
+<h3>Verzorgt Chopras Indian Restaurant kerstcatering in Den Haag?</h3>
+<p>Ja, Chopras Indian Restaurant verzorgt Indiase catering voor privé en zakelijke evenementen in Den Haag en omgeving, zoals Rijswijk, Delft, Zoetermeer, Voorburg en Leidschendam. Neem contact op met het restaurant om uw wensen voor kerstcatering te bespreken.</p>
+
+<h3>Kan ik een zakelijk kerstdiner organiseren bij Chopras Indian Restaurant?</h3>
+<p>Ja, u kunt privé bedrijfsdiners, kerstvieringen op kantoor en catering op maat bespreken met het team van Chopras Indian Restaurant in Den Haag.</p>
+
+<h3>Is Chopras Indian Restaurant open met Kerst?</h3>
+<p>Chopras Indian Restaurant in Den Haag is normaal geopend van dinsdag tot en met zondag van 16:30 tot 22:30 en op maandag gesloten. Bel +31 6 30645930 om de openingstijden met Kerst, de beschikbaarheid van tafels en eventuele feestelijke afspraken te bevestigen.</p>
+
+<h2>Maak Uw Kerst Bijzonder bij Chopras Indian Restaurant</h2>
+
+<p>Kerst gaat niet alleen over het vieren van een feest; het gaat om geluk delen, genieten van goed eten en mooie herinneringen maken met de mensen om u heen.</p>
+
+<p>Of u nu een familiekerstdiner, een feestelijke avond met vrienden, een bedrijfsviering of een privé kerstfeest plant, Chopras Indian Restaurant brengt authentieke Indiase smaken en warme gastvrijheid naar uw viering.</p>
+
+<p>Bezoek Chopras Indian Restaurant aan de Leyweg 986, 2545 GW Den Haag, en geniet van feestelijk dineren met halal Indiaas eten, vegetarische en veganistische keuzes, tandoori specialiteiten, biryani en traditionele Indiase desserts.</p>
+
+<p>Breng iedereen deze Kerst samen rond heerlijk eten, warme gastvrijheid en onvergetelijke Indiase smaken bij Chopras Indian Restaurant! Bel +31 6 30645930 om de openingstijden met Kerst, de beschikbaarheid van tafels en eventuele feestelijke afspraken te bevestigen.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Dinsdag tot en met zondag: 16:30 tot 22:30<br/>Telefoon: +31 6 30645930</p>
+`
+  },
+  {
     slug: "where-to-eat-indian-food-near-den-haag-central-station",
     title: "Where to Eat Indian Food Near Den Haag Centraal",
     metaTitle: "Where to Eat Indian Food Near Den Haag Centraal | Chopras",
