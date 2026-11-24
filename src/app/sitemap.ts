@@ -67,6 +67,7 @@ const staticPages: SitemapPage[] = [
   { slug: 'celebrate-diwali-in-den-haag-indian-food-catering', lastMod: '2026-11-06', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'where-to-eat-indian-food-near-den-haag-central-station', lastMod: '2026-11-14', priority: 0.8, changeFreq: 'weekly' },
   { slug: 'where-to-celebrate-christmas-in-den-haag', lastMod: '2026-11-19', priority: 0.8, changeFreq: 'weekly' },
+  { slug: 'best-christmas-party-venue-den-haag', lastMod: '2026-11-24', priority: 0.8, changeFreq: 'weekly' },
 
 
   // Location pages
