@@ -2,6 +2,462 @@ import type { BlogPost } from '@/types'
 
 export const blogPosts: BlogPost[] = ([
   {
+    slug: "indian-buffet-weddings-family-celebrations-den-haag",
+    title: "Indian Buffet for Weddings & Family Celebrations in Den Haag",
+    metaTitle: "Indian Buffet for Weddings & Family Celebrations in Den Haag",
+    metaDescription: "Indian buffet Den Haag for weddings and family celebrations. Chopras Indian Restaurant offers halal buffet catering and a private event hall. Get a quote.",
+    h1: "How to Plan the Perfect Indian Buffet for Weddings and Family Celebrations in Den Haag",
+    primaryKeyword: "Indian buffet Den Haag",
+    keywords: [
+      "Indian buffet Den Haag",
+      "Indian wedding catering Den Haag",
+      "Indian buffet catering Den Haag",
+      "Wedding catering Den Haag",
+      "Indian food catering Den Haag"
+    ],
+
+    titleNl: "Indiaas Buffet voor Bruiloften & Familiefeesten in Den Haag",
+    metaTitleNl: "Indiaas Buffet voor Bruiloften & Familiefeesten in Den Haag",
+    metaDescriptionNl: "Indiaas buffet Den Haag voor bruiloften en familiefeesten. Chopras Indian Restaurant biedt halal buffetcatering en een privé feestzaal. Vraag een offerte.",
+    h1Nl: "Zo Plant u het Perfecte Indiase Buffet voor Bruiloften en Familiefeesten in Den Haag",
+    primaryKeywordNl: "Indiaas buffet Den Haag",
+    excerptNl: "Indiaas buffet Den Haag voor bruiloften en familiefeesten. Chopras Indian Restaurant biedt halal buffetcatering en een privé feestzaal. Vraag een offerte.",
+    language: 'en' as const,
+    publishedAt: "2026-11-25",
+    readingTime: 8,
+    author: "Arun Chopra",
+    image: "/images/blog/25nov.png",
+    excerpt: "Indian buffet Den Haag for weddings and family celebrations. Chopras Indian Restaurant offers halal buffet catering and a private event hall. Get a quote.",
+    faqs: [
+      {
+        question: "Where can I arrange an Indian buffet for a wedding in Den Haag?",
+        answer: "You can contact Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag to discuss wedding buffet arrangements, menu choices and private event requirements at its venue, or arrange outside catering at your own location."
+      },
+      {
+        question: "Does Chopras Indian Restaurant have a private event hall?",
+        answer: "Yes. Chopras Indian Restaurant in Den Haag offers a private event hall for approximately 25 to 50 guests, suitable for weddings, Nikah receptions, birthdays, anniversaries, family gatherings and corporate events. Contact the team to confirm availability and arrangements."
+      },
+      {
+        question: "Can I include vegetarian and vegan dishes in my wedding buffet?",
+        answer: "Yes. You can discuss vegetarian and vegan-friendly dishes with the Chopras Indian Restaurant team while planning your buffet menu, such as Dal Makhani, Paneer Butter Masala, Veg Biryani and vegetable curries."
+      },
+      {
+        question: "Is the Indian wedding buffet at Chopras Indian Restaurant halal?",
+        answer: "Yes. Chopras Indian Restaurant in Den Haag sources every meat dish from halal-certified suppliers, so halal food is the standard for wedding buffets, Nikah and walima celebrations and family events."
+      }
+    ],
+    faqsNl: [
+      {
+        question: "Waar kan ik een Indiaas buffet voor een bruiloft regelen in Den Haag?",
+        answer: "U kunt contact opnemen met Chopras Indian Restaurant aan de Leyweg 986, 2545 GW Den Haag om een bruiloftsbuffet, menukeuzes en uw wensen voor een privé evenement op de locatie te bespreken, of om catering op uw eigen locatie te regelen."
+      },
+      {
+        question: "Heeft Chopras Indian Restaurant een privé feestzaal?",
+        answer: "Ja. Chopras Indian Restaurant in Den Haag biedt een privé feestzaal voor ongeveer 25 tot 50 gasten, geschikt voor bruiloften, Nikah recepties, verjaardagen, jubilea, familiebijeenkomsten en bedrijfsevenementen. Neem contact op met het team om de beschikbaarheid en afspraken te bevestigen."
+      },
+      {
+        question: "Kan ik vegetarische en veganistische gerechten opnemen in mijn bruiloftsbuffet?",
+        answer: "Ja. U kunt vegetarische en veganistische gerechten bespreken met het team van Chopras Indian Restaurant bij het samenstellen van uw buffetmenu, zoals Dal Makhani, Paneer Butter Masala, Veg Biryani en groentecurry's."
+      },
+      {
+        question: "Is het Indiase bruiloftsbuffet bij Chopras Indian Restaurant halal?",
+        answer: "Ja. Chopras Indian Restaurant in Den Haag betrekt al het vlees van halal gecertificeerde leveranciers, dus halal eten is de standaard voor bruiloftsbuffetten, Nikah en walima vieringen en familie-evenementen."
+      }
+    ],
+    content: `
+<img src="/images/blog/25nov.png" alt="Indian buffet for weddings and family celebrations in Den Haag by Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Planning a wedding or family celebration involves many important decisions, and food is one of the most memorable parts of any event. A well-organised <a href="https://chopras.nl/indian-buffet-den-haag">Indian buffet</a> brings guests together with delicious dishes, different flavours and plenty of choices. Whether you are arranging a wedding reception, Nikah, engagement, birthday party or anniversary, an Indian buffet can make your celebration extra special.</p>
+
+<p>If you are planning an event in Den Haag, <a href="https://chopras.nl">Chopras Indian Restaurant</a> offers a <a href="https://chopras.nl/feestzaal-den-haag">private event hall</a> and <a href="https://chopras.nl/catering">Indian catering services</a> for different occasions. With a variety of Indian food choices, including tandoori specialities, traditional curries, vegetarian options and desserts, you can discuss a menu that suits your guests and celebration.</p>
+
+<h2>1. Choose the Right Venue for Your Celebration</h2>
+
+<p>The first step in planning an Indian buffet is selecting a suitable venue. Consider the number of guests, seating arrangements, event style and space needed for the buffet.</p>
+
+<p>Chopras Indian Restaurant has a private event hall at Leyweg 986, 2545 GW Den Haag, which can be considered for weddings, family celebrations and private gatherings. The venue can accommodate approximately 25 to 50 guests, depending on the event arrangement.</p>
+
+<p>It is suitable for occasions such as:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/indian-wedding-catering-den-haag">Weddings and wedding receptions</a></li>
+    <li>Nikah ceremonies and celebrations</li>
+    <li>Engagement and pre-wedding parties</li>
+    <li><a href="https://chopras.nl/indian-birthday-catering-den-haag">Birthday parties</a> and anniversaries</li>
+    <li>Baby showers and family gatherings</li>
+    <li>Eid, <a href="https://chopras.nl/diwali-dinner-den-haag">Diwali</a> and Christmas celebrations</li>
+    <li><a href="https://chopras.nl/corporate-events-den-haag">Corporate dinners and team events</a></li>
+    <li>Cultural and community celebrations</li>
+</ul>
+
+<p>Before confirming your booking, discuss the guest count, seating layout, buffet arrangements and event requirements with the restaurant team. Explore the <a href="https://chopras.nl/feestzaal-den-haag">Chopras private event hall in Den Haag</a> for more information.</p>
+
+<h2>2. Plan a Balanced Indian Buffet Menu</h2>
+
+<p>A successful Indian buffet should offer a good balance of starters, main courses, breads, rice and desserts. Including different flavours helps guests enjoy the meal according to their preferences.</p>
+
+<p>For a wedding or family celebration, consider dividing the buffet into the following sections.</p>
+
+<h3>Indian Starters</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Samosa (Veg)</li>
+    <li><a href="https://chopras.nl/pani-puri-den-haag">Pani Puri</a></li>
+    <li>Dahi Puri</li>
+    <li>Aloo Tikki</li>
+    <li><a href="https://chopras.nl/chaat-den-haag">Papdi Chaat</a></li>
+</ul>
+
+<h3>Tandoori Specialities</h3>
+
+<p>Tandoori dishes are a popular choice for Indian celebrations. Traditionally marinated with herbs, yoghurt and spices, they are cooked in a clay oven to develop a smoky flavour.</p>
+
+<p>Menu examples to consider include:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Chicken Tikka</li>
+    <li>Tandoori Chicken</li>
+    <li>Paneer Tikka</li>
+    <li>Chicken Seekh Kebab</li>
+    <li>Lamb Seekh Kebab</li>
+</ul>
+
+<p>See the full <a href="https://chopras.nl/tandoori-den-haag">tandoori selection</a> for more options.</p>
+
+<h3>Indian Main Course</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/butter-chicken-den-haag">Butter Chicken</a></li>
+    <li>Chicken Tikka Masala</li>
+    <li><a href="https://chopras.nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+    <li><a href="https://chopras.nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li>Paneer Butter Masala</li>
+    <li>Chicken Curry</li>
+    <li>Chicken Methi Malai</li>
+    <li>Karahi Chicken</li>
+    <li>Chicken Handi</li>
+    <li>Chicken Vindaloo</li>
+</ul>
+
+<h3>Rice and Biryani</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/biryani-den-haag">Chicken Biryani</a></li>
+    <li>Lamb Biryani</li>
+    <li>Veg Biryani</li>
+    <li>Prawn Biryani</li>
+</ul>
+
+<h3>Indian Breads</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Plain Naan</li>
+    <li>Paneer Naan</li>
+    <li>Paneer Paratha</li>
+    <li>Cheese Naan</li>
+    <li>Keema Naan</li>
+</ul>
+
+<h3>Traditional Indian Desserts</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Moong Dal Halwa</li>
+    <li>Kulfi</li>
+</ul>
+
+<p>You can explore the <a href="https://chopras.nl/menu">Chopras Indian Restaurant menu</a> and discuss suitable dishes and buffet arrangements with the team.</p>
+
+<h2>3. Include Vegetarian, Vegan, Halal and Gluten-Free Choices</h2>
+
+<p>When planning a wedding buffet, remember that guests may have different dietary preferences and requirements. Providing suitable choices makes the meal more comfortable for everyone.</p>
+
+<p>A thoughtful buffet plan can include:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Halal food:</strong> Include <a href="https://chopras.nl/halal-food-den-haag">halal-certified meat dishes</a> for guests who prefer halal dining.</li>
+    <li><strong>Vegetarian food:</strong> Offer paneer specialities, lentil dishes, vegetable curries and Veg Biryani from the <a href="https://chopras.nl/vegetarian-menu">vegetarian menu</a>.</li>
+    <li><strong>Vegan food:</strong> Ask about plant-based curries and vegetable preparations without dairy products on the <a href="https://chopras.nl/vegan-menu">vegan menu</a>.</li>
+    <li><strong>Gluten-free food:</strong> Discuss suitable dishes and ingredients from the <a href="https://chopras.nl/gluten-free-menu">gluten-free menu</a> with the restaurant team before finalising the menu.</li>
+</ul>
+
+<p>For guests with allergies or strict dietary requirements, confirm ingredients, preparation methods and possible cross-contact with the restaurant. Careful checks matter most when planning food for a large wedding or family gathering.</p>
+
+<h2>4. Decide the Buffet Style and Food Arrangement</h2>
+
+<p>The presentation and arrangement of a buffet can make a big difference to the overall event. Organise the food in a way that allows guests to move comfortably and choose their meals easily.</p>
+
+<p>Here are a few useful tips:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Keep starters and welcome snacks in a separate section.</li>
+    <li>Arrange vegetarian and non-vegetarian dishes clearly.</li>
+    <li>Place rice and Indian breads near the main courses.</li>
+    <li>Keep desserts in a dedicated area.</li>
+    <li>Provide clear dish labels for guests.</li>
+    <li>Plan enough space for guests to serve themselves.</li>
+    <li>Discuss food service staff and clearing arrangements in advance.</li>
+</ul>
+
+<p>For weddings and larger celebrations, consider the event schedule and guest flow when deciding how the buffet will be served.</p>
+
+<h2>5. Arrange Indian Catering for Weddings and Family Events</h2>
+
+<p>Not every celebration takes place in a restaurant. Some families prefer hosting weddings, birthday parties and other occasions at home, in offices or at external venues.</p>
+
+<p>Chopras Indian Restaurant also provides <a href="https://chopras.nl/catering">Indian catering services</a> for different events in Den Haag and surrounding areas. Guests can discuss food selections, guest numbers, menu preferences and service requirements with the team.</p>
+
+<p>Catering can be considered for:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/indian-wedding-catering-den-haag">Wedding receptions and Nikah celebrations</a></li>
+    <li>Engagement parties</li>
+    <li>Birthday celebrations</li>
+    <li>Anniversary dinners</li>
+    <li>Baby showers</li>
+    <li>Corporate events</li>
+    <li>Diwali, Eid and Christmas gatherings</li>
+    <li>Family functions and cultural events</li>
+</ul>
+
+<p>Dutch festive occasions such as:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Goede Vrijdag (Good Friday)</li>
+    <li>Eerste Paasdag (Easter Sunday)</li>
+    <li>Tweede Paasdag (Easter Monday)</li>
+    <li>Koningsdag (King's Day)</li>
+    <li>Bevrijdingsdag (Liberation Day)</li>
+    <li>Hemelvaartsdag (Ascension Day)</li>
+    <li>Eerste Pinksterdag (Whit Sunday or Pentecost)</li>
+    <li>Tweede Pinksterdag (Whit Monday)</li>
+    <li>Eerste Kerstdag (Christmas Day)</li>
+    <li>Tweede Kerstdag (Boxing Day)</li>
+</ul>
+
+<p>The catering team can also discuss arrangements for food setup, serving staff and clearing as part of the event requirements. Visit the <a href="https://chopras.nl/catering">Indian catering in Den Haag</a> page to enquire about your celebration.</p>
+
+<h2>6. Choose a Convenient Location in Den Haag</h2>
+
+<p>When planning a wedding or family celebration, consider how easily guests can reach the venue. Chopras Indian Restaurant is located at Leyweg 986, 2545 GW Den Haag, and welcomes enquiries from different neighbourhoods and nearby towns. Tram line 2 stops at Leyweg, and paid parking is available nearby.</p>
+
+<p>Guests may travel from Den Haag Centrum, Leyenburg, Escamp, Loosduinen, Houtwijk, Wateringse Veld, Transvaalkwartier, Zeeheldenkwartier, Duinoord and Scheveningen. Catering enquiries can also be made for nearby areas such as <a href="https://chopras.nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/indian-restaurant-voorburg">Voorburg</a>, <a href="https://chopras.nl/indian-restaurant-leidschendam">Leidschendam</a> and <a href="https://chopras.nl/indian-restaurant-zoetermeer">Zoetermeer</a>.</p>
+
+<p>Whether you are searching for Indian catering in Den Haag, a wedding buffet in Den Haag or a <a href="https://chopras.nl/zaal-huren-den-haag">feestzaal for a family celebration</a>, planning the venue and food together can make the arrangements easier.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Where can I arrange an Indian buffet for a wedding in Den Haag?</h3>
+<p>You can contact Chopras Indian Restaurant at Leyweg 986, 2545 GW Den Haag to discuss wedding buffet arrangements, menu choices and private event requirements at its venue, or arrange outside catering at your own location.</p>
+
+<h3>Does Chopras Indian Restaurant have a private event hall?</h3>
+<p>Yes. Chopras Indian Restaurant in Den Haag offers a private event hall for approximately 25 to 50 guests, suitable for weddings, Nikah receptions, birthdays, anniversaries, family gatherings and corporate events. Contact the team to confirm availability and arrangements.</p>
+
+<h3>Can I include vegetarian and vegan dishes in my wedding buffet?</h3>
+<p>Yes. You can discuss vegetarian and vegan-friendly dishes with the Chopras Indian Restaurant team while planning your buffet menu, such as Dal Makhani, Paneer Butter Masala, Veg Biryani and vegetable curries.</p>
+
+<h3>Is the Indian wedding buffet at Chopras Indian Restaurant halal?</h3>
+<p>Yes. Chopras Indian Restaurant in Den Haag sources every meat dish from halal-certified suppliers, so halal food is the standard for wedding buffets, Nikah and walima celebrations and family events.</p>
+
+<h2>Make Your Celebration Memorable with Chopras Indian Restaurant</h2>
+
+<p>A perfect Indian buffet is about more than serving food. It is about bringing family and friends together and creating a welcoming meal for every guest. From planning the menu and choosing tandoori specialities to arranging a private event hall or outside catering, every detail matters.</p>
+
+<p>For your next wedding, birthday, anniversary, family celebration, Christmas dinner or festive party, enjoy a memorable celebration with authentic Indian cuisine and customised catering. <a href="https://chopras.nl/contact">Contact Chopras Indian Restaurant</a> to discuss Indian buffet options, private event arrangements and catering services in Den Haag.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Tuesday to Sunday: 16:30 to 22:30<br/>Phone: +31 6 30645930</p>
+`,
+    contentNl: `
+<img src="/images/blog/25nov.png" alt="Indiaas buffet voor bruiloften en familiefeesten in Den Haag door Chopras Indian Restaurant" class="w-full max-h-[480px] object-cover rounded-2xl mb-8" />
+
+<p>Het plannen van een bruiloft of familiefeest brengt veel belangrijke beslissingen met zich mee, en eten is een van de meest gedenkwaardige onderdelen van elk evenement. Een goed georganiseerd <a href="https://chopras.nl/nl/indian-buffet-den-haag">Indiaas buffet</a> brengt gasten samen met heerlijke gerechten, verschillende smaken en volop keuze. Of u nu een bruiloftsreceptie, Nikah, verloving, verjaardag of jubileum organiseert, een Indiaas buffet maakt uw viering extra bijzonder.</p>
+
+<p>Plant u een evenement in Den Haag? <a href="https://chopras.nl/nl">Chopras Indian Restaurant</a> biedt een <a href="https://chopras.nl/nl/feestzaal-den-haag">privé feestzaal</a> en <a href="https://chopras.nl/nl/catering">Indiase catering</a> voor verschillende gelegenheden. Met een ruime keuze aan Indiase gerechten, waaronder tandoori specialiteiten, traditionele curry's, vegetarische opties en desserts, stelt u samen een menu samen dat past bij uw gasten en uw viering.</p>
+
+<h2>1. Kies de Juiste Locatie voor Uw Viering</h2>
+
+<p>De eerste stap bij het plannen van een Indiaas buffet is het kiezen van een geschikte locatie. Denk aan het aantal gasten, de opstelling, de stijl van het evenement en de ruimte die nodig is voor het buffet.</p>
+
+<p>Chopras Indian Restaurant heeft een privé feestzaal aan de Leyweg 986, 2545 GW Den Haag, geschikt voor bruiloften, familievieringen en privébijeenkomsten. De zaal biedt plaats aan ongeveer 25 tot 50 gasten, afhankelijk van de opstelling.</p>
+
+<p>De zaal is geschikt voor gelegenheden zoals:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/indian-wedding-catering-den-haag">Bruiloften en bruiloftsrecepties</a></li>
+    <li>Nikah ceremonies en vieringen</li>
+    <li>Verlovingen en feesten voorafgaand aan de bruiloft</li>
+    <li><a href="https://chopras.nl/nl/indian-birthday-catering-den-haag">Verjaardagsfeesten</a> en jubilea</li>
+    <li>Babyshowers en familiebijeenkomsten</li>
+    <li>Eid, <a href="https://chopras.nl/nl/diwali-dinner-den-haag">Diwali</a> en Kerst</li>
+    <li><a href="https://chopras.nl/nl/corporate-events-den-haag">Bedrijfsdiners en teamevenementen</a></li>
+    <li>Culturele en gemeenschapsvieringen</li>
+</ul>
+
+<p>Bespreek voordat u boekt het aantal gasten, de opstelling, het buffet en uw wensen voor het evenement met het team. Bekijk de <a href="https://chopras.nl/nl/feestzaal-den-haag">privé feestzaal van Chopras in Den Haag</a> voor meer informatie.</p>
+
+<h2>2. Stel een Evenwichtig Indiaas Buffetmenu Samen</h2>
+
+<p>Een geslaagd Indiaas buffet biedt een goede balans tussen voorgerechten, hoofdgerechten, brood, rijst en desserts. Met verschillende smaken kan iedere gast genieten naar eigen voorkeur.</p>
+
+<p>Voor een bruiloft of familiefeest kunt u het buffet in de volgende onderdelen verdelen.</p>
+
+<h3>Indiase Voorgerechten</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Samosa (Veg)</li>
+    <li><a href="https://chopras.nl/nl/pani-puri-den-haag">Pani Puri</a></li>
+    <li>Dahi Puri</li>
+    <li>Aloo Tikki</li>
+    <li><a href="https://chopras.nl/nl/chaat-den-haag">Papdi Chaat</a></li>
+</ul>
+
+<h3>Tandoori Specialiteiten</h3>
+
+<p>Tandoori gerechten zijn een populaire keuze voor Indiase vieringen. Ze worden traditioneel gemarineerd in kruiden, yoghurt en specerijen en bereid in een kleioven voor een rokerige smaak.</p>
+
+<p>Voorbeelden om te overwegen:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Chicken Tikka</li>
+    <li>Tandoori Chicken</li>
+    <li>Paneer Tikka</li>
+    <li>Chicken Seekh Kebab</li>
+    <li>Lamb Seekh Kebab</li>
+</ul>
+
+<p>Bekijk de volledige <a href="https://chopras.nl/nl/tandoori-den-haag">tandoori selectie</a> voor meer opties.</p>
+
+<h3>Indiase Hoofdgerechten</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/butter-chicken-den-haag">Butter Chicken</a></li>
+    <li>Chicken Tikka Masala</li>
+    <li><a href="https://chopras.nl/nl/mutton-rogan-josh-den-haag">Mutton Rogan Josh</a></li>
+    <li><a href="https://chopras.nl/nl/dal-makhani-den-haag">Dal Makhani</a></li>
+    <li>Paneer Butter Masala</li>
+    <li>Chicken Curry</li>
+    <li>Chicken Methi Malai</li>
+    <li>Karahi Chicken</li>
+    <li>Chicken Handi</li>
+    <li>Chicken Vindaloo</li>
+</ul>
+
+<h3>Rijst en Biryani</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/biryani-den-haag">Chicken Biryani</a></li>
+    <li>Lamb Biryani</li>
+    <li>Veg Biryani</li>
+    <li>Prawn Biryani</li>
+</ul>
+
+<h3>Indiaas Brood</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/naan-den-haag">Garlic Naan</a></li>
+    <li>Butter Naan</li>
+    <li>Plain Naan</li>
+    <li>Paneer Naan</li>
+    <li>Paneer Paratha</li>
+    <li>Cheese Naan</li>
+    <li>Keema Naan</li>
+</ul>
+
+<h3>Traditionele Indiase Desserts</h3>
+<ul class="list-disc pl-6 mb-4">
+    <li>Gulab Jamun</li>
+    <li>Rasmalai</li>
+    <li>Saffron Kheer</li>
+    <li>Moong Dal Halwa</li>
+    <li>Kulfi</li>
+</ul>
+
+<p>Bekijk het <a href="https://chopras.nl/nl/menu">menu van Chopras Indian Restaurant</a> en bespreek geschikte gerechten en de opzet van het buffet met het team.</p>
+
+<h2>3. Denk aan Vegetarische, Veganistische, Halal en Glutenvrije Keuzes</h2>
+
+<p>Houd bij het plannen van een bruiloftsbuffet rekening met de verschillende voorkeuren en dieetwensen van gasten. Met geschikte keuzes wordt de maaltijd voor iedereen aangenamer.</p>
+
+<p>Een doordacht buffet kan bestaan uit:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Halal eten:</strong> <a href="https://chopras.nl/nl/halal-food-den-haag">Halal gecertificeerde vleesgerechten</a> voor gasten die halal eten.</li>
+    <li><strong>Vegetarisch eten:</strong> Paneer specialiteiten, linzengerechten, groentecurry's en Veg Biryani van het <a href="https://chopras.nl/nl/vegetarian-menu">vegetarische menu</a>.</li>
+    <li><strong>Veganistisch eten:</strong> Vraag naar plantaardige curry's en groentegerechten zonder zuivel op het <a href="https://chopras.nl/nl/vegan-menu">veganistische menu</a>.</li>
+    <li><strong>Glutenvrij eten:</strong> Bespreek geschikte gerechten en ingrediënten van het <a href="https://chopras.nl/nl/gluten-free-menu">glutenvrije menu</a> met het team voordat u het menu vastlegt.</li>
+</ul>
+
+<p>Bevestig voor gasten met allergieën of strikte dieetwensen de ingrediënten, bereidingswijzen en mogelijke kruisbesmetting met het restaurant. Zorgvuldige controle is vooral belangrijk bij eten voor een grote bruiloft of familiebijeenkomst.</p>
+
+<h2>4. Kies de Buffetstijl en Opstelling</h2>
+
+<p>De presentatie en opstelling van een buffet maken een groot verschil voor het hele evenement. Richt het eten zo in dat gasten zich gemakkelijk kunnen bewegen en eenvoudig hun maaltijd kunnen kiezen.</p>
+
+<p>Enkele handige tips:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Zet voorgerechten en welkomstsnacks in een apart gedeelte.</li>
+    <li>Scheid vegetarische en niet-vegetarische gerechten duidelijk.</li>
+    <li>Plaats rijst en Indiaas brood naast de hoofdgerechten.</li>
+    <li>Geef desserts een eigen plek.</li>
+    <li>Zorg voor duidelijke naambordjes bij de gerechten.</li>
+    <li>Plan genoeg ruimte zodat gasten zichzelf kunnen bedienen.</li>
+    <li>Bespreek vooraf bedienend personeel en het afruimen.</li>
+</ul>
+
+<p>Houd bij bruiloften en grotere vieringen rekening met het programma en de doorstroom van gasten wanneer u bepaalt hoe het buffet wordt geserveerd.</p>
+
+<h2>5. Regel Indiase Catering voor Bruiloften en Familie-evenementen</h2>
+
+<p>Niet elke viering vindt plaats in een restaurant. Sommige families organiseren bruiloften, verjaardagen en andere gelegenheden liever thuis, op kantoor of op een externe locatie.</p>
+
+<p>Chopras Indian Restaurant verzorgt ook <a href="https://chopras.nl/nl/catering">Indiase catering</a> voor verschillende evenementen in Den Haag en omgeving. U kunt gerechten, aantallen gasten, menuvoorkeuren en wensen voor de bediening bespreken met het team.</p>
+
+<p>Catering is mogelijk voor:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li><a href="https://chopras.nl/nl/indian-wedding-catering-den-haag">Bruiloftsrecepties en Nikah vieringen</a></li>
+    <li>Verlovingsfeesten</li>
+    <li>Verjaardagsvieringen</li>
+    <li>Jubileumdiners</li>
+    <li>Babyshowers</li>
+    <li>Bedrijfsevenementen</li>
+    <li>Diwali, Eid en Kerst</li>
+    <li>Familiefeesten en culturele evenementen</li>
+</ul>
+
+<p>Nederlandse feestdagen zoals:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>Goede Vrijdag</li>
+    <li>Eerste Paasdag</li>
+    <li>Tweede Paasdag</li>
+    <li>Koningsdag</li>
+    <li>Bevrijdingsdag</li>
+    <li>Hemelvaartsdag</li>
+    <li>Eerste Pinksterdag</li>
+    <li>Tweede Pinksterdag</li>
+    <li>Eerste Kerstdag</li>
+    <li>Tweede Kerstdag</li>
+</ul>
+
+<p>Het cateringteam bespreekt ook de opbouw, het bedienend personeel en het afruimen als onderdeel van uw evenement. Bezoek de pagina <a href="https://chopras.nl/nl/catering">Indiase catering in Den Haag</a> om uw viering aan te vragen.</p>
+
+<h2>6. Kies een Handige Locatie in Den Haag</h2>
+
+<p>Denk bij het plannen van een bruiloft of familiefeest aan de bereikbaarheid voor uw gasten. Chopras Indian Restaurant ligt aan de Leyweg 986, 2545 GW Den Haag, en verwelkomt aanvragen uit verschillende wijken en omliggende plaatsen. Tramlijn 2 stopt bij halte Leyweg, en in de omgeving is betaald parkeren beschikbaar.</p>
+
+<p>Gasten kunnen komen uit Den Haag Centrum, Leyenburg, Escamp, Loosduinen, Houtwijk, Wateringse Veld, Transvaalkwartier, Zeeheldenkwartier, Duinoord en Scheveningen. Catering kan ook worden aangevraagd voor plaatsen in de buurt, zoals <a href="https://chopras.nl/nl/indian-restaurant-rijswijk">Rijswijk</a>, <a href="https://chopras.nl/nl/indian-restaurant-delft">Delft</a>, <a href="https://chopras.nl/nl/indian-restaurant-voorburg">Voorburg</a>, <a href="https://chopras.nl/nl/indian-restaurant-leidschendam">Leidschendam</a> en <a href="https://chopras.nl/nl/indian-restaurant-zoetermeer">Zoetermeer</a>.</p>
+
+<p>Of u nu zoekt naar Indiase catering in Den Haag, een bruiloftsbuffet in Den Haag of een <a href="https://chopras.nl/nl/zaal-huren-den-haag">feestzaal voor een familieviering</a>, door locatie en eten samen te plannen wordt de organisatie eenvoudiger.</p>
+
+<h2>Veelgestelde Vragen</h2>
+
+<h3>Waar kan ik een Indiaas buffet voor een bruiloft regelen in Den Haag?</h3>
+<p>U kunt contact opnemen met Chopras Indian Restaurant aan de Leyweg 986, 2545 GW Den Haag om een bruiloftsbuffet, menukeuzes en uw wensen voor een privé evenement op de locatie te bespreken, of om catering op uw eigen locatie te regelen.</p>
+
+<h3>Heeft Chopras Indian Restaurant een privé feestzaal?</h3>
+<p>Ja. Chopras Indian Restaurant in Den Haag biedt een privé feestzaal voor ongeveer 25 tot 50 gasten, geschikt voor bruiloften, Nikah recepties, verjaardagen, jubilea, familiebijeenkomsten en bedrijfsevenementen. Neem contact op met het team om de beschikbaarheid en afspraken te bevestigen.</p>
+
+<h3>Kan ik vegetarische en veganistische gerechten opnemen in mijn bruiloftsbuffet?</h3>
+<p>Ja. U kunt vegetarische en veganistische gerechten bespreken met het team van Chopras Indian Restaurant bij het samenstellen van uw buffetmenu, zoals Dal Makhani, Paneer Butter Masala, Veg Biryani en groentecurry's.</p>
+
+<h3>Is het Indiase bruiloftsbuffet bij Chopras Indian Restaurant halal?</h3>
+<p>Ja. Chopras Indian Restaurant in Den Haag betrekt al het vlees van halal gecertificeerde leveranciers, dus halal eten is de standaard voor bruiloftsbuffetten, Nikah en walima vieringen en familie-evenementen.</p>
+
+<h2>Maak Uw Viering Onvergetelijk met Chopras Indian Restaurant</h2>
+
+<p>Een perfect Indiaas buffet gaat om meer dan alleen eten serveren. Het gaat om familie en vrienden samenbrengen en een gastvrije maaltijd bieden aan elke gast. Van het samenstellen van het menu en het kiezen van tandoori specialiteiten tot het regelen van een privé feestzaal of catering op locatie: elk detail telt.</p>
+
+<p>Voor uw volgende bruiloft, verjaardag, jubileum, familieviering, kerstdiner of feest geniet u van een onvergetelijke viering met authentieke Indiase keuken en catering op maat. <a href="https://chopras.nl/nl/contact">Neem contact op met Chopras Indian Restaurant</a> om Indiase buffetopties, privé evenementen en cateringdiensten in Den Haag te bespreken.</p>
+
+<p><strong>Chopras Indian Restaurant</strong><br/>Leyweg 986<br/>2545 GW Den Haag<br/>Dinsdag tot en met zondag: 16:30 tot 22:30<br/>Telefoon: +31 6 30645930</p>
+`
+  },
+  {
     slug: "best-christmas-party-venue-den-haag",
     title: "Best Christmas Party Venue in Den Haag",
     metaTitle: "Best Christmas Party Venue in Den Haag | Chopras Indian Restaurant",
